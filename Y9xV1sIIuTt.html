@@ -3,17 +3,49 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="218"/>
+<meta name="version" content="933"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$Y9xV1sIIuTt</title>
 </head>
 <body><h1>g0v pre-hackath3n</h1><p></p><p>6/8 的客廳工廠黑客松之前，先來做點什麼吧！</p><p></p><p>主題：讓黑客松效果更好</p><p></p><p>希望偏重在協作工具、共用資料等等。不過也歡迎實作特定專案。</p><p></p><p>可能的專案：（請自由增加）</p><p></p><ul><li><a href='https://github.com/hackfoldr/hackfoldr'/>hackfoldr</a> - the code behind hack.g0v.tw<ul><li>整合 @c9s 的 <a href='https://github.com/c9s/WireRoom'/>wireroom</a>?</li>
 <li>issues: <a href="https://github.com/hackfoldr/hackfoldr/issues">https://github.com/hackfoldr/hackfoldr/issues</a></li></ul>
 </ul>
 
-<ul><li>people.g0v.tw - 簡易 people registry (取代原來鄉民列表 spreadsheet), 讓人自己加 tag (如：環保、醫療、前端、後端), 也許每個 tag 可以成為一個 disq.us 討論區?</li></ul>
-<ul class="comment"><li>政府相關的 tag 可以參考影子政府，比方說立法院的有這些 <a href="http://www.shadowgov.tw/yan4.htm"><a href='http://www.shadowgov.tw/yan4.htm'/>http://www.shadowgov.tw/yan4.htm</a></a> 好像是直接把真政府的各單位對應過來（？）另外這個影子政府好像跟之前 rad做的 <a href="https://github.com/radjan/newspac"><a href='https://github.com/radjan/newspac'/>https://github.com/radjan/newspac</a></a> <a href="http://www.news-pac.com/"><a href='http://www.news-pac.com/'/>http://www.news-pac.com/</a></a> 有點異曲同工之妙 XD</li></ul>
+<ul><li>people.g0v.tw - 簡易 people registry (取代原來鄉民列表 spreadsheet), 讓人自己加 tag (如：環保、醫療、前端、後端), 也許每個 tag 可以成為一個 disq.us 討論區?<ul><li>people 的 tag 可以包含幾種不同的類型</li><ol><li>熟悉哪些 domain knowledge（環保、醫療、社福、經濟、食品安全、都市規劃）</li>
+<li>擁有哪些實做技術（介面、視覺、web 前端、web 後端、手機 app、資料分析）</li>
+<li>熟悉哪些政府或民間單位（公督盟、司改會、苦勞網、泛科學、醫勞盟、醫改會）</li></ol>
+<ul class="comment"><li>以上感覺不大會彼此重複，所以應該不用特別分類，就直接標上就好？</li>
+<li>的確耶XD</li></ul>
+<ol><li>參與過哪些 g0v 專案</li></ol>
+<ul class="comment"><li>人跟人之間、人跟專案之間、專案跟專案之間需要使用統一的 tag 以方便媒合</li></ul>
+</ul>
+<ul><li>除了 tag 跟 email、sns 以外，可以有個欄位附上個人 github 帳號... XD</li><ul class="comment"><li>about.me 好像有 api, 如果 user 已經有用也許可以直接 pull 所有資料過來？不過基本上就是 github/twitter/email 為必要吧，其他就... 都好 :p</li></ul>
+</ul>
+</ul>
 
-<ul><li>定義 g0v project meta data &amp; display</li></ul>
+<ul><li>定義 g0v project meta data &amp; display</li><ol><li>專案名稱name, name.zh</li>
+<li>簡短說明 description, description.zh</li>
+<li>專案牽涉到的專業領域 tags（同 people XD）</li></ol>
+<ul class="comment"><li>不會寫程式的朋友，可以根據自己擅長的領域挑選想加入的專案</li></ul>
+<ol><li>專案採用的語言/工具 tags（d3.js, the noun project, iconmoon, sass/compass...）</li></ol>
+<ul class="comment"><li>攻城屍還沒有特定偏好的主題的話，可以根據實做技術來挑選可參與的專案</li>
+<li>發現工具好像不用下 tags = =&quot; 不然沒完沒了 orz</li></ul>
+<ol><li>專案牽涉到的政府或民間單位 tags</li></ol>
+<ul class="comment"><li>有特別聯繫管道的朋友，可以根據自己熟悉的人脈挑選想參與的專案</li>
+<li>c,e,d 為 keywords</li>
+<li>理解，就跟 people 的 tags 一樣不用分類直接標就好對嗎 -&gt; right, 然後就可以和 people match 了 :p -&gt; hooray XD</li></ul>
+<ol><li>專案分工與認領清單</li></ol>
+<ul class="comment"><li><i>可以提供一組常見的分工方式讓大家改，很像是之前的那些 neadxxxx tags，想認領的人自己寫上去。</i></li><ul><li>parser</li>
+<li>web back-end</li>
+<li>web front-end</li>
+<li>ui design</li>
+<li>visual design</li>
+<li>writer</li></ul>
+</ul>
+<ol><li>聯絡窗口</li>
+<li>專案的 github 網址</li></ol>
+<ul class="comment"><li>是否要建議每個專案開一個 group 設定 members，還是在自己帳號也行？（用自己的可能會比較亂）</li>
+<li>要是看到有人認領了某工作但很久沒 commit 了其他人可以考慮接手XD</li></ul>
+</ul>
 
 <ul><li>twhgis - 任一時點行政區 render</li></ul>
 
@@ -22,6 +54,10 @@
 
 <ul><li>立院相關<ul><li>clkao 的 tts raw data</li>
 <li>etblue 的 design</li></ul>
+<ul class="comment"><li>我已經完全忘記這是什麼了... @@&quot;&nbsp;</li></ul>
+</ul>
+
+<ul><li>idea pool with tags</li><ul class="comment"><li>同 people，ideas 也可以加 tag，讓相關的 idea 更容易找到彼此 XD</li></ul>
 </ul>
 
 </body>
