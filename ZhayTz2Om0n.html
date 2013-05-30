@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2087"/>
+<meta name="version" content="2144"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$ZhayTz2Om0n</title>
 </head>
 <body><h1>客廳工廠黑客松專案構想（Idea Pool）</h1><p></p><p><b>如果你有一個概略的想法，請直接加在這裡。</b></p><p></p><p>如果你想把這邊的想法變得更完整，請用 g0v.hackpad.com 或者 google doc，新增一份文件，然後把它加入 <a href="https://ethercalc.org/g0v-hackath3n">https://ethercalc.org/g0v-hackath3n</a> 最後一行 (url 前面請空一格 以便縮排)</p><p></p><p>說明：</p><p>- 授權方式：程式碼部分（如 MIT/BSD）、文件部分（如 CC-BY）</p><p>- 需求：NeedTech, NeedDesign, NeedWriter, NeedTalktoRealPerson （可加</p><p>在 ethercalc 中第三欄）</p><p></p><p>請幫忙從之前 hackathon 文件回收 Idea：</p><p><u><a href='https://hackpad.com/ul6fMthof2S'/>第零次</a></u></p><p><u><a href='https://hackpad.com/lIoCjaeMWzC'/>第壹次</a></u></p><p><a href='http://hack.g0v.tw/#/g0v-hackath2n/1qotCK6_ccR3MucEVtTrZ7nKdYXniS7bncZR2Dm85qbQ'/>第貳次</a></p><p><a href='https://g0v.hackpad.com/g0v-pre-hackath3n-Y9xV1sIIuTt'/>pre-hackath3n</a></p><p></p><h2>專案格式參考 </h2><p>（新主題請寫下自己名字，以便有興趣的人和你討論）</p><ul><li>專案簡介：</li>
@@ -77,7 +77,8 @@
 <li>NeedsProcess: 需要幫忙設計作業流程</li></ul>
 </ul>
 
-<p>初步的構想是像 Redmine 這種東西，每個議題 (issue) 有自己的頁面，每個議題可以更新當前的狀態，介面像是 Facebook 動態時報，最新的消息放在上面。</p><p></p><p>議題可以 assign 給負責人，例如智財局要推鎖網法，就把這事 assign 給智財局長。當然系統裡不會內建他的帳號，要找個方法表現出這是他要負責的。 assignee 可以多個人。</p><p></p><p>更新事件的時候可以設 milestone ，例如林益世貪污案宣判結果出來了，就設一個 milestone。瀏覽 timeline 的時候以 milestone 為主，在 milestone 下面再貼新聞、參考資料、評論等等。</p><p></p><p>貼新聞或引用他人在 blog / Facebook 的評論，可能會有著作權的問題？當然超連結一定要附上。</p><p></p><p>更新議題是要手動進行的，若要自動抓新聞的話或許可以接「社會議題懶人包」？ Google 電子快訊？</p><p></p><p>要維護每個議題也很累的，萬一沒人維護的話漏掉新聞就糟了。或許有些可以讓關心這件事情的人來當志工認養？例如樂生事件，可以請樂生青年的朋友來維護。</p><p></p><p>要有方法來把熱門事件給放在首頁顯眼的地方。</p><p></p><p>要開放 API ，讓別的程式可以直接抓到這個網站上的資料，動態時報也可以開放 RSS 。</p><p></p><p>Q: 這跟「我的失憶政府」、「社會議題懶人包」有點像？就議題追蹤而言也跟「鄉民關心你」有點類似。</p><ul class="comment"><li>失憶政府的內容一模一樣，我想直接跟追蹤網合併就好？ XD</li></ul>
+<p>初步的構想是像 Redmine 這種東西，每個議題 (issue) 有自己的頁面，每個議題可以更新當前的狀態，介面像是 Facebook 動態時報，最新的消息放在上面。</p><p></p><p>議題可以 assign 給負責人，例如智財局要推鎖網法，就把這事 assign 給智財局長。當然系統裡不會內建他的帳號，要找個方法表現出這是他要負責的。 assignee 可以多個人。</p><p></p><p>更新事件的時候可以設 milestone ，例如林益世貪污案宣判結果出來了，就設一個 milestone。瀏覽 timeline 的時候以 milestone 為主，在 milestone 下面再貼新聞、參考資料、評論等等。</p><p></p><p>貼新聞或引用他人在 blog / Facebook 的評論，可能會有著作權的問題？當然超連結一定要附上。</p><p></p><p>更新議題是要手動進行的，若要自動抓新聞的話或許可以接「社會議題懶人包」？ Google 電子快訊？</p><p></p><p>要維護每個議題也很累的，萬一沒人維護的話漏掉新聞就糟了。或許有些可以讓關心這件事情的人來當志工認養？例如樂生事件，可以請樂生青年的朋友來維護。</p><p></p><p>要有方法來把熱門事件給放在首頁顯眼的地方。</p><p></p><p>要開放 API ，讓別的程式可以直接抓到這個網站上的資料，動態時報也可以開放 RSS 。</p><p></p><p>Q: 這跟「我的失憶政府」、「社會議題懶人包」有點像？就議題追蹤而言也跟「鄉民關心你」有點類似。</p><ul class="comment"><li>失憶政府的內容一模一樣，我想直接跟追蹤網合併就好？ XD</li>
+<li>其實 tracking 的部份從第零次就被提出，不過我覺得可能題目太大，要一次做到一個程度有困難。在想是不是各個 project 先 workout 一兩個 user story，然後看有什麼 common 的東西可以共用，設計 API 來分工。</li></ul>
 
 <p></p></body>
 </html>
