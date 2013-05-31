@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="1022"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$L0mEqjsanOA</title>
+</head>
+<body><h1>Instant Setup hack.g0v.tw for Windows Users</h1><p>快速上手：架好 hack.g0v.tw 專案的開發環境 (Windows)</p><p></p><h2>安裝 vagrant</h2><ol><li>下載：<a href="http://downloads.vagrantup.com/tags/v1.2.2"><a href='http://downloads.vagrantup.com/tags/v1.2.2'/>http://downloads.vagrantup.com/tags/v1.2.2</a></a></li>
+<li>安裝：執行 Vagrant_1.2.2.msi</li><ul class="comment"><li>安裝完以後程式集沒有多出東西來，不代表沒裝好，他只是沒有 gui 、要從 command line 才看的到而已。</li></ul class="comment">
+</li>
+<li>什麼是 vagrant</li><ul class="comment"><li>vagrant 是一個電腦程式，人類可以把好幾件想做的事情寫在一張筆記（vagrant file）上，vagrant 程式會按照人類寫的筆記，自動把所有事情都做好。</li></ul class="comment">
+</li>
+<li>為什麼架設環境的時候要用到 vagrant</li><ul class="comment"><li>因為 clkao 在寫程式的時候喜歡用很多有的沒的外掛，如果想跟他一起寫程式，儘管我們只是寫個 html 或 css，也得跟著他一起安裝一堆有的沒的外掛，才能在自己的電腦預覽修改的結果，否則就只能矇眼射箭，看不到頁面改完以後長什麼樣子。</li>
+<li>裝外掛的過程眉眉角角很多，等裝完黑客松都結束了，所以我們決定叫 clkao 事先把所有要裝的東西寫好在一張筆記（vagrant file）上， 讓 vagrant 按照 clkao 的指示幫我們裝，這樣我們一到黑客松現場就可以馬上架好環境、捲袖子做事了。</li></ul>
+</ol>
+
+<h2>橋好 vagrant 設定檔</h2><ul class="comment"><li>好像已經不用下載了？</li></ul>
+<ol><li><s>下載：</s><a href="https://dl.dropboxusercontent.com/u/4339854/g0v/Vagrantfile"><s>https://dl.dropboxusercontent.com/u/4339854/g0v/Vagrantfile</s></a></li>
+<li><s>橋好：放到 hack.g0v.tw 的 repo 資料夾中</s></li><ul class="comment"><li><s>什麼是 hack.g0v.tw</s><ul class="comment"><li><s>專案的名稱，clkao 取的。指的是開發 g0v hackfoldr 的這個專案。</s></li></ul class="comment">
+</li>
+<li><s>什麼是 repo</s></li>
+<li><s>repo 資料夾在哪裡</s></li></ul>
+</ol>
+
+<h2>使用討人厭的 terminal</h2><ol><li>打開：<ol><li>按下鍵盤上的「Windows」鍵</li><ul class="comment"><li>出現開始功能表，游標自動跑到下方搜尋列</li></ul>
+</ol>
+<ol><li>按下「c」然後「o」然後「m」鍵</li><ul class="comment"><li>第一個搜尋結果通常就會是 command prompt</li></ul>
+</ol>
+<ol><li>按下「enter」鍵</li><ul class="comment"><li>執行被選起來的搜尋結果，預設是清單上的第一個，也就是 command prompt</li></ul>
+</ol>
+<ol><li>恭喜！你已經打開討人厭的 terminal 了！ =3=</li></ol>
+</li>
+<li>移動目前位置：<ol><li>一開始畫面上有 C:&#92;Users&#92;ETBlue&gt;_</li><ul class="comment"><li>「ETBlue」是在我的電腦裡的使用者名稱，在你的電腦裡會顯示成你的名稱</li></ul>
+</ol>
+<ol><li>輸入「cd &quot;my documents&quot;&#92;github&#92;hack.g0v.tw/」然後按「enter」鍵</li><ul class="comment"><li>會移動到 my documents 資料夾裡的 github 資料夾裡的 hack.g0v.tw 資料夾</li></ul>
+</ol>
+</ol>
+<ol><li>下載虛擬電腦：<ol><li>輸入「vagrant box&nbsp; add g0v <a href="https://dl.dropboxusercontent.com/u/4339854/g0v/g0v-ubuntu-precise64.box">https://dl.dropboxusercontent.com/u/4339854/g0v/g0v-ubuntu-precise64.box</a>」然後按「enter」鍵</li><ul class="comment"><li>會下載 g0v-ubuntu-precise64.box 這個檔案，我用 50M 光纖大概花 25 分鐘抓完</li></ul>
+</ol>
+<ol><li>輸入「vagrant up」然後按「enter」鍵</li><ul class="comment"><li>據說這樣就可以讓虛擬電腦開機 = =b</li></ul class="comment">
+</li></ul class="comment">
+</li>
+<li>什麼是 terminal</li></ol>
+
+<h2>幫 vagrant 安裝 ssh 連線軟體</h2><ul class="comment"><li>什麼是 ssh<ul class="comment"><li>據說是讓我們可以連到虛擬機器裡面的東西... = =</li></ul>
+</ul>
+<ol><li>下載：<a href="http://sourceforge.net/projects/mingw/files/Installer/mingw-get-inst/mingw-get-inst-20120426/mingw-get-inst-20120426.exe/download">http://sourceforge.net/projects/mingw/files/Installer/mingw-get-inst/mingw-get-inst-20120426/mingw-get-inst-20120426.exe/download</a></li><ul class="comment"><li>據說是個可以讓 vagrant 程式的 ssh 連線功能發揮作用的東西 = =?</li></ul>
+</ol>
+<ol><li>安裝：執行 mingw-get-inst-20120426.exe</li><ul><li><a href='/ep/profile/JkW68dALfOIsbbu2ir5eU'/>Audrey Tang</a> 說安裝過程中會讓你選要裝哪些套件（Select Components），那頁要捲到下方勾選 MSYS Basic System 和 MinGW Developer Toolkit</li></ul>
+<ul class="comment"><li>怕死的我當然是不分青紅皂白之全部都打勾 = =&quot;</li></ul>
+</ol>
+<ol><li>使用：<ol><li>開始 -&gt; 所有程式 -&gt; MinGW -&gt; MinGW Shell</li>
+<li>輸入「vagrant ssh」然後按「enter」鍵</li>
+<li>進入虛擬電腦<ol><li>cd /vagrant</li></ol>
+</ol>
+</ol>
+
+</body>
+</html>
