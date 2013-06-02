@@ -3,10 +3,20 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1048"/>
+<meta name="version" content="1414"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$L0mEqjsanOA</title>
 </head>
-<body><h1>Instant Setup hack.g0v.tw for Windows Users</h1><p>快速上手：架好 hack.g0v.tw 專案的開發環境 (Windows)</p><p></p><h2>安裝 vagrant</h2><ol><li>下載：<a href="http://downloads.vagrantup.com/tags/v1.2.2"><a href='http://downloads.vagrantup.com/tags/v1.2.2'/>http://downloads.vagrantup.com/tags/v1.2.2</a></a></li>
+<body><h1>Instant Setup hack.g0v.tw for Windows Users</h1><p>快速上手：架好 hack.g0v.tw 專案的開發環境 (Windows)</p><p></p><p>注意：<b>以下步驟最好事先在自己家裡完成</b>，不要到會場才做，不然網路可能會爆炸慢，尤其是 Part 2 的「下載虛擬電腦」要抓的 .box 檔案很大，我用 50M 光纖抓了 25 分鐘才抓完 = =b</p><p></p><p></p><h2>Part 1：建立專案資料夾</h2><p></p><p><b>安裝 github for Windows</b></p><ol><li>下載：<a href="http://windows.github.com/"><a href='http://windows.github.com/'/>http://windows.github.com/</a></a> 右上角「download」</li>
+<li>安裝：執行 GitHubSetup.exe</li>
+<li>登入：打開 github for Windows，登入或註冊你的 github 帳號</li></ol>
+<ul class="comment"><li>什麼是 github</li>
+<li>為什麼要裝 github for Windows</li></ul>
+
+<p><b>複製 hack.g0v.tw 專案資料夾到自己的電腦</b></p><ol><li>打開專案頁面： <a href="https://github.com/g0v/hack.g0v.tw"><a href='https://github.com/g0v/hack.g0v.tw'/>https://github.com/g0v/hack.g0v.tw</a></a>&nbsp;</li>
+<li>複製：按下「Clone in Windows」按鈕，按鈕在頁面左邊中上的位置。按下後，github for Windows 會自動下載專案資料夾。</li>
+<li>看檔案：下載的專案資料夾預設的位置會在 C:&#92;Users&#92;ETBlue(替換成你的使用者名稱)&#92;My Documents&#92;github&#92;&nbsp;</li></ol>
+
+<p></p><h2>Part 2：架設開發環境</h2><p></p><p><b>安裝 vagrant</b></p><ol><li>下載：<a href="http://downloads.vagrantup.com/tags/v1.2.2"><a href='http://downloads.vagrantup.com/tags/v1.2.2'/>http://downloads.vagrantup.com/tags/v1.2.2</a></a></li>
 <li>安裝：執行 Vagrant_1.2.2.msi</li><ul class="comment"><li>安裝完以後程式集沒有多出東西來，不代表沒裝好，他只是沒有 gui 、要從 command line 才看的到而已。</li></ul class="comment">
 </li>
 <li>什麼是 vagrant</li><ul class="comment"><li>vagrant 是一個電腦程式，人類可以把好幾件想做的事情寫在一張筆記（vagrant file）上，vagrant 程式會按照人類寫的筆記，自動把所有事情都做好。</li></ul class="comment">
@@ -15,15 +25,15 @@
 <li>裝外掛的過程眉眉角角很多，等裝完黑客松都結束了，所以我們決定叫 clkao 事先把所有要裝的東西寫好在一張筆記（vagrant file）上， 讓 vagrant 按照 clkao 的指示幫我們裝，這樣我們一到黑客松現場就可以馬上架好環境、捲袖子做事了。</li></ul>
 </ol>
 
-<h2>橋好 vagrant 設定檔</h2><ul class="comment"><li>好像已經不用下載了？</li></ul>
-<ol><li><s>下載：</s><a href="https://dl.dropboxusercontent.com/u/4339854/g0v/Vagrantfile"><s>https://dl.dropboxusercontent.com/u/4339854/g0v/Vagrantfile</s></a></li>
+<ul class="comment"><li>現在已經不用橋了，hack.g0v.tw裡面就會附上</li></ul>
+<p><b><s>橋好 vagrant 設定檔</s></b></p><ol><li><s>下載：</s><a href="https://dl.dropboxusercontent.com/u/4339854/g0v/Vagrantfile"><s>https://dl.dropboxusercontent.com/u/4339854/g0v/Vagrantfile</s></a></li>
 <li><s>橋好：放到 hack.g0v.tw 的 repo 資料夾中</s></li><ul class="comment"><li><s>什麼是 hack.g0v.tw</s><ul class="comment"><li><s>專案的名稱，clkao 取的。指的是開發 g0v hackfoldr 的這個專案。</s></li></ul class="comment">
 </li>
 <li><s>什麼是 repo</s></li>
 <li><s>repo 資料夾在哪裡</s></li></ul>
 </ol>
 
-<h2>使用討人厭的 terminal</h2><ol><li>打開：<ol><li>按下鍵盤上的「Windows」鍵</li><ul class="comment"><li>出現開始功能表，游標自動跑到下方搜尋列</li></ul>
+<p><b>使用討人厭的 terminal 下載虛擬電腦</b></p><ol><li>打開：<ol><li>按下鍵盤上的「Windows」鍵</li><ul class="comment"><li>出現開始功能表，游標自動跑到下方搜尋列</li></ul>
 </ol>
 <ol><li>按下「c」然後「o」然後「m」鍵</li><ul class="comment"><li>第一個搜尋結果通常就會是 command prompt</li></ul>
 </ol>
@@ -38,12 +48,13 @@
 </ol>
 <ol><li>下載虛擬電腦：<ol><li>輸入「vagrant box&nbsp; add g0v <a href="https://dl.dropboxusercontent.com/u/4339854/g0v/g0v-ubuntu-precise64.box">https://dl.dropboxusercontent.com/u/4339854/g0v/g0v-ubuntu-precise64.box</a>」然後按「enter」鍵</li><ul class="comment"><li>會下載 g0v-ubuntu-precise64.box 這個檔案，我用 50M 光纖大概花 25 分鐘抓完</li></ul>
 </ol>
-<ol><li>輸入「vagrant up」然後按「enter」鍵</li><ul class="comment"><li>據說這樣就可以讓虛擬電腦開機 = =b</li></ul class="comment">
-</li></ul class="comment">
+</ol>
+
+<p><b>以下步驟還要再跟 hychen 、audrey 確認，步驟有改過，現在有點搞不清楚到底要不要先裝 mingw 才打 vagrant up？ orz</b></p><p></p><ol><li>輸入「vagrant up」然後按「enter」鍵</li><ul class="comment"><li>據說這樣就可以讓虛擬電腦開機 = =b</li></ul class="comment">
 </li>
 <li>什麼是 terminal</li></ol>
 
-<h2>幫 vagrant 安裝 ssh 連線軟體</h2><ul class="comment"><li>什麼是 ssh<ul class="comment"><li>據說是讓我們可以連到虛擬機器裡面的東西... = =</li></ul>
+<p><b>幫 vagrant 安裝 ssh 連線軟體</b></p><ul class="comment"><li>什麼是 ssh<ul class="comment"><li>據說是讓我們可以連到虛擬機器裡面的東西... = =</li></ul>
 </ul>
 <ol><li>下載：<a href="http://sourceforge.net/projects/mingw/files/Installer/mingw-get-inst/mingw-get-inst-20120426/mingw-get-inst-20120426.exe/download">http://sourceforge.net/projects/mingw/files/Installer/mingw-get-inst/mingw-get-inst-20120426/mingw-get-inst-20120426.exe/download</a></li><ul class="comment"><li>據說是個可以讓 vagrant 程式的 ssh 連線功能發揮作用的東西 = =?</li></ul>
 </ol>
