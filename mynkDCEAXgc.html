@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="255"/>
+<meta name="version" content="1812"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$mynkDCEAXgc</title>
 </head>
 <body><h1>kuansim - 鄉民關心你</h1><p>發起人: <a href='/ep/profile/pgKgmUWKew6GVUKgrhRX7'/>HisnYi Chen</a>&nbsp;</p><p>狀態: 規劃中</p><p>授權方式：open source 相容, BSD 2-caluse 吧...</p><p>VCS: <a href="https://github.com/g0v/kuansim"><a href='https://github.com/g0v/kuansim'/>https://github.com/g0v/kuansim</a></a></p><p></p><p>主治鄉民健忘症，讓鄉民能</p><p></p><ul><li>找對窗口</li>
@@ -118,5 +118,8 @@
 </li>
 <li>五毛黨怎麼防?</li></ul>
 
-</body>
+<p><b>API</b></p><p></p><p>POST /items</p><p></p><p>There is 2 kind of items, a bookmarked uri and a note.</p><p>{</p><p>&rsquo;tags&rsquo;: &rsquo;a, b,c&rsquo;,</p><p>&rsquo;comment&rsquo;: &rsquo;test 12345&rsquo;</p><p>}</p><p></p><p>{</p><p>&rsquo;normal_url&rsquo;,</p><p>&rsquo;tags&rsquo;: &rsquo;a, b,c &rsquo;</p><p>&rsquo;comment&rsquo;: &rsquo;test1233&rsquo;</p><p>}</p><p></p><p>GET|PUT /items/$id :: Int</p><p></p><p>{</p><p>&rsquo;title: &rsquo;the title of the item&rsquo;,</p><p>&rsquo;creator&rsquo;: &rsquo;the guy creates this item&rsquo;</p><p>&rsquo;date_published<b>&rsquo;: &rsquo;</b>the date that item is added<b>&rsquo;,</b></p><p>&rsquo;resolved_url&rsquo;: &rsquo;the resovled url of the item if it has&rsquo;,</p><p>&rsquo;tags&rsquo;: [123213,43432,43221], # the ids of the tags be associated</p><p>&rsquo;messages&rsquo;: [12345, 123232, 4342, 12321321] # the ids of the message be associated</p><p>}</p><p></p><p>POST /tags&nbsp;</p><p></p><p>{</p><p>&rsquo;creator&rsquo;: &rsquo;the user id creates this tag&rsquo;</p><p>&rsquo;name&rsquo;: &rsquo;tag name&rsquo;,</p><p>&rsquo;sharring_type&rsquo;: 0 # 0: public, private</p><p>&rsquo;kind&rsquo;: &rsquo;human&rsquo; # to indicate this is a special tag.</p><p>&rsquo;properties&rsquo; : {a json} # if this tag is belongs to a human kind, then its properties could be&nbsp;</p><p>{current_positions: [tagId, tagId2], phones: [tagId41, tagId99]}</p><p>}</p><p></p><p>GET|PUT /tags/$tag_id :: String</p><p></p><p>{</p><p>&rsquo;name&rsquo;&rsquo; : &rsquo;tag name&rsquo;,</p><p>&rsquo;kind&rsquo;: &rsquo;the kind of a tag&rsquo; # optional</p><p>&rsquo;messages&rsquo;: [123213,432432, 4234324],</p><p>&rsquo;users&rsquo; [321321,432432,432432,432432]</p><p>}</p><p></p><p>GET /users/hychen/tags/$tag_id :: String&nbsp;</p><p></p><p>{</p><p>&rsquo;name&rsquo;: &rsquo;tag name&rsquo;,</p><p>&rsquo;owner&rsquo;: {&rsquo;id&rsquo;: 1,&nbsp; &rsquo;collection_type&rsquo;}</p><undefined><li>&rsquo;self_link&rsquo;: &rsquo;&rsquo;,</li>
+<li>&rsquo;display_name&rsquo;:&rsquo;&rsquo;</li>
+<li>&rsquo;primary_email&rsquo;:&rsquo;&rsquo;}</li></undefined>
+<p>&rsquo;messages&rsquo;: [12334, 312321, 31321]}</p><p></p><p>/kinds/$Id :: Int # kind is also a tag but can only dfined by system provider.</p><p>{</p><p>&rsquo;name&rsquo;: &rsquo;tag name&rsquo;,</p><p>&rsquo;properties_spec&rsquo;,&nbsp;</p><p>&rsquo;tags&rsquo;: .....</p><p>}</p><p></p><p>e.x: /kinds/people # list all people</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /kinds/phones # list all phones</p><p></p><p></p></body>
 </html>
