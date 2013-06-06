@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1812"/>
+<meta name="version" content="3236"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$mynkDCEAXgc</title>
 </head>
 <body><h1>kuansim - 鄉民關心你</h1><p>發起人: <a href='/ep/profile/pgKgmUWKew6GVUKgrhRX7'/>HisnYi Chen</a>&nbsp;</p><p>狀態: 規劃中</p><p>授權方式：open source 相容, BSD 2-caluse 吧...</p><p>VCS: <a href="https://github.com/g0v/kuansim"><a href='https://github.com/g0v/kuansim'/>https://github.com/g0v/kuansim</a></a></p><p></p><p>主治鄉民健忘症，讓鄉民能</p><p></p><ul><li>找對窗口</li>
@@ -110,8 +110,25 @@
 <p><b>技術細節</b></p><ul><li>decentralized auth: <a href='http://identity.mozilla.com/post/7616727542/introducing-browserid-a-better-way-to-sign-in'/>Mozilla BrowserID</a><ul><li>hack.g0v.tw/people does persona and others.&nbsp; can be used as SSO for g0v users</li></ul>
 </li>
 <li>api auth: OAuth</li>
-<li>web framwork: <a href='http://www.yesodweb.com/'/>yesod 1.2</a></li>
-<li>API Design</li></ul>
+<li>web framwork: <a href='http://www.yesodweb.com/'/>yesod 1.2</a></li></ul>
+
+<p>Tag-based tracking</p><p></p><p>the idea is inspired by Emacs Org-mode. A way to orgalinze datas in plain-text.</p><p></p><ul><li>A tag is an identiy of an object or a attribute of an object</li>
+<li>A tag can have properties&nbsp;<ul><li>what properties that a tag should has depends whihc kind it belongs to</li></ul>
+</li>
+<li>A tag can associate to a/many objects<ul><li>message, tag, a resouce on internet, etc.</li>
+<li>tag can not associate to kinds.</li></ul>
+</li>
+<li>A kind is a special tag like a container. there are 2 kind in this system:<ul><li>set: can not have multiple tags which has the same name.</li>
+<li>list: can have mutiple tags which has the same name.</li></ul>
+</li>
+<li>A kind associates to tags<ul><li>If a tag is a people&rsquo;s name, we could add the tag into a kind &quot;human&quot; and add more properties like title, phone number, etc.</li></ul>
+</ul>
+
+<p>As a diary</p><p></p><ul><li>a diary entry is a message which is associated to a tag &quot;note&quot; when it is created by a user<ul><li>user could assoicate more tags on it in order to indicate the relations between the message on topics, events, people. the tags can also be used to indicate the attributes of the message.</li></ul>
+</li>
+<li>we could think a tag works like a message channel and all users in the system shared tags created by each other so a user will see all messages relevent to the tag he is insteresting in.<ul><li>a message can be a social network message also because the automatice social netowork messages assoication mechanism (describe later). user could be able to reply a social message in the system via proper social network website API.</li></ul>
+</ul>
+<ul style="list-style: none;"><li><br/></li></ul>
 
 <p><b>待解決問題</b></p><ul><li>網頁可能失連</li>
 <li>聯絡窗口DB (e.x 政府各單位或代議士)<ul><li>各政府單位uniq id.</li></ul>
