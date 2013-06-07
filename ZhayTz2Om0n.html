@@ -3,23 +3,34 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="4208"/>
+<meta name="version" content="5167"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$ZhayTz2Om0n</title>
 </head>
-<body><h1>客廳工廠黑客松專案構想（Idea Pool）</h1><p></p><p><b>如果你有一個概略的想法，請直接加在這裡。</b></p><p></p><p>如果你想把這邊的想法變得更完整，請用 g0v.hackpad.com 或者 google doc，新增一份文件，然後把它加入 <a href="https://ethercalc.org/g0v-hackath3n">https://ethercalc.org/g0v-hackath3n</a> 最後一行 (url 前面請空一格 以便縮排)</p><p></p><p>說明：</p><p>- 授權方式：程式碼部分（如 MIT/BSD）、文件部分（如 CC-BY）</p><p>- 需求：NeedTech, NeedDesign, NeedWriter, NeedTalktoRealPerson （可加</p><p>在 ethercalc 中第三欄）</p><p></p><p>請幫忙從之前 hackathon 文件回收 Idea：</p><p><u><a href='https://hackpad.com/ul6fMthof2S'/>第零次</a></u></p><p><u><a href='https://hackpad.com/lIoCjaeMWzC'/>第壹次</a></u></p><p><a href='http://hack.g0v.tw/#/g0v-hackath2n/1qotCK6_ccR3MucEVtTrZ7nKdYXniS7bncZR2Dm85qbQ'/>第貳次</a></p><p><a href='https://g0v.hackpad.com/g0v-pre-hackath3n-Y9xV1sIIuTt'/>pre-hackath3n</a></p><p></p><h2>專案格式參考 </h2><p>（新主題請寫下自己名字，以便有興趣的人和你討論）</p><ul><li>專案簡介：</li>
-<li>工作目標：<ul><li>請幫忙把各項整理成容易分組進行的小項</li></ul>
+<body><h1>客廳工廠黑客松專案構想（Idea Pool）</h1><p></p><p><b>如果你有一個概略的想法，請直接加在這裡。</b></p><p></p><p>如果你想把這邊的想法變得更完整，請用 g0v.hackpad.com 或者 google doc，新增一份文件，然後把它加入 <a href="https://ethercalc.org/g0v-hackath3n">https://ethercalc.org/g0v-hackath3n</a> 最後一行 (url 前面請空一格 以便縮排)</p><p></p><p>說明：</p><p>- 授權方式：程式碼部分（如 MIT/BSD）、文件部分（如 CC-BY）</p><p>- 需求：NeedTech, NeedDesign, NeedWriter, NeedTalktoRealPerson （可加</p><p>在 ethercalc 中第三欄）</p><p></p><p>請幫忙從之前 hackathon 文件回收 Idea：</p><p><u><a href='https://hackpad.com/ul6fMthof2S'/>第零次</a></u></p><p><u><a href='https://hackpad.com/lIoCjaeMWzC'/>第壹次</a></u></p><p><a href='http://hack.g0v.tw/#/g0v-hackath2n/1qotCK6_ccR3MucEVtTrZ7nKdYXniS7bncZR2Dm85qbQ'/>第貳次</a></p><p><a href='https://g0v.hackpad.com/g0v-pre-hackath3n-Y9xV1sIIuTt'/>pre-hackath3n</a></p><p></p><h2>People Watch</h2><p></p><ul><li>民主就是自由，監督就是和平，知識就是力量</li>
+<li>一個用來即時反映民意的應用，並且提供歷史紀錄，不讓媒體與政府造成的失憶症繼續猖狂</li>
+<li>工作目標：<ul><li>介接新聞動態、立法院公報與使用者分享的資訊，讓使用者所關心的政黨、立委、議員等做了什麼事、講了什麼話可以被即時的監督<ul><li>不過立院公報雖然有前輩的努力，要接上應用看起來還需要做不少工作，因此會先用dummy data&nbsp;</li>
+<li>新聞動態則是取決於是否有可用的新聞 API</li></ul>
 </li>
-<li>授權方式：close or <a href='http://opensource.org/'/>open source</a>&nbsp;</li>
-<li>使用資料：</li>
-<li>狀態：構想、規劃、雛形、實作</li>
-<li>徵求夥伴：在有興趣的主題下簽名，並加上希望達成什麼、補充資訊、需要什麼幫忙的 tag<ul><li>NeedsWriter: 需要文案幫手（撰寫基本資訊、報導專案etc）</li>
-<li>NeedsDesigner: 需要介面設計</li>
-<li>NeedsData: 需要資料（擷取、清理）</li>
-<li>NeedsTech: 需要技術支援（程式、架站 etc)</li>
-<li>NeedsProcess: 需要幫忙設計作業流程</li>
-<li>NeedsTalkingToRealPerson: 需要有人幫忙和其他機關聯絡</li></ul>
+<li>前述的每個動態都可以被轉發、評論。並且以相關的功能，讓使用者表達基於這則動態，對該政黨、民意代表的立場<ul><li>只有支持、反對與「不表示支持」三種立場，沒有所謂的中立這回事</li>
+<li>不是表達僅針對該事件使用者的立場，是改變或維持使用者對該政治對象的整體立場</li>
+<li>歷史紀錄是重點：使用者可以在選舉投票前，檢查自己曾經因各事件所表示過的立場</li></ul>
+</li>
+<li>另外有功能是可以反映使用者的意見，並統計起來的功能</li></ul>
+</li>
+<li>目前進度<ul><li>已經有幾個重要的 API 規格確定，並在設計實作中<ul><li>目前有修訂中的<a href='https://docs.google.com/spreadsheet/ccc?key=0AjqwG7n2gs71dEZibjZkQmZKUFM5RXdrVVBGcmJ2U3c&amp;usp=sharing'/> API 規格</a>跟<a href='https://cacoo.com/diagrams/rmqQe2ZZenRKC6NW'/>草圖</a></li></ul>
+</li>
+<li>前端的介面目前使用 HTML5 先刻加快速度。再評估移到 Android 或 iPhone 上效能等會不會需要重新以原生功能重做</li>
+<li>後端使用 GAE，不過目前先不 deploy 而是使用 local 版開發</li>
+<li>目前已經有前端的部份功能(函式等級)可以使用</li></ul>
+</li>
+<li>授權：GPLv3</li>
+<li>目前人力狀況與徵求伙伴<ul><li>目前已經有前後端開發者各一</li>
+<li>需要有了解新聞 API 與立院公報剖析、文字處理的伙伴，可以加速與增強整個計畫</li>
+<li>如果 HTML5 應用還是不適合，需要有原生應用的開發者</li></ul>
+</li>
+<li>目前有思考到可能的營運模式，如果這個概念可以成長茁壯也許可能成為社會企業</li></ul>
+
 <ul style="list-style: none;"><li><br/></li></ul>
-</ul>
 
 <h2>施壓立委 & 立委態度意向揭露</h2><p></p><ul><li>專案簡介：化憤怒為施壓行動</li>
 <li>工作目標：<ul><li>說明： 發想源自hlb<a href='http://g0v.github.io/stop-taiwan-sopa/#'/>抗議台版sopa頁面</a>，議題簡單說明之後有do something 和 i don&rsquo;t care按鈕。延伸出去可做成以下方案，日後不同議題能重複利用：</li>
@@ -58,12 +69,13 @@
 </li>
 <li>clkao: alternativeto.net 真實世界版</li>
 <li>Ted: 好奇的是，剛隨機在 alternativeto.net 查看。Ms OneNote and Evernote, 我知道 Evernote 好像不是透過 alternativeto.net, 而是可能透過親朋好友, 或者強勢媒體呢?</li>
-<li>Brecht:&nbsp;<ul style="list-style: none;"><li><a href='/ep/profile/-28z7eLyok9kX88BMj09UVM'/>Ted Chen</a> alternativeto的使用情境是，我已經知道A了，但是因為某些緣故無法用A，所以希望找替代品B，因此不管B本身是如何由人得知，alternativeto告知的訊息是A-&gt;B的關係。也許有人知道OneNote，也知道Evernote，但是在心中並沒有建立起這個連結。也有可能他知道很多替代品，但不知道哪個是比較好的選項。</li></ul style="list-style: none;">
+<li>Brecht:&nbsp;<ul style="list-style: none;"><li><a href='/ep/profile/-28z7eLyok9kX88BMj09UVM'/>Ted Chen</a> alternati</li>
+<li>veto的使用情境是，我已經知道A了，但是因為某些緣故無法用A，所以希望找替代品B，因此不管B本身是如何由人得知，alternativeto告知的訊息是A-&gt;B的關係。也許有人知道OneNote，也知道Evernote，但是在心中並沒有建立起這個連結。也有可能他知道很多替代品，但不知道哪個是比較好的選項。</li></ul style="list-style: none;">
 </li>
 <li>Ted:<ul style="list-style: none;"><li><a href='/ep/profile/-3yQfXx0dDLq4du9UcOfpRh'/>Brecht Huang</a> 我的意思有點類似 <a href='/ep/profile/1J58IcIJNw5JiAl9D0Vrqr'/>ET Blue</a> 在下面的，社會議題追蹤網，內的註解。【<i>連 Google Trends都沒辦法真的找到正在熱議的議題了，所以不可能去除「人」的因素，八卦版之所以能追蹤熱議是&quot;貼、追、推、回、爆、匿、隱、眾&quot;而成 news hub ，沒有人就沒有意義了。 】。好像重點就像賣東西，最後重點還是Marketing。</i></li></ul>
 </ul>
 
-<p>資料：台灣無基改活動：拒買拒吃</p><p><a href="http://gmo.agron.ntu.edu.tw/noGM/no%20GM%20Food-2.htm"><a href='http://gmo.agron.ntu.edu.tw/noGM/no%20GM%20Food-2.htm'/>http://gmo.agron.ntu.edu.tw/noGM/no%20GM%20Food-2.htm</a></a>&nbsp;</p><p></p><p></p><p></p><h2>鄉民關心你 @hychen</h2><p>狀態：規劃</p><p>專案網址: <a href='/mynkDCEAXgc'/>kuansim&nbsp;</a></p><p></p><p>主治鄉民健忘症，讓鄉民能</p><ul><li>找對窗口</li>
+<p>資料：台灣無基改活動：拒買拒吃</p><p><a href="http://gmo.agron.ntu.edu.tw/noGM/no%20GM%20Food-2.htm"><a href='http://gmo.agron.ntu.edu.tw/noGM/no%20GM%20Food-2.htm'/>http://gmo.agron.ntu.edu.tw/noGM/no%20GM%20Food-2.htm</a></a>&nbsp;</p><p></p><p></p><p></p><p></p><h2>鄉民關心你 @hychen</h2><p>狀態：規劃</p><p>專案網址: <a href='/mynkDCEAXgc'/>kuansim&nbsp;</a></p><p></p><p>主治鄉民健忘症，讓鄉民能</p><ul><li>找對窗口</li>
 <li>釐清問題及權責</li>
 <li>表達意見或提案</li>
 <li>進度追蹤</li>
@@ -138,14 +150,27 @@
 <li>NeedsTech: 需要技術支援（程式、架站 etc)</li></ul>
 </ul>
 
-<h2>快速搜尋 uBike 地點</h2><p>拋磚人：jslee</p><ul><li>專案簡介：有外國人很喜歡用台北的uBike 但是很難找到哪裡有uBike的資訊</li>
-<li>工作目標：<ul><li>建立一個cross plafrom (ios andorid) 的 app 很簡單成現哪裡有uBike</li></ul>
+<h2> 快速搜尋 uBike 地點</h2><p>拋磚人：jslee</p><ul><li>專案簡介：有外國人很喜歡用台北的 uBike 但是很難找到哪裡有 uBike 的資訊</li>
+<li>討論：目前 android 上好像就有數個，官方版也有。所有還希望能提供哪些目前沒有的服務呢？</li>
+<li>工作目標：<ul><li>建立一個 cross plafrom (ios andorid) 的 app 很簡單成現哪裡有 uBike</li></ul>
 </li>
-<li>授權方式：<a href='http://opensource.org/'/>open source</a>&nbsp;</li>
-<li>使用資料：台北uBike google map 地點</li>
+<li>&nbsp;授權方式：<a href='http://opensource.org/'/>open source</a>&nbsp;</li>
+<li>使用資料：台北 uBike google map 地點</li>
 <li>狀態：構想</li>
 <li>徵求夥伴：在有興趣的主題下簽名，並加上希望達成什麼、補充資訊、需要什麼幫忙的 tag<ul><li>NeedsDesigner: 需要介面設計</li>
 <li>NeedsData: 需要資料（擷取、清理）</li>
+<li>NeedsTech: 需要技術支援（程式、架站 etc)</li>
+<li>NeedsTalkingToRealPerson: 需要有人幫忙和其他機關聯絡</li></ul>
+</ul>
+
+<h2>全民警察廣播電台</h2><p>拋磚人：＠ymow</p><ul><li>專案簡介：打電話進去警廣報路況太麻煩了，不如變成Voice Tweeter</li>
+<li>討論：Voice Twitter其實市場上有不少成功案例，因此我覺得這個是有機會幫助市民更方便的生活與互助，有機會的話希望能變成VoicePTT</li>
+<li>工作目標：先搶警廣的飯碗(誤)...把Voice Twitter先做出來，讓民眾可以用這個報案，警廣的音樂部分與新聞部分可以用類似Now.In點播的方式(From Youtube or Grooveshark or SoundCloud 等串接，解決Nowin版權問題)，有機會從全民警廣轉形成全民記者或是任何進階版再討論</li>
+<li>授權方式：<a href='http://opensource.org/'/>open source</a>&nbsp;</li>
+<li>使用資料：目前想到是Waze API跟警廣報案資料<a href="http://rtr.pbs.gov.tw/realtime/RoadAll.php">http://rtr.pbs.gov.tw/realtime/RoadAll.php</a></li>
+<li>狀態：構想</li>
+<li>徵求夥伴：在有興趣的主題下簽名，並加上希望達成什麼、補充資訊、需要什麼幫忙的 tag<ul><li>NeedsDesigner: 需要介面設計</li>
+<li>NeedsData: 警廣資料<a href="http://rtr.pbs.gov.tw/realtime/RoadAll.php"><a href='http://rtr.pbs.gov.tw/realtime/RoadAll.php'/>http://rtr.pbs.gov.tw/realtime/RoadAll.php</a></a></li>
 <li>NeedsTech: 需要技術支援（程式、架站 etc)</li>
 <li>NeedsTalkingToRealPerson: 需要有人幫忙和其他機關聯絡</li></ul>
 </ul>
