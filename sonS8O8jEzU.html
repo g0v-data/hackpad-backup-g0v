@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="804"/>
+<meta name="version" content="835"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$sonS8O8jEzU</title>
 </head>
 <body><h1>Liquid Feedback Visual Comminucation</h1><p>g0v 升級版 lqfb 之介面改良計畫（握拳）</p><p><a href="http://lqfb-test.g0v.tw/pf/"><a href='http://lqfb-test.g0v.tw/pf/'/>http://lqfb-test.g0v.tw/</a><a href='http://lqfb-test.g0v.tw/pf/'/>pf/</a></a></p><p></p><p>part 1: User Interface</p><p></p><h2>Strategy</h2><p>動民主系統的目的</p><ul><li>老少咸宜，有電腦的人就能夠參與</li></ul>
@@ -44,5 +44,5 @@
 <p>tablet / desktop</p><ul><li>timeline<ul><li>hand drawing draft <a href="https://picasaweb.google.com/lh/photo/qL8KJoya4Tba7ptvEIxUndMTjNZETYmyPJy0liipFm0?feat=directlink"><a href='https://picasaweb.google.com/lh/photo/un7ZAawPLwVuTPMWy5IVd9MTjNZETYmyPJy0liipFm0?feat=directlink'/>https://picasaweb.google.com/lh/photo/qL8KJoya4Tba7ptvEIxUndMTjNZETYmyPJy0liipFm0?feat=directlink</a></a></li></ul>
 </ul>
 
-<p></p><p></p><p></p><p>part 2: Illustrated Tutorial</p><p>參考資料 <a href="http://openlife.cc/blogs/2012/october/how-hook-solon-secure-voting-liquid-feedback"><a href='http://openlife.cc/blogs/2012/october/how-hook-solon-secure-voting-liquid-feedback'/>http://openlife.cc/blogs/2012/october/how-hook-solon-secure-voting-liquid-feedback</a></a></p><p></p></body>
+<p></p><h2>開發手札</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; au&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 發現 jQuery Mobile 有 holo 的 skin</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://nativedroid.godesign.ch/">http://nativedroid.godesign.ch/</a></p><p>很擔心prfb的網頁版爆炸慢</p><p>所以要包成 app 啊</p><p>據說 web app 也要全部先 render 出來，只是讓 view 疊在一起，然後在互動時調換 layer 順序？</p><p>不然用 toggle display 一樣會 render 很久...</p><p>是的，jQuery mobile 正是這樣</p><p>app 的好處只是所有的 view 一次在安裝時下載完了</p><p>（而安裝時使用者的耐心比平時好很多）</p><p>那麼議案清單需要分頁嗎？還是一直往下捲捲捲... 據說 js 不清記憶體的，捲到後面會爆炸慢 orz</p><p>我覺得如果同時進行的議案不太多</p><p>=看歷史議案不是常態</p><p>=有需要時(捲到後面)再載入 = 就還好。</p><p>也有怎麼樣都卷不完，但是每次只 render 出一些資料的方法喲</p><p>聽說叫做 grid</p><p></p><p></p><p></p><p>part 2: Illustrated Tutorial</p><p>參考資料 <a href="http://openlife.cc/blogs/2012/october/how-hook-solon-secure-voting-liquid-feedback"><a href='http://openlife.cc/blogs/2012/october/how-hook-solon-secure-voting-liquid-feedback'/>http://openlife.cc/blogs/2012/october/how-hook-solon-secure-voting-liquid-feedback</a></a></p><p></p></body>
 </html>
