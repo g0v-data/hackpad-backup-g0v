@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="422"/>
+<meta name="version" content="1039"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$8OJGjMMTItF</title>
 </head>
 <body><h1>社會議題追蹤網</h1><p>專案介紹 | Project Readme / Meta</p><p></p><p>做一個類似 issue tracker 的系統，來追蹤各種社會議題，避免太多新聞事件導致有些重要的事情被轉移目標（例如林益世貪污案被另一件事給救了）。不過八卦事件原則 上不追蹤（例如某大爺酒駕撞死人），這個系統只整理政治、人權、社會公益等等的事件。</p><p></p><h2>來龍去脈</h2><p></p><p><b>主旨</b></p><ul class="comment"><li>怎麼想到要做這個東西/想達成什麼... etc.</li></ul>
@@ -31,24 +31,27 @@
 
 <ul class="comment"><li>從 <a href="https://g0v.hackpad.com/ZhayTz2Om0n">https://g0v.hackpad.com/ZhayTz2Om0n</a> 轉貼來的，待整理</li></ul>
 
-<ul class="comment"><li>初步的構想是像 Redmine 這種東西，每個議題 (issue) 有自己的頁面，每個議題可以更新當前的狀態，介面像是 Facebook 動態時報，最新的消息放在上面。</li>
+<ul class="comment"><li>初步的構想是像 Redmine 這種東西，每個議題 (issue) 有自己的頁面，每個議題可以更新當前的狀態，介面像是 Facebook 動態時報，最新的消息放在上面。<ul class="comment"><li><b>comments:</b> 剛剛討論想到另外一個類比是 twitter ，每個議題相當於是一個帳號，帳號的 tweets 就是該議題的更新（含新聞、blog 看法……）。進入該議題的頁面（twitter 個人頁）會顯示出所有的新聞、blog文章等等（更新）。自己可以去 follow 帳號，也就是可以 關注議題，所以在自己的&nbsp; timeline 上會看到所有關注議題的更新。</li></ul class="comment">
+</li>
 <li><br/></li>
 <li>議題可以 assign 給負責人，例如智財局要推鎖網法，就把這事 assign 給智財局長。當然系統裡不會內建他的帳號，要找個方法表現出這是他要負責的。 assignee 可以多個人。</li>
 <li><br/></li>
-<li>更新事件的時候可以設 milestone ，例如林益世貪污案宣判結果出來了，就設一個 milestone。瀏覽 timeline 的時候以 milestone 為主，在 milestone 下面再貼新聞、參考資料、評論等等。</li>
-<li><br/></li>
-<li>貼新聞或引用他人在 blog / Facebook 的評論，可能會有著作權的問題？當然超連結一定要附上。</li>
-<li><br/></li>
-<li>更新議題是要手動進行的，若要自動抓新聞的話或許可以接「社會議題懶人包」？ Google 電子快訊？</li>
-<li><br/></li>
-<li>要維護每個議題也很累的，萬一沒人維護的話漏掉新聞就糟了。或許有些可以讓關心這件事情的人來當志工認養？例如樂生事件，可以請樂生青年的朋友來維護。</li>
-<li><br/></li>
-<li>要有方法來把熱門事件給放在首頁顯眼的地方。</li>
-<li><br/></li>
-<li>要開放 API ，讓別的程式可以直接抓到這個網站上的資料，動態時報也可以開放 RSS 。</li>
+<li>貼新聞或引用他人在 blog / Facebook 的評論，可能會有著作權的問題？當然超連結一定要附上。</li></ul>
+
+<ul class="comment"><li>若要自動抓新聞的話或許可以接「社會議題懶人包」？ Google 電子快訊？</li>
+<li>例如去對方 API 抓相關新聞，推薦使用者將它加入這張票。</li>
 <li><br/></li></ul>
 
-<h2>實做細節</h2><p></p><p><b>使用技術與工具</b></p><p></p><ul><li>Ruby on Rails</li>
+<p><b>關於更新議題&nbsp;</b></p><p></p><p>更新議題是要手動進行的。</p><p></p><p>要維護每個議題也很累的，萬一沒人維護的話漏掉新聞就糟了。或許有些可以讓關心這件事情的人來當志工認養？例如樂生事件，可以請樂生青年的朋友來維護。</p><p></p><p>誰來把改票的狀態 (state) ？例如誰可以 confirm / reject / mark as duplicated / close 票。一開始一定是少數人才能改 state ，要開放誰可以改？又，有哪些狀態可以用？</p><p></p><p><b>關於議題的 tagging</b></p><p></p><p>誰可以改 tag ? （我傾向每個人都可以改）</p><p></p><p>防亂改？ rollback 機制？</p><p></p><p>福利請聽的做法是大家都可以 propose tag ，由站務來審核。</p><p></p><p>另外又想到一個方法是大家都可以加 tag ，但可以提 abuse 。</p><p></p><p><b>關於共同關注議題</b></p><p></p><ol><li>大家要可以共同關注議題。相同的議題盡量不要有重複的票出現。所以議題應該都是 public ，然後大家都可以都可以 follow （比較接近 twiiter follow）。最新議題和熱門議題，應該要放在首頁，讓新使用者可以輕鬆的關注，不會產生重複的議題。</li>
+<li>議題應該要有管理員，因為議題的 state 會變化，要設定 milestone ，要新增/移除 tags 等等。其他人都應該只是 follower，只能關注和留言。管理員還要可以允許其他人加入管理員，接收新增/移除 tag 建議等等。</li>
+<li>議題的更新來源是 社會議題專案的爬新聞的來源 api ，所以爬新聞專案的規劃裡面，本身就有 tags ，因此議題專案應該只要透過 api 去問有哪些 tags 可以下。</li></ol>
+<ul class="comment"><li><br/></li>
+<li>要有方法來把熱門事件給放在首頁顯眼的地方。</li></ul>
+
+<p><b>關於懶人包&nbsp;</b></p><p></p><p>更新事件的時候可以設 milestone ，例如林益世貪污案宣判結果出來了，就設一個 milestone。瀏覽 timeline 的時候以 milestone 為主，在 milestone 下面再貼新聞、參考資料、評論等等。</p><p></p><p>單一議題#show 的頁面會長得像是懶人包，一次顯示出所有的 milestones ，然後會像 wikipedia 手機版介面，可以收合。</p><ul class="comment"><li><br/></li>
+<li>要開放 API ，讓別的程式可以直接抓到這個網站上的資料，動態時報也可以開放 RSS 。</li></ul>
+
+<p></p><h2>實做細節</h2><p></p><p><b>使用技術與工具</b></p><p></p><ul><li>Ruby on Rails</li>
 <li>使用的 vagrant box 版本 / 網址：</li>
 <li>hackfoldr 工作資料夾網址：</li></ul>
 
