@@ -3,8 +3,51 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="15"/>
+<meta name="version" content="1002"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$t4obguzZFbd</title>
 </head>
-<body><h1>鄉民關心你 - 專案開發指南</h1><p></p><p>tbd</p><p></p></body>
+<body><h1>鄉民關心你 - 專案開發指南</h1><p></p><p><b>技術架構</b></p><p></p><ul><li>Programming Language:&nbsp;<ul><li>Web: <a href='https://www.google.com.tw/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;ved=0CDAQFjAA&amp;url=http%3A%2F%2Flivescript.net%2F&amp;ei=afm3UebdE4TTkAW4lYDwCg&amp;usg=AFQjCNHLh2n5SJLJCBB-yTcUJpC4KnqEhQ&amp;sig2=J4XpRoDfOvq4lYkC_wBEMQ'/>LiveScript</a></li>
+<li>Glue Tool: Python or any.</li></ul>
+</li>
+<li>Data Exchange: <a href='http://www.json.org/'/>JSON</a>&nbsp;</li>
+<li>Auth: g0v single sign on</li>
+<li>Backend:&nbsp;<ul><li>Restful DB: <a href='http://www.postgresql.org/'/>Postsql</a> + <a href='http://postgre.st/'/>PgRest</a><ul><li>介紹簡報: <a href='http://www.slideshare.net/autang/pg-rest-osdctw2013'/>node.js in the database</a></li></ul>
+</li></ul>
+</li>
+<li>Frontend:&nbsp;<ul><li>HTML5 applications Assembler: <a href='http://brunch.io/'/>Brunch</a>&nbsp;</li>
+<li>MVW Framwork: <a href='http://AngularJS'/>Agura Js</a></li>
+<li>Visualization lib:&nbsp; <a href='http://d3js.org/'/>D3.js</a></li>
+<li>Mobile APP Framwork: Any</li></ul>
+</li>
+<li>Version Control: <a href='http://git-scm.com/'/>Git</a></li>
+<li>Continuation Testing: <a href='https://travis-ci.org/'/>Travis</a></li>
+<li>Develop VM: <a href='http://www.vagrantup.com/'/>Vagrant</a></li>
+<li>Deploy: <a href='http://www.opscode.com/chef/'/>Chef</a>, <a href='http://berkshelf.com/'/>Berkshelf</a></li>
+<li>Server OS: <a href='http://www.ubuntu.com'/>GNU/Linux Ubuntu</a></li>
+<li>Fake Data Generator:<ul><li><a href='http://more.handlino.com/'/>MoreText</a></li>
+<li>QuickCheck-like modules&nbsp;<ul><li>Python: <a href='https://pypi.python.org/pypi/pytest-quickcheck/'/>pytest-quickcheck</a></li>
+<li>Haskell: <a href='http://www.haskell.org/haskellwiki/Introduction_to_QuickCheck'/>quickcheck</a></li></ul>
+</ul>
+</ul>
+
+<p>專案管理模型</p><p></p><ul><li>It is done when it is done</li>
+<li><a href='http://en.wikipedia.org/wiki/Test-driven_development'/>TDD</a> is prefred, but without unit tesing is fine.</li>
+<li><a href='http://nvie.com/posts/a-successful-git-branching-model/'/>Git branching mode</a></li>
+<li><a href='http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html'/>Git commt style&nbsp;</a></li></ul>
+
+<p><b>準備開發環境</b></p><p></p><ul><li>安裝 Vagrant&nbsp;<ul><li>閱讀<u><a href='http://hychen.wuweig.org/blog/2013/06/01/develop-g0v-project-with-vagrant/'/>利用 Vagrant 開發 g0v.tw 專案</a></u></li></ul>
+</li>
+<li>安裝 Berkshelf</li></ul>
+<ul style="list-style: none;"><li>$ vagrant plugin install vagrant-berkshelf</li></ul>
+<ul><li>安裝 Git</li>
+<li>安裝 <a href='http://editorconfig.org/'/>editconfig</a>&nbsp;</li>
+<li>取得源碼</li></ul>
+<ul style="list-style: none;"><li>$ git clone git@github.com:g0v/kuansim.git</li></ul>
+<ul><li>啟動環境<ul><li>$ cd kuansim</li>
+<li>kuansim $ vagrant up&nbsp;</li>
+<li>kuansim $ vagrant ssh&nbsp;</li></ul>
+<ul class="comment"><li>你的code可以在/vagrant下找到</li></ul>
+</ul>
+
+</body>
 </html>
