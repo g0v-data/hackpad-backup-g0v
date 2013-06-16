@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1114"/>
+<meta name="version" content="1165"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$t4obguzZFbd</title>
 </head>
 <body><h1>鄉民關心你 - 專案開發指南</h1><p></p><p><b>技術架構</b></p><p></p><ul><li>Programming Language:&nbsp;<ul><li>Web: <a href='https://www.google.com.tw/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;ved=0CDAQFjAA&amp;url=http%3A%2F%2Flivescript.net%2F&amp;ei=afm3UebdE4TTkAW4lYDwCg&amp;usg=AFQjCNHLh2n5SJLJCBB-yTcUJpC4KnqEhQ&amp;sig2=J4XpRoDfOvq4lYkC_wBEMQ'/>LiveScript</a></li>
@@ -46,16 +46,12 @@
 <li>取得源碼</li></ul>
 <ul style="list-style: none;"><li>$ git clone git@github.com:g0v/kuansim.git</li></ul>
 <ul><li>啟動VM環境<ul><li>$ cd kuansim</li>
-<li>kuansim $ vagrant up&nbsp;</li>
-<li>kuansim $ vagrant ssh&nbsp;</li></ul>
+<li>kuansim $ vagrant up&nbsp;</li></ul>
 <ul class="comment"><li>你的code可以在/vagrant下找到</li></ul>
 </ul>
-<ul><li>架設 Restful Web and DB<ul><li>sudo su postgres -c &rsquo;createdb MYDB&rsquo;</li>
-<li>sudo su postgres -c &quot;psql MYDB -c &rsquo;create extension plv8&rsquo;&quot;</li>
-<li>sudo npm i pgrest -g</li>
-<li>sudo su postgres -c &quot;pgrest --db tcp://postgres:hackg0v@localhost/MYDB&quot; &amp;</li></ul>
+<ul><li>開啟瀏覽器打 <a href="http://localhost:6987/collections">http://localhost:6987/collections</a>, 即可操作rest api.<ul><li>停止 service<ul><li>kuansim $ vagrant ssh -c &quot;stop kuansim&quot;</li></ul>
+</li></ul>
 </li>
-<li>開啟瀏覽器打 <a href="http://localhost:6987/collections">http://localhost:6987/collections</a></li>
 <li>使用方式見<ul><li>import data: <a href="https://github.com/g0v/moedict-data-twblg/blob/master/Makefile"><a href='https://github.com/g0v/moedict-data-twblg/blob/master/Makefile'/>https://github.com/g0v/moedict-data-twblg/blob/master/Makefile</a></a></li>
 <li>plv8x: <a href="https://npmjs.org/package/plv8x"><a href='https://npmjs.org/package/plv8x'/>https://npmjs.org/package/plv8x</a></a></li></ul>
 </ul>
