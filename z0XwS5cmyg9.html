@@ -3,11 +3,70 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="36"/>
+<meta name="version" content="1936"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$z0XwS5cmyg9</title>
 </head>
-<body><h1>鄉民關心你 - API</h1><p></p><p>POST /items</p><p></p><p>There is 2 kind of items, a bookmarked uri and a note.</p><p>{</p><p>&rsquo;tags&rsquo;: &rsquo;a, b,c&rsquo;,</p><p>&rsquo;comment&rsquo;: &rsquo;test 12345&rsquo;</p><p>}</p><p></p><p>{</p><p>&rsquo;normal_url&rsquo;,</p><p>&rsquo;tags&rsquo;: &rsquo;a, b,c &rsquo;</p><p>&rsquo;comment&rsquo;: &rsquo;test1233&rsquo;</p><p>}</p><p></p><p>GET|PUT /items/$id :: Int</p><p></p><p>{</p><p>&rsquo;title: &rsquo;the title of the item&rsquo;,</p><p>&rsquo;creator&rsquo;: &rsquo;the guy creates this item&rsquo;</p><p>&rsquo;date_published<b>&rsquo;: &rsquo;</b>the date that item is added<b>&rsquo;,</b></p><p>&rsquo;resolved_url&rsquo;: &rsquo;the resovled url of the item if it has&rsquo;,</p><p>&rsquo;tags&rsquo;: [123213,43432,43221], # the ids of the tags be associated</p><p>&rsquo;messages&rsquo;: [12345, 123232, 4342, 12321321] # the ids of the message be associated</p><p>}</p><p></p><p>POST /tags&nbsp;</p><p></p><p>{</p><p>&rsquo;creator&rsquo;: &rsquo;the user id creates this tag&rsquo;</p><p>&rsquo;name&rsquo;: &rsquo;tag name&rsquo;,</p><p>&rsquo;sharring_type&rsquo;: 0 # 0: public, private</p><p>&rsquo;kind&rsquo;: &rsquo;human&rsquo; # to indicate this is a special tag.</p><p>&rsquo;properties&rsquo; : {a json} # if this tag is belongs to a human kind, then its properties could be&nbsp;</p><p>{current_positions: [tagId, tagId2], phones: [tagId41, tagId99]}</p><p>}</p><p></p><p>GET|PUT /tags/$tag_id :: String</p><p></p><p>{</p><p>&rsquo;name&rsquo;&rsquo; : &rsquo;tag name&rsquo;,</p><p>&rsquo;kind&rsquo;: &rsquo;the kind of a tag&rsquo; # optional</p><p>&rsquo;messages&rsquo;: [123213,432432, 4234324],</p><p>&rsquo;users&rsquo; [321321,432432,432432,432432]</p><p>}</p><p></p><p>GET /users/hychen/tags/$tag_id :: String&nbsp;</p><p></p><p>{</p><p>&rsquo;name&rsquo;: &rsquo;tag name&rsquo;,</p><p>&rsquo;owner&rsquo;: {&rsquo;id&rsquo;: 1,&nbsp; &rsquo;collection_type&rsquo;}</p><undefined><li>&rsquo;self_link&rsquo;: &rsquo;&rsquo;,</li>
-<li>&rsquo;display_name&rsquo;:&rsquo;&rsquo;</li>
-<li>&rsquo;primary_email&rsquo;:&rsquo;&rsquo;}</li></undefined>
-<p>&rsquo;messages&rsquo;: [12334, 312321, 31321]}</p><p></p><p>/kinds/$Id :: Int # kind is also a tag but can only dfined by system provider.</p><p>{</p><p>&rsquo;name&rsquo;: &rsquo;tag name&rsquo;,</p><p>&rsquo;properties_spec&rsquo;,&nbsp;</p><p>&rsquo;tags&rsquo;: .....</p><p>}</p><p></p><p>e.x: /kinds/people # list all people</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /kinds/phones # list all phones</p><p></p><p></p></body>
+<body><h1>鄉民關心你 - API</h1><p></p><p><b>User</b></p><p></p><p>GET /users/{user id}</p><p></p><ul><li><b>id</b>: user id</li>
+<li><b>display_name</b>: the name a user want to display in the system</li>
+<li><b>prefer_poston:</b> which system user prefer to use for posting a message (twitter/facebook/kunasim)</li>
+<li><b>subscribtions</b><ul><li><b>tags</b></li>
+<li><b>people</b></li></ul>
+</ul>
+
+<p>GET /users/{user id}/items - get bookmarked items of a user</p><p></p><p><b>Bookmarked Items</b></p><p></p><p>GET /items/{item_id}</p><p></p><ul><li><b>id: </b>Item id</li>
+<li><b>normal_url:</b> The original url for the added item</li>
+<li><b>resolved_id:</b> A unique identifier for the resolved item</li>
+<li><b>resolved_type:</b> The type resolved item belongs to</li>
+<li><b>date_resolved:</b> The date the item was resolved</li>
+<li><b>authors:</b> Array of author data (if author(s) were found)</li>
+<li><b>tags: </b>Array of tags</li>
+<li><b>messages: </b>associated messages</li>
+<li><b>in_inbox: </b>0: no, 1: yes</li></ul>
+
+<p><b>Articles (belongs to resolved items)&nbsp;</b></p><p></p><ul><li>read-only</li></ul>
+
+<p>GET /articles/{article id}</p><p></p><ul><li><b>id: </b>article id</li>
+<li><b>title: </b>article title</li>
+<li><b>summary</b>: article summary</li>
+<li><b>fulltext</b>: aticle full content&nbsp;</li>
+<li><b>date_published</b>: The date the item was published&nbsp;</li>
+<li><b>sources: </b>Array of sources where the article from</li>
+<li><b>has_images: </b>0: no image; 1: has an image in the body of the article; 2: is an image</li>
+<li><b>images</b>: Array of image data&nbsp;</li>
+<li><b>has_videos: </b>0: no video; 1: has a video in the body of the article; 2: is a video</li>
+<li><b>videos</b>: Array of video data&nbsp;</li>
+<li><b>has_diffs: </b>0: no; 1: has multiple versions</li>
+<li><b>diffs: </b>Array of changes if this article has multiple version</li></ul>
+
+<p><b>Tags</b></p><p></p><p>GET /tags/{tag name}</p><p></p><ul><li><b>id: </b>tag id</li>
+<li><b>name: </b>tag name</li>
+<li><b>system_defined: </b>0: no , 1: user defined</li>
+<li><b>authors: </b>Array of authors</li></ul>
+
+<p>system tags:</p><p></p><ul><li>inbox&nbsp;</li></ul>
+
+<p><b>Messages&nbsp;</b></p><p></p><p>GET /messages/{message id}</p><p></p><ul><li><b>id: message id:</b></li>
+<li><b>from:</b></li>
+<li><b>to:</b></li>
+<li><b>fulltext</b></li>
+<li><b>carrier</b><ul><li>facebook/g+/plurk/....</li></ul>
+</li>
+<li><b>resolved_id</b></li>
+<li><b>resolved_url</b></li>
+<li><b>tags</b></li>
+<li><b>people</b></li></ul>
+
+<p><b>Events</b></p><p></p><ul><li><b>id</b></li>
+<li><b>creator</b></li>
+<li><b>authors</b></li>
+<li><b>date_created</b></li>
+<li><b>date_lastmodifed</b></li>
+<li><b>date_started</b></li>
+<li><b>date_end</b></li>
+<li><b>location</b></li>
+<li><b>people</b></li>
+<li><b>tags</b></li>
+<li><b>items</b></li></ul>
+
+</body>
 </html>
