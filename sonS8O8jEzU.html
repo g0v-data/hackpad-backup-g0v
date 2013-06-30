@@ -3,8 +3,34 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="946"/>
+<meta name="version" content="1444"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$sonS8O8jEzU</title>
 </head>
-<body><h1>Liquid Feedback Visual Comminucation</h1><p>g0v 升級版 lqfb 之介面改良計畫（握拳）</p><p></p><p>prototype: <a href="http://lqfb-test.g0v.tw/pf/"><a href='http://lqfb-test.g0v.tw/pf/'/>http://lqfb-test.g0v.tw/</a><a href='http://lqfb-test.g0v.tw/pf/'/>pf/</a></a></p><p></p><p></p><h2>前端工具集</h2><p>mobile web</p><p><a href='http://devgirl.org/2013/06/10/quick-start-guide-phonegap-and-angularjs/'/>Quick Start Guide to PhoneGap+AngularJS</a></p><p><a href='https://github.com/phonegap'/>phonegap</a> / <a href='https://github.com/phonegap/phonegap-app-anyconference'/>phonegap-app-anyconference</a></p><p><a href="http://nativedroid.godesign.ch/demo/index.html"><a href='http://nativedroid.godesign.ch/demo/index.html'/>http://nativedroid.godesign.ch/demo/index.html</a></a></p><p></p><p><a href='http://topcoat.io/'/>Topcoat</a> - CSS for clean and fast web apps.</p><p></p><p>色盲友善色票</p><p><a href="http://colorbrewer2.org/"><a href='http://colorbrewer2.org/'/>http://colorbrewer2.org/</a></a></p><p></p><p></p><h2>開發手札</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; au&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 發現 jQuery Mobile 有 holo 的 skin</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://nativedroid.godesign.ch/">http://nativedroid.godesign.ch/</a></p><p>很擔心prfb的網頁版爆炸慢</p><p>所以要包成 app 啊</p><p>據說 web app 也要全部先 render 出來，只是讓 view 疊在一起，然後在互動時調換 layer 順序？</p><p>不然用 toggle display 一樣會 render 很久...</p><p>是的，jQuery mobile 正是這樣</p><p>app 的好處只是所有的 view 一次在安裝時下載完了</p><p>（而安裝時使用者的耐心比平時好很多）</p><p>那麼議案清單需要分頁嗎？還是一直往下捲捲捲... 據說 js 不清記憶體的，捲到後面會爆炸慢 orz</p><p>我覺得如果同時進行的議案不太多</p><p>=看歷史議案不是常態</p><p>=有需要時(捲到後面)再載入 = 就還好。</p><p>也有怎麼樣都卷不完，但是每次只 render 出一些資料的方法喲</p><p>聽說叫做 grid</p><p></p><p></p></body>
+<body><h1>Liquid Feedback Visual Comminucation</h1><p>g0v 升級版 lqfb 之介面改良計畫（握拳）</p><p></p><p>prototype: <a href="http://lqfb-test.g0v.tw/pf/"><a href='http://lqfb-test.g0v.tw/pf/'/>http://lqfb-test.g0v.tw/</a><a href='http://lqfb-test.g0v.tw/pf/'/>pf/</a></a></p><p></p><p></p><h2>前端工具集</h2><p>mobile web</p><p><a href='http://devgirl.org/2013/06/10/quick-start-guide-phonegap-and-angularjs/'/>Quick Start Guide to PhoneGap+AngularJS</a></p><p><a href='https://github.com/phonegap'/>phonegap</a> / <a href='https://github.com/phonegap/phonegap-app-anyconference'/>phonegap-app-anyconference</a></p><p><a href="http://nativedroid.godesign.ch/demo/index.html"><a href='http://nativedroid.godesign.ch/demo/index.html'/>http://nativedroid.godesign.ch/demo/index.html</a></a></p><p><a href='http://topcoat.io/'/>Topcoat</a> - CSS for clean and fast web apps.</p><p>色盲友善色票</p><p><a href="http://colorbrewer2.org/"><a href='http://colorbrewer2.org/'/>http://colorbrewer2.org/</a></a></p><p></p><p><b>讓 Fire.app 支援 Jade 的方法（Windows 7 版）</b></p><ul class="comment"><li>Linux 跟 Mac 請以此類推... XD</li></ul>
+<ol><li>用 command prompt 安裝 Jade<ol><li>按 Windows 鍵</li><ul class="comment"><li>出現開始功能表，游標會自動出現在下方搜尋框</li></ul>
+</ol>
+<ol><li>輸入 cmd 後按 enter</li><ul class="comment"><li>找到 cmd.exe （也就是 command prompt）並執行它</li></ul>
+</ol>
+<ol><li>在 command prompt 裡輸入 npm install -g jade 後按 enter</li><ul class="comment"><li>會自動上網抓 Jade 的程式並安裝它，要跑一小下子</li></ul>
+</ol>
+</ol>
+<ol><li>製作 Fire.app 的 Jade 設定檔<ol><li>打開檔案總管，移動到需要使用 Jade 的專案的資料夾</li>
+<li>在專案資料夾根目錄空白的地方按「滑鼠右鍵→新增→純文字檔案」</li>
+<li>檔名設定成 http_servlet_handler.rb （注意副檔名要改成 .rb，不是 .txt）</li><ul class="comment"><li>如果看不到副檔名，在檔案總管按 Alt + F 叫出功能選單，選「工具→資料夾選項」，再選檢視分頁，找到「隱藏已知檔案的副檔名」取消打勾，然後按「確定」</li></ul>
+</ol>
+<ol><li>連到 <a href="https://gist.github.com/tka/5302996"><a href='https://gist.github.com/tka/5302996'/>https://gist.github.com/tka/5302996</a></a> 網頁</li>
+<li>往下捲一點，找到 http_servlet_handler.rb for windows 這一段</li>
+<li>把內容複製後貼到剛才新增的 http_servlet_handler.rb 文字檔中，存檔</li></ol>
+</li>
+<li>測試<ol><li>在專案資料夾根目錄裡新增空白的文字檔，檔名叫 foo.jade</li>
+<li>打開 Fire.app</li><ul class="comment"><li>跑完以後程式 icon 會出現在開始列的通知區，剛打開時 icon 黑色的</li></ul>
+</ol>
+<ol><li>按下 Fire.app icon，選 watch folder... 後選專案資料夾的位置</li><ul class="comment"><li>watch 後 fire.app 的 icon 會變成彩色的</li>
+<li>如果原本已經在 watch folder 中，先 stop watching 然後再重新 watch 一次</li></ul>
+</ol>
+<ol><li>連到 <a href="http://127.0.0.1:24681/foo.jade"><u><a href='http://127.0.0.1:24681/foo.jade'/>http://127.0.0.1:24681/foo.jade</a></u></a></li>
+<li>網頁一片空白沒有錯誤訊息，就表示成功了 :D</li></ol>
+</ol>
+
+<p></p><h2>開發手札</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; au&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 發現 jQuery Mobile 有 holo 的 skin</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://nativedroid.godesign.ch/">http://nativedroid.godesign.ch/</a></p><p>很擔心prfb的網頁版爆炸慢</p><p>所以要包成 app 啊</p><p>據說 web app 也要全部先 render 出來，只是讓 view 疊在一起，然後在互動時調換 layer 順序？</p><p>不然用 toggle display 一樣會 render 很久...</p><p>是的，jQuery mobile 正是這樣</p><p>app 的好處只是所有的 view 一次在安裝時下載完了</p><p>（而安裝時使用者的耐心比平時好很多）</p><p>那麼議案清單需要分頁嗎？還是一直往下捲捲捲... 據說 js 不清記憶體的，捲到後面會爆炸慢 orz</p><p>我覺得如果同時進行的議案不太多</p><p>=看歷史議案不是常態</p><p>=有需要時(捲到後面)再載入 = 就還好。</p><p>也有怎麼樣都卷不完，但是每次只 render 出一些資料的方法喲</p><p>聽說叫做 grid</p><p></p><p></p></body>
 </html>
