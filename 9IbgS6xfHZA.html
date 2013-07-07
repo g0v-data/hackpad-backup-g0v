@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="202"/>
+<meta name="version" content="397"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$9IbgS6xfHZA</title>
 </head>
 <body><h1>g0v hub</h1><p>簽到處</p><p></p><p></p><h2>來龍去脈</h2><p></p><p><b>主旨</b></p><p>g0v hackfoldr 裡面的 people, projects, tags</p><p></p><p><b>牽涉領域</b></p><ul><li>基礎建設, meta</li></ul>
@@ -44,10 +44,17 @@
 </ul>
 </ul>
 
-<p><b>project registry</b></p><ul><li>定義 g0v project meta data &amp; display<ul><li>sample: <a href="https://github.com/g0v/hack.g0v.tw/blob/master/g0v.json"><a href='https://github.com/g0v/hack.g0v.tw/blob/master/g0v.json'/>https://github.com/g0v/hack.g0v.tw/blob/master/g0v.json</a></a><ul><li>project 和 成果 好像應該分開來</li>
+<p><b>project registry</b></p><ul><li>專案、成果、構想（包含拋磚、發想）<ul><li>新增構想 = 先使用 hackpad，有成案再輸入 project registry</li>
+<li>新增專案或 = webui<ul><li>輸入後，順便按照專案模版產生 hackpad page</li></ul>
+</li>
+<li>新增現有成果 = import from github json</li></ul>
+</li>
+<li>定義 g0v project meta data &amp; display<ul><li>sample: <a href="https://github.com/g0v/hack.g0v.tw/blob/master/g0v.json"><a href='https://github.com/g0v/hack.g0v.tw/blob/master/g0v.json'/>https://github.com/g0v/hack.g0v.tw/blob/master/g0v.json</a></a><ul><li>project 和 成果 好像應該分開來顯示<ul><li>專案可以有個 project field 表示所屬專案。</li></ul>
+</li>
 <li>例如 立院專案 有自己的說明，各成果又各有不同產出（公報文字檔、API、網站、etc）。又如萌典，有 data source、各類 app 等成果。</li></ul>
-</ul>
-<ol><li>專案名稱name, name.zh</li>
+</li>
+<li>id alphanumerical</li></ul>
+<ol><li>專案名稱 name, name.zh</li>
 <li>簡短說明 description, description.zh</li>
 <li>狀態: status: idea, alpha, beta</li>
 <li>預定產出的格式是什麼（json / csv / api / website / mobileapp / browserext） product</li></ol>
@@ -73,7 +80,8 @@
 <li>visual design</li>
 <li>writer</li></ul>
 </ul>
-<ol><li>聯絡窗口</li>
+<ol><li>聯絡窗口 contact (mailing list, irc)</li>
+<li>hackpad</li>
 <li>專案的 github 網址</li></ol>
 <ul class="comment"><li>是否要建議每個專案開一個 group 設定 members，還是在自己帳號也行？（用自己的可能會比較亂）</li>
 <li>要是看到有人認領了某工作但很久沒 commit 了其他人可以考慮接手XD</li></ul>
