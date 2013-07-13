@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1936"/>
+<meta name="version" content="2261"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$z0XwS5cmyg9</title>
 </head>
 <body><h1>鄉民關心你 - API</h1><p></p><p><b>User</b></p><p></p><p>GET /users/{user id}</p><p></p><ul><li><b>id</b>: user id</li>
@@ -18,7 +18,8 @@
 <li><b>resolved_id:</b> A unique identifier for the resolved item</li>
 <li><b>resolved_type:</b> The type resolved item belongs to</li>
 <li><b>date_resolved:</b> The date the item was resolved</li>
-<li><b>authors:</b> Array of author data (if author(s) were found)</li>
+<li><b>date_happend: </b>事件發生的時間</li>
+<li><b>author:author</b></li>
 <li><b>tags: </b>Array of tags</li>
 <li><b>messages: </b>associated messages</li>
 <li><b>in_inbox: </b>0: no, 1: yes</li></ul>
@@ -27,6 +28,7 @@
 
 <p>GET /articles/{article id}</p><p></p><ul><li><b>id: </b>article id</li>
 <li><b>title: </b>article title</li>
+<li><b>canonical_url: </b>permanent url of original article.</li>
 <li><b>summary</b>: article summary</li>
 <li><b>fulltext</b>: aticle full content&nbsp;</li>
 <li><b>date_published</b>: The date the item was published&nbsp;</li>
@@ -46,15 +48,14 @@
 <p>system tags:</p><p></p><ul><li>inbox&nbsp;</li></ul>
 
 <p><b>Messages&nbsp;</b></p><p></p><p>GET /messages/{message id}</p><p></p><ul><li><b>id: message id:</b></li>
-<li><b>from:</b></li>
-<li><b>to:</b></li>
-<li><b>fulltext</b></li>
-<li><b>carrier</b><ul><li>facebook/g+/plurk/....</li></ul>
-</li>
 <li><b>resolved_id</b></li>
 <li><b>resolved_url</b></li>
-<li><b>tags</b></li>
-<li><b>people</b></li></ul>
+<li><b>carrier</b><ul><li>facebook/g+/plurk/kuansim</li></ul>
+</li>
+<li><b>owner:</b></li>
+<li><b>fulltext:</b></li>
+<li><b>tags:</b></li>
+<li><b>people:</b></li></ul>
 
 <p><b>Events</b></p><p></p><ul><li><b>id</b></li>
 <li><b>creator</b></li>
