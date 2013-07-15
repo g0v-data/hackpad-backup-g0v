@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="399"/>
+<meta name="version" content="723"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$9IbgS6xfHZA</title>
 </head>
 <body><h1>g0v hub</h1><p>簽到處</p><p></p><p></p><h2>來龍去脈</h2><p></p><p><b>主旨</b></p><p>g0v hackfoldr 裡面的 people, projects, tags</p><p></p><p><b>牽涉領域</b></p><ul><li>基礎建設, meta</li></ul>
@@ -86,6 +86,18 @@
 <ul class="comment"><li>是否要建議每個專案開一個 group 設定 members，還是在自己帳號也行？（用自己的可能會比較亂）</li>
 <li>要是看到有人認領了某工作但很久沒 commit 了其他人可以考慮接手XD</li></ul>
 </ul>
+<p><b>&nbsp;znc and subway</b></p><ul><li>&nbsp;原始issue<ul><li><a href="https://github.com/g0v/dev/issues/10"><a href='https://github.com/g0v/dev/issues/10'/>https://github.com/g0v/dev/issues/10</a></a></li></ul>
+</li>
+<li>目前進度</li><ol><li>znc <a href="https://github.com/yhsiang/znc"><a href='https://github.com/yhsiang/znc'/>https://github.com/yhsiang/znc</a></a><ol><li>create user script</li></ol>
+<ul class="comment"><li>想整合kiwirc然後加github login</li></ul>
+</ol>
+<ol><li>subway <a href="https://github.com/yhsiang/subway"><a href='https://github.com/yhsiang/subway'/>https://github.com/yhsiang/subway</a></a><ol><li>github login based on firebase SSO</li>
+<li>替socketio新增一個 /authz for github login</li>
+<li>新增一個logout的圖示</li></ol>
+<ul class="comment"><li>有一個subway 原始的bug，就是如果使用者不勾選keep connection下次登入就什麼都下次登入就什麼都看不到。</li>
+<li>然後現在都用onclick 硬作，應該要寫到js裡面，但是不太想破壞本來的code，雖然已經自己加了authz</li></ul>
+</ol>
+</ul>
 
-<p></p><p></p></body>
+<p></p><p></p><p></p></body>
 </html>
