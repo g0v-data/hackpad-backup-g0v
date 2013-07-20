@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1795"/>
+<meta name="version" content="2403"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$iTXM54EBWVo</title>
 </head>
 <body><h1>全民踹共 - 公民社交網 | Social Democracy</h1><p>專案介紹 | Project Readme / Meta</p><p></p><p>可能的命名</p><ul><li>動民主 - 你的公民社交網</li>
@@ -61,18 +61,47 @@
 <li>每一則 argument 還可評論，辯論串集中在各自的 comments thread，不會出現不同爭點的討論全部攪在一起的情形，跟 disqus 原理相似，但介面對於討論結構的呈現比 disqus 更為凸顯。</li></ul>
 </li></ul>
 </li>
-<li>不採用的原因</li>
-<li>值得重複利用的零件</li></ul>
+<li>不採用的原因<ul><li>只適合小型、處於提案階段的議題<ul><li>問題本身要是一個立場鮮明的見解，才會需要正反辯論，因此不適用於能源政策、兩岸協議等需要廣泛收集各種立場的大型議題</li>
+<li>問題本身要已經完成背景分析、進入提案階段，才會有立場的產生，因此不適用於尚在發散階段、需要多方探索的議題</li></ul>
+</li></ul>
+</li>
+<li>值得重複利用的零件<ul><li>整個正反辯論串的機制可以用在某些特定的題型</li></ul>
+</ul>
 
-<p>Polly（概念階段）</p><ul><li>特點</li>
+<p>Polly（概念階段）</p><ul><li>特點</li><ul class="comment"><li><a href="http://hack.g0v.tw/meta/P8vYztFYSpN"><a href='http://hack.g0v.tw/meta/P8vYztFYSpN'/>http://hack.g0v.tw/meta/P8vYztFYSpN</a></a></li></ul>
+<ul><li>整個系統的主軸偏向於組織內部使用，在管理、投票等功能著墨甚多，甚至搞得有點複雜。</li></ul>
+</li>
 <li>開發中，目前無法採用</li>
-<li>值得借鏡的概念</li></ul>
+<li>值得借鏡的概念<ul><li>推薦議題給使用者直接參與，而非著重在代理投票（直接民主 vs 流動式代議民主 vs 代議民主）（同BEO，LQFB原始設計概念）</li>
+<li>以實際解決問題為目標而不只是以討論為目標。除了方案規劃之外，還有前期的分析與後期的執行，包含一個完整的問題解決生命週期。</li>
+<li>針對問題分析階段的設計概念，如鼓勵發想、切割子議題。</li>
+<li>需要身份認證但可使用別名，保護使用者免於被人肉或實體騷擾的危險。</li></ul>
+</ul>
 
-<p>BEO（概念階段）</p><ul><li>特點</li>
-<li>開發中，目前無法採用</li>
-<li>值得借鏡的概念</li></ul>
+<p>BEO（概念階段）</p><ul><li>特點</li><ul class="comment"><li><a href="http://hack.g0v.tw/meta/P8vYztFYSpN"><a href='http://hack.g0v.tw/meta/P8vYztFYSpN'/>http://hack.g0v.tw/meta/P8vYztFYSpN</a></a></li></ul>
+</ul>
+<ul><li>開發中，目前無法採用</li>
+<li>值得借鏡的概念<ul><li>線上民主是整個民主機制的一環，要整合線上投票與實體投票</li>
+<li>每個月有固定的投票時間</li>
+<li>把議事系統與需要嚴謹身份認證的表決系統獨立開來<ul><li>議事、表決、資料收集等系統可以彼此獨立，再以 api 組合</li></ul>
+</ul>
+</ul>
 
-<p>Open Ideo</p><ul><li>特點</li>
+<p>Open Ideo</p><ul><li>特點<ul><li>解決未經全盤思考就提出片面見解的問題<ul><li>議題在同一時間內只能做一種事情，強迫大家先思考才決策，發想階段結束後才能提解決方案，進入下個階段後就不能回去做前面階段的事情</li>
+<li>提出一組基本問題吸引所有人來回答</li></ul>
+</li>
+<li>可愛的介面<ul><li>用豐富的圖片和漂亮的設計，吸引非宅族加入</li></ul>
+</li></ul>
+</li>
+<li>不採用的原因<ul><li>瀑布型的思考模式並不符合真實世界的運作情況，現今複雜的世界裡，事情的發展是 PDCA 循環組成的螺旋形，事情的先後順序並不是絕對，每個人的起跑點也不同，如果硬要規定所有人用瀑布型的模子思考，就得對使用者加諸限制，結果只會澆熄靈感與熱情。如果想要提升內容品質，不應該以限制使用者為手段，而應該採用引導的方式，並提供多元切入點給身處不同起跑點的人（望向quora）</li>
+<li>事先設定好議題框架（問題組）再讓人來參與，並不符合直接民主的精神，主導的人難免把自身的立場帶入框架中，但理想的直接民主應該是開放所有人一起來決定框架。open ideo 的主軸不是民主，而是某特定單位舉辦的徵文活動。</li>
+<li>介面繽紛可愛，但強調可愛大過於強調內容，行銷包裝的功能勝過於議題討論的功能。讓人長期使用的東西本身應該盡量低調，像 dropbox 等。</li></ul>
+</li>
+<li>值得重複利用的零件<ul><li>issue &gt; question &gt; answer 階層結構，把不同規模不同性質的 item 區隔開來，便於呈現整體結構。</li></ul>
+</ul>
+
+<p>Change.org / 台灣連署資源運籌平台</p><ul><li>特點<ul><li>集氣</li></ul>
+</li>
 <li>不採用的原因</li>
 <li>值得重複利用的零件</li></ul>
 
@@ -107,10 +136,7 @@
 
 <p><b>使用資料</b></p><p></p><ul><li>n/a</li></ul>
 
-<p><b>專案目前狀態</b></p><p></p><p>分析&amp;規劃</p><ul><li>eDemocracy 跨國工作資料夾 <a href="https://docs.google.com/folder/d/0B0NsS2a-Qx8ZREwtRzlIbGRnQkk/edit"><a href='https://docs.google.com/folder/d/0B0NsS2a-Qx8ZREwtRzlIbGRnQkk/edit'/>https://docs.google.com/folder/d/0B0NsS2a-Qx8ZREwtRzlIbGRnQkk/edit</a></a></li>
-<li>中文介面草稿資料夾 <a href="https://docs.google.com/folder/d/0B0NsS2a-Qx8Za0x6WURKTzcxeFk/edit"><a href='https://docs.google.com/folder/d/0B0NsS2a-Qx8Za0x6WURKTzcxeFk/edit'/>https://docs.google.com/folder/d/0B0NsS2a-Qx8Za0x6WURKTzcxeFk/edit</a></a></li></ul>
-
-<p></p><h2>目標與功能（要如何解決）</h2><p></p><p><b>預定使用者</b></p><p></p><ul><li>社群</li>
+<p><b>專案目前狀態</b></p><p></p><p>分析&amp;規劃</p><p></p><h2>目標與功能（要如何解決）</h2><p></p><p><b>預定使用者</b></p><p></p><ul><li>社群</li>
 <li>非營利組織</li>
 <li>政黨</li>
 <li>政府部門</li>
@@ -136,7 +162,10 @@
 <li>web back-end</li>
 <li>ui / visual design</li></ul>
 
-<p><b>現有成果</b></p><p></p><p></p><h2>開發者</h2><p></p><ul><li>挖坑：clkao</li>
+<p><b>現有成果</b></p><p></p><ul><li>eDemocracy 跨國工作資料夾 <a href="https://docs.google.com/folder/d/0B0NsS2a-Qx8ZREwtRzlIbGRnQkk/edit"><a href='https://docs.google.com/folder/d/0B0NsS2a-Qx8ZREwtRzlIbGRnQkk/edit'/>https://docs.google.com/folder/d/0B0NsS2a-Qx8ZREwtRzlIbGRnQkk/edit</a></a></li>
+<li>中文介面草稿資料夾 <a href="https://docs.google.com/folder/d/0B0NsS2a-Qx8Za0x6WURKTzcxeFk/edit"><a href='https://docs.google.com/folder/d/0B0NsS2a-Qx8Za0x6WURKTzcxeFk/edit'/>https://docs.google.com/folder/d/0B0NsS2a-Qx8Za0x6WURKTzcxeFk/edit</a></a></li></ul>
+
+<h2>開發者</h2><p></p><ul><li>挖坑：clkao</li>
 <li>推坑：ipa、pm5、entropy</li>
 <li>跳坑：ETBlue</li>
 <li>被拖坑：tkalu</li>
