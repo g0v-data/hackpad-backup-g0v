@@ -3,17 +3,17 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2414"/>
+<meta name="version" content="2963"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$z0XwS5cmyg9</title>
 </head>
-<body><h1>鄉民關心你 - API</h1><p></p><p><b>User</b></p><p>POST /users/</p><p>&nbsp;</p><p>GET /users/{user id}</p><p></p><ul><li><b>id</b>: user id</li>
+<body><h1>鄉民關心你 - API</h1><p></p><p>------------------------------------------------------------------------------------------------------------------------</p><p>The backend is pgrest.</p><p></p><p>and the api is compatable with <a href="https://support.mongolab.com/entries/20433053-rest-api-for-mongodb"><a href='https://support.mongolab.com/entries/20433053-rest-api-for-mongodb'/>https://support.mongolab.com/entries/20433053-rest-api-for-mongodb</a></a></p><p></p><p>-------------------------------------------------------------------------------------------------------------------------</p><p></p><p><b>User</b></p><p></p><p>POST /collections/users/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # create a user</p><p>PUT /collections/users/{user id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # update a user</p><p>GET /collections/users&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # get all user</p><p>GET /collections/users/{user id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # get a user</p><p>DELETE /collections/users/{user id}&nbsp; # delete a user</p><p></p><ul><li><b>id</b>: user id</li>
 <li><b>display_name</b>: the name a user want to display in the system</li>
 <li><b>prefer_poston:</b> which system user prefer to use for posting a message (twitter/facebook/kunasim)</li>
 <li><b>subscriptions</b><ul><li><b>tags</b></li>
 <li><b>people</b></li></ul>
 </ul>
 
-<p>GET /users/{user id}/items - get bookmarked items of a user</p><p></p><p><b>Bookmarked Items</b></p><p></p><p>GET /items/{item_id}</p><p></p><ul><li><b>id: </b>Item id</li>
+<p>GET /users/{user id}/items - get bookmarked items of a user</p><p></p><p><b>Bookmarked Items</b></p><p></p><p>POST /collections/items/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # create a bookmarked item</p><p>GET /collections/items/</p><p>GET /collections/items/{item_id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # get a bookmarked item</p><p>PUT /collections/items/{item_id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # update a bookmarked item</p><p>DELETE /collections/items/{item_id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # delete a bookmarked item (won&rsquo;t delete resolved items, e.x article)</p><p></p><ul><li><b>id: </b>Item id</li>
 <li><b>normal_url:</b> The original url for the added item</li>
 <li><b>resolved_id:</b> A unique identifier for the resolved item</li>
 <li><b>resolved_type:</b> The type resolved item belongs to</li>
@@ -24,9 +24,7 @@
 <li><b>messages: </b>associated messages</li>
 <li><b>in_inbox: </b>0: no, 1: yes</li></ul>
 
-<p><b>Articles (belongs to resolved items)&nbsp;</b></p><p></p><ul><li>read-only</li></ul>
-
-<p>GET /articles/{article id}</p><p></p><ul><li><b>id: </b>article id</li>
+<p><b>Articles (belongs to resolved items)&nbsp;</b></p><p></p><p>POST /articles&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # create a article</p><p>GET /articles/{article id}&nbsp;&nbsp;&nbsp; # get a article</p><p></p><ul><li><b>id: </b>article id</li>
 <li><b>title: </b>article title</li>
 <li><b>permanent_url: </b>permanent url of original article.</li>
 <li><b>summary</b>: article summary</li>
@@ -40,7 +38,7 @@
 <li><b>has_diffs: </b>0: no; 1: has multiple versions</li>
 <li><b>diffs: </b>Array of changes if this article has multiple version</li></ul>
 
-<p><b>WebPages&nbsp; (belongs to resolved items)&nbsp;</b></p><p></p><p>GET /webpages/{id}</p><p></p><ul><li><b>id</b>: web page id</li>
+<p><b>WebPages&nbsp; (belongs to resolved items)&nbsp;</b></p><p></p><p>POST /webpages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # create a webpages</p><p>GET /webpages/{item_id}&nbsp;&nbsp;&nbsp; # get a webpages</p><p></p><ul><li><b>id</b>: web page id</li>
 <li><b>title</b>: article title</li>
 <li><b>summary: </b>summary of web page</li>
 <li><b>permanent_url: </b>permanent url of original article.</li>
@@ -51,7 +49,7 @@
 <li><b>has_videos: </b>0: no video; 1: has a video in the body of the article; 2: is a video</li>
 <li><b>videos</b>: Array of video data&nbsp;</li></ul>
 
-<p><b>Tags</b></p><p></p><p>GET /tags/{tag name}</p><p></p><ul><li><b>id: </b>tag id</li>
+<p><b>Tags</b></p><p></p><p>POST /tags&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # create a tag</p><p>GET /tags/{tag name}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # get a tag</p><p></p><ul><li><b>id: </b>tag id</li>
 <li><b>name: </b>tag name</li>
 <li><b>system_defined: </b>0: no , 1: user defined</li>
 <li><b>authors: </b>Array of authors</li></ul>
