@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="275"/>
+<meta name="version" content="376"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$HM8MBTIU8Pp</title>
 </head>
 <body><h1>我剛打了電話 justcalled</h1><p></p><h2>來龍去脈</h2><p></p><p><b>主旨</b></p><p></p><p>在其他「鄉民關心你」元件完成前，其實可以同步進行「行動紀錄」的部份。</p><p></p><p>在議題發酵中，也都會有人發起大家打電話給立委或者相關機關。希望能有一個整理過的頁面，出現「議題」、「電話內容懶人包」、「聯絡資訊」，還有「我剛打了這個電話」的按鈕，可以有種成就系統跟眾志成城(?)的效果。待「議題追蹤」系統有雛形，即可接起來、發起活動。</p><p></p><p><b>牽涉領域</b></p><p>公家機關 | 通訊錄 | 聯絡人</p><p></p><p><b>相關組織單位</b></p><p>政府機關</p><p></p><p><b>相關專案</b></p><p>鄉民關心你 <a href="http://hack.g0v.tw/kuansim"><a href='http://hack.g0v.tw/kuansim'/>http://hack.g0v.tw/kuansim</a></a></p><p>政府公開通訊錄 <a href="http://hack.g0v.tw/kuansim/g6v6MpyacFb">http://hack.g0v.tw/kuansim/g6v6MpyacFb</a></p><p></p><p><b>授權方式</b></p><p>as kuansim</p><p></p><p><b>使用資料</b></p><p></p><p><b>專案目前狀態</b></p><p>構想</p><p></p><p></p><h2>目標與功能</h2><p></p><p><b>預定使用者</b></p><ul><li>想發起人們打電話或 E-mail 給政府單的人</li>
@@ -18,5 +18,24 @@
 <li>Share to facebook/sns：我和 1,958 人都打了電話給 xx 單位要求 yy。</li></ul>
 </ul>
 
-<p><b>使用方式</b></p><p></p><p>web, mobile</p><p></p><h2>實做細節</h2><p></p><p><b>使用技術與工具</b></p><p>TBD</p><p></p><p><b>產出檔案格式</b></p><p></p><p><b>進度與 to-do</b></p><p></p><p></p><p><b>現有成果</b></p><p>N/A</p><p></p><h2>開發者</h2><p></p><p><b>技術指導</b></p><p><a href='https://g0v.hackpad.com/ep/profile/pgKgmUWKew6GVUKgrhRX7'/>HisnYi Chen</a></p><p></p><p><b>分工與成員</b></p><p><a href='https://g0v.hackpad.com/ep/profile/-1WLkpThoAjbwgNN97zIerK'/>Kai-Yuan Cheng</a></p><p></p><h2>介面</h2><p>TBD</p><p></p><p></p></body>
+<p><b>使用方式</b></p><p></p><p>web, mobile</p><p></p><h2>實做細節</h2><p></p><p><b>使用技術與工具</b></p><p>TBD</p><p></p><p><b>產出檔案格式</b></p><p></p><p><b>進度與 to-do</b></p><ul class="task"><li>User story</li>
+<li>Wireframe</li></ul>
+
+<p><b>現有成果</b></p><p>N/A</p><p></p><h2>開發者</h2><p></p><p><b>技術指導</b></p><p><a href='https://g0v.hackpad.com/ep/profile/pgKgmUWKew6GVUKgrhRX7'/>HisnYi Chen</a></p><p></p><p><b>分工與成員</b></p><p><a href='https://g0v.hackpad.com/ep/profile/-1WLkpThoAjbwgNN97zIerK'/>Kai-Yuan Cheng</a></p><p></p><h2>介面</h2><p>TBD</p><p></p><h2>User story</h2><p><b>角色</b></p><p></p><p>1. 訪客：未登入的人</p><p>2. 使用者：已登入的人&nbsp;&nbsp;</p><p>&nbsp; （考慮用 OAuth 登入，可能會有限制使用者不要作亂的效果，也許加上帳號合併功能以利推播分享）</p><p>3. 議題發起人：已發起議題之使用者</p><p>4. 管理員：網站管理員</p><p></p><p>權限： 管理員 &gt; 議題發起人 &gt;= 使用者 &gt; 訪客</p><p></p><p></p><ul style="list-style: none;"><li><b>訪客</b></li></ul>
+
+<p>1. 可 OAuth 登入</p><p>2. 可瀏覽各議題之資料與留言</p><p></p><ul style="list-style: none;"><li><b>使用者</b></li></ul>
+<p>&nbsp;</p><p>1. 可發起議題（問題：是否需經過管理員審核？應該不用）</p><p>2. 可在參加該議題之電話連署活動後點選「我剛打了這個電話」的按鈕加入計數</p><p>3. 留言（可直接使用 disqus 或 facebook comment box）</p><ul><li>可在議題頁面留言&nbsp; （問題：是否限制留言次數？若此留言功能僅為讓使用者表示自己有參加活動，則可限制次數（但這種留言可能會沒人有興趣看）；若此留言功能希望能引起討論，則不限制）&nbsp;&nbsp;&nbsp; （考慮加上：點按鈕可把自己的留言與議題連結同步推播到 FB/Twitter/G+）</li>
+<li>可為議題留言評分（如 youtube ，可考慮自動刪除評分過低之垃圾留言）</li></ul>
+<p>4. 可提出對於議題說明、聯絡管道、建議應對方式之修改建議，送出後交予議題發起人審核&nbsp;&nbsp;</p><p>&nbsp; （類似發 pull request）</p><p>5. 檢舉</p><ul><li>可檢舉惡意留言的其他使用者（需提供理由）</li>
+<li>可檢舉危害善良風俗之議題（需提供理由）</li></ul>
+
+<ul style="list-style: none;"><li><b>議題發起人</b></li></ul>
+
+<p>1. 可編輯自己發起的議題資料，提供：</p><ul><li>議題說明（訴求）</li>
+<li>聯絡管道（可能有多個）<ul><li>快速匯入，如「勝負差 &lt; 10% 的區域立委」</li></ul>
+</li>
+<li>建議的應對方式（Email範本、電話問答集）</li></ul>
+<p>2. 可審核使用者提供的議題資料修改建議，並決定是否套用至目前的版本</p><p></p><ul style="list-style: none;"><li><b>管理員</b></li></ul>
+
+<p>1. 可看到被檢舉之使用者清單&nbsp;</p><p>2. 可封鎖確實有違規行為的使用者</p><p>3. 可看到使用者檢舉的議題清單</p><p>4. 可刪除危害善良風俗之議題</p><p></p></body>
 </html>
