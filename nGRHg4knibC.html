@@ -3,30 +3,59 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="305"/>
+<meta name="version" content="828"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$nGRHg4knibC</title>
 </head>
-<body><h1>怒政事件記錄簿規劃整理</h1><p><b>[angry.g0v.tw]</b></p><p></p><p><b>Bug report:</b></p><p>別跑錯地方，到github report bug ~~</p><p><a href="https://github.com/g0v/twangry/issues?state=open"><a href='https://github.com/g0v/twangry/issues?state=open'/>https://github.com/g0v/twangry/issues?state=open</a></a></p><p></p><p></p><p><b>TODO想法整理:</b></p><p></p><p><b>首頁</b></p><ul><li>改善首頁排版、呈現方式<ul><li>目前想法 <a href="http://www.9lessons.info/2012/01/facebook-timeline-design-using-jquery.html"><a href='http://www.9lessons.info/2012/01/facebook-timeline-design-using-jquery.html'/>http://www.9lessons.info/2012/01/facebook-timeline-design-using-jquery.html</a></a></li>
-<li>Facebook timeline 呈現方式好像不夠精簡? 我覺得目前的 timeline 比較能同時容納多一點事件, 有集中爆發的感覺.</li></ul>
+<body><h1>怒政事件記錄簿</h1><p><b>[angry.g0v.tw]</b></p><p></p><h2>來龍去脈（想解決什麼問題）</h2><p>主要目標：</p><ul><li>希望能夠一眼看出，我們的政府作錯過什麼事情，讓人民如此憤怒..</li></ul>
+
+<p>次要目標：</p><ul><li>讓鄉民可以發憤圖強，透過怒氣值強化記憶細胞（可參考<a href='/mynkDCEAXgc#%26%2337129%3B%26%2327665%3B%26%2338364%3B%26%2324515%3B%26%2320320%3B%20-%20%26%2323560%3B%26%2326696%3B%26%2320171%3B%26%2332057%3B'/>鄉民關心您</a>）</li>
+<li>振興wikipedia的條目正確性（因為截至目前為止，極度依賴wikipedia的資料）</li>
+<li>將台灣的公民運動以及政治事件，做一個中性的時間表</li></ul>
+
+<p><b>現有類似或相關專案</b></p><ul><li><a href='https://github.com/g0v/TW-history'/>TW-History</a></li>
+<li><a href='https://github.com/g0v/kuansim'/>kuansim</a></li></ul>
+
+<p></p><h2>Bug report:</h2><p>別跑錯地方，到github report bug ~~</p><p><a href="https://github.com/g0v/twangry/issues?state=open"><a href='https://github.com/g0v/twangry/issues?state=open'/>https://github.com/g0v/twangry/issues?state=open</a></a></p><p></p><h2>Idea Pool</h2><p></p><p><b>名稱想法整理(網站正式公開宣傳前都可改名 ..)</b></p><ul><li>怒政事件簿（應該可換掉）</li>
+<li>鄉民的震怒（強調怒！）&nbsp;</li>
+<li>鄉民的正怒（強調即時性）</li>
+<li>鄉民的政怒（強調政治...）</li></ul>
+
+<p><b>頁面改善:</b></p><p></p><p><b>現有頁面：</b></p><ul><li>首頁（所有的事件）</li>
+<li>事件頁（單一事件的細節呈現）</li></ul>
+
+<p><b>首頁</b></p><ul><li>改善首頁排版、呈現方式<ul><li>直式：這樣想的主要目標是能做篩選，例如：「土地開發」，能夠篩選出來「美麗灣、大埔、中科四期」... ，一眼就看出來到底這幾年發生哪些<ul><li>sample 1- fb like - <a href="http://www.9lessons.info/2012/01/facebook-timeline-design-using-jquery.html"><a href='http://www.9lessons.info/2012/01/facebook-timeline-design-using-jquery.html'/>http://www.9lessons.info/2012/01/facebook-timeline-design-using-jquery.html</a></a></li>
+<li>sample 2- <a href="http://37signals.com/about">http://37signals.com/about</a></li>
+<li>sample 3- Google Plus</li></ul>
+</li>
+<li>橫式：Facebook timeline 呈現方式好像不夠精簡? 我覺得目前的 timeline 比較能同時容納多一點事件, 有集中爆發的感覺，就是可以一個一個「slide」，仔細看看<ul><li>sample - <a href="http://timeline.verite.co/">http://timeline.verite.co/</a></li></ul>
+</li>
+<li>直+橫式<ul><li>上面橫式，下面直式~(from pm5)</li>
+<li>可用密技爆破（上上下下左右左右）</li></ul>
+</li>
+<li>因為目前事件頁是用橫式，如果首頁也是橫式的話會不會有使用者使用上混亂的問題。直式的話可以把在同一時間內很多的事件變成只有標題，或是濃縮起來點下去在展開來完整資訊？</li>
+<li>或是都用橫式但畫面上應該要有些跟 event pages 有區別。</li></ul>
 </li>
 <li>增加首頁篩選功能，包含依照時間起迄、Tag篩選、或關鍵字搜尋</li>
-<li>讓使用者可增加事件<ul><li>少數使用者方式：以 github更新TW-history方式即可，但問題是不是每個keyword都有wikipedia條目</li>
-<li>很多人可加：需要嗎... ?</li></ul>
+<li>讓使用者可增加事件<ul><li>少數使用者方式：以 github更新TW-history方式即可，但問題是不是每個keyword都有wikipedia條目（希望可以到不只網站維護者來幫助，可能一些文字編輯者也可以很容易去更動）</li>
+<li>很多人可加：需要嗎... ?（如果要的話可能需要檢舉、或定期去查看）</li></ul>
 </li>
 <li>事件 metadata<ul><li>如：智財局封網事件 current status : 「準備借屍還魂」 You can: 「關注/支持網路中立性立法」</li>
-<li>如：林益世案最新進度</li></ul>
+<li>如：林益世案最新進度<ul><li>可能可以用Tag的方式來實作~例如林益世的tag就會有「貪污、弊案、借屍還魂中」</li></ul>
+</li></ul>
 </li>
-<li>slideshow 播放功能</li></ul>
+<li>slideshow 播放功能<ul><li>可能可以播放一個 tag, 或是一組 event, 可以看到服貿協議二讀之前就會有一堆小議題冒出來混淆視聽.</li></ul>
+</ul>
 
-<p><b>事件頁</b></p><ul><li>以wikipedia 的資料為基礎，讓使用者可為其增加額外的媒體</li>
+<p></p><p><b>事件頁</b></p><ul><li>以wikipedia 的資料為基礎，讓使用者可為其增加額外的媒體</li>
 <li><s>wiki parse需要處理wikipedia的reference</s> ko !!!</li>
 <li>定期更新wikipedia進度（需考量熱門度）</li>
 <li>讓使用者可驗證後，增加事件（有需要嗎？）<ul><li>以email或簡訊認證後產生cookie為主，不需login，不綁任何social media</li>
 <li>也許可以用<a href="http://www.mozilla.org/en-US/persona/"><a href='http://www.mozilla.org/en-US/persona/'/>http://www.mozilla.org/en-US/persona/</a></a> 做auth.&nbsp;</li></ul>
 </ul>
-<p><b>未來</b></p><ul><li>怒氣值：讓使用者可張貼Facebook Link(例如粉絲專頁)，為事件增加怒氣值</li>
+
+<p><b>其他令人振奮的</b></p><ul><li>怒氣值：讓使用者可張貼Facebook Link(例如粉絲專頁)，為事件增加怒氣值</li>
 <li>當有怒氣破表時，首頁的爆氣效果...（請自行想像）</li>
 <li>視覺改善</li></ul>
 
-<p><b>Idea Pool</b></p><p></p></body>
+<h2>開發者</h2><p>chilijung</p><p>pm5</p><p>jimyhuang</p><p></p><p></p><p><b>技術指導</b></p><p>好多人...</p><p></p><p><b>分工與成員</b></p><p>wait~</p><p></p></body>
 </html>
