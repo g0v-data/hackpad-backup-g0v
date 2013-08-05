@@ -3,8 +3,56 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1445"/>
+<meta name="version" content="1889"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$sonS8O8jEzU</title>
 </head>
-<body><h1>Liquid Feedback Visual Comminucation</h1><p>g0v 升級版 lqfb 之介面改良計畫（握拳）</p><p></p><p>prototype: <a href="http://lqfb-test.g0v.tw/pf/"><a href='http://lqfb-test.g0v.tw/pf/'/>http://lqfb-test.g0v.tw/</a><a href='http://lqfb-test.g0v.tw/pf/'/>pf/</a></a></p><p></p><p></p><h2>前端工具集</h2><p>mobile web</p><p><a href='http://devgirl.org/2013/06/10/quick-start-guide-phonegap-and-angularjs/'/>Quick Start Guide to PhoneGap+AngularJS</a></p><p><a href='https://github.com/phonegap'/>phonegap</a> / <a href='https://github.com/phonegap/phonegap-app-anyconference'/>phonegap-app-anyconference</a></p><p><a href="http://nativedroid.godesign.ch/demo/index.html"><a href='http://nativedroid.godesign.ch/demo/index.html'/>http://nativedroid.godesign.ch/demo/index.html</a></a></p><p><a href='http://topcoat.io/'/>Topcoat</a> - CSS for clean and fast web apps.</p><p>色盲友善色票</p><p><a href="http://colorbrewer2.org/"><a href='http://colorbrewer2.org/'/>http://colorbrewer2.org/</a></a></p><p></p><p><a href='/FK7eBR4BdAj#讓-Fire.app-支援-Jade-的方法'/>讓 Fire.app 支援 Jade 的方法</a></p><p></p><h2>開發手札</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; au&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 發現 jQuery Mobile 有 holo 的 skin</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://nativedroid.godesign.ch/">http://nativedroid.godesign.ch/</a></p><p>很擔心prfb的網頁版爆炸慢</p><p>所以要包成 app 啊</p><p>據說 web app 也要全部先 render 出來，只是讓 view 疊在一起，然後在互動時調換 layer 順序？</p><p>不然用 toggle display 一樣會 render 很久...</p><p>是的，jQuery mobile 正是這樣</p><p>app 的好處只是所有的 view 一次在安裝時下載完了</p><p>（而安裝時使用者的耐心比平時好很多）</p><p>那麼議案清單需要分頁嗎？還是一直往下捲捲捲... 據說 js 不清記憶體的，捲到後面會爆炸慢 orz</p><p>我覺得如果同時進行的議案不太多</p><p>=看歷史議案不是常態</p><p>=有需要時(捲到後面)再載入 = 就還好。</p><p>也有怎麼樣都卷不完，但是每次只 render 出一些資料的方法喲</p><p>聽說叫做 grid</p><p></p><p></p></body>
+<body><h1>Pirate Feedback UI Redesign 動民主介面設計</h1><p>專案介紹 | Project Readme / Meta</p><p></p><p></p><h2>來龍去脈（想解決什麼問題）</h2><p></p><p>主旨</p><ul><li>pirate feedback 是一套開源碼的民主倡議與表決系統，目前已中文化並使用中。但介面讓使用者難以接受，所以需要重新設計。</li></ul>
+
+<p>牽涉領域</p><ul><li>基礎建設</li></ul>
+
+<p>現有類似專案</p><ul><li><a href='http://hack.g0v.tw/meta/iTXM54EBWVo'/>動民主 2.0（壹民主 / 全民踹共 / 零時國會 / ... 名稱未定）&nbsp;</a> 新版動民主還在早期規劃階段，在那之前，我們需要先讓第一版動民主可以上線使用，到時候再轉換過去</li></ul>
+
+<p>相關組織單位</p><ul><li>g0v</li></ul>
+
+<p>相關專案</p><ul><li>pirate feedback 是 liquid feedback 的改良版</li></ul>
+
+<p>授權方式</p><ul><li>源碼：</li>
+<li>視覺設計：CC0</li></ul>
+
+<p>使用資料</p><p></p><p>相關資訊</p><ul><li>台德義 edemocracy 討論群組 - <a href="https://groups.google.com/forum/#"><a href='https://groups.google.com/forum/#!forum/e-dem'/>https://groups.google.com/forum/#</a></a><a href='https://groups.google.com/forum/#!forum/e-dem'/>!forum/e-dem</a></li>
+<li>動民主 1.0 與 2.0 專案發展過程 - <a href="https://docs.google.com/presentation/d/1kA3jf0pQbPF87mRidkp0ChlAiztGw8eOYYTasfU0yQ0/edit?usp=sharing"><a href='https://docs.google.com/presentation/d/1kA3jf0pQbPF87mRidkp0ChlAiztGw8eOYYTasfU0yQ0/edit?usp=sharing'/>https://docs.google.com/presentation/d/1kA3jf0pQbPF87mRidkp0ChlAiztGw8eOYYTasfU0yQ0/edit?usp=sharing</a></a></li></ul>
+
+<p>專案目前狀態</p><ul><li>雛形</li></ul>
+
+<p></p><h2>目標與功能（要如何解決）</h2><p></p><p>預定使用者</p><ul><li>一般上網族群，非資訊宅</li></ul>
+
+<p>預定功能</p><ul><li>同 pirate feedback，只是介面重新整理</li></ul>
+
+<p>使用方式</p><ul><li>desktop / mobile</li></ul>
+
+<p></p><h2>實做細節（非技術背景可跳填）</h2><p></p><p>使用技術</p><ul><li>angular js</li>
+<li>jade</li>
+<li>sass</li></ul>
+
+<p>協作工具</p><ul><li>hackfoldr 工作資料夾網址：<a href="http://hack.g0v.tw/meta/sonS8O8jEzU"><a href='http://hack.g0v.tw/meta/sonS8O8jEzU'/>http://hack.g0v.tw/meta/sonS8O8jEzU</a></a></li>
+<li>github repo：<a href="https://github.com/Mec-iS/angular-lqfb-redesign"><a href='https://github.com/Mec-iS/angular-lqfb-redesign'/>https://github.com/Mec-iS/angular-lqfb-redesign</a></a></li></ul>
+
+<p>產出檔案格式</p><ul><li>html / css / js</li></ul>
+
+<p>進度與 to-do</p><ul class="taskdone"><li>ui / visual design</li></ul>
+<ul class="task"><li>需要重新套版至 angular js</li></ul>
+
+<p>現有成果</p><ul><li>pirate feedback 系統原貌 <a href="http://lqfb-test.g0v.tw/pf/"><a href='http://lqfb-test.g0v.tw/pf/'/>http://lqfb-test.g0v.tw/</a><a href='http://lqfb-test.g0v.tw/pf/'/>pf/</a></a></li>
+<li>系統分析文件 <a href="https://docs.google.com/folder/d/0B0NsS2a-Qx8ZN3dBc3F2R2dzUzg/edit?docId=1UrC-s_SA70JbxdcaOlOxuVTJ3i9USA_pMnRI2OZ6s5k"><a href='https://docs.google.com/folder/d/0B0NsS2a-Qx8ZN3dBc3F2R2dzUzg/edit?docId=1UrC-s_SA70JbxdcaOlOxuVTJ3i9USA_pMnRI2OZ6s5k'/>https://docs.google.com/folder/d/0B0NsS2a-Qx8ZN3dBc3F2R2dzUzg/edit?docId=1UrC-s_SA70JbxdcaOlOxuVTJ3i9USA_pMnRI2OZ6s5k</a></a></li>
+<li>介面設計圖稿 <a href="https://docs.google.com/folder/d/0B0NsS2a-Qx8ZV0ZGVEJLRHUtSk0/edit"><a href='https://docs.google.com/folder/d/0B0NsS2a-Qx8ZV0ZGVEJLRHUtSk0/edit'/>https://docs.google.com/folder/d/0B0NsS2a-Qx8ZV0ZGVEJLRHUtSk0/edit</a></a></li>
+<li>第一版 html / css mockup <a href="http://g0v.github.io/pirate_feedback_ui_redesign/"><a href='http://g0v.github.io/pirate_feedback_ui_redesign/'/>http://g0v.github.io/pirate_feedback_ui_redesign/</a></a></li>
+<li>由義大利的朋友 Lorenzo 將前後端改成 angular js - <a href="https://github.com/Mec-iS/angular-lqfb-redesign"><a href='https://github.com/Mec-iS/angular-lqfb-redesign'/>https://github.com/Mec-iS/angular-lqfb-redesign</a></a></li></ul>
+
+<p></p><h2>開發者</h2><p></p><p>技術指導</p><ul><li>阿修</li></ul>
+
+<p>分工與成員</p><ul><li>初版 UI 與 mockup - ETBlue</li>
+<li>angular js 前端工程 - （請簽名）</li>
+<li>出版 UI 改良 - （請簽名）</li></ul>
+
+<p></p><h2>開發手札</h2><p></p><p><b>前端工具集</b></p><p>mobile web</p><p><a href='http://devgirl.org/2013/06/10/quick-start-guide-phonegap-and-angularjs/'/>Quick Start Guide to PhoneGap+AngularJS</a></p><p><a href='https://github.com/phonegap'/>phonegap</a> / <a href='https://github.com/phonegap/phonegap-app-anyconference'/>phonegap-app-anyconference</a></p><p><a href="http://nativedroid.godesign.ch/demo/index.html"><a href='http://nativedroid.godesign.ch/demo/index.html'/>http://nativedroid.godesign.ch/demo/index.html</a></a></p><p><a href='http://topcoat.io/'/>Topcoat</a> - CSS for clean and fast web apps.</p><p>色盲友善色票 <a href="http://colorbrewer2.org/"><a href='http://colorbrewer2.org/'/>http://colorbrewer2.org/</a></a></p><p><a href='https://g0v.hackpad.com/FK7eBR4BdAj#讓-Fire.app-支援-Jade-的方法'/>讓 Fire.app 支援 Jade 的方法</a></p><p></p><p><b>irc 暫存區</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; au&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 發現 jQuery Mobile 有 holo 的 skin</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://nativedroid.godesign.ch/">http://nativedroid.godesign.ch/</a></p><p>很擔心prfb的網頁版爆炸慢</p><p>所以要包成 app 啊</p><p>據說 web app 也要全部先 render 出來，只是讓 view 疊在一起，然後在互動時調換 layer 順序？</p><p>不然用 toggle display 一樣會 render 很久...</p><p>是的，jQuery mobile 正是這樣</p><p>app 的好處只是所有的 view 一次在安裝時下載完了</p><p>（而安裝時使用者的耐心比平時好很多）</p><p>那麼議案清單需要分頁嗎？還是一直往下捲捲捲... 據說 js 不清記憶體的，捲到後面會爆炸慢 orz</p><p>我覺得如果同時進行的議案不太多</p><p>=看歷史議案不是常態</p><p>=有需要時(捲到後面)再載入 = 就還好。</p><p>也有怎麼樣都卷不完，但是每次只 render 出一些資料的方法喲</p><p>聽說叫做 grid</p><p></p><p></p></body>
 </html>
