@@ -3,24 +3,22 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1413"/>
+<meta name="version" content="1471"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$g6v6MpyacFb</title>
 </head>
-<body><h1>政府公開通訊錄</h1><p></p><h2>來龍去脈</h2><p></p><p><b>主旨</b></p><p>有問題要回報或是要聯絡單位的時候，提供查詢電話或地址功能</p><p></p><p>源起是<a href='https://g0v.hackpad.com/mynkDCEAXgc'/>鄉民關心你</a>，在想要找到對的窗口的時候，需要有電話聯絡方式。後來發現其實沒有人有整理這方面的資訊，就把政府機關的聯絡方式整理成聯絡人，提供大家使用</p><p></p><p><b>牽涉領域</b></p><p>公家機關 | 通訊錄 | 聯絡人</p><p></p><p><b>相關組織單位</b></p><p>政府機關</p><p></p><p><b>相關專案</b></p><p>鄉民關心你 <a href="http://hack.g0v.tw/kuansim"><a href='http://hack.g0v.tw/kuansim'/>http://hack.g0v.tw/kuansim</a></a></p><p></p><p><b>授權方式</b></p><p>資料部份使用 CC-0 授權</p><ul class="comment"><li>程式碼部分（如 MIT/BSD）</li></ul>
-
-<p><b>使用資料</b></p><ul><li>政府機關單位列表 <a href="http://oid.nat.gov.tw/infobox1/personmain.jsp">http://oid.nat.gov.tw/infobox1/personmain.jsp</a></li></ul>
+<body><h1>政府公開通訊錄</h1><p></p><h2>來龍去脈</h2><p></p><p><b>主旨</b></p><p>有問題要回報或是要聯絡單位的時候，提供查詢電話或地址功能</p><p></p><p>源起是<a href='https://g0v.hackpad.com/mynkDCEAXgc'/>鄉民關心你</a>，在想要找到對的窗口的時候，需要有電話聯絡方式。後來發現其實沒有人有整理這方面的資訊，就把政府機關的聯絡方式整理成聯絡人，提供大家使用</p><p></p><p><b>牽涉領域</b></p><p>公家機關 | 通訊錄 | 聯絡人</p><p></p><p><b>相關組織單位</b></p><p>政府機關</p><p></p><p><b>相關專案</b></p><p>鄉民關心你 <a href="http://hack.g0v.tw/kuansim"><a href='http://hack.g0v.tw/kuansim'/>http://hack.g0v.tw/kuansim</a></a></p><p></p><p><b>授權方式</b></p><p>資料部份使用 CC-0 授權</p><p>程式碼部份同鄉民關心你</p><p></p><p><b>使用資料</b></p><ul><li>政府機關單位列表 <a href="http://oid.nat.gov.tw/infobox1/personmain.jsp">http://oid.nat.gov.tw/infobox1/personmain.jsp</a></li></ul>
 <ul style="list-style: none;"><li>結構解析參考 <a href="http://data.g0v.tw/questions/11/">http://data.g0v.tw/questions/11/</a></li></ul>
 <ul><li>各地派出所 <a href="http://data.gov.tw/opendata/Details?sno=301000000A-00001">http://data.gov.tw/opendata/Details?sno=301000000A-00001</a></li></ul>
 <ul class="comment"><li>消防單位 ?</li></ul>
 
-<p><b>專案目前狀態</b></p><p>實作</p><p></p><p></p><h2>目標與功能</h2><p></p><p><b>預定使用者</b></p><ul><li>開發者</li>
+<p><b>專案目前狀態</b></p><p>處理需求中</p><p></p><p></p><h2>目標與功能</h2><p></p><p><b>預定使用者</b></p><ul><li>開發者</li>
 <li>想打電話或 E-mail 給政府單位的人</li></ul>
 
 <p><b>預定功能</b></p><ul><li>&nbsp;資料輸入<ul><li>Google 表單工人輸入</li>
 <li><a href='http://oid.nat.gov.tw/infobox1/personindex.jsp'/>政府機關列表</a></li>
 <li>json</li></ul>
 </li>
-<li>&nbsp;資料輸出<ul><li>json ?</li>
+<li>&nbsp;資料輸出<ul><li>json 交換使用</li>
 <li>vCard ?</li>
 <li>用 cardDAV 連接，即時更新資料庫</li></ul>
 </li>
@@ -66,7 +64,7 @@
 <p>資料輸出</p><ul class="task"><li>json 輸出</li>
 <li>vCard 輸出</li></ul>
 
-<p><b>現有成果</b></p><p></p><h2>開發者</h2><p></p><p><b>技術指導</b></p><p><a href='/ep/profile/pgKgmUWKew6GVUKgrhRX7'/>HisnYi Chen</a></p><p></p><p><b>分工與成員</b></p><p><a href='/ep/profile/-1WLkpThoAjbwgNN97zIerK'/>Kai-Yuan Cheng</a></p><p></p><h2>介面</h2><p>&nbsp;支援 cardDAV 的 client</p><ul class="comment"><li>參考資料：<a href="https://itunes.apple.com/us/app/reach-network/id570134451?mt=8">https://itunes.apple.com/us/app/reach-network/id570134451?mt=8</a></li></ul>
+<p><b>現有成果</b></p><p></p><h2>開發者</h2><p></p><p><b>技術指導</b></p><p><a href='/ep/profile/pgKgmUWKew6GVUKgrhRX7'/>HisnYi Chen</a></p><p></p><p><b>分工與成員</b></p><p><a href='/ep/profile/moc6aptbPH9'/>Superbil</a></p><p></p><h2>介面</h2><p>&nbsp;支援 cardDAV 的 client</p><ul class="comment"><li>參考資料：<a href="https://itunes.apple.com/us/app/reach-network/id570134451?mt=8">https://itunes.apple.com/us/app/reach-network/id570134451?mt=8</a></li></ul>
 
 </body>
 </html>
