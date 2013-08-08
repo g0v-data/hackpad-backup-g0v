@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="8444"/>
+<meta name="version" content="9043"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$d3UYGxZtxw2</title>
 </head>
 <body><h1><b>國民大會黑客松專案構想（Idea Pool）</b></h1><p></p><p><b>如果你有一個<u>概略</u>的想法，請直接加在這裡。</b></p><p></p><p>如果你想把這邊的想法變得更完整，請用 g0v.hackpad.com 或者 google doc，新增一份文件，然後把它加入 <a href="https://ethercalc.org/g0v-hackath3n"><a href='https://ethercalc.org/g0v-hackath3n'/>https://ethercalc.org/g0v-hackath3n</a></a> 最後一行 (url 前面請空一格 以便縮排)</p><p></p><p>&nbsp;說明：</p><p>- 授權方式：程式碼部分（如 MIT/BSD）、文件部分（如 CC-BY）</p><p>- 需求：NeedTech, NeedDesign, NeedWriter, NeedTalktoRealPerson （可加</p><p>在 ethercalc 中第三欄）</p><p></p><p>請幫忙從之前 hackathon 文件回收 Idea：</p><p><u><a href='https://hackpad.com/ul6fMthof2S'/>第零次</a></u></p><p><u><a href='https://hackpad.com/lIoCjaeMWzC'/>第壹次</a></u></p><p><a href='http://hack.g0v.tw/#/g0v-hackath2n/1qotCK6_ccR3MucEVtTrZ7nKdYXniS7bncZR2Dm85qbQ'/>第貳次</a></p><ul style="list-style: none;"><li><a href='https://g0v.hackpad.com/g0v-pre-hackath3n-Y9xV1sIIuTt'/>pre-hackath3n</a></li></ul>
@@ -28,10 +28,11 @@
 <li>可選擇mail或fb notify的接受方式</li></ul>
 </li>
 <li>發送<ul><li>取得新的公報/議程，就觸發notify機制，發送email與Facebook通知。email發送使用gmail API，FB還需要寫APP。</li></ul>
-</li></ul>
-</li>
-<li>短期目標：完成介面、能夠對預報做訂閱。</li></ul>
-<ul class="taskdone"><li>NeedsTech: 需要技術支援：目前打算借用<a href='https://help.github.com/articles/post-receive-hooks'/>github和git的post-receive</a>方式，只要有公報被commit上去github，notify到指定website by HTTP POST Method。需了解目前<a href='http://open.ly.g0v.tw/gazettes'/>公報列表</a>的順序定義和github維護方式</li>
+<ul class="comment"><li>google有一天200封限制~怕不夠用</li></ul>
+</ul>
+</ul>
+<ul><li>短期目標：完成介面、能夠對預報做訂閱。</li></ul>
+<ul class="taskdone"><li>NeedsTech: 需要技術支援：目前打算借用<a href='https://help.github.com/articles/post-receive-hooks'/>github和git的post-receive</a>方式，只要有公報被commit上去github，notify到指定website by HTTP POST Method。需要了解facebook app運作方式</li>
 <li>NeedsWriter: 需要文案幫手（撰寫提示訊息、Email的訊息範本）</li>
 <li>NeedsDiscuss:&nbsp;</li>
 <li>NeedsTest: 訂閱、發送流程需要測試</li></ul class="taskdone">
@@ -280,16 +281,17 @@
 <li>簡介：</li></ul>
 <ul style="list-style: none;"><li>很多年以前，我寫過一個小小的系統。它每天會從幾個新聞網站蒐集頭條標題，然後利用簡單的 bi-gram 斷詞和統計，找出當天的熱門新聞。</li>
 <li>很多年以後，我發現自己的記憶力越來越不行。明明是上星期的大新聞，卻怎麼樣也想不起來。不過，我想起了多年前那個小系統。我在想，如果我可以把每天的熱門新聞紀錄下來，那麼當我不小心忘記了什麼，就有一份清單可以用來提醒自己。</li></ul>
-<ul><li>進度：</li></ul>
+<ul><li>架構：</li></ul>
 <ul style="list-style: none;"><li>這個系統預期應該是簡單的，只有三個步驟要做：</li>
 <li>一、蒐集標題</li>
 <li>二、統計關鍵詞</li>
-<li>三、紀錄</li>
-<li>目前步驟一已經差不多了。我準備了 11 支針對不同網站的 crawler/parser，可以取回重點新聞的網址和標題。下一步就是斷詞和計算。我不知道接下來什麼時候有空可以繼續寫，但是這個第一階段的產出檔似乎也可以有其他有趣的用途。比方說：</li><ul><li>水平：分析各個新聞網站對議題的不同偏好</li>
+<li>三、紀錄</li></ul>
+<ul><li>進度：</li></ul>
+<ul style="list-style: none;"><li>目前步驟一已經差不多了。我準備了 11 支針對不同網站的 crawler/parser，可以取回重點新聞的網址和標題。下一步就是斷詞和計算。我不知道接下來什麼時候有空可以繼續寫，但是這個第一階段的產出檔似乎也可以有其他有趣的用途。比方說：</li><ul><li>水平：分析各個新聞網站對議題的不同偏好</li>
 <li>垂直：各個網站對其偏好議題的呈現強度</li>
 <li>縱深：不同議題在時間軸上的存活長度</li></ul>
 </ul>
-<ul style="list-style: none;"><li>可是我完全不懂 UI，所以就先這樣吧。（默）</li></ul>
+<ul style="list-style: none;"><li>綜合這幾個維度又可以生成更有趣的結果，例如一個永遠只看某報紙的人，他對當前熱門新聞的認知與現實差距可能有多大。不過實現這些分析的前提是<s>要我有空</s>有志之士的加入…</li></ul>
 
 <p></p><h2>g0v GO</h2><ul><li>住持：clonn</li>
 <li>發想：</li></ul>
@@ -302,5 +304,14 @@
 <li>parse README.md / html / text as introduction of project.</li></ul>
 </ul>
 
-<p></p></body>
+<h2>iHelp</h2><ul><li>發起人： 蔡佳緯</li>
+<li>動機：</li></ul>
+<ul style="list-style: none;"><li>目前社會上的聾啞人士沒有屬於自己的報案專線，雖來目前臺灣提供簡訊報案專線，但報案專線會因縣市不同而異，聾啞人士必須要儲存許多縣市的電話號碼，發生狀況的當下必須找到對應的電話號碼來發送求救簡訊。</li></ul>
+<ul><li>簡介：</li></ul>
+<ul style="list-style: none;"><li>讓瘖啞人士不用透過繁雜的程序就能夠完成報案手續</li></ul>
+<ul><li>相關資訊：<ul><li><a href='http://www.appledaily.com.tw/appledaily/article/headline/20130103/34746120/'/>iHelp 報導</a></li>
+<li><a href='https://docs.google.com/file/d/0BxjvKLescVarbHhMVm5KU1ZMR1U/edit?usp=sharing'/>企劃書</a></li></ul>
+</ul>
+
+</body>
 </html>
