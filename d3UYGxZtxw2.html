@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="7811"/>
+<meta name="version" content="8444"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$d3UYGxZtxw2</title>
 </head>
 <body><h1><b>國民大會黑客松專案構想（Idea Pool）</b></h1><p></p><p><b>如果你有一個<u>概略</u>的想法，請直接加在這裡。</b></p><p></p><p>如果你想把這邊的想法變得更完整，請用 g0v.hackpad.com 或者 google doc，新增一份文件，然後把它加入 <a href="https://ethercalc.org/g0v-hackath3n"><a href='https://ethercalc.org/g0v-hackath3n'/>https://ethercalc.org/g0v-hackath3n</a></a> 最後一行 (url 前面請空一格 以便縮排)</p><p></p><p>&nbsp;說明：</p><p>- 授權方式：程式碼部分（如 MIT/BSD）、文件部分（如 CC-BY）</p><p>- 需求：NeedTech, NeedDesign, NeedWriter, NeedTalktoRealPerson （可加</p><p>在 ethercalc 中第三欄）</p><p></p><p>請幫忙從之前 hackathon 文件回收 Idea：</p><p><u><a href='https://hackpad.com/ul6fMthof2S'/>第零次</a></u></p><p><u><a href='https://hackpad.com/lIoCjaeMWzC'/>第壹次</a></u></p><p><a href='http://hack.g0v.tw/#/g0v-hackath2n/1qotCK6_ccR3MucEVtTrZ7nKdYXniS7bncZR2Dm85qbQ'/>第貳次</a></p><ul style="list-style: none;"><li><a href='https://g0v.hackpad.com/g0v-pre-hackath3n-Y9xV1sIIuTt'/>pre-hackath3n</a></li></ul>
@@ -11,6 +11,30 @@
 <li><a href='https://g0v.hackpad.com/g0v-XD-talking-pre-hackath4n--qkq2J2oO2Cq'/>g0v XD-talking-pre-hackath4n 跨設計哈拉松</a></li>
 <li><br/></li></ul>
 <ul class="comment"><li><b>「長期專案」請看上方下拉選單，「專案」請到左列單頁，<u>發想中點子</u>請在這填寫：</b></li></ul class="comment">
+<h2>立院看門狗</h2><ul class="comment"><li>接續<a href='/ep/profile/EcUrTWSKroj'/>Jimmy Huang</a>在g0v-ly的立院訂閱器</li></ul>
+<ul><li>發起人/拋磚人：<a href='/ep/profile/ENS06ylFWb8'/>TYLo</a></li>
+<li>狀態：<ul><li>目前事件/法條對應API完成</li>
+<li>之前的專案: <a href="https://g0v.neticrm.tw">https://g0v.neticrm.tw</a>&nbsp;&nbsp;</li></ul>
+</li>
+<li>訂閱對象：<ul><li>會議議程(會議預報)</li>
+<li>委員發言</li>
+<li>委員書面質詢、行政院回覆</li>
+<li>法案進度</li></ul>
+</li>
+<li>簡介：連結gmail帳號 or Facebook帳號透過API發帳號透過API發送訊息</li>
+<li>實現邏輯：<ul><li>訂閱<ul><li>使用者填入關鍵字(可以是事件/法條)直接訂閱。</li>
+<li>如果填入事件，能夠自動產生相對應法條(由一個月內新聞抽取)。</li>
+<li>熱門事件由GOOGLE熱門關鍵字自動產生</li>
+<li>可選擇mail或fb notify的接受方式</li></ul>
+</li>
+<li>發送<ul><li>取得新的公報/議程，就觸發notify機制，發送email與Facebook通知。email發送使用gmail API，FB還需要寫APP。</li></ul>
+</li></ul>
+</li>
+<li>短期目標：完成介面、能夠對預報做訂閱。</li></ul>
+<ul class="taskdone"><li>NeedsTech: 需要技術支援：目前打算借用<a href='https://help.github.com/articles/post-receive-hooks'/>github和git的post-receive</a>方式，只要有公報被commit上去github，notify到指定website by HTTP POST Method。需了解目前<a href='http://open.ly.g0v.tw/gazettes'/>公報列表</a>的順序定義和github維護方式</li>
+<li>NeedsWriter: 需要文案幫手（撰寫提示訊息、Email的訊息範本）</li>
+<li>NeedsDiscuss:&nbsp;</li>
+<li>NeedsTest: 訂閱、發送流程需要測試</li></ul class="taskdone">
 <h2>台灣白色恐怖維基</h2><ul><li>發起人/拋磚人：Resd</li>
 <li>狀態：網站已架好，內容待增加</li>
 <li><a href="http://www.whiteterrortaiwan.info/wiki/index.php?title=%E9%A6%96%E9%A0%81">http://www.whiteterrortaiwan.info/wiki/index.php?title=%E9%A6%96%E9%A0%81</a></li>
@@ -95,7 +119,8 @@
 <li>使用資料：創用CC</li>
 <li>徵求夥伴（請簽名）：<ul><li>NeedsWriter: 需要文案幫手</li>
 <li>NeedsData: 需要資料，整理各種scenario、授權方式、採訪懶人包專家了解整理製作注意事項（可問@nchild）</li></ul>
-<ul class="comment"><li>我有兩個內容接近的簡報在講這個，但主要是給課程學員使用，很多東西是現場說沒放上去，可以再加 <a href="https://speakerdeck.com/nchild">https://speakerdeck.com/nchild</a></li></ul>
+<ul class="comment"><li>我有兩個內容接近的簡報在講這個，但主要是給課程學員使用，很多東西是現場說沒放上去，可以再加 <a href="https://speakerdeck.com/nchild">https://speakerdeck.com/nchild</a></li>
+<li>創用CC legist強是專家</li></ul>
 <ul><li>NeedsProcess: 需要幫忙設計作業流程</li></ul>
 </ul>
 <ul style="list-style: none;"><li><br/></li></ul style="list-style: none;">
@@ -103,6 +128,11 @@
 <p><a href="https://globaleaks.org/"><a href='https://globaleaks.org/'/>https://globaleaks.org/</a></a> - 這是一個匿名化保障爆料者安全的服務，有點類似 nytimes 和 aaron swartz 弄的 strongbox (<a href="http://www.newyorker.com/strongbox/"><a href='http://www.newyorker.com/strongbox/'/>http://www.newyorker.com/strongbox/</a></a>, source:<a href="https://github.com/deaddrop/deaddrop)"><a href='https://github.com/deaddrop/deaddrop'/>https://github.com/deaddrop/deaddrop</a>)</a></p><ul class="comment"><li>另可參考 <a href="http://freedomboxfoundation.org">http://freedomboxfoundation.org</a></li></ul>
 <ul><li>徵求夥伴（有興趣直接簽名）：erinus (erinus.startup@gmail.com)<ul><li>NeedsDesigner: 需要介面設計</li>
 <li>NeedsTech: 需要技術支援（程式、架站 etc)</li></ul>
+<ul class="comment"><li>我之前也想弄一個，我可以協助提供法律意見，向權責單位檢舉</li>
+<li>照你提供的參考，網站如果可以直接內建TOR的功能，並顯示發文ip</li>
+<li>應該可以方便爆料者確認自己的發文安全性，還有依照一般政府單位的</li>
+<li>或是媒體的爆料需求，可以上傳檔案是必要的</li>
+<li>只是目前八卦板已經有爆料的功能，需求有待分析</li></ul>
 </ul>
 
 <p></p><h2>服貿協議行業對照工具</h2><ul><li>發起人/拋磚人：nchild</li>
