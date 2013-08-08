@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="11"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$r7bWv19xZYE</title>
+</head>
+<body><h2>立院看門狗</h2><ul class="comment"><li>接續<a href='https://g0v.hackpad.com/ep/profile/EcUrTWSKroj'/>Jimmy Huang</a>在g0v-ly的立院訂閱器</li></ul>
+<ul><li>發起人/拋磚人：<a href='https://g0v.hackpad.com/ep/profile/ENS06ylFWb8'/>TYLo</a></li>
+<li>狀態：<ul><li>目前事件/法條對應API完成</li>
+<li><a href="https://g0v.neticrm.tw"><a href='https://g0v.neticrm.tw/'/>https://g0v.neticrm.tw</a></a></li></ul>
+</li>
+<li>訂閱對象：<ul><li>會議議程(會議預報)</li></ul>
+<ul class="task"><li>委員發言</li>
+<li>委員書面質詢、行政院回覆</li>
+<li>法案進度</li></ul>
+</ul>
+<ul><li>簡介：連結gmail帳號 or Facebook帳號透過API發帳號透過API發送訊息</li>
+<li>實現邏輯：<ul><li>訂閱<ul><li>使用者填入關鍵字(可以是事件/法條)直接訂閱。</li>
+<li>如果填入事件，能夠自動產生相對應法條(由一個月內新聞抽取)。</li></ul>
+</li>
+<li>發送<ul><li>取得新的公報/議程，就觸發notify機制，發送email與Facebook通知。email發送使用gmail API，FB還需要寫APP。</li></ul>
+</li></ul>
+</li>
+<li>資料來源:<ul><li>立法院(官方)：<a href="http://www.ly.gov.tw/01_lyinfo/0109_meeting/meetingList.action"><a href='http://www.ly.gov.tw/01_lyinfo/0109_meeting/meetingList.action'/>http://www.ly.gov.tw/01_lyinfo/0109_meeting/meetingList.action</a></a></li></ul>
+</li>
+<li>短期目標：完成介面、能夠對預報做訂閱。</li></ul>
+<ul class="taskdone"><li>NeedsTech: 需要技術支援：目前打算借用<a href='https://help.github.com/articles/post-receive-hooks'/>github和git的post-receive</a>方式，只要有公報被commit上去github，notify到指定website by HTTP POST Method。需了解目前<a href='http://open.ly.g0v.tw/gazettes'/>公報列表</a>的順序定義和github維護方式</li>
+<li>NeedsWriter: 需要文案幫手（撰寫提示訊息、Email的訊息範本）</li>
+<li>NeedsDiscuss:&nbsp;</li>
+<li>NeedsTest: 訂閱、發送流程需要測試</li></ul>
+
+</body>
+</html>
