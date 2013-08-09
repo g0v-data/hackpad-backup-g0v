@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="191"/>
+<meta name="version" content="259"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$r7bWv19xZYE</title>
 </head>
 <body><h2>立院看門狗</h2><ul class="comment"><li>接續<a href='https://g0v.hackpad.com/ep/profile/EcUrTWSKroj'/>Jimmy Huang</a>在g0v-ly的立院訂閱器</li></ul>
@@ -103,8 +103,11 @@
 <li>]</li></ul>
 </ul>
 <ul><li>短期目標：完成介面、能夠對預報做訂閱。</li></ul>
-<p>協作者:</p><p><a href='/ep/profile/ENS06ylFWb8'/>TYLo</a>,<a href='/ep/profile/xrSLRdDkACP'/>Terces Tsai</a></p><ul class="taskdone"><li>NeedsTech: 需要技術支援：目前打算借用<a href='https://help.github.com/articles/post-receive-hooks'/>github和git的post-receive</a>方式，只要有公報被commit上去github，notify到指定website by HTTP POST Method。需了解目前<a href='http://open.ly.g0v.tw/gazettes'/>公報列表</a>的順序定義和github維護方式</li>
-<li>NeedsWriter: 需要文案幫手（撰寫提示訊息、Email的訊息範本）</li>
+<p>協作者:</p><p><a href='/ep/profile/ENS06ylFWb8'/>TYLo</a>,<a href='/ep/profile/xrSLRdDkACP'/>Terces Tsai</a></p><ul class="taskdone"><li>NeedsTech: 需要技術支援：目前打算借用<a href='https://help.github.com/articles/post-receive-hooks'/>github和git的post-receive</a>方式，只要有公報被commit上去github，notify到指定website by HTTP POST Method。需了解目前<a href='http://open.ly.g0v.tw/gazettes'/>公報列表</a>的順序定義和github維護方式</li><ul class="comment"><li>如果預報的話，其實不適合使用公報當 source，因為會晚兩三週</li>
+<li>要不要參考一下 <a href='http://developer.github.com/v3/repos/hooks/#pubsubhubbub'/>github hook PSHB api</a> 設計一下 subscribe api, 然後看如何在 api.ly.g0v.tw implement 這個部分？</li>
+<li>這裡有筆誤，其實是以立院預報為source，公報為法案追蹤部份，應該之後會追加</li></ul>
+</ul>
+<ul class="taskdone"><li>NeedsWriter: 需要文案幫手（撰寫提示訊息、Email的訊息範本）</li>
 <li>NeedsDiscuss:&nbsp;</li>
 <li>NeedsTest: 訂閱、發送流程需要測試</li></ul>
 
