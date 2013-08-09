@@ -3,15 +3,15 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="178"/>
+<meta name="version" content="191"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$r7bWv19xZYE</title>
 </head>
 <body><h2>立院看門狗</h2><ul class="comment"><li>接續<a href='https://g0v.hackpad.com/ep/profile/EcUrTWSKroj'/>Jimmy Huang</a>在g0v-ly的立院訂閱器</li></ul>
 <ul><li>發起人/拋磚人：<a href='https://g0v.hackpad.com/ep/profile/ENS06ylFWb8'/>TYLo</a></li>
-<li>狀態：<ul><li>目前事件/法條對應API完成</li>
+<li><b>狀態</b>：<ul><li>目前事件/法條對應API完成</li>
 <li>之前類似專案: <a href="https://g0v.neticrm.tw"><a href='https://g0v.neticrm.tw/'/>https://g0v.neticrm.tw</a></a></li></ul>
 </li>
-<li>訂閱對象：<ul><li>會議議程(會議預報)</li></ul>
+<li><b>訂閱對象：</b><ul><li>會議議程(會議預報)</li></ul>
 <ul class="task"><li>委員發言</li>
 <li>委員書面質詢、行政院回覆</li>
 <li>法案進度</li></ul>
@@ -34,27 +34,34 @@
 </ul>
 <ul><li><b>Mockup</b></li></ul>
 </ul>
-<ul style="list-style: none;"><li><img src='https://dl.dropboxusercontent.com/u/14253954/ly-watchdog_mockup.png'/></li><ul><li><b>Data Spec:</b><ul><li>使用者資料:</li></ul>
+<ul style="list-style: none;"><li><img src='https://dl.dropboxusercontent.com/u/14253954/ly-watchdog_mockup.png'/></li><ul><li>data spec:<ul><li><b>user list:</b></li></ul>
+</ul>
 <ul style="list-style: none;"><li>[</li>
-<li>&nbsp;&nbsp;&nbsp; {&quot;email&quot;:{&quot;facebook_id&quot;:&quot;aa&quot;,&quot;name&quot;:&quot;aa&quot;}}</li>
-<li>&nbsp;&nbsp;&nbsp; ,{&quot;email&quot;:{&quot;facebook_id&quot;:&quot;a&quot;,&quot;name&quot;:&quot;aa&quot;}}</li>
-<li>]</li></ul>
-<ul><li>訂閱資料:</li></ul>
+<li>&nbsp;&nbsp;&nbsp; {&quot;email&quot;:{&quot;facebook_id&quot;:&quot;aa&quot;,&quot;name&quot;:&quot;aa&quot;,”term_list”:[ “term1”,”term2” ]}}</li>
+<li>&nbsp;&nbsp;&nbsp; ,{&quot;email&quot;:{&quot;facebook_id&quot;:&quot;a&quot;,&quot;name&quot;:&quot;aa&quot;,”term_list”:[”term2” ]}}</li>
+<li>]</li><ul><li><b>term list:</b></li></ul>
+</ul>
 <ul style="list-style: none;"><li>[</li>
 <li>&nbsp;&nbsp;&nbsp; {</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;term1&quot;:</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “update”:”time”,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “user_count”:”N”,</li>
+<li>“user_list”:</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;email1&quot;,&quot;email2&quot;</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]</li>
 <li>&nbsp;&nbsp;&nbsp; },</li>
 <li>&nbsp;&nbsp;&nbsp; {</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;term2&quot;:</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “update”:”time”,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “user_count”:”N”,</li>
+<li>“user_list”:</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;email2&quot;,&quot;email3&quot;</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]</li>
 <li>&nbsp;&nbsp;&nbsp; }</li>
-<li>]</li></ul>
-<ul><li>給各module的notify data:</li></ul>
+<li>]</li><ul><li><b>notify-data</b></li></ul>
+</ul>
 <ul style="list-style: none;"><li>[</li>
 <li>&nbsp;&nbsp;&nbsp; {</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;term1&quot;:</li>
@@ -77,10 +84,23 @@
 <li>&nbsp;&nbsp;&nbsp; },</li>
 <li>&nbsp;&nbsp;&nbsp; {</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;term2&quot;:</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;users&quot;:</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;id1&quot;,&quot;id2&quot;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;message&quot;:</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /*follow calander API*/</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /*follow calander API*/</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</li>
 <li>&nbsp;&nbsp;&nbsp; }</li>
 <li>]</li></ul>
-</ul>
 </ul>
 <ul><li>短期目標：完成介面、能夠對預報做訂閱。</li></ul>
 <p>協作者:</p><p><a href='/ep/profile/ENS06ylFWb8'/>TYLo</a>,<a href='/ep/profile/xrSLRdDkACP'/>Terces Tsai</a></p><ul class="taskdone"><li>NeedsTech: 需要技術支援：目前打算借用<a href='https://help.github.com/articles/post-receive-hooks'/>github和git的post-receive</a>方式，只要有公報被commit上去github，notify到指定website by HTTP POST Method。需了解目前<a href='http://open.ly.g0v.tw/gazettes'/>公報列表</a>的順序定義和github維護方式</li>
