@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="10268"/>
+<meta name="version" content="10358"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$d3UYGxZtxw2</title>
 </head>
 <body><h1><b>國民大會黑客松專案構想（Idea Pool）</b></h1><p></p><p><b>如果你有一個<u>概略</u>的想法，請直接加在這裡。</b></p><p></p><p>如果你想把這邊的想法變得更完整，請用 g0v.hackpad.com 或者 google doc，新增一份文件，然後把它加入 <a href="https://ethercalc.org/g0v-hackath3n"><a href='https://ethercalc.org/g0v-hackath3n'/>https://ethercalc.org/g0v-hackath3n</a></a> 最後一行 (url 前面請空一格 以便縮排)</p><p></p><p>&nbsp;說明：</p><p>- 授權方式：程式碼部分（如 MIT/BSD）、文件部分（如 CC-BY）</p><p>- 需求：NeedTech, NeedDesign, NeedWriter, NeedTalktoRealPerson （可加</p><p>在 ethercalc 中第三欄）</p><p></p><p>請幫忙從之前 hackathon 文件回收 Idea：</p><p><u><a href='https://hackpad.com/ul6fMthof2S'/>第零次</a></u></p><p><u><a href='https://hackpad.com/lIoCjaeMWzC'/>第壹次</a></u></p><p><a href='http://hack.g0v.tw/#/g0v-hackath2n/1qotCK6_ccR3MucEVtTrZ7nKdYXniS7bncZR2Dm85qbQ'/>第貳次</a></p><ul style="list-style: none;"><li><a href='https://g0v.hackpad.com/g0v-pre-hackath3n-Y9xV1sIIuTt'/>pre-hackath3n</a></li></ul>
@@ -26,29 +26,8 @@
 
 <h2>立院看門狗</h2><ul class="comment"><li>接續<a href='/ep/profile/EcUrTWSKroj'/>Jimmy Huang</a>在g0v-ly的立院訂閱器</li></ul>
 <ul><li>發起人/拋磚人：<a href='/ep/profile/ENS06ylFWb8'/>TYLo</a></li>
-<li>狀態：<ul><li>目前事件/法條對應API完成</li>
-<li>之前的專案: <a href="https://g0v.neticrm.tw">https://g0v.neticrm.tw</a>&nbsp;&nbsp;</li></ul>
-</li>
-<li>訂閱對象：<ul><li>會議議程(會議預報)</li>
-<li>委員發言</li>
-<li>委員書面質詢、行政院回覆</li>
-<li>法案進度</li></ul>
-</li>
-<li>簡介：連結gmail帳號 or Facebook帳號透過API發帳號透過API發送訊息</li>
-<li>實現邏輯：<ul><li>訂閱<ul><li>使用者填入關鍵字(可以是事件/法條)直接訂閱。</li>
-<li>如果填入事件，能夠自動產生相對應法條(由一個月內新聞抽取)。</li>
-<li>熱門事件由GOOGLE熱門關鍵字自動產生</li>
-<li>可選擇mail或fb notify的接受方式</li></ul>
-</li>
-<li>發送<ul><li>取得新的公報/議程，就觸發notify機制，發送email與Facebook通知。email發送使用gmail API，FB還需要寫APP。</li></ul>
-<ul class="comment"><li>google有一天200封限制~怕不夠用</li></ul>
-</ul>
-</ul>
-<ul><li>短期目標：完成介面、能夠對預報做訂閱。</li></ul>
-<ul class="taskdone"><li>NeedsTech: 需要技術支援：目前打算借用<a href='https://help.github.com/articles/post-receive-hooks'/>github和git的post-receive</a>方式，只要有公報被commit上去github，notify到指定website by HTTP POST Method。需要了解facebook app運作方式</li>
-<li>NeedsWriter: 需要文案幫手（撰寫提示訊息、Email的訊息範本）</li>
-<li>NeedsDiscuss:&nbsp;</li>
-<li>NeedsTest: 訂閱、發送流程需要測試</li></ul class="taskdone">
+<li>移至 <a href="https://g0v.hackpad.com/r7bWv19xZYE">https://g0v.hackpad.com/r7bWv19xZYE</a></li></ul>
+
 <h2>台灣白色恐怖維基</h2><ul><li>發起人/拋磚人：Resd</li>
 <li>狀態：網站已架好，內容待增加</li>
 <li><a href="http://www.whiteterrortaiwan.info/wiki/index.php?title=%E9%A6%96%E9%A0%81">http://www.whiteterrortaiwan.info/wiki/index.php?title=%E9%A6%96%E9%A0%81</a></li>
@@ -60,12 +39,9 @@
 <li>使用資料：國家國家檔案局檔案、新聞、回憶錄、受難者和受難者家屬採訪文稿等</li>
 <li>徵求夥伴（有興趣直接簽名）：</li></ul>
 
-<ul><li>NeedsDesigner:&nbsp;</li>
-<li>徵求網站logo (目前第一版是我自己畫的)</li>
-<li>NeedsData: 需要資料（擷取、清理）</li>
-<li>這部分資料很多，需要人手整理</li>
-<li>NeedsTech: 需要技術支援（程式、架站 etc)</li>
-<li>這個.....目前也是我弄的，有人可以請教最好，我沒有相關經驗</li>
+<ul><li>NeedsDesigner: 徵求網站logo (目前第一版是我自己畫的)</li>
+<li>NeedsData: 這部分資料很多，需要人手整理</li>
+<li>NeedsTech: 這個.....目前也是我弄的，有人可以請教最好，我沒有相關經驗</li>
 <li>NeedsTalkingToRealPerson: 需要有人幫忙和其他機關聯絡</li>
 <li>寫手: 採訪或翻譯。外文部分如果可能的話會是中長程目標，短期目標先以手上有的資料整理為主。</li></li>
 <li>有考慮和公民百科併在一下嗎QQ...</li></ul>
@@ -89,7 +65,6 @@
 <li>道德評價為：20/100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
 <li>商戰評價為90/100</li>
 <li>代表此資訊在商戰上有極高評價，可是道德評價為最低。</li></ul>
-
 <ul><li>授權方式：</li>
 <li>使用資料：</li>
 <li>徵求夥伴（有興趣直接簽名）：erinus (erinus.startup@gmail.com)</li></ul>
@@ -122,10 +97,9 @@
 <li>科科，其實之前是某些地區的輻射測量值，後來 gugod 有完整的資料 release 了</li>
 <li>不知道有麼有辦法，爬591的資料，搭配時間以及國泰的不動產指數，來用個演算法分析合理化價格，並用實價登錄來警示不合理交易價格出現區域。</li>
 <li>目前我自己推估，中古價格約是不動產指數分析之推案標準單價6-7成價格左右，算是合理成交價</li>
-<li><a href="http://www.cathay-red.com.tw/housing.htm">http://www.cathay-red.com.tw/housing.htm</a> 網址在這</li>
-<li><br/></li></ul>
+<li><a href="http://www.cathay-red.com.tw/housing.htm">http://www.cathay-red.com.tw/housing.htm</a> 網址在這</li></ul>
 
-<p></p><h2>製作懶人包的懶人包</h2><ul class="comment"><li>拿來用XD</li></ul>
+<h2>製作懶人包的懶人包</h2><ul class="comment"><li>拿來用XD</li></ul>
 <ul><li>拋磚人：ipa</li>
 <li>狀態：發想/亂想，有興趣想做請直接拿去作</li>
 <li>專案簡介：社會議題烽火連天，很多人製作貼紙、懶人包，但沒有開放授權無法再次利用很可惜（有些有意願但不了解）。作個懶人包製作懶人包可幫助NGO/NPO、鄉民資訊成品有效流通自利用。製作過程中的經驗、細節也可整理流通。<ul><li>案例1：有專業人士寫了法律文，希望流通，A組織想做懶人包，B組織想印刷分送，但沒有掛CC授權，訊息往返效率減低。</li>
@@ -148,11 +122,13 @@
 <ul><li>徵求夥伴（有興趣直接簽名）：erinus (erinus.startup@gmail.com)<ul><li>NeedsDesigner: 需要介面設計</li>
 <li>NeedsTech: 需要技術支援（程式、架站 etc)</li></ul>
 <ul class="comment"><li>我之前也想弄一個，我可以協助提供法律意見，向權責單位檢舉</li>
-<li>照你提供的參考，網站如果可以直接內建TOR的功能，並顯示發文ip</li>
+<li>照你提供的參考，網站如果可以直接內建TOR的功能，並顯示發文ip<ul class="comment"><li>如果是 tor 就不會有真正的 ip 了</li></ul class="comment">
+</li>
 <li>應該可以方便爆料者確認自己的發文安全性，還有依照一般政府單位的</li>
 <li>或是媒體的爆料需求，可以上傳檔案是必要的</li>
 <li>只是目前八卦板已經有爆料的功能，需求有待分析</li>
-<li>有沒有防範假爆料的方式？</li>
+<li>有沒有防範假爆料的方式？<ul class="comment"><li>應該是由收到爆料者再去查證，但同一個爆料者有辦法用相同的 identify follow up</li></ul class="comment">
+</li>
 <li>目前主流都是要附照片影片</li></ul>
 </ul>
 
@@ -354,7 +330,7 @@
 <li>徵求夥伴（有興趣直接簽名）：</li></ul>
 <ul style="list-style: none;"><li>David Lin</li></ul>
 
-<p></p><h2>政府組織逆向工程</h2><p><b>發起人</b>：Alf</p><p><b>狀態</b>：構想</p><p></p><p>專案簡介：從工程的角度出發，可將政府看做是一個系統。各部會就是次系統，部會下的司就是次系統元件，司下面的處就是元件內的單元，以此類推。除了上述的架構，系統還包含介面。介面控管不同次系統、單元、元件間的溝通--資料與資源流動，分為內部介面跟外部介面兩部分。內部介面指的是政府內部單位之間的，外部介面指的是政府與民眾，或政府與他國之間的。&nbsp;</p><p></p><p>工作目標：讓政府組織的運作更清楚，掌握政府開放資料的進度，了解政府跟民眾之間的互動關係。希望由此建立社會運作模型的prototype。</p><ol><li>解析政府組織架構</li><ul class="comment"><li><a href="https://github.com/g0v/addressbook">https://github.com/g0v/addressbook</a> 使用的原始資料有包含各單位上層機關，應該可以直接使用</li></ul>
+<p></p><h2>政府組織逆向工程</h2><p><b>發起人</b>：Alf</p><p><b>狀態</b>：構想</p><p></p><p>專案簡介：從工程的角度出發，可將政府看做是一個系統。各部會就是次系統，部會下的司就是次系統元件，司下面的處就是元件內的單元，以此類推。除了上述的架構，系統還包含介面。介面控管不同次系統、單元、元件間的溝通--資料與資源流動，分為內部介面跟外部介面兩部分。內部介面指的是政府內部單位之間的，外部介面指的是政府與民眾，或政府與他國之間的。&nbsp;</p><p></p><p>工作目標：讓政府組織的運作更清楚，掌握政府開放資料的進度，了解政府跟民眾之間的互動關係。希望由此建立社會運作模型的prototype。</p><ol><li>解析政府組織架構</li><ul class="comment"><li><a href="https://github.com/g0v/addressbook">https://github.com/g0v/addressbook</a> 使用的原始資料有包含各單位上層機關，應該可以直接使用。另外各單位員額及預算，可以從銓敘部與主計處找</li></ul>
 </ol>
 <ol><li>解析政府與民眾之間的資料與資源流動</li><ul class="comment"><li>這應該是要從業務的角度去想，有什麼初步想法嗎？</li></ul>
 </ol>
@@ -416,8 +392,10 @@
 <li>簡介：比方說垃圾車路線與房價之關係</li></ul>
 
 <h2>發電本計算機</h2><ul><li>發起人：Muyueh Lee</li>
+<li>狀態：</li>
 <li>動機：核四供公投</li>
-<li>簡介：幫助 反核/擁核人士，可以藉由這一個網站發展自己的立場，以利有效溝通有效溝通：<a href="https://www.facebook.com/EnergyComputer">https://www.facebook.com/EnergyComputer</a></li></ul>
+<li>簡介：幫助 反核/擁核人士，可以藉由這一個網站發展自己的立場，以利有效溝通有效溝通：<a href="https://www.facebook.com/EnergyComputer">https://www.facebook.com/EnergyComputer</a></li><ul class="comment"><li>需要什麼幫忙呢？目前的原始碼有釋出嗎？</li></ul>
+</ul>
 
 <h2>64995人權律師救救我呼叫地圖</h2><ul><li>發起人：人權律師團體 isabel （ipa幫整理）</li>
 <li>狀態：空想</li>
@@ -429,5 +407,5 @@
 <li>NeedsTalkingToRealPerson: 需要與人權律師社團討論</li></ul>
 </ul>
 
-<p></p></body>
+<h2>Fast On Board 零時通關</h2><p></p></body>
 </html>
