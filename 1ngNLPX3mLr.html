@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="349"/>
+<meta name="version" content="491"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$1ngNLPX3mLr</title>
 </head>
 <body><h1>g0v tasks queue 整合</h1><p></p><p><b><u>&nbsp;&nbsp; 原始討論：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u></b></p><p><b>拋磚人:</b> kcwu</p><p><b>狀態：</b>發想，有興趣想做請直接拿去作</p><p><b>專案簡介</b>: 許多人想幫忙但不知如何下手, 需要簡單的 task. 本專案希望讓各 project 的 easy task 更容易被找到</p><p><b>工作目標</b>:</p><ol><li><a href='https://github.com/g0v/dev/issues/15'/>定義一些 common tag,</a> 譬如 &quot;輸入資料&quot;, &quot;翻譯&quot;, &quot;圖轉文&quot;, &quot;搜尋資料&quot;, &quot;畫圖&quot;, &quot;寫 parser&quot;.</li></ol>
@@ -78,19 +78,25 @@
 </li>
 <li>取得單一 repository 的 issues<ul><li>curl<a href='https://api.github.com/repos/g0v/hack.g0v.tw/issues'/> </a><a href="https://api.github.com/repos/g0v/hack.g0v.tw/issues">https://api.github.com/repos/g0v/hack.g0v.tw/issues</a><a href='https://api.github.com/repos/g0v/hack.g0v.tw/issues(以'/> </a>(以 hack.g0v.tw 為例)</li></ul>
 </li>
-<li>API Clients:<ul><li><a href="http://developer.github.com/v3/libraries/">http://developer.github.com/v3/libraries/</a></li>
-<li><br/></li></ul>
+<li>API Clients:<ul><li><a href="http://developer.github.com/v3/libraries/">http://developer.github.com/v3/libraries/</a></li></ul>
 </ul>
+<ul style="list-style: none;"><li><br/></li></ul>
 
-<p><b><u>&nbsp;&nbsp; 資料呈現:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u></b></p><p></p><p></p><p><b><u>&nbsp;&nbsp; 使用情境:&nbsp;&nbsp; (暫定)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u></b></p><ul><li>&nbsp;&nbsp; Scenario 1: User 無 github 帳號，為翻譯人員<ul><li>新手在「如何參與 g0v」頁面，看到 tasks 列表</li>
-<li>以 「新手」 &amp;「翻譯」做 filter</li>
+<p><b><u>&nbsp;&nbsp; 資料呈現:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u></b></p><ul><li>Prototype demo: <a href="http://utcr.org/g0v-issue-tracker/">http://utcr.org/g0v-issue-tracker/</a></li></ul>
+
+<p><b><u>&nbsp;&nbsp; Code (Prototype)</u></b></p><ul><li>純用前端 fetch github API<ul><li><a href="https://github.com/youchenlee/g0v-issue-tracker"><a href='https://github.com/youchenlee/g0v-issue-tracker'/>https://github.com/youchenlee/g0v-issue-tracker</a></a></li></ul>
+</li>
+<li>未來為了有更多應用，應該要用後端抓 issue</li></ul>
+
+<p><b><u>&nbsp;&nbsp; 使用情境:&nbsp;&nbsp; (暫定)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u></b></p><ul><li>&nbsp;&nbsp; Scenario 1: User 無 github 帳號，為翻譯人員<ul><li>新手在「如何參與 g0v」頁面，看到 tasks 列表</li>
+<li>以 「新手」+「翻譯」做 filter</li>
 <li>選定一個 task, 點入查看內容</li>
 <li>點選「我要參與」並留言</li>
-<li>Update 回 github 的 project issue (? How)<ul><li>以 bot 回 comment</li></ul>
+<li>Update 回 github 的 project issue (? How)<ul><li>以 github&nbsp; bot 回 comment (user 沒 github account)</li></ul>
 </ul>
 </ul>
 
-<p></p><p><b><u>&nbsp;&nbsp; Reference:</u></b></p><ul><li>Github API: <a href="http://developer.github.com/v3/issues/">http://developer.github.com/v3/issues/</a></li></ul>
+<p></p><p><b><u>&nbsp;&nbsp; Wanted</u></b></p><p>&nbsp;&nbsp; Frontend Developer</p><p></p><p></p><p><b><u>&nbsp;&nbsp; Reference:</u></b></p><ul><li>Github API: <a href="http://developer.github.com/v3/issues/">http://developer.github.com/v3/issues/</a></li></ul>
 
 <p></p></body>
 </html>
