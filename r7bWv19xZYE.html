@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="398"/>
+<meta name="version" content="399"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$r7bWv19xZYE</title>
 </head>
 <body><h2>立院看門狗</h2><ul class="comment"><li>接續<a href='https://g0v.hackpad.com/ep/profile/EcUrTWSKroj'/>Jimmy Huang</a>在g0v-ly的立院訂閱器</li></ul>
@@ -34,12 +34,10 @@
 <li>hackfolder：<a href="http://hack.g0v.tw/ly-watchdog/r7bWv19xZYE"><a href='http://hack.g0v.tw/ly-watchdog/r7bWv19xZYE'/>http://hack.g0v.tw/ly-watchdog/r7bWv19xZYE</a></a></li>
 <li>github：<a href="https://github.com/sweslo17/ly-watchdog">https://github.com/sweslo17/ly-watchdog</a></li>
 <li>目前完成：<ul><li>事件&lt;==&gt;法條對應api(example)：<a href="http://gaisq.cs.ccu.edu.tw:9999/query?term=洪仲丘">http://gaisq.cs.ccu.edu.tw:9999/query?term=洪仲丘</a></li>
-<li><b>系統架構</b></li><ul style="list-style: none;"><li><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_r7bWv19xZYE_p.65297_1375977854827_system.PNG'/></li></ul>
+<li><b>系統架構</b></li></ul>
 </ul>
-<ul><li><b>Mockup</b></li></ul>
-</ul>
-<ul style="list-style: none;"><li><img src='https://dl.dropboxusercontent.com/u/14253954/ly-watchdog_mockup.png'/></li></ul>
-<ul><li>短期目標：<ul><li>完成介面、能夠對預報做訂閱。</li></ul>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_r7bWv19xZYE_p.65297_1375977854827_system.PNG'/></p><ul><li><b>Mockup</b></li></ul>
+<p><img src='https://dl.dropboxusercontent.com/u/14253954/ly-watchdog_mockup.png'/></p><ul><li>短期目標：<ul><li>完成介面、能夠對預報做訂閱。</li></ul>
 </li>
 <li>支線任務：</li></ul>
 <ul style="list-style: none;"><li>國會圖書館 立法院智庫 (npl)</li><ul><li>一大堆彼此稍微重疊的系統 (tts): <a href="http://npl.ly.gov.tw/do/www/homePage"><a href='http://npl.ly.gov.tw/do/www/homePage'/>http://npl.ly.gov.tw/do/www/homePage</a></a><ul><li>可以使用 <a href='https://github.com/g0v/ly-crx'/>ly-crx extension</a> (<a href='https://chrome.google.com/webstore/detail/%E7%AB%8B%E6%B3%95%E9%99%A2%E6%93%B4%E5%85%85/ingofalhkimajgdgaplblnkhpenjhmpo?hl=en'/>安裝</a>), 會增加一個 download-all 的 link</li><ul class="task"><li>需要一個 cli script 直接 download (該系統無 cookie, 所有 state 都是 serialize在 post request 中, 而且 form encoding 為 big5)</li></ul>
