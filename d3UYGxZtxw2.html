@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="11978"/>
+<meta name="version" content="12030"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$d3UYGxZtxw2</title>
 </head>
 <body><h1><b>國民大會黑客松專案構想（Idea Pool）</b></h1><p></p><p><b>如果你有一個<u>概略</u>的想法，請直接加在這裡。</b></p><p></p><p>如果你想把這邊的想法變得更完整，請用 g0v.hackpad.com 或者 google doc，新增一份文件，然後把它加入 <a href="https://ethercalc.org/g0v-hackath3n"><a href='https://ethercalc.org/g0v-hackath3n'/>https://ethercalc.org/g0v-hackath3n</a></a> 最後一行 (url 前面請空一格 以便縮排)</p><p></p><p>&nbsp;說明：</p><p>- 授權方式：程式碼部分（如 MIT/BSD）、文件部分（如 CC-BY）</p><p>- 需求：NeedTech, NeedDesign, NeedWriter, NeedTalktoRealPerson （可加</p><p>在 ethercalc 中第三欄）</p><p></p><p>請幫忙從之前 hackathon 文件回收 Idea：</p><p><u><a href='https://hackpad.com/ul6fMthof2S'/>第零次</a></u></p><p><u><a href='https://hackpad.com/lIoCjaeMWzC'/>第壹次</a></u></p><p><a href='http://hack.g0v.tw/#/g0v-hackath2n/1qotCK6_ccR3MucEVtTrZ7nKdYXniS7bncZR2Dm85qbQ'/>第貳次</a></p><ul style="list-style: none;"><li><a href='https://g0v.hackpad.com/g0v-pre-hackath3n-Y9xV1sIIuTt'/>pre-hackath3n</a></li></ul>
@@ -344,13 +344,17 @@
 <li>徵求夥伴（有興趣直接簽名）：</li></ul>
 <ul style="list-style: none;"><li>David Lin</li></ul>
 
-<p></p><h2>政府組織逆向工程</h2><p><b>發起人</b>：Alf</p><p><b>狀態</b>：構想</p><p></p><p>專案簡介：從工程的角度出發，可將政府看做是一個系統。各部會就是次系統，部會下的司就是次系統元件，司下面的處就是元件內的單元，以此類推。除了上述的架構，系統還包含介面。介面控管不同次系統、單元、元件間的溝通--資料與資源流動，分為內部介面跟外部介面兩部分。內部介面指的是政府內部單位之間的，外部介面指的是政府與民眾，或政府與他國之間的。&nbsp;</p><p></p><p>工作目標：讓政府組織的運作更清楚，掌握政府開放資料的進度，了解政府跟民眾之間的互動關係。希望由此建立社會運作模型的prototype。</p><ol><li>解析政府組織架構</li><ul class="comment"><li><a href="https://github.com/g0v/addressbook">https://github.com/g0v/addressbook</a> 使用的原始資料有包含各單位上層機關，應該可以直接使用。另外各單位員額及預算，可以從銓敘部與主計處找</li></ul>
+<p></p><h2>政府組織逆向工程</h2><p><b>發起人</b>：Alf</p><p><b>狀態</b>：構想</p><p></p><p>專案簡介：從工程的角度出發，可將政府看做是一個系統。各部會就是次系統，部會下的司就是次系統元件，司下面的處就是元件內的單元，以此類推。除了上述的架構，系統還包含介面。介面控管不同次系統、單元、元件間的溝通--資料與資源流動，分為內部介面跟外部介面兩部分。內部介面指的是政府內部單位之間的，外部介面指的是政府與民眾，或政府與他國之間的。&nbsp;</p><p></p><p>工作目標：讓政府組織的運作更清楚，掌握政府開放資料的進度，了解政府跟民眾之間的互動關係。希望由此建立社會運作模型的prototype。</p><ol><li>解析政府組織架構</li><ul class="comment"><li><a href="https://github.com/g0v/addressbook">https://github.com/g0v/addressbook</a> 使用的原始資料有包含各單位上層機關，應該可以直接使用。另外各單位員額及預算，可以從銓敘部與主計處找</li>
+<li>感謝clkao, 稍微看過addressbook上頭的資料，政府機關比想像的多很多。銓敘部跟主計處的資料會找時間另外去看。另外，政府的財團法人的資料該上哪找？雖然不在編制內但稅金其實也燒蠻兇的</li></ul>
 </ol>
-<ol><li>解析政府與民眾之間的資料與資源流動</li><ul class="comment"><li>這應該是要從業務的角度去想，有什麼初步想法嗎？</li></ul>
+<ol><li>解析政府與民眾之間的資料與資源流動</li><ul class="comment"><li>這應該是要從業務的角度去想，有什麼初步想法嗎？</li>
+<li>跟你想法差不多，先從各單位的網站看看他們有提供民眾什麼服務，這些服務需要民眾繳交什麼資料，又會提供什麼資料，先從這邊開始吧</li></ul>
 </ol>
-<ol><li>解析政府各部會間資料流動</li><ul class="comment"><li>可以從國家檔案局查出公文流動的數量</li></ul>
+<ol><li>解析政府各部會間資料流動</li><ul class="comment"><li>可以從國家檔案局查出公文流動的數量</li>
+<li>感謝，會找時間去看</li></ul>
 </ol>
-<ol><li>將上開三項結果「視覺化」</li></ol>
+<ol><li>將上開三項結果「視覺化」</li><ul class="comment"><li>D3.js似乎是不錯的工具</li></ul>
+</ol>
 
 <p>討論：政府組織架構的資訊相對容易獲得，因此這件工作的重點在於如何得知政府在運作過程中會產生什麼資料。可以從兩方面著手，一是由政府提供的服務來推測會產生何種資料，另外是由政府開放資料中已經解析出來的內容判斷。這工作可以當成是繪製g0v計畫所要使用的「戰場地圖」。</p><ul class="comment"><li>我可以從行政法觀點，提供初步政府架構階層</li></ul>
 <p>徵求夥伴（有興趣請簽名）：theabc50111 ;jdkcupid,yyhuang</p><p></p><p></p><p></p><h2>News Wave</h2><ul><li>不負責人：Sorry</li>
