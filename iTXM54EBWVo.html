@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2646"/>
+<meta name="version" content="4161"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$iTXM54EBWVo</title>
 </head>
 <body><h1>動民主 2.0 | Social Democracy（a.k.a. 全民踹共）</h1><p>專案介紹 | Project Readme / Meta</p><p></p><p>可能的命名</p><ul><li>動民主 - 你的公民社交網</li>
@@ -166,10 +166,41 @@
 <li>參考資料<ul><li>專案發展過程 - <a href="https://docs.google.com/presentation/d/1kA3jf0pQbPF87mRidkp0ChlAiztGw8eOYYTasfU0yQ0/edit?usp=sharing"><a href='https://docs.google.com/presentation/d/1kA3jf0pQbPF87mRidkp0ChlAiztGw8eOYYTasfU0yQ0/edit?usp=sharing'/>https://docs.google.com/presentation/d/1kA3jf0pQbPF87mRidkp0ChlAiztGw8eOYYTasfU0yQ0/edit?usp=sharing</a></a></li></ul>
 </ul>
 
-<p><b>產出檔案格式</b></p><p></p><p></p><p><b>進度與 to-do</b></p><ul class="taskdone"><li>survey</li></ul>
+<p><b>技術需求與規則 - 以綠黨實作</b></p><p></p><ul style="list-style: none;"><li>台灣綠黨有興趣使用 2.0（無代理投票機制）來做黨員討論、提議案的交流平台。先由中執委會來做示範：一、有效黨員可以提案，只要投票超過一定比例，就變成下次中執委會討論議案之一。二、中執委會討論的正式議案，投票、討論全部由線上平台公佈。</li></ul>
+
+<ul class="comment"><li>原本 lqfb 的代理制度、多重代理會跟綠黨目前的黨員大會 選出 中執委直接產生矛盾，因為中執委本身已經是代理人。</li></ul>
+
+<ul style="list-style: none;"><li>綠黨現在的決策機制簡略如下：黨員大會選出 9~13 位中執委、3 位中評委（監督中執委用），任期兩年。中評委、中執委與候補中執委會在一個信件群組中討論事情，重要的議案則到中執委會決定（每兩個月）。中執委會採取討論共識決，不常針對事情投票，黨員可以旁聽、發言，雖然不能投票，但發發言也會受到一定程度的重視。</li></ul>
+
+<ul style="list-style: none;"><li>使用平台也是希望透過實踐綠黨六大核心價值之一「參與式民主」，做一個示範，然後慢慢擴充黨員人數到 2,000 以上。增加增加黨員在平日提案的權利與意願，透過經營一個有良好交流互動環境、「有效」且直接的平台，在各方面去提高黨員參與的意願。</li>
+<li><br/></li>
+<li>最終希望也可以併用現有黨員大會提案機制（原本紙本連署與線上雙軌進行）</li>
+<li><br/></li></ul>
+<ul><li>議案投票期間設定<ul><li>僅設定本次確認 checkpoint 日期：</li>
+<li>以綠黨為例，可設定隨時都可以投票，每次開中執委會前三天 checkpoint，時間到所有「本議案已達成案門檻」的議案，自動列入中執委會議程。因此會有倒數計時器，但是超過 checkpoint 未過門檻的議案，還是可以繼續開放投票，看下次能不能進。</li>
+<li>這樣的好處是可以隨時開啟議案、有上來瀏覽就順便投一投票，不用被中執委開會時間限制。</li>
+<li>這樣的壞處是，可能一開始投下去的不是在充分理解之前的結果。除非設定可以 withdraw 投票，否則應該是提案丟出來 -&gt; 經過討論 -&gt; 列出 abc 方案後再設定時間開放投票。</li></ul>
+<ul class="comment"><li>請各位提供想法吧！</li></ul>
+</ul>
+<ul style="list-style: none;"><li><br/></li></ul>
+<ul><li>非登入者，僅能瀏覽</li>
+<li>登入者都可以任意增加提案、某提案下的方案（選項）、加入討論、回覆討論、follow/unfollow、投票、私訊。</li>
+<li>針對每一個提案，可以提出新方案（單純選項），與「功能性方案」。</li></ul>
+<ul class="comment"><li>例如要求鎖定本投票的方案（通過即鎖定） etc..</li></ul>
+<ul><li>管理者、發起提案者可以鎖定議案下的討論、鎖定投票、鎖定方案</li>
+<li>類似主題併案討論的可能性？</li>
+<li>投票方式：人、事分開兩種機制 - 阿端再補充</li>
+<li>黨員帳號審核機制簡化，可以使用暱稱，但管理者能查詢資料</li>
+<li>某些情況下，提案不能受理，例如違背基本核心價值、鼓吹仇恨歧視暴力等。</li>
+<li>投票可以投某個提案下面的各種方案？或是提案本身之外，也可以進行 sub 選項投票？</li>
+<li>Email 通知功能。</li>
+<li>資料統計分析。</li></ul>
+
+<p></p><p><b>產出檔案格式</b></p><p></p><p></p><p><b>進度與 to-do</b></p><ul class="taskdone"><li>survey</li></ul>
 <ul class="task"><li>product planning（recommanded procedure from justin lee / 李易修）<ul class="task"><li>strategy</li>
 <li>scope</li>
-<li>structure</li>
+<li>structure<ul class="task"><li>vote system</li></ul class="task">
+</li>
 <li>wireframe</li>
 <li>visual</li></ul class="task">
 </li>
@@ -179,7 +210,7 @@
 
 <p><b>現有成果</b></p><p></p><ul><li>分析規劃文件於 <a href='https://docs.google.com/folder/d/0B0NsS2a-Qx8ZREwtRzlIbGRnQkk/edit'/>eDemocracy 跨國工作資料夾</a>&nbsp;</li>
 <li>幾個主要頁面的 <a href='https://docs.google.com/folder/d/0B0NsS2a-Qx8Za0x6WURKTzcxeFk/edit'/>中文介面草稿</a></li>
-<li>tkirby 瞬間生出的 <a href='http://g0v.github.io/don-republic/motion.html'/>第一版網頁</a></li></ul>
+<li><b>tkirby 瞬間生出的 <a href='http://g0v.github.io/don-republic/motion.html'/>第一版網頁</a></b></li></ul>
 
 <h2>開發者</h2><p></p><ul><li>挖坑：clkao</li>
 <li>推坑：ipa、pm5、entropy</li>
