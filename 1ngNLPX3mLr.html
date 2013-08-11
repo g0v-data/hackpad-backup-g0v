@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1729"/>
+<meta name="version" content="1864"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$1ngNLPX3mLr</title>
 </head>
 <body><h1>g0v tasks queue 整合</h1><p></p><h2>原始討論：                       </h2><p><b>拋磚人:</b> kcwu</p><p><b>狀態：</b>發想，有興趣想做請直接拿去作</p><p><b>專案簡介</b>: 許多人想幫忙但不知如何下手, 需要簡單的 task. 本專案希望讓各 project 的 easy task 更容易被找到</p><p><b>工作目標</b>:</p><ol><li><a href='https://github.com/g0v/dev/issues/15'/>定義一些 common tag,</a> 譬如 &quot;輸入資料&quot;, &quot;翻譯&quot;, &quot;圖轉文&quot;, &quot;搜尋資料&quot;, &quot;畫圖&quot;, &quot;寫 parser&quot;.</li></ol>
@@ -90,7 +90,7 @@
 </li>
 <li>可以有個「 I&rsquo;m feeling lucky 」的按鈕，讓系統隨便幫你挑個坑來跳</li></ol>
 
-<p><a href='/ep/profile/AHlg3ouwI8g'/>Chia-liang Kao</a> 提到 <a href="https://github.com/miau715/eo4">https://github.com/miau715/eo4</a> 有個 full site 的 mock up。</p><p></p><p><u>Task Queue Service</u></p><p></p><ol><li>整個 task queue 應該可以視作一個超大 table，裡面每個 row 是一個 github issue</li>
+<p>一些 markup:</p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_1ngNLPX3mLr_p.56216_1376233226328_Screen Shot 2013-08-11 at 10.57.58 PM.png'/></p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_1ngNLPX3mLr_p.56216_1376233265814_Screen Shot 2013-08-11 at 10.58.10 PM.png'/></p><p></p><p><a href='/ep/profile/AHlg3ouwI8g'/>Chia-liang Kao</a> 提到 <a href="https://github.com/miau715/eo4">https://github.com/miau715/eo4</a> 有個 full site 的 mock up。</p><p></p><p><u>Task Queue Service</u></p><p></p><ol><li>整個 task queue 應該可以視作一個超大 table，裡面每個 row 是一個 github issue</li>
 <li>所有 issues 是 g0v 這個 github organization 於 github 相關專案的 issues 聯集<ol><li>但應該也要可以額外指定其他 repo (not user/org) 加入</li></ol>
 </li>
 <li>取得內容時，可以指定 filter 與 ordering 當參數。</li>
@@ -104,7 +104,13 @@
 <li><br/></li></ol>
 </ol>
 
-<h2>   Wanted</h2><p>&nbsp;&nbsp; Frontend Developer</p><p>&nbsp;&nbsp;&nbsp;</p><p></p><h2>   TODOs</h2><ul><li>功能補全<ul><li>Github OAuth. (for updating issues)</li>
+<p><b><u>整理目前 github issue 遇到的問題：</u></b></p><ul><li>Also affect<ul><li>22:40 &lt; hychen&gt; 沒有also affect 這種功能</li>
+<li>22:40 &lt; hychen&gt; github上的issue 只有一層, 他沒有辦法做一個bug also affect to multiple projects</li></ul>
+<ul class="comment"><li>若有需要，我們可以約定某些特殊格式，寫在 issue body 裡。例如：see:kuansim#16、affects:kuansim。</li></ul>
+</ul>
+<ul><li>&nbsp;&nbsp;&nbsp;</li></ul>
+
+<p></p><h2>   TODOs</h2><ul><li>功能補全<ul><li>Github OAuth. (for updating issues)</li>
 <li>關注 (users with github account)</li>
 <li>回覆「我要做這個」(users with/without github account.)</li>
 <li>Filter tag</li>
