@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="734"/>
+<meta name="version" content="1413"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$1ngNLPX3mLr</title>
 </head>
 <body><h1>g0v tasks queue 整合</h1><p></p><h2>原始討論：                       </h2><p><b>拋磚人:</b> kcwu</p><p><b>狀態：</b>發想，有興趣想做請直接拿去作</p><p><b>專案簡介</b>: 許多人想幫忙但不知如何下手, 需要簡單的 task. 本專案希望讓各 project 的 easy task 更容易被找到</p><p><b>工作目標</b>:</p><ol><li><a href='https://github.com/g0v/dev/issues/15'/>定義一些 common tag,</a> 譬如 &quot;輸入資料&quot;, &quot;翻譯&quot;, &quot;圖轉文&quot;, &quot;搜尋資料&quot;, &quot;畫圖&quot;, &quot;寫 parser&quot;.</li></ol>
@@ -74,12 +74,27 @@
 </li>
 <li>在新手的文件上(ex新手村)請他們來認領工作</li></ol>
 
-<p>使用資料: github issue api</p><p>參與人： Isac Lee (Backend Developer)</p><p></p><p></p><h2>   Wanted</h2><p>&nbsp;&nbsp; Frontend Developer</p><p>&nbsp;&nbsp;&nbsp;</p><p></p><h2>   TODOs</h2><ul><li>功能補全<ul><li>Github OAuth.</li>
-<li>關注</li>
-<li>回覆「我要做這個」</li>
+<p>使用資料: github issue api</p><p>參與人： Isac Lee (Backend Developer)</p><p></p><p><b>其他想法：</b></p><p></p><p>hack.g0v.tw 整合：</p><ol><li>Issue List + Tag Cloud 放在專案列表右邊當做一個 widget (section)，見 <a href="https://github.com/g0v/hack.g0v.tw/issues/21"><a href='https://github.com/g0v/hack.g0v.tw/issues/21'/>https://github.com/g0v/hack.g0v.tw/issues/21</a></a><ol><li>可以依據 tag 來&nbsp; filter 要顯示哪些 issues，效果可以跟 hub 右(大半)邊很像。</li>
+<li>專案名稱自動變成可以 toggle 的 tags。</li>
+<li>github api 應該可以做到所有事情<ol><li>因為都是 public repo，所以無需 authentication 即可用 api 讀取內容</li>
+<li>換言之，可以純靠前端 js 拉資料回來，不過要小心有 rate limit，所以拉資料要記得必須 incremental 慢慢增加</li></ol>
+<ul style="list-style: none;"><li>看狀況有可能需要弄個後端當 cache</li></ul>
+<ul class="comment"><li>Agreed</li></ul>
+</ol>
+</ol>
+<ol><li>專案列表裡，每個專案裡也可以放一些屬於該專案的坑讓大家直接跳<ol><li>所以要有個 js (jquery) function，註冊要塞 issue 的 dom element (因為需要 incremental)</li>
+<li>可以傳入 tags, number of issues 等參數，選擇哪些 issues 會被拉回來</li></ol>
+</li>
+<li>整個專案列表這一頁的上方，可以有個 dropdown 之類的東西，讓人們選擇自己本身的(能力)屬性<ol><li>這一頁裡許多顯示 issue list 的地方，就可以自動依據 viewer 的屬性，過濾或排序 issues，讓顯示出來的坑更適合跳進去</li></ol>
+</ol>
+
+<h2>   Wanted</h2><p>&nbsp;&nbsp; Frontend Developer</p><p>&nbsp;&nbsp;&nbsp;</p><p></p><h2>   TODOs</h2><ul><li>功能補全<ul><li>Github OAuth. (for updating issues)</li>
+<li>關注 (users with github account)</li>
+<li>回覆「我要做這個」(users with/without github account.)</li>
 <li>Filter tag</li>
-<li>IndexedDB (不需要每次重新 parse json.)</li>
-<li>Move project into g0v</li></ul>
+<li>IndexedDB (不需要每次重新 parse json.) / Or use backend to fetch/store issues.</li>
+<li>Move pages into hack.g0v.tw</li>
+<li>Fetch issues from backend and store to DB</li></ul>
 </li>
 <li>前端美化</li>
 <li>其他加值功能<ul><li>ircbot 有新的特定 label issue, 發到 irc.</li></ul>
@@ -98,7 +113,7 @@
 
 <h2>   資料呈現:               </h2><ul><li>Prototype demo: <a href="http://utcr.org/g0v-issue-tracker/">http://utcr.org/g0v-issue-tracker/</a></li></ul>
 
-<h2>   Code (Prototype)</h2><ul><li>純用前端 fetch github API (使用 AngularJS 改寫中)<ul><li><a href="https://github.com/youchenlee/g0v-issue-tracker"><a href='https://github.com/youchenlee/g0v-issue-tracker'/>https://github.com/youchenlee/g0v-issue-tracker</a></a></li></ul>
+<h2>   Code (Prototype)</h2><ul><li>純用前端 fetch github API (oAuth supported)<ul><li><a href="https://github.com/youchenlee/g0v-issue-tracker"><a href='https://github.com/youchenlee/g0v-issue-tracker'/>https://github.com/youchenlee/g0v-issue-tracker</a></a></li></ul>
 </li>
 <li>未來為了有更多應用，應該要用後端抓 issue</li></ul>
 
