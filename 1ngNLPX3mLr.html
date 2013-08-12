@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2604"/>
+<meta name="version" content="2607"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$1ngNLPX3mLr</title>
 </head>
 <body><h1></h1><p><b>g0v tasks queue 整合</b></p><p></p><h2>原始討論：                       </h2><p><b>拋磚人:</b> kcwu</p><p><b>狀態：</b>發想，有興趣想做請直接拿去作</p><p><b>專案簡介</b>: 許多人想幫忙但不知如何下手, 需要簡單的 task. 本專案希望讓各 project 的 easy task 更容易被找到</p><p><b>工作目標</b>:</p><ol><li><a href='https://github.com/g0v/dev/issues/15'/>定義一些 common tag,</a> 譬如 &quot;輸入資料&quot;, &quot;翻譯&quot;, &quot;圖轉文&quot;, &quot;搜尋資料&quot;, &quot;畫圖&quot;, &quot;寫 parser&quot;.</li></ol>
@@ -97,7 +97,7 @@
 <ul class="comment"><li>我會先做成 angularjs controller，先整 hack.g0v.tw，東西先出來大家比較好想像怎麼改會更好。再說，要 porting 成 jquery-plugin 版簡單多了，angularjs 好複雜。XDD</li></ul>
 </ol>
 
-<p><b>一些 markup</b></p><p>已 push 成新的 branch: <a href='https://github.com/g0v/hack.g0v.tw/tree/issues'/>issues</a></p><p></p><p><u>Widget 的樣子</u></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_1ngNLPX3mLr_p.56216_1376233226328_Screen Shot 2013-08-11 at 10.57.58 PM.png'/></p><p></p><p><u>Filter 按鈕</u></p><p>瀏覽者可依據自身能力屬性，選擇 filter 條件</p><ul><li>瀏覽者的選擇會記憶在 cookie 裡</li></ul>
+<p><b>一些 markup</b></p><p>已 push 成新的 branch: <a href='https://github.com/g0v/hack.g0v.tw/tree/issues'/>issues</a></p><p></p><p><u>Widget 的樣子</u></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_1ngNLPX3mLr_p.56216_1376233226328_Screen Shot 2013-08-11 at 10.57.58 PM.png'/></p><p></p><p><u>Filter 按鈕</u></p><p>瀏覽者可依據自身能力屬性，選擇 filter 條件</p><ul><li>TODO: 瀏覽者的選擇會記憶在 cookie 裡</li></ul>
 <p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_1ngNLPX3mLr_p.56216_1376233265814_Screen Shot 2013-08-11 at 10.58.10 PM.png'/></p><p></p><p><u>專案列表按鈕</u></p><p>列出 firebase 裡註冊進 hack.g0v.tw 並且有 github url 的專案。</p><p>(不只是 mockup 了，已可與 firebase 連動)</p><ul><li>顯示專案(中文)名稱</li>
 <li>因為 github repo name 不一定與 firebase 裡註冊的專案名稱相同，所以以 tag 的形式顯示，同時也暗示了 issue 下面的同一顏色的 tag 亦代表了所屬專案。</li>
 <li>TODO: 依據選擇改變按鈕文字。</li></ul>
