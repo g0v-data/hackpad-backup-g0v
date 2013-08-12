@@ -3,10 +3,10 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2607"/>
+<meta name="version" content="2724"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$1ngNLPX3mLr</title>
 </head>
-<body><h1></h1><p><b>g0v tasks queue 整合</b></p><p></p><h2>原始討論：                       </h2><p><b>拋磚人:</b> kcwu</p><p><b>狀態：</b>發想，有興趣想做請直接拿去作</p><p><b>專案簡介</b>: 許多人想幫忙但不知如何下手, 需要簡單的 task. 本專案希望讓各 project 的 easy task 更容易被找到</p><p><b>工作目標</b>:</p><ol><li><a href='https://github.com/g0v/dev/issues/15'/>定義一些 common tag,</a> 譬如 &quot;輸入資料&quot;, &quot;翻譯&quot;, &quot;圖轉文&quot;, &quot;搜尋資料&quot;, &quot;畫圖&quot;, &quot;寫 parser&quot;.</li></ol>
+<body><h1><b>g0v tasks queue 整合</b></h1><p></p><h2>原始討論：                       </h2><p><b>拋磚人:</b> kcwu</p><p><b>狀態：</b>已經運作專案 (邊討論邊實作中)</p><p><b>專案簡介</b>: 許多人想幫忙但不知如何下手, 需要簡單的 task. 本專案希望讓各 project 的 easy task 更容易被找到</p><p><b>工作目標</b>:</p><ol><li><a href='https://github.com/g0v/dev/issues/15'/>定義一些 common tag,</a> 譬如 &quot;輸入資料&quot;, &quot;翻譯&quot;, &quot;圖轉文&quot;, &quot;搜尋資料&quot;, &quot;畫圖&quot;, &quot;寫 parser&quot;.</li></ol>
 <ul style="list-style: none;"><li><br/><table style="font-size:13px;cell-spacing: 0px; border-collapse: collapse;"><tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
 <td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#33521;&#25991;(tag)</td>
 <td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#20013;&#25991;</td>
@@ -101,7 +101,11 @@
 <p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_1ngNLPX3mLr_p.56216_1376233265814_Screen Shot 2013-08-11 at 10.58.10 PM.png'/></p><p></p><p><u>專案列表按鈕</u></p><p>列出 firebase 裡註冊進 hack.g0v.tw 並且有 github url 的專案。</p><p>(不只是 mockup 了，已可與 firebase 連動)</p><ul><li>顯示專案(中文)名稱</li>
 <li>因為 github repo name 不一定與 firebase 裡註冊的專案名稱相同，所以以 tag 的形式顯示，同時也暗示了 issue 下面的同一顏色的 tag 亦代表了所屬專案。</li>
 <li>TODO: 依據選擇改變按鈕文字。</li></ul>
-<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_1ngNLPX3mLr_p.56216_1376268874808_Screen Shot 2013-08-12 at 8.53.25 AM.png'/></p><p></p><p><a href='/ep/profile/AHlg3ouwI8g'/>Chia-liang Kao</a> 提到 <a href="https://github.com/miau715/eo4">https://github.com/miau715/eo4</a> 有個 full site 的 mock up。</p><p></p><p><u>Task Queue Service</u></p><p></p><ol><li>整個 task queue 應該可以視作一個超大 table，裡面每個 row 是一個 github issue</li>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_1ngNLPX3mLr_p.56216_1376268874808_Screen Shot 2013-08-12 at 8.53.25 AM.png'/></p><p></p><p><u>可以列出 issue 列表了</u></p><p>不過目前僅限 hard code 的兩個專案。</p><ul><li>TODO: 與 firebase 抓到的 project list 整合</li>
+<li>TODO: 分頁</li>
+<li>TODO: 各專案應該平均分散</li></ul>
+
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_1ngNLPX3mLr_p.56216_1376297701901_Screen Shot 2013-08-12 at 4.54.00 PM.png'/></p><p></p><p><a href='/ep/profile/AHlg3ouwI8g'/>Chia-liang Kao</a> 提到 <a href="https://github.com/miau715/eo4">https://github.com/miau715/eo4</a> 有個 full site 的 mock up。</p><p></p><p><u>Task Queue Service</u></p><p></p><ol><li>整個 task queue 應該可以視作一個超大 table，裡面每個 row 是一個 github issue</li>
 <li>所有 issues 是 g0v 這個 github organization 於 github 相關專案的 issues 聯集<ol><li>但應該也要可以額外指定其他 repo (not user/org) 加入</li></ol>
 </li>
 <li>取得內容時，可以指定 filter 與 ordering 當參數。</li>
@@ -111,7 +115,10 @@
 <li><br/></li></ol>
 </li>
 <li>ordering<ol><li>可以被拿來排序的有：<ol><li>最後更新/回應日期</li>
-<li>發 issue 日期</li></ol>
+<li>發 issue 日期</li>
+<li>comment 數</li>
+<li>關注人數? (how)</li>
+<li>reopen 次數 XD</li></ol>
 </li>
 <li><br/></li></ol>
 </ol>
@@ -119,7 +126,7 @@
 <li>不錯的主意，所以可以分成前、後端。後端把資料從 github 拉到 google spreadsheet 裡，前端則由 jquery-plugin/angularjs-controller 從 google spreadsheet 拉資料。</li>
 <li>不過目前我只有「單向」的想法：github -&gt; (cache storage) -&gt; library (jquery/angularjs) -&gt; frontend；「雙向」怎麼做還不敢深入去想。</li></ul>
 
-<h2>整理目前 github issue 遇到的問題：</h2><ul><li>Also affect<ul><li>22:40 &lt; hychen&gt; 沒有also affect 這種功能</li>
+<p><b>整理目前 github issue 遇到的問題：</b></p><ul><li>Also affect<ul><li>22:40 &lt; hychen&gt; 沒有also affect 這種功能</li>
 <li>22:40 &lt; hychen&gt; github上的issue 只有一層, 他沒有辦法做一個bug also affect to multiple projects</li></ul>
 <ul class="comment"><li>若有需要，我們可以約定某些特殊格式，寫在 issue body 裡。例如：see:kuansim#16、affects:kuansim。</li>
 <li>另一種做法是，約定好 project name 當 tag 時，即代表 bug also affects。這樣剛好跟上面的設計符合，project name 亦是 tag 的一種。</li>
@@ -140,17 +147,6 @@
 <li>其他加值功能<ul><li>ircbot 有新的特定 label issue, 發到 irc.</li></ul>
 </ul>
 
-<p></p><p></p><h2>   可能會使用的 API:                      </h2><ul><li>取得所有 g0v repository<ul><li>curl<a href='https://api.github.com/orgs/g0v/repos'/> </a><a href="https://api.github.com/orgs/g0v/repos">https://api.github.com/orgs/g0v/repos</a></li></ul>
-</li>
-<li>取得單一 repository 的 issues<ul><li>curl<a href='https://api.github.com/repos/g0v/hack.g0v.tw/issues'/> </a><a href="https://api.github.com/repos/g0v/hack.g0v.tw/issues">https://api.github.com/repos/g0v/hack.g0v.tw/issues</a><a href='https://api.github.com/repos/g0v/hack.g0v.tw/issues(以'/> </a>(以 hack.g0v.tw 為例)</li></ul>
-</li>
-<li>API Clients:<ul><li><a href="http://developer.github.com/v3/libraries/">http://developer.github.com/v3/libraries/</a></li></ul>
-</li>
-<li>註：Github API 限制<ul><li><a href="http://developer.github.com/v3/#rate-limiting">http://developer.github.com/v3/#rate-limiting</a></li>
-<li>沒有過 oAuth, 一小時只能打 60 次</li></ul>
-</ul>
-<ul style="list-style: none;"><li><br/></li></ul>
-
 <h2>   資料呈現:               </h2><ul><li>Prototype demo (純用前端 js 抓 issue 下來): <a href="http://utcr.org/g0v-issue-tracker/">http://utcr.org/g0v-issue-tracker/</a></li><ul class="comment"><li>抱歉因為最新的版本在測 github 的 oauth, 因此會被導到 github 輸入帳號密碼。不是釣魚 XD</li></ul>
 </ul>
 
@@ -166,7 +162,16 @@
 </ul>
 </ul>
 
-<p></p><p></p><p></p><h2>   Reference:</h2><ul><li>Github API: <a href="http://developer.github.com/v3/issues/">http://developer.github.com/v3/issues/</a></li></ul>
+<p></p><p></p><p></p><h2>   Reference:</h2><ul><li>Github API: <a href="http://developer.github.com/v3/issues/">http://developer.github.com/v3/issues/</a></li>
+<li>取得所有 g0v repository<ul><li>curl<a href='https://api.github.com/orgs/g0v/repos'/> </a><a href="https://api.github.com/orgs/g0v/repos"><a href='https://api.github.com/orgs/g0v/repos'/>https://api.github.com/orgs/g0v/repos</a></a></li></ul>
+</li>
+<li>取得單一 repository 的 issues<ul><li>curl<a href='https://api.github.com/repos/g0v/hack.g0v.tw/issues'/> </a><a href="https://api.github.com/repos/g0v/hack.g0v.tw/issues"><a href='https://api.github.com/repos/g0v/hack.g0v.tw/issues'/>https://api.github.com/repos/g0v/hack.g0v.tw/issues</a></a><a href='https://api.github.com/repos/g0v/hack.g0v.tw/issues%28%E4%BB%A5'/> </a>(以 hack.g0v.tw 為例)</li></ul>
+</li>
+<li>API Clients:<ul><li><a href="http://developer.github.com/v3/libraries/"><a href='http://developer.github.com/v3/libraries/'/>http://developer.github.com/v3/libraries/</a></a></li></ul>
+</li>
+<li>註：Github API 限制<ul><li><a href="http://developer.github.com/v3/#rate-limiting"><a href='http://developer.github.com/v3/#rate-limiting'/>http://developer.github.com/v3/#rate-limiting</a></a></li>
+<li>沒有過 oAuth, 一小時只能打 60 次</li></ul>
+</ul>
 
 <p></p><p></p></body>
 </html>
