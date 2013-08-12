@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2399"/>
+<meta name="version" content="2604"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$1ngNLPX3mLr</title>
 </head>
 <body><h1></h1><p><b>g0v tasks queue 整合</b></p><p></p><h2>原始討論：                       </h2><p><b>拋磚人:</b> kcwu</p><p><b>狀態：</b>發想，有興趣想做請直接拿去作</p><p><b>專案簡介</b>: 許多人想幫忙但不知如何下手, 需要簡單的 task. 本專案希望讓各 project 的 easy task 更容易被找到</p><p><b>工作目標</b>:</p><ol><li><a href='https://github.com/g0v/dev/issues/15'/>定義一些 common tag,</a> 譬如 &quot;輸入資料&quot;, &quot;翻譯&quot;, &quot;圖轉文&quot;, &quot;搜尋資料&quot;, &quot;畫圖&quot;, &quot;寫 parser&quot;.</li></ol>
@@ -74,7 +74,7 @@
 </li>
 <li>在新手的文件上(ex新手村)請他們來認領工作</li></ol>
 
-<p>使用資料: github issue api</p><p></p><h2>其他想法：</h2><p></p><p><u>hack.g0v.tw 整合</u></p><p></p><ol><li>Issue List + Tag Cloud 放在專案列表右邊當做一個 widget (section)，見 <a href="https://github.com/g0v/hack.g0v.tw/issues/21"><a href='https://github.com/g0v/hack.g0v.tw/issues/21'/>https://github.com/g0v/hack.g0v.tw/issues/21</a></a><ol><li>可以依據 tag 來&nbsp; filter 要顯示哪些 issues，效果可以跟 hub 右(大半)邊很像。</li>
+<p>使用資料: github issue api</p><p></p><h2>hack.g0v.tw 整合</h2><p><b>想法：與「專案列表」頁整合</b></p><p></p><ol><li>Issue List + Tag Cloud 放在專案列表右邊當做一個 widget (section)，見 <a href="https://github.com/g0v/hack.g0v.tw/issues/21"><a href='https://github.com/g0v/hack.g0v.tw/issues/21'/>https://github.com/g0v/hack.g0v.tw/issues/21</a></a><ol><li>可以依據 tag 來&nbsp; filter 要顯示哪些 issues，效果可以跟 hub 右(大半)邊很像。</li>
 <li>專案名稱自動變成可以 toggle 的 tags。</li>
 <li>github api 應該可以做到所有事情<ol><li>因為都是 public repo，所以無需 authentication 即可用 api 讀取內容</li>
 <li>換言之，可以純靠前端 js 拉資料回來，不過要小心有 rate limit，所以拉資料要記得必須 incremental 慢慢增加</li></ol>
@@ -97,7 +97,11 @@
 <ul class="comment"><li>我會先做成 angularjs controller，先整 hack.g0v.tw，東西先出來大家比較好想像怎麼改會更好。再說，要 porting 成 jquery-plugin 版簡單多了，angularjs 好複雜。XDD</li></ul>
 </ol>
 
-<p>一些 markup (已 push 成新的 branch, <a href='https://github.com/g0v/hack.g0v.tw/tree/issues'/>issues</a> ):</p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_1ngNLPX3mLr_p.56216_1376233226328_Screen Shot 2013-08-11 at 10.57.58 PM.png'/></p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_1ngNLPX3mLr_p.56216_1376233265814_Screen Shot 2013-08-11 at 10.58.10 PM.png'/></p><p></p><p><a href='/ep/profile/AHlg3ouwI8g'/>Chia-liang Kao</a> 提到 <a href="https://github.com/miau715/eo4">https://github.com/miau715/eo4</a> 有個 full site 的 mock up。</p><p></p><p><u>Task Queue Service</u></p><p></p><ol><li>整個 task queue 應該可以視作一個超大 table，裡面每個 row 是一個 github issue</li>
+<p><b>一些 markup</b></p><p>已 push 成新的 branch: <a href='https://github.com/g0v/hack.g0v.tw/tree/issues'/>issues</a></p><p></p><p><u>Widget 的樣子</u></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_1ngNLPX3mLr_p.56216_1376233226328_Screen Shot 2013-08-11 at 10.57.58 PM.png'/></p><p></p><p><u>Filter 按鈕</u></p><p>瀏覽者可依據自身能力屬性，選擇 filter 條件</p><ul><li>瀏覽者的選擇會記憶在 cookie 裡</li></ul>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_1ngNLPX3mLr_p.56216_1376233265814_Screen Shot 2013-08-11 at 10.58.10 PM.png'/></p><p></p><p><u>專案列表按鈕</u></p><p>列出 firebase 裡註冊進 hack.g0v.tw 並且有 github url 的專案。</p><p>(不只是 mockup 了，已可與 firebase 連動)</p><ul><li>顯示專案(中文)名稱</li>
+<li>因為 github repo name 不一定與 firebase 裡註冊的專案名稱相同，所以以 tag 的形式顯示，同時也暗示了 issue 下面的同一顏色的 tag 亦代表了所屬專案。</li>
+<li>TODO: 依據選擇改變按鈕文字。</li></ul>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_1ngNLPX3mLr_p.56216_1376268874808_Screen Shot 2013-08-12 at 8.53.25 AM.png'/></p><p></p><p><a href='/ep/profile/AHlg3ouwI8g'/>Chia-liang Kao</a> 提到 <a href="https://github.com/miau715/eo4">https://github.com/miau715/eo4</a> 有個 full site 的 mock up。</p><p></p><p><u>Task Queue Service</u></p><p></p><ol><li>整個 task queue 應該可以視作一個超大 table，裡面每個 row 是一個 github issue</li>
 <li>所有 issues 是 g0v 這個 github organization 於 github 相關專案的 issues 聯集<ol><li>但應該也要可以額外指定其他 repo (not user/org) 加入</li></ol>
 </li>
 <li>取得內容時，可以指定 filter 與 ordering 當參數。</li>
