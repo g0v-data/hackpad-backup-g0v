@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1161"/>
+<meta name="version" content="1166"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$cD2GLTbZYL0</title>
 </head>
 <body><h1>magic-mirror</h1><p>本專案的目的，在於自動修復 *.gov.tw 各資料源的格式問題，以加速化目前開放資料來源的應用。</p><p></p><p></p><h2>來龍去脈</h2><p>在 data.gov.tw 上條列出了許多目前政府機機關有開放出的資料。不過有仍有幾點問題：</p><p></p><ol><li>許多資料 URL 會定期更新，而在更新之後，舊版的資料便無法取得</li></ol>
@@ -39,6 +39,8 @@
 
 <h2>運行狀態</h2><p></p><p>目前 <a href='http://github.com/g0v/magic-mirror'/>magic-mirror</a>&nbsp; 中的程式碼已設定為定時執行，自動將新版的資料推入 <a href="http://github.com/g0v-data/mirror/"><a href='http://github.com/g0v-data/mirror/'/>http://github.com/g0v-data/mirror/</a></a>&nbsp; 當中。以政府網站域名做為資料夾。各資料源的 URL 及檔名對應、時程等等，設定檔為 JSON 格式放在源碼的 etc/ 目錄中。</p><p></p><p><a href='http://github.com/g0v-data/mirror/'/>g0v-data/mirror/&nbsp;</a> 設定以 gh-pages 為主要 branch，因此也有 github.io 網址可用。以「停水通知」（water/suspension.csv) 為例，以下分別為網頁觀看版與下載版：</p><p></p><ul><li><a href="https://github.com/g0v-data/mirror/blob/gh-pages/water/suspension.csv">https://github.com/g0v-data/mirror/blob/gh-pages/water/suspension.csv</a></li>
 <li><a href="http://g0v-data.github.io/g0v-data/water/suspension.csv">http://<a href='https://github.com/g0v-data/mirror/blob/gh-pages/water/suspension.csv'/>g</a><a href='https://ggithub.com/g0v-data/mirror/blob/gh-pages/water/suspension.csv'/>0</a><a href='https://g0github.com/g0v-data/mirror/blob/gh-pages/water/suspension.csv'/>v</a><a href='https://g0vgithub.com/g0v-data/mirror/blob/gh-pages/water/suspension.csv'/>-</a><a href='https://g0v-github.com/g0v-data/mirror/blob/gh-pages/water/suspension.csv'/>d</a><a href='https://g0v-dgithub.com/g0v-data/mirror/blob/gh-pages/water/suspension.csv'/>a</a><a href='https://g0v-dagithub.com/g0v-data/mirror/blob/gh-pages/water/suspension.csv'/>t</a><a href='https://g0v-datgithub.com/g0v-data/mirror/blob/gh-pages/water/suspension.csv'/>a</a><a href='https://g0v-datagithub.com/g0v-data/mirror/blob/gh-pages/water/suspension.csv'/>.</a>github.<a href='https://g0v-data.github.com/g0v-data/mirror/blob/gh-pages/water/suspension.csv'/>i</a><a href='https://g0v-data.github.i/g0v-data/mirror/blob/gh-pages/water/suspension.csv'/>o</a>/g0v-data/water/suspension.csv</a></li></ul>
+
+<ul><li><a href="http://g0v-data.github.io/mirror/aec/gammamonitor.json">http://g0v-data.github.io/mirror/aec/gammamonitor.json</a></li></ul>
 
 <p></p><h2>開發者</h2><p>gugod</p><p></p><p>分工與成員</p><ul class="task"><li>NeedsWriter: 需要文案幫手（撰寫基本資訊、報導專案etc）</li>
 <li>NeedsDesigner: 需要介面設計</li>
