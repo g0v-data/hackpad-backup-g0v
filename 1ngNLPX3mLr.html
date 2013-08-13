@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2856"/>
+<meta name="version" content="3045"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$1ngNLPX3mLr</title>
 </head>
 <body><h1><b>g0v tasks queue 整合</b></h1><p></p><h2>原始討論：                       </h2><p><b>拋磚人:</b> kcwu</p><p><b>狀態：</b>已經運作專案 (邊討論邊實作中)</p><p><b>專案簡介</b>: 許多人想幫忙但不知如何下手, 需要簡單的 task. 本專案希望讓各 project 的 easy task 更容易被找到</p><p><b>工作目標</b>:</p><ol><li><a href='https://github.com/g0v/dev/issues/15'/>定義一些 common tag,</a> 譬如 &quot;輸入資料&quot;, &quot;翻譯&quot;, &quot;圖轉文&quot;, &quot;搜尋資料&quot;, &quot;畫圖&quot;, &quot;寫 parser&quot;.</li></ol>
@@ -125,6 +125,12 @@
 <ul class="comment"><li>用google app script 丟到 google spreadsheet?</li>
 <li>不錯的主意，所以可以分成前、後端。後端把資料從 github 拉到 google spreadsheet 裡，前端則由 jquery-plugin/angularjs-controller 從 google spreadsheet 拉資料。</li>
 <li>不過目前我只有「單向」的想法：github -&gt; (cache storage) -&gt; library (jquery/angularjs) -&gt; frontend；「雙向」怎麼做還不敢深入去想。</li></ul>
+
+<p>後端 API 架構：</p><ul><li>client (不帶 auth 資訊) &lt;=&gt; g0v github API proxy (帶 client_id 與 client_secret) &lt;=&gt; github API<ul><li>這樣 proxy 實際可以存取到 github 的限制是 5000 request / per hour</li>
+<li>client 的存取無限制</li>
+<li>ATS 的 remap.config 設定 (Blind tunnel)<ul><li>map <a href="http://issue-api.g0v.tw/">http://<a href='http://api.g0v.tw'/>i</a><a href='http://iapi.g0v.tw'/>s</a><a href='http://isapi.g0v.tw'/>s</a><a href='http://issapi.g0v.tw'/>u</a><a href='http://issuapi.g0v.tw'/>e</a><a href='http://issueapi.g0v.tw'/>-</a>a<a href='http://a'/>p</a><a href='http://ap'/>i</a><a href='http://api'/>.g</a><a href='http://api.g'/>0</a><a href='http://api.g0'/>v</a><a href='http://api.g0v'/>.t</a><a href='http://api.g0v.t'/>w</a><a href='http://issue-api.g0v.tw'/>/</a></a><a href='http://issue-api.g0v.tw'/> </a><a href="https://api.github.com/"><a href='http://issue-api.g0v.tw'/>http</a><a href='http://api'/>s</a><a href='http://issue-api.g0v.tw'/>://a</a><a href='http://a'/>p</a><a href='http://ap'/>i</a><a href='http://api'/>.g</a><a href='https://api.g'/>i</a><a href='https://api.gi'/>t</a><a href='https://api.git'/>h</a><a href='https://api.gith'/>u</a><a href='https://api.githu'/>b</a><a href='https://api.github'/>.c</a><a href='https://api.github.c'/>o</a><a href='https://api.github.co'/>m</a><a href='https://api.github.com'/>/</a></a></li></ul>
+</ul>
+</ul>
 
 <h2>整理目前 github issue 遇到的問題：</h2><ul><li>Also affect<ul><li>22:40 &lt; hychen&gt; 沒有also affect 這種功能</li>
 <li>22:40 &lt; hychen&gt; github上的issue 只有一層, 他沒有辦法做一個bug also affect to multiple projects</li></ul>
