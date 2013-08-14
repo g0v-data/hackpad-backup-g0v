@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="3372"/>
+<meta name="version" content="3382"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$1ngNLPX3mLr</title>
 </head>
 <body><h1><b>g0v tasks queue 整合</b></h1><p></p><h2>原始討論：                       </h2><p><b>拋磚人:</b> kcwu</p><p><b>狀態：</b>已經運作專案 (邊討論邊實作中)</p><p><b>專案簡介</b>: 許多人想幫忙但不知如何下手, 需要簡單的 task. 本專案希望讓各 project 的 easy task 更容易被找到</p><p><b>工作目標</b>:</p><ol><li><a href='https://github.com/g0v/dev/issues/15'/>定義一些 common tag,</a> 譬如 &quot;輸入資料&quot;, &quot;翻譯&quot;, &quot;圖轉文&quot;, &quot;搜尋資料&quot;, &quot;畫圖&quot;, &quot;寫 parser&quot;.</li></ol>
@@ -128,7 +128,7 @@
 
 <p>後端 API 架構：</p><ul><li>client (不帶 auth 資訊) &lt;=&gt; g0v github API proxy (帶 client_id 與 client_secret) &lt;=&gt; github API<ul><li>這樣 proxy 實際可以存取到 github 的限制是 5000 request / per hour</li>
 <li>client 的存取無限制</li>
-<li>ATS 的 remap.config 設定 (Blind tunnel)</li><ul class="comment"><li>請教一下 ATS 是什麼？？</li></ul>
+<li>ATS 的 remap.config 設定&nbsp;</li><ul class="comment"><li>請教一下 ATS 是什麼？？</li></ul>
 <ul><li>map <a href="http://issue-api.g0v.tw/">http://<a href='http://api.g0v.tw'/>i</a><a href='http://iapi.g0v.tw'/>s</a><a href='http://isapi.g0v.tw'/>s</a><a href='http://issapi.g0v.tw'/>u</a><a href='http://issuapi.g0v.tw'/>e</a><a href='http://issueapi.g0v.tw'/>-</a>a<a href='http://a'/>p</a><a href='http://ap'/>i</a><a href='http://api'/>.g</a><a href='http://api.g'/>0</a><a href='http://api.g0'/>v</a><a href='http://api.g0v'/>.t</a><a href='http://api.g0v.t'/>w</a><a href='http://issue-api.g0v.tw'/>/</a></a><a href='http://issue-api.g0v.tw'/> </a><a href="https://api.github.com/"><a href='http://issue-api.g0v.tw'/>http</a><a href='http://api'/>s</a><a href='http://issue-api.g0v.tw'/>://a</a><a href='http://a'/>p</a><a href='http://ap'/>i</a><a href='http://api'/>.g</a><a href='https://api.g'/>i</a><a href='https://api.gi'/>t</a><a href='https://api.git'/>h</a><a href='https://api.gith'/>u</a><a href='https://api.githu'/>b</a><a href='https://api.github'/>.c</a><a href='https://api.github.c'/>o</a><a href='https://api.github.co'/>m</a><a href='https://api.github.com'/>/</a></a></li></ul>
 <ul class="comment"><li>map <a href="http://hack.g0v.tw/issues-api/github/">http://h<a href='http://h'/>a</a><a href='http://ha'/>c</a><a href='http://hac'/>k</a><a href='http://hack'/>.g</a><a href='http://hack.g'/>0</a><a href='http://hack.g0'/>v</a><a href='http://hack.g0v'/>.t</a><a href='http://hack.g0v.t'/>w</a><a href='http://hack.g0v.tw'/>/</a><a href='http://hack.g0v.tw/'/>i</a><a href='http://hack.g0v.tw/i'/>s</a><a href='http://hack.g0v.tw/is'/>s</a><a href='http://hack.g0v.tw/iss'/>u</a><a href='http://hack.g0v.tw/issu'/>e</a><a href='http://hack.g0v.tw/issue'/>s</a><a href='http://hack.g0v.tw/issuesapi/'/>-</a><a href='http://hack.g0v.tw/issues/'/>a</a><a href='http://hack.g0v.tw/issues/a'/>p</a><a href='http://hack.g0v.tw/issues/ap'/>i</a><a href='http://hack.g0v.tw/issues/api'/>/</a><a href='http://hack.g0v.tw/issues-api//'/>g</a><a href='http://hack.g0v.tw/issues-api/g/'/>i</a><a href='http://hack.g0v.tw/issues-api/gi/'/>t</a><a href='http://hack.g0v.tw/issues-api/git/'/>h</a><a href='http://hack.g0v.tw/issues-api/gith/'/>u</a><a href='http://hack.g0v.tw/issues-api/githu/'/>b</a><a href='http://hack.g0v.tw/issues/api/github'/>/</a></a> <a href="https://api.github.com/">https://a<a href='https://a'/>p</a><a href='https://ap'/>i</a><a href='https://api'/>.g</a><a href='https://api.g'/>i</a><a href='https://api.gi'/>t</a><a href='https://api.git'/>h</a><a href='https://api.gith'/>u</a><a href='https://api.githu'/>b</a><a href='https://api.github'/>.c</a><a href='https://api.github.c'/>o</a><a href='https://api.github.co'/>m</a><a href='https://api.github.com'/>/</a></a><ul class="comment"><li>要注意 same-origin policy，同樣放在 hack.g0v.tw 比較方便<ul class="comment"><li>目前 hack.g0v.tw 是 gh-pages 上的純 static 頁面，所以 api endpoint header 記得上 CORS 就可以了</li></ul class="comment">
 </li>
@@ -136,6 +136,7 @@
 </li></ul class="comment">
 </li>
 <li>在 irc 上的討論有提到，目前主要會慢的地方在於多個 repo 必須發多個 api requests 才能拿到資料，所以單純的 proxy 仍然沒辦法解決這個速度的問題。我現在仍傾向建議做一個特殊的 repo 負責 aggregate 所有 repo 的 issues 這個方法。這個方法可以跟 proxy 機制 decouple 開，沒有 proxy 仍然可以運作。</li></ul>
+<ul class="comment"><li>我可以嘗試看看用 proxy 做到這個功能</li></ul>
 </ul>
 
 <h2>整理目前 github issue 遇到的問題：</h2><ul><li>Also affect<ul><li>22:40 &lt; hychen&gt; 沒有also affect 這種功能</li>
