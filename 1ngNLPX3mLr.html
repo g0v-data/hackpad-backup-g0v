@@ -3,10 +3,13 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="3813"/>
+<meta name="version" content="4319"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$1ngNLPX3mLr</title>
 </head>
-<body><h1><b>g0v tasks queue 整合</b></h1><p></p><h2>原始討論：                       </h2><p><b>拋磚人:</b> kcwu</p><p><b>狀態：</b>已經運作專案 (邊討論邊實作中)</p><p><b>專案簡介</b>: 許多人想幫忙但不知如何下手, 需要簡單的 task. 本專案希望讓各 project 的 easy task 更容易被找到</p><p><b>工作目標</b>:</p><ol><li><a href='https://github.com/g0v/dev/issues/15'/>定義一些 common tag,</a> 譬如 &quot;輸入資料&quot;, &quot;翻譯&quot;, &quot;圖轉文&quot;, &quot;搜尋資料&quot;, &quot;畫圖&quot;, &quot;寫 parser&quot;.</li></ol>
+<body><h1><b>g0v tasks queue 整合</b></h1><p>Updated: 現在這頁已經爆炸了，有各種討論與實作 XD 我們慢慢把它整李出來到不同頁面吧:</p><ul style="list-style: none;"><li><a href="http://hack.g0v.tw/g0v-issue-tracking/1ngNLPX3mLr">http://hack.g0v.tw/g0v-issue-tracking/1ngNLPX3mLr</a></li>
+<li><br/></li></ul>
+
+<h2>原始討論：                       </h2><p><b>拋磚人:</b> kcwu</p><p><b>狀態：</b>已經運作專案 (邊討論邊實作中)</p><p><b>專案簡介</b>: 許多人想幫忙但不知如何下手, 需要簡單的 task. 本專案希望讓各 project 的 easy task 更容易被找到</p><p><b>工作目標</b>:</p><ol><li><a href='https://github.com/g0v/dev/issues/15'/>定義一些 common tag,</a> 譬如 &quot;輸入資料&quot;, &quot;翻譯&quot;, &quot;圖轉文&quot;, &quot;搜尋資料&quot;, &quot;畫圖&quot;, &quot;寫 parser&quot;.</li></ol>
 <ul style="list-style: none;"><li><br/><table style="font-size:13px;cell-spacing: 0px; border-collapse: collapse;"><tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
 <td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#33521;&#25991;(tag)</td>
 <td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#20013;&#25991;</td>
@@ -99,13 +102,16 @@
 
 <p><b>一些 markup</b></p><p>已 push 成新的 branch: <a href='https://github.com/g0v/hack.g0v.tw/tree/issues'/>issues</a></p><p></p><p><u>Widget 的樣子</u></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_1ngNLPX3mLr_p.56216_1376233226328_Screen Shot 2013-08-11 at 10.57.58 PM.png'/></p><p></p><p><u>Filter 按鈕</u></p><p>瀏覽者可依據自身能力屬性，選擇 filter 條件</p><ul><li>TODO: 瀏覽者的選擇會記憶在 cookie 裡</li></ul>
 <p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_1ngNLPX3mLr_p.56216_1376233265814_Screen Shot 2013-08-11 at 10.58.10 PM.png'/></p><p></p><p><u>專案列表按鈕</u></p><p>列出 firebase 裡註冊進 hack.g0v.tw 並且有 github url 的專案。</p><p>(不只是 mockup 了，已可與 firebase 連動)</p><ul><li>顯示專案(中文)名稱</li>
-<li>因為 github repo name 不一定與 firebase 裡註冊的專案名稱相同，所以以 tag 的形式顯示，同時也暗示了 issue 下面的同一顏色的 tag 亦代表了所屬專案。</li>
-<li>TODO: 依據選擇改變按鈕文字。</li></ul>
-<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_1ngNLPX3mLr_p.56216_1376268874808_Screen Shot 2013-08-12 at 8.53.25 AM.png'/></p><p></p><p><u>可以列出 issue 列表了</u></p><p>不過目前僅限 hard code 的兩個專案。</p><ul><li>TODO: 與 firebase 抓到的 project list 整合</li>
-<li>TODO: 分頁</li>
-<li>TODO: 各專案應該平均分散</li></ul>
+<li>因為 github repo name 不一定與 firebase 裡註冊的專案名稱相同，所以以 tag 的形式顯示，同時也暗示了 issue 下面的同一顏色的 tag 亦代表了所屬專案。</li></ul>
+<ul class="task"><li>依據選擇改變按鈕文字。</li></ul>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_1ngNLPX3mLr_p.56216_1376268874808_Screen Shot 2013-08-12 at 8.53.25 AM.png'/></p><p></p><p><u>可以列出 issue 列表了</u></p><p>不過目前僅限 hard code 的兩個專案。</p><ul class="task"><li>與 firebase 抓到的 project list 整合</li></ul>
+<ul class="taskdone"><li>分頁</li></ul>
+<ul class="task"><li>各專案應該平均分散</li></ul>
 
-<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_1ngNLPX3mLr_p.56216_1376297701901_Screen Shot 2013-08-12 at 4.54.00 PM.png'/></p><p></p><h2>Full Site Mockup</h2><p></p><p><a href='/ep/profile/AHlg3ouwI8g'/>Chia-liang Kao</a> 提到 <a href="https://github.com/miau715/eo4">https://github.com/miau715/eo4</a> 有個 full site 的 mock up。</p><p>miau715 放到 github pages 上了： <a href="http://miau715.github.io/eo4/">http://miau715.github.io/eo4/</a></p><p></p><h2>Task Queue Service</h2><p></p><ol><li>整個 task queue 應該可以視作一個超大 table，裡面每個 row 是一個 github issue</li>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_1ngNLPX3mLr_p.56216_1376297701901_Screen Shot 2013-08-12 at 4.54.00 PM.png'/></p><p></p><p><u>Issue 的分頁功能</u></p><ul><li>使用 angular-ui bootstrap 提供的 directive。</li></ul>
+<ul class="task"><li>First/Last/Previous/Next 無法用 &amp;laquo;、&amp;raquo;、&amp;rsaquo; 和 &amp;lsaquo;，應該是因為 &amp; 會被 angular 擋下來。</li>
+<li>因為有些 issue 的 title 會用到兩行來顯示，所以換頁後，pagination bar 會上下跳動。</li></ul>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_1ngNLPX3mLr_p.56216_1376500755104_Screen Shot 2013-08-15 at 1.17.51 AM.png'/></p><p></p><p></p><p></p><h2>Full Site Mockup</h2><p></p><p><a href='/ep/profile/AHlg3ouwI8g'/>Chia-liang Kao</a> 提到 <a href="https://github.com/miau715/eo4">https://github.com/miau715/eo4</a> 有個 full site 的 mock up。</p><p>miau715 放到 github pages 上了： <a href="http://miau715.github.io/eo4/">http://miau715.github.io/eo4/</a></p><p></p><h2>Task Queue Service</h2><p></p><ol><li>整個 task queue 應該可以視作一個超大 table，裡面每個 row 是一個 github issue</li>
 <li>所有 issues 是 g0v 這個 github organization 於 github 相關專案的 issues 聯集<ol><li>但應該也要可以額外指定其他 repo (not user/org) 加入</li></ol>
 </li>
 <li>取得內容時，可以指定 filter 與 ordering 當參數。</li>
@@ -136,7 +142,7 @@
 <li>未來可能會有其他 issues backend，所以要多一層 /github/</li></ul class="comment">
 </li></ul class="comment">
 </li>
-<li>在 irc 上的討論有提到，目前主要會慢的地方在於多個 repo 必須發多個 api requests 才能拿到資料，所以單純的 proxy 仍然沒辦法解決這個速度的問題。我現在仍傾向建議做一個特殊的 repo 負責 aggregate 所有 repo 的 issues 這個方法。這個方法可以跟 proxy 機制 decouple 開，沒有 proxy 仍然可以運作。</li><ul class="comment"><li>我可以嘗試看看用 proxy 做到這個功能</li></ul>
+<li>在 irc 上的討論有提到，目前主要會慢的地方在於多個 repo 必須發多個 api requests 才能拿到資料，所以單純的 proxy 仍然沒辦法解決這個速度的問題。我現在仍傾向建議做一個特殊的 repo 負責 aggregate 所有 repo 的 issues 這個方法。這個方法可以跟 proxy 機制 decouple 開，沒有 proxy 仍然可以運作。</li><ul class="comment"><li>我可以嘗試看看用 proxy 做到這個功能 (也許得寫 ATS plugin.)</li></ul>
 </ul>
 </ul>
 
@@ -147,11 +153,22 @@
 <ul><li><b>in record.conf</b><ul><li>CONFIG proxy.config.http.server_ports STRING 8080</li>
 <li>CONFIG proxy.config.reverse_proxy.enabled INT 1</li>
 <li>CONFIG proxy.config.url_remap.pristine_host_hdr INT 0 # 這設定是讓 http header Host 要改用 api.github.com (不要用原始 request 的 host), 否則會被 github API server 吐 404</li></ul>
+</li>
+<li><b>in plugin.config</b><ul><li>header_filter.so @pparam=/etc/hdr_filters.conf</li></ul>
+</li>
+<li><b>in /etc/hdr_filters.conf</b></li><ul style="list-style: none;"><li># 在 response 加上 Access-Control-Allow-Origin: *</li>
+<li>[SEND_RESPONSE_HDR]&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Access-Control-Allow-Origin =*=</li></ul>
 </ul>
-<p>註：尚未設定 cache, 但利用 proxy 去 append query string, 帶上 client_id 與 client_secret, 因此可以達到 5000 request per hour 了。（如果還是不夠用，再來設 cache）</p><p></p><p>Demo server: <a href="http://utcr.org:8080/">http://u<a href='http://u'/>t</a><a href='http://ut'/>c</a><a href='http://utc'/>r.o</a><a href='http://utcr.o'/>r</a><a href='http://utcr.or'/>g</a><a href='http://utcr.org'/>:8</a><a href='http://utcr.org:8'/>0</a><a href='http://utcr.org:80'/>8</a><a href='http://utcr.org:808'/>0</a><a href='http://utcr.org:8080'/>/</a></a></p><ul><li>看目前的 rate_limit<a href='http://utcr.org:8080/rate_limit'/> </a><a href="http://utcr.org:8080/rate_limit"><a href='http://utcr.org:8080/'/>http://utcr.org:8080/r</a><a href='http://utcr.org:8080/r'/>a</a><a href='http://utcr.org:8080/ra'/>t</a><a href='http://utcr.org:8080/rat'/>e</a><a href='http://utcr.org:8080/rate'/>_</a><a href='http://utcr.org:8080/rate_'/>l</a><a href='http://utcr.org:8080/rate_l'/>i</a><a href='http://utcr.org:8080/rate_li'/>m</a><a href='http://utcr.org:8080/rate_lim'/>i</a><a href='http://utcr.org:8080/rate_limi'/>t</a></a></li>
+
+<p>註：尚未設定 cache, (目前 browser 看到的 302 Not Modified 是來自 github ) 但利用 proxy 去 append query string, 帶上 client_id 與 client_secret, 因此可以達到 5000 request per hour 了。（如果還是不夠用，再來設 cache）</p><p></p><p>Demo server: <a href="http://utcr.org:8080/">http://u<a href='http://u'/>t</a><a href='http://ut'/>c</a><a href='http://utc'/>r.o</a><a href='http://utcr.o'/>r</a><a href='http://utcr.or'/>g</a><a href='http://utcr.org'/>:8</a><a href='http://utcr.org:8'/>0</a><a href='http://utcr.org:80'/>8</a><a href='http://utcr.org:808'/>0</a><a href='http://utcr.org:8080'/>/</a></a></p><ul><li>看目前的 rate_limit<a href='http://utcr.org:8080/rate_limit'/> </a><a href="http://utcr.org:8080/rate_limit"><a href='http://utcr.org:8080/'/>http://utcr.org:8080/r</a><a href='http://utcr.org:8080/r'/>a</a><a href='http://utcr.org:8080/ra'/>t</a><a href='http://utcr.org:8080/rat'/>e</a><a href='http://utcr.org:8080/rate'/>_</a><a href='http://utcr.org:8080/rate_'/>l</a><a href='http://utcr.org:8080/rate_l'/>i</a><a href='http://utcr.org:8080/rate_li'/>m</a><a href='http://utcr.org:8080/rate_lim'/>i</a><a href='http://utcr.org:8080/rate_limi'/>t</a></a></li>
 <li>撈 issue <a href="http://utcr.org:8080/repos/g0v/hack.g0v.tw/issues">http://utcr.org:8080/repos/g0v/hack.g0v.tw/issues</a></li>
 <li>看共有哪些 API (hostname 要自己改掉，並加 :8080): <a href="http://utcr.org:8080/">http://utcr.org:8080/</a>&nbsp;</li></ul>
-
+<ul class="comment"><li>回報：成功使用，速度還不錯。(該頁慢的東西多的是。:-p)&nbsp;<ul class="comment"><li>Cool! (這台 ram 只有 256 MB, 萬一開發階段爛掉請再 ping 我吧)</li>
+<li>跨 repo 一次拿全部 issues 的 API 我再想想辦法.<ul class="comment"><li>因為做了分頁，再加上 incremental 一個 repo 一個 repo 拿，所以就算個別抓比較慢，其實也看不出來。所以跨 repo 一次拿全部 issues 這件事我覺得可以不急著做。<ul class="comment"><li>Got it.</li></ul class="comment">
+</li></ul class="comment">
+</li></ul class="comment">
+</li></ul class="comment">
 <h2>整理目前 github issue 遇到的問題：</h2><ul><li>Also affect<ul><li>22:40 &lt; hychen&gt; 沒有also affect 這種功能</li>
 <li>22:40 &lt; hychen&gt; github上的issue 只有一層, 他沒有辦法做一個bug also affect to multiple projects</li></ul>
 <ul class="comment"><li>若有需要，我們可以約定某些特殊格式，寫在 issue body 裡。例如：see:kuansim#16、affects:kuansim。</li>
