@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="19"/>
+<meta name="version" content="195"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$2V47VStOLt8</title>
 </head>
 <body><h1>hack.g0v.tw integration</h1><p></p><h2>想法：與「專案列表」頁整合</h2><p></p><ol><li>Issue List + Tag Cloud 放在專案列表右邊當做一個 widget (section)，見 <a href="https://github.com/g0v/hack.g0v.tw/issues/21"><a href='https://github.com/g0v/hack.g0v.tw/issues/21'/>https://github.com/g0v/hack.g0v.tw/issues/21</a></a><ol><li>可以依據 tag 來&nbsp; filter 要顯示哪些 issues，效果可以跟 hub 右(大半)邊很像。</li>
@@ -33,12 +33,20 @@
 <p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_1ngNLPX3mLr_p.56216_1376233265814_Screen%20Shot%202013-08-11%20at%2010.58.10%20PM.png'/></p><p></p><p><u>專案列表按鈕</u></p><p>列出 firebase 裡註冊進 hack.g0v.tw 並且有 github url 的專案。</p><p>(不只是 mockup 了，已可與 firebase 連動)</p><ul><li>顯示專案(中文)名稱</li>
 <li>因為 github repo name 不一定與 firebase 裡註冊的專案名稱相同，所以以 tag 的形式顯示，同時也暗示了 issue 下面的同一顏色的 tag 亦代表了所屬專案。</li></ul>
 <ul class="task"><li>依據選擇改變按鈕文字。</li></ul>
-<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_1ngNLPX3mLr_p.56216_1376268874808_Screen%20Shot%202013-08-12%20at%208.53.25%20AM.png'/></p><p></p><p><u>可以列出 issue 列表了</u></p><p>不過目前僅限 hard code 的兩個專案。</p><ul class="task"><li>與 firebase 抓到的 project list 整合</li></ul>
-<ul class="taskdone"><li>分頁</li></ul>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_1ngNLPX3mLr_p.56216_1376268874808_Screen%20Shot%202013-08-12%20at%208.53.25%20AM.png'/></p><p></p><p><u>可以列出 issue 列表了</u></p><p>不過目前僅限 hard code 的兩個專案。</p><ul class="taskdone"><li>與 firebase 抓到的 project list 整合</li>
+<li>分頁</li></ul>
 <ul class="task"><li>各專案應該平均分散</li></ul>
 
 <p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_1ngNLPX3mLr_p.56216_1376297701901_Screen%20Shot%202013-08-12%20at%204.54.00%20PM.png'/></p><p></p><p><u>Issue 的分頁功能</u></p><ul><li>使用 angular-ui bootstrap 提供的 directive。</li></ul>
 <ul class="task"><li>First/Last/Previous/Next 無法用 &amp;laquo;、&amp;raquo;、&amp;rsaquo; 和 &amp;lsaquo;，應該是因為 &amp; 會被 angular 擋下來。</li>
 <li>因為有些 issue 的 title 會用到兩行來顯示，所以換頁後，pagination bar 會上下跳動。</li></ul>
-<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_1ngNLPX3mLr_p.56216_1376500755104_Screen%20Shot%202013-08-15%20at%201.17.51%20AM.png'/></p><p></p><p></p></body>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_1ngNLPX3mLr_p.56216_1376500755104_Screen%20Shot%202013-08-15%20at%201.17.51%20AM.png'/></p><p></p><p><u>與 firebase 上的 project list 整合</u></p><ul><li>已經可以自動抓到 firebase 上設定好的所有 hosting 在 github 上的專案的 issues。</li>
+<li>有些 projects，如 kuansim-{frontend,backend} 將 github 上的 issues 功能關掉了。會跳過這些 repositories。</li><ul class="task"><li>「all projects」也應該 skip 掉這些專案</li></ul class="task">
+</li>
+<li>當捲到第 10 頁以後，因為多了一位數字，所以 pagination bar 會因為太長而被截斷換行。<ul><li>應該要用 &amp;laquo;、&amp;raquo;、&amp;rsaquo; 和 &amp;lsaquo; 來顯示，比較省寬度。</li></ul>
+</ul>
+<ul class="task"><li>顯示速度變很慢</li><ul><li>猜測需等所有 repo 的 issues 都載入後才會顯示。</li>
+<li>可能跟寫法有關係。[ 不熟 angularjs... :-( ]</li></ul>
+</ul>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_2V47VStOLt8_p.56216_1376580501858_Screen Shot 2013-08-15 at 11.26.48 PM.png'/></p><p></p><p></p><p></p></body>
 </html>
