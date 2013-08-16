@@ -3,11 +3,19 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="924"/>
+<meta name="version" content="1106"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$lYxzvhLiUYk</title>
 </head>
-<body><h1>LawEasyRead</h1><p></p><p>工具性質。</p><p>讓沒有學過法律的人，在閱讀提到法律的文章時，能夠快速地連結、查詢指定法規或條文的內容；</p><p>讓有學過法律的人，能夠方便地向沒有學過的人引出實際的法條與相關解釋、判例、裁判、決議。</p><p></p><p>例如司法院釋字第584號其中一句「中華民國八十八年四月二十一日修正公布之道路交通管理處罰條例第三十七條第一項」，若能顯示成「88.04.21修正公布之 <u>道交條例</u>§37 第1項」並加上連結，或是滑鼠移過去時顯示浮動視窗、顯示該條內容，查閱時將會變得相當方便。</p><p></p><p>實作方向有二：</p><ul><li>另做網站以供使用（如萌典）</li>
-<li>使用瀏覽器外掛對支援的網站重新排版（如求職小幫手）</li></ul>
+<body><h1>LawEasyRead</h1><p></p><p>工具性質。</p><p>讓沒有學過法律的人，在閱讀提到法律的文章時，能夠快速地連結、查詢指定法規或條文的內容；</p><p>讓有學過法律的人，能夠方便地向沒有學過的人引出實際的法條與相關解釋、判例、裁判、決議。</p><p></p><p>例如司法院釋字第584號其中一句「中華民國八十八年四月二十一日修正公布之道路交通管理處罰條例第三十七條第一項」，若能顯示成「88.04.21修正公布之 <u>道交條例</u>§37 第1項」並加上連結，或是滑鼠移過去時顯示浮動視窗、顯示該條內容，查閱時將會變得相當方便。</p><p></p><p>實作方向有三：</p><ul><li>前台（分為內嵌與瀏覽器外掛二種呈現）：<ul><li>直接取用政府網站的資料</li>
+<li>取用後台的資料顯示</li>
+<li>對支援的網站重新排版（瀏覽器外掛限定）</li></ul>
+</li>
+<li>後台（架站）：<ul><li>供網路程式連接的API</li>
+<li>網站</li></ul>
+</li>
+<li>手機程式：<ul><li>標榜離線功能，否則使用排版良好的網站即可</li>
+<li>看能不能比 KNY 和 法源法律網做的更好</li></ul>
+</ul>
 
 <h2>來龍去脈</h2><p></p><p><b>主旨</b></p><p>每次查閱法條時，常會遇到提及其他法令或是條文的文句，但每次均需花數十秒以上才可能找到被提及的條文。例如行政訴訟法第19條：「法官有下列情形之一者，應自行迴避，不得執行職務：一、有民事訴訟法第三十二條第一款至第六款情形之一。…」但是民事訴訟法的該條文究竟說了甚麼，就得另開視窗才能查詢。</p><p></p><p>而網民們討論時事（例如最近的智財局、電信法、國安法、會計法）時，也缺乏直接的搜尋工具列出法令的修法歷程。當需要說明「公投案被否決時，其實政府想做甚麼都可以」、「偷騎別人的腳踏車並不算竊盜罪」和「兒童性侵案件問『有無違反意願』是法律要求」時也都很麻煩。</p><p></p><p>另一個需求是行政法類。例如個資法第20條第2項規定「…當事人表示拒絕接受行銷時，應即停止利用其個人資料行銷」但是沒學過法律的人並不能一望即知「商家違反該條的話，我能不能告他或檢舉，檢舉後主管機關卻不處罰該怎麼辦？」（參閱同法48條3款與民法184條；簡言之：「法律允許或禁止甚麼行為」是一回事，「違反法律的效果如何」是另一回事。）</p><p></p><p>希望網民們監督政府、討論時事而要引用條文，或是查閱立法院公報、而其中提及法令時，能夠快捷地知曉該法令內容，促進對議題的瞭解。</p><p></p><p><b>牽涉領域</b></p><p>法律 / 教育</p><p></p><p><b>相關組織單位</b></p><p>評律網 / 司改會</p><p></p><p><b>相關專案</b></p><ul class="comment"><li>衍生自某專案/衍生出某專案/API串接自某專案...etc.</li></ul>
 
@@ -16,10 +24,15 @@
 
 <p><b>使用資料</b></p><p>以下述兩者為主：</p><ul><li>立法院法律系統：有法條歷史可供對照，缺點是沒有行政院的行政命令。（正確術語是「法規命令」與「行政規則」）</li>
 <li>法務部全國法規資料庫：有法律、命令、條約等，缺點是只有最新的版本。</li></ul>
-<p>此二者未含所有法規，例如地方自治法規即均無收錄。</p><p></p><p><b>專案目前狀態</b></p><p>邊規畫邊實作，且戰且走，還沒決定server與client端應如何分工。</p><p><a href='https://g0v.hackpad.com/ep/profile/1pMS5LNg7lBr4sx0rQluve'/>Kong Kao</a>之前做過Google Chrome的外掛：<a href="https://github.com/kong0107/zhlaweasyread"><a href='https://github.com/kong0107/zhlaweasyread'/>https://github.com/kong0107/zhlaweasyread</a></a></p><p>上次零時政府第二次黑客松時則組了專案：<a href="https://laweasyread.hackpad.com/LawEasyRead-5nGaomJOqkU"><a href='https://laweasyread.hackpad.com/LawEasyRead-5nGaomJOqkU'/>https://laweasyread.hackpad.com/LawEasyRead-5nGaomJOqkU</a></a></p><p></p><p>處理法律條文部分則請參閱<a href="https://github.com/g0v/laweasyread-data/issues">https://github.com/g0v/laweasyread-data/issues</a></p><ul><li>有一些Big5造字區的編碼沒能轉成UTF-8。</li>
-<li>未能分析「變更條號、但沒有變更內文」的修法。</li></ul>
+<p>此二者未含所有法規，例如地方自治法規即均無收錄。</p><p></p><p><b>專案目前狀態</b></p><ul><li>後台架設於 <a href="http://laweasyread.herokuapp.com">http://laweasyread.herokuapp.com</a><ul><li>API 見 <a href="https://github.com/g0v/laweasyread#api">https://github.com/g0v/laweasyread#api</a></li></ul>
+</li>
+<li>前台<ul><li>已有瀏覽器外掛<ul><li>Firefox: <a href="https://addons.mozilla.org/zh-TW/firefox/addon/laweasyread/">https://addons.mozilla.org/zh-TW/firefox/addon/laweasyread/</a></li>
+<li>Chrome: <a href="https://chrome.google.com/webstore/detail/iedodmlnmhobigohbkalkkjlbmdkjalj">https://chrome.google.com/webstore/detail/iedodmlnmhobigohbkalkkjlbmdkjalj</a></li></ul>
+</li>
+<li>有內嵌功能（<a href='http://g0v.github.io/laweasyread-front/embed.html'/>示範頁</a>），並亦實作一供使用者<a href='http://g0v.github.io/laweasyread-front/userInput.html'/>貼文字立即轉換</a>的頁面。</li></ul>
+</ul>
 
-<p></p><h2>目標與功能</h2><p></p><p><b>預定使用者</b></p><p>網站製作者與瀏覽者</p><p></p><p><b>預定功能</b></p><ul><li>轉換網頁中的法規名稱為連結，讓瀏覽者能夠直接看到全國法規資料庫該法規的所有條文。（此部分不需要處理條文內容）</li>
+<p><a href="https://github.com/g0v/laweasyread">http<a href='http://github.com'/>s</a>://github.com/g0v/laweasyread</a></p><p><a href="https://github.com/g0v/laweasyread-data"><a href='https://github.com/g0v/laweasyread-data/issues'/>https://github.com/g0v/laweasyread-data</a></a></p><p><a href="https://github.com/g0v/laweasyread-front"><a href='https://github.com/g0v/laweasyread'/>https://github.com/g0v/laweasyread</a>-front</a></p><p><a href="https://laweasyread.hackpad.com/LawEasyRead-5nGaomJOqkU"><a href='https://laweasyread.hackpad.com/LawEasyRead-5nGaomJOqkU'/>https://laweasyread.hackpad.com/LawEasyRead-5nGaomJOqkU</a></a></p><p></p><p></p><h2>目標與功能</h2><p></p><p><b>預定使用者</b></p><p>網站製作者與瀏覽者</p><p></p><p><b>預定功能</b></p><ul><li>轉換網頁中的法規名稱為連結，讓瀏覽者能夠直接看到全國法規資料庫該法規的所有條文。（此部分不需要處理條文內容）</li>
 <li>承前，但支援連結到特定法規的特定條文。</li>
 <li>承前，可用浮動視窗顯示。</li>
 <li>於法規網站或是另外架設的站台上，瀏覽特定條文時，列出：<ul><li>此條引用的條文－－較容易，直接分析其內文即可。</li>
@@ -35,25 +48,13 @@
 </li>
 <li>比較功能：需架設網站。</li></ul>
 
-<h2>實做細節</h2><p></p><p><b>使用技術與工具</b></p><p></p><p><b>產出檔案格式</b></p><p></p><p><b>進度與 to-do</b></p><p></p><p><b>現有成果</b></p><p><a href='/ep/profile/1pMS5LNg7lBr4sx0rQluve'/>Kong Kao</a>的Google Chrome外掛可在瀏覽政府網站時自動幫法規加上連結，但仍有許多問題。</p><p><a href="https://chrome.google.com/webstore/detail/%E6%B3%95%E8%A6%8F%E4%BA%A6%E6%AF%92%E6%B0%A3/iedodmlnmhobigohbkalkkjlbmdkjalj"><a href='https://chrome.google.com/webstore/detail/%E6%B3%95%E8%A6%8F%E4%BA%A6%E6%AF%92%E6%B0%A3/iedodmlnmhobigohbkalkkjlbmdkjalj'/>https://chrome.google.com/webstore/detail/%E6%B3%95%E8%A6%8F%E4%BA%A6%E6%AF%92%E6%B0%A3/iedodmlnmhobigohbkalkkjlbmdkjalj</a></a></p><p></p><p></p><h2>開發者</h2><p></p><p><b>技術指導</b></p><p></p><p><b>分工與成員</b></p><ul class="taskdone"><li>NeedsWriter: 需要文案幫手（撰寫基本資訊、報導專案etc）</li>
+<h2>實做細節</h2><p></p><p><b>使用技術與工具</b></p><p>JavaScript, Node.js, AngularJS, LiveScript</p><p></p><p><b>產出檔案格式</b></p><p>HTML, JSON</p><p></p><p><b>進度與 to-do</b></p><p></p><p><b>現有成果</b></p><p>如前述</p><p></p><h2>開發者</h2><p></p><p><b>技術指導</b></p><p></p><p><b>分工與成員</b></p><ul class="taskdone"><li>NeedsWriter: 需要文案幫手（撰寫基本資訊、報導專案etc）</li>
 <li>NeedsDesigner: 需要介面設計</li>
 <li>NeedsData: 需要資料（擷取、清理）</li>
 <li>NeedsTech: 需要技術支援（程式、架站 etc)</li>
 <li>NeedsProcess: 需要幫忙設計作業流程</li></ul>
 <ul class="task"><li>NeedsTalkingToRealPerson: 需要有人幫忙和其他機關聯絡</li></ul>
 <ul class="comment"><li>設定成 project registry 中的 tags，需要幫忙的會自動 promote 到 g0v project hub</li></ul>
-
-<p></p><p></p><p></p><p>釘住視窗</p><ul><li><b>法規沿革<a href='http://law.moj.gov.tw/LawClass/LawHistory.aspx?PCode=K0040012'/>+</a></b></li>
-<li>編章節<a href='http://law.moj.gov.tw/LawClass/LawAllPara.aspx?PCode=K0040012'/>+</a></li>
-<li>外部連結</li></ul>
-
-<p></p><p></p><p></p><p>釘住視窗</p><ul><li><b>法規沿革<a href='http://law.moj.gov.tw/LawClass/LawHistory.aspx?PCode=I0050021'/>+</a></b></li>
-<li>編章節<a href='http://law.moj.gov.tw/LawClass/LawAllPara.aspx?PCode=I0050021'/>+</a></li>
-<li>外部連結</li></ul>
-
-<p></p><p></p><p></p><p>釘住視窗</p><ul><li><b>法規沿革<a href='http://law.moj.gov.tw/LawClass/LawHistory.aspx?PCode=I0050021'/>+</a></b></li>
-<li>編章節<a href='http://law.moj.gov.tw/LawClass/LawAllPara.aspx?PCode=I0050021'/>+</a></li>
-<li>外部連結</li></ul>
 
 <p></p><p></p></body>
 </html>
