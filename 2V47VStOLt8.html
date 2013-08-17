@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="195"/>
+<meta name="version" content="732"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$2V47VStOLt8</title>
 </head>
 <body><h1>hack.g0v.tw integration</h1><p></p><h2>想法：與「專案列表」頁整合</h2><p></p><ol><li>Issue List + Tag Cloud 放在專案列表右邊當做一個 widget (section)，見 <a href="https://github.com/g0v/hack.g0v.tw/issues/21"><a href='https://github.com/g0v/hack.g0v.tw/issues/21'/>https://github.com/g0v/hack.g0v.tw/issues/21</a></a><ol><li>可以依據 tag 來&nbsp; filter 要顯示哪些 issues，效果可以跟 hub 右(大半)邊很像。</li>
@@ -29,7 +29,7 @@
 <ul class="comment"><li>我會先做成 angularjs controller，先整 hack.g0v.tw，東西先出來大家比較好想像怎麼改會更好。再說，要 porting 成 jquery-plugin 版簡單多了，angularjs 好複雜。XDD</li></ul>
 </ol>
 
-<h2>畫面截圖</h2><p>已 push 成新的 branch: <a href='https://github.com/g0v/hack.g0v.tw/tree/issues'/>issues</a></p><p></p><p><u>Widget 的樣子</u></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_1ngNLPX3mLr_p.56216_1376233226328_Screen%20Shot%202013-08-11%20at%2010.57.58%20PM.png'/></p><p></p><p><u>Filter 按鈕</u></p><p>瀏覽者可依據自身能力屬性，選擇 filter 條件</p><ul><li>TODO: 瀏覽者的選擇會記憶在 cookie 裡</li></ul>
+<p></p><p></p><h2>畫面截圖</h2><p>已 push 成新的 branch: <a href='https://github.com/g0v/hack.g0v.tw/tree/issues'/>issues</a></p><p></p><p><u>Widget 的樣子</u></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_1ngNLPX3mLr_p.56216_1376233226328_Screen%20Shot%202013-08-11%20at%2010.57.58%20PM.png'/></p><p></p><p><u>Filter 按鈕</u></p><p>瀏覽者可依據自身能力屬性，選擇 filter 條件</p><ul><li>TODO: 瀏覽者的選擇會記憶在 cookie 裡</li></ul>
 <p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_1ngNLPX3mLr_p.56216_1376233265814_Screen%20Shot%202013-08-11%20at%2010.58.10%20PM.png'/></p><p></p><p><u>專案列表按鈕</u></p><p>列出 firebase 裡註冊進 hack.g0v.tw 並且有 github url 的專案。</p><p>(不只是 mockup 了，已可與 firebase 連動)</p><ul><li>顯示專案(中文)名稱</li>
 <li>因為 github repo name 不一定與 firebase 裡註冊的專案名稱相同，所以以 tag 的形式顯示，同時也暗示了 issue 下面的同一顏色的 tag 亦代表了所屬專案。</li></ul>
 <ul class="task"><li>依據選擇改變按鈕文字。</li></ul>
@@ -48,5 +48,9 @@
 <ul class="task"><li>顯示速度變很慢</li><ul><li>猜測需等所有 repo 的 issues 都載入後才會顯示。</li>
 <li>可能跟寫法有關係。[ 不熟 angularjs... :-( ]</li></ul>
 </ul>
-<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_2V47VStOLt8_p.56216_1376580501858_Screen Shot 2013-08-15 at 11.26.48 PM.png'/></p><p></p><p></p><p></p></body>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_2V47VStOLt8_p.56216_1376580501858_Screen Shot 2013-08-15 at 11.26.48 PM.png'/></p><p></p><h2>程式結構</h2><p></p><p><a href='/ep/profile/viqcwaJVLAO'/>Jeff Hung</a> : 底下是關於程式結構與設計的筆記，歡迎加入討論。</p><ul class="comment"><li>我的前端是半調子，懇請大家指教。:-)</li></ul>
+
+<p>希望能做成兩段：一個是 jquery-based class 當作 model，另一個是 angularjs controller 負責把 model 跟畫面串接起來。未來希望 model 的部分可以在其他地方被 mash up。</p><p></p><p>不全用 angularjs 的原因是，mash up 比較簡單，不會 depend on angularjs，不過 jquery 我就假設到處都有了。但是這樣做會比較難利用到 angularjs 的 promise、$timeout 之類的工具。而且能否利用與否還是其次，畢竟 jquery 也不是沒有類似的工具，但怎樣和 controller 串接會比較好，倒是需要弄清楚。</p><ul class="comment"><li>這地方我還不太熟，所以得靠慢慢 refactoring 把結構弄好。反正就是 release early，醜媳婦先見公婆啦。歡迎大家多加建議如何改進。</li></ul>
+
+<p>等到 model 部分比較確定之後，就可以開始來研究怎麼與 <a href='https://github.com/miau715/eo4'/>eo4</a> (<a href='http://miau715.github.io/eo4/'/>mockup</a>) 合作了。</p><p></p><p>目前 paging 是靠 angular-ui bootstrap 的 pagination directive 幫忙。但實際內容的 paging 是在 controller 裡面做，這樣其實不太好，應該做在 model 裡才對。</p><p></p><p>現在的 model 也沒有處理 multiple repository backends 的能力，而是在 controller 裡面拉。未來也應該改為由 model 負責。不過因為抓 issues 是 async，當抓到內容後，怎樣與 angular controller 串接，是另一個問題：一邊是 callback based，另一邊則可以是 promise-based。</p><p></p><p>根據在 irc 上面的討論，資料的更新決定為單向，要改變 issue 內容與狀態，請直接連到 github 上進行。另外，目前暫定也不做 live reload 定時抓 issues 新狀態，因為 issue 的變化還沒有那麼多。</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></body>
 </html>
