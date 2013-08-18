@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1312"/>
+<meta name="version" content="1386"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$2V47VStOLt8</title>
 </head>
 <body><h1>hack.g0v.tw integration</h1><p></p><h2>想法：與「專案列表」頁整合</h2><p></p><ol><li>Issue List + Tag Cloud 放在專案列表右邊當做一個 widget (section)，見 <a href="https://github.com/g0v/hack.g0v.tw/issues/21"><a href='https://github.com/g0v/hack.g0v.tw/issues/21'/>https://github.com/g0v/hack.g0v.tw/issues/21</a></a><ol><li>可以依據 tag 來&nbsp; filter 要顯示哪些 issues，效果可以跟 hub 右(大半)邊很像。</li>
@@ -56,16 +56,19 @@
 <p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_2V47VStOLt8_p.56216_1376797737815_Screen Shot 2013-08-18 at 11.48.19 AM.png'/></p><p></p><ul class="task"><li><u>在還沒有載入前，next/last 居然可以按</u></li></ul>
 <ul><li>試過預設 $scope.currentPage = 0; 但會變成 first/previous 可以按，且 issue 變成無法載入。</li></ul>
 
-<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_2V47VStOLt8_p.56216_1376827055789_Screen Shot 2013-08-18 at 7.56.45 PM.png'/></p><p></p><p><u>Filter by (Single) Label</u></p><ul class="task"><li>多選</li></ul>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_2V47VStOLt8_p.56216_1376827055789_Screen Shot 2013-08-18 at 7.56.45 PM.png'/></p><p></p><p><u>Filter by Single Label</u></p><ul class="taskdone"><li>多選</li></ul>
 
-<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_2V47VStOLt8_p.56216_1376837331475_Screen Shot 2013-08-18 at 10.36.29 PM.png'/></p><p></p><h2>程式結構</h2><p></p><p><a href='/ep/profile/viqcwaJVLAO'/>Jeff Hung</a> : 底下是關於程式結構與設計的筆記，歡迎加入討論。</p><ul class="comment"><li>我的前端是半調子，懇請大家指教。:-)</li></ul>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_2V47VStOLt8_p.56216_1376837331475_Screen Shot 2013-08-18 at 10.36.29 PM.png'/></p><p></p><p><u>Filter by Multiple Labels</u></p><ul class="task"><li>dannvix 建議用 <a href='http://harvesthq.github.io/chosen/'/>Chosen</a>&nbsp; 來選 labels。</li></ul>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_2V47VStOLt8_p.56216_1376839912113_Screen Shot 2013-08-18 at 11.11.34 PM.png'/></p><p></p><p></p><h2>程式結構</h2><p></p><p><a href='/ep/profile/viqcwaJVLAO'/>Jeff Hung</a> : 底下是關於程式結構與設計的筆記，歡迎加入討論。</p><ul class="comment"><li>我的前端是半調子，懇請大家指教。:-)</li></ul>
 
 <p>希望能做成兩段：一個是 jquery-based class 當作 model，另一個是 angularjs controller 負責把 model 跟畫面串接起來。未來希望 model 的部分可以在其他地方被 mash up。</p><p></p><p>不全用 angularjs 的原因是，mash up 比較簡單，不會 depend on angularjs，不過 jquery 我就假設到處都有了。但是這樣做會比較難利用到 angularjs 的 promise、$timeout 之類的工具。而且能否利用與否還是其次，畢竟 jquery 也不是沒有類似的工具，但怎樣和 controller 串接會比較好，倒是需要弄清楚。</p><ul class="comment"><li>這地方我還不太熟，所以得靠慢慢 refactoring 把結構弄好。反正就是 release early，醜媳婦先見公婆啦。歡迎大家多加建議如何改進。</li></ul>
 
 <p>等到 model 部分比較確定之後，就可以開始來研究怎麼與 <a href='https://github.com/miau715/eo4'/>eo4</a> (<a href='http://miau715.github.io/eo4/'/>mockup</a>) 合作了。</p><p></p><p>目前 paging 是靠 angular-ui bootstrap 的 pagination directive 幫忙。但實際內容的 paging 是在 controller 裡面做，這樣其實不太好，應該做在 model 裡才對。</p><ul class="taskdone"><li>應該這麼說，實際的 issue 資料應該放在 model 裡，controller 依據目前在第幾頁，跟 model 要該 page 的資料來顯示就好。</li></ul>
 <ul><li>然後 filtering、ordering 與 grouping 等，需由 controller 傳選項入 model 裡，由 model 負責計算。</li><ul class="taskdone"><li>Filter by Project</li>
-<li>Filter by Single Label</li></ul>
-<ul class="task"><li>Filter by Multiple Labels</li>
+<li>Filter by Single Label</li>
+<li>Filter by Multiple Labels</li></ul>
+<ul class="task"><li>Filter by Predefined Labels<ul class="task"><li>Define Predefined Labels</li></ul class="task">
+</li>
 <li>Filter by Role (so user see only what he can contribute to)</li><ul class="comment"><li>May not necessary</li></ul>
 </ul>
 </ul>
