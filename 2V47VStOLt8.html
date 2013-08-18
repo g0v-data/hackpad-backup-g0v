@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1080"/>
+<meta name="version" content="1250"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$2V47VStOLt8</title>
 </head>
 <body><h1>hack.g0v.tw integration</h1><p></p><h2>想法：與「專案列表」頁整合</h2><p></p><ol><li>Issue List + Tag Cloud 放在專案列表右邊當做一個 widget (section)，見 <a href="https://github.com/g0v/hack.g0v.tw/issues/21"><a href='https://github.com/g0v/hack.g0v.tw/issues/21'/>https://github.com/g0v/hack.g0v.tw/issues/21</a></a><ol><li>可以依據 tag 來&nbsp; filter 要顯示哪些 issues，效果可以跟 hub 右(大半)邊很像。</li>
@@ -29,27 +29,34 @@
 <ul class="comment"><li>我會先做成 angularjs controller，先整 hack.g0v.tw，東西先出來大家比較好想像怎麼改會更好。再說，要 porting 成 jquery-plugin 版簡單多了，angularjs 好複雜。XDD</li></ul>
 </ol>
 
-<p></p><p></p><h2>畫面截圖</h2><p>已 push 成新的 branch: <a href='https://github.com/g0v/hack.g0v.tw/tree/issues'/>issues</a></p><p></p><p><u>Widget 的樣子</u></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_1ngNLPX3mLr_p.56216_1376233226328_Screen%20Shot%202013-08-11%20at%2010.57.58%20PM.png'/></p><p></p><p><u>Filter 按鈕</u></p><p>瀏覽者可依據自身能力屬性，選擇 filter 條件</p><ul><li>TODO: 瀏覽者的選擇會記憶在 cookie 裡</li></ul>
+<p></p><p></p><h2>畫面截圖</h2><p>已 push 成新的 branch: <a href='https://github.com/g0v/hack.g0v.tw/tree/issues'/>issues</a></p><p></p><p><u>Widget 的樣子</u></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_1ngNLPX3mLr_p.56216_1376233226328_Screen%20Shot%202013-08-11%20at%2010.57.58%20PM.png'/></p><p></p><p><u>Filter 按鈕</u></p><p>瀏覽者可依據自身能力屬性，選擇 filter 條件</p><ul class="task"><li>瀏覽者的選擇會記憶在 cookie 裡</li></ul>
 <p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_1ngNLPX3mLr_p.56216_1376233265814_Screen%20Shot%202013-08-11%20at%2010.58.10%20PM.png'/></p><p></p><p><u>專案列表按鈕</u></p><p>列出 firebase 裡註冊進 hack.g0v.tw 並且有 github url 的專案。</p><p>(不只是 mockup 了，已可與 firebase 連動)</p><ul><li>顯示專案(中文)名稱</li>
 <li>因為 github repo name 不一定與 firebase 裡註冊的專案名稱相同，所以以 tag 的形式顯示，同時也暗示了 issue 下面的同一顏色的 tag 亦代表了所屬專案。</li></ul>
-<ul class="task"><li>依據選擇改變按鈕文字。</li></ul>
+<ul class="taskdone"><li>依據選擇改變按鈕文字。</li></ul>
 <p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_1ngNLPX3mLr_p.56216_1376268874808_Screen%20Shot%202013-08-12%20at%208.53.25%20AM.png'/></p><p></p><p><u>可以列出 issue 列表了</u></p><p>不過目前僅限 hard code 的兩個專案。</p><ul class="taskdone"><li>與 firebase 抓到的 project list 整合</li>
-<li>分頁</li></ul>
-<ul class="task"><li>各專案應該平均分散</li></ul>
+<li>分頁</li>
+<li><s>各專案應該平均分散</s>應該依據特定條件 sorting 所有 project 的 issues，而非依據 fetch 順序顯示。</li></ul>
 
 <p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_1ngNLPX3mLr_p.56216_1376297701901_Screen%20Shot%202013-08-12%20at%204.54.00%20PM.png'/></p><p></p><p><u>Issue 的分頁功能</u></p><ul><li>使用 angular-ui bootstrap 提供的 directive。</li></ul>
-<ul class="task"><li>First/Last/Previous/Next 無法用 &amp;laquo;、&amp;raquo;、&amp;rsaquo; 和 &amp;lsaquo;，應該是因為 &amp; 會被 angular 擋下來。</li>
-<li>因為有些 issue 的 title 會用到兩行來顯示，所以換頁後，pagination bar 會上下跳動。</li></ul>
+<ul class="taskdone"><li>First/Last/Previous/Next 無法用 &amp;laquo;、&amp;raquo;、&amp;rsaquo; 和 &amp;lsaquo;，應該是因為 &amp; 會被 angular 擋下來。</li><ul class="comment"><li>寫成 next-text=&quot;&rsquo;&amp;rsaquo;&rsquo;&quot; 即可，(angular?!) expression 要 quote 起來。</li></ul>
+</ul>
+<ul class="task"><li>因為有些 issue 的 title 會用到兩行來顯示，所以換頁後，pagination bar 會上下跳動。</li></ul>
 <p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_1ngNLPX3mLr_p.56216_1376500755104_Screen%20Shot%202013-08-15%20at%201.17.51%20AM.png'/></p><p></p><p><u>與 firebase 上的 project list 整合</u></p><ul><li>已經可以自動抓到 firebase 上設定好的所有 hosting 在 github 上的專案的 issues。</li>
-<li>有些 projects，如 kuansim-{frontend,backend} 將 github 上的 issues 功能關掉了。會跳過這些 repositories。</li><ul class="task"><li>「all projects」也應該 skip 掉這些專案</li></ul class="task">
+<li>有些 projects，如 kuansim-{frontend,backend} 將 github 上的 issues 功能關掉了。會跳過這些 repositories。</li><ul class="taskdone"><li>「all projects」也應該 skip 掉這些專案</li></ul class="taskdone">
 </li>
 <li>當捲到第 10 頁以後，因為多了一位數字，所以 pagination bar 會因為太長而被截斷換行。<ul><li>應該要用 &amp;laquo;、&amp;raquo;、&amp;rsaquo; 和 &amp;lsaquo; 來顯示，比較省寬度。</li></ul>
 </ul>
 <ul class="task"><li>顯示速度變很慢</li><ul><li>猜測需等所有 repo 的 issues 都載入後才會顯示。</li>
 <li>可能跟寫法有關係。[ 不熟 angularjs... :-( ]</li></ul>
+<ul class="taskdone"><li>先顯示 loading indicator</li><ul class="comment"><li>感謝 dannvix</li></ul>
+</ul>
 </ul>
 <p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_2V47VStOLt8_p.56216_1376580501858_Screen Shot 2013-08-15 at 11.26.48 PM.png'/></p><p></p><p><u>Filtering by Selected Project</u></p><ul><li>Dropdown 裡的 project 改從 model 抓，這樣才能僅列出真的在 github 上有 enable issues 的 project。</li></ul>
-<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_2V47VStOLt8_p.56216_1376797737815_Screen Shot 2013-08-18 at 11.48.19 AM.png'/></p><p></p><p></p><h2>程式結構</h2><p></p><p><a href='/ep/profile/viqcwaJVLAO'/>Jeff Hung</a> : 底下是關於程式結構與設計的筆記，歡迎加入討論。</p><ul class="comment"><li>我的前端是半調子，懇請大家指教。:-)</li></ul>
+<ul class="task"><li>僅有一句「底下是一些您可以幫忙的事項，歡迎跳坑。」大概新朋友會看不懂。需要文案支援。</li></ul>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_2V47VStOLt8_p.56216_1376797737815_Screen Shot 2013-08-18 at 11.48.19 AM.png'/></p><p></p><ul class="task"><li><u>在還沒有載入前，next/last 居然可以按</u></li></ul>
+<ul><li>試過預設 $scope.currentPage = 0; 但會變成 first/previous 可以按，且 issue 變成無法載入。</li></ul>
+
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_2V47VStOLt8_p.56216_1376827055789_Screen Shot 2013-08-18 at 7.56.45 PM.png'/></p><p></p><p></p><h2>程式結構</h2><p></p><p><a href='/ep/profile/viqcwaJVLAO'/>Jeff Hung</a> : 底下是關於程式結構與設計的筆記，歡迎加入討論。</p><ul class="comment"><li>我的前端是半調子，懇請大家指教。:-)</li></ul>
 
 <p>希望能做成兩段：一個是 jquery-based class 當作 model，另一個是 angularjs controller 負責把 model 跟畫面串接起來。未來希望 model 的部分可以在其他地方被 mash up。</p><p></p><p>不全用 angularjs 的原因是，mash up 比較簡單，不會 depend on angularjs，不過 jquery 我就假設到處都有了。但是這樣做會比較難利用到 angularjs 的 promise、$timeout 之類的工具。而且能否利用與否還是其次，畢竟 jquery 也不是沒有類似的工具，但怎樣和 controller 串接會比較好，倒是需要弄清楚。</p><ul class="comment"><li>這地方我還不太熟，所以得靠慢慢 refactoring 把結構弄好。反正就是 release early，醜媳婦先見公婆啦。歡迎大家多加建議如何改進。</li></ul>
 
