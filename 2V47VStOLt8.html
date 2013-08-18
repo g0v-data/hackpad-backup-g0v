@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1386"/>
+<meta name="version" content="1485"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$2V47VStOLt8</title>
 </head>
 <body><h1>hack.g0v.tw integration</h1><p></p><h2>想法：與「專案列表」頁整合</h2><p></p><ol><li>Issue List + Tag Cloud 放在專案列表右邊當做一個 widget (section)，見 <a href="https://github.com/g0v/hack.g0v.tw/issues/21"><a href='https://github.com/g0v/hack.g0v.tw/issues/21'/>https://github.com/g0v/hack.g0v.tw/issues/21</a></a><ol><li>可以依據 tag 來&nbsp; filter 要顯示哪些 issues，效果可以跟 hub 右(大半)邊很像。</li>
@@ -48,6 +48,7 @@
 </ul>
 <ul class="task"><li>顯示速度變很慢</li><ul><li>猜測需等所有 repo 的 issues 都載入後才會顯示。</li>
 <li>可能跟寫法有關係。[ 不熟 angularjs... :-( ]</li></ul>
+<ul class="comment"><li>目前觀察有兩個停頓點，我猜測第一個可能跟 Hub.projects 有關，第二個原因尚未明朗。</li></ul>
 <ul class="taskdone"><li>先顯示 loading indicator</li><ul class="comment"><li>感謝 dannvix</li></ul>
 </ul>
 </ul>
@@ -59,7 +60,8 @@
 <p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_2V47VStOLt8_p.56216_1376827055789_Screen Shot 2013-08-18 at 7.56.45 PM.png'/></p><p></p><p><u>Filter by Single Label</u></p><ul class="taskdone"><li>多選</li></ul>
 
 <p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_2V47VStOLt8_p.56216_1376837331475_Screen Shot 2013-08-18 at 10.36.29 PM.png'/></p><p></p><p><u>Filter by Multiple Labels</u></p><ul class="task"><li>dannvix 建議用 <a href='http://harvesthq.github.io/chosen/'/>Chosen</a>&nbsp; 來選 labels。</li></ul>
-<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_2V47VStOLt8_p.56216_1376839912113_Screen Shot 2013-08-18 at 11.11.34 PM.png'/></p><p></p><p></p><h2>程式結構</h2><p></p><p><a href='/ep/profile/viqcwaJVLAO'/>Jeff Hung</a> : 底下是關於程式結構與設計的筆記，歡迎加入討論。</p><ul class="comment"><li>我的前端是半調子，懇請大家指教。:-)</li></ul>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_2V47VStOLt8_p.56216_1376839912113_Screen Shot 2013-08-18 at 11.11.34 PM.png'/></p><p></p><p><u>Filter by Multiple Labels with <a href='http://harvesthq.github.io/chosen/'/>Chosen</a>&nbsp;</u></p><ul><li>dannvix++</li></ul>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_2V47VStOLt8_p.56216_1376845775606_g0v-project-issues.png'/></p><p></p><p></p><h2>程式結構</h2><p></p><p><a href='/ep/profile/viqcwaJVLAO'/>Jeff Hung</a> : 底下是關於程式結構與設計的筆記，歡迎加入討論。</p><ul class="comment"><li>我的前端是半調子，懇請大家指教。:-)</li></ul>
 
 <p>希望能做成兩段：一個是 jquery-based class 當作 model，另一個是 angularjs controller 負責把 model 跟畫面串接起來。未來希望 model 的部分可以在其他地方被 mash up。</p><p></p><p>不全用 angularjs 的原因是，mash up 比較簡單，不會 depend on angularjs，不過 jquery 我就假設到處都有了。但是這樣做會比較難利用到 angularjs 的 promise、$timeout 之類的工具。而且能否利用與否還是其次，畢竟 jquery 也不是沒有類似的工具，但怎樣和 controller 串接會比較好，倒是需要弄清楚。</p><ul class="comment"><li>這地方我還不太熟，所以得靠慢慢 refactoring 把結構弄好。反正就是 release early，醜媳婦先見公婆啦。歡迎大家多加建議如何改進。</li></ul>
 
@@ -67,9 +69,14 @@
 <ul><li>然後 filtering、ordering 與 grouping 等，需由 controller 傳選項入 model 裡，由 model 負責計算。</li><ul class="taskdone"><li>Filter by Project</li>
 <li>Filter by Single Label</li>
 <li>Filter by Multiple Labels</li></ul>
-<ul class="task"><li>Filter by Predefined Labels<ul class="task"><li>Define Predefined Labels</li></ul class="task">
-</li>
-<li>Filter by Role (so user see only what he can contribute to)</li><ul class="comment"><li>May not necessary</li></ul>
+<ul class="task"><li>Filter by Predefined Labels<ul class="task"><li>Define Predefined Labels: <a href='https://github.com/g0v/dev/issues/15'/>g0v/dev#15</a>&nbsp;</li>
+<li>predefined labels 放前面，接著一個 divider (in dropdown)，然後是剩下其他的 labels</li><ul><li>這樣就可以兼顧 predefined labels 以及其他 label 了。</li>
+<li>predefined labels 以後也可以改，刪掉也無所謂，就變成「其他 label」繼續留在 issue 跟 dropdown 裡。</li></ul>
+</ul>
+<ul class="task"><li>有個 json 定義 predefined labels，讓 tool script 跟 frontend 可以共用。</li><ul><li>應該弄成跟 github api 給的結構類似，這樣程式好寫。</li></ul>
+</ul>
+</ul>
+<ul class="task"><li>Filter by Role (so user see only what he can contribute to)</li><ul class="comment"><li>May not necessary</li></ul>
 </ul>
 </ul>
 <ul><li>我後來又把 paging 交回去給 controller 做了，model 僅負責 filtering、ordering 與 grouping。</li></ul>
