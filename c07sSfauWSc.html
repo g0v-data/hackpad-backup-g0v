@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="1075"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$c07sSfauWSc</title>
+</head>
+<body><h1>g0v.json spec</h1><p></p><p><b>Background</b></p><p>g0v project 很多, 常常需要回答像這樣的問題</p><ul><li>有哪些 project?</li>
+<li>這個 project 好有趣, 我要去哪裡找它的網頁/文件/程式?</li>
+<li>我是文字工作者, 有哪些 project 需要我?</li>
+<li>我寫 c++ 有沒有哪個 project 適合我?</li>
+<li>有哪些相關的 project?</li></ul>
+
+<p>所以我們需要一個方式登錄各 project 的 metadata, 方便查詢、搜尋。目前設計出來的解法是大家在自己的網站上放一個 g0v.json。再去 <a href="http://hack.g0v.tw/project"><a href='http://hack.g0v.tw/project'/>http://hack.g0v.tw/project</a></a> &quot;新增專案&quot;</p><p>(譬如在 git repo 的根目錄放 g0v.json)</p><p></p><p>更詳細的規畫、討論，請見 <a href='/9IbgS6xfHZA'/>g0v hub</a></p><p></p><p><b>範例</b></p><p><a href="https://github.com/g0v/hack.g0v.tw/blob/master/g0v.json"><a href='https://github.com/g0v/hack.g0v.tw/blob/master/g0v.json'/>https://github.com/g0v/hack.g0v.tw/blob/master/g0v.json</a></a></p><p>更多例子: <a href="https://github.com/search?q=path%3Ag0v.json&type=Code&ref=searchresults"><a href='https://github.com/search?q=path%3Ag0v.json&amp;type=Code&amp;ref=searchresults'/>https://github.com/search?q=path%3Ag0v.json&amp;type=Code&amp;ref=searchresults</a></a></p><p></p><p><b>Tags</b></p><p>其實所有的欄位都沒有嚴格限制, 這邊列的只是參考/建議</p><ul><li>author 主要作者</li>
+<li>status 專案狀況<ul><li>planning, pre-alpha, alpha, beta, production, stable, mature, inactive</li></ul>
+</li>
+<li>name 英文名, 一般為簡短的代號 (不含 .#$[] 等符號)</li>
+<li>name_zh 中文名</li>
+<li>description 英文描述</li>
+<li>description_zh 中文描述</li>
+<li>homepage 網頁</li>
+<li>thumbnail 縮圖 (TODO 建議大小?)</li>
+<li>document 說明這個 project 的文件、網頁、或 hackpad</li>
+<li>repository 工作資料區<ul><li>這欄位主要是給程式專案使用, 表示 code 公開的 url.</li>
+<li>其他類型的專案也許是 google doc 或是 dropbox folder 之類. 譬如的圖庫、照片、資料檔</li></ul>
+</li>
+<li>licenses 專案授權<ul><li>譬如 <a href='http://mit-license.org/'/>MIT</a>, <a href='http://creativecommons.org/choose/zero/?lang=zh_TW'/>CC0</a>, <a href='http://creativecommons.org/licenses/by/3.0/tw/'/>CC-BY</a> 等等.</li>
+<li>若是少見或是特別的 license, 請加上 url, 譬如 <a href="http://g0v.mit-license.org/"><a href='http://g0v.mit-license.org/'/>http://g0v.mit-license.org/</a></a></li></ul>
+</li>
+<li>keywords 專案關鍵字<ul><li>目前沒有限定哪方面的關鍵字。</li>
+<li>可以是專案性質、解決哪方面的問題，也可以是用到的技術、技能。</li></ul>
+</li>
+<li>audience 這個專案的目標群。<ul><li>譬如 contributor, public</li></ul>
+</li>
+<li>products 這個專案的產出<ul><li>譬如 website, app, library, api, data</li></ul>
+</li>
+<li>projects 屬於什麼 prooject. (可以多選)<ul><li><br/></li></ul>
+</li>
+<li>contributors 參與者</li>
+<li>needs 需要哪種人、技術支援<ul><li>譬如 designer, writer, programmer, money</li></ul>
+</ul>
+
+<p></p></body>
+</html>
