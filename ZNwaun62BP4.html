@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="1"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$ZNwaun62BP4</title>
+</head>
+<body><h1>3du.tw</h1><p></p><p>我們想要還文於民，這階段的工作是提供中文字資料的開放 API 和範例 client app。</p><p></p><p>線上聊天室： <a href='http://webchat.freenode.net/?channels=g0v.tw'/>irc: #g0v.tw on freen</a><a href='http://webchat.freenode.net/?channels=g0v.tw'/>o</a><a href='http://webchat.freenode.net/?channels=g0v.tw'/>de</a>&nbsp; [<a href='http://hack.g0v.tw/irc'/>web 介面</a>]&nbsp; [<a href='http://hack.g0v.tw/irc/log'/>log 紀錄</a>]</p><p>線上工作組：<a href="https://groups.google.com/forum/?fromgroups#"><a href='https://groups.google.com/forum/?fromgroups#!forum/3du-tw'/>https://groups.google.com/forum/?fromgroups#</a></a><a href='https://groups.google.com/forum/?fromgroups#!forum/3du-tw'/>!forum/3du-tw</a></p><p></p><p>歷史記錄：g0v hackath1n 當天的 hackpad: <a href='https://hackpad.com/krYNczYQzTI#3du.tw%20%40g0v%20hackath1n%20%20%26nbsp%3B%26%2321488%3B%26%2328771%3B%26%2338646%3B%26%2326178%3B%26%2325919%3B%26%2324220%3B%26%2331532%3B%26%2322777%3B%26%2327425%3B%26%2320844%3B%26%2322320%3B%26%2325918%3B%26%2338936%3B%26%2340657%3B%26%2323458%3B%26%2326494%3B'/>3du.tw @g0v hackath1n |&nbsp; 台灣零時政府第壹次公地放領黑客松</a></p><p></p><p>以下粗略列出需要做的事，想參與的人，請直接把名字寫進去。</p><p></p><p><b>資料來源</b></p><p><a href='http://140.111.34.54/e_dictionary.aspx#'/>教育部電子辭典</a>網頁列了不少辭典，我們以《<a href='http://dict.revised.moe.edu.tw/'/>教育部重編國語辭典修訂本</a>》和《<a href='http://dict.idioms.moe.edu.tw/'/>成語典</a>》為起點，其他的有機會再加進來。</p><p></p><p><b>資料收集（Collection）</b></p><p>參與人：Audrey Tang, TonyQ Wang, kcwu&nbsp;</p><ul><li>《<a href='http://dict.revised.moe.edu.tw/'/>教育部重編國語辭典修訂本</a>》：<ul><li>2013 年一月底抓的, <a href='http://kcwu.csie.org/~kcwu/moedict/dict-revised.rawhtml.201301.tar.bz2'/>html raw data (tar.bz2)</a>&nbsp;</li>
+<li>另外有 2002,2004,2006 抓的版本, 可以找 kcwu 要</li></ul>
+</li>
+<li>《<a href='http://dict.idioms.moe.edu.tw/'/>成語典</a>》：TonyQ 的 <a href='https://github.com/tony1223/3du.tw-phrase'/>github</a><ul><li>資料下載: <a href="http://files.tonyq.org/export.json"><a href='http://files.tonyq.org/export.json'/>http://files.tonyq.org/export.json</a></a></li>
+<li>資料結構說明: <a href="https://gist.github.com/4646548"><a href='https://gist.github.com/4646548'/>https://gist.github.com/4646548</a></a><ul><li>MnO2: s/sourceDescripton/sourceDescription/</li>
+<li>SQL: <a href="http://files.tonyq.org/data.sql"><a href='http://files.tonyq.org/data.sql'/>http://files.tonyq.org/data.sql</a></a> (1/27 晚上重爬得一百筆）</li></ul>
+</li></ul>
+</li>
+<li>《<a href='http://xn--i6q78bz8rrjsrofsqvznntoa798at5o/'/>教育部臺灣閩南語常用詞辭典</a>》<ul><li>教育部提供的最新資料（Excel，CC-BY-ND 3.0 授權，不含華語索引）：</li></ul>
+<ul style="list-style: none;"><li><a href="http://www.audreyt.org/newdict/twblg_data_20130325.rar"><a href='http://www.audreyt.org/newdict/twblg_data_20130325.rar'/>http://www.audreyt.org/newdict/twblg_data_20130325.rar</a></a></li></ul>
+<ul><li>華語索引（自行取得，不屬於上述授權範圍）：</li></ul>
+<ul style="list-style: none;"><li><a href="http://www.audreyt.org/newdict/mandarin-to-twblg.txt"><a href='http://www.audreyt.org/newdict/mandarin-to-twblg.txt'/>http://www.audreyt.org/newdict/mandarin-to-twblg.txt</a></a></li></ul>
+<ul><li>@happyman 於 2013/3/24 取得的網頁資料： <a href="http://211.20.181.250/~happyman/taiwan_language.tgz"><a href='http://211.20.181.250/~happyman/taiwan_language.tgz'/>http://211.20.181.250/~happyman/taiwan_language.tgz</a></a></li>
+<li>另可參考 pcchen 用 lift xml 格式定義的河英詞典 <a href='https://github.com/pcchen/nan.lift'/>nan.lift</a> (CC BY-SA)</li></ul>
+</li>
+<li>《<a href='http://hakka.dict.edu.tw/hakkadict/index.htm'/>教育部臺灣客家語常用詞辭典</a>》<ul><li>@au 於 2013/03/25 取得的網頁資料（CC-BY-ND 3.0，含華語索引）：</li></ul>
+<ul style="list-style: none;"><li><a href="http://www.audreyt.org/newdict/hakka.tar.gz"><a href='http://www.audreyt.org/newdict/hakka.tar.gz'/>http://www.audreyt.org/newdict/hakka.tar.gz</a></a></li></ul>
+</ul>
+<ul><li>《<a href='http://dict2.variants.moe.edu.tw/variants/'/>教育部異體字字典</a>》<ul><li>字表: <a href="https://github.com/kcwu/moedict-variants"><a href='https://github.com/kcwu/moedict-variants'/>https://github.com/kcwu/moedict-variants</a></a></li></ul>
+</li>
+<li>《<a href='http://dict.concised.moe.edu.tw/'/>國語辭典簡編本</a>》<ul><li>@au 於 2013/05/18 取得的網頁資料： <a href="http://www.audreyt.org/newdict/concised.tar.gz"><a href='http://www.audreyt.org/newdict/concised.tar.gz'/>http://www.audreyt.org/newdict/concised.tar.gz</a></a></li></ul>
+</li>
+<li>《<a href='http://www.hanviet.org/'/>漢越詞典摘引</a>》<ul><li>原始字詞來源: <a href='http://nguyendu.com.free.fr/langues/hanviet.htm'/>Hán Việt Tự Điển Thiều Chửu</a></li>
+<li>這個網站資料整裡的其他參考來源<ul><li><a href='http://140.111.34.46/newDict/dict/index.html'/>Quốc Ngữ Từ Điển 國語辭典(Taiwan)</a></li>
+<li><a href='http://www.zdic.net/zd/zi/zdice7zdic9dzdic96.htm'/>Hán Điển 漢典</a></li>
+<li><a href='http://www.chinese-tools.com/tools/chinese-dictionary.html'/>Chinese Chinese Dictionary</a></li>
+<li><a href='http://xh.5156edu.com/html5/139741.html'/>Tân Hoa Tự Điển 新華字典</a></li>
+<li><a href='http://www.mdbg.net/chindict/chindict.php?istm=1'/>MDBG Chinese-English Dictionary</a></li></ul>
+</li>
+<li><a href='http://vi.wikipedia.org/wiki/Thi%E1%BB%81u_Ch%E1%BB%ADu'/>Thiều Chửu</a> 原來是這位已故人士。</li>
+<li>版權問題尚待釐清</li></ul>
+</ul>
+
+<p><b>資料解析（Parsing）</b></p><p>參與人：kcwu, MnO2, favonia</p><ul><li>《<a href='http://dict.revised.moe.edu.tw/'/>教育部重編國語辭典修訂本</a>》：kcwu<ul><li>工作內容：用 2007 年版的 html raw data 當輸入檔，把需要的欄位抽出來。程式在 <a href='https://github.com/g0v/moedict-process'/>moedict-process</a>, 輸出的 json 檔在 <a href='https://github.com/g0v/moedict-data'/>moedict-data</a>,&nbsp; bz2 在<a href='http://kcwu.csie.org/~kcwu/moedict/'/>這</a></li>
+<li>前述的 json 跟後述的 sqlite db 檔中對於造字仍保留 {[xxxx]}</li>
+<li>整理編碼和造字圖的基礎工作請看 <a href='https://hackpad.com/uGgOPAFgxDM'/>3du.tw Encoding Meshup</a>，成果的 unicode 對照表在 <a href='https://github.com/g0v/moedict-epub'/>moedict-epub</a></li></ul>
+</li>
+<li>《<a href='http://dict.idioms.moe.edu.tw/'/>成語典</a>》：MnO2<ul><li>MnO2: 將典故等HTML欄位的sanitizing &amp; re-structuring, 目前只有很 naive 地把東西拔掉， 請見 pull request log: <a href="https://github.com/tony1223/3du.tw-phrase/pull/2"><a href='https://github.com/tony1223/3du.tw-phrase/pull/2'/>https://github.com/tony1223/3du.tw-phrase/pull/2</a></a>&nbsp;</li>
+<li>TonyQ: 已 Merge&nbsp;</li></ul>
+</li>
+<li>《<a href='http://xn--i6q78bz8rrjsrofsqvznntoa798at5o/'/>教育部臺灣閩南語常用詞辭典</a>》<ul><li>CSV 及 JSON 檔，含造字資料：<a href="https://github.com/g0v/moedict-data-twblg"><a href='https://github.com/g0v/moedict-data-twblg'/>https://github.com/g0v/moedict-data-twblg</a></a></li>
+<li>dict-twblg.json 檔格式和 dict-revised.json 大致相容，惟 synonyms/antonyms 提到 heteronyms 層級（而非 definitions 層級）。</li>
+<li>造字請見 <a href='https://hackpad.com/wLO3GClHOUO'/>3du.tw Holok Hakka Map</a>（共筆檢字已結束）</li></ul>
+</li>
+<li>《<a href='http://hakka.dict.edu.tw/hakkadict/index.htm'/>教育部臺灣客家語常用詞辭典</a>》</li></ul>
+
+<p><b>資料儲存與索引（Database and Indexing）</b></p><p>參與人：albb0920</p><p>工作內容：了解《<a href='http://dict.revised.moe.edu.tw/'/>教育部重編國語辭典修訂本</a>》和《<a href='http://dict.idioms.moe.edu.tw/'/>成語典</a>》的資料欄位，設計出儲存和索引的方式（一開始不必最佳化，先求有，再改良），好實作 API。</p><ul><li>albb0920: <a href='https://hackpad.com/8I4XU6xc4QJ#3du.tw%20DB%20schema%20draft'/>Schema</a></li></ul>
+
+<p><b>API 設計</b></p><p></p><p>參與人：<a href='https://hackpad.com/ep/profile/-3othgyRWJMbj5G6yJcfaP0'/>Ping Yeh</a></p><p>第一步只提供 RESTful interface，回傳 JSON。細節詳見 <a href='https://hackpad.com/95jKjray8uR'/>3du.tw API Design</a>。</p><ul><li>2013-01-27 12:45pm <a href='https://hackpad.com/ep/profile/-3othgyRWJMbj5G6yJcfaP0'/>Ping Yeh</a> 初步 API 完成。</li></ul>
+
+<p><b>API 實作</b></p><p>參與人：albb0920, au, viirya</p><ul><li>使用 rails 3 實作<ul><li><a href="https://github.com/albb0920/dict-3du"><a href='https://github.com/albb0920/dict-3du'/>https://github.com/albb0920/dict-3du</a></a></li></ul>
+</li>
+<li>另一個實作，單純用靜態 json 檔加上 nginx 模組 -au<ul><li><a href="https://github.com/g0v/moedict.tw"><a href='https://github.com/g0v/moedict.tw'/>https://github.com/g0v/moedict.tw</a></a></li>
+<li>已穩定運行在 dotCloud 上: <a href="https://www.moedict.tw/uni/%E6%B7%B7"><a href='https://www.moedict.tw/uni/%E6%B7%B7'/>http</a><a href='https://www.moedict.tw/uni/%E6%B7%B7'/>s</a><a href='https://www.moedict.tw/uni/%E6%B7%B7'/>://www.moedict.tw/uni/%E6%B7%B7</a></a></li>
+<li>目前有三個端點:<ul><li>/raw/ 是 kcwu 抓的源 json 檔，Big5 區之外的字以造字碼 {[abcd]} 表示。</li>
+<li>/uni/ 是把 {[abcd]} 轉成相應的 Unicode 字元。&lt;-- 客戶端用這個通常最方便。</li>
+<li>/pua/ 與 /uni/ 相同，只是動態組字改用 @medicalwei 的造字替代。</li>
+<li>另支援 JSONP，但 callback= 參數須固定為 moedict_jsonp_callback:<ul><li><a href="https://www.moedict.tw/pua/%E9%9A%B8%E8%AE%8A?callback=moedict_jsonp_callback"><a href='https://www.moedict.tw/pua/%E9%9A%B8%E8%AE%8A?callback=moedict_jsonp_callback'/>http</a><a href='https://www.moedict.tw/pua/%E9%9A%B8%E8%AE%8A?callback=moedict_jsonp_callback'/>s</a><a href='https://www.moedict.tw/pua/%E9%9A%B8%E8%AE%8A?callback=moedict_jsonp_callback'/>://www.moedict.tw/pua/%E9%9A%B8%E8%AE%8A?callback=moedict_jsonp_callback</a></a></li>
+<li>用 $.ajax 的話，設定 { jsonpCallback: &quot;moedict_jsonp_callback&quot; } 即可，如：<ul><li>$.ajax({ url: &quot;<a href="https://www.moedict.tw/pua/%E9%9A%B8%E8%AE%8A"><a href='https://www.moedict.tw/pua/%E9%9A%B8%E8%AE%8A'/>http</a><a href='https://www.moedict.tw/pua/%E9%9A%B8%E8%AE%8A'/>s</a><a href='https://www.moedict.tw/pua/%E9%9A%B8%E8%AE%8A'/>://www.moedict.tw/pua/%E9%9A%B8%E8%AE%8A</a></a>&quot;, dataType: &quot;jsonp&quot;, jsonpCallback: &quot;moedict_jsonp_callback&quot; , success: console.log })</li></ul>
+</li></ul>
+</li>
+<li>也支援 CORS (Access-Control-Allow-Origin: *)。</li></ul>
+</li>
+<li>此外，「內文自動斷詞」的端點在 /a/：<ul><li>例如：<a href="https://www.moedict.tw/a/萌.json"><a href='https://www.moedict.tw/a/%E8%90%8C.json'/>https://www.moedict.tw/a/萌.json</a></a></li>
+<li>斷詞後的所有條目（with URI Escape key）可在 <a href="https://www.moedict.tw/a/autolinked.json"><a href='https://www.moedict.tw/a/autolinked.json'/>https://www.moedict.tw/a/autolinked.json</a></a> 取得。</li>
+<li>從簡寫 JSON 還原到 HTML 的三項 regex 替換，請見 <a href="https://github.com/audreyt/moedict-webkit/blob/master/main.ls#L176"><a href='https://github.com/audreyt/moedict-webkit/blob/master/main.ls#L176'/>https://github.com/audreyt/moedict-webkit/blob/master/main.ls#L176</a></a></li></ul>
+</li></ul>
+</li>
+<li>用 node.js + sqlite 的伺服器版本 -&nbsp;<ul><li><a href="http://moedict-viirya.dotcloud.com"><a href='http://moedict-viirya.dotcloud.com/'/>http://moedict-viirya.dotcloud.com</a></a></li>
+<li><a href="https://github.com/viirya/moedict-web"><a href='https://github.com/viirya/moedict-web'/>https://github.com/viirya/moedict-web</a></a></li></ul>
+</li>
+<li>將全形句號「．」（FF0E）替換為真正的間隔號「·」（00B7）。</li>
+<li>建議可以加上威妥瑪拼音——漢語拼音為主、威式為輔，某些地名條目（如台北市）比較不突兀。</li></ul>
+
+<p><b>伺服（Serving）</b></p><p>參與人：adaam（主機）, j100002ben（web framework）</p><ul><li>目前位置在 dict.3du.tw</li>
+<li>目前更新到kcwu的最新DB(2013/1/31)</li>
+<li>j100002ben：Send me email to request the login pem file or anythings for the server :)<ul><li><s>54.249.240.69</s>（Amazon Large 關機中XD）：Ubuntu 12.04 with Nginx, nodejs, Ruby on Rails, Percona Mysql Server, and MongoDB</li>
+<li>54.249.232.225（Amazon Micro）：Ubuntu 12.04 with Nginx, rbenv, Ruby, Bundler, Rails, sqLite</li></ul>
+</ul>
+
+<p><b>Client 範例</b></p><ul><li>Web client: bananaplle, pingooo<ul><li>mockup初版 <a href="http://docs.google.com/drawings/d/1OWonzGqD7veiilxYJf1l8m3WqnM-NUvohb3wW8ZbFIY/edit"><a href='http://docs.google.com/drawings/d/1OWonzGqD7veiilxYJf1l8m3WqnM-NUvohb3wW8ZbFIY/edit'/>http://docs.google.com/drawings/d/1OWonzGqD7veiilxYJf1l8m3WqnM-NUvohb3wW8ZbFIY/edit</a></a></li>
+<li>搜尋的方式如果畫這樣： <a href="http://docs.google.com/drawings/d/1KlVIQwVOjC0_M7mbhDKqwRwNvTPb0fauAH5D9yWimRo/edit"><a href='http://docs.google.com/drawings/d/1KlVIQwVOjC0_M7mbhDKqwRwNvTPb0fauAH5D9yWimRo/edit'/>http://docs.google.com/drawings/d/1KlVIQwVOjC0_M7mbhDKqwRwNvTPb0fauAH5D9yWimRo/edit</a></a></li></ul>
+</li>
+<li>網頁版: au<ul><li><a href="https://moedict.tw/"><a href='https://moedict.tw/'/>https://moedict.tw/</a></a></li>
+<li>定義部份的每個字都可以點按，也適合在手機上交叉檢索。</li><ul class="taskdone"><li><b>定義部份點按的斷詞有一點問題</b></li></ul>
+<ul class="comment"><li>像講義(<a href="https://www.moedict.tw/#講義)"><a href='https://www.moedict.tw/#講義'/>https://www.moedict.tw/#講義</a>)</a><a href='https://www.moedict.tw/#講義)會被斷成'/> </a>解釋裡的「闡釋說明書籍的義理」會被切成「闡釋-說明書-籍-的-義理」，「學校教師為學生編輯的」也會被切成「學校-教師-為學-生-編輯-的」</li>
+<li>斷詞的問題可以考慮用中研院的中文斷詞系統(<a href="http://ckipsvr.iis.sinica.edu.tw/)"><a href='http://ckipsvr.iis.sinica.edu.tw/'/>http://ckipsvr.iis.sinica.edu.tw/</a>)</a> 來解決</li>
+<li>如果這個階段有需要解決這樣的問題的話我願意認領</li>
+<li>太好了，請逕行認領，源資料在 <a href="https://github.com/g0v/moedict-data"><a href='https://github.com/g0v/moedict-data'/>https://github.com/g0v/moedict-data</a></a><a href='https://github.com/g0v/moedict-data%E8%A3%A1'/> </a>裡 (dict-revised.json)，請將斷詞程式及結果放在 GitHub 上，我會合併。</li><ul><li>斷詞程式做好了。東西放在 <a href="https://github.com/chyiro/moedict-data-chunker"><a href='https://github.com/chyiro/moedict-data-chunker'/>https://github.com/chyiro/moedict-data-chunker</a></a> ，輸出的結果在 moedict_data/dict-revised-chunked.7z 裡面(原始檔是164MB)。</li></ul>
+</li></ul>
+</li>
+<li>各瀏覽器（含 PhoneGap 版）皆支援自動完成。</li>
+<li><b>我（Chen Yijun）的一些建議改進方向：</b></li><ul class="taskdone"><li>將全形句號「．」（FF0E）替換為真正的間隔號「·」（00B7）。新版的[「漢字標準格式」將會支援顯示此符號為「全形」](<a href="http://css.hanzi.co/lab/201302/biaodian_fuhao_yangshi.html)"><a href='http://css.hanzi.co/lab/201302/biaodian_fuhao_yangshi.html'/>http://css.hanzi.co/lab/201302/biaodian_fuhao_yangshi.html</a>)</a>。</li><ul><li>已實作，感謝! -au</li></ul>
+</ul>
+<ul class="taskdone"><li>是不是應該支援HTML5的History API？而不是只用「#!」？</li><ul><li>目前已使用 History API。-au</li></ul>
+</ul>
+<ul class="taskdone"><li>建議不要用等寬字體顯示拼音，Georgia或無襯線字體搭配標楷體會比較好看。</li><ul><li>已實作，感謝! -au</li></ul>
+</ul>
+<ul class="task"><li>注音符號可以直接加在條目名稱上（[「漢字標準格式」支援直式標注](<a href="http://css.hanzi.co/lab/201302/manual.html#hanzi_zhuyin)"><a href='http://css.hanzi.co/lab/201302/manual.html#hanzi_zhuyin'/>http://css.hanzi.co/lab/201302/manual.html#hanzi_zhuyin</a>)</a>），並用cookies記錄使用者偏好以何種註音（注音、漢語拼音、威妥瑪拼音或不標注）來標注條目名稱。</li></ul>
+<ul class="taskdone"><li>&nbsp;把字詞都用`&lt;a&gt;`包裹後，就會出現避頭點的問題，下面是竹取直排JS的解決方法：</li><ul><li>`&lt;span style=&quot;display: inline-block;&quot;&gt;&lt;a href=&quot;#嗎&quot;&gt;嗎&lt;/a&gt;？&lt;/span&gt;`</li>
+<li>已實作，感謝! -au</li></ul>
+</ul>
+<ul class="taskdone"><li>連接號乙式無論全形或半形，看來都很怪，[建議改用甲式](<a href="http://www.edu.tw/files/site_content/M0001/hau/h15.htm)"><a href='http://www.edu.tw/files/site_content/M0001/hau/h15.htm'/>http://www.edu.tw/files/site_content/M0001/hau/h15.htm</a>)</a>。</li><ul><li>已實作，感謝! -au</li></ul>
+</ul>
+</ul>
+<ul style="list-style: none;"><li><br/></li></ul>
+</ul>
+<ul><li>Web client and REST API: viirya<ul><li><a href="http://moedict-viirya.dotcloud.com/"><a href='http://moedict-viirya.dotcloud.com/'/>http://moedict-viirya.dotcloud.com/</a></a></li>
+<li><a href="https://github.com/viirya/moedict-web"><a href='https://github.com/viirya/moedict-web'/>https://github.com/viirya/moedict-web</a></a></li>
+<li>網路查詢介面透過 REST API 即時取得自動完成結果</li>
+<li>API 查詢方式如 au 的 <a href="https://gist.github.com/4648550"><a href='https://gist.github.com/4648550'/>https://gist.github.com/4648550</a></a>，輸出 JSON</li></ul>
+</li>
+<li>手機 client: (也請參考下面 &quot;轉換為現有的字典格式/add-on&quot; 區)<ul><li>iPhone client :<ul><li>&nbsp;jpsun 因為有 server 可用了，開發網路查詢版。</li>
+<li>我可以寫iOS版，先用離線寫，速度會比較快。 (dryman) 目前功能有<ul><li>Core Data，他內建的cache機制還是比sqlite快</li>
+<li>NSBurstTrie，支援prefix search</li>
+<li>使用table view來呈現data</li></ul>
+</li>
+<li>已完成 iOS 版 API Client</li>
+<li><a href='https://github.com/jamessa/MoeDict'/>典雅的 iOS 版</a>，這版的想法是希望在 iOS 內建繁體中文字典時，能有個簡便的界面，讓所有的中文 app 可以使用 3du.tw 的成果。</li>
+<li><a href='https://github.com/pct/moedict-ios-app'/>萌字典 iOS App</a> (pct)，使用 Titanium 撰寫</li></ul>
+</li>
+<li>PhoneGap client: au<ul><li><a href="https://github.com/audreyt/moedict-webkit/tree/master/android"><a href='https://github.com/audreyt/moedict-webkit/tree/master/android'/>https://github.com/audreyt/moedict-webkit/tree/master/android</a></a></li>
+<li>把 WebKit client 包進 Cordova 裡，直接做成離線 App</li>
+<li>JSON 資料庫平均切成 1024 份，分別存成 txt 檔再動態載入。</li>
+<li>已上傳至 <a href='https://play.google.com/store/apps/details?id=org.audreyt.dict.moe'/>Google Play</a> 及 <a href='https://itunes.apple.com/tw/app/meng-dian/id599429224'/>App Store</a>。</li></ul>
+</li>
+<li>Firefox OS/Mobile web client:<ul><li>(問一下這是可以自己認領的嗎 yurenju (當然可以 -au))</li></ul>
+</li></ul>
+</li>
+<li>Tablet client: 待認領</li>
+<li>離線 Standalone App<ul><li>au: 簡單的 bin/moe: <a href="https://gist.github.com/4648550"><a href='https://gist.github.com/4648550'/>https://gist.github.com/4648550</a></a><ul><li>以 <a href="https://github.com/g0v/moedict-epub/blob/master/db2unicode.pl"><a href='https://github.com/g0v/moedict-epub/blob/master/db2unicode.pl'/>https://github.com/g0v/moedict-epub/blob/master/db2unicode.pl</a></a><a href='https://github.com/g0v/moedict-epub/blob/master/db2unicode.pl%E8%BD%89%E7%82%BA'/> </a>轉為 Unicode-only database</li></ul>
+</li>
+<li>racklin: 跨平台 moe-dictionary-app: <a href="https://github.com/racklin/moe-dictionary-app"><a href='https://github.com/racklin/moe-dictionary-app'/>https://github.com/racklin/moe-dictionary-app</a></a><ul><li>Wiktionary 維基詞典 Add-on 完成。</li>
+<li>以 <a href="https://github.com/g0v/moedict-epub/blob/master/db2unicode.pl"><a href='https://github.com/g0v/moedict-epub/blob/master/db2unicode.pl'/>https://github.com/g0v/moedict-epub/blob/master/db2unicode.pl</a></a><a href='https://github.com/g0v/moedict-epub/blob/master/db2unicode.pl%E8%BD%89%E7%82%BA'/> </a>轉為 Unicode-only database</li>
+<li>TonyQ 成語典 Add-on 。</li></ul>
+</li>
+<li>racklin: 新版跨平台 App，以 moedict-app 為基礎開發：<ul><li>測試版下載: <a href="http://app.moedict.org/"><a href='http://app.moedict.org/'/>http://app.moedict.org/</a></a></li>
+<li>GitHub Repo: (待補)</li></ul>
+</li>
+<li>tonytonyjan: Chrome Extension：<a href="http://goo.gl/ZEC2B"><a href='http://goo.gl/ZEC2B'/>http://goo.gl/ZEC2B</a></a><ul><li>使用畫面：<a href="http://youtu.be/oetCzmsT6IY"><a href='http://youtu.be/oetCzmsT6IY'/>http://youtu.be/oetCzmsT6IY</a></a></li>
+<li>Github: <a href="https://github.com/tonytonyjan/hahadict"><a href='https://github.com/tonytonyjan/hahadict'/>https://github.com/tonytonyjan/hahadict</a></a></li>
+<li>JSON 格式字典 <a href="http://tonytonyjan.net/downloads/3du/dict.json.bz2"><a href='http://tonytonyjan.net/downloads/3du/dict.json.bz2'/>http://tonytonyjan.net/downloads/3du/dict.json.bz2</a></a> (根據 kcwu 提供的 <a href='http://kcwu.csie.org/~kcwu/tmp/moedict/development.sqlite3.bz2'/>development.sqlite3</a>)</li>
+<li>不妨參考 <a href='http://www.audreyt.org/newdict/moedict-webkit/'/>WebKit 網頁版</a>&nbsp; 的動態載入方式... (<a href='https://github.com/audreyt/moedict-webkit'/>GitHub repo</a>)&nbsp;<ul><li>謝謝，我最後還是沒有用這個方式 Orz</li></ul>
+</li></ul>
+</li>
+<li>Sars: Windows Store app (Win8): <a href="https://github.com/wenpei/moedict-win8-app"><a href='https://github.com/wenpei/moedict-win8-app'/>https://github.com/wenpei/moedict-win8-app</a></a></li>
+<li>.<a href='https://github.com/darkthread/MoeDictNet'/>NET LINQ版應用範例</a>: 不依賴DB, 將JSON資料轉為.NET物件後序列化保存, 直接使用LINQ方式查詢</li></ul>
+</li>
+<li>轉換為現有的字典格式/add-on<ul><li>stardict 格式: elleryq (<a href='http://goo.gl/jvqGf'/>字典檔下載</a> , <a href='https://github.com/elleryq/moe2stardict'/>轉換程式</a> )<ul><li>做 android 上的 colordict 自動安裝字典 add-on: 待認領 (colordict 可以直接用startdict 的字典檔，但是需要打包自動安裝)</li></ul>
+</li>
+<li>epwing 格式: 待認領</li>
+<li>Kindle 辭典格式：待認領</li>
+<li>Pleco: <a href="http://www.plecoforums.com/threads/the-moe-dictionary-is-now-open-source.3606/page-4#post-29408"><a href='http://www.plecoforums.com/threads/the-moe-dictionary-is-now-open-source.3606/page-4#post-29408'/>http://www.plecoforums.com/threads/the-moe-dictionary-is-now-open-source.3606/page-4#post-29408</a></a></li>
+<li>yllan: Mac OS X 字典: <a href="https://github.com/yllan/moedict-mac"><a href='https://github.com/yllan/moedict-mac'/>https://github.com/yllan/moedict-mac</a></a><ul><li><a href="http://moe.hypo.cc/"><a href='http://moe.hypo.cc/'/>http://</a><a href='http://moe.hypo.cc/'/>moe.hypo.cc/</a></a><ul><li>最新 build 好的字典檔（越新的在越下面 orz），解開放到 ~/Library/Dictionaries 底下，再開啟 Dictionary.app 即可。如果沒看到的話要去 Preferences 裡面把萌典勾起來。</li></ul>
+</li>
+<li><a href="http://ci.hypo.cc/"><a href='http://ci.hypo.cc/'/>http://ci.hypo.cc/</a></a><ul><li>有 push 上 github repo 就會自動 build，不過盡量不要來這台抓 artifacts，因為是辦公室網路。純抓檔請用 <a href="http://moe.hypo.cc/"><a href='http://moe.hypo.cc/'/>http://moe.hypo.cc/</a></a>。</li></ul>
+</li>
+<li>以 <a href="https://github.com/g0v/moedict-epub/blob/master/db2unicode.pl"><a href='https://github.com/g0v/moedict-epub/blob/master/db2unicode.pl'/>https://github.com/g0v/moedict-epub/blob/master/db2unicode.pl</a></a><a href='https://github.com/g0v/moedict-epub/blob/master/db2unicode.pl%E8%BD%89%E7%82%BA'/> </a>轉為 Unicode-only database</li></ul>
+</li>
+<li>字詞發音<ul><li>GCIN的作者有自己錄製給GCIN使用的發音檔，是以注音符號為檔名，應該可以直接關聯起來。(授權為 GNU LGPL3 or GNU GPL3 dual license) <a href="http://cle.linux.org.tw/trac/wiki/GcinDistros#gcinvoicedata"><a href='http://cle.linux.org.tw/trac/wiki/GcinDistros#gcinvoicedata'/>http://cle.linux.org.tw/trac/wiki/GcinDistros#gcinvoicedata</a></a><ul><li>感謝，已放到 GitHub 上：<a href="http://audreyt.github.io/gcin-voice-data/"><a href='http://audreyt.github.io/gcin-voice-data/'/>http://audreyt.github.io/gcin-voice-data/</a></a></li>
+<li>Source OGG: <a href="http://audreyt.github.io/gcin-voice-data/ogg/%E3%84%85%E3%84%9A/3.ogg"><a href='http://audreyt.github.io/gcin-voice-data/ogg/%E3%84%85%E3%84%9A/3.ogg'/>http://audreyt.github.io/gcin-voice-data/ogg/%E3%84%85%E3%84%9A/3.ogg</a></a></li>
+<li>Converted MP3: <a href="http://audreyt.github.io/gcin-voice-data/mp3/%E3%84%85%E3%84%9A/3.mp3"><a href='http://audreyt.github.io/gcin-voice-data/mp3/%E3%84%85%E3%84%9A/3.mp3'/>http://audreyt.github.io/gcin-voice-data/mp3/%E3%84%85%E3%84%9A/3.mp3</a></a></li></ul>
+</li>
+<li>Zhspeak也有發音檔在 sourceforge 上，以漢語拼音為檔名。<a href="http://www.eguidedog.net/ekho.php"><a href='http://www.eguidedog.net/ekho.php'/>http://www.eguidedog.net/ekho.php</a></a> (GPL v2) 另外espeak中的中文詞發音規則也可以使用？</li>
+<li>連線使用 Google Translate 的發音？</li></ul>
+</ul>
+</ul>
+
+<p></p><p></p><p><b>git repository 整合</b></p><p>參與人：待認領</p><p>把大家的 code 和 data 整合起來，方便散佈，並討論選定授權條款。</p><p>這部分是整合大家的code到github上面嗎? 帳號是有公用的還是先用自己的?</p><p></p><p>目前的 repo 列表：</p><ul><li><a href="https://github.com/g0v/moedict-epub"><a href='https://github.com/g0v/moedict-epub'/>https://github.com/g0v/moedict-epub</a></a> 圖字列表、ePub 生成、WebFont</li>
+<li><a href="https://github.com/g0v/moedict-process"><a href='https://github.com/g0v/moedict-process'/>https://github.com/g0v/moedict-process</a></a> HTML 轉 SQLite3</li>
+<li><a href="https://github.com/g0v/moedict-data"><a href='https://github.com/g0v/moedict-data'/>https://github.com/g0v/moedict-data</a></a> 轉出來的 json 檔</li>
+<li><a href="https://github.com/racklin/moe-dictionary-app"><a href='https://github.com/racklin/moe-dictionary-app'/>https://github.com/racklin/moe-dictionary-app</a></a> XUL 離線 App</li>
+<li><a href="https://github.com/yllan/moedict-mac"><a href='https://github.com/yllan/moedict-mac'/>https://github.com/yllan/moedict-mac</a></a> Mac OS X 用字典檔格式</li>
+<li><a href="https://github.com/audreyt/moedict-webkit"><a href='https://github.com/audreyt/moedict-webkit'/>https://github.com/audreyt/moedict-webkit</a></a> WebKit 網頁版、PhoneGap 離線版</li>
+<li><a href="https://github.com/g0v/moedict-app"><a href='https://github.com/g0v/moedict-app'/>https://github.com/</a><a href='https://github.com/g0v/moedict-app'/>g0v/moedict-</a><a href='https://github.com/g0v/moedict-app'/>app</a></a> 上述離線版預先整理好的 app，含資料檔</li>
+<li><a href="https://github.com/albb0920/dict-3du"><a href='https://github.com/albb0920/dict-3du'/>https://github.com/albb0920/dict-3du</a></a> JSON API</li>
+<li><a href="https://github.com/tonytonyjan/hahadict"><a href='https://github.com/tonytonyjan/hahadict'/>https://github.com/tonytonyjan/hahadict</a></a> Chrome Extension 離線版</li>
+<li><a href="https://github.com/pct/moedict-ios-app"><a href='https://github.com/pct/moedict-ios-app'/>https://github.com/pct/moedict-ios-app</a></a> iOS App (需配合底下 moedict-server)</li>
+<li><a href="https://github.com/pct/moedict-server"><a href='https://github.com/pct/moedict-server'/>https://github.com/pct/moedict-server</a></a> API Server (using node.js)</li>
+<li><a href="https://github.com/viirya/moedict-web"><a href='https://github.com/viirya/moedict-web'/>https://github.com/viirya/moedict-web</a></a> Web client、REST API</li>
+<li><a href="https://github.com/ericsk/moedict-rt"><a href='https://github.com/ericsk/moedict-rt'/>https://github.com/ericsk/moedict-rt</a></a> WinRT Component (給 Windows 8 App 用的元件)</li>
+<li><a href="https://github.com/wenpei/moedict-win8-app"><a href='https://github.com/wenpei/moedict-win8-app'/>https://github.com/wenpei/moedict-win8-app</a></a> Windows Store App (Windows 8)</li>
+<li><a href="https://github.com/zonble/sublime_moedict"><a href='https://github.com/zonble/sublime_moedict'/>https://github.com/zonble/sublime_moedict</a></a> SublimeText plugin (on audreyt.org JSON api)</li>
+<li><a href="https://github.com/zonble/MOEDict"><a href='https://github.com/zonble/MOEDict'/>https://github.com/zonble/MOEDict</a></a> Cocoa Touch 離線版</li>
+<li><a href="https://github.com/tomjpsun/3du.tw-ios"><a href='https://github.com/tomjpsun/3du.tw-ios'/>https://github.com/tomjpsun/3du.tw-ios</a></a><a href='https://github.com/tomjpsun/3du.tw-ios'/> </a>Cocoa Touch 線上查詢版<a href='https://itunes.apple.com/tw/app/g0v-yun-duan-zi-dian/id606170413?l=zh&amp;mt=8'/>上架</a></li>
+<li><a href="https://github.com/jamessa/MoeDict"><a href='https://github.com/jamessa/MoeDict'/>https://github.com/jamessa/MoeDict</a></a> Cocoa Touch 線上版</li>
+<li><a href="https://github.com/g0v/moedict-data-twblg"><a href='https://github.com/g0v/moedict-data-twblg'/>https://github.com/g0v/moedict-data-twblg</a></a> 臺灣閩南語常用詞辭典的資料檔</li>
+<li><a href="https://github.com/elleryq/moe2stardict"><a href='https://github.com/elleryq/moe2stardict'/>https://github.com/elleryq/moe2stardict</a></a><a href='https://github.com/elleryq/moe2stardict%E8%BD%89%E7%82%BA'/> </a>轉為 stardict 辭典檔的程式</li>
+<li><a href="https://github.com/rschiang/moedict-meego"><a href='https://github.com/rschiang/moedict-meego'/>https://github.com/rschiang/moedict-meego</a></a> MeeGo Harmattan (N9) App</li>
+<li><a href="https://github.com/darkthread/MoeDictNet"><a href='https://github.com/darkthread/MoeDictNet'/>https://github.com/darkthread/MoeDictNet</a></a> 教育部國語辭典JSON檔解析及應用(.NET版)</li></ul>
+
+</body>
+</html>
