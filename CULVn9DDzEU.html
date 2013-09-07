@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="1911"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$CULVn9DDzEU</title>
+</head>
+<body><h1>公報自動化</h1><p></p><h2>來龍去脈（想解決什麼問題）</h2><p>靈感來源</p><ul style="list-style: none;"><li>每週公報 &amp; 每期(月)公報整理的時候需要耗費大量人力。</li></ul>
+<p>主旨</p><ul style="list-style: none;"><li>簡少公報編輯/整理時人力的浪費。</li></ul>
+
+<p>牽涉領域</p><ul class="comment"><li>e.g.教育 / 環保 / 醫療 / 社福 / 核電 / 都市計畫 / 勞工權益 / 食品安全 ...（會變成專案 tag）</li></ul>
+<ul style="list-style: none;"><li><br/></li></ul>
+<p>現有類似專案</p><ul class="comment"><li>現成的是否可以直接使用？或者有什麼不足之處？國外是否有類似的專案可參考？</li></ul>
+
+<p>相關組織單位</p><ul class="comment"><li>e.g.公督盟/綠盟/司改會/苦勞網/泛科學...（會變成專案 tag）</li></ul>
+
+<p>相關專案</p><ul class="comment"><li>衍生自某專案/衍生出某專案/API串接自某專案...etc.</li></ul>
+
+<p>授權方式</p><ul style="list-style: none;"><li>CC0 (之類的吧...</li></ul>
+<ul class="comment"><li>程式碼部分（如 MIT/BSD）</li>
+<li>文件部分（如 CC-BY）</li></ul>
+
+<p>使用資料</p><ul style="list-style: none;"><li>每週公報</li></ul>
+<p>專案目前狀態</p><ul class="comment"><li>構想 / 規劃 / 雛形 / 實作</li></ul>
+<ul style="list-style: none;"><li>規劃</li></ul>
+
+<h2>目標與功能（要如何解決）</h2><p>預定使用者</p><ul style="list-style: none;"><li>公報編輯人員</li></ul>
+<p>預定功能</p><ul style="list-style: none;"><li>簡化每期公報製作</li></ul>
+<p>使用方式</p><ul style="list-style: none;"><li>每月第一天自動彙集前四周公報，產生每月公報，轉po到hackpad與tumblr上。</li></ul>
+
+<h2>實做細節（非技術背景可跳填）</h2><p></p><p>使用技術</p><ul><li>Java</li>
+<li><a href='https://hackpad.com/Hackpad-API-v1.0-k9bpcEeOo2Q'/>Hackpad API</a></li>
+<li><a href='http://www.tumblr.com/docs/en/api/v2'/>tumblr API</a></li></ul>
+<ul style="list-style: none;"><li><br/></li></ul>
+<p>協作工具</p><ul><li>github repo：</li>
+<li>hackfoldr 工作資料夾網址：</li>
+<li>google drive 共用資料夾網址：</li>
+<li>google groups 討論群組：</li>
+<li>irc channel：</li></ul>
+
+<p>產出檔案格式</p><ul style="list-style: none;"><li>Txt, hackpad, tumblr</li><ul class="comment"><li>umm...目前想法是每期公報整理完之後 change to tumblr, 發佈。</li>
+<li>或是由新聞中心發佈至 tumblr</li>
+<li>標準HTML格式？（就像目前 irc log 一樣）</li></ul>
+</ul>
+
+<p>進度與 to-do</p><ul class="task"><li>公報所使用的 tag list</li><ul class="comment"><li>最佳解(?)是從專案中心撈...不過專案中心還沒出現(艸</li>
+<li>另外會有類似詞指同一個分類(專案)的問題... 也許做一個主 tag 然後有相關的 子 tag 歸為同一類</li></ul>
+</ul>
+<ul class="task"><li>每期公報分類的簡短介紹</li><ul class="comment"><li>初始想法見 <a href='/5yFP2C3hm3k'/>2013 年 8 月份公報</a> 已編完的(萌典、政誌...etc</li>
+<li>在 tag list 能從專案中心撈之前應該會先由同一個( tag list的) hackpad 收集</li></ul>
+</ul>
+<ul class="task"><li>hackpad 轉 post to tumblr, hackpad (或其他地方</li><ul class="comment"><li>這部份需要再討論，每期公報主要是對外發佈，因此「可能」還是會避免使用 hackpad ( 所以較有可能會轉到 tumblr 再由新聞中心發佈至FB/G+ )</li></ul>
+</ul>
+<ul class="task"><li>irc log 的 filter</li><ul class="comment"><li>this maybe undo. (((在 irc 上有討論關於 filter 的問題...</li>
+<li>原始想法是簡化每週公報的製作</li></ul>
+</ul>
+
+<h2>成果展示（規劃文件、雛形/草稿、原型/初稿、正式發佈/完稿）</h2><p></p><p></p><p></p><h2>開發者</h2><p></p><p>技術指導</p><p></p><p>分工與成員</p><ul class="task"><li>NeedsData: <a href='/ep/profile/FhF2TCnIycW'/>lanfon</a> <a href='/ep/profile/v6ozRKwVLwr'/>Chun Wei Lee</a> 需要資料（擷取、清理）</li>
+<li>NeedsTech: <a href='/ep/profile/v6ozRKwVLwr'/>Chun Wei Lee</a> 需要技術支援（程式、架站 etc)</li>
+<li>NeedsProcess: <a href='/ep/profile/FhF2TCnIycW'/>lanfon</a> <a href='/ep/profile/v6ozRKwVLwr'/>Chun Wei Lee</a> 需要幫忙設計作業流程</li></ul>
+<ul class="comment"><li>設定成 project registry 中的 tags，需要幫忙的會自動 promote 到 g0v project hub</li></ul>
+
+<h2>discuss</h2><ul class="comment"><li>發現我完全在狀況外0rz</li>
+<li>主要是自動彙整每一期公報，我覺得每天的公報還是需要人寫，不過有部分可以自動化</li>
+<li>ex. 每個專案完成的issue自動可以通知，然後再整理在公報上這樣</li>
+<li>然後 四週的公報結束，到最後月報可以自動讀取四周內容，整理成你整理的那樣XD</li>
+<li>每月(期)公報目前主要的分類是以專案為分類，其實在 irc 上應該是可以從 log 中 parse 出關鍵字，這樣在整理每週(or 日)公報的時候速度上會比較快一點</li>
+<li>前幾天有想到在 irc log 加上 filter ，本來是想說可以篩選出相關討論會比較好整理，不過如果(?) filter 不限定只能用在 ID 上的話，也許可以做為某專案討論的關鍵字查詢(這邊解釋的好像有點難懂0rz...)</li>
+<li>可是你怎麼知道parse出來的關鍵字，是完成的事</li>
+<li>這也是一個問題0rz 本來單純只是想到這樣可以簡單整理出一些資訊</li>
+<li>恩恩恩，不過也不一定所有討論都會出現專案關鍵字，這只能大概篩選。</li>
+<li>我是想說，確定能做的就是每次公報的自動合併，在每天寫的時候增加tag，最後就依這些tag自動分類。</li>
+<li>其實在整理八月份公報的時候，主題是每個條目(?)都看過之後才分類出來的，昨天(今天早上?)在整理「未整理/無法分類」那部份的時候，有些條目其實是靠相關資訊去判斷...(像是tisa-map我本來以為是立院相關的，後來發現好像是服貿的...</li>
+<li>yep, 所以我的想法是，如果 irc log 可以做出 filter ( maybe we do this )，那也許可以請大家在討論的時候順手在對話框後 cc 專案名稱 or # 之類的 etc, 總之就是加個可以被 filter 濾到的關鍵字，那至少它可以先被自動加進當日的公報中，那在後續也許就不用每日整個重追 irc 靠人工的方式去篩，在每週(or..幾天後?)有閒再去比對 &amp; 補充。 ( 這是 每週公報的 part )</li>
+<li>XD，所以請大家增加公報時，順便加上tag好了。</li>
+<li>我覺得 irc + filter可行，但能不能自動加進公報這點蠻難的，因為你要說明完成什麼事，要解析與意，慮完訊息還是要靠人工重新說明是什麼事完成，既然都會追log，倒不如寫進公報時作處理就好。</li>
+<li>對欸... 不過總之 filter 可做(呣，應該說有做會比較方便?)</li>
+<li>會比較方便，但能不能增進增加公報的速度，倒不一定，還是要人工重組語句。</li>
+<li>呣.....每(月)期公報的部份，也許編寫(當週公報)的時候在條目首(or 尾)加上專案 tag ，這樣就做... 不過這個跟 idea pool 有關聯啊QAQ</li>
+<li>yes，這也比較容易</li>
+<li>我的意思是說相關的 tag , 像是服貿協議(專案)其實可以簡稱成「服貿」，或是立法院專案有時候可能會簡稱成立院之類的，這些專案的名稱來源是源自於 idea pool 之前或之後已經正在進行中或是被拿出來做的專案，所以才會有 tag（或是說會出現在 irc 上被討論 or 被寫進公報?）；因此 tags 的內容其實有一部份是「專案名稱」…但專案名稱也會有縮寫的問題，因此在公報加 tag 的時候，也許會需要一個 tag list 之類的東西，來避免指同一個專案但是用到不同的「表示」方式。 ok ya</li>
+<li>yes，跟我想的一樣，在每份公報前面(或哪裡)列個 tag list</li>
+<li>tag list 的放置會有考量點</li>
+<li>反正有共識是放 tag ， 最後每期公報依據 tag 分類，然後依據時間排序。</li>
+<li>有點覺得用 skype 之類的討論會比較快0rz</li>
+<li>哈哈哈，應該在 irc 私人訊息聊就好XD</li>
+<li>maybe 先看什麼做起來比較快的先完成(嗎?) 呣.......</li></ul>
+
+</body>
+</html>
