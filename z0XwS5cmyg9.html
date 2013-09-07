@@ -3,10 +3,10 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="3902"/>
+<meta name="version" content="4320"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$z0XwS5cmyg9</title>
 </head>
-<body><h1>鄉民關心你 - API</h1><p></p><p>Version: 0.1</p><p></p><h2>Background</h2><p>The backend is custom pgrest and the api is compatable with <a href="https://support.mongolab.com/entries/20433053-rest-api-for-mongodb"><a href='https://support.mongolab.com/entries/20433053-rest-api-for-mongodb'/>https://support.mongolab.com/entries/20433053-rest-api-for-mongodb</a></a></p><p></p><p>this api is possibled changed by implemented within json-ld (<a href="https://www.youtube.com/watch?v=tRTD2W4W8G4)"><a href='https://www.youtube.com/watch?v=tRTD2W4W8G4'/>https://www.youtube.com/watch?v=tRTD2W4W8G4</a>)</a></p><p></p><h2>Auth</h2><p></p><p>GET /auth/facebook # authenticated by facebook account. (default enabled)</p><p>GET /auth/twitter&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # authenticated by twitter account&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (default disabled)</p><p>GET /auth/google&nbsp;&nbsp;&nbsp;&nbsp; # authenticated by gooogle account&nbsp;&nbsp;&nbsp; (default disabled)</p><p>GET /me&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # get authenticatied user profile&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (default disabled)</p><p>GET /logout&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # logout, clear session</p><p>GET /logged&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # return true if user is authenticatied otherwise return false</p><p></p><h2>User</h2><p></p><p>PUT /collections/users/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # update a user</p><p>GET /collections/users&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # get all user</p><p>GET /collections/users/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # get a user</p><p></p><ul><li><b>_id</b>: user id</li>
+<body><h1>鄉民關心你 - API</h1><p></p><p>Version: 0.1</p><p></p><h2>Background</h2><p>The backend is custom pgrest and the api is compatable with <a href="https://support.mongolab.com/entries/20433053-rest-api-for-mongodb"><a href='https://support.mongolab.com/entries/20433053-rest-api-for-mongodb'/>https://support.mongolab.com/entries/20433053-rest-api-for-mongodb</a></a></p><p></p><p>this api is possibled changed by implemented within json-ld (<a href="https://www.youtube.com/watch?v=tRTD2W4W8G4)"><a href='https://www.youtube.com/watch?v=tRTD2W4W8G4'/>https://www.youtube.com/watch?v=tRTD2W4W8G4</a>)</a></p><p></p><h2>Auth</h2><p>git:master: unsupported</p><p>git:develop: support</p><p></p><p>GET /auth/facebook # authenticated by facebook account. (default enabled)</p><p>GET /me&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # get authenticatied user profile&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p>GET /logout&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # logout, clear session</p><p>GET /logged&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # return true if user is authenticatied otherwise return false</p><p></p><h2>User</h2><p>git:master: unsupported</p><p>git:develop: support</p><p></p><p>PUT /collections/users/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # update a user</p><p>GET /collections/users&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # get all user</p><p>GET /collections/users/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # get a user</p><p></p><ul><li><b>_id</b>: user id</li>
 <li><b>username</b>: The name of this user, suitable for display.</li>
 <li><b>name</b>:&nbsp;<ul><li><b>familyName:</b>The family name of this user, or &quot;last name&quot; in most Western languages.</li>
 <li><b>givenName:</b>The given name of this user, or &quot;first name&quot; in most Western languages.</li>
@@ -15,13 +15,13 @@
 <li><b>display_name</b>: the name a user want to display in the system</li>
 <li><b>photos</b>: array</li></ul>
 
-<p><b>User Preferences</b></p><p></p><p>GET /collection/user_prefs/{user id} #get a user preference</p><p>PUT /collection/user_prefs/{user id} #get a user preference</p><p></p><ul><li>_id: object id</li>
+<h2>User Preferences</h2><p></p><p>GET /collection/user_prefs/{user id} #get a user preference</p><p>PUT /collection/user_prefs/{user id} #get a user preference</p><p></p><ul><li>_id: object id</li>
 <li><b>user_id: </b>user id</li>
 <li><b>prefer_poston:</b> which system user prefer to use for posting a message (twitter/facebook/kunasim)</li>
 <li><b>subscriptions</b><ul><li><b>tags: </b>subscribed tags</li></ul>
 </ul>
 
-<p><b>Bookmarked Items</b></p><p></p><p>POST /collections/bookmarks/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # create a bookmarked item</p><p>GET /collections/bookmarks/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # get all bookmarked items</p><p>GET /collections/bookmarks/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # get a bookmarked item</p><p>PUT /collections/bookmarks/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # update a bookmarked item</p><p>DELETE /collections/bookmarks/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # delete a bookmarked item (won&rsquo;t delete resolved items, e.x article)</p><p></p><ul><li><b>_id: </b>Item id</li>
+<h2>Bookmarked Items</h2><p></p><p>POST /collections/bookmarks/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # create a bookmarked item</p><p>GET /collections/bookmarks/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # get all bookmarked items</p><p>GET /collections/bookmarks/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # get a bookmarked item</p><p>PUT /collections/bookmarks/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # update a bookmarked item</p><p>DELETE /collections/bookmarks/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # delete a bookmarked item (won&rsquo;t delete resolved items, e.x article)</p><p></p><ul><li><b>_id: </b>Item id</li>
 <li><b>normal_url:</b> The original url for the added item</li>
 <li><b>resolved_id:</b> A unique identifier for the resolved item</li>
 <li><b>resolved_type:</b> The type resolved item belongs to</li>
@@ -57,9 +57,22 @@
 <li><b>has_videos: </b>0: no video; 1: has a video in the body of the article; 2: is a video</li>
 <li><b>videos</b>: Array of video data&nbsp;</li></ul>
 
-<p><b>Tags</b></p><p></p><p>POST /tags&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # create a tag</p><p>GET /tags/{tag name}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # get a tag by name</p><p>GET /tags/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # get a tag by id</p><p></p><ul><li><b>id: </b>tag id</li>
+<p><b>Tags</b></p><p></p><p>POST /collections/tags&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # create a tag</p><p>GET&nbsp;&nbsp; /collections/tags/{tag name}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # get a tag by name</p><p>GET&nbsp;&nbsp; /collections/tags/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # get a tag by id</p><p></p><ul><li><b>id: </b>tag id</li>
 <li><b>name: </b>tag name</li>
-<li><b>authors: </b>Array of authors</li></ul>
+<li><b>authors: </b>Array of authors</li>
+<li><b>is_issue: </b>return<b> </b>true if at least a user think this tag is an issue title.</li></ul>
 
-<p></p><p></p><p></p></body>
+<h2>Issues</h2><p></p><p>GET /collections/issues</p><p>GET /collections/issues/{id}</p><p></p><ul><li><b>tag_id:</b></li>
+<li><b>bookmarked_items</b></li>
+<li><b>ongoing_actions</b></li>
+<li><b>watcher:</b></li></ul>
+
+<h2>Standpoints</h2><p></p><p>GET /collections/standpoints</p><p></p><ul><li><b>_id: </b>object id</li>
+<li><b>issue: ...</b></li>
+<li><b>title</b>: standpoint title</li>
+<li><b>tags</b>: ....</li>
+<li><b>supportors: </b>[]</li>
+<li><b>againstors</b>: []</li></ul>
+
+</body>
 </html>
