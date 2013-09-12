@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="580"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$qjpEp6sdmih</title>
+</head>
+<body><h1>動民主 2.0 responsive plan</h1><ul class="comment"><li>純幻想，實做時請依臨床狀況調整 XD</li></ul>
+
+<p></p><p><b>尺寸變化</b></p><p></p><p>plans for vertical rhythm</p><ul class="comment"><li>之前在綠盟呼叫立委跟動民主 1.0 用過的，應該是可以實做，至於 horizontal grid 就沒概念了... 因為我沒寫過水平多欄的網頁 XDDD</li></ul>
+<ul><li>html body font size 預設 16px，使用 rem 當度量單位</li>
+<li>nav bar、menu bar... 等橫向長條區塊的垂直高度：3rem（符合 android ics design guideline 的 48 px）</li>
+<li>橫向長條區塊包含多行時，行高：2 rem，區塊上下邊緣與文字的距離：1 rem</li>
+<li>level 1 大 icon：感應區 2 rem x 2 rem，視覺大小高 1.5 rem（符合 android ics design guideline 的 24 px 和 32 px）</li></ul>
+
+<p><s>mobile (portrait) max-width: 480px</s></p><p>mobile (landscape) max-width: 640px</p><ul><li>一般字級 1 rem（16px）</li></ul>
+
+<p><s>tablet (portrait) max-width: 768px</s></p><p>tablet (landscape) max-width: 1024px</p><ul><li>一般字級 1.125 rem（18px）（老花 friendly）</li></ul>
+
+<p>desktop medium max-width: 1440px</p><ul><li>html body font size：18px 之類的，所有元素整體放大（老花 friendly）</li></ul>
+
+<p>desktop large min-width: 1440px</p><ul><li>html body font size：20px 之類的，所有元素整體放大（老花 friendly）</li></ul>
+
+<p></p><p><b>形狀變化</b></p><p></p><p>level 1 nav bar 由寬變窄時的行為</p><ul><li>第一次卡到時：水平選單變成垂直 spinner，網站名稱剩下 logo（類似標準 android ics main menu）</li>
+<li>第二次卡到時：搜尋框剩下 icon，要按一下 icon 才出現搜尋框</li>
+<li>第三次卡到時：使用者名稱隱藏，剩下頭像</li></ul>
+
+<p>「問答」level 2 nav bar 由寬變窄時的行為</p><ul><li>第一次卡到時：水平選單變成垂直 spinner，網站名稱剩下 logo（類似標準 android ics main menu）</li>
+<li>第二次卡到時：左右邊界和頁緣的距離變成 0（原本大概有 2 rem 左右）</li>
+<li>理論上應該不會再卡到第三次才對... XD</li></ul>
+
+<p></p><p></p></body>
+</html>
