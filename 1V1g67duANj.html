@@ -3,22 +3,54 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="333"/>
+<meta name="version" content="763"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$1V1g67duANj</title>
 </head>
-<body><h1>動民主 2.0 系統設計概念</h1><p></p><p>動民主 2.0 的基本組成是</p><ul><li>entry，有三種類型<ul><li>開放式問答題：像 stackoverflow 或 quora 的問題。用在一個人無法獨立完成、需要集思廣益的研究主題，像是「服貿協議對台灣各產業的衝擊」之類的。</li>
+<body><h1>動民主 2.0 系統設計概念</h1><p></p><p><b>動民主 2.0 的基本組成</b></p><p></p><ol><li>entry，有三種類型</li><ul><li>開放式問答題：像 stackoverflow 或 quora 的問題。用在一個人無法獨立完成、需要集思廣益的研究主題，像是「服貿協議對台灣各產業的衝擊」之類的。</li>
 <li>優缺點評估題：像 wikiargumants 並列某個見解的正反意見。對於要表決的提案有初步靈感、但細節還不明確的時候，可以作為提案的前置作業，像是「兵役從徵兵制改成募兵制有什麼優缺點」之類的。</li>
 <li>文章：像 blogger 或 google+ 的文章發表。當專業研究者已經針對某個主題做了完整的分析報告，可以不需要透過問答，直接把完整文章貼上來，像黃國昌、郝明義、李茂生之類的專業人士，通常習慣在自己 facebook 發表見解，希望他們可以不需要改變發文習慣，只要在動民主設定跟 facebook 同步發表即可。</li><ul class="comment"><li>所以動民主的編輯介面有同步發表到其他地方的選項，之後可能也需要 browser extension 讓他們在 facebook 發文時可以選擇同步發表至動民主</li></ul>
 </ul>
+</ol>
+<ol><li>collection，有四種類型</li><ul><li>一個 collection 的基本組成包括<ul><li>關連到此 collection 的所有 entries</li>
+<li>符合此類行 collection 特定用途的功能模組</li>
+<li>符合此類型 collection 特定用途的整合介面</li></ul>
+</li>
+<li>議案：分析研究用途<ul><li><br/></li></ul>
+</li>
+<li>提案：政策規劃用途<ul><li><br/></li></ul>
+</li>
+<li>專案：執行追蹤用途<ul><li><br/></li></ul>
+</li>
+<li>標籤：分類檢索用途，標籤內部又分為幾種類型<ul><li>領域</li>
+<li>主題</li>
+<li>國家/地區</li>
+<li>組織/單位</li>
+<li>行業/職位</li>
+<li>公眾人物</li>
+<li>族群</li>
+<li>自訂標籤</li></ul>
 </ul>
-<ul><li>collection，有四種類型<ul><li>議案：分析研究用的整合介面<ul><li>議案的組成是</li><ol><li>關連到此議案的所有 entries</li>
-<li><br/></li></ol>
-</ul>
-</ul>
-<ul><li>提案：政策規劃用的整合介面</li>
-<li>專案：實際執行用的整合介面</li>
-<li>標籤：分類檢索</li></ul>
+</ol>
+<ol><li>user，有兩種類型</li><ul><li>個人</li>
+<li>團體</li></ul>
+</ol>
+
+<p><b>各種關連</b></p><p></p><ul><li>entry-entry 之間的關連形式包括<ul><li>父子：A 的討論內容範圍涵蓋在 B 之內</li>
+<li>同義：不同標題，但指向同一個 thread，像 quora 的 alias</li>
+<li>近似：可能會以為是同義，但其實兩者並不同，標為近似後，可避免後人持續提出合併為同義題的請求</li>
+<li>前身：當兩個獨立 entry 經過使用者反應標註為同義，所有內容合併至另一個新的 thread，原本 entry 保留但凍結，成為合併後新 entry 的前身</li></ul>
+</li>
+<li>entry-collection 之間的關連形式包括<ul><li>相關：嗯... 就是被 tag 了</li></ul>
+</li>
+<li>collection-collection 之間的關連形式包括<ul><li>父子：同一類型的 collection 之間可以設定為父子關係（不同類型的不行）</li>
+<li>相關：不同類型的 collection 之間可以設定為相關（同 entry-collection 之間）</li></ul>
+</li>
+<li>entry-user 之間的關連形式包括<ul><li>訂閱</li>
+<li>收藏</li>
+<li><br/></li></ul>
+</li>
+<li>collection-user 之間的關連形式包括<ul><li><br/></li></ul>
 </ul>
 
-</body>
+<p><b>功能模組</b></p><p></p></body>
 </html>
