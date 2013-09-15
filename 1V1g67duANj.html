@@ -3,25 +3,17 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="941"/>
+<meta name="version" content="1499"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$1V1g67duANj</title>
 </head>
-<body><h1>&nbsp;動民主 2.0 系統設計概念</h1><p></p><p><b>動民主 2.0 的基本組成</b></p><p></p><ol><li>entry，有三種類型</li><ul><li>開放式問答題：像 stackoverflow 或 quora 的問題。用在一個人無法獨立完成、需要集思廣益的研究主題，像是「服貿協議對台灣各產業的衝擊」之類的。</li>
+<body><h1>動民主 2.0 系統設計概念</h1><p></p><h2>動民主 2.0 的基本組成</h2><p></p><ol><li>entry，有三種類型</li></ol>
+<ul style="list-style: none;"><li>不同類型的 entry 採用不同的功能模組</li><ul><li>開放式問答題：像 stackoverflow 或 quora 的問題。用在一個人無法獨立完成、需要集思廣益的研究主題，像是「服貿協議對台灣各產業的衝擊」之類的。</li>
 <li>優缺點評估題：像 wikiargumants 並列某個見解的正反意見。對於要表決的提案有初步靈感、但細節還不明確的時候，可以作為提案的前置作業，像是「兵役從徵兵制改成募兵制有什麼優缺點」之類的。`</li>
 <li>文章：像 blogger 或 google+ 的文章發表。當專業研究者已經針對某個主題做了完整的分析報告，可以不需要透過問答，直接把完整文章貼上來，像黃國昌、郝明義、李茂生之類的專業人士，通常習慣在自己 facebook 發表見解，希望他們可以不需要改變發文習慣，只要在動民主設定跟 facebook 同步發表即可。</li><ul class="comment"><li>所以動民主的編輯介面有同步發表到其他地方的選項，之後可能也需要 browser extension 讓他們在 facebook 發文時可以選擇同步發表至動民主</li></ul>
 </ul>
-</ol>
-<ol><li>collection，有四種類型</li><ul><li>一個 collection 的基本組成包括<ul><li>title</li>
-<li>summary（共筆）</li>
-<li>關連到此 collection 的所有 entries</li>
-<li>關連到此 collection 的其他 collections</li>
-<li>meta 資訊<ul><li>建立與修改的 log</li>
-<li>與同類型 collection 的關連（父子/同義）</li>
-<li>與不同類型 collection 的關連</li>
-<li><br/></li></ul>
-</li></ul>
-</li>
-<li>議案：分析研究用途<ul><li><br/></li></ul>
+</ul>
+<ol><li>collection，有四種類型</li></ol>
+<ul style="list-style: none;"><li>不同類型的 collection 採用不同的功能模組，且不能設定父子關連，只能互相 tag</li><ul><li>議案：分析研究用途<ul><li><br/></li></ul>
 </li>
 <li>提案：政策規劃用途<ul><li><br/></li></ul>
 </li>
@@ -35,12 +27,55 @@
 <li>族群</li>
 <li>自訂標籤</li></ul>
 </ul>
-</ol>
+</ul>
 <ol><li>user，有兩種類型</li><ul><li>個人</li>
 <li>團體</li></ul>
 </ol>
 
-<p><b>各種關連</b></p><p></p><ul><li>entry-entry 之間的關連形式包括<ul><li>父子：A 的討論內容範圍涵蓋在 B 之內</li>
+<h2>entry</h2><p></p><p><b>功能</b></p><ul><li>可收藏書籤（收藏後，如果喜好指數夠高的話會出現在個人 timeline 中）</li>
+<li>可訂閱（有新動態時會在 nav bar 右上角跳出小紅字）</li>
+<li>可分享（按下後自動帶出連結的 sns 帳號）</li>
+<li>可回應</li>
+<li>可追問（產生子 entry）</li>
+<li>可邀請其他使用者回應</li></ul>
+
+<p><b>組成</b></p><ul><li>content<ul><li>title（140 字以內）<ul><li>權限：開放共同編輯</li></ul>
+</li>
+<li>description（500 字以內）<ul><li>權限：開放共同編輯</li></ul>
+</li>
+<li>summary wiki<ul><li>權限：<ul><li>開放式問答 / 優缺點評估 - 開放共同編輯</li>
+<li>文章發表 - 僅作者可編輯</li></ul>
+</li>
+<li>功能：<ul><li>可加入個人 library</li></ul>
+</li></ul>
+</li>
+<li>responses（每則 response 都有獨立的推文串，每則推文 500 字以內）<ul><li>開放式問答 - answers</li>
+<li>優缺點評估 - pros &amp; cons</li>
+<li>文章發表 - suggestions</li></ul>
+</li></ul>
+</li>
+<li>meta<ul><li>log - entry 內容的建立與變更</li>
+<li>parent - 上一層問題，涵蓋範圍較廣較模糊的</li>
+<li>children - 下一層問題，涵蓋範圍較窄較明確的。產生方式：<ul><li>按下「追問」按鈕後將 new entry 編輯完成並發佈，new entry 就會自動和原 entry 產生父子關連</li>
+<li>或者也可以在 meta 編輯畫面手動設定父子關連</li></ul>
+</li>
+<li>alias - title 的別名，也就是同義 entry</li>
+<li>similiar - 容易混淆而被誤認為同義的近似 entry</li>
+<li>與不同類型 collections 的關連</li>
+<li>針對 collection 本深的爭議與討論</li></ul>
+</ul>
+
+<h2>collection</h2><p></p><p><b>組成</b></p><ul><li>title</li>
+<li>summary（共筆）</li>
+<li>關連到此 collection 的所有 entries</li>
+<li>關連到此 collection 的其他 collections</li>
+<li>meta 資訊<ul><li>建立與修改的 log</li>
+<li>與同類型 collections 的關連（父子/同義）</li>
+<li>與不同類型 collections 的關連</li>
+<li>針對 collection 本深的爭議與討論</li></ul>
+</ul>
+
+<h2>user</h2><p></p><h2>各種關連</h2><p></p><ul><li>entry-entry 之間的關連形式包括<ul><li>父子：A 的討論內容範圍涵蓋在 B 之內</li>
 <li>同義：不同標題，但指向同一個 thread，像 quora 的 alias</li>
 <li>近似：可能會以為是同義，但其實兩者並不同，標為近似後，可避免後人持續提出合併為同義題的請求</li>
 <li>前身：當兩個獨立 entry 經過使用者反應標註為同義，所有內容合併至另一個新的 thread，原本 entry 保留但凍結，成為合併後新 entry 的前身</li></ul>
@@ -57,9 +92,7 @@
 <li>collection-user 之間的關連形式包括<ul><li><br/></li></ul>
 </ul>
 
-<p><b>功能模組</b></p><ul><li>entry 功能</li>
-<li>collection 功能</li>
-<li>會議室 ?</li>
+<p><b>功能模組</b></p><ul><li>會議室 ?</li>
 <li>企劃室 ?</li>
 <li>辦公室 ?</li>
 <li>眺望台 ?</li>
