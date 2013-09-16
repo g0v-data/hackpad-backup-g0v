@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2605"/>
+<meta name="version" content="2673"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$1V1g67duANj</title>
 </head>
 <body><h1>動民主 2.0 系統設計概念</h1><p></p><h2>動民主 2.0 的基本組成</h2><p></p><ol><li>entry，有三種類型</li></ol>
@@ -109,7 +109,7 @@
 
 <h2>collection</h2><p></p><p><b>功能</b></p><ul><li>可收藏書籤（收藏後，如果興趣指數夠高的話會出現在個人 timeline 中）</li>
 <li>可訂閱（有新動態時會在 nav bar 右上角跳出小紅字）</li>
-<li>看板型的 collection 可打包（）</li></ul>
+<li>看板型的 collection 可打包（匯出供離線閱讀）</li></ul>
 
 <p><b>組成</b></p><ol><li>content</li><ul><li>title（80 字以內）<ul><li>權限<ul><li>開放共同編輯</li></ul>
 </li></ul>
@@ -122,11 +122,16 @@
 <li>功能<ul><li>可加入個人 library</li></ul>
 </li></ul>
 </li>
-<li>related entries<ul><li>功能<ul><li>一般檢視功能 - 可排序、可選擇時間區間</li>
-<li>可在此 collection 內新增 entry</li></ul>
+<li>related entries<ul><li>權限<ul><li>開放共同編輯關連</li></ul>
+</li>
+<li>功能<ul><li>一般檢視功能 - 可排序、可選擇時間區間</li>
+<li>可在此 collection 內新增 related entry</li></ul>
 </li></ul>
 </li>
-<li>related issues / related proposals / related projects<ul><li><br/></li></ul>
+<li>related issues / related proposals / related projects<ul><li>權限<ul><li>開放共同編輯關連</li></ul>
+</li>
+<li>功能<ul><li>可在此 collection 內新增 related collection</li></ul>
+</li></ul>
 </li>
 <li>comments（summary wiki 底下的推文串，500 字以內）<ul><li>權限<ul><li>僅 comment 作者可編輯</li></ul>
 </li>
@@ -134,6 +139,12 @@
 <li>可 mark as resolved 同時封存（按鈕「已解決」）</li></ul>
 </li>
 <li>類似概念<ul><li>google docs 的 comments</li></ul>
+</li></ul>
+</li>
+<li>export<ul><li>功能<ul><li>預覽自動匯出的結果</li>
+<li>更新預覽畫面</li>
+<li>在預覽畫面中編輯匯出結果</li>
+<li>匯出 html / pdf 供離線閱讀</li></ul>
 </ul>
 </ul>
 </ol>
