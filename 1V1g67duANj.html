@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2210"/>
+<meta name="version" content="2390"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$1V1g67duANj</title>
 </head>
 <body><h1>動民主 2.0 系統設計概念</h1><p></p><h2>動民主 2.0 的基本組成</h2><p></p><ol><li>entry，有三種類型</li></ol>
@@ -93,26 +93,28 @@
 </ul>
 </ol>
 <ol><li>meta</li><ul><li>log - entry 內容的建立與變更記錄</li>
-<li>connection<ul><li>與其他 entries 的關連<ul><li>parent - 上一層問題，涵蓋範圍較廣較模糊的</li>
+<li>statics - 訂閱、書籤、分享、回應等各種統計數據</li>
+<li>comments - 針對 entry 定位、適當性等非關內容本身的討論</li>
+<li>connection<ul><li>關連的其他 entries<ul><li>parent - 上一層問題，涵蓋範圍較廣較模糊的</li>
 <li>children - 下一層問題，涵蓋範圍較窄較明確的。產生方式：<ul><li>按下「追問」按鈕後將 new entry 編輯完成並發佈，new entry 就會自動和原 entry 產生父子關連</li>
 <li>或者也可以在 meta 編輯畫面手動設定父子關連</li></ul>
 </li>
 <li>alias - title 的別名，也就是同義 entry</li>
 <li>similiar - 容易混淆而被誤認為同義的近似 entry</li></ul>
 </li>
-<li>與 collections 的關連</li>
-<li>與 users 的關連</li></ul>
-</li>
-<li>comments - 針對 entry 定位、適當性等非關內容本身的討論</li></ul>
+<li>關連的 collections - 看板、標籤</li>
+<li>關連的 users - 我追蹤的人裡面哪些人正訂閱這個 entry</li></ul>
+</ul>
 </ol>
 
 <h2>collection</h2><p></p><p><b>功能</b></p><ul><li>可收藏書籤（收藏後，如果興趣指數夠高的話會出現在個人 timeline 中）</li>
-<li>可訂閱（有新動態時會在 nav bar 右上角跳出小紅字）</li></ul>
+<li>可訂閱（有新動態時會在 nav bar 右上角跳出小紅字）</li>
+<li>看板型的 collection 可打包（）</li></ul>
 
-<p><b>組成</b></p><ol><li>content</li><ul><li>title（140 字以內）<ul><li>權限<ul><li>開放共同編輯</li></ul>
+<p><b>組成</b></p><ol><li>content</li><ul><li>title（80 字以內）<ul><li>權限<ul><li>開放共同編輯</li></ul>
 </li></ul>
 </li>
-<li>description（500 字以內）<ul><li>權限<ul><li>開放共同編輯</li></ul>
+<li>description（140 字以內）<ul><li>權限<ul><li>開放共同編輯</li></ul>
 </li></ul>
 </li>
 <li>summary wiki<ul><li>權限<ul><li>開放共同編輯</li></ul>
@@ -120,19 +122,13 @@
 <li>功能<ul><li>可加入個人 library</li></ul>
 </li></ul>
 </li>
-<li>responses<ul><li>權限<ul><li>僅作者可編輯</li></ul>
-</li>
-<li>功能<ul><li>可 upvote</li>
-<li>可 downvote</li>
-<li>可加入個人 library</li></ul>
-</li>
-<li>名稱<ul><li>開放式問答 - answers</li>
-<li>優缺點評估 - pros &amp; cons</li>
-<li>文章發表 - suggestions</li></ul>
+<li>related entries<ul><li>功能<ul><li>一般檢視功能 - 可排序、可選擇時間區間</li>
+<li>可在此 collection 內新增 entry</li></ul>
 </li></ul>
 </li>
-<li>comments（response 底下的推文串，500 字以內）<ul><li>權限<ul><li>僅 comment 作者可編輯</li>
-<li>僅 comment 作者可標註為已解決並封存（？）</li></ul>
+<li>related issues / related proposals / related projects<ul><li><br/></li></ul>
+</li>
+<li>comments（summary wiki 底下的推文串，500 字以內）<ul><li>權限<ul><li>僅 comment 作者可編輯</li></ul>
 </li>
 <li>功能<ul><li>可 upvote（按鈕「+1」）</li>
 <li>可 mark as resolved 同時封存（按鈕「已解決」）</li></ul>
@@ -142,16 +138,17 @@
 </ul>
 </ol>
 <ol><li>meta</li><ul><li>log - collection 內容的建立與變更</li>
-<li>connection<ul><li>與 entries 的關連</li>
-<li>與相同子類別 collections 的關連<ul><li>parent - 上一層議題，涵蓋範圍較廣較模糊的</li>
+<li>statics - 訂閱、書籤等各種統計數據</li>
+<li>comments - 針對 collection 定位、適當性等非關內容本身的討論</li>
+<li>connection<ul><li>關連的 entries</li>
+<li>關連的相同子類別的 collections<ul><li>parent - 上一層議題，涵蓋範圍較廣較模糊的</li>
 <li>children - 下一層議題，涵蓋範圍較窄較明確的。產生方式：<ul><li>在 meta 編輯畫面手動設定父子關連</li></ul>
 </li>
 <li>alias - title 的別名，也就是同義 collection</li></ul>
 </li>
-<li>與不同子類別 collections 的關連</li>
-<li>與 users 的關連</li></ul>
-</li>
-<li>comments - 針對 collection 定位、適當性等非關內容本身的討論</li></ul>
+<li>關連的不同子類別的 collections</li>
+<li>關連的 users</li></ul>
+</ul>
 </ol>
 
 <p></p><h2>user</h2><p></p><h2>各種關連</h2><p></p><ul><li>entry-entry 之間的關連形式包括<ul><li>父子：A 的討論內容範圍涵蓋在 B 之內</li>
