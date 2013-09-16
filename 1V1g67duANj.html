@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2673"/>
+<meta name="version" content="2768"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$1V1g67duANj</title>
 </head>
 <body><h1>動民主 2.0 系統設計概念</h1><p></p><h2>動民主 2.0 的基本組成</h2><p></p><ol><li>entry，有三種類型</li></ol>
@@ -17,7 +17,7 @@
 </ul>
 <ol><li>collection，有兩大類型，十種子類別</li></ol>
 <ul style="list-style: none;"><li>不同類型的 collection 採用不同的功能模組，且不能設定父子關連，只能互相 tag</li><ul><li>board 看板型 collection：用來執行某些特定任務，分為幾種子類別</li></ul>
-<ul class="comment"><li>用詞思考中：about 關於 / group 群組 / board 看板 / forum 討論區...</li><ul><li>議案：分析研究用途</li>
+<ul class="comment"><li>用詞思考中：about 關於 / group 群組 / board 看板 / forum 討論區...</li><ul><li>議題：分析研究用途</li>
 <li>提案：政策規劃用途</li>
 <li>專案：執行追蹤用途</li></ul>
 </li>
@@ -144,7 +144,10 @@
 <li>export<ul><li>功能<ul><li>預覽自動匯出的結果</li>
 <li>更新預覽畫面</li>
 <li>在預覽畫面中編輯匯出結果</li>
-<li>匯出 html / pdf 供離線閱讀</li></ul>
+<li>儲存編輯過的匯出設定</li>
+<li>分享編輯過的匯出設定</li>
+<li>匯出 html / pdf 供離線閱讀</li>
+<li>採用別人的匯出設定</li></ul>
 </ul>
 </ul>
 </ol>
@@ -153,12 +156,14 @@
 <li>comments - 針對 collection 定位、適當性等非關內容本身的討論</li>
 <li>connection<ul><li>關連的 entries</li>
 <li>關連的相同子類別的 collections<ul><li>parent - 上一層議題，涵蓋範圍較廣較模糊的</li>
-<li>children - 下一層議題，涵蓋範圍較窄較明確的。產生方式：<ul><li>在 meta 編輯畫面手動設定父子關連</li></ul>
+<li>children - 下一層議題，涵蓋範圍較窄較明確的。產生方式：<ul><li>按下「新增子 issue / proposal / project」按鈕後將 new collection 編輯完成並發佈，new collection 就會自動和原 collection 產生父子關連</li>
+<li>在 meta 編輯畫面手動設定父子關連</li></ul>
 </li>
 <li>alias - title 的別名，也就是同義 collection</li></ul>
 </li>
-<li>關連的不同子類別的 collections</li>
-<li>關連的 users</li></ul>
+<li>關連的不同子類別的 collections。產生方式：<ul><li>按下「新增相關 issue / proposal / project」按鈕後將 new collection 編輯完成並發佈，new collection 就會自動和原 collection 產生關連</li></ul>
+</li>
+<li>關連的 users - 我追蹤的人裡面哪些人正訂閱這個 entry</li></ul>
 </ul>
 </ol>
 
@@ -185,5 +190,5 @@
 <li>眺望台 ?</li>
 <li>成就系統 ?&nbsp;</li></ul>
 
-<p></p><p></p><p>-- note 0916 --</p><p></p><p></p><p>議案 -&gt; 議題</p><p></p><p>發表：上下都放</p><p></p><p>要不要 downvote</p><p></p><p>comment 跟 answer 混淆</p><p></p><p>指定我作答 / 推薦我作答 - 合併 - 縮短檢視 bar 長度</p><p></p><p>排序箭頭跟選單合併否？</p><p></p><p>library 的 feedback 應該加在按鈕本身</p><p></p><p>內容被引用時跳出 feedback</p><p></p><p>畫出 life cycle</p><p></p><p>專案追蹤有 calendar</p><p></p><p>需要 use case</p><p></p><p>針對政黨或工作小組 use case</p><p></p><p>政黨需求：</p><p>增加黨員，增加和民眾的互動、參與感（不是單方面的）</p><p>稀釋個別黨員行為的對黨造成的負面觀感</p><p>網路參政的需求</p><p>so...方便訊息流通和捐款是黨最低層次對網路民主的要求(新的民主實踐方式)</p><p>but,一個黨的內部民主，要到什麼樣的層度? (封閉性/開放度)</p><p></p><p>打破台灣現有傳統政治文化，掃街拜票，花大錢選舉的文化，台灣保證金是全球數一數二高，20萬 - 網路參政要有募資功能？</p><p></p><p>綠黨黨章中黨員大會才能提案（沒效率</p><p>中執委會議內容在網路上可以 pre 討論</p><p></p><p>黨員的期望：已經習慣代議制度，要解決的問題是代議-&gt;直接</p><p>網路支黨部可以直接面對群眾....</p><p></p><p></p><p>下線：</p><p>charles - ngo 網路架設</p><p>文彥 - 生態綠老闆，關注議題：公平貿易協會</p><p>余宛如 - 生態綠共同創辦人，綠黨共同召集人</p><p>家華 - 台大政治所碩士，公民審議 - e.g.tnr... 原能會委託核研所辦政策論壇 etc.&nbsp;</p><p>ttcat -&nbsp;</p><p></p><p>ly 鄭遠祥</p><p></p><p></p><p></p><p></p></body>
+<p></p><p></p><p>-- note 0916 --</p><p></p><p></p><p>議案 -&gt; 議題</p><p></p><p>發表：上下都放</p><p></p><p>要不要 downvote？ - 如果會有人上來亂，問糟糕問題，那可能就需要 downvote，或者用 report 代替 downvote。report 選項可以學 g+：1.</p><p></p><p>comment 跟 answer 混淆</p><p></p><p>邀請我作答 / 推薦我作答 - 合併 - 縮短檢視 bar 長度</p><p>新問題</p><p>探索</p><p>訂閱</p><p>書籤</p><p>我的</p><p></p><p>排序箭頭跟選單合併否？</p><p></p><p>library 的 feedback 應該加在按鈕本身</p><p></p><p>內容被引用時跳出 feedback</p><p></p><p>畫出 life cycle</p><p></p><p>專案追蹤有 calendar</p><p></p><p>需要 use case</p><p></p><p>針對政黨或工作小組 use case</p><p></p><p>政黨需求：</p><p>增加黨員，增加和民眾的互動、參與感（不是單方面的）</p><p>稀釋個別黨員行為的對黨造成的負面觀感</p><p>網路參政的需求</p><p>so...方便訊息流通和捐款是黨最低層次對網路民主的要求(新的民主實踐方式)</p><p>but,一個黨的內部民主，要到什麼樣的層度? (封閉性/開放度)</p><p></p><p>打破台灣現有傳統政治文化，掃街拜票，花大錢選舉的文化，台灣保證金是全球數一數二高，20萬 - 網路參政要有募資功能？</p><p></p><p>綠黨黨章中黨員大會才能提案（沒效率</p><p>中執委會議內容在網路上可以 pre 討論</p><p></p><p>黨員的期望：已經習慣代議制度，要解決的問題是代議-&gt;直接</p><p>網路支黨部可以直接面對群眾....</p><p></p><p></p><p>下線：</p><p>charles - ngo 網路架設</p><p>文彥 - 生態綠老闆，關注議題：公平貿易協會</p><p>余宛如 - 生態綠共同創辦人，綠黨共同召集人</p><p>家華 - 台大政治所碩士，公民審議 - e.g.tnr... 原能會委託核研所辦政策論壇 etc.&nbsp;</p><p>ttcat -&nbsp;</p><p></p><p>ly 鄭遠祥</p><p></p><p></p><p></p><p></p></body>
 </html>
