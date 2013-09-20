@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="3330"/>
+<meta name="version" content="3545"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$1V1g67duANj</title>
 </head>
 <body><h1>動民主 2.0 系統設計概念</h1><p></p><h2>動民主 2.0 的基本組成</h2><p></p><ol><li>entry，有三種類型</li></ol>
@@ -115,7 +115,7 @@
 
 <h2>collection</h2><p></p><p><b>功能</b></p><ul><li>可收藏書籤（收藏後，如果興趣指數夠高的話會出現在個人 timeline 中）</li>
 <li>可訂閱（有新動態時會在 nav bar 右上角跳出小紅字）</li>
-<li>看板型的 collection 可打包（匯出供離線閱讀）</li></ul>
+<li>可打包（匯出供離線閱讀）</li></ul>
 
 <p><b>組成</b></p><ol><li>content</li><ul><li>title（80 字以內）<ul><li>權限<ul><li>開放共同編輯</li></ul>
 </li></ul>
@@ -173,7 +173,40 @@
 </ul>
 </ol>
 
-<p></p><h2>user</h2><p></p><p><b>功能</b></p><ul><li>可收藏書籤（收藏後，如果興趣指數夠高的話會出現在個人 timeline 中）</li>
+<p><b>issue 議題</b></p><p>介面</p><ul><li>議題摘要共筆<ul><li>權限：開放共同編輯</li></ul>
+</li>
+<li>相關問答 (數字)</li>
+<li>相關提案 (數字)</li>
+<li>相關專案 (數字)</li>
+<li>meta</li></ul>
+
+<p><b>proposal 提案</b></p><p>介面</p><ul><li>提案摘要共筆<ul><li>權限：開放共同編輯</li></ul>
+</li>
+<li>提案列表（動民主 1.0 的 issue 頁）</li>
+<li>相關問答 (數字)</li>
+<li>關連 / 延伸閱讀<ul><li>相關議題 (數字)</li>
+<li>相關專案 (數字)</li></ul>
+</li>
+<li>meta</li></ul>
+
+<p><b>project 專案</b></p><p>介面</p><ul><li>專案摘要共筆<ul><li>權限：僅 assigned 者可編輯</li></ul>
+</li>
+<li>專案執行者名單</li>
+<li>專案 google calendar / hackfoldr / google drive / google groups / ... 內嵌頁（optional）</li>
+<li>相關問答 (數字)</li>
+<li>關連<ul><li>相關議題 (數字)</li>
+<li>相關提案 (數字)</li></ul>
+</li>
+<li>meta</li></ul>
+
+<p><b>tag 標籤</b></p><p>介面</p><ul><li>標籤摘要共筆<ul><li>權限：開放共同編輯</li></ul>
+</li>
+<li>相關問答 (數字)</li>
+<li>相關議題 (數字)</li>
+<li>相關提案 (數字)</li>
+<li>meta</li></ul>
+
+<h2>user</h2><p></p><p><b>功能</b></p><ul><li>可收藏書籤（收藏後，如果興趣指數夠高的話會出現在個人 timeline 中）</li>
 <li>可訂閱（有新動態時會在 nav bar 右上角跳出小紅字）</li>
 <li>可舉報（若發現是spammer / 黨工）</li>
 <li>可封鎖（封鎖後對方無法 follow 或 tag 我）</li></ul>
@@ -232,11 +265,14 @@
 <li>引入代幣機制同時也會產生操作誘因，引誘人追逐數字……這不是動民主所需要的。動民主需要的是榮譽感、對自己的言論負責任的謹慎態度。這些都不是任何點數可以換來的。相對地，量化的點數還可能令人感到被估價了，而讓動機變得不單純。</li>
 <li>結論：沒有點數 XD</li></ul>
 
-<p></p><p><b>-- note 0916 --</b></p><p></p><p></p><p>議案 -&gt; 議題</p><p></p><p>發表：上下都放</p><p></p><p>要不要 downvote？</p><ul><li>如果會有人上來亂，問糟糕問題，那可能就需要 downvote，或者用 report 代替 downvote。report 選項可以學 g+：1.spam 2.騷擾 3.謾罵... etc.</li></ul>
+<p></p><p><b>-- note 0916 --</b></p><p></p><p></p><ul class="taskdone"><li>議案 -&gt; 議題</li></ul>
+
+<p>發表：上下都放</p><p></p><p>要不要 downvote？</p><ul><li>如果會有人上來亂，問糟糕問題，那可能就需要 downvote，或者用 report 代替 downvote。report 選項可以學 g+：1.spam 2.騷擾 3.謾罵... etc.</li></ul>
 
 <p>comment 跟 answer 混淆</p><ul><li>在 comment 區塊加上說明文字？「這裡用來討論命題本身的定位、措辭是否恰當，回答問題請至xxx」之類的</li></ul>
 
-<p>邀請我作答 / 推薦我作答 - 合併 - 縮短檢視 bar 長度</p><p>檢視 bar</p><ul><li>新問題</li>
+<ul class="task"><li>邀請我作答 / 推薦我作答 - 合併 - 縮短檢視 bar 長度</li></ul>
+<p>檢視 bar</p><ul><li>新問題</li>
 <li>探索</li>
 <li>訂閱</li>
 <li>書籤</li>
@@ -247,8 +283,13 @@
 <li>我的回答</li></ul>
 </ul>
 
-<p>排序箭頭跟選單合併否？</p><p></p><p>library 的 feedback 應該加在按鈕本身</p><p></p><p>內容被引用時跳出 feedback</p><p></p><ul class="task"><li>畫出 life cycle</li>
+<p>排序箭頭跟選單合併否？</p><p></p><ul class="task"><li>library 的 feedback 應該加在按鈕本身</li>
+<li>內容被引用時跳出 feedback</li></ul>
+
+<ul class="task"><li>畫出 life cycle</li>
 <li>需要 use case</li></ul>
 
-<p>專案追蹤有 calendar</p><p></p><p></p><p>書籤自訂分類（evernote）</p><p></p><p></p><p>針對政黨或工作小組 use case</p><p></p><p>政黨需求：</p><p>增加黨員，增加和民眾的互動、參與感（不是單方面的）</p><p>稀釋個別黨員行為的對黨造成的負面觀感</p><p>網路參政的需求</p><p>so...方便訊息流通和捐款是黨最低層次對網路民主的要求(新的民主實踐方式)</p><p>but,一個黨的內部民主，要到什麼樣的層度? (封閉性/開放度)</p><p></p><p>打破台灣現有傳統政治文化，掃街拜票，花大錢選舉的文化，台灣保證金是全球數一數二高，20萬 - 網路參政要有募資功能？</p><p></p><p>綠黨黨章中黨員大會才能提案（沒效率</p><p>中執委會議內容在網路上可以 pre 討論</p><p></p><p>黨員的期望：已經習慣代議制度，要解決的問題是代議-&gt;直接</p><p>網路支黨部可以直接面對群眾....</p><p></p><p></p><p>下線：</p><p>charles - ngo 網路架設</p><p>文彥 - 生態綠老闆，關注議題：公平貿易協會</p><p>余宛如 - 生態綠共同創辦人，綠黨共同召集人</p><p>家華 - 台大政治所碩士，公民審議 - e.g.tnr... 原能會委託核研所辦政策論壇 etc.&nbsp;</p><p>ttcat -&nbsp;</p><p></p><p>ly 鄭遠祥</p><p></p><p></p><p></p><p></p></body>
+<ul class="taskdone"><li>專案追蹤有 calendar - 已列入</li></ul>
+
+<p>書籤自訂分類（evernote）</p><p></p><p></p><p>針對政黨或工作小組 use case</p><p></p><p>政黨需求：</p><p>增加黨員，增加和民眾的互動、參與感（不是單方面的）</p><p>稀釋個別黨員行為的對黨造成的負面觀感</p><p>網路參政的需求</p><p>so...方便訊息流通和捐款是黨最低層次對網路民主的要求(新的民主實踐方式)</p><p>but,一個黨的內部民主，要到什麼樣的層度? (封閉性/開放度)</p><p></p><p>打破台灣現有傳統政治文化，掃街拜票，花大錢選舉的文化，台灣保證金是全球數一數二高，20萬 - 網路參政要有募資功能？</p><p></p><p>綠黨黨章中黨員大會才能提案（沒效率</p><p>中執委會議內容在網路上可以 pre 討論</p><p></p><p>黨員的期望：已經習慣代議制度，要解決的問題是代議-&gt;直接</p><p>網路支黨部可以直接面對群眾....</p><p></p><p></p><p>下線：</p><p>charles - ngo 網路架設</p><p>文彥 - 生態綠老闆，關注議題：公平貿易協會</p><p>余宛如 - 生態綠共同創辦人，綠黨共同召集人</p><p>家華 - 台大政治所碩士，公民審議 - e.g.tnr... 原能會委託核研所辦政策論壇 etc.&nbsp;</p><p>ttcat -&nbsp;</p><p></p><p>ly 鄭遠祥</p><p></p><p></p><p></p><p></p></body>
 </html>
