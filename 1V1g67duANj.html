@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2932"/>
+<meta name="version" content="3330"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$1V1g67duANj</title>
 </head>
 <body><h1>動民主 2.0 系統設計概念</h1><p></p><h2>動民主 2.0 的基本組成</h2><p></p><ol><li>entry，有三種類型</li></ol>
@@ -59,7 +59,11 @@
 <li>可回應</li>
 <li>可追問（產生子 entry）</li>
 <li>可邀請其他使用者回應</li>
-<li>可 upvote / downvote / report（？）（保留空間，未來有需要再加）</li><ul class="comment"><li>換句話說，是否要有針對整個 entry 評價的機制？再換句話說，是否會出現 entry 本身品質不良（問題問得不好、範疇混亂、隱含偏激的預設立場等）的情況？我想可以保留空間，等上線後視情況決定，一開始希望能先找到對的人上車，塑造出正面的社群文化，如果能吸引到對的人，也許可以不必一開始就動用到這種有點懲罰性質的 downvote 機制。</li></ul>
+<li>可 upvote / downvote / report（？）（保留空間，未來有需要再加）</li><ul class="comment"><li>換句話說，是否要有針對整個 entry 評價的機制？這要考慮兩點：<ul class="comment"><li>1.是否需要downvote：是否會出現 entry 本身品質不良（問題問得不好、範疇混亂、隱含偏激的預設立場等）的情況？<ul class="comment"><li>我想可以保留空間，等上線後視情況決定，一開始希望能先找到對的人上車，塑造出正面的社群文化，如果能吸引到對的人，也許可以不必一開始就動用到這種有點懲罰性質的 downvote 機制。</li></ul class="comment">
+</li>
+<li>2.是否需要upvote：品質優良的發問是否需要獎勵？<ul class="comment"><li><br/></li></ul>
+</ul>
+</ul>
 </ul>
 
 <p><b>組成</b></p><ol><li>content</li><ul><li>title（140 字以內）<ul><li>權限<ul><li>開放共同編輯</li></ul>
@@ -169,7 +173,38 @@
 </ul>
 </ol>
 
-<p></p><h2>user</h2><p></p><h2>各種關連</h2><p></p><ul><li>entry-entry 之間的關連形式包括<ul><li>父子：A 的討論內容範圍涵蓋在 B 之內</li>
+<p></p><h2>user</h2><p></p><p><b>功能</b></p><ul><li>可收藏書籤（收藏後，如果興趣指數夠高的話會出現在個人 timeline 中）</li>
+<li>可訂閱（有新動態時會在 nav bar 右上角跳出小紅字）</li>
+<li>可舉報（若發現是spammer / 黨工）</li>
+<li>可封鎖（封鎖後對方無法 follow 或 tag 我）</li></ul>
+
+<p><b>組成</b></p><ul><li>account<ul><li>e-mail</li>
+<li>account ID</li></ul>
+</li>
+<li>character<ul><li>profile<ul><li>name</li>
+<li>expertise</li>
+<li>reputation</li><ul class="comment"><li>有做事就有 exp，但有功績才有 badges</li></ul>
+<ul><li>level (1-80) / experience (每一級經驗值指數遞增) - 同 GW2</li>
+<li>badges</li></ul>
+</li>
+<li>content<ul><li>questions</li>
+<li>answers</li>
+<li>posts</li>
+<li>reports</li></ul>
+</li>
+<li>interest<ul><li>bookmarks</li>
+<li>subscriptions</li></ul>
+</li>
+<li>followers<ul><li>bookmarked by</li>
+<li>subscribed by</li></ul>
+</li></ul>
+</li>
+<li>settings<ul><li>linked account - 不同角色的連結帳號重複時跳出提醒</li>
+<li><br/></li></ul>
+</ul>
+</ul>
+
+<p></p><p></p><h2>各種關連</h2><p></p><ul><li>entry-entry 之間的關連形式包括<ul><li>父子：A 的討論內容範圍涵蓋在 B 之內</li>
 <li>同義：不同標題，但指向同一個 thread，像 quora 的 alias</li>
 <li>近似：可能會以為是同義，但其實兩者並不同，標為近似後，可避免後人持續提出合併為同義題的請求</li>
 <li>前身：當兩個獨立 entry 經過使用者反應標註為同義，所有內容合併至另一個新的 thread，原本 entry 保留但凍結，成為合併後新 entry 的前身</li></ul>
@@ -192,7 +227,12 @@
 <li>眺望台 ?</li>
 <li>成就系統 ?&nbsp;</li></ul>
 
-<p></p><p></p><p><b>-- note 0916 --</b></p><p></p><p></p><p>議案 -&gt; 議題</p><p></p><p>發表：上下都放</p><p></p><p>要不要 downvote？</p><ul><li>如果會有人上來亂，問糟糕問題，那可能就需要 downvote，或者用 report 代替 downvote。report 選項可以學 g+：1.spam 2.騷擾 3.謾罵... etc.</li></ul>
+<p></p><p></p><p>---</p><p>是否需要採用類似 知識家 / quora / stackoverflow 的代幣機制？</p><ul><li>在知識系統中，reputation 點數通常可以拿來交易，懸賞作答之類的。背後的意義是「聲望不只是榮譽，也會帶來實質的好處」。</li>
+<li>不過動民主並不是單純的知識系統，動民主的重要貢獻者往往在真實世界中已經擁有一定的聲望，不需要靠動民主系統中的 reputation 點數來得到自我肯定，即使有也是附加的。對這些人來說，需要的是類似 twitter 或 g+ 的官方帳號認證機制，確認這個帳號就是本人。</li>
+<li>引入代幣機制同時也會產生操作誘因，引誘人追逐數字……這不是動民主所需要的。動民主需要的是榮譽感、對自己的言論負責任的謹慎態度。這些都不是任何點數可以換來的。相對地，量化的點數還可能令人感到被估價了，而讓動機變得不單純。</li>
+<li>結論：沒有點數 XD</li></ul>
+
+<p></p><p><b>-- note 0916 --</b></p><p></p><p></p><p>議案 -&gt; 議題</p><p></p><p>發表：上下都放</p><p></p><p>要不要 downvote？</p><ul><li>如果會有人上來亂，問糟糕問題，那可能就需要 downvote，或者用 report 代替 downvote。report 選項可以學 g+：1.spam 2.騷擾 3.謾罵... etc.</li></ul>
 
 <p>comment 跟 answer 混淆</p><ul><li>在 comment 區塊加上說明文字？「這裡用來討論命題本身的定位、措辭是否恰當，回答問題請至xxx」之類的</li></ul>
 
@@ -207,5 +247,8 @@
 <li>我的回答</li></ul>
 </ul>
 
-<p>排序箭頭跟選單合併否？</p><p></p><p>library 的 feedback 應該加在按鈕本身</p><p></p><p>內容被引用時跳出 feedback</p><p></p><p>畫出 life cycle</p><p></p><p>專案追蹤有 calendar</p><p></p><p>需要 use case</p><p></p><p>書籤自訂分類（evernote）</p><p></p><p></p><p>針對政黨或工作小組 use case</p><p></p><p>政黨需求：</p><p>增加黨員，增加和民眾的互動、參與感（不是單方面的）</p><p>稀釋個別黨員行為的對黨造成的負面觀感</p><p>網路參政的需求</p><p>so...方便訊息流通和捐款是黨最低層次對網路民主的要求(新的民主實踐方式)</p><p>but,一個黨的內部民主，要到什麼樣的層度? (封閉性/開放度)</p><p></p><p>打破台灣現有傳統政治文化，掃街拜票，花大錢選舉的文化，台灣保證金是全球數一數二高，20萬 - 網路參政要有募資功能？</p><p></p><p>綠黨黨章中黨員大會才能提案（沒效率</p><p>中執委會議內容在網路上可以 pre 討論</p><p></p><p>黨員的期望：已經習慣代議制度，要解決的問題是代議-&gt;直接</p><p>網路支黨部可以直接面對群眾....</p><p></p><p></p><p>下線：</p><p>charles - ngo 網路架設</p><p>文彥 - 生態綠老闆，關注議題：公平貿易協會</p><p>余宛如 - 生態綠共同創辦人，綠黨共同召集人</p><p>家華 - 台大政治所碩士，公民審議 - e.g.tnr... 原能會委託核研所辦政策論壇 etc.&nbsp;</p><p>ttcat -&nbsp;</p><p></p><p>ly 鄭遠祥</p><p></p><p></p><p></p><p></p></body>
+<p>排序箭頭跟選單合併否？</p><p></p><p>library 的 feedback 應該加在按鈕本身</p><p></p><p>內容被引用時跳出 feedback</p><p></p><ul class="task"><li>畫出 life cycle</li>
+<li>需要 use case</li></ul>
+
+<p>專案追蹤有 calendar</p><p></p><p></p><p>書籤自訂分類（evernote）</p><p></p><p></p><p>針對政黨或工作小組 use case</p><p></p><p>政黨需求：</p><p>增加黨員，增加和民眾的互動、參與感（不是單方面的）</p><p>稀釋個別黨員行為的對黨造成的負面觀感</p><p>網路參政的需求</p><p>so...方便訊息流通和捐款是黨最低層次對網路民主的要求(新的民主實踐方式)</p><p>but,一個黨的內部民主，要到什麼樣的層度? (封閉性/開放度)</p><p></p><p>打破台灣現有傳統政治文化，掃街拜票，花大錢選舉的文化，台灣保證金是全球數一數二高，20萬 - 網路參政要有募資功能？</p><p></p><p>綠黨黨章中黨員大會才能提案（沒效率</p><p>中執委會議內容在網路上可以 pre 討論</p><p></p><p>黨員的期望：已經習慣代議制度，要解決的問題是代議-&gt;直接</p><p>網路支黨部可以直接面對群眾....</p><p></p><p></p><p>下線：</p><p>charles - ngo 網路架設</p><p>文彥 - 生態綠老闆，關注議題：公平貿易協會</p><p>余宛如 - 生態綠共同創辦人，綠黨共同召集人</p><p>家華 - 台大政治所碩士，公民審議 - e.g.tnr... 原能會委託核研所辦政策論壇 etc.&nbsp;</p><p>ttcat -&nbsp;</p><p></p><p>ly 鄭遠祥</p><p></p><p></p><p></p><p></p></body>
 </html>
