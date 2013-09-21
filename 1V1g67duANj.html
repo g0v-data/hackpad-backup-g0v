@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="3559"/>
+<meta name="version" content="3587"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$1V1g67duANj</title>
 </head>
 <body><h1>動民主 2.0 系統設計概念</h1><p></p><h2>動民主 2.0 的基本組成</h2><p></p><ol><li>entry，有三種類型</li></ol>
@@ -158,10 +158,16 @@
 </ul>
 </ol>
 <ol><li>meta</li><ul><li>log - collection 內容的建立與變更</li>
-<li>statics - 訂閱、書籤等各種統計數據</li>
+<li>statics - 類似 google analytics<ul><li>問答數、瀏覽人次、訂閱人數、書籤人數折線圖</li>
+<li>議題排名<ul><li>人氣排名</li>
+<li>問答數排名</li>
+<li>提案數排名</li>
+<li>專案數排名</li>
+<li><br/></li></ul>
+</li></ul>
+</li>
 <li>comments - 針對 collection 定位、適當性等非關內容本身的討論</li>
-<li>connection<ul><li>關連的 entries</li>
-<li>關連的相同子類別的 collections<ul><li>parent - 上一層議題，涵蓋範圍較廣較模糊的</li>
+<li>connection<ul><li>關連的相同子類別的 collections<ul><li>parent - 上一層議題，涵蓋範圍較廣較模糊的</li>
 <li>children - 下一層議題，涵蓋範圍較窄較明確的。產生方式：<ul><li>按下「新增子 issue / proposal / project」按鈕後將 new collection 編輯完成並發佈，new collection 就會自動和原 collection 產生父子關連</li>
 <li>在 meta 編輯畫面手動設定父子關連</li></ul>
 </li>
