@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="676"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$lcEFcpToerf</title>
+</head>
+<body><h1>辭典學字典結構 與 moedict 資料結構的比對</h1><p></p><p><b>資料來源</b></p><ol><li><a href='http://www.christianlehmann.eu/ling/ling_meth/ling_description/lexicography/dict_structure.html'/>辭典學 - 參考網站</a></li>
+<li><a href='https://hackpad.com/3du.tw-DB-schema-8I4XU6xc4QJ'/>3du.tw DB schema</a></li>
+<li><a href='https://github.com/g0v/moedict-process/blob/master/dict-revised.schema'/>moedict-process/dict-revised.schema</a></li>
+<li><a href='https://hackpad.com/3du.tw-API-Design-95jKjray8uR'/>3du.tw API Design</a></li></ol>
+
+<p><b>註解方式</b></p><ul><li>Lemma, 代表辭典學網站內有提到的欄位</li>
+<li>+radical, 代表 moedict 特有欄位。</li>
+<li>moedict[&rsquo;entries&rsquo;], 代表 moedict database table</li>
+<li>entries[&rsquo;title&rsquo;], 代表 entries table 內的 title 欄位</li></ul>
+
+<p><b>辭典學詞典結構 vs MOEDICT資料結構</b></p><p>Dictionary</p><ol><li>Table of content</li>
+<li>Preface</li>
+<li>Instructions</li>
+<li>Grammatical information</li>
+<li>Appendices<ol><li>Transliteration</li>
+<li>Conversion table</li>
+<li>Abbreviations</li>
+<li>Symbols</li>
+<li>Bibilography</li></ol>
+</ol>
+<p>1.6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Entry list</p><ol><li>Entry<ol><li>Entry Identity (moedict[&rsquo;entries&rsquo;])<ol><li>Lemma (詞元, entries[&rsquo;title&rsquo;])</li>
+<li>Homonym number(諧音+編號)</li>
+<li>Sense number</li>
+<li>Citation form</li>
+<li>+radical (部首, entries[&rsquo;radical&rsquo;])</li>
+<li>+stroke_count (總筆畫, entries[&rsquo;stroke_count&rsquo;])</li>
+<li>+non_radical_stoke_count (去部首筆畫, 詞語為null, entries[&rsquo;non_radical_stroke_count&rsquo;])</li></ol>
+</li>
+<li>Expression(heteronyms part in moedict)<ol><li>Phonological representation(語音表示, moedict[&rsquo;heteronyms&rsquo;])<ol><li>+bopomofo(注音, heteronyms[&rsquo;bopomofo&rsquo;])</li>
+<li>+bopomofo2(國音二式, heteronyms[&rsquo;bopomofo2&rsquo;])</li>
+<li>+pinyin(漢語拼音, heteronyms[&rsquo;pinyin&rsquo;])</li></ol>
+</li>
+<li>Sound(發音)</li>
+<li>Phonological variants(音韻的變異)</li>
+<li>Orthographic variants</li>
+<li>Language variety</li>
+<li>Dialect(方言)</li>
+<li>Sociolect</li>
+<li>Style(如正式用語、俚語、俗稱的註記)</li>
+<li>Stage</li>
+<li>Structure</li>
+<li>Proper Name</li>
+<li>Syntactic category(詞性, definitions[&rsquo;type&rsquo;])</li>
+<li>Morphological structure</li>
+<li>Word formation</li>
+<li>Derivatives</li>
+<li>Morphological categories</li>
+<li>Irregular inflection</li>
+<li>Construction</li>
+<li>Phraseology(用語，如詞句、成語等)</li></ol>
+</li>
+<li>Meaning(字義, moedict[&rsquo;definitions&rsquo;])<ol><li>Meaning definitions<ol><li>Native definition (原始字義, definitions[&rsquo;def&rsquo;])</li>
+<li>User language definitions</li></ol>
+</li>
+<li>Gloss</li>
+<li>Semantic classes(語意分類)</li>
+<li>Semantic relations(其他相關語意, definitions[&rsquo;link&rsquo;])<ol><li>Synonymy(同義詞, definitions[&rsquo;synonyms&rsquo;)</li>
+<li>Hyponymy(上下位關係?)</li>
+<li>Antonymy(反義詞, definitions[&rsquo;antonyms&rsquo;])</li>
+<li>complementarity (contradictory contrast(矛盾的對比??))</li>
+<li>part-whole relation(部分與整體的關係???)</li></ol>
+</li>
+<li>Encyclopedic information</li>
+<li>Picture</li></ol>
+</li>
+<li>Genetic-historical information<ol><li>Origin(典源, definitions[&rsquo;source&rsquo;)</li>
+<li>Etymology(詞源, definitions[&rsquo;quote&rsquo;])</li>
+<li>Cognates</li>
+<li>Examples(例句, definitions[&rsquo;example&rsquo;)</li></ol>
+</li>
+<li>Methodology<ol><li>Bibliographical references</li>
+<li>Comment</li>
+<li>Problems</li>
+<li>Date</li></ol>
+</ol>
+</ol>
+
+<p></p></body>
+</html>
