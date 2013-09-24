@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="25"/>
+<meta name="version" content="73"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$ZNwaun62BP4</title>
 </head>
 <body><h1>3du.tw</h1><p></p><p>我們想要還文於民，這階段的工作是提供中文字資料的開放 API 和範例 client app。</p><p></p><p>線上聊天室： <a href='http://webchat.freenode.net/?channels=g0v.tw'/>irc: #g0v.tw on freen</a><a href='http://webchat.freenode.net/?channels=g0v.tw'/>o</a><a href='http://webchat.freenode.net/?channels=g0v.tw'/>de</a>&nbsp; [<a href='http://hack.g0v.tw/irc'/>web 介面</a>]&nbsp; [<a href='http://hack.g0v.tw/irc/log'/>log 紀錄</a>]</p><p>線上工作組：<a href="https://groups.google.com/forum/?fromgroups#"><a href='https://groups.google.com/forum/?fromgroups#!forum/3du-tw'/>https://groups.google.com/forum/?fromgroups#</a></a><a href='https://groups.google.com/forum/?fromgroups#!forum/3du-tw'/>!forum/3du-tw</a></p><p></p><p>歷史記錄：g0v hackath1n 當天的 hackpad: <a href='https://hackpad.com/krYNczYQzTI#3du.tw%20%40g0v%20hackath1n%20%20%26nbsp%3B%26%2321488%3B%26%2328771%3B%26%2338646%3B%26%2326178%3B%26%2325919%3B%26%2324220%3B%26%2331532%3B%26%2322777%3B%26%2327425%3B%26%2320844%3B%26%2322320%3B%26%2325918%3B%26%2338936%3B%26%2340657%3B%26%2323458%3B%26%2326494%3B'/>3du.tw @g0v hackath1n |&nbsp; 台灣零時政府第壹次公地放領黑客松</a></p><p></p><p>以下粗略列出需要做的事，想參與的人，請直接把名字寫進去。</p><p></p><p><b>資料來源</b></p><p><a href='http://140.111.34.54/e_dictionary.aspx#'/>教育部電子辭典</a>網頁列了不少辭典，我們以《<a href='http://dict.revised.moe.edu.tw/'/>教育部重編國語辭典修訂本</a>》和《<a href='http://dict.idioms.moe.edu.tw/'/>成語典</a>》為起點，其他的有機會再加進來。</p><p></p><p><b>資料收集（Collection）</b></p><p>參與人：Audrey Tang, TonyQ Wang, kcwu&nbsp;</p><ul><li>《<a href='http://dict.revised.moe.edu.tw/'/>教育部重編國語辭典修訂本</a>》：<ul><li>2013 年一月底抓的, <a href='http://kcwu.csie.org/~kcwu/moedict/dict-revised.rawhtml.201301.tar.bz2'/>html raw data (tar.bz2)</a>&nbsp;</li>
@@ -52,7 +52,9 @@
 <li>《<a href='http://hakka.dict.edu.tw/hakkadict/index.htm'/>教育部臺灣客家語常用詞辭典</a>》</li></ul>
 
 <p><b>資料儲存與索引（Database and Indexing）</b></p><p>參與人：albb0920</p><p>工作內容：了解《<a href='http://dict.revised.moe.edu.tw/'/>教育部重編國語辭典修訂本</a>》和《<a href='http://dict.idioms.moe.edu.tw/'/>成語典</a>》的資料欄位，設計出儲存和索引的方式（一開始不必最佳化，先求有，再改良），好實作 API。</p><ul><li>albb0920: <a href='https://hackpad.com/8I4XU6xc4QJ#3du.tw%20DB%20schema%20draft'/>Schema</a></li></ul>
-<p><a href='http://www.christianlehmann.eu/ling/ling_meth/ling_description/lexicography/'/>online lexicography. 辭典學</a></p><p></p><p><b>API 設計</b></p><p></p><p>參與人：<a href='https://hackpad.com/ep/profile/-3othgyRWJMbj5G6yJcfaP0'/>Ping Yeh</a></p><p>第一步只提供 RESTful interface，回傳 JSON。細節詳見 <a href='https://hackpad.com/95jKjray8uR'/>3du.tw API Design</a>。</p><ul><li>2013-01-27 12:45pm <a href='https://hackpad.com/ep/profile/-3othgyRWJMbj5G6yJcfaP0'/>Ping Yeh</a> 初步 API 完成。</li></ul>
+<p><a href='http://www.christianlehmann.eu/ling/ling_meth/ling_description/lexicography/'/>online lexicography. 辭典學</a></p><ul><li><a href='https://g0v.hackpad.com/-moedict--lcEFcpToerf'/>辭典學字典結構 與 moedict 資料結構的比對</a></li></ul>
+
+<p><b>API 設計</b></p><p></p><p>參與人：<a href='https://hackpad.com/ep/profile/-3othgyRWJMbj5G6yJcfaP0'/>Ping Yeh</a></p><p>第一步只提供 RESTful interface，回傳 JSON。細節詳見 <a href='https://hackpad.com/95jKjray8uR'/>3du.tw API Design</a>。</p><ul><li>2013-01-27 12:45pm <a href='https://hackpad.com/ep/profile/-3othgyRWJMbj5G6yJcfaP0'/>Ping Yeh</a> 初步 API 完成。</li></ul>
 
 <p><b>API 實作</b></p><p>參與人：albb0920, au, viirya</p><ul><li>使用 rails 3 實作<ul><li><a href="https://github.com/albb0920/dict-3du"><a href='https://github.com/albb0920/dict-3du'/>https://github.com/albb0920/dict-3du</a></a></li></ul>
 </li>
@@ -162,15 +164,15 @@
 <li><a href="http://ci.hypo.cc/"><a href='http://ci.hypo.cc/'/>http://ci.hypo.cc/</a></a><ul><li>有 push 上 github repo 就會自動 build，不過盡量不要來這台抓 artifacts，因為是辦公室網路。純抓檔請用 <a href="http://moe.hypo.cc/"><a href='http://moe.hypo.cc/'/>http://moe.hypo.cc/</a></a>。</li></ul>
 </li>
 <li>以 <a href="https://github.com/g0v/moedict-epub/blob/master/db2unicode.pl"><a href='https://github.com/g0v/moedict-epub/blob/master/db2unicode.pl'/>https://github.com/g0v/moedict-epub/blob/master/db2unicode.pl</a></a><a href='https://github.com/g0v/moedict-epub/blob/master/db2unicode.pl%E8%BD%89%E7%82%BA'/> </a>轉為 Unicode-only database</li></ul>
-</li>
-<li>字詞發音<ul><li>GCIN的作者有自己錄製給GCIN使用的發音檔，是以注音符號為檔名，應該可以直接關聯起來。(授權為 GNU LGPL3 or GNU GPL3 dual license) <a href="http://cle.linux.org.tw/trac/wiki/GcinDistros#gcinvoicedata"><a href='http://cle.linux.org.tw/trac/wiki/GcinDistros#gcinvoicedata'/>http://cle.linux.org.tw/trac/wiki/GcinDistros#gcinvoicedata</a></a><ul><li>感謝，已放到 GitHub 上：<a href="http://audreyt.github.io/gcin-voice-data/"><a href='http://audreyt.github.io/gcin-voice-data/'/>http://audreyt.github.io/gcin-voice-data/</a></a></li>
+</ul>
+</ul>
+<p><b>字詞發音</b></p><ul><li>GCIN的作者有自己錄製給GCIN使用的發音檔，是以注音符號為檔名，應該可以直接關聯起來。(授權為 GNU LGPL3 or GNU GPL3 dual license) <a href="http://cle.linux.org.tw/trac/wiki/GcinDistros#gcinvoicedata"><a href='http://cle.linux.org.tw/trac/wiki/GcinDistros#gcinvoicedata'/>http://cle.linux.org.tw/trac/wiki/GcinDistros#gcinvoicedata</a></a><ul><li>感謝，已放到 GitHub 上：<a href="http://audreyt.github.io/gcin-voice-data/"><a href='http://audreyt.github.io/gcin-voice-data/'/>http://audreyt.github.io/gcin-voice-data/</a></a></li>
 <li>Source OGG: <a href="http://audreyt.github.io/gcin-voice-data/ogg/%E3%84%85%E3%84%9A/3.ogg"><a href='http://audreyt.github.io/gcin-voice-data/ogg/%E3%84%85%E3%84%9A/3.ogg'/>http://audreyt.github.io/gcin-voice-data/ogg/%E3%84%85%E3%84%9A/3.ogg</a></a></li>
 <li>Converted MP3: <a href="http://audreyt.github.io/gcin-voice-data/mp3/%E3%84%85%E3%84%9A/3.mp3"><a href='http://audreyt.github.io/gcin-voice-data/mp3/%E3%84%85%E3%84%9A/3.mp3'/>http://audreyt.github.io/gcin-voice-data/mp3/%E3%84%85%E3%84%9A/3.mp3</a></a></li></ul>
 </li>
 <li>Zhspeak也有發音檔在 sourceforge 上，以漢語拼音為檔名。<a href="http://www.eguidedog.net/ekho.php"><a href='http://www.eguidedog.net/ekho.php'/>http://www.eguidedog.net/ekho.php</a></a> (GPL v2) 另外espeak中的中文詞發音規則也可以使用？</li>
-<li>連線使用 Google Translate 的發音？</li></ul>
-</ul>
-</ul>
+<li>連線使用 Google Translate 的發音？</li>
+<li><a href='http://zh.forvo.com/'/>FORVO, 全球使用者自行錄音，有提供 RESTful API, 目前已有【2,070,823个词语 2,124,148个发音 306种语言】</a></li></ul>
 
 <p></p><p></p><p><b>git repository 整合</b></p><p>參與人：待認領</p><p>把大家的 code 和 data 整合起來，方便散佈，並討論選定授權條款。</p><p>這部分是整合大家的code到github上面嗎? 帳號是有公用的還是先用自己的?</p><p></p><p>目前的 repo 列表：</p><ul><li><a href="https://github.com/g0v/moedict-epub"><a href='https://github.com/g0v/moedict-epub'/>https://github.com/g0v/moedict-epub</a></a> 圖字列表、ePub 生成、WebFont</li>
 <li><a href="https://github.com/g0v/moedict-process"><a href='https://github.com/g0v/moedict-process'/>https://github.com/g0v/moedict-process</a></a> HTML 轉 SQLite3</li>
