@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="1243"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$0ilwh2aVnYn</title>
+</head>
+<body><h1>twlaw UI (abstract)</h1><p></p><h2>前情提要</h2><p>在 <a href='https://github.com/g0v/twlaw'/>g0v/twlaw</a> project 中，我們已經將法律條文歷年的變更轉換成 git repository。但是為了讓社會大眾與法律界人士能有效利用，我們需要一個網站來呈現、讓大家討論對現類法條的想法、進而提出條文的修正。</p><p></p><p><b>Target Audiance</b></p><ul><li>法律人: 希望提供法界人士、學生一個平台，讓他們能發表對現行法條的修正。同時提供各種對修法有用的資訊，讓整個過程更有效率。</li>
+<li>社會大眾:</li></ul>
+
+<h2>UI features</h2><ul><li>Browse<ul><li>Web entry point.&nbsp; May provide related resources as well.</li></ul>
+</li>
+<li>Search, should support abbreviation (e.g. 兒少法)</li>
+<li>Diff view</li>
+<li>Fork</li></ul>
+
+<p>Given the git backend, it should be fairly easy to implement advance features like, browsing the law in 1985, showing diff from 2000 to 2010, etc.</p><p></p><p><b>Possible workflow</b></p><p>This is what we really want.</p><ul><li>Fork:</li>
+<li>Issue:</li></ul>
+
+<h2>Tasks</h2><p><b>Non-dev task</b></p><ul><li>UI mockup</li>
+<li>User study</li></ul>
+
+<p><b>Frontend task</b></p><ul><li>May just use github API as backend</li>
+<li>Browse interface (render a github .md file)</li>
+<li>Search interface (use github search api? or with our own index)</li>
+<li>Diff view</li>
+<li>Fork view (existing fork, diff between fork, etc.)</li>
+<li><s>Issue tracking</s> (may just use github interface)</li></ul>
+
+<p><b>Backend task</b></p><ul><li>Refine crawler<ul><li>Source page is not stable, and crawling involves human input</li>
+<li>Open question: since we check in law changes as git commit, what if the source changed the code?&nbsp; Currently it happens quite often because of the problematic source page.</li></ul>
+</li>
+<li>Source-to-Markdown/JSON-to-git translation<ul><li>This was done in twlaw, but we need to fix git translation to support incremental changes.</li>
+<li>Open question: is putting every laws in a single git repo a good idea?&nbsp; Should we split them by law?</li></ul>
+</ul>
+
+<p></p></body>
+</html>
