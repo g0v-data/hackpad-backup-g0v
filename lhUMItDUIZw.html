@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="504"/>
+<meta name="version" content="528"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$lhUMItDUIZw</title>
 </head>
 <body><h1>airesis 中文翻譯與架設</h1><p></p><p><b>翻譯進度</b></p><p>直接改到這邊，有興趣翻譯者請申請帳號，並且申請加入翻譯，有設定自動加入了</p><p><a href="https://www.transifex.com/projects/p/g0v-airesis/">https://www.transifex.com/projects/p/g0v-airesis/</a></p><p>ttcat 完成了!!</p><p></p><p><b>架設目前進度</b></p><p></p><p>bundle install 過了 ( rubytheracer好像需要比較舊版的libv8)</p><p>如果是rubytheracer請用gem uninstall libv8 再重新跑一次看看</p><p></p><p>需要調整 config/environment.rb 把 DemocracyOnline3換成Airesis</p><p>en.yml, it.yml 和pt.yml 裡面都有些小問題</p><p></p><ul class="taskdone"><li>經典的&nbsp;</li></ul>
@@ -16,6 +16,9 @@
 <ul class="taskdone"><li>稍後把翻譯好的zh.yml 放進去看看</li></ul>
 <ul class="comment"><li><a href="https://github.com/g0v/Airesis">https://github.com/g0v/Airesis</a> zh-han branch</li></ul>
 
-<ul class="task"><li>development下, &lt;head&gt;裡面的application.js 和application.css都不會展開造成無法套用正確的css, 首頁沒有套用 這兩個所以顯示正常 ...</li></ul>
-<p>&nbsp;模版</p><p>&lt;%= stylesheet_link_tag &rsquo;application&rsquo; %&gt;</p><p>&lt;%= javascript_include_tag &rsquo;application&rsquo; %&gt;</p><p>實際展開後</p><p>&lt;link href=&quot;/assets/application.css?body=1&quot; media=&quot;screen&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;</p><p>&lt;script src=&quot;<a href="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.zh_TW.QwtNnlkiA0E.O/m=plusone/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AItRSTMAkPVuFHCMzsLfPt2HLxqzkmrKQg/cb=gapi.loaded_0">https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.zh_TW.QwtNnlkiA0E.O/m=plusone/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AItRSTMAkPVuFHCMzsLfPt2HLxqzkmrKQg/cb=gapi.loaded_0</a>&quot; async=&quot;&quot;&gt;&lt;/script&gt;</p><p>&lt;script id=&quot;twitter-wjs&quot; src=&quot;//platform.twitter.com/widgets.js&quot;&gt;&lt;/script&gt;</p><p>&lt;script type=&quot;text/javascript&quot; async=&quot;&quot; src=&quot;<a href="https://apis.google.com/js/plusone.js">https://apis.google.com/js/plusone.js</a>&quot; gapi_processed=&quot;true&quot;&gt;&lt;/script&gt;</p><p>&lt;script src=&quot;/assets/application.js?body=1&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</p><p></p><p></p><p></p><p></p></body>
+<ul class="taskdone"><li>development下, &lt;head&gt;裡面的application.js 和application.css都不會展開造成無法套用正確的css, 首頁沒有套用 這兩個所以顯示正常 ...</li></ul>
+<p>&nbsp;模版</p><p></p><ul class="comment"><li>把rails 版本升到 3.2.12就好了</li></ul>
+<ul class="task"><li>signup會有問題</li></ul>
+
+<p></p><p></p></body>
 </html>
