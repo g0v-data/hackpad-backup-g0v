@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="528"/>
+<meta name="version" content="615"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$lhUMItDUIZw</title>
 </head>
 <body><h1>airesis 中文翻譯與架設</h1><p></p><p><b>翻譯進度</b></p><p>直接改到這邊，有興趣翻譯者請申請帳號，並且申請加入翻譯，有設定自動加入了</p><p><a href="https://www.transifex.com/projects/p/g0v-airesis/">https://www.transifex.com/projects/p/g0v-airesis/</a></p><p>ttcat 完成了!!</p><p></p><p><b>架設目前進度</b></p><p></p><p>bundle install 過了 ( rubytheracer好像需要比較舊版的libv8)</p><p>如果是rubytheracer請用gem uninstall libv8 再重新跑一次看看</p><p></p><p>需要調整 config/environment.rb 把 DemocracyOnline3換成Airesis</p><p>en.yml, it.yml 和pt.yml 裡面都有些小問題</p><p></p><ul class="taskdone"><li>經典的&nbsp;</li></ul>
@@ -18,7 +18,13 @@
 
 <ul class="taskdone"><li>development下, &lt;head&gt;裡面的application.js 和application.css都不會展開造成無法套用正確的css, 首頁沒有套用 這兩個所以顯示正常 ...</li></ul>
 <p>&nbsp;模版</p><p></p><ul class="comment"><li>把rails 版本升到 3.2.12就好了</li></ul>
-<ul class="task"><li>signup會有問題</li></ul>
+<ul class="taskdone"><li>signup會有問題</li></ul>
+<ul class="comment"><li>把recaptcha那段拿掉或者到config/enviroment.rb填上secret&nbsp;</li></ul>
+<ul class="task"><li>無法註冊</li></ul>
+<ul class="comment"><li>User Exists (0.4ms)&nbsp; SELECT 1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; = &rsquo;test@g0v.tw&rsquo; LIMIT 1, users裡面是空的, 不知道什麼妖術</li></ul>
+<ul class="task"><li>弄cookbook</li></ul>
 
-<p></p><p></p></body>
+<p><b>可能要拿掉的Feature</b></p><ol><li>社群登入&nbsp;</li></ol>
+
+</body>
 </html>
