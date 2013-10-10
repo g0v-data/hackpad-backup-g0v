@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="4320"/>
+<meta name="version" content="4409"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$z0XwS5cmyg9</title>
 </head>
 <body><h1>鄉民關心你 - API</h1><p></p><p>Version: 0.1</p><p></p><h2>Background</h2><p>The backend is custom pgrest and the api is compatable with <a href="https://support.mongolab.com/entries/20433053-rest-api-for-mongodb"><a href='https://support.mongolab.com/entries/20433053-rest-api-for-mongodb'/>https://support.mongolab.com/entries/20433053-rest-api-for-mongodb</a></a></p><p></p><p>this api is possibled changed by implemented within json-ld (<a href="https://www.youtube.com/watch?v=tRTD2W4W8G4)"><a href='https://www.youtube.com/watch?v=tRTD2W4W8G4'/>https://www.youtube.com/watch?v=tRTD2W4W8G4</a>)</a></p><p></p><h2>Auth</h2><p>git:master: unsupported</p><p>git:develop: support</p><p></p><p>GET /auth/facebook # authenticated by facebook account. (default enabled)</p><p>GET /me&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # get authenticatied user profile&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p>GET /logout&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # logout, clear session</p><p>GET /logged&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # return true if user is authenticatied otherwise return false</p><p></p><h2>User</h2><p>git:master: unsupported</p><p>git:develop: support</p><p></p><p>PUT /collections/users/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # update a user</p><p>GET /collections/users&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # get all user</p><p>GET /collections/users/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # get a user</p><p></p><ul><li><b>_id</b>: user id</li>
@@ -62,14 +62,14 @@
 <li><b>authors: </b>Array of authors</li>
 <li><b>is_issue: </b>return<b> </b>true if at least a user think this tag is an issue title.</li></ul>
 
-<h2>Issues</h2><p></p><p>GET /collections/issues</p><p>GET /collections/issues/{id}</p><p></p><ul><li><b>tag_id:</b></li>
+<h2>Issues</h2><p>Issue (爭議)&nbsp;</p><p></p><p>GET /collections/issues</p><p>GET /collections/issues/{id}</p><p></p><ul><li><b>tag_id:</b></li>
 <li><b>bookmarked_items</b></li>
 <li><b>ongoing_actions</b></li>
 <li><b>watcher:</b></li></ul>
 
-<h2>Standpoints</h2><p></p><p>GET /collections/standpoints</p><p></p><ul><li><b>_id: </b>object id</li>
-<li><b>issue: ...</b></li>
-<li><b>title</b>: standpoint title</li>
+<h2>Positions</h2><p></p><p>GET /collections/positions</p><p></p><ul><li><b>_id: </b>object id</li>
+<li><b>issue:&nbsp;</b></li>
+<li><b>title</b>: position title</li>
 <li><b>tags</b>: ....</li>
 <li><b>supportors: </b>[]</li>
 <li><b>againstors</b>: []</li></ul>
