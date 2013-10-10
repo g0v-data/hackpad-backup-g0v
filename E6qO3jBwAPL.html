@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="492"/>
+<meta name="version" content="573"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$E6qO3jBwAPL</title>
 </head>
 <body><h1>立法院人事部 - 需求分析</h1><p></p><p></p><h2>目標客群</h2><p>公民</p><p></p><h2>專案目的</h2><ul><li>即時民意的實現，提供公民上網打立委分數。</li>
@@ -26,14 +26,24 @@
 <li>即時為各立委打 星星</li>
 <li>排名各立委，並列出較不適任立委</li></ul>
 
-<p></p><h2>專案問題</h2><p>評鑑相關</p><ol><li>如何計算rank分數 (統計分析的問題)</li></ol>
+<h2>現有資料</h2><ul><li>g0v立法院<ul><li><a href="http://api.ly.g0v.tw/v0/collections/">http://api.ly.g0v.tw/v0/collections/</a></li>
+<li>api <a href="http://api.ly.g0v.tw/v0/collections/bills?q=">http://api.ly.g0v.tw/v0/collections/bills?q=</a>{%22proposal.0%22:%22%E8%94%A3%E4%B9%83%E8%BE%9B%22}</li>
+<li><br/></li></ul>
+</li>
+<li>立委投票指南 <a href="http://twly.herokuapp.com/legislator/about/">http://twly.herokuapp.com/legislator/about/</a><ul><li>api <a href="https://twly.herokuapp.com/api/">https://twly.herokuapp.com/api/</a></li></ul>
+</ul>
+
+<p></p><h2>專案問題</h2><p>評鑑相關</p><ol><li>如何計算rank分數 (統計分析的問題)</li>
+<li>評分Timline (議案而分?)</li>
+<li>預設分數有可能造成預設立場？</li></ol>
 
 <p>議題相關</p><ol><li>如何清楚切割各議題？ （面向的討論）</li>
 <li>如何以非文字元素（顏色、圖形、數字）來表達各立委的立場和貢獻</li>
 <li>詢問其他從事政治與社會議題相關人士的意見</li></ol>
 
 <p>網站相關</p><ol><li>使用者單一賬號，是否會造成使用者評分疑慮?&nbsp;</li>
-<li>個人化設置</li></ol>
+<li>個人化設置<ol><li>戶籍地 - 辨識選區</li></ol>
+</ol>
 
 <p></p><h2>參考資料</h2><ul><li>美國議員 ranking <a href="http://www.ranker.com/list/rank-the-current-u-s-senators/sesel88?format=GRID"><a href='http://www.ranker.com/list/rank-the-current-u-s-senators/sesel88?format=GRID'/>http://www.ranker.com/list/rank-the-current-u-s-senators/sesel88?format=GRID</a></a></li>
 <li>公督盟評鑑 <a href="http://www.ccw.org.tw/assess/%E7%AC%AC%E5%85%AB%E5%B1%86"><a href='http://www.ccw.org.tw/assess/%E7%AC%AC%E5%85%AB%E5%B1%86'/>http://www.ccw.org.tw/assess/%E7%AC%AC%E5%85%AB%E5%B1%86</a></a></li>
