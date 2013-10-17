@@ -3,15 +3,22 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1684"/>
+<meta name="version" content="1725"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$0ilwh2aVnYn</title>
 </head>
 <body><h1>twlaw UI (abstract)</h1><p></p><h2>前情提要</h2><p>在 <a href='https://github.com/g0v/twlaw'/>g0v/twlaw</a> project 中，我們已經將法律條文歷年的變更轉換成 <a href='https://github.com/victorhsieh/tw-law-corpus'/>git repository</a>。但是為了讓社會大眾與法律界人士能有效利用，我們需要一個網站來呈現、讓大家討論對現類法條的想法、進而提出條文的修正。</p><p></p><p><b>Target Audiance</b></p><ul><li>立法委員：將提案更透明地呈現，誘發公開的討論，一起提高修正的品質。</li>
 <li>法律人：希望提供法界人士、學生一個平台，讓他們能發表對現行法條的修正。同時提供各種對修法有用的資訊，讓整個過程更有效率。最後希望能將好的修正送進立法院。</li>
-<li>社會大眾：除了提供基本的查詢介面，也希望能讓大眾觀注修正中的條文。</li></ul>
+<li>社會大眾：除了提供基本的查詢介面，也希望能讓大眾關注：<ul><li>已被提出的修正中的條文</li>
+<li>比較不同版本的修法</li>
+<li>對尚未被提出的修法建議：<ul><li>表達支持</li>
+<li>表達支持（含本修法提出者之後更新的任何版本）</li>
+<li>提出意見</li></ul>
+</ul>
+</ul>
 
 <p><b>相關專案</b></p><ul><li><a href="http://publicmarkup.org/">http://publicmarkup.org/</a> - 線上法律提案 review/comment</li>
-<li>立法院提案 ap samplei: <a href='http://api-beta.ly.g0v.tw/v0/collections/bills/1108L15461'/>提案資訊</a>、<a href='http://api-beta.ly.g0v.tw/v0/collections/bills/1108L15461/data'/>修法內容</a></li>
+<li>立法院提案 api sample: <a href='http://api-beta.ly.g0v.tw/v0/collections/bills/1108L15461'/>提案資訊</a>、<a href='http://api-beta.ly.g0v.tw/v0/collections/bills/1108L15461/data'/>修法內容</a></li>
+<li>立法院提案 view: <a href="http://ly.g0v.tw/bill/1011130070300200">http://ly.g0v.tw/bill/1011130070300200</a></li>
 <li>法律 api: <a href='http://laweasyread.herokuapp.com/api/article?name=%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B%E6%86%B2%E6%B3%95&amp;article=44'/>憲法第44條</a></li></ul>
 
 <h2>UI features</h2><ul><li>Browse<ul><li>Web entry point.&nbsp; May provide related resources as well.</li></ul>
