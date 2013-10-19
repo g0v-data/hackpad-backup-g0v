@@ -3,18 +3,10 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1058"/>
+<meta name="version" content="1081"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$tDx3D5FZya5</title>
 </head>
-<body><h1>萌典 @ 美麗島黑客松</h1><p></p><p>這是初步的一些想法，有興趣的朋友可以挑一兩樣實做，也歡迎加入新的項目。</p><p></p><h2>書籤功能</h2><ul class="comment"><li>Needs: Design, JS</li></ul>
-<ul class="task"><li>在詞目旁邊加上星號★</li>
-<li>選單裡加上一個「字詞紀錄簿」選項，列出之前使用者按星號的條目。</li></ul>
-
-<h2>各語種成為獨立 App </h2><ul class="comment"><li>Needs: Cordova, iOS, Android, JS</li></ul>
-<ul class="task"><li>定義 URL scheme 讓跨語交叉檢索可以切換到別的 App (如有安裝)</li>
-<li>定義<a href='https://github.com/audreyt/moedict-webkit/issues/26#issuecomment-26613125'/> 離線語音包</a> 需要時可下載使用</li></ul>
-
-<h2>兩岸詞典 </h2><ul class="comment"><li>Needs: Design, Testing</li></ul>
+<body><h1>萌典 @ 美麗島黑客松</h1><p></p><p>這是初步的一些想法，有興趣的朋友可以挑一兩樣實做，也歡迎加入新的項目。</p><p></p><h2>兩岸詞典 </h2><ul class="comment"><li>Needs: Design, Testing</li></ul>
 <ul class="task"><li>設計兩岸詞典與現行三部詞典之間的跨語交叉檢索</li>
 <li>設計排版：第二級縮排（如「太」 <a href="http://www.moedict.tw/~%E5%A4%AA">http://<a href='http://moedict.tw/#~%E5%A4%AA'/>w</a><a href='http://wmoedict.tw/#~%E5%A4%AA'/>w</a><a href='http://wwmoedict.tw/#~%E5%A4%AA'/>w</a><a href='http://wwwmoedict.tw/~%E5%A4%AA'/>.</a>moedict.<a href='http://moedict.org/#~%E5%A4%AA'/>t</a><a href='http://moedict.torg/#~%E5%A4%AA'/>w</a>/~%E5%A4%AA</a> )&nbsp;</li>
 <li>設計排版：||也作「某某」是代表以上義項都相同。如：[<a href='https://www.moedict.tw/#~%E4%B8%8A%E9%A0%AD'/>上頭</a>] 第二條，輕聲，第三義項，應先呈示例，換行，再加||也作「某某」。</li></ul>
@@ -24,13 +16,18 @@
 <li>用 indices 的方式補上非整字的部件，如礻辶等</li></ul>
 
 <h2>單詞分享鏈結 </h2><ul class="comment"><li>Needs: Design, Node, JS</li></ul>
-<ul class="task"><li>讓目前網址去掉 # 號時傳回完整的分享頁面，如 <a href="https://moedict.tw/萌">https:/<a href='https://ww'/>/m</a><a href='https://www.m'/>o</a><a href='https://www.mo'/>e</a><a href='https://www.moe'/>d</a><a href='https://www.moed'/>i</a><a href='https://www.moedi'/>c</a><a href='https://www.moedic'/>t</a><a href='https://www.moedict'/>.t</a><a href='https://www.moedict.t'/>w</a><a href='https://www.moedict.tw'/>/</a><a href='https://www.moedict.tw/'/>萌</a></a></li>
+<ul class="task"><li>讓目前網址去掉 # 號時傳回完整的分享頁面，如 <a href="https://moedict.tw/萌"><a href='https://moedict.tw/%E8%90%8C'/>https://moedict.tw/萌</a></a></li>
 <li>加入 OpenGraph 支援</li>
 <li>加入 oEmbed 嵌入支援</li></ul>
 
-<h2>Firefox Open Web App </h2><ul class="comment"><li>Needs: Testing, JS</li></ul>
-<ul class="task"><li>製作、測試 Firefox OS 和桌面 (Prism) 上的離線版萌典</li>
-<li>評估 appCache/localStorage 與 package app 整合之可能性</li></ul>
+<h2>書籤功能</h2><ul class="comment"><li>Needs: Design, JS</li></ul>
+<ul class="task"><li>在詞目旁邊加上星號★</li>
+<li>選單裡加上一個「字詞紀錄簿」選項，列出之前使用者按星號的條目。</li></ul>
+
+<h2>字型呈現校正</h2><ul class="comment"><li>Needs: Typographer, JS</li></ul>
+<ul class="task"><li>修正 Chrome Blink (Android 4.3) 的台文輕聲調號<a href='https://github.com/audreyt/moedict-webkit/issues/54'/>組字問題</a>&nbsp;</li>
+<li><a href='https://www.moedict.tw/experimental-mps/right-angle.html'/>注拼音直橫混排</a> 做成 JS plugin，並確認各瀏覽器的位置無誤</li>
+<li>修正各螢幕寬度的避頭點問題</li></ul>
 
 <h2>全文檢索 </h2><ul class="comment"><li>Needs: Technical Review</li></ul>
 <ul class="task"><li>評估後端檢索方案 (gugod 對國語辭典部份做了 ElasticSearch)</li>
@@ -44,6 +41,14 @@
 <h2>手勢操作界面</h2><ul class="comment"><li>Needs: UX Designer</li></ul>
 <ul class="task"><li>改進目前 click、touchstart、pinch 混合使用的情況，訂出 guideline</li>
 <li>設計 swipe left/right 的歷史導航操作，以及其他 swipe 操作效果</li></ul>
+
+<h2>各語種成為獨立 App </h2><ul class="comment"><li>Needs: Cordova, iOS, Android, JS</li></ul>
+<ul class="task"><li>定義 URL scheme 讓跨語交叉檢索可以切換到別的 App (如有安裝)</li>
+<li>定義<a href='https://github.com/audreyt/moedict-webkit/issues/26#issuecomment-26613125'/> 離線語音包</a> 需要時可下載使用</li></ul>
+
+<h2>Firefox Open Web App </h2><ul class="comment"><li>Needs: Testing, JS</li></ul>
+<ul class="task"><li>製作、測試 Firefox OS 和桌面 (Prism) 上的離線版萌典</li>
+<li>評估 appCache/localStorage 與 package app 整合之可能性</li></ul>
 
 </body>
 </html>
