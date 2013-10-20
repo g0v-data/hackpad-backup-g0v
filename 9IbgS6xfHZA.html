@@ -3,14 +3,14 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1042"/>
+<meta name="version" content="1628"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$9IbgS6xfHZA</title>
 </head>
 <body><h1>g0v 人力資源部</h1><p>人找坑，坑找人</p><p></p><h2>來龍去脈</h2><p><b>主旨</b></p><p>g0v hackfoldr 裡面的 people, projects, tags</p><p></p><p><b>相關組織單位</b></p><ul><li><a href='https://github.com/g0v/hack.g0v.tw/blob/master/g0v.json'/>sample</a></li></ul>
 
 <h2>實做細節</h2><p><b>現有成果</b></p><ul><li><a href="http://hack.g0v.tw/people"><a href='http://hack.g0v.tw/people'/>http://hack.g0v.tw/people</a></a></li>
 <li><a href="http://hack.g0v.tw/tag/hackath3n"><a href='http://hack.g0v.tw/tag/hackath3n'/>http://hack.g0v.tw/tag/hackath3n</a></a></li>
-<li>g0v project meta data &amp; display sample: <a href="https://github.com/g0v/hack.g0v.tw/blob/master/g0v.json"><a href='https://github.com/g0v/hack.g0v.tw/blob/master/g0v.json'/>https://github.com/g0v/hack.g0v.tw/blob/master/g0v.json</a></a></li></ul>
+<li>g0v project meta data &amp; display sample: <a href="https://github.com/g0v/ha"><a href='https://github.com/g0v/hack.g0v.tw/blob/master/g0v.json'/>https://github.com/g0v/ha</a></a><a href='https://github.com/g0v/hack.g0v.tw/blob/master/g0v.json'/> </a><a href='https://github.com/g0v/hack.g0v.tw/blob/master/g0v.json'/>ck.g0v.tw/blob/master/g0v.json</a></li></ul>
 
 <p></p><h2>開發者</h2><p><b>分工與成員</b></p><ul><li>web front-end / web back-end / prototype - <a href='https://g0v.hackpad.com/ep/profile/-xi6GyN0qfe1m0Vi3coZUo'/>Chia-liang Kao</a></li>
 <li>web front-end - fukuball</li>
@@ -18,10 +18,33 @@
 
 <h2>hackath5n目標</h2><ul><li>整合以下：<ul><li>people tag分類：<a href="https://docs.google.com/file/d/0BzGJ4qvz2D3EbVNZMlJIUjhEMm8/edit"><a href='https://docs.google.com/file/d/0BzGJ4qvz2D3EbVNZMlJIUjhEMm8/edit'/>https://docs.google.com/file/d/0BzGJ4qvz2D3EbVNZMlJIUjhEMm8/edit</a></a></li>
 <li><a href="http://hack.g0v.tw/project">http://hack.g0v.tw/project</a></li>
-<li><a href="http://miau715.github.io/eo4/related_job.html">http://miau715.github.io/eo4/related_job.html</a></li></ul>
+<li><a href="http://miau715.github.io/eo4/related_job.html">http://miau715.github.io/eo4/related_job.html</a></li>
+<li>圖像類上傳介面和授權中心整合 <a href="http://g0v.github.io/moc-license-center/index.html"><a href='http://g0v.github.io/moc-license-center/index.html'/>http://g0v.github.io/moc-license-center/index.html</a></a></li></ul>
 </ul>
 
-<h2>開發手札</h2><p>以下複製自 <a href='/Y9xV1sIIuTt'/>g0v pre hackath3n</a></p><p></p><p><b>人物列表 | people registry</b></p><ul><li>people.g0v.tw - 簡易 people registry (取代原來鄉民列表 spreadsheet), 讓人自己加 tag (如：環保、醫療、前端、後端), 也許每個 tag 可以成為一個 disq.us 討論區?<ul><li>開發: <a href="http://github.com/g0v/hack.g0v.tw"><a href='http://github.com/g0v/hack.g0v.tw'/>http://github.com/g0v/hack.g0v.tw</a></a> branch: hub<ul><li>(gem install sass compass)</li>
+<h2>hackath5n 討論記錄</h2><p>Issue 的整理可以分成 people-centric 與 project-centric 兩種模式－前者以人為中心，用各種方式列出跟「某一個人」相關的 issues；後者以 project 為中心，用各種方式列出跟「某一個 project」相關的 issues。我們將先處理 people-centric 的部分。</p><p></p><ul><li>人力資源部另開 github repository，不要跟 hack.g0v.tw 混在一起。</li><ul class="comment"><li>不過現階段大部份的實作還是會先住在 hack.g0v.tw 裡。</li></ul>
+<ul class="taskdone"><li>建立 <a href='https://github.com/g0v/e04'/>g0v/e04</a> 專案</li><ul class="comment"><li>Utility scripts 會放在這邊，未來再研究怎麼把 UI 從 hack.g0v.tw 搬過來 (並與原來的 hack.g0v.tw 整合)</li></ul>
+</ul>
+</ul>
+<ul><li><a href='http://miau715.github.io/eo4/related_job.html'/>eo4 人力銀行</a> － miau715 之前做的 mock up。</li>
+<li>people頁面re-layout<ul><li>關鍵字grouping : <a href='https://github.com/g0v/hack.g0v.tw/issues/47'/>g0v/hack.g0v.tw#47</a> , <a href='https://github.com/g0v/hack.g0v.tw/issues/13'/>g0v/hack.g0v.tw#13</a><ul><li>關鍵字使用小圖示&nbsp;<a href='/6rlOq2DO1cD'/> tag</a></li></ul>
+</li>
+<li>simple profile： <a href='https://github.com/g0v/hack.g0v.tw/issues/6'/>g0v/hack.g0v.tw#6</a></li>
+<li>hover 人像後出現 pop up 人資卡</li>
+<li>點選人像後出現人資卡<ul><li>人資卡上方為基本資料&nbsp;</li>
+<li>人資卡下方為專案列表/task list/任務表/我參與的專案(用miau715之前做 mockup)</li>
+<li>我參與的工作-&gt;關注中-&gt;如果有新issue，則會有未讀的勾勾</li>
+<li>關注中 -&gt; issue可以按accept/resolved</li></ul>
+</li></ul>
+</li>
+<li>文化部授權中心整合<ul><li>上傳檔案自動化</li>
+<li>Commit 自動化</li>
+<li>接受非圖檔格式</li></ul>
+</li>
+<li>project 頁面 re-layout<ul><li>增加[適合的專案]tab</li></ul>
+</ul>
+
+<p></p><h2>開發手札</h2><p>以下複製自 <a href='/Y9xV1sIIuTt'/>g0v pre hackath3n</a></p><p></p><p><b>人物列表 | people registry</b></p><ul><li>people.g0v.tw - 簡易 people registry (取代原來鄉民列表 spreadsheet), 讓人自己加 tag (如：環保、醫療、前端、後端), 也許每個 tag 可以成為一個 disq.us 討論區?<ul><li>開發: <a href="http://github.com/g0v/hack.g0v.tw"><a href='http://github.com/g0v/hack.g0v.tw'/>http://github.com/g0v/hack.g0v.tw</a></a> branch: hub<ul><li>(gem install sass compass)</li>
 <li>npm i</li>
 <li>./node_modules/.bin/brunch w -s</li></ul>
 </li>
