@@ -3,28 +3,49 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="5558"/>
+<meta name="version" content="5965"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$mynkDCEAXgc</title>
 </head>
-<body><h1>鄉民關心你 - 專案介紹</h1><p></p><h2>什麼是鄉民關心你(Kuansim)</h2><p>一個企圖處理蒐集，整理，行動，串連，追蹤的去中心化群眾參與社會議題的平台。</p><p></p><p>是串接事件和人的媒介，是對話的一個窗口，它存在的目的，最基礎是備忘，其次是串聯和關注，更積極的是通往後續的「行動」，整套都接通了，才是鄉民關心你的全貌。</p><p></p><p><b>名詞定義</b></p><p></p><p>問題(Problem)</p><p>議題(Issue)</p><p>議題框架(....)</p><p></p><p><b>授權方式</b></p><p></p><p>程式碼: BSD 2-Caluse&nbsp;</p><p>文件: CC-By</p><p></p><p><b>使用資料</b></p><p></p><ul><li>新聞: <a href="http://www.news-pac.com/"><i><a href='http://www.news-pac.com/'/>http://www.news-pac.com/</a></i></a></li></ul>
+<body><h1>鄉民關心你 - 專案介紹</h1><p></p><h2>什麼是鄉民關心你(Kuansim)</h2><p>一個企圖處理蒐集，整理，串連，行動，追蹤的去中心化群眾參與社會議題的平台。</p><p></p><p>是串接事件和人的媒介，是對話的一個窗口，它存在的目的，最基礎是備忘，其次是串聯和關注，更積極的是通往後續的「行動」，整套都接通了，才是鄉民關心你的全貌。</p><p></p><p><b>名詞定義</b></p><p></p><ul><li>事件(Event): 有時序的資料，可以是新聞, 公文, 社群網路討論串, 公聽會等等。</li>
+<li>標籤(Tag): 資料集的屬性</li>
+<li>分類(Category): 互斥的資料集&nbsp;</li>
+<li>立場(Position): 對特定議題的觀點。</li>
+<li>議題(Issue): 群眾以分歧觀點爭辯的主題。</li>
+<li>議題設定: 指大眾傳播媒介通過報導內容的方向及數量，對一個議題進行強調。</li>
+<li>議題框架效應: 一個問題用兩種說法，兩種說法在邏輯意義上其實是相似的，然而卻導致了不同的決策判斷。</li>
+<li>期望結果: 群眾判斷要不要對特定議題繼續爭辯的準則。</li>
+<li>信任網路(Trust Network):&nbsp;</li>
+<li>Filter Bubble: a result state in which a website <a href='http://en.wikipedia.org/wiki/Algorithm'/>algorithm</a> selectively guesses what information a user would like to see based on information about the user (such as location, past click behaviour and search history) and, as a result, users become separated from information that disagrees with their viewpoints, effectively isolating them in their own cultural or ideological bubbles.</li>
+<li>Garbge Information:</li></ul>
+
+<p></p><p><b>授權方式</b></p><p></p><p>程式碼: BSD 2-Caluse&nbsp;</p><p>文件: CC-By</p><p></p><p><b>使用資料</b></p><p></p><ul><li>新聞: <a href="http://www.news-pac.com/"><i><a href='http://www.news-pac.com/'/>http://www.news-pac.com/</a></i></a></li></ul>
 
 <p>現有類似或相關專案</p><ul><li>twbug: <a href="https://github.com/chitsaou/twbug">https://github.com/chitsaou/twbug</a> (open source)</li>
 <li>openwatch: <a href="https://openwatch.net/about/">https://openwatch.net/about/</a> (open source)</li></ul>
 
-<p><b>專案目前狀態</b></p><p></p><p>&nbsp;規劃/2</p><p></p><h2>目標與功能</h2><p></p><p><b>想解決的問題</b></p><p></p><ol><li>議題相關資訊取得，檢驗的成本太高, 使群眾難以掌握真相。</li>
+<p><b>專案目前狀態</b></p><p></p><p>&nbsp;鄉民規劃/2</p><p></p><h2>目標與功能</h2><p></p><p><b>想解決的問題</b></p><p></p><ol><li>議題相關資訊取得，檢驗的成本太高, 使群眾難以掌握真相。</li>
 <li>針對議題採取行動的聯繫成本太高，使群眾難以改變現狀。</li>
 <li>沒有一套機制使群眾可以追蹤他所關心過的議題。</li>
 <li>群眾該關心的議題被電視，電台，報紙決定，而非群眾本身。</li></ol>
 
-<p><b>會是怎麼樣的網站，怎麼完成上述的目標</b></p><p></p><ol><li>為了解決問題1, 群眾需要議題文獻整理工具以產生議題摘要(懶人包)</li>
+<p><b>會是怎麼樣的網站，怎麼完成上述的目標</b></p><p></p><ol><li>為了解決問題1, 群眾需要議題文獻整理及檢驗工具以產生議題摘要(懶人包)</li>
 <li>為了解決問題2, 群眾需要一種串連機制，能將匯聚起來相似立場的民氣, 轉化成實際的行動，解決爭議。</li>
-<li>為了解決問題3, 群眾需要一種追蹤的機制, 使得社會議題在失去主流媒體興趣後, 仍能持續回顧議題的最新狀態，以採取下一步，直至爭辯雙方達成共識。 (Close the loop)</li>
-<li>為了解決問題4, 群眾需要建立Trust Network以篩選想接收的資訊，但這帶來另一個問題(social bubble)。</li></ol>
+<li>為了解決問題3, 群眾需要一種追蹤的機制, 使得社會議題在失去主流媒體興趣後, 仍能持續回顧議題的最新狀態，以採取下一步，直至爭辯雙方達成共識 (Close the loop)。</li>
+<li>為了解決問題4, 群眾需要建立Trust Network以篩選想接收的資訊，但這帶來另一個問題(Filter bubble)，需要找個一個折衷方案。</li>
+<li>為了降低發言被管制的可能，這個平台必須是分散式的。</li></ol>
 
-<p><b>營運計畫</b></p><p></p><ul><li>階段一:&nbsp; 降低群眾整理議題脈絡的時間成本</li>
-<li>階段二:&nbsp; 降低群眾針對議題採取行動的聯繫成本</li>
-<li>階段三:&nbsp; 成為代議士獲取與情的管道</li>
-<li>階段四:&nbsp; 成為政府獲取與情的管道</li></ul>
+<p><b>尚未解決的問題</b></p><p></p><ol><li>filter bubble</li>
+<li>garbae information</li></ol>
+
+<p><b>發展方向(Road map)</b></p><p></p><ul><li>階段一:&nbsp; 降低群眾整理議題脈絡的時間成本<ul><li>KPI TBD.</li>
+<li><br/></li></ul>
+</li>
+<li>階段二:&nbsp; 降低群眾針對議題採取行動的聯繫成本<ul><li>KPI TBD</li></ul>
+</li>
+<li>階段三:&nbsp; 成為代議士獲取與情的管道<ul><li>KPI TBD</li></ul>
+</li>
+<li>階段四:&nbsp; 成為政府獲取與情的管道<ul><li>KPI TBD</li></ul>
+</ul>
 
 <p><b>預定使用者</b></p><p></p><ul><li>網路成癮者(策展人/純讀者)</li></ul>
 
