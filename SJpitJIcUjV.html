@@ -3,23 +3,23 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="414"/>
+<meta name="version" content="436"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$SJpitJIcUjV</title>
 </head>
 <body><h1>立院影城</h1><p></p><p>單次會議的全日影片跟片段，用一個含有 waveform 的時間軸(參考 soundcloud, 上面還有小頭像) 表示有聲音的部份，讓 user 可以快速跳到各段，並提供「含時間點的 permalink」</p><p></p><p>授權方式: MIT</p><p>使用資料: api.ly</p><p>專案目前狀態: prototype</p><p></p><h2>目標與功能（要如何解決）</h2><p>使 IVOD 可選段落觀看，即時討論。</p><p></p><h2>實做細節（非技術背景可跳填）</h2><p></p><p>協作工具</p><ul><li>github repo： <a href="http://github.com/g0v/ly.g0v.tw">http://github.com/g0v/ly.g0v.tw</a></li></ul>
 
-<p>TODO:</p><ul class="task"><li>web front-end<ul class="task"><li>會議選擇 widget ( chooser 應該可以稍微設計一下成為一個可重用的 widget... 預設 dropdown 顯示目前的會議種類（同委員會）前後幾次... 然後選的時候旁邊有按鈕可以找別種會議, 或者按照日期查詢... )</li>
-<li>單次會議會有多天，需要呈現多個 waveform</li>
-<li>hover 小頭顯示委員資訊 (+中型 avatar?)</li>
-<li>x 軸顯示時間、日期</li>
-<li>當 youtube 在播的時候有個紅 bar 在跑, 表示目前位置</li>
-<li>縮放 waveform timeline ? 如 google viz api 那種 timeline, scrollbar + selected range</li>
-<li>含 date/timecode 的 permalink</li>
-<li>點到委員 clip 範圍, 切換至單 clip HQ video, 結束後切回全日 clip or next clip</li></ul class="task">
+<p>TODO:</p><ul class="task"><li>web front-end<ul class="task"><li>會議選擇 widget ( chooser 應該可以稍微設計一下成為一個可重用的 widget... 預設 dropdown 顯示目前的會議種類（同委員會）前後幾次... 然後選的時候旁邊有按鈕可以找別種會議, 或者按照日期查詢... ) <a href='https://github.com/g0v/ly.g0v.tw/issues/22'/>g0v/ly.g0v.tw#22</a></li>
+<li>單次會議會有多天，需要呈現多個 waveform <a href='https://github.com/g0v/ly.g0v.tw/issues/23'/>g0v/ly.g0v.tw#23</a></li>
+<li>hover 小頭顯示委員資訊 (+中型 avatar?) <a href='https://github.com/g0v/ly.g0v.tw/issues/24'/>g0v/ly.g0v.tw#24</a></li>
+<li>x 軸顯示時間、日期 <a href='https://github.com/g0v/ly.g0v.tw/issues/25'/>g0v/ly.g0v.tw#25</a></li>
+<li>當 youtube 在播的時候有個紅 bar 在跑, 表示目前位置 <a href='https://github.com/g0v/ly.g0v.tw/issues/26'/>g0v/ly.g0v.tw#26</a></li>
+<li>縮放 waveform timeline ? 如 google viz api 那種 timeline, scrollbar + selected range <a href='https://github.com/g0v/ly.g0v.tw/issues/27'/>g0v/ly.g0v.tw#27</a></li>
+<li>含 date/timecode 的 permalink <a href='https://github.com/g0v/ly.g0v.tw/issues/28'/>g0v/ly.g0v.tw#28</a></li>
+<li>點到委員 clip 範圍, 切換至單 clip HQ video, 結束後切回全日 clip or next clip <a href='https://github.com/g0v/ly.g0v.tw/issues/29'/>g0v/ly.g0v.tw#29</a></li></ul class="task">
 </li>
-<li>web back-end<ul class="task"><li>全日影片 waveform (kcwu) (轉 wav 檔 &gt; 2g 會炸掉, 需要用 w64 或拆成小檔處理)</li>
-<li>影片實際開始時間 (first frame timestamp) 校正</li>
-<li>data integrity check - 缺資料, 多資料</li></ul>
+<li>web back-end<ul class="task"><li>全日影片 waveform (kcwu) (轉 wav 檔 &gt; 2g 會炸掉, 需要用 w64 或拆成小檔處理) <a href='https://github.com/g0v/api.ly/issues/33'/>g0v/api.ly#33</a></li>
+<li>影片實際開始時間 (first frame timestamp) 校正 <a href='https://github.com/g0v/api.ly/issues/34'/>g0v/api.ly#34</a></li>
+<li>data integrity check - 缺資料, 多資料 <a href='https://github.com/g0v/api.ly/issues/35'/>g0v/api.ly#35</a></li></ul>
 </ul>
 
 <p></p><h2>成果展示（規劃文件、雛形/草稿、原型/初稿、正式發佈/完稿）</h2><p></p><p><a href="http://ly.g0v.tw/sittings/08-04-YS-06/video">http://ly.g0v.tw/sittings/08-04-YS-06/video</a></p><p></p><h2>開發者</h2><p>clkao</p><p>walkingice</p><p>tkirby</p><p>alicewei</p><p></p></body>
