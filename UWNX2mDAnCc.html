@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="439"/>
+<meta name="version" content="521"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$UWNX2mDAnCc</title>
 </head>
 <body><h1>立院 UI 工作筆記</h1><p></p><p><b>架構</b></p><p></p><p>立院會議類型</p><ul><li>依與會委員身份分類<ul><li>全院院會 - 所有人都有表決權</li>
@@ -36,13 +36,13 @@
 </li>
 <li>依內容屬性分類<ul><li>法律</li>
 <li>預算</li>
-<li>程序<ul><li>復議</li>
-<li>取消復議</li>
-<li>逕付二讀</li></ul>
-</li>
 <li>人事<ul><li>彈劾</li>
 <li>罷免</li>
 <li>不信任</li></ul>
+</li>
+<li>程序 (meta)<ul><li>復議</li>
+<li>取消復議</li>
+<li>逕付二讀</li></ul>
 </ul>
 </ul>
 <ul style="list-style: none;"><li>同意權？</li></ul>
@@ -53,7 +53,16 @@
 <p>非公報內容</p><ul><li>立委個人考察</li>
 <li>立委個人與各單位舉行會議</li></ul>
 
-<p></p><p><b>todo</b></p><ul class="task"><li>單一 bill overview 也許可以順便顯示 diffstat</li>
+<p><b>user story</b></p><p>使用者、意圖、需求</p><ul><li>關注特定議題的人/社運團體<ul><li>需要方便地搜尋、追蹤特定議題的每個時間點和進展，以便發新聞稿或到現場抗議</li></ul>
+</li>
+<li>以公民老闆身份監督國會的人<ul><li>需要評估立院成員的整體工作表現，發掘立法體制的結構性問題</li></ul>
+</li>
+<li>有投票權的人<ul><li>需要評估特定立委的個人工作表現</li></ul>
+<ul class="task"><li>找公督盟資料</li></ul>
+</ul>
+<ul><li><br/></li></ul>
+
+<p><b>todo</b></p><ul class="task"><li>單一 bill overview 也許可以順便顯示 diffstat</li>
 <li>除了顯示快速跳到某一條之外，還有該條改了多少 (因為多版本的話，可能會有很多是沒改的)</li></ul>
 <ul class="taskdone"><li>要有個簡要的提案、連署人 chart.. 可以在 /sittings 那種列出的時候顯示... 可能就是上下兩排小小的色塊 (上面是提案，下面是連署） 然後點了再顯示詳情.. compact mode 就不顯示文字跟圖了...只是小小色塊... 點開再看詳情... 疑 還是要沿用 kirby 超小頭?&#92;</li>
 <li>bill - 我加了些 print mode improvement... 那些提案人小頭好像可以 hide 掉 但是這樣 text 會變成沒有 padding</li></ul>
