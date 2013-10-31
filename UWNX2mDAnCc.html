@@ -3,11 +3,11 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="364"/>
+<meta name="version" content="439"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$UWNX2mDAnCc</title>
 </head>
-<body><h1>立院 UI 工作筆記</h1><p></p><p><b>架構</b></p><p></p><p>立院會議類型</p><ul><li>依與會委員身份分類<ul><li>全院院會 - 所有人都參加</li>
-<li>各委員會 - 屬於該委員會的人才參加</li><ul class="comment"><li>其實所有委員都可以參加，只是所屬委員才是「應參加」。投票效力應該也是所屬委員才算</li></ul>
+<body><h1>立院 UI 工作筆記</h1><p></p><p><b>架構</b></p><p></p><p>立院會議類型</p><ul><li>依與會委員身份分類<ul><li>全院院會 - 所有人都有表決權</li>
+<li>各委員會 - 屬於該委員會的人才有表決權</li><ul class="comment"><li>其實所有委員都可以參加，只是所屬委員才是「應參加」。投票效力應該也是所屬委員才算</li></ul>
 <ul><li>經濟</li>
 <li>教育</li>
 <li>財政</li>
@@ -53,13 +53,20 @@
 <p>非公報內容</p><ul><li>立委個人考察</li>
 <li>立委個人與各單位舉行會議</li></ul>
 
-<p></p><p><b>todo</b></p><p></p><ul class="task"><li>單一 bill overview 也許可以順便顯示 diffstat</li>
+<p></p><p><b>todo</b></p><ul class="task"><li>單一 bill overview 也許可以順便顯示 diffstat</li>
 <li>除了顯示快速跳到某一條之外，還有該條改了多少 (因為多版本的話，可能會有很多是沒改的)</li></ul>
 <ul class="taskdone"><li>要有個簡要的提案、連署人 chart.. 可以在 /sittings 那種列出的時候顯示... 可能就是上下兩排小小的色塊 (上面是提案，下面是連署） 然後點了再顯示詳情.. compact mode 就不顯示文字跟圖了...只是小小色塊... 點開再看詳情... 疑 還是要沿用 kirby 超小頭?&#92;</li>
 <li>bill - 我加了些 print mode improvement... 那些提案人小頭好像可以 hide 掉 但是這樣 text 會變成沒有 padding</li></ul>
+<ul class="task"><li>每次委員會會換不同的召集委員，會排不同議程，有個 overview 的話，可以看各黨召委愛排什麼議程，目的是觀察不同政黨的召集委員安排議程是否有特定偏好</li></ul>
 
-<p>semantic ui</p><ul class="task"><li>沒有亮橘色、量黃色、咖啡色，green 跟 teal 太接近，orange 跟 red 太接近…應該來把 illustrator 的 rgb 預設色票挑幾個經典的塞進去</li>
+<p><b>ideas</b></p><ul class="task"><li>把立院各會行程全部弄成 public google calendar 好像也不賴</li>
+<li>是不是所有 bill 都可以有這種標籤 <a href="http://ly.g0v.tw/debates"><a href='http://ly.g0v.tw/debates'/>http://ly.g0v.tw/debates</a></a> 這樣就可以把標籤跟立委連結，就可以從標籤查到說我想要推某個領域的法案什麼的，該找哪個立委，有點像是 g0v 的 people hub - 目前單一 bill 只有一個大 tag</li>
+<li>待審案件</li></ul>
+
+<p><b>data</b></p><ul><li>新聞稿大全集&nbsp; <a href="http://www.ly.gov.tw/01_lyinfo/0103_legnews/legnewsList.action"><a href='http://www.ly.gov.tw/01_lyinfo/0103_legnews/legnewsList.action'/>http://www.ly.gov.tw/01_lyinfo/0103_legnews/legnewsList.action</a></a> 目前沒抓，因為感覺是委員自己放的。雖然自辦公聽會會在那邊，但是沒有 structural</li></ul>
+
+<p><b>improve semantic ui</b></p><ul class="task"><li>沒有亮橘色、量黃色、咖啡色，green 跟 teal 太接近，orange 跟 red 太接近…應該來把 illustrator 的 rgb 預設色票挑幾個經典的塞進去</li>
 <li>有可能規劃一個從零直接進入 sass/jade/semantic-ui 的課程嗎？感覺這樣下線可以長很快</li></ul>
 
-<p>git</p><p>try git pull --rebase before git push&nbsp;</p><p></p></body>
+<p><b>use git</b></p><p>try git pull --rebase before git push&nbsp;</p><p></p></body>
 </html>
