@@ -3,10 +3,10 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="521"/>
+<meta name="version" content="974"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$UWNX2mDAnCc</title>
 </head>
-<body><h1>立院 UI 工作筆記</h1><p></p><p><b>架構</b></p><p></p><p>立院會議類型</p><ul><li>依與會委員身份分類<ul><li>全院院會 - 所有人都有表決權</li>
+<body><h1>立院 UI 工作筆記</h1><p></p><h2>架構</h2><p></p><p>立院會議類型</p><ul><li>依與會委員身份分類<ul><li>全院院會 - 所有人都有表決權</li>
 <li>各委員會 - 屬於該委員會的人才有表決權</li><ul class="comment"><li>其實所有委員都可以參加，只是所屬委員才是「應參加」。投票效力應該也是所屬委員才算</li></ul>
 <ul><li>經濟</li>
 <li>教育</li>
@@ -53,14 +53,66 @@
 <p>非公報內容</p><ul><li>立委個人考察</li>
 <li>立委個人與各單位舉行會議</li></ul>
 
-<p><b>user story</b></p><p>使用者、意圖、需求</p><ul><li>關注特定議題的人/社運團體<ul><li>需要方便地搜尋、追蹤特定議題的每個時間點和進展，以便發新聞稿或到現場抗議</li></ul>
+<p>物件關連</p><ul class="task"><li>google docs drawing</li></ul>
+
+<p></p><h2>頁面</h2><p></p><ul class="task"><li>首頁 - 即時訊息</li><ul><li>立院現況：live stream / 處理中案件</li>
+<li>熱門話題：瀏覽人次最高的議案 / 檔案 / 立委 / 統計</li></ul>
+</li>
+<li>找議案 - 以內容為主軸</li><ul class="taskdone"><li>議事大亂鬥 - 依日期、狀態、類型、委員會、關鍵字…綜合搜尋</li></ul>
+<ul><li>議案個別頁面 - 不同性質的議事內容有不同的呈現方式<ul><li>決議性質的內容（可能會附帶表決結果）</li><ul class="task"><li>新法案</li>
+<li>修法案（完成一半了）</li>
+<li>預算案</li>
+<li>程序案</li>
+<li>人事案</li></ul>
+</ul>
+<ul><li>質詢性質內容（有問答往返）</li><ul class="task"><li>書面</li>
+<li>會議現場</li></ul class="task">
+</li>
+<li>公聽會（包括影音、文字摘要）</li></ul>
+<ul class="task"><li>國是論壇（多人發言、每個人短時間）</li>
+<li>來函查照（單方面告知，只有文字內容）</li></ul>
+</ul>
+</ul>
+<ul><li>找立委 - 以個別立委為主軸</li><ul class="task"><li>立委總覽（類似 tisa / 綠盟，以選區分類）</li>
+<li>立委個人頁面</li><ul><li>行事曆</li>
+<li>擔任第一提案人的議案</li>
+<li>擔任第二以上提案人的議案</li>
+<li>擔任連署人的提案</li>
+<li>支持的提案</li>
+<li>反對的提案</li>
+<li>基本資料</li></ul>
+</li>
+<li>參考 <a href="http://www.ly.gov.tw/03_leg/0301_main/legIntro.action?lgno=00090&stage=8"><a href='http://www.ly.gov.tw/03_leg/0301_main/legIntro.action?lgno=00090&amp;stage=8'/>http://www.ly.gov.tw/03_leg/0301_main/legIntro.action?lgno=00090&amp;stage=8</a></a></li></ul>
+</ul>
+<ul><li>找資料 - 把先前各專案成果整合進來</li><ul class="task"><li>行事曆</li>
+<li>立院影城</li></ul>
+<ul><li>公報閱讀器（用現成做好的）</li>
+<li>法律亦毒氣 - 法規本身與版本比較（extend 現成做好的）</li>
+<li>雲端預算（用現成做好的）</li>
+<li>投票箱（用現成做好的）</li></ul>
+</li>
+<li>統計分析 - 部分可參考公督盟的統計方式</li><ul class="task"><li>議案</li><ul><li>最近更新</li>
+<li>最熱門</li>
+<li>被拖延最久、被擋最多、進展最不順利</li>
+<li>和民意背離最嚴重</li></ul>
+</ul>
+<ul class="task"><li>立委</li><ul><li>出席率 vs 個人行程 - 有沒有認真工作，還是整天跑應酬喝花酒</li>
+<li>媒體放話 vs 實際投票 - 有沒有呼嚨公民</li>
+<li>政見 vs 政績 - 有沒有呼嚨選民</li>
+<li>針對同一議題在不同時間的態度轉變</li></ul>
+</ul>
+<ul class="task"><li>委員會</li><ul><li>各委員會召委排議程偏好</li>
+<li>程序委員會排議程偏好</li></ul>
+</ul>
+</ul>
+
+<p></p><h2>工作筆記</h2><p></p><p><b>user story</b></p><p>使用者、意圖、需求</p><ul><li>關注特定議題的人/社運團體<ul><li>需要方便地搜尋、追蹤特定議題的每個時間點和進展，以便發新聞稿或到現場抗議</li></ul>
 </li>
 <li>以公民老闆身份監督國會的人<ul><li>需要評估立院成員的整體工作表現，發掘立法體制的結構性問題</li></ul>
 </li>
-<li>有投票權的人<ul><li>需要評估特定立委的個人工作表現</li></ul>
+<li>有投票權的人<ul><li>需要評估特定立委的個人工作表現，做為選舉的參考</li></ul>
 <ul class="task"><li>找公督盟資料</li></ul>
 </ul>
-<ul><li><br/></li></ul>
 
 <p><b>todo</b></p><ul class="task"><li>單一 bill overview 也許可以順便顯示 diffstat</li>
 <li>除了顯示快速跳到某一條之外，還有該條改了多少 (因為多版本的話，可能會有很多是沒改的)</li></ul>
