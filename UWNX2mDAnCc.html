@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="995"/>
+<meta name="version" content="1003"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$UWNX2mDAnCc</title>
 </head>
 <body><h1>立院 UI 工作筆記</h1><p></p><h2>架構</h2><p></p><p>立院會議類型</p><ul><li>依與會委員身份分類<ul><li>全院院會 - 所有人都有表決權</li>
@@ -119,10 +119,10 @@
 <ul class="taskdone"><li>要有個簡要的提案、連署人 chart.. 可以在 /sittings 那種列出的時候顯示... 可能就是上下兩排小小的色塊 (上面是提案，下面是連署） 然後點了再顯示詳情.. compact mode 就不顯示文字跟圖了...只是小小色塊... 點開再看詳情... 疑 還是要沿用 kirby 超小頭?&#92;</li>
 <li>bill - 我加了些 print mode improvement... 那些提案人小頭好像可以 hide 掉 但是這樣 text 會變成沒有 padding</li></ul>
 <ul class="task"><li>每次委員會會換不同的召集委員，會排不同議程，有個 overview 的話，可以看各黨召委愛排什麼議程，目的是觀察不同政黨的召集委員安排議程是否有特定偏好</li>
-<li>要來做選 channel 的嗎? <a href="http://ivod.ly.g0v.tw/cinema/EDU/live"><a href='http://ivod.ly.g0v.tw/cinema/EDU/live'/>http://ivod.ly.g0v.tw/cinema/EDU/live</a></a> (基本上就是加上 a(ng-href=&quot;/cinema/{{name}}/live&quot;) 就可以了.. 然後再先用另一個變數當做是否有在撥的 condition 現在每個委員會 channel 都有假東西在跑</li>
-<li>直播的旁邊聊天歷史紀錄還是滿重要的</li>
 <li>好心人來點精美圖檔吧，目前只有小鴨可愛</li>
-<li>單一法規的頁面…bill頁面-&gt;通關流程圖，法規頁面-&gt;visualisiert生命紀錄圖</li></ul>
+<li>單一法規的頁面…bill頁面-&gt;通關流程圖，法規頁面-&gt;visualisiert生命紀錄圖</li>
+<li>sidebar 1223 (最後一個 item 消失了)</li>
+<li>sider 在 mobile 會悲劇</li></ul>
 
 <p><b>ideas</b></p><ul class="task"><li>把立院各會行程全部弄成 public google calendar 好像也不賴</li>
 <li>是不是所有 bill 都可以有這種標籤 <a href="http://ly.g0v.tw/debates"><a href='http://ly.g0v.tw/debates'/>http://ly.g0v.tw/debates</a></a> 這樣就可以把標籤跟立委連結，就可以從標籤查到說我想要推某個領域的法案什麼的，該找哪個立委，有點像是 g0v 的 people hub - 目前單一 bill 只有一個大 tag</li>
