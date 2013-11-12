@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="3340"/>
+<meta name="version" content="3356"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$WueRQ4QIR90</title>
 </head>
 <body><ul class="comment"><li>新新聞 Open Government 訪談</li></ul>
@@ -24,8 +24,9 @@
 <li>去年在 Y! Hack Day 做了中央政府總預算，今年 g0v 也想在待辦事項很多的立院專案挑一個來作，就選了視覺呈現效果較強的立院影城。也因為近期也許多重要法案進行中，所以希望透過 hack day 密集衝刺，能在本會期讓立院影城儘速上線，讓公民團體能輕鬆分享。</li><ul class="comment"><li>誰來講互動遊戲怎麼來的？</li></ul>
 </ul>
 <ul style="list-style: none;"><li><br/></li>
-<li>最早的立院影城原本好像沒有要做互動功能？是 yahoo hackday 前幾天 LY 跟 clkao 跟 tkirby 你們三個一直在沈迷彈幕，其實一開始我還覺得他們根本神經病，搞什麼彈幕，有夠冷，哈 XD 然後到了 hackday 當天不知道誰隨口說可以丟鞋子！最後被 tkirby 弄一弄就連西瓜什麼的都出現，變成互動電影院了…整個歪 XD 好像很多受歡迎的功能都是聊天時即興跑出來的<ul style="list-style: none;"><li>印象中是行前那天先決定好當天要做彈幕，然後hackday的前幾天想用pgrest接socketio弄一個danmaku(彈幕)後端出來，但是結果來不及，然後當天tkirby和我還有ETBlue比較早到就商量實際上要做甚麼，tkirby覺得彈幕這個可能不太會得獎，於是就提到說可以串聯最近很紅的丟鞋，或者是有人能夠攔網護航之類的。後來clkao來也覺得很讚，tkirby就把丟雞蛋和鞋子弄出來了，還考慮拋物線之類的。我大部分都再苦手goAngular接彈幕的功能。後來經過討論和clkao的協助，改成firebase就串聯上了簡單的彈幕。這邊覺得還不夠，就把tkirby的互動部分也一併串到上面，就變成即時互動的大亂鬥了。(記得這時候好像已經晚上十點左右了,應該有irclog)</li></ul style="list-style: none;">
-</li>
+<li>最早的立院影城原本好像沒有要做互動功能？是 yahoo hackday 前幾天 LY 跟 clkao 跟 tkirby 你們三個一直在沈迷彈幕，其實一開始我還覺得他們根本神經病，搞什麼彈幕，有夠冷，哈 XD 然後到了 hackday 當天不知道誰隨口說可以丟鞋子！最後被 tkirby 弄一弄就連西瓜什麼的都出現，變成互動電影院了…整個歪 XD 好像很多受歡迎的功能都是聊天時即興跑出來的</li>
+<li>↓下面這個 LY 的版本應該最貼近真實</li>
+<li>印象中是行前那天先決定好當天要做彈幕，然後hackday的前幾天想用pgrest接socketio弄一個danmaku(彈幕)後端出來，但是結果來不及，然後當天tkirby和我還有ETBlue比較早到就商量實際上要做甚麼，tkirby覺得彈幕這個可能不太會得獎，於是就提到說可以串聯最近很紅的丟鞋，或者是有人能夠攔網護航之類的。後來clkao來也覺得很讚，tkirby就把丟雞蛋和鞋子弄出來了，還考慮拋物線之類的。我大部分都再苦手goAngular接彈幕的功能。後來經過討論和clkao的協助，改成firebase就串聯上了簡單的彈幕。這邊覺得還不夠，就把tkirby的互動部分也一併串到上面，就變成即時互動的大亂鬥了。(記得這時候好像已經晚上十點左右了,應該有irclog)</li>
 <li><br/></li>
 <li>然後上面那些 menu 文字，原本我是跑去參考 imdb 的網頁，後來發現好像參考不到什麼，因為都不好笑…就隨便亂掰一些搞笑的，結果在新聞裡就被引用了，雖然那些排行榜功能根本還沒做出來 XDXD</li><ul class="comment"><li>有再偷偷統計, 也許那天就做出來了&nbsp;</li></ul>
 </ul>
@@ -68,9 +69,8 @@
 <p>回想起來，這些讓人沈迷的要素，幾乎都是 open source 機制底下會自動衍生出來的。其實 open source 圈內的人通常有幾項很鮮明的共同特質或作風：</p><ul><li>少說話多做事 - 因為已經有很方便的工具（git），有意見的人要嘛就開 issue（待辦事項），要嘛就送 patch（送修改版程式），因此在一般世界中常發生的「袖手旁觀說涼話」現象在開源碼的世界裡並不常見，<b><u>反正程式碼都公開在那邊</u></b>，有什麼意見的話，有本事就自己拿去改，沒本事就閉嘴。換句話說，開源機制會自然而然地孕育出一種 doer 文化，鄙視嘴砲、鼓勵捲袖子，久而久之，就會吸引越來越多 doer 加入，這些樂於付出的人會彼此扶持，產生一種滾雪球似的正面循環。</li>
 <li>100% 真本事 - 沽名釣譽之徒在這裡沒有生存空間，因為哪個人寫了哪幾行程式碼都清清楚楚，每個人的實力在哪裡（對看得懂程式碼的人來說）一望即知，資訊完全公開，幾乎沒有人能藉由操作資訊不對等來獲取好處。文字、圖畫的貢獻，也都整理並授權公開發布。在開源碼的圈子裡，只有真正值得受到敬重的人會享譽盛名，在人際上獲得回饋。這形成了一套近乎理想的獎勵系統，社群內的資源（通常就等於聲譽）會往真正有貢獻的人身上流動，於是誘使所有人努力鍛鍊真本事、做出貢獻，這使得社群的產能比一般商業專案高出數倍（其實產能高有多重原因，但我認為這是其中一個）。</li>
 <li>敞開心房 -&nbsp;</li></ul>
-<ul class="comment"><li>還有個我覺得很重要的因素是g0v不限定任何技術或任何專業，雖然絕大多數以網頁技術開發者居多(畢竟和最初的作品可能有關)，可是g0v廣納百川，能接受像文字工作者或繪圖藝術家，甚至音樂創作也都能共同參與。大家來自於不同的背景，有不同的專長，不能說有一個共同的目標，但是大家都想著是讓政府變得更好，生活變得更便利，底層的小市民，身邊周遭的人能過得更幸福。我想大家都用身體力行來實踐這個世代的公民參與，創造屬於我們的歷史。</li></ul>
 
-<p></p><p>flickr上kirby拍的一些g0v活動照我可以拿來用吧？我會註名作者Kirby Wu</p><ul class="comment"><li>最近一次黑客松的照片是 macpaul 拍的（只是 kirby 幫忙上傳），然後裡面如果有拍到公務員身份的人的話，他們有可能不希望照片被刊出，所以也許挑好照片以後可以先讓我們幫忙確認一下？</li>
+<p>還有個我覺得很重要的因素是g0v不限定任何技術或任何專業，雖然絕大多數以網頁技術開發者居多(畢竟和最初的作品可能有關)，可是g0v廣納百川，能接受像文字工作者或繪圖藝術家，甚至音樂創作也都能共同參與。大家來自於不同的背景，有不同的專長，不能說有一個共同的目標，但是大家都想著是讓政府變得更好，生活變得更便利，底層的小市民，身邊周遭的人能過得更幸福。我想大家都用身體力行來實踐這個世代的公民參與，創造屬於我們的歷史。</p><p></p><p></p><p>flickr上kirby拍的一些g0v活動照我可以拿來用吧？我會註名作者Kirby Wu</p><ul class="comment"><li>最近一次黑客松的照片是 macpaul 拍的（只是 kirby 幫忙上傳），然後裡面如果有拍到公務員身份的人的話，他們有可能不希望照片被刊出，所以也許挑好照片以後可以先讓我們幫忙確認一下？</li>
 <li>看得到臉的有阿端、bater(?)</li>
 <li>其實我在想下面這張右邊的黑衣服是不是jimmyhuang ...</li></ul>
 <p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_WueRQ4QIR90_p.88146_1384227895707_高嘉良／Kirby Wu拍攝.jpg'/><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_WueRQ4QIR90_p.88146_1384227870997_g0v 黑客松／Kirby Wu拍攝.jpg'/></p><p></p><p>請問這兩張照片作者，內容沒有不可告人之處吧?</p><p>雖然這張我表情很怪，不過應該沒關係，就用吧 XD</p><p>第一張拍攝者 macpaul, 第二張 hcchien</p><p></p></body>
