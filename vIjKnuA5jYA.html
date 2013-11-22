@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="295"/>
+<meta name="version" content="319"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$vIjKnuA5jYA</title>
 </head>
 <body><h1>立院資料標準化</h1><p></p><ul><li><b>立委個人資訊</b></li></ul>
@@ -62,7 +62,8 @@
  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;], <br/>
  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"4": "&#20839;&#25919;&#22996;&#21729;&#26371;"<br/>
 }</td>
-<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">maybe something like: committees: [ {name: ... , chair: true/false }, {name: ..., chair: }]</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">maybe something like: committees: [ {name: ... , chair: true/false }, {name: ..., chair: }]<br/>
+&#21152;&#20837;session&#21028;&#21029;&#26371;&#26399;&#22914;&#20309;&#65311;[ {session: "1", name: ..., chair:true/false}, {....}]</td>
 </tr>
 <tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">term_start</td>
 <td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#21040;&#32887;&#26085;&#26399;</td>
@@ -133,7 +134,7 @@ contacts.phone</td>
 </table>
 </li></ul>
 
-<p>contacts的address的部份能否加入經緯度變成一個object?</p><p>如 contacts: {place: {address: blahblah&nbsp;&nbsp;&nbsp; latlng: ?????,????&nbsp; }}</p><p>這樣在跑<a href='http://g0v.github.io/mapView/ly.html'/>民代地圖</a>時可以快很多倍(目前是每一筆都要去查詢一次latlng，所以比較慢) :)</p><p></p><p>reference:</p><ul><li><a href="https://github.com/g0v/twlyparser/blob/master/data/mly-8.json"><a href='https://github.com/g0v/twlyparser/blob/master/data/mly-8.json'/>https://github.com/g0v/twlyparser/blob/master/data/mly-8.json</a></a></li>
+<p>contacts的address的部份能否加入經緯度變成一個object?</p><p>如 contacts: {place: {address: blahblah&nbsp;&nbsp;&nbsp; latlng: ?????,????&nbsp; }}</p><p>這樣在跑<a href='http://g0v.github.io/mapView/ly.html'/>民代地圖</a>時可以快很多倍(目前是每一筆都要去查詢一次latlng，所以比較慢) :)</p><p>好阿！請問有API可以傳入地址後回傳經緯度嗎？</p><p></p><p>reference:</p><ul><li><a href="https://github.com/g0v/twlyparser/blob/master/data/mly-8.json"><a href='https://github.com/g0v/twlyparser/blob/master/data/mly-8.json'/>https://github.com/g0v/twlyparser/blob/master/data/mly-8.json</a></a></li>
 <li><a href="https://github.com/ronnywang/TWLegislativeYuanData/blob/master/8.json"><a href='https://github.com/ronnywang/TWLegislativeYuanData/blob/master/8.json'/>https://github.com/ronnywang/TWLegislativeYuanData/blob/master/8.json</a></a></li>
 <li><a href="https://github.com/thewayiam/twly_crawler/blob/master/ly_info(pretty_format).json"><a href='https://github.com/thewayiam/twly_crawler/blob/master/ly_info(pretty_format).json'/>https://github.com/thewayiam/twly_crawler/blob/master/ly_info(pretty_format).json</a></a></li></ul>
 
