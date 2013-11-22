@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1403"/>
+<meta name="version" content="1435"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$UWNX2mDAnCc</title>
 </head>
 <body><h1>立院 UI 工作筆記</h1><p></p><h2>架構</h2><p></p><p>立院會議類型</p><ul><li>依與會委員身份分類<ul><li>全院院會 - 所有人都有表決權</li>
@@ -127,19 +127,20 @@
 <ul class="task"><li><a href="http://ly.g0v.tw/bills/1011130070300200"><a href='http://ly.g0v.tw/bills/1011130070300200'/>http://ly.g0v.tw/bills/1011130070300200</a></a> 這個多版本的 style 有點不對... 變成每個都是綠的了 應該是只有 active 的是綠的</li></ul>
 <ul class="taskdone"><li>search 改成 single column<ul class="taskdone"><li>search result 那些 item 有辦法設 height 然後 ellipsis 嗎？</li>
 <li>vertical ellipsis 我也不會弄... semantic ui 好像沒有現成的 就是那些 item 一樣高... 過長的後面變成 .... 刪節</li>
-<li>(search) infinite scroll 外面的 div 看能不能變得更服貼一點</li></ul class="taskdone">
-</li>
-<li>progress bar 串假資料 - done</li>
+<li>(search) infinite scroll 外面的 div 看能不能變得更服貼一點</li></ul>
+</ul>
+<ul class="task"><li>progress bar<ul class="task"><li><a href="http://ly.g0v.tw/bills/1434L12953"><a href='http://ly.g0v.tw/bills/1434L12953'/>http://ly.g0v.tw/bills/1434L12953</a></a> , <a href="http://ly.g0v.tw/bills/335L15406"><a href='http://ly.g0v.tw/bills/335L15406'/>http://ly.g0v.tw/bills/335L15406</a></a></li>
+<li>程序委員會有四個相關提案，應該是併在一起才對 <a href="http://ly.g0v.tw/bills/9L13518"><a href='http://ly.g0v.tw/bills/9L13518,'/>http://ly.g0v.tw/bills/9L13518</a></a><a href='http://ly.g0v.tw/bills/9L13518,'/>,</a> <a href="http://ly.g0v.tw/bills/23L13514"><a href='http://ly.g0v.tw/bills/23L13514,'/>http://ly.g0v.tw/bills/23L13514</a></a><a href='http://ly.g0v.tw/bills/23L13514,'/>,</a> <a href="http://ly.g0v.tw/bills/23L13515"><a href='http://ly.g0v.tw/bills/23L13515,'/>http://ly.g0v.tw/bills/23L13515</a></a><a href='http://ly.g0v.tw/bills/23L13515,'/>,</a> <a href="http://ly.g0v.tw/bills/23L13516"><a href='http://ly.g0v.tw/bills/23L13516'/>http://ly.g0v.tw/bills/23L13516</a></a></li></ul>
+<ul class="taskdone"><li>progress bar 串假資料 - done</li>
 <li>progress bar mobile - done, tkirby++</li></ul>
 <ul class="task"><li>也許 steps 旁邊有個 (?) 按鈕？因為可能有人會覺得「疑這不是通過了」&nbsp;</li>
 <li>details 是不是應該改成 inline? 不然 mobile 上，再下面展開了應該也不會看到</li>
-<li>單一 =&gt; 多案 按一下往右邊 slide 出並陳法案 好像不賴</li>
-<li>還有一種情況是：兩案併案審查，然後另外一個新的提案逕付二讀；於是二讀是三個提案一起</li>
-<li>委員會決議「不予審議」是一個新的案號，然後還可以對這個決議提出復議，又是一個新的案號...</li>
-<li>結果復議也是 many to many.. 一個復議案可以針對多個提案決議、一個決議可以被多個不同人復議 orz</li>
+<li>合併法案的 progress bar 顯示及切換方式<ul class="task"><li>單一 =&gt; 多案 按一下往右邊 slide 出並陳法案 好像不賴</li>
+<li>還有一種情況是：兩案併案審查，然後另外一個新的提案逕付二讀；於是二讀是三個提案一起...委員會決議「不予審議」是一個新的案號，然後還可以對這個決議提出復議，又是一個新的案號...結果復議也是 many to many.. 一個復議案可以針對多個提案決議、一個決議可以被多個不同人復議 orz</li></ul class="task">
+</li></ul class="task">
+</li>
 <li>資料的更新時程可能要想辦法圖解一下.... 新的法案會在週二被提出，週五被一讀，但是要等到隔週的週五，前一次議事錄確定後，才會進到資料庫</li>
-<li>&nbsp;bill page infobox 是個 vertical menu, 但是 semantic-ui 會讓他無法 text select... 這樣就無法 copy 案號了</li>
-<li>合併法案的 progress bar 顯示及切換方式</li></ul>
+<li>&nbsp;bill page infobox 是個 vertical menu, 但是 semantic-ui 會讓他無法 text select... 這樣就無法 copy 案號了</li></ul>
 
 <p><b>ideas</b></p><ul class="task"><li>把立院各會行程全部弄成 public google calendar 好像也不賴</li>
 <li>是不是所有 bill 都可以有這種標籤 <a href="http://ly.g0v.tw/debates"><a href='http://ly.g0v.tw/debates'/>http://ly.g0v.tw/debates</a></a> 這樣就可以把標籤跟立委連結，就可以從標籤查到說我想要推某個領域的法案什麼的，該找哪個立委，有點像是 g0v 的 people hub - 目前單一 bill 只有一個大 tag</li>
