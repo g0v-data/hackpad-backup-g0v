@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1818"/>
+<meta name="version" content="1992"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$R7BEW2muCbU</title>
 </head>
 <body><h1>g0v designer set 前端半條龍手冊</h1><p></p><p><b>HTML &amp; Jade</b></p><ul><li>html 寫著網頁的內容，讓 chrome, firefox, safari 等瀏覽器讀取、轉換成我們看到的畫面</li>
@@ -19,8 +19,12 @@
 <li>作法二：透過 npm</li><ul class="comment"><li>這個我要問科比 XD</li></ul>
 </ul>
 </ol>
-<ol><li>網頁寫好要上線了，把 jade 檔案輸出成 html 檔案</li><ul><li>作法一：使用 jade 指令</li>
-<li>作法二：透過 npm</li><ul class="comment"><li><i>這個我要問科比 XD</i></li></ul>
+<ol><li>網頁寫好要上線了，把 jade 檔案輸出成 html 檔案</li><ul><li>作法一：使用 jade 指令, 例如:<ul><li>jade source.jade<ul><li>即會產生 source.html</li></ul>
+</li></ul>
+</li>
+<li>作法二：透過 npm<ul><li>如果使用一些方便的 template 時, 有些會提供即改即轉(watching)的功能. 他們有些會透過 &quot;npm start&quot; 這個指令來達成<ul><li>npm start 會找 package.json 裡的 &quot;start&quot; 這一項, 把內容拿來執行, 所以 npm start 會發生甚麼是端看 template 是怎麼寫的</li></ul>
+<ul class="comment"><li>原來如此！所以我打 npm start 的話是抓 jade 官方程式的 package.json 的 start 來執行，執行的結果就是只要這個目錄裡的 .jade 檔案一修改，他就會馬上出一份 .html 到 .jade 的同一個地方？</li></ul>
+</ul>
 </ul>
 </ol>
 </ul>
