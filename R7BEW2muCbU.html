@@ -3,14 +3,15 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1116"/>
+<meta name="version" content="1809"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$R7BEW2muCbU</title>
 </head>
 <body><h1>g0v designer set 前端半條龍手冊</h1><p></p><p><b>HTML &amp; Jade</b></p><ul><li>html 寫著網頁的內容，讓 chrome, firefox, safari 等瀏覽器讀取、轉換成我們看到的畫面</li>
 <li>jade 是覺得寫 html 很煩的懶人發明的，把 html 裡一堆重複的地方省略，只打最重要的部分，其他地方叫電腦幫你補完變成 html</li>
-<li>使用 jade 的方式</li><ol><li>安裝 node.js 程式</li><ul><li>在安裝 jade 之前，要先安裝 node.js，因為 jade 程式是在 node.js 環境裡執行的。如果你的電腦裡還沒裝 node.js，請看官網的 <a href='http://nodejs.org/'/>安裝方式</a></li></ul>
+<li>使用 jade 的方式</li><ol><li>安裝 jade<ol><li>安裝 node.js 程式</li><ul><li>在安裝 jade 之前，要先安裝 node.js，因為 jade 程式是在 node.js 環境裡執行的。如果你的電腦裡還沒裝 node.js，請看官網的 <a href='http://nodejs.org/'/>安裝方式</a></li></ul>
 </ol>
 <ol><li>安裝 jade 程式</li><ul><li>這個程式是把 jade 語法補完變成 html 用的。請看官網的 <a href='http://jade-lang.com/command-line/'/>安裝方式</a></li></ul>
+</ol>
 </ol>
 <ol><li>在你愛用的文字編輯器裡安裝 jade 的語法提示，這樣程式碼才有漂亮顏色。sublime text 安裝方式詳下面章節</li>
 <li>在瀏覽器裡預覽 jade 變成 html 以後在網頁上看起來的樣子</li><ul><li>因為瀏覽器只認得 html，所以想一邊修改 jade 一邊預覽結果的話，要有個程式幫你隨時把最新修改的 jade 補完變成 html，再給瀏覽器去讀</li>
@@ -29,7 +30,7 @@
 <li>在 erb 裡面能寫 ruby 程式，但不能寫 javascript 程式</li>
 <li>嗯，你說為什麼要在 jade 或 erb 裡面寫程式？那就是另一個超懶人的故事惹…正所謂：科技始終來自於惰性（茶）</li>
 <li>為什麼 g0v 專案用 jade 而不用 erb 呢？因為村長選了 jade，所以大家就跟著用 jade，這樣出事有村長頂著啊哈哈</li>
-<li>其實我一開始是學 erb 的，因為學 ruby 的關係，而且出自 rubyist 之手的 fire.app 也原生支援 erb，不過自從來到 g0v 以後……<a href='http://cornguo.atcity.org/test/mjcount/#ohno_ohno'/>喔no！喔no！</a></li>
+<li>其實我一開始因為學 ruby 的關係，是先寫 erb 的，而且出自 rubyist 之手的 fire.app 也原生支援 erb，不過自從來到 g0v 以後……<a href='http://cornguo.atcity.org/test/mjcount/#ohno_ohno'/>喔no！喔no！</a></li>
 <li>haml... ?</li>
 <li>handler... ?</li></ul>
 </ul>
@@ -37,15 +38,54 @@
 <p><b>CSS &amp; Sass &amp; Compass</b></p><ul><li>css 寫著顏色、字體、排版規則等樣式，讓 chrome, firefox, safari 等瀏覽器讀取、把 html 網頁的內容變漂亮</li>
 <li>sass 是覺得寫 css 很煩的懶人發明的，把 css 裡一堆重複的地方省略，只打最重要的部分，其他地方叫電腦幫你補完變成 css</li>
 <li>compass 是連寫 sass 都覺得煩的更懶人發明的，把 sass 裡面一些比較囉唆不好寫的地方換個寫法，再叫電腦幫你跟 sass 一起補完變成 css</li>
-<li>使用 sass + compass 的方式<ul><li>安裝 ruby 程式<ul><li>在安裝 sass 或 compass 之前，要先安裝 ruby，因為 sass 和 compass 程式是在 ruby 環境裡執行的。如果你的電腦裡還沒裝 ruby，請看官網的 <a href='http://www.ruby-lang.org/zh_tw/'/>安裝方式</a></li></ul>
+<li>使用 sass + compass 的方式</li><ol><li>安裝 sass + compass</li><ul><li>作法一：刻苦耐勞腳踏實地白手起家法</li><ol><li>安裝 ruby 程式</li><ul><li>在安裝 sass 或 compass 之前，要先安裝 ruby，因為 sass 和 compass 程式是在 ruby 環境裡執行的。如果你的電腦裡還沒裝 ruby，請看官網的 <a href='http://www.ruby-lang.org/zh_tw/'/>安裝方式</a></li></ul>
+</ol>
+<ol><li>安裝 rubygems 程式</li><ul><li>ruby 程式可以加上各種外掛功能，大家把這些外掛程式稱做 gem，而 rubygems 是用來管理這些 gems 的程式。ruby 的 1.9 版以後都有內建 rubygmes，不過不見得是最新版，可能需要更新它。請看官網的 <a href='https://rubygems.org/pages/download'/>安裝方式</a></li></ul>
+</ol>
+<ol><li>安裝 sass 程式</li><ul><li>這個程式是把 sass 語法補完變成 css 用的。請看官網的 <a href='http://sass-lang.com/install'/>安裝方式</a></li></ul>
+</ol>
+<ol><li>安裝 compass 程式</li><ul><li>這個程式是把 compass 語法補完變成 sass 用的。請看官網的 <a href='http://compass-style.org/install/'/>安裝方式</a></li></ul>
+</li></ul>
 </li>
-<li>安裝 ruby gem 程式</li>
-<li>安裝 sass 程式</li>
-<li>安裝 compass 程式</li>
-<li><br/></li></ul>
+<li>作法二：一帆風順魚躍龍門惰性光輝法<ul><li>安裝 fire.app<ul><li>裝了 fire.app 以後，上面作法一寫的 ruby 啦，sass 啦，compass 啦全部都不用手動安裝，fire.app 會幫你搞定一切。關於 fire.app 的介紹及安裝方式，詳見下面章節</li></ul>
+</ul>
+</ul>
+</ol>
+<ol><li>在你愛用的文字編輯器裡安裝 sass 的語法提示，這樣程式碼才有漂亮顏色。sublime text 安裝方式詳下面章節</li>
+<li>在瀏覽器裡預覽 sass + compass 變成 css 以後在網頁上看起來的樣子</li><ul><li>因為瀏覽器只認得 css，所以想一邊修改 sass / compass 一邊預覽結果的話，要有個程式幫你隨時把最新修改的 sass / compass 補完變成 css，再給瀏覽器去讀</li>
+<li>作法一：透過 Fire.app</li>
+<li>作法二：？</li></ul>
+</ol>
+<ol><li>網頁寫好要上線了，把 sass + compass 檔案輸出成 css 檔案</li><ul><li>作法一：透過 Fire.app</li>
+<li>作法二：？</li></ul>
+</li></ul>
+</li>
+<li>常和 sass 相提並論的東西<ul><li>sass 需要在 ruby 環境中執行，所以常常會跟 ruby 家族的其他工具一起使用</li>
+<li>less 需要在 javascript 環境中執行，所以常常會跟 javascript 家族的其他工具一起使用？（沒用過 less 不瞭解，請幫忙糾正）</li></ul>
 </ul>
 
-<p></p><p><b>JacaScript &amp; jQuery &amp; Angular JS &amp; LivesSript</b></p><p></p><p><b>Semantic UI</b></p><p></p><p><b>Fire.app</b></p><p></p><p><b>LiveReload</b></p><p></p><p><b>Sublime Text 2/3</b></p><ul><li>讓 jade, sass, ls 的語法有顏色</li><ol><li>安裝 sublime text 的 package control，<a href='https://sublime.wbond.net/installation'/>安裝方式</a></li><ul class="comment"><li>安裝時，視窗最下面的狀態列左邊會有個 = 跑來跑去，跑完就表示裝完了</li></ul>
+<p><b>JavaScript &amp; jQuery &amp; Angular JS &amp; LiveScript</b></p><ul><li>javascript 寫著「當使用者按了這個就跑出那個」之類的互動效果，讓 chrome, firefox, safari 等瀏覽器讀取、讓 html 網頁不只是靜態展示內容，還可以針對使用者當下的動作做出反應</li>
+<li>jquery 是覺得寫 javascript 很煩的懶人發明的，把 javascript 裡一堆很常用但卻很囉唆不好寫的功能預先寫好，打包成簡潔的函式，讓你可以用好寫的語法達到同樣的效果</li>
+<li><br/></li></ul>
+
+<p><b>Fire.app</b></p><ul><li>fire.app 是覺得每次用 sass + compass + erb 開發網站時都要刻苦耐勞腳踏實地白手起家地到處安裝程式或反覆打指令很煩的人發明的，把設計網站過程中一堆常常需要重複做的事情預先寫好，打包成一支電腦軟體，讓你可以按幾下選單就搞定不屬於寫網頁本身的周邊雜事。</li>
+<li>使用 fire.app 的方式</li><ol><li>安裝 fire.app</li><ul><li>安裝來源一：直接向開發團隊購買，一次付費終身更新，只要&nbsp; US$14。詳情見 <a href='http:'/>fire.app 官網</a></li><ul class="comment"><li>利益揭露：fire.app 的作者是強者我室友 XD</li></ul>
+</ul>
+<ul><li>安裝來源二：使用 g0v 贊助版本，請上 irc 向 clkao 或 hlb 詢問</li><ul class="comment"><li>詳情待確認</li></ul>
+</ul>
+<ul><li>安裝來源三：請向手上持有 fire.app 安裝檔的朋友詢問，fire.app 是開源軟體，以 GPL 授權，所以散佈是沒有版權問題的</li>
+<li>安裝來源四：自己從 github 下載原始碼編譯。請見 <a href='https://github.com/KKBOX/FireApp'/>github repo</a></li><ul class="comment"><li>我是自己編的, 可是不會用, 還被強者你室友知道了QQ</li>
+<li>不用太難過……ㄟ反正你也用不到啊那是給不會開 server 的人用的 =3=</li></ul>
+</ul>
+</ol>
+<ol><li><br/></li></ol>
+</ul>
+
+<p><b>LiveReload</b></p><ul><li>livereload 是覺得每次改完網頁都要去瀏覽器按 F5 或 ctrl + r 重新整理頁面很煩的人發明的，</li></ul>
+
+<p><b>Semantic UI</b></p><ul><li>semantic ui 是覺得每次寫不同的網站都要一直重複寫類似的導覽列、選單、按鈕……等元件很煩的人發明的，</li></ul>
+
+<p><b>Sublime Text 2/3</b></p><ul><li>讓 jade, sass, ls (livescript) 的語法有漂亮顏色</li><ol><li>安裝 sublime text 的 package control，<a href='https://sublime.wbond.net/installation'/>安裝方式</a></li><ul class="comment"><li>安裝時，視窗最下面的狀態列左邊會有個 = 跑來跑去，跑完就表示裝完了</li></ul>
 </ol>
 <ol><li>安裝語法提示<ol><li>打 command (ctrl) + shift + p 叫出 command palette 小輸入框</li>
 <li>打 package，從自動跳出的清單中找到 package installation，移到它上面 enter</li>
