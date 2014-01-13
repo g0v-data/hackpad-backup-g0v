@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="541"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$UG3PJ9SLf7A</title>
+</head>
+<body><h1>斧頭幫入會挑戰 (Crawler War Game) 發想</h1><p></p><p>為了能訓練更多的斧頭幫成員能夠循序漸近砍下更有價值的木材己要想辦，來規劃一個 Crawler War Game 遊戲，網站上提供一些常見的 HTML 或者搜尋功能的網站，挑戰方法就是你自行寫一個程式將網站爬下來，並且把他轉換成題目要求的 CSV 格式，只要 CSV 內容吻合就可以挑戰下一關，後面的難度將會越來越高。</p><p></p><p><b>關卡技術挑戰</b></p><ul><li>標準 HTML 網站</li>
+<li>gov.tw 等級超混亂 HTML 網站</li>
+<li>ajax infinite-scroll 資料 HTML 網站</li>
+<li>會認 User-Agent 的網站</li>
+<li>會擋 Referer 的網站</li>
+<li>會擋頻率太快的網站</li>
+<li>需要輸入一次 captcha 的網站 (輸入一次之後該 session 之後都不用輸入)</li>
+<li>需要從列表頁去抓單一頁面資訊的網站</li>
+<li>只有條件搜尋界面沒有完整列表界面</li></ul>
+<ul class="comment"><li>中間有跳轉得算那種 ? 例如: <a href="http://enterprise.lib.nccu.edu.tw/govpeople/"></a><a href='http://enterprise.lib.nccu.edu.tw/govpeople/'/>http://enterprise.lib.nccu.edu.tw/govpeople/</a></li>
+<li>Ronny: 這種用只有搜尋界面的網站當作挑戰重點好了</li></ul>
+<p><b>關卡規劃</b></p><ol><li>最簡單的標準 &lt;table&gt;&lt;tr&gt;&lt;td&gt; 只有一頁的網站</li>
+<li>上一關加上 pager</li>
+<li>上一關加上會認 referer</li>
+<li>上一關加上會認 user-agent</li>
+<li>上一關加上會擋一秒鐘只能 GET 一次的網站</li>
+<li>第二關的 pager 改成 infinite scroll</li>
+<li>大量 ajax 的網站</li></ol>
+
+</body>
+</html>
