@@ -3,34 +3,25 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="517"/>
+<meta name="version" content="1058"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$FK7eBR4BdAj</title>
 </head>
-<body><h1>讓 Fire.app 支援 Jade 的方法</h1><p></p><p><b>讓 Fire.app 支援 Jade 的方法（Windows 7 版）</b></p><ul class="comment"><li>Linux 跟 Mac 請以此類推... XD</li></ul>
-<ol><li>用 command prompt 安裝 Jade<ol><li>按 Windows 鍵</li><ul class="comment"><li>出現開始功能表，游標會自動出現在下方搜尋框</li></ul>
+<body><h1>在 Fire.app 中使用 Jade 樣板語法（以 Windows 版為例）</h1><ul class="comment"><li>Linux 跟 Mac 請以此類推... XD</li></ul>
+<p><a href='/TvnVBdyagMJ#讓-Fire.app-支援-Jade-的方法---20140118之前舊版'/>讓 Fire.app 支援 Jade 的方法 - 20140118之前舊版</a></p><p></p><p>20140118後新版Fire.app已經內建Jade支援，使用方式：</p><ol><li>取得Fire.app執行檔</li><ul><li>方法一：購買Fire.app</li>
+<li>方法二：從<a href='https://github.com/KKBOX/FireApp/'/>github</a>抓下來自己compile</li>
+<li>方法三：找認識的人要檔案</li></ul>
 </ol>
-<ol><li>輸入 cmd 後按 enter</li><ul class="comment"><li>找到 cmd.exe （也就是 command prompt）並執行它</li></ul>
-</ol>
-<ol><li>在 command prompt 裡輸入 npm install -g jade 後按 enter</li><ul class="comment"><li>會自動上網抓 Jade 的程式並安裝它，要跑一小下子</li></ul>
-</ol>
-</ol>
-<ol><li>製作 Fire.app 的 Jade 設定檔<ol><li>打開檔案總管，移動到需要使用 Jade 的專案的資料夾</li>
-<li>在專案資料夾根目錄空白的地方按「滑鼠右鍵→新增→純文字檔案」</li>
-<li>檔名設定成 http_servlet_handler.rb （注意副檔名要改成 .rb，不是 .txt）</li><ul class="comment"><li>如果看不到副檔名，在檔案總管按 Alt + F 叫出功能選單，選「工具→資料夾選項」，再選檢視分頁，找到「隱藏已知檔案的副檔名」取消打勾，然後按「確定」</li></ul>
-</ol>
-<ol><li>連到 <a href="https://gist.github.com/tka/5302996"><s><a href='https://gist.github.com/tka/5302996'/>https://gist.github.com/tka/5302996</a></s></a> <a href="https://gist.github.com/tka/5302996/#comment-931517"><a href='https://gist.github.com/tka/5302996/#comment-931517'/>https://gist.github.com/tka/5302996/#comment-931517</a></a> 網頁</li><ul class="comment"><li>這是 <a href="https://gist.github.com/tka/5302996#comment-854085"><a href='https://gist.github.com/tka/5302996#comment-854085'/>https://gist.github.com/tka/5302996#comment-854085</a></a> 加了幾個字的版本，讓 /src 資料夾中的 .jade 檔案可以在 localhost 根目錄預覽，網址不用加 /src&nbsp;</li></ul>
-</ol>
-<ol><li><s>往下捲一點，找到 http_servlet_handler.rb for windows 這一段</s></li>
-<li>把內容複製後貼到剛才新增的 http_servlet_handler.rb 文字檔中，存檔</li></ol>
+<ol><li>設定專案<ol><li>到你的專案資料夾中，把根目錄下的config.rb檔案弄成<a href='https://gist.github.com/ETBlue/8481039'/>這樣</a>。跟原本的config.rb不同的地方在於多了第1-3行。</li>
+<li>同樣在專案資料夾根目錄下，新增<a href='https://gist.github.com/ETBlue/8481193'/>這個檔案</a>。如果你的作業系統是Windows，要把第19、20行的「etblue」改成你的Windows使用者名稱。</li>
+<li>在專案資料夾的根目錄下，開一個叫做views的資料夾，把你的.jade檔案放在裡面</li>
+<li>在專案資料夾的根目錄下，開一個叫做public的資料夾，給Fire.app等一下輸出檔案用</li>
+<li>把css、js、img…等資料夾，都移到public資料夾內</li></ol>
 </li>
-<li>測試<ol><li>在專案資料夾根目錄裡新增空白的文字檔，檔名叫 foo.jade</li>
-<li>打開 Fire.app</li><ul class="comment"><li>跑完以後程式 icon 會出現在開始列的通知區，剛打開時 icon 黑色的</li></ul>
+<li>執行Fire.app<ol><li>執行Fire-app.exe後，讓它watch你的專案資料夾，再用瀏覽器打開<a href="http://localhost:24681"></a>http://localhost:24681，就可以預覽views資料夾中的index.jade</li><ul class="comment"><li>使用Jade的專案資料夾，必須是執行Fire.app後第一個watch的資料夾，如果已經先watch過別的專案，需要到Fire.app選單中按quit然後重開Fire.app</li></ul>
 </ol>
-<ol><li>按下 Fire.app icon，選 watch folder... 後選專案資料夾的位置</li><ul class="comment"><li>watch 後 fire.app 的 icon 會變成彩色的</li>
-<li>如果原本已經在 watch folder 中，先 stop watching 然後再重新 watch 一次</li></ul>
+<ol><li>成功watch專案資料夾後，在Fire.app選單中按「build project」，所有jade、sass就會輸出成html跟css在public資料夾底下</li><ul class="comment"><li>如果你的css、img檔是使用絕對路徑，那麼直接用瀏覽器開public下的html的話路徑會跑掉，要讓Fire.app改成去watch這個public資料夾才會正常。</li></ul>
 </ol>
-<ol><li>連到 <a href="http://127.0.0.1:24681/foo.jade"><u><a href='http://127.0.0.1:24681/foo.jade'/>http://127.0.0.1:24681/foo.jade</a></u></a></li>
-<li>網頁一片空白沒有錯誤訊息，就表示成功了 :D</li></ol>
+<ol><li>所有專案根目錄下的資料夾都會被輸出到public中，如果有放ai工作檔之類的資料夾不需要被輸出的話，可以更改設定……（待補）</li></ol>
 </ol>
 
 <p><b>Jade 的常見 bug（i.e. 使用 Jade 的菜鳥的腦袋的常見 bug）</b></p><ol><li>jade 的 extend 失效了</li><ul><li>原本好好的，突然之間網頁預覽畫面變成一片空白<ul><li>已知原因：我的 block 名稱寫錯了（茶）</li></ul>
@@ -38,16 +29,17 @@
 <li>出現莫名其妙的錯誤訊息，但看不出錯誤源頭（linux 底下 tka 遇到的）<ul><li>已知原因：我的某個 .jade 的 html attribute 用空白分隔，沒有改成 , 分隔（茶茶）</li></ul>
 </ul>
 </ol>
-<ol><li>沒辦法在 Jade 裡面寫 javascript</li><ul><li>已知原因：Jade 裡的 js 是 for client side use，被 Jade 包起來了，不能和外界溝通</li>
-<li>解法：<ul><li>Fire.app 內<ul><li>找到根目錄下、之前設定的 http_servlet_handler.rb</li>
-<li>把「body = Open3.popen3(&rsquo;node c:/users/etblue/appdata/roaming/npm/node_modules/jade/bin/jade --path . &quot;&rsquo;) do |stdin, stdout, stderr|」這一行</li></ul>
-<ul style="list-style: none;"><li>改成「body = Open3.popen3(&rsquo;node c:/users/etblue/appdata/roaming/npm/node_modules/jade/bin/jade --path .<b><u> -O &quot;{require: require}</u></b>&quot;&rsquo;) do |stdin, stdout, stderr|」</li></ul>
-<ul><li>兩者差別在於加入了粗體底線的部分，意思是叫 Jade 把 .jade 檔案裡面的 require 這個關鍵字（第一個 require）當作是 javascript 執行環境裡的 require 這個 function（第二個 require）來解讀，這樣一來，在 .jade 裡面寫的 js code 的 require 關鍵字才會生效。</li></ul>
+<ol><li>沒辦法在 Jade 裡面寫 javascript</li><ul><li>現在已經內建了，不需要再hack，使用方式請見上面步驟 XD</li>
+<li><s>已知原因：Jade 裡的 js 是 for client side use，被 Jade 包起來了，不能和外界溝通</s></li>
+<li><s>解法：</s><ul><li><s>Fire.app 內</s><ul><li><s>找到根目錄下、之前設定的 http_servlet_handler.rb</s></li>
+<li><s>把「body = Open3.popen3(&rsquo;node c:/users/etblue/appdata/roaming/npm/node_modules/jade/bin/jade --path . &quot;&rsquo;) do |stdin, stdout, stderr|」這一行</s></li></ul>
+<ul style="list-style: none;"><li><s>改成「body = Open3.popen3(&rsquo;node c:/users/etblue/appdata/roaming/npm/node_modules/jade/bin/jade --path .<b><u> -O &quot;{require: require}</s></u></b><s>&quot;&rsquo;) do |stdin, stdout, stderr|」</s></li></ul>
+<ul><li><s>兩者差別在於加入了粗體底線的部分，意思是叫 Jade 把 .jade 檔案裡面的 require 這個關鍵字（第一個 require）當作是 javascript 執行環境裡的 require 這個 function（第二個 require）來解讀，這樣一來，在 .jade 裡面寫的 js code 的 require 關鍵字才會生效。</s></li></ul>
 </li>
-<li>Jade command<ul><li>由於 Fire.app 目前還沒有 build .jade 檔案的功能，所以必須開 command line 下指令把 .jade 變成 html，才能 push 到 gh-pages 上面給大家看</li>
-<li>指令：<ul><li>cd src</li><ul class="comment"><li>移動到放 .jade 檔案的資料夾位置，我的 .jade 是放在 src/ 裡面，所以移到 src&nbsp;</li></ul>
+<li><s>Jade command</s><ul><li><s>由於 Fire.app 目前還沒有 build .jade 檔案的功能，所以必須開 command line 下指令把 .jade 變成 html，才能 push 到 gh-pages 上面給大家看</s></li>
+<li><s>指令：</s><ul><li><s>cd src</s></li><ul class="comment"><li><s>移動到放 .jade 檔案的資料夾位置，我的 .jade 是放在 src/ 裡面，所以移到 src&nbsp;</s></li></ul>
 </ul>
-<ul><li>jade -o .. -O &rsquo;{require: require}&rsquo; .</li><ul class="comment"><li>叫 Jade 把這個目錄裡（.）的 .jade 檔案 compile 成 html（-o）丟到上一層目錄（..）中，並且把 .jade 檔案裡面的 require 關鍵字解讀成 javascript 的 require function（-O &rsquo;{require: require}&rsquo;）</li></ul>
+<ul><li><s>jade -o .. -O &rsquo;{require: require}&rsquo; .</s></li><ul class="comment"><li><s>叫 Jade 把這個目錄裡（.）的 .jade 檔案 compile 成 html（-o）丟到上一層目錄（..）中，並且把 .jade 檔案裡面的 require 關鍵字解讀成 javascript 的 require function（-O &rsquo;{require: require}&rsquo;）</s></li></ul>
 </ul>
 </ul>
 </ul>
