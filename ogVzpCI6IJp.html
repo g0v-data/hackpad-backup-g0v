@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="420"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$ogVzpCI6IJp</title>
+</head>
+<body><h1>hackpad 延伸功能</h1><ul class="comment"><li>新坑</li></ul>
+<p><b>IRC 即時轉播 To Hackpad (irc2hackpad)</b></p><p></p><p>不論大小松或是g0v的成員各自參與gov公開活動時，常常會藉由irc的實況轉播讓其他人遠端共同參與，但是事後需要將irc的紀錄複製到hackpad，除了手動複製貼上還需要人工整理，希望透過bot來減低人工處理的時間。</p><p></p><p>使用情境:</p><ol><li>bot 在g0v channel常駐</li>
+<li>使用以下的命令 _texlive start [title] 即開始文字轉播</li>
+<li>bot會自動將轉播者的文字轉發到hackpad</li>
+<li>其他人若要加入文字轉播協作則是 _textlive join</li>
+<li>有加入協作者若要結束文字轉播則輸入 _textlive end&nbsp;</li></ol>
+
+<p><b>hackpad 共筆 To Blog (hackpad2blog)</b></p><ul class="comment"><li>本來是想直出logdown 但是目前logdown沒有api, 所以要自己hack</li></ul>
+<p>每個blog共同協作的環境差異很大，希望透過chrome extension來完成，hackpad共筆協作即可發佈道到blog平台。</p><p></p><p>使用情境:&nbsp;</p><ol><li>裝chrome extension</li>
+<li>hackpad協作</li>
+<li>使用chrome extension登入該blog</li>
+<li>將hackpad的內容一鍵發布至blog</li></ol>
+
+<p>技術討論</p><p>hackpad這邊使用markdown輸出，透過chrome extension呼叫伺服器端服務，把markdown輸出到該blog。</p><p></p><ul class="comment"><li>融合以上兩者就可以使用irc寫blog了 XDD&nbsp;</li></ul>
+
+</body>
+</html>
