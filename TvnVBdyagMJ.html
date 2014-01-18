@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2"/>
+<meta name="version" content="18"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$TvnVBdyagMJ</title>
 </head>
 <body><h1>讓 Fire.app 支援 Jade 的方法 - 20140118之前舊版</h1><p></p><ol><li>用 command prompt 安裝 Jade<ol><li>按 Windows 鍵</li><ul class="comment"><li>出現開始功能表，游標會自動出現在下方搜尋框</li></ul>
@@ -32,5 +32,21 @@
 <li>網頁一片空白沒有錯誤訊息，就表示成功了 :D</li></ol>
 </ol>
 
-</body>
+<p><b>Jade 的常見問題</b></p><ol><li>沒辦法在 Jade 裡面寫 javascript</li><ul><li>已知原因：Jade 裡的 js 是 for client side use，被 Jade 包起來了，不能和外界溝通</li>
+<li>解法：<ul><li>Fire.app 內<ul><li>找到根目錄下、之前設定的 http_servlet_handler.rb</li>
+<li>把「body = Open3.popen3(&rsquo;node c:/users/etblue/appdata/roaming/npm/node_modules/jade/bin/jade --path . &quot;&rsquo;) do |stdin, stdout, stderr|」這一行</li></ul>
+<ul style="list-style: none;"><li>改成「body = Open3.popen3(&rsquo;node c:/users/etblue/appdata/roaming/npm/node_modules/jade/bin/jade --path .<b><u> -O &quot;{require: require}</u></b>&quot;&rsquo;) do |stdin, stdout, stderr|」</li></ul>
+<ul><li>兩者差別在於加入了粗體底線的部分，意思是叫 Jade 把 .jade 檔案裡面的 require 這個關鍵字（第一個 require）當作是 javascript 執行環境裡的 require 這個 function（第二個 require）來解讀，這樣一來，在 .jade 裡面寫的 js code 的 require 關鍵字才會生效。</li></ul>
+</li>
+<li>Jade command<ul><li>由於 Fire.app 目前還沒有 build .jade 檔案的功能，所以必須開 command line 下指令把 .jade 變成 html，才能 push 到 gh-pages 上面給大家看</li>
+<li>指令：<ul><li>cd src</li><ul class="comment"><li>移動到放 .jade 檔案的資料夾位置，我的 .jade 是放在 src/ 裡面，所以移到 src&nbsp;</li></ul>
+</ul>
+<ul><li>jade -o .. -O &rsquo;{require: require}&rsquo; .</li><ul class="comment"><li>叫 Jade 把這個目錄裡（.）的 .jade 檔案 compile 成 html（-o）丟到上一層目錄（..）中，並且把 .jade 檔案裡面的 require 關鍵字解讀成 javascript 的 require function（-O &rsquo;{require: require}&rsquo;）</li></ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ol>
+
+<p></p></body>
 </html>
