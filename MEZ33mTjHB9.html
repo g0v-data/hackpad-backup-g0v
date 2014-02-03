@@ -3,30 +3,48 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="122"/>
+<meta name="version" content="1465"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$MEZ33mTjHB9</title>
 </head>
-<body><h1>g0v addressbook iOS app</h1><p></p><h2>政府通訊錄 iOS 版</h2><p>產品規劃 | Product Planning</p><ul class="comment"><li>產品規劃（網站類），產品不是網站的話可以自行修改成適合的樣子</li>
-<li>空白模版，複製後貼到你的 hackpad</li>
-<li>from Justin Lee （李易修）</li>
-<li><a href='https://g0v.hackpad.com/QUrgIRJEpv4#空白模版使用方式'/>空白模版使用方式</a></li></ul>
+<body><h1>g0v addressbook iOS app</h1><p></p><h2>政府通訊錄 iOS 版</h2><p>需要聯絡政府單位或是政府官員時候，需要查詢電話資料及內容，或是聯絡相關人員之時，提供行動版的查詢功能</p><p></p><p>簡單的說就是 <a href='http://hack.g0v.tw/kuansim/g6v6MpyacFb'/>政府公開通訊錄</a> 的手機連接端，但是是離線版</p><p></p><p></p><h2>Feature Version</h2><ul><li>0.2</li></ul>
+<ul style="list-style: none;"><li>回報錯誤資料功能</li></ul>
+<ul><li>0.1</li></ul>
+<ul style="list-style: none;"><li>基本功能及使用情境設定</li></ul>
 
-<h2>Strategy</h2><p>需要聯絡政府單位或是</p><ul class="comment"><li>這個產品要達成什麼目標？</li>
-<li>鎖定/排除哪些使用者族群？</li>
-<li>（產出文件：user story）</li></ul>
+<h2>Strategy</h2><p>主要目標：</p><ul><li>可以提供快速查詢功能</li>
+<li>從標記清單中快速找回聯絡人</li>
+<li>提供其他 App 可用 <b>open URL</b> 方式(打開)查詢資料</li></ul>
 
-<h2>Scope</h2><ul class="comment"><li>提供/不提供哪些功能？</li>
-<li>這些功能的使用流程各自是什麼？</li>
-<li>（產出文件：flow chart）</li></ul>
+<p>主要族群</p><ul><li>手邊暫時沒有電腦只有智慧型手機</li>
+<li>沒有網路也想要知道聯絡方式</li>
+<li>只會使用手機不會使用電腦的人</li></ul>
 
-<h2>Structure</h2><ul class="comment"><li>首頁、level 1、level 2... 共有哪些頁面？</li>
-<li>頁面之間的連結關係長什麼樣子？</li>
-<li>（產出文件：網站架構圖）</li></ul>
+<h2>Scope</h2><ul><li>依姓名、電話查詢資料</li>
+<li>標記特定資料 (機關單位或是聯絡人)</li>
+<li>有網路的地方連線資料庫更新資料庫</li></ul>
 
-<h2>Wireframe / Content</h2><ul class="comment"><li><i>每頁的內容各自是什麼？</i></li>
-<li>頁面上各元素大概會放在什麼位置、有多大尺寸？</li>
-<li>頁面上有哪些與使用者互動的區塊？</li>
-<li><i>（產出文件：文案、頁面框線圖）</i></li></ul>
+<h2>Structure</h2><ul><li>主要頁面</li></ul>
+<ul style="list-style: none;"><li>使用三個不同的頁面去切換 (tab bar)</li><ul><li>查詢頁面<ul><li>設定頁面</li></ul>
+</li>
+<li>標記頁面</li></ul>
+</ul>
+
+<h2>Wireframe / Content</h2><ul><li>查詢頁面<ul><li>詳細資料頁面 (機關單位/單一聯絡人)</li><ul class="comment"><li>項目從通訊錄的需要欄位中統整</li></ul>
+<ul><li>名稱</li></ul>
+<ul style="list-style: none;"><li>點選提供複製名稱</li></ul>
+<ul><li>電話</li></ul>
+<ul style="list-style: none;"><li>點選直接使用系統電話播出</li></ul>
+<ul><li>地址</li></ul>
+<ul style="list-style: none;"><li>點選打開地圖程式 (Ex: Google Map)</li></ul>
+<ul><li>標記該筆資料</li></ul>
+</li></ul>
+</li>
+<li>標記頁面<ul><li>顯示有標記的聯絡人</li>
+<li>編輯標記清單及順序</li></ul>
+</li>
+<li>設定頁面<ul><li>更新資料庫選項</li>
+<li>簡單說明及版本號</li></ul>
+</ul>
 
 <h2>Visual</h2><ul class="comment"><li>每頁實際上看起來會長什麼樣子</li>
 <li>精確的排版、配色、字體大小、視覺特效</li>
