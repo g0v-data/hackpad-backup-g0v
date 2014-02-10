@@ -3,11 +3,12 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2140"/>
+<meta name="version" content="2264"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$CULVn9DDzEU</title>
 </head>
 <body><h1>公報自動化</h1><p></p><h2>來龍去脈（想解決什麼問題）</h2><p>靈感來源</p><ul style="list-style: none;"><li>每週公報 &amp; 每期(月)公報整理的時候需要耗費大量人力。</li></ul>
-<p>主旨</p><ul style="list-style: none;"><li>簡少公報編輯/整理時人力的浪費。</li></ul>
+<p>主旨</p><ul><li>簡少公報編輯/整理時人力的浪費。</li>
+<li>提供API給各種應用串接。</li></ul>
 
 <p>牽涉領域</p><ul class="comment"><li>e.g.教育 / 環保 / 醫療 / 社福 / 核電 / 都市計畫 / 勞工權益 / 食品安全 ...（會變成專案 tag）</li></ul>
 <ul style="list-style: none;"><li><br/></li></ul>
@@ -16,7 +17,7 @@
 <p>相關組織單位</p><ul class="comment"><li>e.g.公督盟/綠盟/司改會/苦勞網/泛科學...（會變成專案 tag）</li></ul>
 
 <p>相關專案</p><ul class="comment"><li>衍生自某專案/衍生出某專案/API串接自某專案...etc.</li></ul>
-<p><a href='https://github.com/jessy1092/Hackpad-Converter'/>Hackpad Converter</a></p><p></p><p>授權方式</p><ul style="list-style: none;"><li>CC0 (之類的吧...</li></ul>
+<p><a href='https://github.com/jessy1092/Hackpad-Converter'/>Hackpad Converter</a></p><p></p><p>授權方式</p><ul style="list-style: none;"><li>CC0 、 MIT</li></ul>
 <ul class="comment"><li>程式碼部分（如 MIT/BSD）</li>
 <li>文件部分（如 CC-BY）</li></ul>
 
@@ -24,40 +25,47 @@
 <p>專案目前狀態</p><ul class="comment"><li>構想 / 規劃 / 雛形 / 實作</li></ul>
 <ul style="list-style: none;"><li>實作</li></ul>
 
-<h2>目標與功能（要如何解決）</h2><p>預定使用者</p><ul style="list-style: none;"><li>公報編輯人員</li></ul>
-<p>預定功能</p><ul style="list-style: none;"><li>簡化每期公報製作</li></ul>
-<p>使用方式</p><ul style="list-style: none;"><li>每月第一週自動彙集前四周公報，產生每月公報，轉po到hackpad與tumblr上。</li></ul>
+<h2>目標與功能（要如何解決）</h2><p>預定使用者</p><ul><li>公報編輯人員</li>
+<li>各專案人員</li></ul>
+<p>預定功能</p><ul><li>簡化每期公報製作、提供API給各種應用串接。</li></ul>
+<p>使用方式</p><ul><li>每月第一週自動彙集前四周公報，產生每月公報，轉po到hackpad與tumblr上。</li>
+<li>製作公報跑馬燈。</li></ul>
 
 <h2>實做細節（非技術背景可跳填）</h2><p></p><p>使用技術</p><ul><li>Java</li>
 <li><a href='https://hackpad.com/Hackpad-API-v1.0-k9bpcEeOo2Q'/>Hackpad API</a></li>
 <li><a href='http://www.tumblr.com/docs/en/api/v2'/>tumblr API</a></li></ul>
 <ul style="list-style: none;"><li><br/></li></ul>
-<p>協作工具</p><ul><li>github repo： <a href="https://github.com/jessy1092/AutoCommunique">https://github.com/jessy1092/AutoCommunique</a></li>
+<p>協作工具</p><ul><li>github repo：&nbsp;<ul><li>每月公報：<a href="https://github.com/jessy1092/AutoCommunique"></a>https://github.com/jessy1092/AutoCommunique</li>
+<li>公報API：<a href="https://github.com/jessy1092/CommuniqueAPI"></a>https://github.com/jessy1092/CommuniqueAPI</li></ul>
+</li>
 <li>hackfoldr 工作資料夾網址：</li>
 <li>google drive 共用資料夾網址：</li>
 <li>google groups 討論群組：</li>
 <li>irc channel：</li></ul>
 
-<p>產出檔案格式</p><ul style="list-style: none;"><li>html, hackpad, tumblr</li><ul class="comment"><li>umm...目前想法是每期公報整理完之後 change to tumblr, 發佈。</li>
+<p>產出檔案格式</p><ul style="list-style: none;"><li>html, hackpad, tumblr, json</li><ul class="comment"><li>umm...目前想法是每期公報整理完之後 change to tumblr, 發佈。</li>
 <li>或是由新聞中心發佈至 tumblr</li>
 <li>標準HTML格式？（就像目前 irc log 一樣）</li></ul>
 </ul>
 
-<p>進度與 to-do</p><ul class="task"><li>公報所使用的 tag list</li><ul class="comment"><li>最佳解(?)是從專案中心撈...不過專案中心還沒出現(艸</li>
+<p>進度與 to-do</p><ul class="taskdone"><li>公報所使用的 tag list</li><ul class="comment"><li>最佳解(?)是從專案中心撈...不過專案中心還沒出現(艸</li>
 <li>另外會有類似詞指同一個分類(專案)的問題... 也許做一個主 tag 然後有相關的 子 tag 歸為同一類</li>
 <li><a href='https://g0v.hackpad.com/JTSWsZHutsb'/>公報規範</a></li></ul>
 </ul>
-<ul class="task"><li>每期公報分類的簡短介紹</li><ul class="comment"><li>初始想法見 <a href='/5yFP2C3hm3k'/>2013 年 8 月份公報</a> 已編完的(萌典、政誌...etc</li>
+<ul class="taskdone"><li>每期公報分類的簡短介紹</li><ul class="comment"><li>初始想法見 <a href='/5yFP2C3hm3k'/>2013 年 8 月份公報</a> 已編完的(萌典、政誌...etc</li>
 <li>在 tag list 能從專案中心撈之前應該會先由同一個( tag list的) hackpad 收集</li>
 <li><a href='https://g0v.hackpad.com/Fe3VpeN42w9'/>月份公報各條目簡介</a></li></ul>
 </ul>
 <ul class="taskdone"><li>hackpad 轉 post to tumblr, hackpad (或其他地方</li><ul class="comment"><li>這部份需要再討論，每期公報主要是對外發佈，因此「可能」還是會避免使用 hackpad ( 所以較有可能會轉到 tumblr 再由新聞中心發佈至FB/G+ )</li></ul>
 </ul>
+<ul class="taskdone"><li>Communique API</li><ul class="comment"><li>提供公報API，提供給各專案使用</li>
+<li><a href='https://github.com/jessy1092/CommuniqueAPI'/>github</a>&nbsp; ex. <a href="http://g0v-communique-api.herokuapp.com/api/1.0/entry/all"></a>http://g0v-communique-api.herokuapp.com/api/1.0/entry/all</li></ul>
+</ul>
 <ul class="task"><li>irc log 的 filter</li><ul class="comment"><li>this maybe undo. (((在 irc 上有討論關於 filter 的問題...</li>
 <li>原始想法是簡化每週公報的製作</li></ul>
 </ul>
 
-<h2>成果展示（規劃文件、雛形/草稿、原型/初稿、正式發佈/完稿）</h2><p></p><p>測試公報: <a href='/FoG2qpiennh'/>201381925&nbsp;</a> <a href='/obgBphEq1ur'/>201381218&nbsp;</a></p><p>自動化產生公報 in hackpad: <a href='https://g0v.hackpad.com/--2XCTDEMNQFH'/>公報自動化測試</a></p><p>自動化產生公報 in tumblr: <a href="http://jessy1092.tumblr.com/post/60939857626">http://jessy1092.tumblr.com/post/60939857626</a></p><p></p><p></p><h2>開發者</h2><p></p><p>技術指導</p><p></p><p>分工與成員</p><ul class="task"><li>NeedsData: <a href='/ep/profile/FhF2TCnIycW'/>lanfon</a> <a href='/ep/profile/v6ozRKwVLwr'/>Chun Wei Lee</a> 需要資料（擷取、清理）</li>
+<h2>成果展示（規劃文件、雛形/草稿、原型/初稿、正式發佈/完稿）</h2><p></p><p>測試公報: <a href='/FoG2qpiennh'/>201381925&nbsp;</a> <a href='/obgBphEq1ur'/>201381218&nbsp;</a></p><p>自動化產生公報 in hackpad: <a href='https://g0v.hackpad.com/--2XCTDEMNQFH'/>公報自動化測試</a></p><p>自動化產生公報 in tumblr: <a href="http://jessy1092.tumblr.com/post/60939857626"></a>http://jessy1092.tumblr.com/post/60939857626</p><p></p><p>公報API: <a href="http://g0v-communique-api.herokuapp.com/api/1.0/entry/all"></a>http://g0v-communique-api.herokuapp.com/api/1.0/entry/all</p><p></p><h2>開發者</h2><p></p><p>技術指導</p><p></p><p>分工與成員</p><ul class="task"><li>NeedsData: <a href='/ep/profile/FhF2TCnIycW'/>lanfon</a> <a href='/ep/profile/v6ozRKwVLwr'/>Chun Wei Lee</a> 需要資料（擷取、清理）</li>
 <li>NeedsTech: <a href='/ep/profile/v6ozRKwVLwr'/>Chun Wei Lee</a> 需要技術支援（程式、架站 etc)</li>
 <li>NeedsProcess: <a href='/ep/profile/FhF2TCnIycW'/>lanfon</a> <a href='/ep/profile/v6ozRKwVLwr'/>Chun Wei Lee</a> 需要幫忙設計作業流程</li></ul>
 <ul class="comment"><li>設定成 project registry 中的 tags，需要幫忙的會自動 promote 到 g0v project hub</li></ul>
