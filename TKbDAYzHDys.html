@@ -3,24 +3,57 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="246"/>
+<meta name="version" content="798"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$TKbDAYzHDys</title>
 </head>
-<body><h1>g0v Dev Policy | 零時政府產品(?)開發政策</h1><p></p><p><b>成為 g0v 專案的條件</b></p><ul><li>如果是軟體開發專案，必須採用任何一種 open source 授權</li>
-<li>如果是內容創作專案，必須採用任何一種 creative commons 授權<ul><li>為了盡量符合開源精神，工作檔案必須一併釋出</li></ul>
+<body><h1>g0v Dev Policy | 零時政府開發政策</h1><p></p><p><b>成為 g0v 專案的條件</b></p><ul><li>如果是軟體開發專案，必須採用任何一種 open source 授權<ul><li>只要開源，營利專案也可以成為 g0v 專案</li>
+<li>程式碼可以放在自己的 github 個人帳號，也可以放在 g0v 組織帳號</li>
+<li>repo 裡建議放 g0v.json 檔案，以利程式自動抓取專案資訊放到專案列表中，雖然這並不是必要的</li></ul>
+</li>
+<li>如果是內容創作專案，必須採用任何一種 creative commons 授權<ul><li>為了符合開源精神，可編輯的原始工作檔案（psd、ai、aep、band…）必須一併釋出</li>
+<li>建議將釋出的檔案放在 g0v 共用的 google drive 資料夾，以便將來整理至授權中心</li></ul>
+</li>
+<li>期望專案主旨不違反以下精神，雖然這並不是必要的<ul><li>支持 open government data、資訊自由</li>
+<li>支持公民基本權平等</li>
+<li>支持…</li></ul>
 </ul>
 
-<p><b>不能成為 g0v 專案的情況</b></p><ul><li><br/></li></ul>
+<p><b><s>不能成為 g0v 專案的情況</s></b></p><ul><li><s>非開源專案。</s></li>
+<li><s>違反自由、平等、人權等普世價值的專案(?)</s></li></ul>
+<ul class="comment"><li>宣揚歧視的專案是否能成為g0v專案？例如反對同志平權，或者打壓台灣國家主權等</li>
+<li>普世價值不易衡量，如<a href='https://github.com/g0v/laweasyread-front#license'/>法規亦毒氣</a>的授權雖然開源，但是具爭議性，也許正面列舉充要條件即可，這一節可以省略？</li>
+<li>已標記為省略 XD</li></ul>
 
 <p><b>成為 g0v 專案貢獻者的方式</b></p><ul><li>可以聯絡專案窗口，彼此討論有哪些適當的坑</li>
-<li>如果是軟體開發專案，也可以手刀衝 github 直接 fork 程式碼、提出 pull request</li>
-<li>如果是內容創作專案，也可以手刀衝 google drive 直接 fork 工作檔，建立自己的作品資料夾</li></ul>
+<li>如果是軟體開發專案，也可以衝 github 直接 fork 程式碼、提出 pull request</li>
+<li>如果是內容創作專案，也可以衝 google drive 直接 fork 工作檔，建立自己的作品資料夾</li></ul>
 
-<p><b>外部商業 / 政府 / 非營利組織和 g0v 一起開發的方式</b></p><ul><li>政府</li>
-<li>非營利組織</li>
-<li>商業組織</li></ul>
+<p><b>外部商業 / 政府 / 非營利組織和 g0v 一起開發的方式</b></p><ul><li>依主導權<ul><li>邀 g0v 貢獻者主導開發：來黑客松提案，看有沒有人願意跳坑，專案方向由開發者自行決定<ul><li>這是一般最常見的合作模式</li>
+<li>優點：自由、快樂、超展開、充滿驚喜</li>
+<li>缺點：無法預測會發展成什麼樣子，也不一定會有人跳坑</li></ul>
+</li>
+<li>共同開發：開發過程中，雙方一起討論取得共識並執行<ul><li>範例：404失蹤兒專案</li>
+<li>優點：開發出來的成果組織本身馬上可以使用，不需要額外的轉換工作</li>
+<li>缺點：如果組織本身有時程壓力，g0v 貢獻者不保證能夠配合。如果對專案發展的方向產生歧見，g0v 貢獻者不保證會持續投入開發，也可能會自己 fork 出另外的版本。</li></ul>
+</li>
+<li>邀 g0v 貢獻者參與組織主導的開發：<ul><li>如果專案主導者超有個人魅力，也許可以成功說服個別貢獻者接受這樣的方式</li>
+<li>優點：可以很符合主導者的需求</li>
+<li>缺點：如果主導的人不是超有魅力，很可能找不到人跳坑。由於專案仍是開源的，同樣無法保證 g0v 貢獻者會持續配合，也可能 fork 出另外的版本</li></ul>
+</li></ul>
+</li>
+<li>依源碼授權<ul><li>部分 open source<ul><li>開源和非開源的程式碼分開來放</li></ul>
+</li>
+<li>延遲 open source 的時間點<ul><li>在尚未 open source 前，視為一般私人專案</li>
+<li>在尚未 open source 前，如果想邀請 g0v 貢獻者參與，依一般私人專案的作法和個人簽約</li></ul>
+</ul>
+</ul>
 
-<p><b>取用 g0v 的開發成果</b></p><ul><li><br/></li></ul>
+<p><b>取用 g0v 的開發成果</b></p><ul><li>應用在開源專案<ul><li>只要遵循授權即可取用程式碼</li>
+<li>如果需要向原開發者諮詢技術細節，可以直接上 g0v irc 或 github 發問</li></ul>
+</li>
+<li>應用在非開源專案<ul><li>只要遵循授權即可取用程式碼</li>
+<li>如果需要向原開發者諮詢技術細節，可以個別聘請開發者為顧問</li></ul>
+</ul>
 
-</body>
+<p></p></body>
 </html>
