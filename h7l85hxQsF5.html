@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="660"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$h7l85hxQsF5</title>
+</head>
+<body><h1>g0v web app generator</h1><p></p><p>利用yeoman建立g0v 網頁快速開發的框架，將g0v常用的套件包裝起來，下次可以重複利用，加速開發</p><p>短期目標是 2/22 黑客松當天可以讓大家使用，同樣可以衍生出g0v extension generator 加速瀏覽器擴充開發</p><p></p><p>常用項目</p><ul class="task"><li>angular</li>
+<li>bower</li>
+<li>deploy script <a href="https://github.com/g0v/ly.g0v.tw/blob/master/deploy"></a>https://github.com/g0v/ly.g0v.tw/blob/master/deploy</li>
+<li>.editorconfig</li>
+<li>jade (static and compile to angularjs templates)</li>
+<li>stylus ( or ruby-sass)</li>
+<li>semantic ui</li>
+<li>gulp</li>
+<li>karma tests</li>
+<li>protractor tests</li>
+<li>express</li>
+<li>livescript</li>
+<li>g0v common navbar &lt;-- 這是...?</li></ul>
+<ul class="comment"><li>有g0v logo的navbar之類的</li>
+<li>話說之前有的g0v tabzllla 的想法 XDDD</li></ul>
+<ul class="task"><li>livereload</li>
+<li>travis config</li></ul>
+<p>目錄結構</p><ul class="code"><li>_public/ (compile後的資料夾, watch point)</li>
+<li>app/</li>
+<li>|___ partials/</li>
+<li>|___ app/&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp; |____ controllers/</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp; |____ directives/</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp; |____ services/</li>
+<li>|___ assets/</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp; |____ img/</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |____ g0v logo</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp; |____ styles/</li>
+<li>test/</li>
+<li>.travis/</li>
+<li>.gitignore</li>
+<li>.editorconfig</li>
+<li>gulpfile.ls</li>
+<li>package.json</li>
+<li>bower.json</li>
+<li>.bowerrc</li>
+<li>karma.conf.js</li>
+<li>deploy</li></ul>
+
+<p></p><p></p></body>
+</html>
