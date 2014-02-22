@@ -3,16 +3,16 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1129"/>
+<meta name="version" content="1236"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$i70OmIWyjaY</title>
 </head>
-<body><h1>children-image 兒童圖像</h1><p></p><p><b>0. 核心概念:</b></p><p>孩子是獨立的個體,非未完成的成人半成品</p><p>資訊的功能:</p><p>1)&nbsp; 省思性 (改變觀感:重新省視孩子的存在)</p><p>2) 衝擊性 (ex資訊排列組合後的真相,打破認知死角--以原住民為例)</p><p>3) 知道(某類別)孩子在台灣/全球的&quot;位置&quot; (ex下午4:30的孩子,可看出地區差異)</p><p></p><p><b>1.介面發想:</b></p><p>1)&nbsp; 無操作,首頁畫面: 開架式照片牆(隨機)</p><p>2) 觀看點選:&nbsp;</p><p>a.不選類別--單一照片點選(呈現三個關鍵字)</p><p>b.選單點選&nbsp;</p><ul><li>&rsquo;&rsquo;時間軸&rsquo;&rsquo;橫切面--ex:下午4:30各地台灣孩子的圖像;</li>
+<body><h1>children-image 兒童圖像</h1><p></p><p><b>0. 核心概念:</b></p><p>孩子是獨立的個體,非未完成的成人半成品</p><p>資訊的功能:</p><p>1)&nbsp; 省思性 (改變觀感:重新省視孩子的存在)</p><p>2) 衝擊性 (ex資訊排列組合後的真相,打破認知死角--以原住民為例)</p><p>3) 知道(某類別)孩子在台灣/全球的&quot;位置&quot; (ex下午4:30的孩子,可看出地區差異)</p><p></p><p><b>1.介面需求發想:</b></p><p>1)&nbsp; 無操作,首頁畫面: 開架式照片牆(隨機)</p><p>2) 觀看點選:&nbsp;</p><p>a.不選類別--單一照片點選(呈現三個關鍵字)</p><p>b.選單點選 舉例:</p><ul><li>&rsquo;&rsquo;時間軸&rsquo;&rsquo;橫切面--ex:下午4:30各地台灣孩子的圖像;</li>
 <li>&rsquo;&rsquo;地區&rsquo;&rsquo;橫切面--ex:北區孩子的圖像;</li>
 <li>&rsquo;&rsquo;社經&rsquo;&rsquo;橫切面--ex:GDP在XX以下地區,孩子的圖像</li>
 <li>&rsquo;&rsquo;地點&rsquo;&rsquo;橫切面--ex:遊樂場裡的孩子圖像</li></ul>
 <p>※ 橫切面類別 (可新增) 有選單</p><p>※ 選單類別: 參與類別.上傳者身分別.地區.孩子年齡.上傳者與幼兒的關係.描述短語.孩子行為類別</p><p>c.決定時間軸</p><p>看見---&gt;不同時間 _____ (類別)孩子的圖像</p><p></p><p><b>2.資料處理呈現需求發想:</b></p><ul style="list-style: none;"><li>量--統計各類別分布圖、曲線圖</li>
-<li>質--關鍵字分析、各類別圖像意象視覺呈現</li></ul>
-<p>&nbsp;</p><p><b>3.技術開發</b></p><p></p><p>後台: Ushahidi</p><p></p><h2>App 開發</h2><p>使用: Ushahidi-Android</p><p>Github: <a href="https://github.com/jessy1092/Ushahidi_Android"></a>https://github.com/jessy1092/Ushahidi_Android</p><p>IDE: Eclipse</p><p>環境: Android 4.2.2( android-17 ), Android 2.3.3 ( android-10 ), Google Play Services SDK</p><p>官方安裝說明: <a href="https://wiki.ushahidi.com/display/WIKI/Build+The+Android+App"></a>https://wiki.ushahidi.com/display/WIKI/Build+The+Android+App</p><p></p><ul><li>Build<ul><li>git clone git@github.com:jessy1092/Ushahidi_Android.git</li>
+<li>質--關鍵字分析、各類別圖像意象視覺呈現、選擇照片與其他照片關聯性由高而低排列(撲布流)</li></ul>
+<p>&nbsp;</p><p><b>3.技術開發</b></p><p></p><h2>Web 開發</h2><p>mockups: <a href="https://moqups.com/#"></a>https://moqups.com/#!/edit/youchenlee/pY1opSlu</p><p></p><h2>App 開發</h2><p>使用: Ushahidi-Android</p><p>Github: <a href="https://github.com/jessy1092/Ushahidi_Android"></a>https://github.com/jessy1092/Ushahidi_Android</p><p>IDE: Eclipse</p><p>環境: Android 4.2.2( android-17 ), Android 2.3.3 ( android-10 ), Google Play Services SDK</p><p>官方安裝說明: <a href="https://wiki.ushahidi.com/display/WIKI/Build+The+Android+App"></a>https://wiki.ushahidi.com/display/WIKI/Build+The+Android+App</p><p></p><ul><li>Build<ul><li>git clone git@github.com:jessy1092/Ushahidi_Android.git</li>
 <li>Eclipse import<ul><li>./Libraries/abs</li>
 <li>./Libraries/Core<ul><li>Add Core/libs/ushahidi_sdk-1.1.jar to build path</li></ul>
 <ul class="comment"><li>選取 ushaidi_sdk-1.1.jar 按右鍵 Build Path -&gt; Add to Build Path</li></ul>
@@ -28,5 +28,5 @@
 </ul>
 <ul><li>Run App</li></ul>
 
-</body>
+<h2>後台</h2><p>Ushahidi Admin</p><p></p><h2>API</h2><p>APP to Backend API: Ushahidi</p><p>Backend to Frontend API: ?</p><p></p></body>
 </html>
