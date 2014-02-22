@@ -3,13 +3,13 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1465"/>
+<meta name="version" content="1557"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$MEZ33mTjHB9</title>
 </head>
-<body><h1>g0v addressbook iOS app</h1><p></p><h2>政府通訊錄 iOS 版</h2><p>需要聯絡政府單位或是政府官員時候，需要查詢電話資料及內容，或是聯絡相關人員之時，提供行動版的查詢功能</p><p></p><p>簡單的說就是 <a href='http://hack.g0v.tw/kuansim/g6v6MpyacFb'/>政府公開通訊錄</a> 的手機連接端，但是是離線版</p><p></p><p></p><h2>Feature Version</h2><ul><li>0.2</li></ul>
-<ul style="list-style: none;"><li>回報錯誤資料功能</li></ul>
+<body><h1>g0v addressbook iOS app</h1><p></p><h2>政府通訊錄 iOS 版</h2><p>需要聯絡政府單位或是政府官員時候，需要查詢電話資料及內容，或是聯絡相關人員之時，提供行動版的查詢功能</p><p></p><p>簡單的說就是 <a href='http://hack.g0v.tw/kuansim/g6v6MpyacFb'/>政府公開通訊錄</a> 的手機連接端，但是是離線版</p><p></p><p></p><h2>Feature Version</h2><ul><li>0.x</li><ul class="comment"><li>&nbsp;做不完再來考慮</li></ul>
+</ul>
 <ul><li>0.1</li></ul>
-<ul style="list-style: none;"><li>基本功能及使用情境設定</li></ul>
+<ul style="list-style: none;"><li>基本功能及使用情境設定、回報錯誤資料功能</li></ul>
 
 <h2>Strategy</h2><p>主要目標：</p><ul><li>可以提供快速查詢功能</li>
 <li>從標記清單中快速找回聯絡人</li>
@@ -27,6 +27,8 @@
 <ul style="list-style: none;"><li>使用三個不同的頁面去切換 (tab bar)</li><ul><li>查詢頁面<ul><li>設定頁面</li></ul>
 </li>
 <li>標記頁面</li></ul>
+</li>
+<li>資料格式</li><ul><li><a href='http://popoloproject.com/specs/organization.html#serialization'/>機關單位(popolo.organization)</a> <a href='https://github.com/g0v/addressbook/issues/10'/>討論</a></li></ul>
 </ul>
 
 <h2>Wireframe / Content</h2><ul><li>查詢頁面<ul><li>詳細資料頁面 (機關單位/單一聯絡人)</li><ul class="comment"><li>項目從通訊錄的需要欄位中統整</li></ul>
