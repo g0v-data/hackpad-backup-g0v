@@ -3,10 +3,30 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="476"/>
+<meta name="version" content="486"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$JouO9fcJvnN</title>
 </head>
-<body><h1>動民主 1.337 全民記者會：User Story</h1><p>類似專案：市長給問嗎（後端） <a href="https://github.com/pm5/askkk-backend/blob/master/APIDOC.md"></a>https://github.com/pm5/askkk-backend/blob/master/APIDOC.md</p><p></p><h2>角色（會有哪幾種使用者）</h2><p></p><p>* 訪客: 沒有透過 facebook 登入的使用者</p><p>* 用戶: 已經夠透過 facebook 登入的使用者</p><p>* 公眾人物: 希望回答問題的自然人或是法人</p><p></p><h2>名詞（出現這份文件中的詞彙是什麼意思）</h2><p></p><p>* 問題: 網站中的希望 **公眾人物** 回答的問題, 通常內容是政策</p><p>&nbsp;&nbsp;&nbsp; * 屬性有主題, 細節描述 主題, 選區, 問題類別, 關鍵字(tag)</p><p>* 問題類別: 網站中的問題分類</p><p>* 問題連署: 類似按讚, 表示同意該問題應該被回答</p><p></p><h2>功能（使用者可以做哪些事情）</h2><p></p><p><b>提問</b></p><p></p><p>* **訪客** 可以瀏覽 **問題**</p><p>* **用戶** 可以提出 **問題**</p><p>&nbsp;&nbsp;&nbsp; * 必須填寫 **問題** 的主題, 選區, 類別</p><p>&nbsp;&nbsp;&nbsp; * 可以填寫 **問題** 的細節描述, 關鍵字</p><p>&nbsp;&nbsp;&nbsp; * 可以選擇同步發表到 facebook, 同時紀錄到用戶的預設值</p><p></p><p><b>問題列表</b></p><p></p><p>* **訪客** 可以瀏覽列表</p><p>&nbsp;&nbsp;&nbsp; *&nbsp; 可以看到 **問題連署** 的數量</p><p>&nbsp;&nbsp;&nbsp; *&nbsp; 可以看到 **問題** 的主題</p><p>* **用戶** 可以點選列表中的 **問題連署** 按鈕</p><p></p><p></p><p></p><p>==========舊版備忘區==========</p><p></p><ul><li>使用者<ul><li>發問</li>
+<body><h1>動民主 1.337 全民記者會：User Story</h1><p></p><h2>角色（會有哪幾種使用者）</h2><p></p><ul><li>* 訪客: 沒有透過 facebook 登入的使用者</li>
+<li>* 用戶: 已經夠透過 facebook 登入的使用者</li>
+<li>* 公眾人物: 希望回答問題的自然人或是法人</li></ul>
+
+<h2>名詞（出現這份文件中的詞彙是什麼意思）</h2><p></p><ul><li>* 問題: 網站中的希望 **公眾人物** 回答的問題, 通常內容是政策</li>
+<li>&nbsp;&nbsp;&nbsp; * 屬性有主題, 細節描述 主題, 選區, 問題類別, 關鍵字(tag)</li>
+<li>* 問題類別: 網站中的問題分類</li>
+<li>* 問題連署: 類似按讚, 表示同意該問題應該被回答</li></ul>
+
+<h2>功能（使用者可以做哪些事情）</h2><p></p><p><b>提問</b></p><p></p><ul><li>* **訪客** 可以瀏覽 **問題**</li>
+<li>* **用戶** 可以提出 **問題**</li>
+<li>&nbsp;&nbsp;&nbsp; * 必須填寫 **問題** 的主題, 選區, 類別</li>
+<li>&nbsp;&nbsp;&nbsp; * 可以填寫 **問題** 的細節描述, 關鍵字</li>
+<li>&nbsp;&nbsp;&nbsp; * 可以選擇同步發表到 facebook, 同時紀錄到用戶的預設值</li></ul>
+
+<p><b>問題列表</b></p><p></p><ul><li>* **訪客** 可以瀏覽列表</li>
+<li>&nbsp;&nbsp;&nbsp; *&nbsp; 可以看到 **問題連署** 的數量</li>
+<li>&nbsp;&nbsp;&nbsp; *&nbsp; 可以看到 **問題** 的主題</li>
+<li>* **用戶** 可以點選列表中的 **問題連署** 按鈕</li></ul>
+
+<p></p><p></p><p>==========舊版備忘區==========</p><p></p><ul><li>使用者<ul><li>發問</li>
 <li>連署<ul><li>怨念度=</li></ul>
 </li>
 <li>轉述作答</li></ul>
