@@ -3,10 +3,10 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="3575"/>
+<meta name="version" content="4263"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$8sYMW30othK</title>
 </head>
-<body><h2>核電翻譯機  (Nuclear Data)</h2><ul><li>發起人/拋磚人：蔡雅瀅</li>
+<body><h1>核電翻譯機&nbsp; (Nuclear Data)</h1><ul><li>發起人/拋磚人：蔡雅瀅</li>
 <li>狀態： 概念發想</li>
 <li>授權方式：<a href='http://creativecommons.org/licenses/by-sa/3.0/tw/'/>CC:BY-SA</a>&nbsp;</li>
 <li>Repository: <a href="https://github.com/g0v/nuclear-data"></a>https://github.com/g0v/nuclear-data</li>
@@ -38,7 +38,6 @@
 <li>圖像化停機、降載事由（如：大修、故障、颱風、魚群）</li></ol>
 <ul class="task"><li>提取所有文字內容，成為容易使用的文字或excel檔</li></ul>
 <ul class="comment"><li>有人可以先幫忙完成這部分嗎？會涉及相關關鍵字選擇或其他架構性的問題(大致讀完歷年資料後，找出有意義的脈絡)</li></ul>
-
 <ol><li>側錄並比對與<a href='http://gamma.aec.gov.tw/spds/'/>核能電廠運轉即時資訊</a> (<a href='http://gamma.aec.gov.tw/spds/bottom.asp'/>data</a>)有無差異（如：運轉即時資訊有停機或降載，事後公布的每日管制資訊卻未揭露）</li>
 <li>視覺化使用介面（參考下方 comment）<ol><li>一年份的俯瞰圖</li>
 <li>意外停機與維修停機區別開來</li>
@@ -69,59 +68,54 @@
 <li>NeedsTalkingToRealPerson (需要真人溝通協調)：蔡雅瀅</li></ul>
 
 <h2>工作分類</h2><p></p><p><b>專案管理</b></p><ul><li>Git on <a href='https://github.com/g0v/nuclear-data'/>github</a></li><ul class="taskdone"><li>Create source repository</li></ul>
-<ul><li>Join team members</li><ul class="taskdone"><li>Shihta</li>
+<ul><li>Join team members</li></ul>
+<ul class="comment"><li>建議文案組也申請進來 github 玩玩，一來看看 commit history 了解技術組在做什麼，二來發現 bug (程式裡有問題與預期表現不符的地方) 可以發 issue request。</li><ul class="taskdone"><li>Shihta</li>
 <li>psdmac-Mark</li>
 <li><a href='https://github.com/tomchentw'/>tomchentw</a></li>
 <li>junsuwhy</li></ul>
 </ul>
-<ul class="task"><li>登記在 <a href="http://hack.g0v.tw/project"></a>http://hack.g0v.tw/project</li></ul>
 </ul>
-
+<ul class="comment"><li>還有需要存取 source code 的請在上面加上 checkbox 並標上你的 github id。</li><ul class="task"><li>登記在 <a href="http://hack.g0v.tw/project"></a>http://hack.g0v.tw/project</li></ul>
+</ul>
 <p><b>系統架構</b></p><p>主機架設</p><ul class="task"><li>VPS環境申裝</li>
 <li>DNS申請</li>
 <li>Python與Bottle環境設定</li>
-<li>前端web相關需求仍不明確，需要人補充</li></ul>
-<undefined><li>前端</li></undefined>
-<ul><li>AngularJS</li></ul>
+<li>前端web相關需求仍不明確，需要人補充</li></li>
+<li>前端</li></ul>
+<ul><li>使用技術：AngularJS + NodeJS</li></ul>
 <undefined><li><b>後端</b></li></undefined>
-<ul><li>Python</li>
-<li>Virtualenv</li>
-<li>Bottle: <a href="http://bottlepy.org/"></a>http://bottlepy.org/</li>
-<li>API Sample Output</li><ul class="code"><li>{ &rsquo;data&rsquo;: [ {&rsquo;t&rsquo;: 1393082562, &rsquo;powersets&rsquo;: [{&rsquo;planet&rsquo;: u&rsquo;&#92;u6838&#92;u4e00&rsquo;, &rsquo;aec&rsquo;: 656.0, &rsquo;capacity&rsquo;: 636.0, &rsquo;powerset&rsquo;: u&rsquo;1&rsquo;, &rsquo;tai&rsquo;: 627.5}, {&rsquo;planet&rsquo;: u&rsquo;&#92;u6838&#92;u4e00&rsquo;, &rsquo;aec&rsquo;: 636.0, &rsquo;capacity&rsquo;: 636.0, &rsquo;powerset&rsquo;: u&rsquo;2&rsquo;, &rsquo;tai&rsquo;: 597.7}, {&rsquo;planet&rsquo;: u&rsquo;&#92;u6838&#92;u4e8c&rsquo;, &rsquo;aec&rsquo;: 1028.0, &rsquo;capacity&rsquo;: 985.0, &rsquo;powerset&rsquo;: u&rsquo;1&rsquo;, &rsquo;tai&rsquo;: 993.3}, {&rsquo;planet&rsquo;: u&rsquo;&#92;u6838&#92;u4e8c&rsquo;, &rsquo;aec&rsquo;: 693.0, &rsquo;capacity&rsquo;: 985.0, &rsquo;powerset&rsquo;: u&rsquo;2&rsquo;, &rsquo;tai&rsquo;: 664.9}, {&rsquo;planet&rsquo;: u&rsquo;&#92;u6838&#92;u4e09&rsquo;, &rsquo;aec&rsquo;: 980.0, &rsquo;capacity&rsquo;: 951.0, &rsquo;powerset&rsquo;: u&rsquo;1&rsquo;, &rsquo;tai&rsquo;: 941.5}, {&rsquo;planet&rsquo;: u&rsquo;&#92;u6838&#92;u4e09&rsquo;, &rsquo;aec&rsquo;: 976.0, &rsquo;capacity&rsquo;: 951.0, &rsquo;powerset&rsquo;: u&rsquo;2&rsquo;, &rsquo;tai&rsquo;: 938.1}]}, ... ] }</li></ul>
+<ul><li>使用技術：Python + Virtualenv + <a href='http://bottlepy.org/'/>Bottle</a>&nbsp; + SQLite3</li>
+<li>API Spec:</li><ul class="code"><li>/api/tai-vs-aec/&lt;start:int&gt;/&lt;end:int&gt;</li></ul>
+<ul><li>start: epoch, include</li>
+<li>end: epoch, exclude</li>
+<li>Sample Output</li><ul class="code"><li>{ &rsquo;data&rsquo;: [ {&rsquo;t&rsquo;: 1393082562, &rsquo;powersets&rsquo;: [{&rsquo;planet&rsquo;: u&rsquo;&#92;u6838&#92;u4e00&rsquo;, &rsquo;aec&rsquo;: 656.0, &rsquo;capacity&rsquo;: 636.0, &rsquo;powerset&rsquo;: u&rsquo;1&rsquo;, &rsquo;tai&rsquo;: 627.5}, {&rsquo;planet&rsquo;: u&rsquo;&#92;u6838&#92;u4e00&rsquo;, &rsquo;aec&rsquo;: 636.0, &rsquo;capacity&rsquo;: 636.0, &rsquo;powerset&rsquo;: u&rsquo;2&rsquo;, &rsquo;tai&rsquo;: 597.7}, {&rsquo;planet&rsquo;: u&rsquo;&#92;u6838&#92;u4e8c&rsquo;, &rsquo;aec&rsquo;: 1028.0, &rsquo;capacity&rsquo;: 985.0, &rsquo;powerset&rsquo;: u&rsquo;1&rsquo;, &rsquo;tai&rsquo;: 993.3}, {&rsquo;planet&rsquo;: u&rsquo;&#92;u6838&#92;u4e8c&rsquo;, &rsquo;aec&rsquo;: 693.0, &rsquo;capacity&rsquo;: 985.0, &rsquo;powerset&rsquo;: u&rsquo;2&rsquo;, &rsquo;tai&rsquo;: 664.9}, {&rsquo;planet&rsquo;: u&rsquo;&#92;u6838&#92;u4e09&rsquo;, &rsquo;aec&rsquo;: 980.0, &rsquo;capacity&rsquo;: 951.0, &rsquo;powerset&rsquo;: u&rsquo;1&rsquo;, &rsquo;tai&rsquo;: 941.5}, {&rsquo;planet&rsquo;: u&rsquo;&#92;u6838&#92;u4e09&rsquo;, &rsquo;aec&rsquo;: 976.0, &rsquo;capacity&rsquo;: 951.0, &rsquo;powerset&rsquo;: u&rsquo;2&rsquo;, &rsquo;tai&rsquo;: 938.1}]}, ... ] }</li></ul>
 </ul>
 <ul><li>API Real Output:</li><ul class="code"><li>{&quot;data&quot;: [{&quot;t&quot;: 1393083159, &quot;powersets&quot;: [{&quot;planet&quot;: &quot;&#92;u6838&#92;u4e00&quot;, &quot;aec&quot;: 657.0, &quot;capacity&quot;: 636.0, &quot;powerset&quot;: &quot;1&quot;, &quot;tai&quot;: 628.4}, {&quot;planet&quot;: &quot;&#92;u6838&#92;u4e00&quot;, &quot;aec&quot;: 641.0, &quot;capacity&quot;: 636.0, &quot;powerset&quot;: &quot;2&quot;, &quot;tai&quot;: 602.4}, {&quot;planet&quot;: &quot;&#92;u6838&#92;u4e8c&quot;, &quot;aec&quot;: 1026.0, &quot;capacity&quot;: 985.0, &quot;powerset&quot;: &quot;1&quot;, &quot;tai&quot;: 992.0}, {&quot;planet&quot;: &quot;&#92;u6838&#92;u4e8c&quot;, &quot;aec&quot;: 693.0, &quot;capacity&quot;: 985.0, &quot;powerset&quot;: &quot;2&quot;, &quot;tai&quot;: 666.3}, {&quot;planet&quot;: &quot;&#92;u6838&#92;u4e09&quot;, &quot;aec&quot;: 982.0, &quot;capacity&quot;: 951.0, &quot;powerset&quot;: &quot;1&quot;, &quot;tai&quot;: 939.2}, {&quot;planet&quot;: &quot;&#92;u6838&#92;u4e09&quot;, &quot;aec&quot;: 975.0, &quot;capacity&quot;: 951.0, &quot;powerset&quot;: &quot;2&quot;, &quot;tai&quot;: 935.8}]}, {&quot;t&quot;: 1393083219, &quot;powersets&quot;: [{&quot;planet&quot;: &quot;&#92;u6838&#92;u4e00&quot;, &quot;aec&quot;: 658.0, &quot;capacity&quot;: 636.0, &quot;powerset&quot;: &quot;1&quot;, &quot;tai&quot;: 628.4}, {&quot;planet&quot;: &quot;&#92;u6838&#92;u4e00&quot;, &quot;aec&quot;: 643.0, &quot;capacity&quot;: 636.0, &quot;powerset&quot;: &quot;2&quot;, &quot;tai&quot;: 602.4}, {&quot;planet&quot;: &quot;&#92;u6838&#92;u4e8c&quot;, &quot;aec&quot;: 1023.0, &quot;capacity&quot;: 985.0, &quot;powerset&quot;: &quot;1&quot;, &quot;tai&quot;: 992.0}, {&quot;planet&quot;: &quot;&#92;u6838&#92;u4e8c&quot;, &quot;aec&quot;: 698.0, &quot;capacity&quot;: 985.0, &quot;powerset&quot;: &quot;2&quot;, &quot;tai&quot;: 666.3}, {&quot;planet&quot;: &quot;&#92;u6838&#92;u4e09&quot;, &quot;aec&quot;: 980.0, &quot;capacity&quot;: 951.0, &quot;powerset&quot;: &quot;1&quot;, &quot;tai&quot;: 939.2}, {&quot;planet&quot;: &quot;&#92;u6838&#92;u4e09&quot;, &quot;aec&quot;: 976.0, &quot;capacity&quot;: 951.0, &quot;powerset&quot;: &quot;2&quot;, &quot;tai&quot;: 935.8}]}, {&quot;t&quot;: 1393083280, &quot;powersets&quot;: [{&quot;planet&quot;: &quot;&#92;u6838&#92;u4e00&quot;, &quot;aec&quot;: 655.0, &quot;capacity&quot;: 636.0, &quot;powerset&quot;: &quot;1&quot;, &quot;tai&quot;: 628.4}, {&quot;planet&quot;: &quot;&#92;u6838&#92;u4e00&quot;, &quot;aec&quot;: 643.0, &quot;capacity&quot;: 636.0, &quot;powerset&quot;: &quot;2&quot;, &quot;tai&quot;: 602.4}, {&quot;planet&quot;: &quot;&#92;u6838&#92;u4e8c&quot;, &quot;aec&quot;: 1028.0, &quot;capacity&quot;: 985.0, &quot;powerset&quot;: &quot;1&quot;, &quot;tai&quot;: 992.0}, {&quot;planet&quot;: &quot;&#92;u6838&#92;u4e8c&quot;, &quot;aec&quot;: 700.0, &quot;capacity&quot;: 985.0, &quot;powerset&quot;: &quot;2&quot;, &quot;tai&quot;: 666.3}, {&quot;planet&quot;: &quot;&#92;u6838&#92;u4e09&quot;, &quot;aec&quot;: 982.0, &quot;capacity&quot;: 951.0, &quot;powerset&quot;: &quot;1&quot;, &quot;tai&quot;: 939.2}, {&quot;planet&quot;: &quot;&#92;u6838&#92;u4e09&quot;, &quot;aec&quot;: 978.0, &quot;capacity&quot;: 951.0, &quot;powerset&quot;: &quot;2&quot;, &quot;tai&quot;: 935.8}]}]}</li></ul>
 </ul>
-<ul><li>API Spec:</li><ul class="code"><li>/api/tai-vs-aec/&lt;start:int&gt;/&lt;end:int&gt;</li></ul>
-<ul><li>start: epoch, include</li>
-<li>end: epoch, exclude</li></ul>
-</li>
-<li><br/></li></ul>
+</ul>
 
 <p><b>網站界面</b></p><ul><li>設計方向：公正,不帶情緒, 清楚, 明白</li>
-<li>Desgin for fontend 資料夾</li></ul>
-<ul class="code"><li>&nbsp;<a href="https://drive.google.com/?usp=chrome_app#folders/0B7mNkeigw1U1VGUxUmlUVDN2aDQ"></a>https://drive.google.com/?usp=chrome_app#folders/0B7mNkeigw1U1VGUxUmlUVDN2aDQ</li></ul>
-<ul><li>&nbsp;折線圖 標注 範例</li></ul>
-<ul class="code"><li>&nbsp;<a href="https://docs.google.com/file/d/0B7mNkeigw1U1VzNkMC1mRE1UYjQ/edit?usp=drive_web"></a>https://d<a href='https://drive.google.com/?usp=chrome_app#folders/0B7mNkeigw1U1VGUxUmlUVDN2aDQ'/>ocs.google.com/file/d/0B7mNkeigw1U1VzNkMC1mRE1UYjQ/edit?usp=drive_web</a></li></ul>
-<ul><li>Design Mockup</li></ul>
-<ul class="code"><li><a href="https://drive.google.com/folderview?id=0B7mNkeigw1U1Rm9aMHA5YzBUelk&usp=sharing"></a>https://drive.google.com/folderview?id=0B7mNkeigw1U1Rm9aMHA5YzBUelk&amp;usp=sharing</li></ul>
-<ul><li>簡單wireframe+功能&nbsp; <a href="http://g6qeun.axshare.com/#p=page_1"></a><a href='http://g6qeun.axshare.com/#p=page_1'/>http://g6qeun.axshare.com/</a><a href='https://g0v.hackpad.com/ep/search/?q=%23p&amp;via=8sYMW30othK'/>#p</a><a href='http://g6qeun.axshare.com/#p=page_1'/>=page_1</a></li>
+<li><a href='https://drive.google.com/?usp=chrome_app#folders/0B7mNkeigw1U1VGUxUmlUVDN2aDQ'/>Desgin for fontend 資料夾 @ Google Drive</a>&nbsp;</li>
+<li><a href='https://docs.google.com/file/d/0B7mNkeigw1U1VzNkMC1mRE1UYjQ/edit?usp=drive_web'/>折線圖 標注 範例</a>&nbsp;</li>
+<li><a href='https://drive.google.com/folderview?id=0B7mNkeigw1U1Rm9aMHA5YzBUelk&amp;usp=sharing'/>Design Mockup</a>&nbsp;</li>
+<li>簡單wireframe+功能&nbsp; <a href="http://g6qeun.axshare.com/#p=page_1"></a><a href='http://g6qeun.axshare.com/#p=page_1'/>http://g6qeun.axshare.com/</a><a href='https://g0v.hackpad.com/ep/search/?q=%23p&amp;via=8sYMW30othK'/>#p</a><a href='http://g6qeun.axshare.com/#p=page_1'/>=page_1</a></li>
 <li>篩選器：大修、檢修、跳脫、降載、急停、過熱</li>
 <li><b>資料截取</b></li></ul>
 
-<ul><li>待解釋名詞</li></ul>
-<ul class="task"><li>&nbsp;負載率：</li>
-<li>&nbsp;電量Mew：</li>
-<li>&nbsp;大修：</li>
+<p><b>待解釋名詞</b></p><ul class="task"><li>負載率：</li>
+<li>電量Mew：</li>
+<li>大修：</li>
 <li>檢修：</li>
 <li>跳脫：</li>
 <li>降載：</li>
 <li>急停：</li>
 <li>過熱：</li></ul>
-<ul><li>熱門QA&nbsp;</li></ul>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 最長停機多久？</p><ul style="list-style: none;"><li>答：97天(101.03.16 -- 101.06.20) [推測的答案，不確定是否有更長的]</li>
-<li>最多幾部機組同時停機？</li>
-<li>答：6部(88.07.30)</li></ul>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p>官方來源 :&nbsp;</p><ul><li><a href='http://www.aec.gov.tw/controlreport/historydata.html?searchyear=2012&amp;searchmonth=3&amp;button=%E9%80%81%E5%87%BA'/>運轉中每日管制資料</a></li>
+
+<p><b>熱門QA&nbsp;</b></p><p></p><ul><li>最長停機多久？</li></ul>
+<ul style="list-style: none;"><li>答：97天(101.03.16 -- 101.06.20) [推測的答案，不確定是否有更長的]</li></ul>
+<ul><li>最多幾部機組同時停機？</li></ul>
+<ul style="list-style: none;"><li>答：6部(88.07.30)</li></ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p><b>資料來源</b></p><p>官方來源</p><ul><li><a href='http://www.aec.gov.tw/controlreport/historydata.html?searchyear=2012&amp;searchmonth=3&amp;button=%E9%80%81%E5%87%BA'/>運轉中每日管制資料</a></li>
 <li><a href='http://gamma.aec.gov.tw/spds/'/>原能會即時資訊</a></li>
 <li><a href='http://www.taipower.com.tw/content/new_info/new_info-b24.aspx?LinkID=7%E5%97%8E?'/>台電即時資訊(同上內容)</a></li>
 <li><a href='http://www.taipower.com.tw/content/new_info/new_info_in.aspx?LinkID=11'/>台電各機組資料，包含非核電廠</a></li>
@@ -129,9 +123,9 @@
 <li><a href='http://www.aec.gov.tw/%E8%B3%87%E8%A8%8A%E5%85%AC%E9%96%8B/%E9%96%8B%E6%94%BE%E8%B3%87%E6%96%99-Open-Data/12.%E6%A0%B8%E5%AE%89%E7%AE%A1%E5%88%B6%E7%B4%85%E7%B6%A0%E7%87%88%E7%B8%BE%E6%95%88%E6%8C%87%E6%A8%99%E7%87%88%E8%99%9F--219_2015_2215.html'/>核安管制紅綠燈績效指標燈號</a></li>
 <li><a href='http://www.aec.gov.tw/%E8%B3%87%E8%A8%8A%E5%85%AC%E9%96%8B/%E9%96%8B%E6%94%BE%E8%B3%87%E6%96%99-Open-Data/15.%E6%A0%B8%E8%83%BD%E9%9B%BB%E5%BB%A0%E7%95%B0%E5%B8%B8%E4%BA%8B%E4%BB%B6%E6%AC%A1%E6%95%B8--219_2015_2218.html'/>核能電廠異常事件次數</a></li>
 <li><a href='http://www.aec.gov.tw/%E8%B3%87%E8%A8%8A%E5%85%AC%E9%96%8B/%E9%96%8B%E6%94%BE%E8%B3%87%E6%96%99-Open-Data/16.%E6%A0%B8%E8%83%BD%E9%9B%BB%E5%BB%A0%E9%81%95%E8%A6%8F%E4%BB%B6%E6%95%B8--219_2015_2219.html'/>核能電廠違規件數</a></li></ul>
-<p>非官方來源 :&nbsp;</p><ul><li><a href='http://taipower.g0v.ronny.tw/'/>台電發電記錄</a> <a href='http://ronnywang.pixnet.net/blog'/>@ronnywang</a></li></ul>
+<p>非官方來源</p><ul><li><a href='http://taipower.g0v.ronny.tw/'/>台電發電記錄</a> <a href='http://ronnywang.pixnet.net/blog'/>@ronnywang</a></li></ul>
 
-<p></p><h2>其他討論</h2><p></p><p></p><ul class="comment"><li>腦海裡一直浮現 heroku status 的樣子 XD&nbsp; --&gt;&nbsp; <a href="https://status.heroku.com/"></a>https://status.heroku.com/</li>
+<h2>其他討論</h2><p>（討論主題若在上方已經有適合擺放的地方，請直接就在上方適當處附加 comment 討論，這樣可以省去事後從下方討論搬到上方的整理工夫。）</p><p></p><ul class="comment"><li>腦海裡一直浮現 heroku status 的樣子 XD&nbsp; --&gt;&nbsp; <a href="https://status.heroku.com/"></a>https://status.heroku.com/</li>
 <li><br/></li>
 <li>如果要凸顯台灣發電過剩 / 全部停機也不會缺電這件事情，可以的話建議在 visualization 裡加上目前全台灣的發電量 / 蓄電量；若可以用電池充電的意象做視覺化，用折線圖表示總蓄電量與核電發電量隨時間的變動，應該滿清楚的 :)</li>
 <li><a href='http://blog.baagic.com/post/50496003427/powerbank'/>電池充電意象參考</a></li></ul>
@@ -151,18 +145,33 @@
 <p>1.點進<a href='http://taipower.g0v.ronny.tw/'/>ronnywang做的台電發電紀錄</a>，再點選核一#2，作者應該是提取<a href='http://www.taipower.com.tw/content/new_info/new_info_in.aspx?LinkID=11'/>台電系統各機組發電量資料</a></p><p>2.單位應該是 百萬瓦 (MW)</p><ul class="comment"><li><br/></li></ul>
 
 <p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_8sYMW30othK_p.120366_1393226940671_2014.02.22核二2號機.jpg'/></p><p></p><p>原能會103.02.22<a href='http://www.aec.gov.tw/controlreport/historydata.html?searchyear=2014&amp;searchmonth=2&amp;button=%E9%80%81%E5%87%BA'/>運轉中電廠每日管制資料</a>，僅記載核二2號機降載，未公布核一2號機也有降載</p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_8sYMW30othK_p.120366_1393226966799_2014.02.22原能會.jpg'/></p><p></p><p></p><ul class="comment"><li>&nbsp;台電的頁面是<a href='http://www.taipower.com.tw/content/new_info/new_info-b24.aspx?LinkID=7'/>這個</a>嗎?</li>
-<li>所以我們要重新爬資料嗎？</li>
-<li>英文名字提案：Nuclear Truth</li>
+<li>所以我們要重新爬資料嗎？</li></ul>
+
+<p><b>文案討論</b></p><ul><li>網站英文名字<ul><li>英文名字提案：Nuclear Truth</li>
 <li>英文名字提案：Nuclear Watch (看守核電)</li>
 <li>英文名字提案：Nuclear .TW (雙關語：台灣核電、翻譯與看守核電：Nuclear translate &amp; Watch，將原能會、台電等官方公布的核電資訊轉譯成容易理解的圖表，並且紀錄、比對、分析相關資訊，監督核安&nbsp;&nbsp; )</li></ul>
-
-<ul class="comment"><li>&nbsp;重要資訊:&nbsp;</li>
-<li>熱功率 :&nbsp;</li>
+<ul class="comment"><li>投 nuclear.tw 一票，這樣網站名稱也有了。</li>
+<li>假設「translate」是名稱的一部分，那這個網站可能也應負有「將核能名稱以簡易的方式解說予大眾」的責任。</li><ul class="task"><li>文案中若出現核能專有名詞，當滑鼠 mouse over 時，可以像 Dr. Eye 一樣，跳出名詞解說。</li></ul>
+<ul class="comment"><li>專有名詞的解說，不一定要通通由這個網站提供，也可以連結與截取自 wikipedia。</li></ul>
+</ul>
+</ul>
+<ul><li>Slogan 提案 (好比蔡雅瀅在上文舉例的「台灣核電、翻譯與看守核電」)，請提案：<ul><li><br/></li></ul>
+</li>
+<li>&nbsp;重要資訊:&nbsp;</li><ul class="task"><li>熱功率 :&nbsp;</li>
 <li>發電功率 :&nbsp;</li>
 <li>意外降載 : 如魚群湧入降載</li>
 <li>計劃降載 : 檢修、</li></ul>
+</ul>
 
-<p>2/22（六）下午大家在參加黑客松時，看到網頁上有兩部反應爐降載，當時很好奇發生何事？（正常狀況反應爐熱功率100％或99％）；回家看新聞<a href='http://www.ettoday.net/news/20140222/327783.htm'/>2/22凌晨接連發生芮氏規模5.4、4.2地震，台電指出，經調查後發現，各轄區供電系統，都沒有問題，核一、二、三廠共6部機，皆正常發電、運轉，未受地震影響，請民眾不用擔心</a>。想問當時有人截圖嗎？或者可用其他方式驗證台電是否說謊（皆正常發電、運轉）？</p><p></p><p>從台電發電記錄可看出：</p><p>1.比對台電（<a href='http://taipower.g0v.ronny.tw/place/355'/>台電發電記錄＠ ronnywang</a>）和<a href='http://www.aec.gov.tw/controlreport/historydata.html?searchyear=2013&amp;searchmonth=5&amp;button=%E9%80%81%E5%87%BA'/>原能會的核電記錄</a>，以2013.05.20為例，台電曾出現6部機組發電量僅6百萬瓦（註：<a href='http://www.taipower.com.tw/content/new_info/new_info-b22.aspx?LinkID=7'/>全國核電總裝置容量5144百萬瓦</a>）的低點，但同日原能會每日一筆的記錄，卻顯示核一1號機大修，其他機組穩定運轉。其它低點（如：2013.04.11、2013.08.10）也有類似狀況。</p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_8sYMW30othK_p.120366_1393129109640_2013.05.20台電.jpg'/></p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_8sYMW30othK_p.120366_1393129122578_2013.05.20原能會.jpg'/></p><p>2.全國核電裝置容量5144百萬瓦（即514.4萬千瓦），實際發電量大多在5000百萬瓦以下。</p><ul class="comment"><li>安全issue ?</li>
+<p>2/22（六）下午大家在參加黑客松時，看到網頁上有兩部反應爐降載，當時很好奇發生何事？（正常狀況反應爐熱功率100％或99％）；回家看新聞<a href='http://www.ettoday.net/news/20140222/327783.htm'/>2/22凌晨接連發生芮氏規模5.4、4.2地震，台電指出，經調查後發現，各轄區供電系統，都沒有問題，核一、二、三廠共6部機，皆正常發電、運轉，未受地震影響，請民眾不用擔心</a>。想問當時有人截圖嗎？或者可用其他方式驗證台電是否說謊（皆正常發電、運轉）？</p><ul class="task"><li>系統可以有（先人工手動輸入的）新聞列表，並與圖表連結，就好像下面舉例的 Google Finance 一樣：</li></ul>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_8sYMW30othK_p.56216_1393282814697_TYO.9501.png'/></p><ul class="comment"><li>取的是東電的圖表，可惜 2011 年那時股價大跌，已經沒有新聞資料與之對應連結了。</li><ul class="task"><li>需要有人繪製 mock up：新聞與圖表並陳的樣式</li></ul class="task">
+</li>
+<li>可以仿照 Facebook Like，在新聞上面加上「我相信」、「我懷疑」的按鈕，幫忙自動發佈到 Facebook 上。但是分享的頁面不是新聞，而是新聞與同時段對應的圖表並陳。</li><ul><li>點下按鈕，會跳出 dialog 並附上預先準備好的分享「說詞」的 template，允許使用者修改，按「確定」後才真的分享到 Facebook</li><ul class="task"><li>需要有人設計「說詞」的文案</li></ul class="task">
+</li></ul class="task">
+</li>
+<li>新聞也可以與「新聞小幫手」連結，供人檢舉<i>質疑</i>並以我們準備的圖表作為佐證。<ul class="comment"><li>這裡無法確定是新聞有誤，還是我們抓到的資料有誤。為了避免爭議，也許真的需要有留下 screenshot 的功能。</li></ul>
+</ul>
+<p>從台電發電記錄可看出：</p><p>1.比對台電（<a href='http://taipower.g0v.ronny.tw/place/355'/>台電發電記錄＠ ronnywang</a>）和<a href='http://www.aec.gov.tw/controlreport/historydata.html?searchyear=2013&amp;searchmonth=5&amp;button=%E9%80%81%E5%87%BA'/>原能會的核電記錄</a>，以2013.05.20為例，台電曾出現6部機組發電量僅6百萬瓦（註：<a href='http://www.taipower.com.tw/content/new_info/new_info-b22.aspx?LinkID=7'/>全國核電總裝置容量5144百萬瓦</a>）的低點，但同日原能會每日一筆的記錄，卻顯示核一1號機大修，其他機組穩定運轉。其它低點（如：2013.04.11、2013.08.10）也有類似狀況。</p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_8sYMW30othK_p.120366_1393129109640_2013.05.20台電.jpg'/></p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_8sYMW30othK_p.120366_1393129122578_2013.05.20原能會.jpg'/></p><p>2.全國核電裝置容量5144百萬瓦（即514.4萬千瓦），實際發電量大多在5000百萬瓦以下。</p><ul class="comment"><li>安全issue ?</li>
 <li>1.提實際發電量低於裝置容量，是在思考核電實際的發電量，比裝置容量低，找核電的替代方案時，不一定要取代核電的裝置容量，能取代實際發電量就夠了</li>
 <li>2.安全issu則是:</li>
 <li>&nbsp; a.折線圖中，有很多突然降低的點，有些是計畫性檢修停機、降載，有些是意外狀況，故障停機、降載</li>
