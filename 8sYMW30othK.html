@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="3510"/>
+<meta name="version" content="3575"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$8sYMW30othK</title>
 </head>
 <body><h2>核電翻譯機  (Nuclear Data)</h2><ul><li>發起人/拋磚人：蔡雅瀅</li>
@@ -77,11 +77,14 @@
 <ul class="task"><li>登記在 <a href="http://hack.g0v.tw/project"></a>http://hack.g0v.tw/project</li></ul>
 </ul>
 
-<p><b>系統架構</b></p><undefined><li><b>前端</b></li></undefined>
+<p><b>系統架構</b></p><p>主機架設</p><ul class="task"><li>VPS環境申裝</li>
+<li>DNS申請</li>
+<li>Python與Bottle環境設定</li>
+<li>前端web相關需求仍不明確，需要人補充</li></ul>
+<undefined><li>前端</li></undefined>
 <ul><li>AngularJS</li></ul>
 <undefined><li><b>後端</b></li></undefined>
-<ul><li>Python<ul><li><a href='http://scrapy.org/'/>抓資料: </a><a href="http://scrapy.org/"></a>http://scrapy.org/</li></ul>
-</li>
+<ul><li>Python</li>
 <li>Virtualenv</li>
 <li>Bottle: <a href="http://bottlepy.org/"></a>http://bottlepy.org/</li>
 <li>API Sample Output</li><ul class="code"><li>{ &rsquo;data&rsquo;: [ {&rsquo;t&rsquo;: 1393082562, &rsquo;powersets&rsquo;: [{&rsquo;planet&rsquo;: u&rsquo;&#92;u6838&#92;u4e00&rsquo;, &rsquo;aec&rsquo;: 656.0, &rsquo;capacity&rsquo;: 636.0, &rsquo;powerset&rsquo;: u&rsquo;1&rsquo;, &rsquo;tai&rsquo;: 627.5}, {&rsquo;planet&rsquo;: u&rsquo;&#92;u6838&#92;u4e00&rsquo;, &rsquo;aec&rsquo;: 636.0, &rsquo;capacity&rsquo;: 636.0, &rsquo;powerset&rsquo;: u&rsquo;2&rsquo;, &rsquo;tai&rsquo;: 597.7}, {&rsquo;planet&rsquo;: u&rsquo;&#92;u6838&#92;u4e8c&rsquo;, &rsquo;aec&rsquo;: 1028.0, &rsquo;capacity&rsquo;: 985.0, &rsquo;powerset&rsquo;: u&rsquo;1&rsquo;, &rsquo;tai&rsquo;: 993.3}, {&rsquo;planet&rsquo;: u&rsquo;&#92;u6838&#92;u4e8c&rsquo;, &rsquo;aec&rsquo;: 693.0, &rsquo;capacity&rsquo;: 985.0, &rsquo;powerset&rsquo;: u&rsquo;2&rsquo;, &rsquo;tai&rsquo;: 664.9}, {&rsquo;planet&rsquo;: u&rsquo;&#92;u6838&#92;u4e09&rsquo;, &rsquo;aec&rsquo;: 980.0, &rsquo;capacity&rsquo;: 951.0, &rsquo;powerset&rsquo;: u&rsquo;1&rsquo;, &rsquo;tai&rsquo;: 941.5}, {&rsquo;planet&rsquo;: u&rsquo;&#92;u6838&#92;u4e09&rsquo;, &rsquo;aec&rsquo;: 976.0, &rsquo;capacity&rsquo;: 951.0, &rsquo;powerset&rsquo;: u&rsquo;2&rsquo;, &rsquo;tai&rsquo;: 938.1}]}, ... ] }</li></ul>
