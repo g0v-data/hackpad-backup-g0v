@@ -3,28 +3,46 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="486"/>
+<meta name="version" content="849"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$JouO9fcJvnN</title>
 </head>
-<body><h1>動民主 1.337 全民記者會：User Story</h1><p></p><h2>角色（會有哪幾種使用者）</h2><p></p><ul><li>* 訪客: 沒有透過 facebook 登入的使用者</li>
-<li>* 用戶: 已經夠透過 facebook 登入的使用者</li>
-<li>* 公眾人物: 希望回答問題的自然人或是法人</li></ul>
+<body><h1>動民主 1.337 全民記者會：User Story</h1><p></p><h2>角色（會有哪幾種使用者）</h2><p></p><ul><li>訪客: 沒有透過 facebook 登入的使用者</li>
+<li>用戶：已經夠透過 facebook 登入的使用者</li>
+<li>公眾人物：希望回答問題的自然人或是法人</li></ul>
 
-<h2>名詞（出現這份文件中的詞彙是什麼意思）</h2><p></p><ul><li>* 問題: 網站中的希望 **公眾人物** 回答的問題, 通常內容是政策</li>
-<li>&nbsp;&nbsp;&nbsp; * 屬性有主題, 細節描述 主題, 選區, 問題類別, 關鍵字(tag)</li>
-<li>* 問題類別: 網站中的問題分類</li>
-<li>* 問題連署: 類似按讚, 表示同意該問題應該被回答</li></ul>
+<h2>名詞（出現這份文件中的詞彙是什麼意思）</h2><p></p><ul><li>問題: 網站中的希望 **公眾人物** 回答的問題, 通常內容是政策、立場</li>
+<li>屬性有主題, 細節描述 主題, 選區, 問題類別, 關鍵字(tag)</li>
+<li>問題類別: 網站中的問題分類</li>
+<li>問題連署: 類似按讚, 表示同意該問題應該被回答</li></ul>
 
-<h2>功能（使用者可以做哪些事情）</h2><p></p><p><b>提問</b></p><p></p><ul><li>* **訪客** 可以瀏覽 **問題**</li>
-<li>* **用戶** 可以提出 **問題**</li>
-<li>&nbsp;&nbsp;&nbsp; * 必須填寫 **問題** 的主題, 選區, 類別</li>
-<li>&nbsp;&nbsp;&nbsp; * 可以填寫 **問題** 的細節描述, 關鍵字</li>
-<li>&nbsp;&nbsp;&nbsp; * 可以選擇同步發表到 facebook, 同時紀錄到用戶的預設值</li></ul>
+<h2>功能（使用者可以做哪些事情）</h2><p></p><p><b>提問</b></p><p></p><ul><li>訪客：可以瀏覽 **問題**</li>
+<li>用戶：可以提出 **問題**<ul><li>必須填寫 **問題** 的主題, 選區, 類別</li>
+<li>可以填寫 **問題** 的細節描述, 關鍵字</li>
+<li>可以選擇同步發表到 facebook, 同時紀錄到用戶的預設值</li></ul>
+</ul>
 
-<p><b>問題列表</b></p><p></p><ul><li>* **訪客** 可以瀏覽列表</li>
-<li>&nbsp;&nbsp;&nbsp; *&nbsp; 可以看到 **問題連署** 的數量</li>
-<li>&nbsp;&nbsp;&nbsp; *&nbsp; 可以看到 **問題** 的主題</li>
-<li>* **用戶** 可以點選列表中的 **問題連署** 按鈕</li></ul>
+<p><b>看問題列表</b></p><p></p><ul><li>訪客：可以瀏覽列表<ul><li>可以看到 **問題連署** 的數量</li>
+<li>可以看到 **問題** 的主題</li></ul>
+</li>
+<li>用戶：可以點選列表中的 **問題連署** 按鈕</li></ul>
+
+<p><b>回答問題</b></p><p></p><ul><li>用戶：依照有效來源回答提問。<ul><li>依既有來源：給連結</li>
+<li>依原生內容：例：獨立記者在現場提問，以錄影音為來源，回答提問。</li></ul>
+</li>
+<li>公眾人物：自己回答。</li></ul>
+
+<p><b>評分</b></p><p></p><p>所有 user 皆可給分：</p><ul><li>客觀評分（針對公眾人物答案?）：打官腔 - 很普通 - 有誠意</li>
+<li>主觀評分（是否支持）：反對 - 不表態/無意見 - 支持</li></ul>
+
+<p><b>社群互動</b></p><p></p><ul><li>Follow 問題</li>
+<li>follow user</li></ul>
+
+<h2>資料運用（累積資料後能有什麼呈現，先亂想）</h2><p></p><p><b>問題 Timeline</b></p><ul><li>公眾人物熱門問題時間軸：可看立場一致/改變演進</li></ul>
+
+<p><b>評分統計（水量與質量）</b></p><p></p><h2>使用階段</h2><ul><li>開發階段（開發者）：公民團體與開發社群協作，設計適合台灣的參與式民主平台</li>
+<li>試用階段（組織者）：公民團體內部試用，前期建立討論氣氛、社群文化與規則</li>
+<li>邀請階段（支持者）：公民團體發邀請函，擴散使用範圍，組織者引導進入討論</li>
+<li>開放階段（大眾）：完全開放使用</li></ul>
 
 <p></p><p></p><p>==========舊版備忘區==========</p><p></p><ul><li>使用者<ul><li>發問</li>
 <li>連署<ul><li>怨念度=</li></ul>
