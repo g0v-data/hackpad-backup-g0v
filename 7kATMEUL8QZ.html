@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1202"/>
+<meta name="version" content="2015"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$7kATMEUL8QZ</title>
 </head>
 <body><h1>經濟部開放資料需求</h1><p>在開放資料研習營電腦工會捎來的訊息, 經濟部目前有意願開放更多的資料，但政府部門往往不知道該開放什麼 ( 全都開放吧! ) ，故在這裡開設回饋區，大家都把想要看到的資料但還沒看到的資料寫下來吧！</p><ul><li>填資料的時候如果有想到應用, 也可以順便寫</li>
@@ -45,7 +45,7 @@
 <li>投審會通過/否決細項</li>
 <li>勞基法<ul><li>條文查詢(?)</li></ul>
 </li>
-<li>公司相關<ul><li><s>過去曾經違背勞基法的公司</s><ul><li>ronnywang 的求職小幫手有, 但是資訊來源似乎很不穩定(各縣市), 而且釋出時間(不明)跟格式(pdf?)都有問題, 可以從這點出發</li><ul class="comment"><li>格式的部分，小弟建議提供經濟部我們希望的，簡單規劃的json格式。這樣經濟部也比較好去跟程設談。</li>
+<li>公司相關<ul><li><s>過去曾經違背勞基法的公司</s><ul><li><s>ronnywang 的求職小幫手有, 但是資訊來源似乎很不穩定(各縣市), 而且釋出時間(不明)跟格式(pdf?)都有問題, 可以從這點出發</s></li><ul class="comment"><li>格式的部分，小弟建議提供經濟部我們希望的，簡單規劃的json格式。這樣經濟部也比較好去跟程設談。</li>
 <li>上面提到這個資料跟勞委會有關, 而非經濟部. 這個要再確定一下</li>
 <li>這應該是各地方勞工局的權責</li></ul>
 </ul>
@@ -57,7 +57,9 @@
 </li></ul>
 </li>
 <li>工廠相關<ul><li>合法工廠清冊</li>
-<li>被抓包非法工廠清冊</li></ul>
+<li>被抓包非法工廠清冊</li>
+<li>台灣各工業園區/科學園區進駐廠商</li>
+<li>&nbsp;台灣工業區/科學園區開發計畫</li></ul>
 </li>
 <li>政治獻金相關<ul><li>誰提供政治獻金</li>
 <li>提供給誰</li>
@@ -70,6 +72,14 @@
 <li>油價相關<ul><li>油價依據為和？</li>
 <li>過去中油支出/收入表</li>
 <li>未來預計變化</li></ul>
+</li>
+<li>自來水相關<ul><li>歷年工程修整支出表和得標廠商資料</li>
+<li>過去水利支出/收入表</li>
+<li>未來預計計劃</li></ul>
+</li>
+<li>台糖相關<ul><li>歷年支出／收入表明細</li>
+<li>土地買賣資料，資產內容</li>
+<li>投資事業細節</li></ul>
 </li>
 <li>創業相關<ul><li>創業有哪一些補助？</li>
 <li>歷年中小型公司創業數據<ul><li>多少公司創業成功</li></ul>
@@ -87,5 +97,44 @@
 <p>參考 <a href="https://www.moea.gov.tw/Mns/populace/news/News.aspx?kind=1&menu_id=40&news_id=35628"></a>https://www.moea.gov.tw/Mns/populace/news/News.aspx?kind=1&amp;menu_id=40&amp;news_id=35628</p><p>建議做成api形式，方便後續網頁發展</p><ul><li>過去物價統計</li></ul>
 <ul class="comment"><li>我不是很確定經濟部這邊對於物價的統計方式，拋磚引玉，希望大家提供更好想法。</li></ul>
 
-</body>
+<ul><li>水利署<ul><li>淹水潛勢圖說是 shp 格式, 可是解開壓縮後看到的是 mxd 格式? mxd 似乎一定要有 ArcGIS 才能開(不對的話請糾正) 如果可以的話也轉個 shp 檔一起給?<ul><li><a href="http://www.dprc.ncku.edu.tw/download/index.html"></a>http://www.dprc.ncku.edu.tw/download/index.html</li></ul>
+</li>
+<li>河川水位警戒, 洩洪警戒, 枯旱警戒及水庫蓄水統計等資訊可提供 json 檔, 以便應用在農業相關專案<ul><li>水位: <a href="http://fhy.wra.gov.tw/pub_web_2011/map/River.aspx?cno=1"></a>http://fhy.wra.gov.tw/pub_web_2011/map/River.aspx?cno=1</li>
+<li>洩洪: <a href="http://fhy.wra.gov.tw/pub_web_2011/Page/Reservoir.aspx"></a>http://fhy.wra.gov.tw/pub_web_2011/Page/Reservoir.aspx</li></ul>
+</ul>
+<ul class="comment"><li>洩洪警戒未來可以和水保局的土石流警戒結合</li><ul><li>枯旱: <a href="http://fhy.wra.gov.tw/pub_web_2011/Page/Water_Status.aspx"></a>http://fhy.wra.gov.tw/pub_web_2011/Page/Water_Status.aspx</li>
+<li>水庫蓄水量: <a href="http://e-river.wra.gov.tw/Hydrological.aspx"></a>http://e-river.wra.gov.tw/Hydrological.aspx<ul><li>能否同時提供歷年資訊?&nbsp;</li></ul>
+</li>
+<li>地下水與地層下陷相關資料</li>
+<li>有些資料似乎有提供 kml 檔(例如水庫), 但是無法正確取得, 例如此頁顯示 &quot;找不到網路路徑。&quot;:<ul><li><a href="http://fhy.wra.gov.tw/DMCHY/DES/KMLFiles/ReservoirsStations.kml"></a>http://fhy.wra.gov.tw/DMCHY/DES/KMLFiles/ReservoirsStations.kml&nbsp;</li></ul>
+</li></ul>
+</li>
+<li>河川流域圖等圖資</li><ul><li>在這邊有看到河川流域與 google maps 的套疊, 不曉得是否有河川流域的 shp 檔?<ul><li><a href="http://fhy.wra.gov.tw/Pub_Web_2011/Map/FloodM.aspx"></a>http://fhy.wra.gov.tw/Pub_Web_2011/Map/FloodM.aspx&nbsp;</li>
+<li>水利署地理資訊倉儲中心似乎有, 但好像要是政府機構的計劃才能申請使用. (請見下圖的計劃主辦欄位) 若是在TGOS 尋找, 似乎還是會導回此頁 ( <a href="http://goo.gl/1dy0bD"></a>http://goo.gl/1dy0bD ). 另, 水利署倉儲中心往 TGOS 的連結已經失效了: <a href="http://gic.wra.gov.tw/gic/ApplyWeb/Other_TGOS.aspx"></a>http://gic.wra.gov.tw/gic/ApplyWeb/Other_TGOS.aspx</li></ul>
+</ul>
+</ul>
+</ul>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_7kATMEUL8QZ_p.55493_1393338961995_螢幕快照 2014-02-25 下午10.34.54.png'/></p><ul><li>如果已經有開放了, 若能降低圖層取得的難度 (減少其曲折離奇度) 也是件很好的事</li>
+<li>能源局</li>
+<li>能源局有許多不錯的資料, 例如歷年油價或液化石油氣參考價格:</li>
+<li><a href="http://web3.moeaboe.gov.tw/oil102/oil1022010/A01/A0107/allcpcoil.asp?"></a>http://web3.moeaboe.gov.tw/oil102/oil1022010/A01/A0107/allcpcoil.asp?</li>
+<li>但目前大多是用html 大表格提供, 可以考慮固定規格後提供 raw data, xml 或是 json 格式檔案</li>
+<li>智慧財產局</li>
+<li>現在open 的data</li>
+<li><a href="http://data.gov.tw/taxonomy/term/453"></a>http://data.gov.tw/taxonomy/term/453</li>
+<li>專利資訊檢索系統</li>
+<li><a href="http://twpat.tipo.gov.tw/"></a>http://twpat.tipo.gov.tw/</li>
+<li>現在只有數量統計</li>
+<li>專利公開資訊查詢</li>
+<li><a href="https://tiponet.tipo.gov.tw/S090/UC090-C06/InquiryPatentCaseCensorInfo.do?VTFjMWVHUlhiSGxsVmtKb1pFZFdkV1JGV25saU1qQTVUVkVsTTBRbE0wUXIr"></a><a href='https://tiponet.tipo.gov.tw/S090/UC090-C06/InquiryPatentCaseCensorInfo.do?VTFjMWVHUlhiSGxsVmtKb1pFZFdkV1JGV25saU1qQTVUVkVsTTBRbE0wUXIr'/>https://tiponet.tipo.gov.tw/S090/UC090-C06/InquiryPatentCaseCensorInfo.do?VTFjMWVHUlhiSGxsVmtKb1pFZFdkV1JGV25saU1qQTVUVkVsTTBRbE0wUXIr</a></li>
+<li>專利名詞中英對照</li>
+<li><a href="http://paterm.tipo.gov.tw/IPOTechTerm/doIPOTechTermIndex.do"></a>http://paterm.tipo.gov.tw/IPOTechTerm/doIPOTechTermIndex.do</li></ul>
+
+<ul><li>中央地質調查所<ul><li>斷層，順向坡，土石流，地質，鑽井等等的，有些似乎有 WMS 可以用，但授權是如何呢？有些似乎要取得 session 才能使用，等於要登入才能用嗎？例如下面連結, 可看到 SESSION 關鍵字:<ul><li><a href="http://fault.moeacgs.gov.tw/mapguide/mapagent/mapagent.fcgi?OPERATION=GETDYNAMICMAPOVERLAYIMAGE&FORMAT=PNG&VERSION=2.1.0&SESSION=6cfbe0a8-541a-1031-8000-0025b324aa80_tw_D"></a><a href='http://fault.moeacgs.gov.tw/mapguide/mapagent/mapagent.fcgi?OPERATION=GETDYNAMICMAPOVERLAYIMAGE&amp;FORMAT=PNG&amp;VERSION=2.1.0&amp;SESSION=6cfbe0a8-541a-1031-8000-0025b324aa80_tw_D24551890AFC0AFB0AFA&amp;MAPNAME=AT2009&amp;SEQ=0.09186606085859239&amp;CLIENTAGENT=Ajax%20Viewer&amp;BEHAVIOR=2&amp;SETDISPLAYDPI=96&amp;SETDISPLAYWIDTH=#'/>http://fault.moeacgs.gov.tw/mapguide/mapagent/mapagent.fcgi?OPERATION=GETDYNAMICMAPOVERLAYIMAGE&amp;FORMAT=PNG&amp;VERSION=2.1.0&amp;SESSION=6cfbe0a8-541a-1031-8000-0025b324aa80_tw_D</a> ... 後略<ul><li>上面這個是斷層的 WMS, 但似乎有另外的來源, 例如下面:<ul><li><a href="http://gwh.moeacgs.gov.tw/geo4oracle/mapagent/mapagent.fcgi"></a>http://gwh.moeacgs.gov.tw/geo4oracle/mapagent/mapagent.fcgi ... (中略) ... LAYERS=,WMS/LAYER/TW/G97_TW_B1_L_2013F ... (後略)</li></ul>
+</ul>
+</ul>
+</ul>
+</ul>
+
+<p></p></body>
 </html>
