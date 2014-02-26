@@ -3,10 +3,10 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="849"/>
+<meta name="version" content="1342"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$JouO9fcJvnN</title>
 </head>
-<body><h1>動民主 1.337 全民記者會：User Story</h1><p></p><h2>角色（會有哪幾種使用者）</h2><p></p><ul><li>訪客: 沒有透過 facebook 登入的使用者</li>
+<body><h1>動民主 1.337 全民記者會：User Story</h1><p></p><p>這頁的是舊版，新版 user story 持續更新中 <a href="https://github.com/g0v/don-press/blob/gh-pages/views/user_story.md"></a>https://github.com/g0v/don-press/blob/gh-pages/views/user_story.md</p><p></p><h2>角色（會有哪幾種使用者）</h2><p></p><ul><li>訪客：沒有透過 facebook 登入的使用者</li>
 <li>用戶：已經夠透過 facebook 登入的使用者</li>
 <li>公眾人物：希望回答問題的自然人或是法人</li></ul>
 
@@ -22,35 +22,48 @@
 </ul>
 
 <p><b>看問題列表</b></p><p></p><ul><li>訪客：可以瀏覽列表<ul><li>可以看到 **問題連署** 的數量</li>
-<li>可以看到 **問題** 的主題</li></ul>
+<li>可以看到 **問題** 的主題</li>
+<li>可以看到　**相關問題**</li></ul>
 </li>
 <li>用戶：可以點選列表中的 **問題連署** 按鈕</li></ul>
 
 <p><b>回答問題</b></p><p></p><ul><li>用戶：依照有效來源回答提問。<ul><li>依既有來源：給連結</li>
 <li>依原生內容：例：獨立記者在現場提問，以錄影音為來源，回答提問。</li></ul>
 </li>
-<li>公眾人物：自己回答。</li></ul>
+<li>公眾人物：自己回答。</li>
+<li>上傳圖片檔案 / 錄音檔 / 錄影檔案（嵌入 soundcloud or youtube）</li>
+<li>再次回答時 qoute</li></ul>
 
 <p><b>評分</b></p><p></p><p>所有 user 皆可給分：</p><ul><li>客觀評分（針對公眾人物答案?）：打官腔 - 很普通 - 有誠意</li>
-<li>主觀評分（是否支持）：反對 - 不表態/無意見 - 支持</li></ul>
+<li>主觀評分（是否支持）：反對 - 不表態/無意見 - 支持</li>
+<li>有疑慮？（某些資訊不確定是否為真 / 不確定是否好）</li></ul>
 
-<p><b>社群互動</b></p><p></p><ul><li>Follow 問題</li>
+<p><b>社群互動</b></p><p></p><ul><li>Follow 問題 / Email or Facebook notification&nbsp;</li>
 <li>follow user</li></ul>
 
-<h2>資料運用（累積資料後能有什麼呈現，先亂想）</h2><p></p><p><b>問題 Timeline</b></p><ul><li>公眾人物熱門問題時間軸：可看立場一致/改變演進</li></ul>
+<p><b>看單一問題 Timeline</b></p><ul><li>公眾人物熱門問題時間軸：可看立場一致/改變演進</li></ul>
 
-<p><b>評分統計（水量與質量）</b></p><p></p><h2>使用階段</h2><ul><li>開發階段（開發者）：公民團體與開發社群協作，設計適合台灣的參與式民主平台</li>
+<p><b>評分統計（水量與質量）</b></p><p></p><p></p><p></p><h2>使用者開放階段</h2><ul><li>開發階段（開發者）：公民團體與開發社群協作，設計適合台灣的參與式民主平台</li>
 <li>試用階段（組織者）：公民團體內部試用，前期建立討論氣氛、社群文化與規則</li>
 <li>邀請階段（支持者）：公民團體發邀請函，擴散使用範圍，組織者引導進入討論</li>
 <li>開放階段（大眾）：完全開放使用</li></ul>
 
-<p></p><p></p><p>==========舊版備忘區==========</p><p></p><ul><li>使用者<ul><li>發問</li>
+<p></p><h2>可能遇到的問題</h2><ul><li>過高技術門檻的資訊各說各話 e.g. 擁核/反核</li>
+<li>殭屍 Facebook 帳號 / 用註冊年份、地區等過濾</li>
+<li>團體內部使用：可能有些問題無法回答、或不需要回答（團體內部資訊等），或成為立場相反團體互相攻擊（問題本身可以劣退嗎？）</li></ul>
+
+<p></p><h2>什麼是「相關問題」</h2><ul><li>自動分析問題主題和內容查詢像不像其他被問過的問題</li>
+<li>問題內容標記人物、地方、時間就可以安居這些消息瀏覽問題</li>
+<li>相關的不一定是一樣，需要請user確定，不是可以問兩個問題的關係和差別是什麼</li></ul>
+
+<p></p><p></p><p></p><p>========== 舊版備忘區 ==========</p><p></p><ul><li>使用者<ul><li>發問</li>
 <li>連署<ul><li>怨念度=</li></ul>
 </li>
 <li>轉述作答</li></ul>
 <ul class="taskdone"><li>給分</li><ul><li>尚未給分</li>
-<li>1顆星：謊話連篇，劣退！╰（‵□′）╯</li>
-<li>2顆星：敷衍了事，不及格！(╯-_-)╯ ~╩╩</li>
+<li>1顆星：謊話連篇，劣退！╰（‵□′）╯</li></ul>
+<ul class="comment"><li>給一顆星不見得是謊話，也有可能是爛得不得了 :p</li></ul>
+<ul><li>2顆星：敷衍了事，不及格！(╯-_-)╯ ~╩╩</li>
 <li>3顆星：普普通通，不痛不癢(￣.￣)+ …</li>
 <li>4顆星：蠻具體的，還不賴ｂ（￣▽￣）ｄ</li>
 <li>5顆星：鉅細靡遺，非常佩服ｍ（＿　＿）ｍ</li></ul>
@@ -60,8 +73,9 @@
 <li>反對</li></ul>
 </li></ul>
 </li>
-<li>人物<ul><li>基本資料（來源：膝部狗仔、真度計）<ul><li>理論上不太會變的<ul><li>姓名</li>
-<li>照片</li></ul>
+<li>人物<ul><li>基本資料（來源：膝部狗仔、真度計）<ul><li>理論上不太會變的（滑鼠移過去出現 info card）<ul><li>姓名</li>
+<li>照片</li>
+<li>年紀</li></ul>
 </li>
 <li>變動的<ul><li>目前發言身份</li>
 <li>目前黨籍</li>
@@ -100,12 +114,14 @@
 <li>瀏覽人數</li></ul>
 </li>
 <li>資訊<ul><li>發問人</li>
-<li>連署人</li></ul>
+<li>連署人</li>
+<li>發問時間</li></ul>
 </li></ul>
 </li>
 <li>回答<ul><li>回答人物與當時的職稱</li>
 <li>回答方式<ul><li>本人作答</li>
-<li>網友轉述</li></ul>
+<li>網友轉述</li>
+<li>其他公眾人物／法人回答</li></ul>
 </li>
 <li>回答（更新）日期</li>
 <li>內容</li>
