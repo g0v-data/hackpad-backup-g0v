@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="4554"/>
+<meta name="version" content="4663"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$8sYMW30othK</title>
 </head>
 <body><h1>核電翻譯機&nbsp; (Nuclear Data)</h1><ul><li>發起人/拋磚人：蔡雅瀅</li>
@@ -169,12 +169,14 @@
 </ul>
 
 <p>2/22（六）下午大家在參加黑客松時，看到網頁上有兩部反應爐降載，當時很好奇發生何事？（正常狀況反應爐熱功率100％或99％）；回家看新聞<a href='http://www.ettoday.net/news/20140222/327783.htm'/>2/22凌晨接連發生芮氏規模5.4、4.2地震，台電指出，經調查後發現，各轄區供電系統，都沒有問題，核一、二、三廠共6部機，皆正常發電、運轉，未受地震影響，請民眾不用擔心</a>。想問當時有人截圖嗎？或者可用其他方式驗證台電是否說謊（皆正常發電、運轉）？</p><ul class="task"><li>系統可以有（先人工手動輸入的）新聞列表，並與圖表連結，就好像下面舉例的 Google Finance 一樣：</li></ul>
-<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_8sYMW30othK_p.56216_1393282814697_TYO.9501.png'/></p><ul class="comment"><li>取的是東電的圖表，可惜 2011 年那時股價大跌，已經沒有新聞資料與之對應連結了。</li><ul class="task"><li>需要有人繪製 mock up：新聞與圖表並陳的樣式</li></ul class="task">
-</li>
-<li>可以仿照 Facebook Like，在新聞上面加上「我相信」、「我懷疑」的按鈕，幫忙自動發佈到 Facebook 上。但是分享的頁面不是新聞，而是新聞與同時段對應的圖表並陳。</li><ul><li>點下按鈕，會跳出 dialog 並附上預先準備好的分享「說詞」的 template，允許使用者修改，按「確定」後才真的分享到 Facebook</li><ul class="task"><li>需要有人設計「說詞」的文案</li></ul class="task">
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_8sYMW30othK_p.56216_1393282814697_TYO.9501.png'/></p><ul class="comment"><li>取的是東電的圖表，可惜 2011 年那時股價大跌，已經沒有新聞資料與之對應連結了。</li><ul class="task"><li>需要有人繪製 mock up：新聞與圖表並陳的樣式</li><ul class="comment"><li>跟<a href='http://goo.gl/oJyH0Q'/> Google finance 的圖表</a>形式真的蠻像的，可以讓每個核電場用一條線呈現，且可以選擇顯示或是隱藏。</li>
+<li>我找找 Google chart 或有沒有其他 Libraries 可以方便做這個功能的，不然可能要自己刻看看。</li></ul>
+</ul>
+</ul>
+<ul class="task"><li>可以仿照 Facebook Like，在新聞上面加上「我相信」、「我懷疑」的按鈕，幫忙自動發佈到 Facebook 上。但是分享的頁面不是新聞，而是新聞與同時段對應的圖表並陳。</li><ul><li>點下按鈕，會跳出 dialog 並附上預先準備好的分享「說詞」的 template，允許使用者修改，按「確定」後才真的分享到 Facebook</li><ul class="task"><li>需要有人設計「說詞」的文案</li></ul class="task">
 </li></ul class="task">
 </li>
-<li>新聞也可以與「新聞小幫手」連結，供人檢舉<i>質疑</i>並以我們準備的圖表作為佐證。<ul class="comment"><li>這裡無法確定是新聞有誤，還是我們抓到的資料有誤。為了避免爭議，也許真的需要有留下 screenshot 的功能。</li></ul>
+<li>新聞也可以與「新聞小幫手」連結，供人檢舉<i>質疑</i>並以我們準備的圖表作為佐證。</li><ul class="comment"><li>這裡無法確定是新聞有誤，還是我們抓到的資料有誤。為了避免爭議，也許真的需要有留下 screenshot 的功能。</li></ul>
 </ul>
 <p>從台電發電記錄可看出：</p><p>1.比對台電（<a href='http://taipower.g0v.ronny.tw/place/355'/>台電發電記錄＠ ronnywang</a>）和<a href='http://www.aec.gov.tw/controlreport/historydata.html?searchyear=2013&amp;searchmonth=5&amp;button=%E9%80%81%E5%87%BA'/>原能會的核電記錄</a>，以2013.05.20為例，台電曾出現6部機組發電量僅6百萬瓦（註：<a href='http://www.taipower.com.tw/content/new_info/new_info-b22.aspx?LinkID=7'/>全國核電總裝置容量5144百萬瓦</a>）的低點，但同日原能會每日一筆的記錄，卻顯示核一1號機大修，其他機組穩定運轉。其它低點（如：2013.04.11、2013.08.10）也有類似狀況。</p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_8sYMW30othK_p.120366_1393129109640_2013.05.20台電.jpg'/></p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_8sYMW30othK_p.120366_1393129122578_2013.05.20原能會.jpg'/></p><p>2.全國核電裝置容量5144百萬瓦（即514.4萬千瓦），實際發電量大多在5000百萬瓦以下。</p><ul class="comment"><li>安全issue ?</li>
 <li>1.提實際發電量低於裝置容量，是在思考核電實際的發電量，比裝置容量低，找核電的替代方案時，不一定要取代核電的裝置容量，能取代實際發電量就夠了</li>
