@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2939"/>
+<meta name="version" content="3280"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$jG9uno4d9H8</title>
 </head>
 <body><h1>3/8 線路松</h1><p></p><h2>如何參加</h2><p></p><p><b>線路設定組</b></p><p>願意來協助幫忙設定/除錯的朋友，請在<a href='http://g0v-tw.kktix.cc/events/router-3-8'/>這裡簽到</a> 。</p><p></p><p><b>設備支援組</b></p><p>願意提供設備的朋友，請留下 id、可提供數量、與設備交件時間點（a/b）：</p><ol><li>3/7 週五晚上 8:00 前送到綠盟辦公室（台北市南昌路二段 166 號 2 樓）</li>
@@ -26,13 +26,14 @@
 <ul style="list-style: none;"><li>4pm-5:30pm 遊行的人聚集到凱道，協助媒體連線、發稿</li>
 <li>5:30pm-9:30pm 和遊行晚會合併</li></ul>
 
-<p></p><h2>場地布置</h2><p>｀媒體區可容納人數： 15 人← spec 大改之 ttcat 出來面對 XD</p><ul class="comment"><li>但是據說要加桌子，最後空間有多大待確認。</li>
+<p></p><h2>場地布置</h2><p>媒體區可容納人數： 15~20 人</p><ul class="comment"><li>但是據說要加桌子，最後空間有多大待確認。</li>
 <li>我來協調多加一張桌子好了。</li>
 <li>改 spec 是因為當時我問同事大概會有多少記者，沒有想到說是「同時」需要使用的記者有多少，（既然不走 wifi）就不用同時這麼多人，所以我們改 15~20。</li></ul>
-<p>有鑑於去年發出密碼卡快 100 份以致網路癱瘓，今年不提供無線網路予電腦使用。</p><ul class="comment"><li>這被寫出來好害羞，去年我們真的是笨死了 &gt;...&lt;</li>
+<p>有鑑於去年發出密碼卡快 100 份以致網路癱瘓，今年不提供無線網路予電腦使用。（註：雖然很丟臉但因為一直有人詢問，還是把真實情況紀錄一下好了 XD 去年是「中華電信牽線完給了一個 wifi 小烏龜」直接上）</p><ul class="comment"><li>這被寫出來好害羞，去年我們真的是笨死了 &gt;...&lt;</li>
 <li>這常有的事情...&nbsp;</li></ul>
 
-<p>中華電信拉的線是 100M/100M&nbsp;</p><p>對外 IP 有____個 ← gavin 詢問</p><p>預計最高承載有線使用者____個/無線使用者____個 ← kukulcan 詢問</p><ul class="taskdone"><li>網路圖← gavin 詢問<ul class="taskdone"><li>請見下方「<b>網路配置」段落。-au</b></li></ul>
+<p>中華電信拉的線是 100M/100M&nbsp;</p><p>對外 IP 有____個 ← gavin 詢問</p><p>（目前的調配方式，只需要一個對外 IP，但是如果有多的可以架第二個備援 ethernet 也不錯 /au）</p><ul class="comment"><li>3/8 當天早上中華電信牽線我會問</li></ul>
+<p>預計最高承載有線使用者 50 個 (優先分配頻寬) / 無線使用者 500 個 (完全不保證會動)</p><p>往年現場的電源都是發電機，沒有台電來的市電</p><p></p><ul class="taskdone"><li>網路圖← gavin 詢問<ul class="taskdone"><li>請見下方「<b>網路配置」段落。-au</b></li></ul>
 </ul>
 <ul class="comment"><li>是不是要等當天棚子搭起來以後，看現場情況才有辦法畫網路圖？或許可以直接拿 <a href='https://docs.google.com/spreadsheet/ccc?key=0AoIodB2-MtrOdDlhdTkzNHVoS1dEZHlSdFVqdjQxbmc&amp;usp=sharing'/>david 提供的那份 50 人的配置圖</a>來改</li>
 <li>已參照並完成配置。</li></ul>
@@ -63,7 +64,9 @@
 </li>
 <li>802.11n Airport Extreme x1 (這一台 <a href="http://goo.gl/GY8TlU)"></a>http://goo.gl/GY8TlU) <a href='http:// http://goo.gl/Evfmig'/>手冊1 </a>、<a href='https://drive.google.com/file/d/0B-wTztKH2tKiUFlSVVFlVXFHNkk/edit?usp=sharing'/>手冊2</a><ul class="taskdone"><li>jimyhuang x1</li></ul class="taskdone">
 </li>
-<li>rt-16n x1、rt-10u x1<ul class="taskdone"><li>gavin x1 + x1</li></ul class="taskdone">
+<li>rt-16n x1、rt-10u x1、802.11ac x1、行動小ap<ul class="taskdone"><li>gavin x1 + x1 + x1 + x1</li></ul class="taskdone">
+</li>
+<li>2.4G/5G平板. 監控wifi 訊號<ul class="taskdone"><li><i>gavin x1&nbsp;</i></li></ul class="taskdone">
 </li>
 <li>足夠 20 人坐的桌椅 (視現場情況排列)<ul class="taskdone"><li>大會跟帳篷一起租</li></ul class="taskdone">
 </li>
@@ -71,7 +74,7 @@
 <li>昇鴻 x 2</li></ul>
 </ul>
 
-<p></p><h2>直播區</h2><ul class="comment"><li>剛剛追 Logbot 看到在講直播</li>
+<p>無線網路不重疊只能設 4 個頻道，第 5 台以上的機器拿來做備援 /au</p><p></p><h2>直播區</h2><ul class="comment"><li>剛剛追 Logbot 看到在講直播</li>
 <li>100+ 訂閱的 YouTube Channel（bookshow 有兩百多，可提供）</li>
 <li>1080p recorder 有 BMD mini recorder（HDMI / SDI →Thunderbolt）</li>
 <li>和 AverMedia C875（HDMI → HDMI + SD card / USB2.0）</li>
@@ -83,8 +86,15 @@
 <li>我和 venev 會去，可以帶齊整套設備（攝影機、擷取器、筆電、網卡），YouTube / HangOut 沒問題，但我們對 FME、別家平台沒有都很熟，不確定怎麼調參數去兼顧畫質、穩定度、支援度，徵求熟手幫忙！</li>
 <li>弱弱的問一下，直播區離舞台區多遠？舞台多高？我得想一下設備怎麼支援，不然要是只拍到一堆人頭，那就好笑了...</li>
 <li>可以直接在 facebook 那個聊天室問 PA</li>
+<li><br/></li>
+<li>（等活動結束把這部分的資訊一併整理上來）</li></ul>
+
+<h2>網路配置</h2><p>Hinet VTUR 100M/100M</p><p>|-- Vigor 2130: <b>DHCP</b> 192.168.2.x</p><p>&nbsp;&nbsp;&nbsp;&nbsp; |-- Apple AirportExpress: <b>DHCP</b>, 802.11<b>a+n</b> <b>5Ghz</b> Channel: <b>100</b> SSID: <b>g0v.tw-1-A</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; |-- Cisco WAP200: <b>Bridge</b>, 802.11<b>g+b</b> <b>2.4Ghz</b> Channel: <b>1</b> SSID: <b>g0v.tw-4-B</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp; |-- Asus RT-N16: <b>DHCP</b>, 802.11<b>n</b> <b>2.4Ghz</b> Channel: <b>6</b> SSID: <b>g0v.tw-2-N</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp; |-- Asus RT-N10U: <b>DHCP</b>, 802.11<b>g</b> <b>2.4Ghz</b> Channel: <b>11</b> SSID: <b>g0v.tw-3-G</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp; | -- 8-port Switch</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | -- 8-port Switches</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- 24-port Switches</p><p>WPA2-PSK Password: (當天發，需要事先設定密碼的話請洽 au)</p><p>[拜託密碼到當天現場再說, 有一次在人文館, 應該是 COSCUP 還是幹嘛, 結果工人用無線網路密碼上了 flickr 照片集, 無線網路密碼請不要放在公開文件裡, 除非, 活動結束了...]</p><ul class="comment"><li>收到</li></ul>
+
+<p>問題：密碼的部分要如何發給記者、現場媒體組工作人員？怎麼限制同時的數量？</p><ul class="comment"><li>密碼取好記的，可以寫在黑板上，但是「不保證能連線」。要發稿的記者請使用 USB/Ethernet</li>
+<li>WiFi 同時數量 500-600 台，但是 Vigor 2130 層會設定成優先提供頻寬給有線用戶，剩餘頻寬再分給無線。</li>
 <li><br/></li></ul class="comment">
-<h2>網路配置</h2><p>Hinet VTUR 100M/100M</p><p>|-- Vigor 2130: <b>DHCP</b> 192.168.2.x</p><p>&nbsp;&nbsp;&nbsp;&nbsp; |-- Apple AirportExpress: <b>DHCP</b>, 802.11<b>a+n</b> <b>5Ghz</b> Channel: <b>100</b> SSID: <b>g0v.tw-1-A</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp; |-- Asus RT-N16: <b>DHCP</b>, 802.11<b>n</b> <b>2.4Ghz</b> Channel: <b>6</b> SSID: <b>g0v.tw-2-N</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp; |-- Asus RT-N10U: <b>DHCP</b>, 802.11<b>g</b> <b>2.4Ghz</b> Channel: <b>11</b> SSID: <b>g0v.tw-3-G</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; |-- Cisco WAP200: <b>Bridge</b>, 802.11<b>g+b</b> <b>2.4Ghz</b> Channel: <b>1</b> SSID: <b>g0v.tw-4-B</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp; | -- 8-port Switch</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | -- 8-port Switches</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- 24-port Switches</p><p>WPA2-PSK Password: 03082014&nbsp;</p><p>[拜託密碼到當天現場再說, 有一次在人文館, 應該是 COSCUP 還是幹嘛, 結果工人用無線網路密碼上了 flickr 照片集, 無線網路密碼請不要放在公開文件裡, 除非, 活動結束了...]</p><p></p><h2>設定建議</h2><p>(感謝 davihuan!)</p><ul><li><a href='https://docs.google.com/spreadsheet/ccc?key=0AoIodB2-MtrOdDlhdTkzNHVoS1dEZHlSdFVqdjQxbmc&amp;usp=sharing'/>實用的有線網路配置方式</a></li>
+<h2>設定建議</h2><p>(感謝 davihuan!)</p><ul><li><a href='https://docs.google.com/spreadsheet/ccc?key=0AoIodB2-MtrOdDlhdTkzNHVoS1dEZHlSdFVqdjQxbmc&amp;usp=sharing'/>實用的有線網路配置方式</a></li>
 <li>中華電信 VTUR&lt;&gt;無線AP&lt;&gt;SWITCH</li>
 <li>無線 AP 就做 WPA2-PSK 加密認證</li>
 <li>請要發稿的媒體記者盡可能用有線網路</li>
@@ -96,5 +106,5 @@
 <li>這樣的話其實也是串 9 台而已, 一個單位放在桌面上的電腦只需要 1M 的網路線六條</li>
 <li>同時兩個單位之間只需要一條 5/10M 的網路線串接, 放到地上的線記得用強力膠帶黏在地板上</li></ul>
 
-<p></p><p></p><p></p></body>
+<p></p><h2>附錄</h2><p><b>會場平面圖</b></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_jG9uno4d9H8_p.52366_1394116148556_20140308.JPG'/></p><p></p></body>
 </html>
