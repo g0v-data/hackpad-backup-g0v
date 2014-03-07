@@ -3,10 +3,10 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="4902"/>
+<meta name="version" content="5040"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$jG9uno4d9H8</title>
 </head>
-<body><h1>3/8 線路松</h1><p></p><h2>如何參加</h2><p></p><p><b>線路設定組</b></p><p>願意來協助幫忙設定/除錯的朋友，請在<a href='http://g0v-tw.kktix.cc/events/router-3-8'/>這裡簽到</a> 。</p><p></p><p><b>設備支援組</b></p><p>願意提供設備的朋友，請留下 id、可提供數量、與設備交件時間點（a/b）：</p><ol><li>3/7 週五晚上 8:00 前送到綠盟辦公室（台北市南昌路二段 166 號 2 樓）</li>
+<body><h1>3/8 線路松：戶外大型活動媒體區硬體設置</h1><p></p><h2>如何參加</h2><p></p><p><b>線路設定組</b></p><p>願意來協助幫忙設定/除錯的朋友，請在<a href='http://g0v-tw.kktix.cc/events/router-3-8'/>這裡簽到</a> 。</p><p></p><p><b>設備支援組</b></p><p>願意提供設備的朋友，請留下 id、可提供數量、與設備交件時間點（a/b）：</p><ol><li>3/7 週五晚上 8:00 前送到綠盟辦公室（台北市南昌路二段 166 號 2 樓）</li>
 <li>3/8 週六早上 10:30 ~ 11:00 前送到凱達格蘭大道媒體區</li></li>
 <li>阿端收件時先在裝設備的箱子上標一下主人噢，等 11am au 到了以後就有 3M 膠帶可以貼了</li></ol>
 
@@ -95,7 +95,7 @@
 <li>結論：會場本已安排三機導播＆音控台，直接拉導播機＆音控台的訊號來作直播就好，所以不用另外準備攝影器材。（本來還以為要帶三米燈架＆電動雲台去架攝影機 XD）媒體區離舞台約 30m，舞台高 120cm 供參考。</li>
 <li>（等活動結束把這部分的資訊一併整理上來）</li></ul>
 
-<h2>網路配置</h2><p>Hinet VTU-R 100M/100M</p><p>|-- Vigor 2130: <b>DHCP</b> 192.168.2.x</p><p>&nbsp;&nbsp;&nbsp;&nbsp; |-- Sapido BR261c: <b>DHCP, ac+n</b> <b>5Ghz+2.4Ghz</b> SSID <b>g0v.tw-0-AC</b> (Channel: <b>60</b>), <b>g0v.tw-0-N</b> (Channel: <b>14</b>)</p><p>&nbsp;&nbsp;&nbsp;&nbsp; | -- 8-port Switch</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- Apple AirportExpress: <b>DHCP</b>, <b>a+n</b> <b>5Ghz</b> Channel: <b>56</b> SSID: <b>g0v.tw-1-AN</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; |-- Cisco WAP200: <b>Bridge</b>, <b>g+b</b> <b>2.4Ghz</b> Channel: <b>1</b> SSID: <b>g0v.tw-4-GB</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- Asus RT-N16: <b>DHCP</b>, <b>n-only</b> <b>2.4Ghz</b> Channel: <b>6</b> SSID: <b>g0v.tw-2-N</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- Asus RT-N10U: <b>DHCP</b>, <b>g-only</b> <b>2.4Ghz</b> Channel: <b>11</b> SSID: <b>g0v.tw-3-G</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | -- 8-port Switches</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- 24-port Switches (接好線放在媒體區桌上)</p><p></p><p><b>容錯移轉</b></p><ul><li>如果 Hinet VTU-R 掛了，由 au 帶的 WiMax 遞補，關閉所有無線設備，只留有線連線。</li>
+<h2>網路配置</h2><p>Hinet VTU-R 100M/100M</p><p>|-- Vigor 2130: <b>DHCP</b> 192.168.2.x, Wireless AP IP Range: 192.168.2.21-30, Rate Limit 10Mbps each</p><p>&nbsp;&nbsp;&nbsp;&nbsp; | -- LAN1 (高): 8-port Switch - 24-port Switches (接好線放在媒體區桌上)</p><p>&nbsp;&nbsp;&nbsp;&nbsp; | -- LAN2 (高): 8-port Switch - 24-port Switches (接好線放在媒體區桌上)</p><p>&nbsp;&nbsp;&nbsp;&nbsp; |-- LAN3 (中): Sapido BR261c: <b>DHCP, ac+n</b> <b>5Ghz+2.4Ghz</b> SSID <b>g0v.tw-0-AC</b> (Channel: <b>60</b>), <b>g0v.tw-0-N</b> (Channel: <b>14</b>)</p><p>&nbsp;&nbsp;&nbsp;&nbsp; |-- LAN4 (低): 8-port Switch</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- Apple AirportExpress: <b>DHCP</b>, <b>a+n</b> <b>5Ghz</b> Channel: <b>56</b> SSID: <b>g0v.tw-1-AN</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; |-- Cisco WAP200: <b>Bridge</b>, <b>g+b</b> <b>2.4Ghz</b> Channel: <b>1</b> SSID: <b>g0v.tw-4-GB</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- Asus RT-N16: <b>DHCP</b>, <b>n-only</b> <b>2.4Ghz</b> Channel: <b>6</b> SSID: <b>g0v.tw-2-N</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- Asus RT-N10U: <b>DHCP</b>, <b>g-only</b> <b>2.4Ghz</b> Channel: <b>11</b> SSID: <b>g0v.tw-3-G</b></p><p></p><p><b>容錯移轉</b></p><ul><li>如果 Hinet VTU-R 掛了，由 au 帶的 WiMax 遞補，關閉所有無線設備，只留有線連線。</li>
 <li>如果 Vigor 2130 掛了，由 Sapido BR261c (<b>g0v.tw-0</b>) 優先，依 SSID 編號順位遞補。</li>
 <li>如果 Sapido BR261c 掛了，用同型機遞補，如無則不予遞補。</li>
 <li>如果 AirportExpress 掛了，不予遞補，Cisco WAP200 (<b>g0v.tw-4-GB</b>) 改接 Asus RT-N16 (<b>g0v.tw-2-N</b>)。</li>
