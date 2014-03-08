@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="5844"/>
+<meta name="version" content="6346"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$jG9uno4d9H8</title>
 </head>
 <body><h1>3/8 線路松：戶外大型活動媒體區硬體設置</h1><ul class="comment"><li>本來是事件松，但 hackpad 超展開好多&nbsp; know-how / 規格可供之後<s>遊行抗議</s>歡樂戶外活動參考，所以添個副標好搜尋、加入學習清單。之後可考慮拆 pad.</li>
@@ -40,7 +40,7 @@
 <ul class="comment"><li>這被寫出來好害羞，去年我們真的是笨死了 &gt;...&lt;</li>
 <li>這常有的事情...&nbsp;</li></ul>
 
-<p>中華電信拉的線是 100M/100M&nbsp;</p><p>對外 IP 有____個 ← gavin 詢問</p><p>（目前的調配方式，只需要一個對外 IP，但是如果有多的可以架第二個備援 ethernet 也不錯 /au）</p><ul class="comment"><li>3/8 當天早上中華電信牽線我會問</li></ul>
+<p><a href='http://www.cht.com.tw/enterprise/bn-fttb-rate.html'/>中華電信拉的線是 100M/100M&nbsp;</a></p><p>對外 IP 有____個 ← gavin 詢問</p><p>（目前的調配方式，只需要一個對外 IP，但是如果有多的可以架第二個備援 ethernet 也不錯 /au）</p><ul class="comment"><li>3/8 當天早上中華電信牽線我會問</li></ul>
 <p>預計最高承載有線使用者 50 個 (優先分配頻寬) / 無線使用者 500 個 (完全不保證會動)</p><p>往年現場的電源都是發電機，沒有台電來的市電</p><ul class="comment"><li>開始思考要不要帶ups←gavin</li></ul>
 <p>發電機會在____點開始供電（給中華電信的數據機）←gavin詢問</p><ul class="comment"><li>11:00am 來的時候一定會有了因為舞台可能也要試</li>
 <li>8:30 am 前需要開始發電因為中華電信牽線時數據機要吃電才能測試牽線是否成功←gavin溫馨叮嚀</li></ul>
@@ -60,23 +60,33 @@
 <ul class="taskdone"><li>塑膠袋<ul class="taskdone"><li>et: 平時有儲存一大堆，會帶</li></ul>
 </ul>
 <ul class="comment"><li>以防雨太大滴到設備← gavin</li></ul>
+<ul class="taskdone"><li>現場平面圖，方便在上面作記號，確認哪每區接受哪個 ap 訊號</li></ul>
+
 <ul class="task"><li>地毯 - 把地上網路線壓平</li>
+<li>小型紙箱 - 吊掛網路設備</li>
 <li>墊高電源接頭 - 空心磚類物品</li>
-<li>小型 ups 避免瞬斷</li></ul>
+<li>小型 ups 避免瞬斷</li>
+<li>GoPro - 縮時攝影</li>
+<li>帆布或外帳 - 擋雨用</li></ul>
 
 <h2>已募集設備</h2><p></p><p><b>電源</b></p><ul class="taskdone"><li>8 孔電力延長線&nbsp; x4<ul class="taskdone"><li>au x 3</li>
 <li>BP&amp;venev x 2</li></ul>
 </ul>
 
-<p><b>設備</b></p><p>路由</p><ul class="taskdone"><li>24 埠交換器/路由器 x1<ul class="taskdone"><li>昇鴻 / 交換器</li></ul class="taskdone">
-</li>
-<li>8 埠交換器/路由器 x4 [桌面可用 6 埠, 有 2 埠是串接前後單位用]<ul class="taskdone"><li>昇鴻（沒有 4 個 8 埠，但是會用 24 埠補足，也就是共五台 8/24 port switch交換器）</li></ul>
+<p><b>設備</b></p><p></p><undefined><li><b>路由</b></li></undefined>
+<ul class="taskdone"><li>24 埠交換器 x4<ul class="taskdone"><li>昇鴻（共五台 8/24 port switch交換器）</li></ul>
 </ul>
-<p>無線基地台</p><p>（無線網路不重疊只能設 4 個頻道 (1, 6, 11, 14)，第 5 台以上的機器拿來做備援 /au）</p><ul class="taskdone"><li>802.11n Airport Express x1<ul class="taskdone"><li>hcchien x1</li></ul class="taskdone">
+
+<undefined><li><b>無線基地台</b></li></undefined>
+<ul class="comment"><li>2.4Ghz 無線網路不重疊只能設 4 個頻道 (1, 6, 11, 14)，第 5 台以上的機器拿來做備援 /au</li></ul>
+
+<ul class="taskdone"><li>802.11n Airport Express x1<ul class="taskdone"><li>hcchien x1</li></ul class="taskdone">
 </li>
 <li>802.11n Airport Extreme x1 (這一台 <a href="http://goo.gl/GY8TlU)"></a>http://goo.gl/GY8TlU) <a href='http:// http://goo.gl/Evfmig'/>手冊1 </a>、<a href='https://drive.google.com/file/d/0B-wTztKH2tKiUFlSVVFlVXFHNkk/edit?usp=sharing'/>手冊2</a><ul class="taskdone"><li>jimyhuang x1</li></ul class="taskdone">
 </li>
-<li>rt-16n x1、rt-10u x1、802.11ac x1、行動小ap<ul class="taskdone"><li>gavin x1 + x1 + x1 + x1</li></ul class="taskdone">
+<li>rt-16n x1、802.11ac x1、行動小ap<ul class="taskdone"><li>gavin x1 + x1 + x1 + x1</li></ul class="taskdone">
+</li>
+<li>D-Link AC750 x1<ul class="taskdone"><li>jjjeng x1</li></ul class="taskdone">
 </li>
 <li>2.4G/5G平板. 監控wifi 訊號<ul class="taskdone"><li><i>gavin x1&nbsp;</i></li></ul>
 </ul>
@@ -95,7 +105,9 @@
 <p><b>其他</b></p><ul class="taskdone"><li>足夠 20 人坐的桌椅 (視現場情況排列)<ul class="taskdone"><li>大會跟帳篷一起租</li></ul>
 </ul>
 
-<h2>直播區</h2><ul class="comment"><li>剛剛追 Logbot 看到在講直播</li>
+<h2>直播區</h2><p><b>實際設定</b></p><p>SD IN (導播提供)&nbsp;</p><p>&nbsp; |-- Blackmagic HD 1080i 59.94fps 8bit (bp)</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =|= Thunderbolt (bp)</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |--- Macbook Pro (au) -- Google Hangout (g0v.tw) --&gt; YouTube (g0v.tw)</p><p></p><p><b>直播網址</b></p><p><a href="http://youtu.be/RXRTc67THTI"></a><a href='http://youtu.be/RXRTc67THTI'/>http://youtu.be/RXRTc67THTI</a></p><p>短網址: <a href="http://tinyurl.com/20140308"></a><b>http://tinyurl.com/20140308</b></p><p></p><p>*</p><p></p><ul class="comment"><li><br/></li>
+<li><br/></li>
+<li>剛剛追 Logbot 看到在講直播</li>
 <li>100+ 訂閱的 YouTube Channel（bookshow 有兩百多，可提供）</li>
 <li>1080p recorder 有 BMD mini recorder（HDMI / SDI →Thunderbolt）</li>
 <li>和 AverMedia C875（HDMI → HDMI + SD card / USB2.0）</li>
@@ -110,8 +122,8 @@
 <li>結論：會場本已安排三機導播＆音控台，直接拉導播機＆音控台的訊號來作直播就好，所以不用另外準備攝影器材。（本來還以為要帶三米燈架＆電動雲台去架攝影機 XD）媒體區離舞台約 30m，舞台高 120cm 供參考。</li>
 <li>（等活動結束把這部分的資訊一併整理上來）</li></ul>
 
-<h2>實際網路配置</h2><p>Hinet VTU-R 100M/100M 光纖</p><p>|-- Sapido BR261c: <b>DHCP, ac+n</b> <b>5Ghz+2.4Ghz</b> SSID <b>g0v.tw-0-AC</b> (Channel: <b>60</b>), <b>g0v.tw-0-N</b> (Channel: <b>14</b>)</p><p>&nbsp;&nbsp;&nbsp;&nbsp; | -- 24-port Switches (接好線放在遠的媒體區桌上)</p><p>&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; | -- 24-port Switches (接好線放在近的媒體區桌上)</p><p>&nbsp;&nbsp;&nbsp;&nbsp; |-- Vigor 2130: <b>DHCP</b> 192.168.2.x, Wireless AP IP Range: 192.168.2.21-30, <b>Rate Limit</b> 10Mbps each</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- LAN1: Control Port</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- LAN2: 24-port Switch (Wifi 用，有限速)</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- Apple AirportExpress: <b>DHCP</b>, <b>a+n</b> <b>5Ghz</b> Channel: <b>56</b> SSID: <b>g0v.tw-1-AN</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; |-- Cisco WAP200: <b>Bridge</b>, <b>g+b</b> <b>2.4Ghz</b> Channel: <b>6</b> SSID: <b>g0v.tw-4-GB (天線向舞台區)</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- Asus RT-N16: <b>DHCP</b>, <b>n-only</b> <b>2.4Ghz</b> Channel: <b>1</b> SSID: <b>g0v.tw-2-N</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- Asus RT-N10U: <b>DHCP</b>, <b>g-only</b> <b>2.4Ghz</b> Channel: <b>11</b> SSID: <b>g0v.tw-3-G</b></p><p></p><p>如果有更多台 5Ghz 可設為 <b>g0v.tw-00-N, g0v.tw-00-AC</b>, 然後 <b>-000-, -0000-</b> 繼續下去，頻道依序上昇。</p><p></p><p></p><p></p><p><b>容錯移轉</b></p><ul><li>如果 Hinet VTU-R 掛了，由 au 帶的 WiMax 遞補，關閉所有無線設備，只留有線連線。</li>
-<li>如果 Sapido BR261c 掛了，用同型機遞補，如無則轉用 WiMax 遞補。</li><ul class="comment"><li>sapido 會自爆 factory reset, 所以要先 export setting 以便到時 reimport</li></ul>
+<p></p><h2>實際網路配置</h2><p>Hinet VTU-R 100M/100M 光纖</p><p>|-- Sapido BR261c: <b>DHCP, ac+n</b> SSID <b>g0v.tw-0-AC</b> (Channel: <b>60</b>), <b>g0v.tw-0-N</b> (Channel: <b>14</b>) <b>(gavin)</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp; | -- 24-port Switches (接好線放在遠的媒體區桌上)</p><p>&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; | -- 24-port Switches (接好線放在近的媒體區桌上)</p><p>&nbsp;&nbsp;&nbsp;&nbsp; |-- Vigor 2130: <b>DHCP</b> 192.168.2.x, Wireless AP IP Range: 192.168.2.21-30, <b>Rate Limit</b> 10Mbps each <b>(au)</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- LAN1: 24-port Switch (Wifi 用，有限速)</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- Apple AirportExpress: <b>DHCP</b>, <b>a+n</b> <b>5Ghz</b> Channel: <b>56</b> SSID: <b>g0v.tw-1-AN (hcchien, 無天線)</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; |-- Cisco WAP200: <b>Bridge</b>, <b>g+b</b> <b>2.4Ghz</b> Channel: <b>6</b> SSID: <b>g0v.tw-4-GB (jimmy, 天線向舞台區)</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- Asus RT-N16: <b>DHCP</b>, <b>n-only</b> <b>2.4Ghz</b> Channel: <b>1</b> SSID: <b>g0v.tw-2-N (gavin, 天線向上)</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- D-Link AC750: <b>DHCP</b>, <b>g-only</b> <b>2.4Ghz</b> Channel: <b>11</b> SSID: <b>g0v.tw-3-G (jjjeng, 無天線)</b></p><p></p><p>如果有更多台 5Ghz 可設為 <b>g0v.tw-00-N, g0v.tw-00-AC</b>, 然後 <b>-000-, -0000-</b> 繼續下去，頻道依序上昇。</p><p></p><p></p><p><b>容錯移轉</b></p><ul><li>如果 Hinet VTU-R 掛了，由 au 帶的 WiMax 遞補，關閉所有無線設備，只留有線連線。</li>
+<li>如果 Sapido BR261c 掛了，用同型機遞補，如無則轉用 Vigor 2130 遞補。</li><ul class="comment"><li>sapido 在跳電時會自爆 factory reset, 所以要先 export setting 以便到時 reimport</li></ul>
 </ul>
 <ul><li>如果 Vigor 2130 掛了，由 Sapido BR261c (<b>g0v.tw-0</b>) 優先，依 SSID 編號順位遞補。</li>
 <li>如果 AirportExpress 掛了，不予遞補，Cisco WAP200 (<b>g0v.tw-4-GB</b>) 改接 Asus RT-N16 (<b>g0v.tw-2-N</b>)。</li>
@@ -120,7 +132,7 @@
 <li>如果發電機掛了，不予遞補 XD</li></ul>
 <ul class="comment"><li>是否有自動快速 round-robin 監測各個 ap 的方案？</li></ul>
 
-<p><b>USB Ethernet 驅動程式</b></p><p>目前已知的情報：Mac 儘量用白色的 USB 網卡，黑色的需要驅動程式。</p><p>所有下列驅動程式 au 帶在一張 USB Disk 和另一張 SD + Card Reader 裡 (共 104MB)，歡迎小天使複製。</p><ul class="comment"><li>roger，那我也帶一個 usb 跟一個多合一讀卡機</li></ul>
+<p><b>USB Ethernet 驅動程式</b></p><p>目前已知的情報：Mac 儘量用白色的 USB 網卡，黑色的需要驅動程式。</p><p>Windows 絕大部份都有網路孔，如果沒有，以黑色的轉接器優先。</p><p>所有下列驅動程式 au 帶在一張 USB Disk 和另一張 SD + Card Reader 裡 (共 104MB)，歡迎小天使複製。</p><ul class="comment"><li>roger，那我也帶一個 usb 跟一個多合一讀卡機</li></ul>
 
 <table style="font-size:13px;cell-spacing: 0px; border-collapse: collapse;"><tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#38991;&#33394;/&#22411;&#34399;</td>
 <td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#27161;&#35468;</td>
@@ -164,20 +176,19 @@
 <li>(此處假設 PA/場光/導播 全部使用有線網路)</li>
 <li>機王豆知識：是低價貨... 原因&gt;&gt;&gt; 5470～5725MHz這個頻段與軍方和氣象用都普勒雷達頻率相衝突，在軍方優先民間次之的邏輯下，若是要使用這些頻率，就必須搭載DFS和 TPC（EIRP值大於500mW之設備）功能，當裝置感測到目前頻率有其它人在使用時，必須能夠跳開改採其它頻率；而5250～5350MHz只能在室 內使用。（台灣相關規範可上NCC搜尋「低功率射頻電機技術規範」）可參考 <a href="http://www.techbang.com/posts/13944-wi-fi-5ghz-do-you-support"></a>http://www.techbang.com/posts/13944-wi-fi-5ghz-do-you-support 就是 b1 b3 都ok b2段 沒申請或是認証被鎖其來的意思.← gavin</li>
 <li>↑ETB:雖然一點都不想瞭解但還是被迫去瞭解了一下 orz</li>
-<li>++ 有一台可以支援 802.11ac，這樣已經很好了 XD</li></ul>
+<li>++ 有一台可以支援 802.11ac，這樣已經很好了 XD</li>
+<li>剛剛有提到 Mesh Network ，如果有相關的軟體可以做到，也許可以先宣傳一下，未來有類似需求的時候就不會受限於時間</li></ul>
 
 <p>2.5Ghz 已經滿了，不需要再多台。但如果想作為備援則設為 <b>g0v.tw-22-N</b>, <b>g0v.tw-33-G</b>, <b>g0v.tw-44-B</b>...</p><p>頻道及協定同上面的 -2-N, -3-G 和 -4-B。(如果竟然有多 6 台則 <b>g0v.tw-222-N</b>, <b>-333-G</b>...)。以上。</p><ul class="comment"><li>SSID 這樣設計的目的，是讓 WiFi 列表裡「連線速率高」的一律排列在「連線速率低」的之上。</li></ul>
 
-<p>WPA2-PSK Password: (當天發，需要事先設定密碼的話請洽 au)</p><ul class="comment"><li>[拜託密碼到當天現場再說, 有一次在人文館, 應該是 COSCUP 還是幹嘛, 結果工人用無線網路密碼上了 flickr 照片集, 無線網路密碼請不要放在公開文件裡, 除非, 活動結束了...]</li>
+<p>WPA2-PSK Password: 請見桌上和 Switch 上貼的說明紙。</p><ul class="comment"><li>[拜託密碼到當天現場再說, 有一次在人文館, 應該是 COSCUP 還是幹嘛, 結果工人用無線網路密碼上了 flickr 照片集, 無線網路密碼請不要放在公開文件裡, 除非, 活動結束了...]</li>
 <li>收到。流量管制已確定有作用，設 WPA2-PSK 的目的只是讓無關的設備不會自動連上，並非用來管制連線數。</li></ul>
 
-<p>問題：密碼的部分要如何發給記者、現場媒體組工作人員？怎麼限制同時的數量？</p><ul class="comment"><li>密碼取好記的，各 SSID 都相同，可以寫在黑板上，但「不保證能連線」。要發稿的記者請使用我們牽好線到媒體區放在桌上的 USB/Ethernet 接頭。</li>
-<li>WiFi 同時連線數量最高可達 -800 台，但是會設定成優先提供頻寬給有線用戶，剩餘頻寬再分給無線。</li>
+<p>問題：密碼的部分要如何發給記者、現場媒體組工作人員？怎麼限制同時的數量？</p><ul class="taskdone"><li>回答：密碼取好記的，各 SSID 都相同，可以寫在黑板上，但「不保證能連線」。要發稿的記者請使用我們牽好線到媒體區放在桌上的 USB/Ethernet 接頭。</li></ul>
+<ul class="comment"><li>WiFi 同時連線數量最高可達 -800 台，但是會設定成優先提供頻寬給有線用戶，剩餘頻寬再分給無線。</li>
 <li>設備連無線網路時，依可見 SSID 數字小的開始試，如果連不上則遞增，到連上為止。</li></ul>
 
-<p>問題：舞台、後台、ＰＡ、一路到媒體區，是否能收到 WIFI？因為這一路的工作人員有一個手機 LINE 群組，想了解遠近，若不能就要請他們準備其他的及時溝通方式！</p><ul class="comment"><li>好的，架設時實際測試，將某一台的天線 (Cisco WAP200?) 往該方向指，其他再指向媒體區。</li>
-<li>如果 Cisco WAP200 不夠力，則改由 RT-N16 設成 n+g mode，應該可以達成新的 spec。</li>
-<li>(當然有備援的溝通方式 (eg 無線電?) 是最好了。)</li></ul>
+<p>問題：舞台、後台、ＰＡ、一路到媒體區，是否能收到 WIFI？因為這一路的工作人員有一個手機 LINE 群組，想了解遠近，若不能就要請他們準備其他的及時溝通方式！</p><ul class="taskdone"><li>回答: Cisco WAP200 (g0v.tw-4-GB) 往舞台區，一直到舞台區背後都可以收到。</li></ul>
 
 <h2>設定建議</h2><p>(感謝 davihuan!)</p><ul><li><a href='https://docs.google.com/spreadsheet/ccc?key=0AoIodB2-MtrOdDlhdTkzNHVoS1dEZHlSdFVqdjQxbmc&amp;usp=sharing'/>實用的有線網路配置方式</a></li>
 <li>中華電信 VTUR&lt;&gt;無線AP&lt;&gt;SWITCH</li>
@@ -191,5 +202,5 @@
 <li>這樣的話其實也是串 9 台而已, 一個單位放在桌面上的電腦只需要 1M 的網路線六條</li>
 <li>同時兩個單位之間只需要一條 5/10M 的網路線串接, 放到地上的線記得用強力膠帶黏在地板上</li></ul>
 
-<p></p><h2>附錄</h2><p><b>會場平面圖</b></p><p></p></body>
+<p></p><h2>附錄</h2><p><b>會場平面圖</b></p><p><a href="http://www.audreyt.org/tmp/20140308.pdf"></a>http://w<a href='http://w'/>w</a><a href='http://ww'/>w</a><a href='http://www'/>.a</a><a href='http://www.a'/>u</a><a href='http://www.au'/>d</a><a href='http://www.aud'/>r</a><a href='http://www.audr'/>e</a><a href='http://www.audre'/>y</a><a href='http://www.audrey'/>t</a><a href='http://www.audreyt'/>.o</a><a href='http://www.audreyt.o'/>r</a><a href='http://www.audreyt.or'/>g</a><a href='http://www.audreyt.org'/>/</a><a href='http://www.audreyt.org/'/>t</a><a href='http://www.audreyt.org/t'/>m</a><a href='http://www.audreyt.org/tm'/>p</a><a href='http://www.audreyt.org/tmp'/>/</a><a href='http://www.audreyt.org/tmp/'/>2</a><a href='http://www.audreyt.org/tmp/2'/>0</a><a href='http://www.audreyt.org/tmp/20'/>1</a><a href='http://www.audreyt.org/tmp/201'/>4</a><a href='http://www.audreyt.org/tmp/2014'/>0</a><a href='http://www.audreyt.org/tmp/20140'/>3</a><a href='http://www.audreyt.org/tmp/201403'/>0</a><a href='http://www.audreyt.org/tmp/2014030'/>8</a><a href='http://www.audreyt.org/tmp/20140308'/>.p</a><a href='http://www.audreyt.org/tmp/20140308.p'/>d</a><a href='http://www.audreyt.org/tmp/20140308.pd'/>f</a></p><p></p></body>
 </html>
