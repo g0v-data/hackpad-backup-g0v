@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="7605"/>
+<meta name="version" content="7633"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$jG9uno4d9H8</title>
 </head>
 <body><h1>3/8 線路松：戶外大型活動媒體區硬體設置</h1><ul class="comment"><li>本來是事件松，但 hackpad 超展開好多&nbsp; know-how / 規格可供之後<s>遊行抗議</s>歡樂戶外活動參考，所以添個副標好搜尋、加入學習清單。之後可考慮拆 pad.</li>
@@ -135,7 +135,7 @@
 </ul>
 
 <p><b>設備</b></p><p></p><undefined><li><b>路由</b></li></undefined>
-<ul class="taskdone"><li>24 埠交換器 x4<ul class="taskdone"><li>昇鴻（共五台 8/24 port switch交換器）</li></ul>
+<ul class="taskdone"><li>24 埠交換器 x4<ul class="taskdone"><li>昇鴻（共四台 24 port switch交換器）</li></ul>
 </ul>
 
 <undefined><li><b>無線基地台</b></li></undefined>
@@ -147,13 +147,14 @@
 </li>
 <li>rt-16n x1、802.11ac x1、行動小ap<ul class="taskdone"><li>gavin x1 + x1 + x1 + x1</li></ul class="taskdone">
 </li>
-<li>D-Link AC750 x1<ul class="taskdone"><li>jjjeng x1</li></ul class="taskdone">
+<li>D-Link AC750 x1<ul class="taskdone"><li>jjjenq x1</li></ul class="taskdone">
 </li>
 <li>2.4G/5G平板. 監控wifi 訊號<ul class="taskdone"><li><i>gavin x1&nbsp;</i></li></ul>
 </ul>
 
 <p><b>線材</b></p><ul class="taskdone"><li>1M-4M 網路線 x20<ul class="taskdone"><li><i>昇鴻</i></li>
-<li>JoeWang x2</li></ul class="taskdone">
+<li>JoeWang x2</li>
+<li>au x 20</li></ul class="taskdone">
 </li>
 <li>5M-10M 網路線 x4<ul class="taskdone"><li><i>昇鴻</i></li>
 <li>JoeWang x2</li>
@@ -185,7 +186,7 @@
 <li>g0v&nbsp; YouTube 頻道訂閱數，在 <a href='https://www.facebook.com/g0v.tw/photos/682848558423100'/>Kirby x CCSP 的魅力</a>下，短短兩天從 56 -&gt; 160，直播資格 get!</li>
 <li>今天直播結束後，訂閱數為 221</li></ul>
 
-<p></p><h2>實際網路配置</h2><p>Hinet VTU-R 100M/100M 光纖</p><p>|-- Sapido BR261c: <b>DHCP, ac+n</b> SSID <b>g0v.tw-0-AC</b> (Channel: <b>60</b>), <b>g0v.tw-0-N</b> (Channel: <b>14</b>) <b>(gavin)</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp; | -- 24-port Switches (接好線放在遠的媒體區桌上)</p><p>&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; | -- 24-port Switches (接好線放在近的媒體區桌上)</p><p>&nbsp;&nbsp;&nbsp;&nbsp; |-- Vigor 2130: <b>DHCP</b> 192.168.2.x, Wireless AP IP Range: 192.168.2.21-30, <b>Rate Limit</b> 10Mbps each <b>(au)</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- LAN1: 24-port Switch (Wifi 用，有限速)</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- Apple AirportExpress: <b>DHCP</b>, <b>a+n</b> <b>5Ghz</b> Channel: <b>56</b> SSID: <b>g0v.tw-1-AN (hcchien, 無天線)</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; |-- Cisco WAP200: <b>Bridge</b>, <b>g+b</b> <b>2.4Ghz</b> Channel: <b>6</b> SSID: <b>g0v.tw-4-GB (jimmy, 天線向舞台區)</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- Asus RT-N16: <b>DHCP</b>, <b>n-only</b> <b>2.4Ghz</b> Channel: <b>1</b> SSID: <b>g0v.tw-2-N (gavin, 天線向上)</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- D-Link AC750: <b>DHCP</b>, <b>g-only</b> <b>2.4Ghz</b> Channel: <b>11</b> SSID: <b>g0v.tw-3-G (jjjeng, 無天線)</b></p><p></p><p>如果有更多台 5Ghz 可設為 <b>g0v.tw-00-N, g0v.tw-00-AC</b>, 然後 <b>-000-, -0000-</b> 繼續下去，頻道依序上昇。</p><p></p><p></p><p><b>容錯移轉</b></p><ul><li>如果 Hinet VTU-R 掛了，由 au 帶的 WiMax 遞補，關閉所有無線設備，只留有線連線。</li>
+<p></p><h2>實際網路配置</h2><p>Hinet VTU-R 100M/100M 光纖</p><p>|-- Sapido BR261c: <b>DHCP, ac+n</b> SSID <b>g0v.tw-0-AC</b> (Channel: <b>60</b>), <b>g0v.tw-0-N</b> (Channel: <b>14</b>) <b>(gavin)</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp; | -- 24-port Switches (接好線放在遠的媒體區桌上)</p><p>&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; | -- 24-port Switches (接好線放在近的媒體區桌上)</p><p>&nbsp;&nbsp;&nbsp;&nbsp; |-- Vigor 2130: <b>DHCP</b> 192.168.2.x, Wireless AP IP Range: 192.168.2.21-30, <b>Rate Limit</b> 10Mbps each <b>(au)</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- LAN1: 24-port Switch (Wifi 用，有限速)</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- Apple AirportExpress: <b>DHCP</b>, <b>a+n</b> <b>5Ghz</b> Channel: <b>56</b> SSID: <b>g0v.tw-1-AN (hcchien, 無天線)</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; |-- Cisco WAP200: <b>Bridge</b>, <b>g+b</b> <b>2.4Ghz</b> Channel: <b>6</b> SSID: <b>g0v.tw-4-GB (jimmy, 天線向舞台區)</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- Asus RT-N16: <b>DHCP</b>, <b>n-only</b> <b>2.4Ghz</b> Channel: <b>1</b> SSID: <b>g0v.tw-2-N (gavin, 天線向上)</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- D-Link AC750: <b>DHCP</b>, <b>g-only</b> <b>2.4Ghz</b> Channel: <b>11</b> SSID: <b>g0v.tw-3-G (jjjenq, 無天線)</b></p><p></p><p>如果有更多台 5Ghz 可設為 <b>g0v.tw-00-N, g0v.tw-00-AC</b>, 然後 <b>-000-, -0000-</b> 繼續下去，頻道依序上昇。</p><p></p><p></p><p><b>容錯移轉</b></p><ul><li>如果 Hinet VTU-R 掛了，由 au 帶的 WiMax 遞補，關閉所有無線設備，只留有線連線。</li>
 <li>如果 Sapido BR261c 掛了，用同型機遞補，如無則轉用 Vigor 2130 遞補。</li><ul class="comment"><li>sapido 在跳電時會自爆 factory reset, 所以要先 export setting 以便到時 reimport</li></ul>
 </ul>
 <ul><li>如果 Vigor 2130 掛了，由 Sapido BR261c (<b>g0v.tw-0</b>) 優先，依 SSID 編號順位遞補。</li>
@@ -197,7 +198,7 @@
 <li>後來 gavin 用 Fing (Android, 也有 iOS 版)監測。</li>
 <li><br/></li></ul>
 <p><b>USB Ethernet 驅動程式</b></p><p>目前已知的情報：Mac 儘量用白色的 USB 網卡，黑色的需要驅動程式。</p><p>Windows 絕大部份都有網路孔，如果沒有，以黑色的轉接器優先。</p><p>所有下列驅動程式 au 帶在一張 USB Disk 和另一張 SD + Card Reader 裡 (共 104MB)，歡迎小天使複製。</p><ul class="comment"><li>roger，那我也帶一個 usb 跟一個多合一讀卡機</li></ul>
-<p>實際情況：</p><ul><li>結果 usb-ethernet 使用率沒有想像中高， windows 筆電只有一台沒有網路孔←gavin</li></ul>
+<p>實際情況：</p><ul><li>結果 USB-Ethernet 使用率沒有想像中高， Windows 筆電只有一台沒有網路孔←gavin</li></ul>
 
 <p>Conrad Yang 提供：Wifi Analyzer (Android app) 可偵測現場 wifi AP 狀況</p><p><a href="https://www.facebook.com/groups/g0v.general/permalink/590415774368166"></a>https://www.facebook.com/groups/g0v.general/permalink/590415774368166</p><ul class="comment"><li>已裝，感謝！目前看來訊號都在綠色可接受範圍。</li></ul>
 
@@ -223,7 +224,7 @@
 <ul class="comment"><li>WiFi 同時連線數量最高可達 -800 台，但是會設定成優先提供頻寬給有線用戶，剩餘頻寬再分給無線。</li>
 <li>設備連無線網路時，依可見 SSID 數字小的開始試，如果連不上則遞增，到連上為止。</li></ul>
 
-<p>問題：舞台、後台、ＰＡ、一路到媒體區，是否能收到 WIFI？因為這一路的工作人員有一個手機 LINE 群組，想了解遠近，若不能就要請他們準備其他的及時溝通方式！</p><ul class="taskdone"><li>回答: Cisco WAP200 (g0v.tw-4-GB) 往舞台區，一直到舞台區背後都可以收到。</li></ul>
+<p>問題：舞台、後台、ＰＡ、一路到媒體區，是否能收到 WIFI？因為這一路的工作人員有一個手機 LINE 群組，想了解遠近，若不能就要請他們準備其他的及時溝通方式！</p><ul class="taskdone"><li>回答: Cisco WAP200 (g0v.tw-4-GB) 天線指向舞台區，經實測結果一直到舞台區背後都可以收到。</li></ul>
 
 <h2>設定建議</h2><p>(感謝 davihuan!)</p><ul><li><a href='https://docs.google.com/spreadsheet/ccc?key=0AoIodB2-MtrOdDlhdTkzNHVoS1dEZHlSdFVqdjQxbmc&amp;usp=sharing'/>實用的有線網路配置方式</a></li>
 <li>中華電信 VTUR&lt;&gt;無線AP&lt;&gt;SWITCH</li>
