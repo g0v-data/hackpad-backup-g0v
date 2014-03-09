@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="9069"/>
+<meta name="version" content="9992"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$jG9uno4d9H8</title>
 </head>
 <body><h1>3/8 線路松：戶外大型活動媒體區硬體設置</h1><ul class="comment"><li>本來是事件松，但 hackpad 超展開好多&nbsp; know-how / 規格可供之後<s>遊行抗議</s>歡樂戶外活動參考，所以添個副標好搜尋、加入學習清單。之後可考慮拆 pad.</li>
@@ -191,7 +191,36 @@
 <li>（hackpad 多人中文輸入同步問題，誤刪樓下 au 留言，撈 history 手動補回來 orz）</li>
 <li>au: 今天直播結束後，訂閱數為 221</li></ul>
 
-<p><b>直播檢討</b></p><p></p><p>監看狀況：</p><p></p><p></p><p></p><h2>實際網路配置</h2><p>Hinet VTU-R 100M/100M 光纖</p><p>|-- Sapido BR261c: <b>DHCP, ac+n</b> SSID <b>g0v.tw-0-AC</b> (Channel: <b>60</b>), <b>g0v.tw-0-N</b> (Channel: <b>14</b>) <b>(gavin)</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp; | -- 24-port Switches (接好線放在遠的媒體區桌上)</p><p>&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; | -- 24-port Switches (接好線放在近的媒體區桌上)</p><p>&nbsp;&nbsp;&nbsp;&nbsp; |-- Vigor 2130: <b>DHCP</b> 192.168.2.x, Wireless AP IP Range: 192.168.2.21-30, <b>Rate Limit</b> 10Mbps each <b>(au)</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- LAN1: 24-port Switch (Wifi 用，有限速)</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- Apple AirportExpress: <b>DHCP</b>, <b>a+n</b> <b>5Ghz</b> Channel: <b>56</b> SSID: <b>g0v.tw-1-AN (hcchien, 無天線)</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; |-- Cisco WAP200: <b>Bridge</b>, <b>g+b</b> <b>2.4Ghz</b> Channel: <b>6</b> SSID: <b>g0v.tw-4-GB (jimmy, 天線向舞台區)</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- Asus RT-N16: <b>DHCP</b>, <b>n-only</b> <b>2.4Ghz</b> Channel: <b>1</b> SSID: <b>g0v.tw-2-N (gavin, 天線向上)</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- D-Link AC750: <b>DHCP</b>, <b>g-only</b> <b>2.4Ghz</b> Channel: <b>11</b> SSID: <b>g0v.tw-3-G (jjjenq, 無天線)</b></p><p></p><p>如果有更多台 5Ghz 可設為 <b>g0v.tw-00-N, g0v.tw-00-AC</b>, 然後 <b>-000-, -0000-</b> 繼續下去，頻道依序上昇。</p><p></p><p></p><p><b>容錯移轉</b></p><ul><li>如果 Hinet VTU-R 掛了，由 au 帶的 WiMax 遞補，關閉所有無線設備，只留有線連線。</li>
+<p><b>直播檢討</b></p><p></p><p>監看狀況：當天我（BP）的筆電 thunderbolt 埠出問題，臨時改用 au 的筆電直播；所以我只監看到「現場純影像、直播後觀眾收看的影音」。</p><p></p><p>影音品質問題：</p><ul><li>分析：現場監看的畫面只有 1080i 而非 p，但已經比即時直播、事後收看都好上不少，瓶頸應是直播編碼的限制；據 au 說現場監聽的聲音比播出去的好，我事後收看跟即時直播差不多，所以推測也是直播編碼的問題。結論是，這次用 YouTube Live 頻道，搭配預設的 Hangouts 編碼方式，影音品質效果不好。</li>
+<li>可能改進法：先換掉本機編碼方式試試看，再不行就要換掉直播頻道。</li></ul>
+
+<p>影音同步問題：</p><ul><li>參照：我沒有監聽到現場聲音、不知道現場影音是否同步，如果 au 有注意到請提供意見。</li></ul>
+<ul class="comment"><li>我也沒有監聽到收音，只知道畫面和實況聲音的延遲約 2-3 秒。</li>
+<li>噢，那就沒辦法進一步縮小原因了。先解決編碼問題刪去一個再說。</li></ul>
+<ul><li>分析：可能的原因包含(a)直播編碼 (b)導播台在攝影機外獨立收音，但沒作現場同步（畢竟原本沒有直播規劃，給喇叭的訊號不能 delay 等攝影機），或送成同步前的訊號給我 -u- (c)兩者皆有。</li>
+<li>可能改進法：除了換直播編碼＆頻道之外，現場同步問題需要導播台器材配合，或者自備 video/audio latency 相關硬體，或者直播筆電上嘗試軟體 hack i/o 解決。<ul><li>要 delay audio，用 Audio Hijack 的 AudioUnit &gt; Apple &gt; AUDelay effect 即可達成。</li>
+<li>要 delay video 的方式還需要測試。</li></ul>
+<ul class="comment"><li>我剛下載影片回來分析，發現好像是聲音慢了 XDD 如果不是編碼問題，就是混音台接太多造成 latency 的設備，所以可能需要 hack video i/o XD 有這種軟體嗎？</li>
+<li>BlackMagic Settings 底下的Set&nbsp; reference output timing?</li>
+<li>我也猜這個有機會，但我忘記插上後那裡有沒有 greyed out，如果設備支援沒 greyed out 就可以試。不過現在 thunderbolt 埠還沒修...orz</li></ul>
+</ul>
+
+<p>現場收音問題：</p><ul><li>分析：沒收到現場觀眾回應的環境音，氣氛感受差很多。但這次導播台送來的是「要讓喇叭播出的訊號」，不應加上環境音，否則會造成回授嘯叫等許多問題。</li>
+<li>可能改進法：需要架「現場環境音麥克風」，在給喇叭播送用之外作獨立混音<ul><li>理想是由導播台規劃足夠的混音迴路，否則只能由直播組自己另帶器材架設解決。</li></ul>
+</ul>
+<ul class="comment"><li>我自己是覺得沒有環境音比較乾淨 (尤其在攝影機指向台上表演時)。自動辨識導播正在啟用哪台攝影機 (或是手動依表演性質切換)，來決定是否混入環境音，似乎是有趣的科展題目。XD</li>
+<li>我也覺得沒有環境音比較乾淨，如果要混的話，簡單的是把環境麥放到人群中，設定很高的 Noise Gate，再把環境音降低音量混進去（麥在人群中發現人群很大聲的時候才啟動，降低音量到略低於舞台麥電平），複雜的話就不用 Noise Gate 改手動切。</li></ul>
+
+<p>總結：</p><ul><li>關鍵問題：幾乎沒看到觀眾反應對「畫質、音質」不滿意，幾乎都是討論「影音同步、現場收音」。</li></ul>
+<ul class="comment"><li><a href="https://www.facebook.com/zonble/posts/10152336066098185?stream_ref=10"></a>https://www.facebook.com/zonble/posts/10152336066098185?stream_ref=10</li></ul>
+<ul><li>理想解法：這兩個問題都需要導播台「配合直播去設定器材」，所以「器材資源、設定溝通」是可能的難點。</li>
+<li>終極解法：直播組「自備器材」解決... 但好像有點搞太大＆重覆工作。<ul><li>影音同步可以試出軟體解法。</li>
+<li>現場收音可能還是要和導播前期合作/反映？</li></ul>
+<ul class="comment"><li>直播組「自己架麥克風＆筆電同步混音」可以試作出基本效果，當然導播前期規劃是最理想。</li></ul>
+</ul>
+<ul><li>事後解法：如果在直播筆電上也錄一份高品質影音檔，另外錄製現場環境音，事後影音同步再重新上傳，這樣可以解決「事後收看」的所有問題，但對即時直播沒有幫助；而事後與即時收看網址不同，宣傳上較不方便。</li></ul>
+
+<p></p><p></p><p></p><h2>實際網路配置</h2><p>Hinet VTU-R 100M/100M 光纖</p><p>|-- Sapido BR261c: <b>DHCP, ac+n</b> SSID <b>g0v.tw-0-AC</b> (Channel: <b>60</b>), <b>g0v.tw-0-N</b> (Channel: <b>14</b>) <b>(gavin)</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp; | -- 24-port Switches (接好線放在遠的媒體區桌上)</p><p>&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; | -- 24-port Switches (接好線放在近的媒體區桌上)</p><p>&nbsp;&nbsp;&nbsp;&nbsp; |-- Vigor 2130: <b>DHCP</b> 192.168.2.x, Wireless AP IP Range: 192.168.2.21-30, <b>Rate Limit</b> 10Mbps each <b>(au)</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- LAN1: 24-port Switch (Wifi 用，有限速)</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- Apple AirportExpress: <b>DHCP</b>, <b>a+n</b> <b>5Ghz</b> Channel: <b>56</b> SSID: <b>g0v.tw-1-AN (hcchien, 無天線)</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; |-- Cisco WAP200: <b>Bridge</b>, <b>g+b</b> <b>2.4Ghz</b> Channel: <b>6</b> SSID: <b>g0v.tw-4-GB (jimmy, 天線向舞台區)</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- Asus RT-N16: <b>DHCP</b>, <b>n-only</b> <b>2.4Ghz</b> Channel: <b>1</b> SSID: <b>g0v.tw-2-N (gavin, 天線向上)</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- D-Link AC750: <b>DHCP</b>, <b>g-only</b> <b>2.4Ghz</b> Channel: <b>11</b> SSID: <b>g0v.tw-3-G (jjjenq, 無天線)</b></p><p></p><p>如果有更多台 5Ghz 可設為 <b>g0v.tw-00-N, g0v.tw-00-AC</b>, 然後 <b>-000-, -0000-</b> 繼續下去，頻道依序上昇。</p><p></p><p></p><p><b>容錯移轉</b></p><ul><li>如果 Hinet VTU-R 掛了，由 au 帶的 WiMax 遞補，關閉所有無線設備，只留有線連線。</li>
 <li>如果 Sapido BR261c 掛了，用同型機遞補，如無則轉用 Vigor 2130 遞補。</li><ul class="comment"><li>sapido 在跳電時會自爆 factory reset, 所以要先 export setting 以便到時 reimport</li></ul>
 </ul>
 <ul><li>如果 Vigor 2130 掛了，由 Sapido BR261c (<b>g0v.tw-0</b>) 優先，依 SSID 編號順位遞補。</li>
