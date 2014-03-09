@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="1267"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$IBmzHC20wBb</title>
+</head>
+<body><h1>g0v irc&nbsp; robot (by hubot)</h1><h2>Preface</h2><p>g0v&nbsp; irc channel 上現在已經有 logbot 和 kcwu 網站 title bot (人機一體)，然而當需要一個新的自動化功能時，大家往往重寫一隻新的 robot，並無一個共用的 robot framework。而且寫一個 irc bot 對於手邊沒有現成工具的人來說很花時間。</p><p></p><h2> Why hubot?</h2><p><b>&nbsp;1. 架構完整，且為 FS/OSS</b></p><p>&nbsp;hubot&nbsp; 最初由 GitHub 開發而成（<a href="http://hubot.github.com/"></a>http://hubot.github.com/），為 GitHub 公司內部使用的自動化 robot。hubot 本身是一個以 node.js + coffeescript 寫成的 robot engine，架起來後，可以使用 command line 直接與 bot 互動。若再輔以各種網路通訊的 adaptor，則可透過網路將 robot 掛在線上。如 hubot-irc 即是 hubot 的 IRC adaptor，用來將 hubot&nbsp; 掛在 IRC。</p><p></p><p><b>2. 功能擴充容易</b></p><p>開發 hubot 的功能，不需要知道 hubot 怎麼運作，只要在 scripts/ 資料夾內，使用 coffeescript (or livescript，需額外 plugin) 寫 nodejs 的 script，即可擴充 hubot 的功能。</p><p></p><p>例如以下的簡單範例：</p><ul style="list-style: none;"><li>module.exports = (robot) -&gt;</li>
+<li>&nbsp; robot.respond /ping/i, (msg) -&gt;</li>
+<li>&nbsp;&nbsp;&nbsp; msg.reply &quot;pong&quot;</li></ul>
+
+<p><b>3. 已經有一大堆的 scripts 可擴充 robot 功能</b></p><p><a href="https://github.com/github/hubot-scripts"></a>https://github.com/github/hubot-scripts<a href='https://github.com/github/hubot-scripts#'/> </a>#<a href='/ep/search/?q=%23hubot&amp;via=IBmzHC20wBb'/> </a>hubot scripts 專案</p><p><a href="http://hubot-script-catalog.herokuapp.com/"></a>http://hubot-script-catalog.herokuapp.com/<a href='http://hubot-script-catalog.herokuapp.com/'/> </a># 各種 scripts 的說明</p><p></p><p></p><h2>功能發想 (挖坑)</h2><ul><li>隨意發想，g0v irc robot 想要些什麼功能呢？</li></ul>
+<ul class="comment"><li>自動查萌典、公司關係、執行範例 LiveScript XD</li>
+<li>(Y) 萌典+1</li>
+<li>執行範例 LiveScript 現在有什麼線上有 API 的服務嗎？</li></ul>
+<ul><li>查詢萌典</li>
+<li>查詢公司關係</li>
+<li>用 # {user}/{repo}/{issue-id}&nbsp; 顯示 github issue.</li>
+<li>查詢 g0v 各專案條目簡介，<a href='http://g0v-communique-api.herokuapp.com/api/1.0/tags'/>條目的API</a>，條目內容來自<a href='https://g0v.hackpad.com/Fe3VpeN42w9'/>這份文件</a>，可以讓大家快速了解各專案進度或者跟新手介紹專案使用。</li></ul>
+
+<p></p><p></p><h2>How To Start</h2><p>已將 hubot&nbsp; 與 irc adaptor 所需的 package 整理在 packages.json 內，clone <a href="https://github.com/youchenlee/b0t-hubot"></a>https://github.com/youchenlee/b0t-hubot<a href='https://github.com/youchenlee/b0t-hubot'/>&nbsp;</a></p><p>即可 ./install.sh &amp;&amp; ./run.sh 一行跑起來。 跑起來之後，機器人預設會進到 freenode 的&nbsp; #<a href='/ep/search/?q=%23g0v&amp;via=IBmzHC20wBb'/> </a>g0v-b0t-test 這個頻道中，方便測試。（ 記得先在 env.sh 中改掉機器人暱稱。否則可能會登入不進去，因為 freenode 中不可有重複暱稱的帳號）</p><p></p><p>這專案目前在我的個人 repo, 想要 transfer 到 g0v。以 CC0 或 MIT by g0v contributors license 釋出</p><h2></h2><p></p></body>
+</html>
