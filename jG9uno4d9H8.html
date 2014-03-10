@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="10981"/>
+<meta name="version" content="11151"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$jG9uno4d9H8</title>
 </head>
 <body><h1>3/8 線路松：戶外大型活動網路及直播設置</h1><ul class="comment"><li>本來是事件松，但 hackpad 超展開好多&nbsp; know-how / 規格可供之後<s>遊行抗議</s>歡樂戶外活動參考，所以添個副標好搜尋、加入學習清單。之後可考慮拆 pad.</li>
@@ -276,7 +276,10 @@
 <li>++ 有一台可以支援 802.11ac，這樣已經很好了 XD</li>
 <li>剛剛有提到 Mesh Network ，如果有相關的軟體可以做到，也許可以先宣傳一下，未來有類似需求的時候就不會受限於時間</li>
 <li>是。這之後另開坑/pad來實測討論。目前以 Open Garden (藍芽) 和 Serval Mesh 為短期內比較可行的方案。</li></ul>
-<p>我知道國內外用來建置大型的wifi 會場.大都是 thin ap架構. 中國還有千人等級wifi實戰.利用中控(利用到openflow)+802.11ac 6台支援過 千人等級活動.其它方式都是按區把頻道分開 1 6 11 等的規劃.以下分享 Open_Garden_串連所有連網設備，大家可以分享和共用頻寬 <a href="http://goo.gl/brs54x"></a><a href='http://goo.gl/brs54x'/>http://goo.gl/brs54x</a> 但實戰會有網路不太穩定的問題.原因是利用wifi+藍芽 連線時會在連上一個vpn(這個就會有加密,有安全一點點但會更慢) Super Bowl 2013 WiFi network designed to handle 30,000 connections<a href="http://goo.gl/mqvVQf"></a><a href='http://goo.gl/mqvVQf'/>http://goo.gl/mqvVQf</a> 參考國外的吧.你剛說的802.11s = wmn 現在都是在企業級網路用的東西. &gt;&gt;<a href="http://goo.gl/QEURJv"></a><a href='http://goo.gl/QEURJv'/>http://goo.gl/QEURJv</a>&nbsp; 說白的就是 thin ap+中控&nbsp; 但大都是在企業級ap&nbsp; 自行用openwrt diy出來的不多但會有.←gavin</p><p></p><p>2.5Ghz 已經滿了，不需要再多台。但如果想作為備援則設為 <b>g0v.tw-22-N</b>, <b>g0v.tw-33-G</b>, <b>g0v.tw-44-B</b>...</p><p>頻道及協定同上面的 -2-N, -3-G 和 -4-B。(如果竟然有多 6 台則 <b>g0v.tw-222-N</b>, <b>-333-G</b>...)。以上。</p><ul class="comment"><li>SSID 這樣設計的目的，是讓 WiFi 列表裡「連線速率高」的一律排列在「連線速率低」的之上。</li></ul>
+<p>我知道國內外用來建置大型的wifi 會場.大都是 thin ap架構. 中國還有千人等級wifi實戰.利用中控(利用到openflow)+802.11ac 6台支援過 千人等級活動.其它方式都是按區把頻道分開 1 6 11 等的規劃.以下分享 Open_Garden_串連所有連網設備，大家可以分享和共用頻寬 <a href="http://goo.gl/brs54x"></a><a href='http://goo.gl/brs54x'/>http://goo.gl/brs54x</a> 但實戰會有網路不太穩定的問題.原因是利用wifi+藍芽 連線時會在連上一個vpn(這個就會有加密,有安全一點點但會更慢) Super Bowl 2013 WiFi network designed to handle 30,000 connections<a href="http://goo.gl/mqvVQf"></a><a href='http://goo.gl/mqvVQf'/>http://goo.gl/mqvVQf</a> 參考國外的吧.你剛說的802.11s = wmn 現在都是在企業級網路用的東西. &gt;&gt;<a href="http://goo.gl/QEURJv"></a><a href='http://goo.gl/QEURJv'/>http://goo.gl/QEURJv</a>&nbsp; 說白的就是 thin ap+中控&nbsp; 但大都是在企業級ap&nbsp; 自行用openwrt diy出來的不多但會有.←gavin</p><ul class="comment"><li>感謝 Gavin 指導! 如果主辦單位有經費，我也很想弄一整套 Ubiquiti UniFi (甚至 airMAX) 來玩 Thin AP...</li>
+<li>但從社運角度來看，重要的也許不只是如何用有限的經費提供數萬人的 uplink，而是讓其中的數百人獲得親身加入「參與式網路」，中繼頻寬和訊息給身邊朋友的經驗。</li></ul>
+
+<p>2.5Ghz 已經滿了，不需要再多台。但如果想作為備援則設為 <b>g0v.tw-22-N</b>, <b>g0v.tw-33-G</b>, <b>g0v.tw-44-B</b>...</p><p>頻道及協定同上面的 -2-N, -3-G 和 -4-B。(如果竟然有多 6 台則 <b>g0v.tw-222-N</b>, <b>-333-G</b>...)。以上。</p><ul class="comment"><li>SSID 這樣設計的目的，是讓 WiFi 列表裡「連線速率高」的一律排列在「連線速率低」的之上。</li></ul>
 
 <p>WPA2-PSK Password: 請見桌上和 Switch 上貼的說明紙。</p><ul class="comment"><li>[拜託密碼到當天現場再說, 有一次在人文館, 應該是 COSCUP 還是幹嘛, 結果工人用無線網路密碼上了 flickr 照片集, 無線網路密碼請不要放在公開文件裡, 除非, 活動結束了...]</li>
 <li>收到。流量管制已確定有作用，設 WPA2-PSK 的目的只是讓無關的設備不會自動連上，並非用來管制連線數。</li></ul>
