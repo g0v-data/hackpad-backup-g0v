@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="11394"/>
+<meta name="version" content="11482"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$jG9uno4d9H8</title>
 </head>
 <body><h1>3/8 線路松：戶外活動媒體區網路及直播設置</h1><ul class="comment"><li>↑其實這次網路提供的範圍很小，只有媒體區，晚上收場時有工作人員跑來問說為什麼大家抱怨網路這麼慢，因為大家分不清楚哪部分的網路是我們負責的、哪部分的網路是自己的 3G，結果就以為是我們架的網路很慢，所以雖然活動本身是大型活動，但還是改一下說法免得招牌被砸得不明不白… XD</li>
@@ -201,8 +201,8 @@
 <p><b>直播檢討</b></p><p></p><p>監看狀況：</p><ul><li>當天我（BP）的筆電 thunderbolt 埠出問題，臨時改用 au 的筆電直播；所以我只監看到「現場純影像、直播後觀眾收看的影音」。</li></ul>
 
 <p>影音品質問題：</p><ul><li>分析：現場監看的畫面只有 1080i 而非 p，但已經比即時直播、事後收看都好上不少，瓶頸應是直播編碼的限制；據 au 說現場監聽的聲音比播出去的好，我事後收看跟即時直播差不多，所以推測也是直播編碼的問題。結論：這次用 YouTube Live 頻道，搭配預設的 Hangouts 編碼方式，影音品質效果不好。</li>
-<li>可能改進法：先換掉本機編碼方式試試看，再不行就要換掉直播頻道。</li>
-<li>請問影像的來源是甚麼?</li></ul>
+<li>可能改進法：先換掉本機編碼方式試試看，再不行就要換掉直播頻道。</li></ul>
+<ul class="comment"><li>請問影像的來源是甚麼?</li></ul>
 
 <p>影音同步問題：</p><ul><li>參照：我沒有監聽到現場聲音、不知道現場影音是否同步，如果 au 有注意到請提供意見。</li></ul>
 <ul class="comment"><li>我也沒有監聽到收音，只知道畫面和實況聲音的延遲約 2-3 秒。</li>
@@ -210,7 +210,8 @@
 <ul><li>分析：可能的原因包含(a)直播編碼 (b)導播台在攝影機外獨立收音，但沒作現場同步（畢竟原本沒有直播規劃，給喇叭的訊號不能 delay 等攝影機），或送成同步前的訊號給我 -u- (c)兩者皆有。</li>
 <li>可能改進法：除了換直播編碼＆頻道之外，現場同步問題需要導播台器材配合，或者自備 video/audio latency 相關硬體，或者直播筆電上嘗試軟體 hack i/o 解決。<ul><li>要 delay audio，用 Audio Hijack 的 AudioUnit &gt; Apple &gt; AUDelay effect 即可達成。</li>
 <li>要 delay video 的方式還需要測試。</li></ul>
-<ul class="comment"><li>我剛下載影片回來分析，發現好像是聲音慢了 XDD 如果不是編碼問題，就是混音台接太多造成 latency 的設備，所以可能需要 hack video i/o XD 有這種軟體嗎？</li>
+<ul class="comment"><li>錄影的部分本來就應該本地錄影儲存, 上傳到網路本來就有轉碼跟傳輸的延遲時間要考慮。</li>
+<li>我剛下載影片回來分析，發現好像是聲音慢了 XDD 如果不是編碼問題，就是混音台接太多造成 latency 的設備，所以可能需要 hack video i/o XD 有這種軟體嗎？</li>
 <li>BlackMagic Settings 底下的Set&nbsp; reference output timing?</li>
 <li>thunderbolt 修好了， set reference output timing 是給專業機器用的時鐘產生器，不是調整 latency 用的。</li>
 <li>hangout 傳上去時可以如一般 player 調 av latency 嗎？</li>
@@ -231,7 +232,8 @@
 <p>總結：</p><ul><li>關鍵問題：幾乎沒看到觀眾反應對「畫質、音質」不滿意，幾乎都是討論「影音同步、現場收音」。</li></ul>
 <ul class="comment"><li>zonble: 現場收音似乎不是很好。</li>
 <li>zonble 是指目前影片音軌（純收台上麥克風-&gt;導播台-&gt;youtube直播）品質不好；還是「現場收音（以昨天評論的 context 是指收台下＆環境音）」這個點子不好呢？</li>
-<li>應該是前者 (看 live 轉播時發的，覺得收音不好)</li></ul>
+<li>應該是前者 (看 live 轉播時發的，覺得收音不好)</li>
+<li>要經過網路做影音同步本來就是要視訊備或者廣播級的設備, 這是社群活動應該要做的事情嗎? 個人持保留意見</li></ul>
 <ul><li>理想解法：這兩個問題都需要導播台「配合直播去設定器材」，所以「器材資源、設定溝通」是可能的難點。</li>
 <li>終極解法：直播組「自備器材」解決... 但好像有點搞太大＆重覆工作。<ul><li>影音同步可以試出軟體解法。</li>
 <li>現場收音可能還是要和導播前期合作/反映？</li></ul>
@@ -288,7 +290,10 @@
 <li>↑跳坑宣言</li>
 <li>好啊，那就 gavin 主揪了! &#92;o/&nbsp; 我手上有閒置的 RT-N10U (還有 EA-N66)，可以學著灌 dd-wrt + OLSR。</li>
 <li>(會提 Open Garden 是因為 CL <a href='http://logbot.g0v.tw/channel/g0v.tw/2014-03-09/48'/>提到</a> 人數一多時，uplink 很貴，所以也想測看看 Hybrid 的用法。)</li>
-<li>((當然如果不做 uplink — 也就是用 portal page 做遊行專用內網來即時轉播+訊息分享 — 則無此顧慮。))</li></ul>
+<li>((當然如果不做 uplink — 也就是用 portal page 做遊行專用內網來即時轉播+訊息分享 — 則無此顧慮。))</li>
+<li>mesh network 類的網路架構人多的時候會浪費很多資源在設備的溝通上面, 強烈不建議使用, 真的期望有穩定的網路, 需要兩條以上的對外連線加上兩個以上的 gateway, 以及切割大量的小型區網降低廣播封包跟區網查詢的問題, 另外, 直撥要順請用 13IP 線路, 價格問中華電信, 要有心理準備, 2.4G 的網路要多可以, 要設計涵蓋範圍, 5G 的網路打不遠頻道又多, 所以隔壁再放一個 5G AP 也沒有問題, 但是 2.4G 就要考慮很多問題</li>
+<li>網路服務的重點在穩定的提供服務, 而不是要讓多少人可以參與提供服務這件事情, 我必須要很霸道的說, 先搞清楚狀況比較好, 再好的設備, 沒有把架構弄好也是會癱瘓的</li>
+<li><br/></li></ul>
 
 <p>2.5Ghz 已經滿了，不需要再多台。但如果想作為備援則設為 <b>g0v.tw-22-N</b>, <b>g0v.tw-33-G</b>, <b>g0v.tw-44-B</b>...</p><p>頻道及協定同上面的 -2-N, -3-G 和 -4-B。(如果竟然有多 6 台則 <b>g0v.tw-222-N</b>, <b>-333-G</b>...)。以上。</p><ul class="comment"><li>SSID 這樣設計的目的，是讓 WiFi 列表裡「連線速率高」的一律排列在「連線速率低」的之上。</li></ul>
 
