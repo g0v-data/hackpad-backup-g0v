@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="11482"/>
+<meta name="version" content="11846"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$jG9uno4d9H8</title>
 </head>
 <body><h1>3/8 線路松：戶外活動媒體區網路及直播設置</h1><ul class="comment"><li>↑其實這次網路提供的範圍很小，只有媒體區，晚上收場時有工作人員跑來問說為什麼大家抱怨網路這麼慢，因為大家分不清楚哪部分的網路是我們負責的、哪部分的網路是自己的 3G，結果就以為是我們架的網路很慢，所以雖然活動本身是大型活動，但還是改一下說法免得招牌被砸得不明不白… XD</li>
@@ -293,6 +293,11 @@
 <li>((當然如果不做 uplink — 也就是用 portal page 做遊行專用內網來即時轉播+訊息分享 — 則無此顧慮。))</li>
 <li>mesh network 類的網路架構人多的時候會浪費很多資源在設備的溝通上面, 強烈不建議使用, 真的期望有穩定的網路, 需要兩條以上的對外連線加上兩個以上的 gateway, 以及切割大量的小型區網降低廣播封包跟區網查詢的問題, 另外, 直撥要順請用 13IP 線路, 價格問中華電信, 要有心理準備, 2.4G 的網路要多可以, 要設計涵蓋範圍, 5G 的網路打不遠頻道又多, 所以隔壁再放一個 5G AP 也沒有問題, 但是 2.4G 就要考慮很多問題</li>
 <li>網路服務的重點在穩定的提供服務, 而不是要讓多少人可以參與提供服務這件事情, 我必須要很霸道的說, 先搞清楚狀況比較好, 再好的設備, 沒有把架構弄好也是會癱瘓的</li>
+<li>碎碎念模式 on！</li>
+<li>David 好專業! m(_ _)m 現在看來「穩定的對外網路(直播、視訊、多地協同用)」和「穩定的遊行用(大範圍、戶外、位置可能變動)內網」是兩個完全不同的需求，需要不同的網路架構。有空來線路松畫圖+實測+教學吧? &#92;〠/</li>
+<li><br/></li>
+<li>後者請參考 <a href="http://occupyhere.org/"></a>http://occupyhere.org/ ( <a href="https://github.com/occupyhere/occupy.here"></a>https://github.com/occupyhere/occupy.here ) 對 OpenWRT 的用例：上網不一定是連上網際網路，眾人可以形成有機的區域網路討論空間，也讓主辦單位可以即時推播訊息給參與者，同時也避免租用單一線路的高昂成本與「單點故障」的問題。也許在 OLSR-style mesh 的額外溝通耗損太高不適用時，可以靠讓參與者設備裡的瀏覽器起到在 AP 之間儲存轉發的 darknet 中繼作用？</li>
+<li>(網頁技術上有趣的是，因為每個 AP 的節點都叫 occupy.here，所以 localStorage 算是 same-origin... &lt;/碎碎念&gt;)&nbsp;</li>
 <li><br/></li></ul>
 
 <p>2.5Ghz 已經滿了，不需要再多台。但如果想作為備援則設為 <b>g0v.tw-22-N</b>, <b>g0v.tw-33-G</b>, <b>g0v.tw-44-B</b>...</p><p>頻道及協定同上面的 -2-N, -3-G 和 -4-B。(如果竟然有多 6 台則 <b>g0v.tw-222-N</b>, <b>-333-G</b>...)。以上。</p><ul class="comment"><li>SSID 這樣設計的目的，是讓 WiFi 列表裡「連線速率高」的一律排列在「連線速率低」的之上。</li></ul>
