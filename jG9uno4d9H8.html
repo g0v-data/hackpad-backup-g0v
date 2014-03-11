@@ -3,10 +3,11 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="11151"/>
+<meta name="version" content="11389"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$jG9uno4d9H8</title>
 </head>
-<body><h1>3/8 線路松：戶外大型活動網路及直播設置</h1><ul class="comment"><li>本來是事件松，但 hackpad 超展開好多&nbsp; know-how / 規格可供之後<s>遊行抗議</s>歡樂戶外活動參考，所以添個副標好搜尋、加入學習清單。之後可考慮拆 pad.</li>
+<body><h1>3/8 線路松：戶外活動媒體區網路及直播設置</h1><ul class="comment"><li>↑其實這次網路提供的範圍很小，只有媒體區，晚上收場時有工作人員跑來問說為什麼大家抱怨網路這麼慢，因為大家分不清楚哪部分的網路是我們負責的、哪部分的網路是自己的 3G，結果就以為是我們架的網路很慢，所以雖然活動本身是大型活動，但還是改一下說法免得招牌被砸得不明不白… XD</li>
+<li>本來是事件松，但 hackpad 超展開好多&nbsp; know-how / 規格可供之後<s>遊行抗議</s>歡樂戶外活動參考，所以添個副標好搜尋、加入學習清單。之後可考慮拆 pad.</li>
 <li>++，活動結束後來整理空白模版吧 ^o^</li>
 <li>ETBlue++ 瞬間就整理出了 <a href='https://g0v.hackpad.com/PTFbdcOTdSZ'/>線路松空白模版(戶外)</a>&nbsp; !</li>
 <li>被提早發現惹 XDXD</li></ul>
@@ -246,7 +247,10 @@
 <li>　&nbsp; 安全監控使用，有需要研究一下的話，可以找我幫忙。 by Michael_LI</li></ul>
 </ul>
 
-<p></p><p></p><h2>實際網路配置</h2><p>Hinet VTU-R 100M/100M 光纖</p><p>|-- Sapido BR261c: <b>DHCP, ac+n</b> SSID <b>g0v.tw-0-AC</b> (Channel: <b>60</b>), <b>g0v.tw-0-N</b> (Channel: <b>14</b>) <b>(gavin)</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp; | -- 24-port Switches (接好線放在遠的媒體區桌上)</p><p>&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; | -- 24-port Switches (接好線放在近的媒體區桌上)</p><p>&nbsp;&nbsp;&nbsp;&nbsp; |-- Vigor 2130: <b>DHCP</b> 192.168.2.x, Wireless AP IP Range: 192.168.2.21-30, <b>Rate Limit</b> 10Mbps each <b>(au)</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- LAN1: 24-port Switch (Wifi 用，有限速)</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- Apple AirportExpress: <b>DHCP</b>, <b>a+n</b> <b>5Ghz</b> Channel: <b>56</b> SSID: <b>g0v.tw-1-AN (hcchien, 無天線)</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; |-- Cisco WAP200: <b>Bridge</b>, <b>g+b</b> <b>2.4Ghz</b> Channel: <b>6</b> SSID: <b>g0v.tw-4-GB (jimmy, 天線向舞台區)</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- Asus RT-N16: <b>DHCP</b>, <b>n-only</b> <b>2.4Ghz</b> Channel: <b>1</b> SSID: <b>g0v.tw-2-N (gavin, 天線向上)</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- D-Link AC750: <b>DHCP</b>, <b>g-only</b> <b>2.4Ghz</b> Channel: <b>11</b> SSID: <b>g0v.tw-3-G (jjjenq, 無天線)</b></p><p></p><p>如果有更多台 5Ghz 可設為 <b>g0v.tw-00-N, g0v.tw-00-AC</b>, 然後 <b>-000-, -0000-</b> 繼續下去，頻道依序上昇。</p><p></p><p></p><p><b>容錯移轉</b></p><ul><li>如果 Hinet VTU-R 掛了，由 au 帶的 WiMax 遞補，關閉所有無線設備，只留有線連線。</li>
+<p></p><p></p><h2>實際網路配置</h2><p>Hinet VTU-R 100M/100M 光纖</p><p>|-- Sapido BR261c: <b>DHCP, ac+n</b> SSID <b>g0v.tw-0-AC</b> (Channel: <b>60</b>), <b>g0v.tw-0-N</b> (Channel: <b>14</b>) <b>(gavin)</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp; | -- 24-port Switches (接好線放在遠的媒體區桌上)</p><p>&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; | -- 24-port Switches (接好線放在近的媒體區桌上)</p><p>&nbsp;&nbsp;&nbsp;&nbsp; |-- Vigor 2130: <b>DHCP</b> 192.168.2.x, Wireless AP IP Range: 192.168.2.21-30, <b>Rate Limit</b> 10Mbps each <b>(au)</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- LAN1: 24-port Switch (Wifi 用，有限速)</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- Apple AirportExpress: <b>DHCP</b>, <b>a+n</b> <b>5Ghz</b> Channel: <b>56</b> SSID: <b>g0v.tw-1-AN (hcchien, 無天線)</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; |-- Cisco WAP200: <b>Bridge</b>, <b>g+b</b> <b>2.4Ghz</b> Channel: <b>6</b> SSID: <b>g0v.tw-4-GB (jimmy, 天線向舞台區)</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- Asus RT-N16: <b>DHCP</b>, <b>n-only</b> <b>2.4Ghz</b> Channel: <b>1</b> SSID: <b>g0v.tw-2-N (gavin, 天線向上)</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- D-Link AC750: <b>DHCP</b>, <b>g-only</b> <b>2.4Ghz</b> Channel: <b>11</b> SSID: <b>g0v.tw-3-G (jjjenq, 無天線)</b></p><p></p><p>如果有更多台 5Ghz 可設為 <b>g0v.tw-00-N, g0v.tw-00-AC</b>, 然後 <b>-000-, -0000-</b> 繼續下去，頻道依序上昇。</p><ul class="comment"><li>這個是我覺的比較好的網路示意圖.提供給下次參考.<a href="https://www.dropbox.com/s/hjvp9batbjmc753/g0v-wifi%E7%B6%B2%E8%B7%AF%E7%A4%BA%E6%84%8F%E5%9C%96.png"></a><a href='https://www.dropbox.com/s/hjvp9batbjmc753/g0v-wifi%E7%B6%B2%E8%B7%AF%E7%A4%BA%E6%84%8F%E5%9C%96.png'/>https://www.dropbox.com/s/hjvp9batbjmc753/g0v-wifi%E7%B6%B2%E8%B7%AF%E7%A4%BA%E6%84%8F%E5%9C%96.png</a> 主要的box 是放wifi路由....其它的box是放簡易型wifi ap.要不要多加switch 就像當天的需求更改. 其實這種架構就像thin ap加上中控 ←gavin</li>
+<li>好主意。如果另兩桌都有工作人員幫忙看 AP &amp; 壞掉時及時通知 g0v 桌的話，這個安排確實比較有延展性。</li></ul>
+
+<p><b>容錯移轉</b></p><ul><li>如果 Hinet VTU-R 掛了，由 au 帶的 WiMax 遞補，關閉所有無線設備，只留有線連線。</li>
 <li>如果 Sapido BR261c 掛了，用同型機遞補，如無則轉用 Vigor 2130 遞補。</li><ul class="comment"><li>sapido 在跳電時會自爆 factory reset, 所以要先 export setting 以便到時 reimport</li></ul>
 </ul>
 <ul><li>如果 Vigor 2130 掛了，由 Sapido BR261c (<b>g0v.tw-0</b>) 優先，依 SSID 編號順位遞補。</li>
@@ -275,9 +279,15 @@
 <li>↑ETB:雖然一點都不想瞭解但還是被迫去瞭解了一下 orz</li>
 <li>++ 有一台可以支援 802.11ac，這樣已經很好了 XD</li>
 <li>剛剛有提到 Mesh Network ，如果有相關的軟體可以做到，也許可以先宣傳一下，未來有類似需求的時候就不會受限於時間</li>
-<li>是。這之後另開坑/pad來實測討論。目前以 Open Garden (藍芽) 和 Serval Mesh 為短期內比較可行的方案。</li></ul>
-<p>我知道國內外用來建置大型的wifi 會場.大都是 thin ap架構. 中國還有千人等級wifi實戰.利用中控(利用到openflow)+802.11ac 6台支援過 千人等級活動.其它方式都是按區把頻道分開 1 6 11 等的規劃.以下分享 Open_Garden_串連所有連網設備，大家可以分享和共用頻寬 <a href="http://goo.gl/brs54x"></a><a href='http://goo.gl/brs54x'/>http://goo.gl/brs54x</a> 但實戰會有網路不太穩定的問題.原因是利用wifi+藍芽 連線時會在連上一個vpn(這個就會有加密,有安全一點點但會更慢) Super Bowl 2013 WiFi network designed to handle 30,000 connections<a href="http://goo.gl/mqvVQf"></a><a href='http://goo.gl/mqvVQf'/>http://goo.gl/mqvVQf</a> 參考國外的吧.你剛說的802.11s = wmn 現在都是在企業級網路用的東西. &gt;&gt;<a href="http://goo.gl/QEURJv"></a><a href='http://goo.gl/QEURJv'/>http://goo.gl/QEURJv</a>&nbsp; 說白的就是 thin ap+中控&nbsp; 但大都是在企業級ap&nbsp; 自行用openwrt diy出來的不多但會有.←gavin</p><ul class="comment"><li>感謝 Gavin 指導! 如果主辦單位有經費，我也很想弄一整套 Ubiquiti UniFi (甚至 airMAX) 來玩 Thin AP...</li>
-<li>但從社運角度來看，重要的也許不只是如何用有限的經費提供數萬人的 uplink，而是讓其中的數百人獲得親身加入「參與式網路」，中繼頻寬和訊息給身邊朋友的經驗。</li></ul>
+<li>是。這之後另開坑/pad來實測討論。目前以 Open Garden (藍芽) 和 Serval Mesh 為短期內比較可行的方案。</li>
+<li>我知道國內外用來建置大型的wifi 會場.大都是 thin ap架構. 中國還有千人等級wifi實戰.利用中控(利用到openflow)+802.11ac 6台支援過 千人等級活動.其它方式都是按區把頻道分開 1 6 11 等的規劃.以下分享 Open_Garden_串連所有連網設備，大家可以分享和共用頻寬 <a href="http://goo.gl/brs54x"></a><a href='http://goo.gl/brs54x'/>http://goo.gl/brs54x</a> 但實戰會有網路不太穩定的問題.原因是利用wifi+藍芽 連線時會在連上一個vpn(這個就會有加密,有安全一點點但會更慢) Super Bowl 2013 WiFi network designed to handle 30,000 connections<a href="http://goo.gl/mqvVQf"></a><a href='http://goo.gl/mqvVQf'/>http://goo.gl/mqvVQf</a> 參考國外的吧.你剛說的802.11s = wmn 現在都是在企業級網路用的東西. &gt;&gt;<a href="http://goo.gl/QEURJv"></a><a href='http://goo.gl/QEURJv'/>http://goo.gl/QEURJv</a>&nbsp; 說白的就是 thin ap+中控&nbsp; 但大都是在企業級ap&nbsp; 自行用openwrt diy出來的不多但會有.←gavin</li>
+<li>感謝 Gavin 指導! 如果主辦單位有經費，我也很想弄一整套 Ubiquiti UniFi (甚至 airMAX) 來玩 Thin AP...</li>
+<li>但從社運角度來看，重要的也許不只是如何用有限的經費提供數萬人的 uplink，而是讓其中的數百人獲得親身加入「參與式網路」，中繼頻寬和訊息給身邊朋友的經驗。</li>
+<li>open garden 不穩千萬不要用. 遊行活動用dd-wrt比較好.向3/8日那樣.可以順非常多.就一台 802.11ac.&nbsp; 看要不要辦一場簡單架wifi 的黑客松一次說比較快. 順道找人來壓力測試. ^^←gavin</li>
+<li>↑跳坑宣言</li>
+<li>好啊，那就 gavin 主揪了! &#92;o/&nbsp; 我手上有閒置的 RT-N10U (還有 EA-N66)，可以學著灌 dd-wrt + OLSR。</li>
+<li>(會提 Open Garden 是因為 CL <a href='http://logbot.g0v.tw/channel/g0v.tw/2014-03-09/48'/>提到</a> 人數一多時，uplink 很貴，所以也想測看看 Hybrid 的用法。)</li>
+<li>((當然如果不做 uplink — 也就是用 portal page 做遊行專用內網來即時轉播+訊息分享 — 則無此顧慮。))</li></ul>
 
 <p>2.5Ghz 已經滿了，不需要再多台。但如果想作為備援則設為 <b>g0v.tw-22-N</b>, <b>g0v.tw-33-G</b>, <b>g0v.tw-44-B</b>...</p><p>頻道及協定同上面的 -2-N, -3-G 和 -4-B。(如果竟然有多 6 台則 <b>g0v.tw-222-N</b>, <b>-333-G</b>...)。以上。</p><ul class="comment"><li>SSID 這樣設計的目的，是讓 WiFi 列表裡「連線速率高」的一律排列在「連線速率低」的之上。</li></ul>
 
