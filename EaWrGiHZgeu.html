@@ -3,10 +3,50 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="273"/>
+<meta name="version" content="470"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$EaWrGiHZgeu</title>
 </head>
-<body><h1>比較保險的網路架構</h1><p></p><p>當一台 gateway 故障的時候, 使用者重新取得 IP 可以恢復連線的架構, 一個 LAN 要有兩個以上的 gateway</p><p>[ISP LINE1&nbsp; VTUR]--//--[Gateway 1]--//--[LAN1]</p><p>[ISP LINE1&nbsp; VTUR]--//--[Gateway 2]--//--[LAN1]</p><p></p><p>當一條線路故障的時候, 關掉故障線路的 gateway 連線, 使用者重新取得 IP 可以恢復連線的架構</p><p>[ISP LINE1&nbsp; VTUR]--//--[Gateway 1]--//--[LAN1]</p><p>[ISP LINE2&nbsp; VTUR]--//--[Gateway 2]--//--[LAN1]</p><p></p><p>有空再寫, 先下班</p><p></p><ul class="code"><li><br/></li></ul>
+<body><h1>比較保險的網路架構</h1><p></p><ul><li>最基本的設置, 一般家用也是這樣</li></ul>
+<ul style="list-style: none;"><li>[ISP LINE1&nbsp; VTUR]--//--[Gateway 1]--//--[LAN1]</li></ul>
+
+<ul><li>當一台 gateway 故障的時候, 管理者移除故障的 gateway 連線, 使用者重新取得 IP 可以恢復連線的架構, 一個 LAN 要有兩個以上的 gateway</li></ul>
+<ul style="list-style: none;"><li>[ISP LINE1&nbsp; VTUR]--//--[Gateway 1]--//--[LAN1]</li>
+<li>[ISP LINE1&nbsp; VTUR]--//--[Gateway 2]--//--[LAN1]</li></ul>
+
+<ul><li>當一條線路故障的時候, 管理者故障線路的 gateway 連線, 使用者重新取得 IP 可以恢復連線的架構</li></ul>
+<ul style="list-style: none;"><li>[ISP LINE1&nbsp; VTUR]--//--[Gateway 1]--//--[LAN1]</li>
+<li>[ISP LINE2&nbsp; VTUR]--//--[Gateway 2]--//--[LAN1]</li></ul>
+
+<ul><li>人數很多的時候, 避免太多使用者使用同樣的 IP 對外連線, 造成某些服務的阻擋, 所以可能的做法</li></ul>
+<ul style="list-style: none;"><li>[ISP LINE1&nbsp; VTUR]--//--[Gateway 1]--//--[LAN1]</li>
+<li>[ISP LINE2&nbsp; VTUR]--//--[Gateway 2]--//--[LAN1]</li>
+<li>[ISP LINE1&nbsp; VTUR]--//--[Gateway 3]--//--[LAN2]</li>
+<li>[ISP LINE2&nbsp; VTUR]--//--[Gateway 4]--//--[LAN2]</li></ul>
+
+<ul><li>無線網路跟有線網路要分開不同的 LAN</li></ul>
+<ul style="list-style: none;"><li>[ISP LINE1&nbsp; VTUR]--//--[Gateway 1]--//--[LAN1]</li>
+<li>[ISP LINE1&nbsp; VTUR]--//--[Gateway 2]--//--[WLAN1]</li></ul>
+
+<ul><li>線路組在中研院的架構, 接近的狀態</li></ul>
+<ul style="list-style: none;"><li>[中研院]--//--[gateway 1]--//--[LAN R0]</li>
+<li>[中研院]--//--[gateway 2]--//--[LAN R0]</li>
+<li>[中研院]--//--[gateway 3]--//--[LAN R1]</li>
+<li>[中研院]--//--[gateway 4]--//--[LAN R1]</li>
+<li>[中研院]--//--[gateway 5]--//--[LAN R2]</li>
+<li>[中研院]--//--[gateway 6]--//--[LAN R2]</li>
+<li>[中研院]--//--[gateway 7]--//--[WLAN R0]</li>
+<li>[中研院]--//--[gateway 8]--//--[WLAN R0]</li>
+<li>[中研院]--//--[gateway 9]--//--[WLAN R1]</li>
+<li>[中研院]--//--[gateway 10]--//--[WLAN R1]</li>
+<li>[中研院]--//--[gateway 11]--//--[WLAN R2]</li>
+<li>[中研院]--//--[gateway 12]--//--[WLAN R2]</li></ul>
+
+<ul><li>但是這麼多 gateway 很難帶, 所以要用另外一個做法 XD</li></ul>
+<ul style="list-style: none;"><li>[ESXi Server [gateway 1][gateway 2][gateway 3][gateway 4][gateway 5][gateway 6][gateway 7][gateway 8][gateway 9][gateway 10][gateway 11][gateway 12] /ESXi Server]--// [VLAN Trunk] //--[中研院 [中研院] [LAN R0][LAN R0][LAN R1][LAN R1][LAN R2][LAN R2][WLAN R0][WLAN R0][WLAN R1][WLAN R1][WLAN R2][WLAN R2] /中研院]</li></ul>
+
+<ul><li>雞蛋不要放在同一個籃子裡</li></ul>
+
+<ul class="code"><li><br/></li></ul>
 
 <p></p></body>
 </html>
