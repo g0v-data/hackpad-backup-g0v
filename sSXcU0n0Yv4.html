@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1268"/>
+<meta name="version" content="1566"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$sSXcU0n0Yv4</title>
 </head>
 <body><h1>當新民主遇上線路松：遊行 x 網路 x 公民論壇</h1><p></p><ul class="comment"><li>台上的人如果能即時看到評論，或是（最基本的）知道每個段落有哪些、多少人在關注，可以大幅增加互動，也有助於「深入去了解這件事情、交換我們之間的意見，產生最大的社會共識」。</li>
@@ -15,12 +15,13 @@
 <p><b>目的</b></p><p></p><p>集會遊行是難能可貴的、志同道合的人齊聚一堂的場合，每個人的立場和主張有細緻的差異，卻不是每個人都有機會上台表達。集會場合中，只有台上對台下單方面的演講不夠符合民主精神，演講的內容只能靠事後的影音紀錄來累積，現場沒有更即時的互動，太過可惜。</p><p></p><p>在當前政治運作的機制之下，集會本身其實往往無法達到行動的訴求，因此，可以把集會活動當作一種更具有建設性的過程——在理想的新民主社會裡，一群人聚集在一個公共空間，是建立網絡的絕佳時機。這些時間要是像黑客松一樣有更多的產出、更大的累積性，該有多好？</p><p></p><p>這份共筆的目的：讓集會遊行不只能展示人數、讓少數人宣揚理念，更能變身成虛實整合的公民論壇，讓所有參與者一起腦力激盪，並且讓產出可以在活動結束後持續發酵。</p><p></p><p><b>適用場合</b></p><p></p><p>類似 3/8 廢核遊行晚會、不要核四五六運動，有很多人會一起待在定點兩個小時以上的集會</p><p></p><p><b>想達到的功能</b></p><p></p><p>台上有演講或表演時，台下的人只要連到特定名稱的無線網路，不用記網址、安裝程式，就可以馬上：</p><ul><li>像 apple 產品發表會一樣，有專人做即時文字摘要<ul><li>或像綠黨網路支黨部的演講一樣，用共筆現場打逐字稿</li>
 <li>獨立的 topic 可以切出來，有自己的討論區（或可以貼網址連到某個現成的討論區），這樣聽到感興趣的人可以馬上連過去看進一步資訊，或者先書籤起來，回家後可以分享到 sns</li></ul>
 </li>
-<li>從導播的機器直播影音 (反正內網頻寬不像 YouTube 一樣受限)<ul><li>像白衫軍那些擠在後面看不到投影螢幕的人就可以看直播，不會只聽得到聲音，卻完全沒有畫面</li></ul>
+<li>從導播的機器直播影音 (反正內網頻寬不像 YouTube 一樣受限)<ul><li>像白衫軍那些擠在後面看不到投影螢幕的人就可以看直播，不會只聽得到聲音，卻完全沒有畫面</li>
+<li>同時間有好幾場活動（或好幾廳的會議）也可以做聯播/切換。</li></ul>
 </li>
 <li>有聊天室或類似的即時文字表達的管道，出現像是「我不是人我擁核」、「插下去」等爭議言論時台下可以馬上反應，主持人現場處理，不用等事後道歉<ul><li>會場如果有投影幕的話，聊天室內容可以出現在畫面側邊欄</li>
 <li>或者 twitter hashtag 側邊欄？</li></ul>
 </li>
-<li>彼此互認 (+GPS)、交換連絡資訊 (有點像 COSCUP/OSDC 每年都會有的即時 spreadsheet 座位表)</li>
+<li>彼此互認 (+GPS)、交換聯絡資訊 (有點像 COSCUP/OSDC 每年都會有的即時 spreadsheet 座位表)</li>
 <li>問附近的人問題：「台上這個是誰？」「下一站在哪集合？」「我想找 g0v 攤位，他們在哪？」<ul><li>UI 可參考 Jelly (=行動版 Quora): <a href="http://blog.jelly.co/post/72563498393/introducing-jelly"></a>http://blog.jelly.co/post/72563498393/introducing-jelly</li></ul>
 </li>
 <li>像 osdc / coscup 的行動版網頁或 app，可以隨時察看議程、平面圖、活動基本資訊的某個介面</li></ul>
@@ -53,5 +54,15 @@
 <li>手繪 draft&nbsp;</li>
 <li>網頁 mockup</li></ul>
 
-<p></p><p></p></body>
+<p><b>測試</b></p><p></p><undefined><li><b>OSDC.tw</b></li></undefined>
+
+<ul><li>以不影響既有線路組為前提，也許可以挑幾個不重疊的 5Ghz 頻道，壓力測試 dd-wrt。(=opt-in)</li>
+<li>連上 g0v.today AP 之後自動跳出某些 OSDC 相關的靜態資訊頁面和常用工具 (g0villa 體驗營?)</li>
+<li>之後網路照常使用(也就是說有 uplink，但不保證不會斷...)。</li>
+<li>可以隨時打 g0v.today 回到資訊頁</li>
+<li>資訊頁要放哪些服務待討論</li></ul>
+
+<undefined><li><b>hackath8n 第捌次黑客松</b></li></undefined>
+
+<p></p></body>
 </html>
