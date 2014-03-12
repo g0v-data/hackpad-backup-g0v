@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="11847"/>
+<meta name="version" content="11853"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$jG9uno4d9H8</title>
 </head>
 <body><h1>3/8 線路松：戶外活動媒體區網路及直播設置</h1><ul class="comment"><li>↑其實這次網路提供的範圍很小，只有媒體區，晚上收場時有工作人員跑來問說為什麼大家抱怨網路這麼慢，因為大家分不清楚哪部分的網路是我們負責的、哪部分的網路是自己的 3G，結果就以為是我們架的網路很慢，所以雖然活動本身是大型活動，但還是改一下說法免得招牌被砸得不明不白… XD</li>
@@ -298,6 +298,7 @@
 <li><br/></li>
 <li>後者請參考 <a href="http://occupyhere.org/"></a>http://occupyhere.org/ ( <a href="https://github.com/occupyhere/occupy.here"></a>https://github.com/occupyhere/occupy.here ) 對 OpenWRT 的用例：上網不一定是連上網際網路，眾人可以形成有機的區域網路討論空間，也讓主辦單位可以即時推播訊息給參與者，同時也避免租用單一線路的高昂成本與「單點故障」的問題。也許在 OLSR-style mesh 的額外溝通耗損太高不適用時，可以靠讓參與者設備裡的瀏覽器起到在 AP 之間儲存轉發的 darknet 中繼作用？</li>
 <li>(網頁技術上有趣的是，因為每個 AP 的節點都叫 occupy.here，所以 localStorage 算是 same-origin... &lt;/碎碎念&gt;)&nbsp;</li>
+<li>原來碎碎念有感染性 XDDDD</li>
 <li><br/></li></ul>
 
 <p>2.5Ghz 已經滿了，不需要再多台。但如果想作為備援則設為 <b>g0v.tw-22-N</b>, <b>g0v.tw-33-G</b>, <b>g0v.tw-44-B</b>...</p><p>頻道及協定同上面的 -2-N, -3-G 和 -4-B。(如果竟然有多 6 台則 <b>g0v.tw-222-N</b>, <b>-333-G</b>...)。以上。</p><ul class="comment"><li>SSID 這樣設計的目的，是讓 WiFi 列表裡「連線速率高」的一律排列在「連線速率低」的之上。</li></ul>
