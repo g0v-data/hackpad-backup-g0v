@@ -1,0 +1,303 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="787"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$4FYtOSv9vl6</title>
+</head>
+<body><h1>extend popolo</h1><p>Upstream issues: <a href="https://github.com/opennorth/popolo-spec/issues"></a>https://github.com/opennorth/popolo-spec/issues</p><p>Base on <a href='http://popoloproject.com/'/>Popolo project</a></p><ul class="comment"><li>因為格式不太夠用, 所以需要做 extend., 到時彙整回 popolo.</li>
+<li>除此之外也列出現有spec不包含的case及其對應的popolo issue id.</li></ul>
+
+<p><b>目前 Popolo Spec 不包含的 Case</b></p><p></p><ul class="task"><li>組織的轄區</li><ul class="comment"><li><a href='https://github.com/opennorth/popolo-spec/issues/21'/>opennorth/popolo spec#21</a></li></ul>
+</ul>
+<ul class="task"><li>組織的 Office Hour</li></ul>
+<ul class="comment"><li>不同function有不同時段</li></ul>
+<ul class="task"><li>公務員的職等</li>
+<li>職位產生方式的資訊<ul class="task"><li>立委, 議員的選區, 得票數之類的</li>
+<li>政務官任命方式</li><ul class="comment"><li><a href='https://github.com/opennorth/popolo-spec/issues/29'/>opennorth/popolo spec#29</a></li></ul>
+</ul>
+</ul>
+<ul class="task"><li>組織的裁撤, 轉移, 合併, 建立的關係</li></ul>
+<ul class="comment"><li><a href='https://github.com/opennorth/popolo-spec/issues/41'/>opennorth/popolo spec#41</a></li></ul>
+<ul class="task"><li>地址的格式</li></ul>
+<ul class="comment"><li><a href='https://github.com/opennorth/popolo-spec/issues/10'/>opennorth/popolo spec#10</a></li></ul>
+<ul class="task"><li>電話的格式</li>
+<li>任務式職位的關係記載方式<ul class="task"><li>e.x: 國會會長</li>
+<li>e.x 立法院的XXX委員會委員</li></ul class="task">
+</li>
+<li>多重名稱<ul class="task"><li>中華民國常因政治因素而必須使用Chinese Taipei之類的英文名稱, 使得會有兩種官方中文名稱</li></ul class="task">
+</li>
+<li>任務式組織的記載方式<ul class="task"><li>因計劃而產生的單位</li></ul class="task">
+</li>
+<li>資料的有效性</li></ul>
+<ul class="comment"><li><a href='https://github.com/opennorth/popolo-spec/issues/46'/>opennorth/popolo spec#46</a></li></ul>
+<ul class="task"><li>候選人記載方式</li><ul class="comment"><li><a href='https://github.com/opennorth/popolo-spec/issues/43'/>opennorth/popolo spec#43</a></li></ul>
+</ul>
+<ul class="task"><li>歷史記錄</li></ul>
+<ul class="comment"><li><a href='https://github.com/opennorth/popolo-spec/issues/47'/>opennorth/popolo spec#47</a></li></ul>
+<ul class="task"><li>資料更新的頻率</li>
+<li>多重 source 的記載方式</li>
+<li>組織大事紀?</li>
+<li>人物大事紀?</li>
+<li>contact detail 沒有 primary porpoerty&nbsp;</li></ul>
+<ul class="comment"><li>例如用來指出該email是主要的email</li></ul>
+
+<h2>Classes</h2><p></p><p>spec 討論基於 JSON-LD context ，比較知道要從那邊引用和定義</p><p></p><p><b>Person</b></p><ul><li>origin <a href='http://popoloproject.com/specs/person.html'/>spce ref</a></li></ul>
+<ul class="code"><li>{</li>
+<li>&nbsp; &quot;Person&quot;: &quot;<a href="http://www.w3.org/ns/person#Person"></a>http://www.w3.org/ns/person#Person&quot;,</li>
+<li>&nbsp; &quot;name&quot;: &quot;<a href="http://xmlns.com/foaf/0.1/name"></a>http://xmlns.com/foaf/0.1/name&quot;,</li>
+<li>&nbsp; &quot;other_names&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://www.w3.org/ns/opengov#otherName"></a>http://www.w3.org/ns/opengov#otherName&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;@id&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;identifier&quot;: &quot;@value&quot;,</li>
+<li>&nbsp; &quot;scheme&quot;: &quot;@type&quot;,</li>
+<li>&nbsp; &quot;identifiers&quot;: &quot;<a href="http://xmlns.com/foaf/0.1/nick"></a>http://xmlns.com/foaf/0.1/nick&quot;,</li>
+<li>&nbsp; &quot;family_name&quot;: &quot;<a href="http://xmlns.com/foaf/0.1/familyName"></a>http://xmlns.com/foaf/0.1/familyName&quot;,</li>
+<li>&nbsp; &quot;given_name&quot;: &quot;<a href="http://xmlns.com/foaf/0.1/givenName"></a>http://xmlns.com/foaf/0.1/givenName&quot;,</li>
+<li>&nbsp; &quot;additional_name&quot;: &quot;<a href="http://schema.org/additionalName"></a>http://schema.org/additionalName&quot;,</li>
+<li>&nbsp; &quot;honorific_prefix&quot;: &quot;<a href="http://schema.org/honorificPrefix"></a>http://schema.org/honorificPrefix&quot;,</li>
+<li>&nbsp; &quot;honorific_suffix&quot;: &quot;<a href="http://schema.org/honorificSuffix"></a>http://schema.org/honorificSuffix&quot;,</li>
+<li>&nbsp; &quot;patronymic_name&quot;: &quot;<a href="http://www.w3.org/ns/person#patronymicName"></a>http://www.w3.org/ns/person#patronymicName&quot;,</li>
+<li>&nbsp; &quot;sort_name&quot;: &quot;<a href="http://www.w3.org/2000/10/swap/pim/contact#sortName"></a>http://www.w3.org/2000/10/swap/pim/contact#sortName&quot;,</li>
+<li>&nbsp; &quot;email&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://schema.org/email"></a>http://schema.org/email&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;@id&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;gender&quot;: &quot;<a href="http://xmlns.com/foaf/0.1/gender"></a>http://xmlns.com/foaf/0.1/gender&quot;,</li>
+<li>&nbsp; &quot;birth_date&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://schema.org/birthDate"></a>http://schema.org/birthDate&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;<a href="http://www.w3.org/2001/XMLSchema#dateTime"></a>http://www.w3.org/2001/XMLSchema#dateTime&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;death_date&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://schema.org/deathDate"></a>http://schema.org/deathDate&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;<a href="http://www.w3.org/2001/XMLSchema#dateTime"></a>http://www.w3.org/2001/XMLSchema#dateTime&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;image&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://schema.org/image"></a>http://schema.org/image&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;@id&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;summary&quot;: &quot;<a href="http://purl.org/vocab/bio/0.1/olb"></a>http://purl.org/vocab/bio/0.1/olb&quot;,</li>
+<li>&nbsp; &quot;biography&quot;: &quot;<a href="http://purl.org/vocab/bio/0.1/biography"></a>http://purl.org/vocab/bio/0.1/biography&quot;,</li>
+<li>&nbsp; &quot;national_identity&quot;: &quot;<a href="http://www.w3.org/ns/opengov#nationalIdentity"></a>http://www.w3.org/ns/opengov#nationalIdentity&quot;,</li>
+<li>&nbsp; &quot;contact_details&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://www.w3.org/ns/opengov#contactDetail"></a>http://www.w3.org/ns/opengov#contactDetail&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;@id&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;links&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://www.w3.org/2000/01/rdf-schema#seeAlso"></a>http://www.w3.org/2000/01/rdf-schema#seeAlso&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;@id&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;memberships&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://www.w3.org/ns/org#memberOf"></a>http://www.w3.org/ns/org#memberOf&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;@id&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;created_at&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://purl.org/dc/terms/created"></a>http://purl.org/dc/terms/created&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;<a href="http://www.w3.org/2001/XMLSchema#dateTime"></a>http://www.w3.org/2001/XMLSchema#dateTime&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;updated_at&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://purl.org/dc/terms/modified"></a>http://purl.org/dc/terms/modified&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;<a href="http://www.w3.org/2001/XMLSchema#dateTime"></a>http://www.w3.org/2001/XMLSchema#dateTime&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;sources&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://purl.org/dc/terms/source"></a>http://purl.org/dc/terms/source&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;@id&quot;</li>
+<li>&nbsp; }</li>
+<li>}</li></ul>
+<ul><li>extend spec</li></ul>
+
+<p><b>Organization</b></p><ul><li>origin <a href='http://popoloproject.com/specs/organization.html'/>spec ref</a></li></ul>
+<ul class="code"><li>{</li>
+<li>&nbsp; &quot;Organization&quot;: &quot;<a href="http://www.w3.org/ns/org#Organization"></a>http://www.w3.org/ns/org#Organization&quot;,</li>
+<li>&nbsp; &quot;name&quot;: &quot;<a href="http://www.w3.org/2004/02/skos/core#prefLabel"></a>http://www.w3.org/2004/02/skos/core#prefLabel&quot;,</li>
+<li>&nbsp; &quot;other_names&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://www.w3.org/ns/opengov#otherName"></a>http://www.w3.org/ns/opengov#otherName&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;@id&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;identifier&quot;: &quot;@value&quot;,</li>
+<li>&nbsp; &quot;scheme&quot;: &quot;@type&quot;,</li>
+<li>&nbsp; &quot;identifiers&quot;: &quot;<a href="http://www.w3.org/ns/org#identifier"></a>http://www.w3.org/ns/org#identifier&quot;,</li>
+<li>&nbsp; &quot;classification&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://www.w3.org/ns/org#classification"></a>http://www.w3.org/ns/org#classification&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;@id&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;parent&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://www.w3.org/ns/org#subOrganizationOf"></a>http://www.w3.org/ns/org#subOrganizationOf&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;@id&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;founding_date&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://schema.org/foundingDate"></a>http://schema.org/foundingDate&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;<a href="http://www.w3.org/2001/XMLSchema#dateTime"></a>http://www.w3.org/2001/XMLSchema#dateTime&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;dissolution_date&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://www.w3.org/ns/opengov#dissolutionDate"></a>http://www.w3.org/ns/opengov#dissolutionDate&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;<a href="http://www.w3.org/2001/XMLSchema#dateTime"></a>http://www.w3.org/2001/XMLSchema#dateTime&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;image&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://schema.org/image"></a>http://schema.org/image&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;@id&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;contact_details&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://www.w3.org/ns/opengov#contactDetail"></a>http://www.w3.org/ns/opengov#contactDetail&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;@id&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;links&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://www.w3.org/2000/01/rdf-schema#seeAlso"></a>http://www.w3.org/2000/01/rdf-schema#seeAlso&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;@id&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;memberships&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://www.w3.org/ns/org#hasMember"></a>http://www.w3.org/ns/org#hasMember&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;@id&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;posts&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://www.w3.org/ns/org#hasPost"></a>http://www.w3.org/ns/org#hasPost&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;@id&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;created_at&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://purl.org/dc/terms/created"></a>http://purl.org/dc/terms/created&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;<a href="http://www.w3.org/2001/XMLSchema#dateTime"></a>http://www.w3.org/2001/XMLSchema#dateTime&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;updated_at&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://purl.org/dc/terms/modified"></a>http://purl.org/dc/terms/modified&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;<a href="http://www.w3.org/2001/XMLSchema#dateTime"></a>http://www.w3.org/2001/XMLSchema#dateTime&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;sources&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://purl.org/dc/terms/source"></a>http://purl.org/dc/terms/source&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;@id&quot;</li>
+<li>&nbsp; }</li>
+<li>}</li></ul>
+<ul><li>extend spec</li></ul>
+
+<p><b>Membership</b></p><ul><li>origin <a href='http://popoloproject.com/specs/membership.html'/>spec ref</a></li></ul>
+<ul class="code"><li>{</li>
+<li>&nbsp; &quot;Membership&quot;: &quot;<a href="http://www.w3.org/ns/org#Membership"></a>http://www.w3.org/ns/org#Membership&quot;,</li>
+<li>&nbsp; &quot;label&quot;: &quot;<a href="http://www.w3.org/2004/02/skos/core#prefLabel"></a>http://www.w3.org/2004/02/skos/core#prefLabel&quot;,</li>
+<li>&nbsp; &quot;role&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://www.w3.org/ns/org#role"></a>http://www.w3.org/ns/org#role&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;id&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;person&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://www.w3.org/ns/org#member"></a>http://www.w3.org/ns/org#member&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;@id&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;organization&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://www.w3.org/ns/org#organization"></a>http://www.w3.org/ns/org#organization&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;@id&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;post&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://www.w3.org/ns/opengov#post"></a>http://www.w3.org/ns/opengov#post&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;@id&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;on_behalf_of&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://www.w3.org/ns/opengov#onBehalfOf"></a>http://www.w3.org/ns/opengov#onBehalfOf&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;@id&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;start_date&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://schema.org/validFrom"></a>http://schema.org/validFrom&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;<a href="http://www.w3.org/2001/XMLSchema#dateTime"></a>http://www.w3.org/2001/XMLSchema#dateTime&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;end_date&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://schema.org/validThrough"></a>http://schema.org/validThrough&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;<a href="http://www.w3.org/2001/XMLSchema#dateTime"></a>http://www.w3.org/2001/XMLSchema#dateTime&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;contact_details&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://www.w3.org/ns/opengov#contactDetail"></a>http://www.w3.org/ns/opengov#contactDetail&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;@id&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;links&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://www.w3.org/2000/01/rdf-schema#seeAlso"></a>http://www.w3.org/2000/01/rdf-schema#seeAlso&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;@id&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;created_at&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://purl.org/dc/terms/created"></a>http://purl.org/dc/terms/created&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;<a href="http://www.w3.org/2001/XMLSchema#dateTime"></a>http://www.w3.org/2001/XMLSchema#dateTime&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;updated_at&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://purl.org/dc/terms/modified"></a>http://purl.org/dc/terms/modified&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;<a href="http://www.w3.org/2001/XMLSchema#dateTime"></a>http://www.w3.org/2001/XMLSchema#dateTime&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;sources&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://purl.org/dc/terms/source"></a>http://purl.org/dc/terms/source&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;@id&quot;</li>
+<li>&nbsp; }</li>
+<li>}</li></ul>
+<ul><li>extend spec</li></ul>
+
+<p></p><p><b>Post</b></p><ul><li>origin <a href='http://popoloproject.com/specs/post.html'/>spec ref</a></li></ul>
+<ul class="code"><li>{</li>
+<li>&nbsp; &quot;Post&quot;: &quot;<a href="http://www.w3.org/ns/org#Post"></a>http://www.w3.org/ns/org#Post&quot;,</li>
+<li>&nbsp; &quot;label&quot;: &quot;<a href="http://www.w3.org/2004/02/skos/core#prefLabel"></a>http://www.w3.org/2004/02/skos/core#prefLabel&quot;,</li>
+<li>&nbsp; &quot;role&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://www.w3.org/ns/org#role"></a>http://www.w3.org/ns/org#role&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;id&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;organization&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://www.w3.org/ns/org#postIn"></a>http://www.w3.org/ns/org#postIn&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;@id&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;start_date&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://schema.org/validFrom"></a>http://schema.org/validFrom&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;<a href="http://www.w3.org/2001/XMLSchema#dateTime"></a>http://www.w3.org/2001/XMLSchema#dateTime&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;end_date&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://schema.org/validThrough"></a>http://schema.org/validThrough&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;<a href="http://www.w3.org/2001/XMLSchema#dateTime"></a>http://www.w3.org/2001/XMLSchema#dateTime&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;contact_details&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://www.w3.org/ns/opengov#contactDetail"></a>http://www.w3.org/ns/opengov#contactDetail&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;@id&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;links&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://www.w3.org/2000/01/rdf-schema#seeAlso"></a>http://www.w3.org/2000/01/rdf-schema#seeAlso&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;@id&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;memberships&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://www.w3.org/ns/opengov#heldThrough"></a>http://www.w3.org/ns/opengov#heldThrough&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;@id&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;created_at&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://purl.org/dc/terms/created"></a>http://purl.org/dc/terms/created&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;<a href="http://www.w3.org/2001/XMLSchema#dateTime"></a>http://www.w3.org/2001/XMLSchema#dateTime&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;updated_at&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://purl.org/dc/terms/modified"></a>http://purl.org/dc/terms/modified&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;<a href="http://www.w3.org/2001/XMLSchema#dateTime"></a>http://www.w3.org/2001/XMLSchema#dateTime&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;sources&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://purl.org/dc/terms/source"></a>http://purl.org/dc/terms/source&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;@id&quot;</li>
+<li>&nbsp; }</li>
+<li>}</li></ul>
+
+<ul><li>extend spec</li></ul>
+
+<p><b>Contact Detail</b></p><ul><li>origin <a href='http://popoloproject.com/specs/contact-detail.html'/>spec ref</a></li></ul>
+<ul class="code"><li>{</li>
+<li>&nbsp; &quot;ContactDetail&quot;: &quot;<a href="http://www.w3.org/ns/opengov#ContactDetail"></a>http://www.w3.org/ns/opengov#ContactDetail&quot;,</li>
+<li>&nbsp; &quot;label&quot;: &quot;<a href="http://www.w3.org/2000/01/rdf-schema#label"></a>http://www.w3.org/2000/01/rdf-schema#label&quot;,</li>
+<li>&nbsp; &quot;type&quot;: &quot;<a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"></a>http://www.w3.org/1999/02/22-rdf-syntax-ns#type&quot;,</li>
+<li>&nbsp; &quot;value&quot;: &quot;<a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#value"></a>http://www.w3.org/1999/02/22-rdf-syntax-ns#value&quot;,</li>
+<li>&nbsp; &quot;note&quot;: &quot;<a href="http://www.w3.org/2004/02/skos/core#note"></a>http://www.w3.org/2004/02/skos/core#note&quot;,</li>
+<li>&nbsp; &quot;created_at&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://purl.org/dc/terms/created"></a>http://purl.org/dc/terms/created&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;<a href="http://www.w3.org/2001/XMLSchema#dateTime"></a>http://www.w3.org/2001/XMLSchema#dateTime&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;updated_at&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://purl.org/dc/terms/modified"></a>http://purl.org/dc/terms/modified&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;<a href="http://www.w3.org/2001/XMLSchema#dateTime"></a>http://www.w3.org/2001/XMLSchema#dateTime&quot;</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;sources&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@id&quot;: &quot;<a href="http://purl.org/dc/terms/source"></a>http://purl.org/dc/terms/source&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;@type&quot;: &quot;@id&quot;</li>
+<li>&nbsp; }</li>
+<li>}</li></ul>
+
+<ul><li>extend spec</li></ul>
+
+<h2>相關專案</h2><ul><li><a href='https://github.com/g0v/addressbook.parser'/>g0v/addressbook.parser</a></li>
+<li><br/></li></ul>
+
+</body>
+</html>
