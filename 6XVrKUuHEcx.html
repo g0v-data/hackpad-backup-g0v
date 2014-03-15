@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="374"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$6XVrKUuHEcx</title>
+</head>
+<body><h1>rails note</h1><p></p><p><b>讓輸出的 html 排版便於 debug</b></p><p>slim pretty output: <a href="http://stackoverflow.com/questions/17291030/rails-slim-source-output"></a><a href='http://stackoverflow.com/questions/17291030/rails-slim-source-output'/>http://stackoverflow.com/questions/17291030/rails-slim-source-output</a></p><p>dev / production / test 三種不同環境有各自的最佳設定</p><p></p><p><b>設定 css 檔案的順序</b></p><p>app/assets/stylesheets/application.css 中</p><p>&nbsp;*= require &rsquo;semantic-ui&rsquo;</p><ul class="comment"><li>開頭的 *= 會被解讀成設定用的指令，如果把 * 跟 = 中間加一個空白那就不會被執行</li></ul>
+<p>&nbsp;*= require &rsquo;global&rsquo;</p><ul class="comment"><li>&nbsp;想要讓 global 蓋掉 semantic-ui 的話，要把 global 寫在後面</li></ul>
+<p>&nbsp;*= require_self</p><ul class="comment"><li>預設會有的，意思是 require 本檔案中這段註解結束後所寫的東西</li></ul>
+<p>*= require_tree (相對路徑)</p><ul class="comment"><li>也是預設會有的，意思是抓取 (相對路徑) 目錄裡的所有檔案，依照檔名排序</li>
+<li>也因此會出現 semantic ui.css 蓋掉客製化的 global.css 的問題</li>
+<li>除非很知道自己在幹嘛，非常不建議使用這一行，建議用白名單，而非地圖砲</li></ul>
+<p>&nbsp;*/</p><ul class="comment"><li>css 註解結束</li></ul>
+
+<p><b>設定 js 檔的順序</b></p><p>原理同上</p><p>//= require turbolinks</p><ul class="comment"><li>rails 4 新功能，換頁時用 ajax 撈出想換的那一頁塞到這一頁裡面，不好掌控，會產生 data-turbolinks-track=&quot;true&quot;&nbsp; 這段東西，不很知道幹嘛的話建議關掉</li>
+<li>&lt;script data-turbolinks-track=&quot;true&quot; src=&quot;/assets/jquery_ujs.js?body=1&quot;&gt;&lt;/script&gt;</li>
+<li><a href="http://geekmonkey.org/articles/28-introducing-turbolinks-for-rails-4-0"></a>http://geekmonkey.org/articles/28-introducing-turbolinks-for-rails-4-0</li></ul>
+
+<p><b>更改專案名稱</b></p><p>folder name 直接改就可以了</p><p>code name 在 config &gt; application.rb 裡面，通常習慣跟 folder name 一樣，但要分開也行</p><ul class="comment"><li>改這個檔案要重跑 server</li>
+<li>config 裡面的 env... app... 有改的話都要重開</li>
+<li>module G0vtoday</li></ul>
+<p>&nbsp;&nbsp;&nbsp; config.time_zone = &rsquo;Taipei&rsquo;</p><ul class="comment"><li>&nbsp;&nbsp;&nbsp; 可以順便改個時區</li></ul>
+<p>&nbsp;&nbsp;&nbsp; config.i18n.default_locale = :&quot;zh-TW&quot;</p><ul class="comment"><li>可以順便設個 i18n 語系</li></ul>
+
+<p></p><p></p><p></p></body>
+</html>
