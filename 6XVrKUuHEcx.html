@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="374"/>
+<meta name="version" content="584"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$6XVrKUuHEcx</title>
 </head>
 <body><h1>rails note</h1><p></p><p><b>讓輸出的 html 排版便於 debug</b></p><p>slim pretty output: <a href="http://stackoverflow.com/questions/17291030/rails-slim-source-output"></a><a href='http://stackoverflow.com/questions/17291030/rails-slim-source-output'/>http://stackoverflow.com/questions/17291030/rails-slim-source-output</a></p><p>dev / production / test 三種不同環境有各自的最佳設定</p><p></p><p><b>設定 css 檔案的順序</b></p><p>app/assets/stylesheets/application.css 中</p><p>&nbsp;*= require &rsquo;semantic-ui&rsquo;</p><ul class="comment"><li>開頭的 *= 會被解讀成設定用的指令，如果把 * 跟 = 中間加一個空白那就不會被執行</li></ul>
@@ -24,5 +24,10 @@
 <p>&nbsp;&nbsp;&nbsp; config.time_zone = &rsquo;Taipei&rsquo;</p><ul class="comment"><li>&nbsp;&nbsp;&nbsp; 可以順便改個時區</li></ul>
 <p>&nbsp;&nbsp;&nbsp; config.i18n.default_locale = :&quot;zh-TW&quot;</p><ul class="comment"><li>可以順便設個 i18n 語系</li></ul>
 
-<p></p><p></p><p></p></body>
+<p><b>建立多對多關連</b></p><p>rails g migration (migration名稱，英文，字串，習慣用底線隔開，他會自動幫我們轉成 camel type)</p><ul class="comment"><li>會在db &gt; migration 裡面新增一個 timestamp_name.rb 檔，空的</li></ul>
+<p>到 <i>timestamp_name.rb 裡面</i></p><p>&nbsp; def change</p><p>&nbsp;&nbsp;&nbsp; create_table :sessions_speakers do |t|</p><ul class="comment"><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 先寫 session 再寫 speaker 是因為 rails 的命名規則是按照字母順序排 ( se &lt; sp )，否則他會找不到 table</li></ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; t.references :session</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; t.references :speaker</p><p>&nbsp;&nbsp;&nbsp; end</p><p>&nbsp; end</p><p>指令 rake db:migrate</p><ul class="comment"><li>把設定檔寫入 sqlite 資料庫中</li></ul>
+<p>到 model &gt; speaker.rb</p><p>&nbsp; has_and_belongs_to_many :sessions</p><p>到 model &gt; sessionrb</p><p>&nbsp; has_and_belongs_to_many :speakers</p><ul class="comment"><li>讓這兩個原有的 model 知道彼此的關連</li></ul>
+
+</body>
 </html>
