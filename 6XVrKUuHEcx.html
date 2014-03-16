@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1102"/>
+<meta name="version" content="1195"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$6XVrKUuHEcx</title>
 </head>
 <body><h1>Rails Girls 3rd Note</h1><ul class="comment"><li>要不要 commit 到 <a href="https://github.com/g0v/g0v.today"></a>https://github.com/g0v/g0v.today 讓大家可以跟著操作? :factory:&nbsp;&nbsp;</li>
@@ -19,7 +19,8 @@
 <li>似乎是裝完了... 軌道少女團的文件寫得真不錯</li>
 <li>而且只有大綱所以很有彈性，同一個教練教的組員之間進度可以完全不同… XD</li>
 <li>rails server 會動了，之前沒有 git add bin/ (因為被上層目錄的 .gitignore 擋住)，現在修好了。</li>
-<li>pulled! :octocat:&nbsp;</li></ul>
+<li>pulled! :octocat:&nbsp;</li>
+<li>:yellow_heart: 也太可愛了吧好多符號&nbsp;</li></ul>
 
 <p><b>安裝 Rails (Rails Girls 官方文件)</b></p><p><a href="http://railsgirls.tw/install/"></a>http://railsgirls.tw/install/</p><p></p><p><b>妳的第一個 Rails App (Rails Girls 官方文件)</b></p><p><a href="http://railsgirls.tw/app/"></a>http://railsgirls.tw/app/</p><p></p><p><b>安裝 slim-rails / semantic-rails / compass-rails / ...</b></p><p>依照官方文件打 gem 指令安裝</p><p>在 gemfile 加入官方文件的設定</p><p>指令 bundle install</p><p></p><p><b>使用 slim-rails</b></p><p>把 .html.erb 檔名改成 .html.slim</p><p></p><p><b>讓輸出的 html 排版便於 debug</b></p><p>slim pretty output: <a href="http://stackoverflow.com/questions/17291030/rails-slim-source-output"></a><a href='http://stackoverflow.com/questions/17291030/rails-slim-source-output'/>http://stackoverflow.com/questions/17291030/rails-slim-source-output</a></p><p>dev / production / test 三種不同環境有各自的最佳設定，比方說開發環境需要輸出好看的 html 方便 debug，但是上線環境不要，所以 slim pretty output 的設定只寫在 config &gt; environment &gt; development.rb 裡面</p><p></p><p><b>設定 css 檔案的順序</b></p><p>app/assets/stylesheets/application.css 中</p><p>&nbsp;*= require &rsquo;semantic-ui&rsquo;</p><ul class="comment"><li>開頭的 *= 會被解讀成設定用的指令，如果把 * 跟 = 中間加一個空白那就不會被執行</li></ul>
 <p>&nbsp;*= require &rsquo;global&rsquo;</p><ul class="comment"><li>&nbsp;想要讓 global 蓋掉 semantic-ui 的話，要把 global 寫在後面</li></ul>
