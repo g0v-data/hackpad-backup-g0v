@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2402"/>
+<meta name="version" content="2890"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$sSXcU0n0Yv4</title>
 </head>
 <body><h1>當新民主遇上線路松：遊行 x 網路 x 公民論壇</h1><p></p><ul class="comment"><li>台上的人如果能即時看到評論，或是（最基本的）知道每個段落有哪些、多少人在關注，可以大幅增加互動，也有助於「深入去了解這件事情、交換我們之間的意見，產生最大的社會共識」。</li>
@@ -74,7 +74,20 @@
 <ul class="taskdone"><li>手繪 draft&nbsp;</li><ul><li><a href='https://drive.google.com/folderview?id=0B0NsS2a-Qx8ZbjlxVHVBeEFvTW8&amp;usp=sharing'/>概念 &amp; layout (mobile)</a></li></ul>
 </ul>
 <ul class="taskdone"><li>網頁 mockup</li><ul><li><a href='http://g0v.github.io/g0v.today/osdc/public/'/>osdc version</a></li></ul>
-<ul class="task"><li>rails version</li></ul>
+<ul class="task"><li>rails version</li></ul class="task">
+</li>
+<li>「議程&nbsp; -&nbsp; 場地 - 會議室」的統一對應關係 API</li></ul>
+<ul><li>問題： (當要做這樣的系統 <a href="http://g0v.github.io/g0v.today/osdc/public/"></a>http://g0v.github.io/g0v.today/osdc/public/ 會遇到的問題)<ul><li>conference 不一定有提供議程 API</li>
+<li>即使有 API， 每個 conference 的 API 格式不一致</li>
+<li>conference 的議程通常一直到 conference 當天都還在持續變動。</li></ul>
+</li>
+<li>解決方案<ul><li>a. 針對每個 conference, 寫一個轉換 script, 定期轉為 g0v.today 格式的 api</li>
+<li><s>b. 手動更新每個 conference 的議程資訊到某個地方存放</s></li>
+<li>c. 提供一個統一的「議程 - 場地 - 會議室」 API 格式及維護方式給各 FS/OSS conference 或其它活動</li></ul>
+<ul class="comment"><li>c 好像比較可行</li></ul>
+<ul><li>Reference:&nbsp;<ul><li>COSCUP 2013 議程 API&nbsp; <a href="http://json-indent.appspot.com/indent?url=http://coscup.org/2013/api/program/"></a>http://json-indent.appspot.com/indent?url=http://coscup.org/2013/api/program/</li>
+<li>OSDC 2014 議程 yml（目前不確定有沒有 API） <a href="https://raw.github.com/4point/osdc.tw/master/data/program.yml"></a>https://raw.github.com/4point/osdc.tw/master/data/program.yml</li></ul>
+</ul>
 </ul>
 
 <p><b>測試&nbsp;</b></p><p></p><undefined><li><b>OSDC.tw</b></li></undefined>
