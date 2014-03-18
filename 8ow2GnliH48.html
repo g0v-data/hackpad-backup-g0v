@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1164"/>
+<meta name="version" content="1213"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$8ow2GnliH48</title>
 </head>
 <body><h1>開放政治獻金</h1><p></p><p>本專案 google drive <a href="https://drive.google.com/folderview?id=0B64VfMr63wAdRDdRaURJNEZkeU0"></a>https://drive.google.com/folderview?id=0B64VfMr63wAdRDdRaURJNEZkeU0</p><p>目前上傳：<a href='https://drive.google.com/folderview?id=0B64VfMr63wAdaUd5aEYycW5LZzA&amp;tid=0B64VfMr63wAdRDdRaURJNEZkeU0'/>馬英九</a>、<a href='https://drive.google.com/folderview?id=0B64VfMr63wAdZGN6Ymt4QnpoSkU&amp;tid=0B64VfMr63wAdRDdRaURJNEZkeU0'/>吳育昇</a>、<a href='https://drive.google.com/folderview?id=0B64VfMr63wAdZnlPUGxfSmhiYUE&amp;tid=0B64VfMr63wAdRDdRaURJNEZkeU0'/>張慶忠</a>、<a href='https://drive.google.com/folderview?id=0B64VfMr63wAdbjBLdDhHMENVenM&amp;tid=0B64VfMr63wAdRDdRaURJNEZkeU0'/>丁守中</a>、<a href='https://drive.google.com/folderview?id=0B64VfMr63wAdZHNnY0s4QlBoVW8&amp;tid=0B64VfMr63wAdRDdRaURJNEZkeU0'/>王惠美</a>、<a href='https://drive.google.com/folderview?id=0B64VfMr63wAdQmFpc3Ezd20zR1U&amp;tid=0B64VfMr63wAdRDdRaURJNEZkeU0'/>顏清標</a>、<a href='https://drive.google.com/folderview?id=0B64VfMr63wAdelNsM0YxaHFHVWc&amp;tid=0B64VfMr63wAdRDdRaURJNEZkeU0'/>徐耀昌</a>（感謝56辦公室親自<s>上山</s>到監察院砍柴）</p><p></p><h2>專案進度</h2><p>2013/ 12/22 hackath6n 討論，決議先從數位立委/政治人物的政治獻金開始找起</p><ul><li>馮光遠老師建議：吳育昇、馬英九</li>
@@ -32,10 +32,13 @@
 <ul><li>設計政治獻金半自動 OCR 介面（Ronny Wang 分享<a href='http://ronnywang.pixnet.net/blog/post/40488349'/>如何抓出掃描文件的每個欄位</a>）</li><ul class="taskdone"><li>上傳掃描 pdf 檔並轉成圖檔&nbsp;</li>
 <li>將 PDF 轉為 ClearScan，並做第一階段的機器識別 -au<ul class="taskdone"><li>參考<a href='https://drive.google.com/file/d/0B9tD1zENsweyektyYUU0NlpKeXM/edit?usp=sharing'/>範例檔</a> ，其中文字已可剪下貼上</li>
 <li>已經上載 ClearScan + OCR 結果: <a href="https://drive.google.com/folderview?id=0B9tD1zENsweyUmZycEhWZjR5MUk&usp=sharing"></a>https://drive.google.com/folderview?id=0B9tD1zENsweyUmZycEhWZjR5MUk&amp;usp=sharing</li></ul>
-<ul class="task"><li>目前只識別沒有疊到浮水印的欄位，如果能移除浮水印則更佳</li></ul class="task">
-</li>
-<li>切框線確認（<a href='http://ronnywang.github.io/tw-campaign-finance/demo.html'/>demo 網頁</a>：速覽每份表格欄位切得如何）</li></ul>
-<ul class="task"><li>從圖檔抓出欄位資訊，所有程式碼和資料在 <a href='https://github.com/ronnywang/tw-campaign-finance'/>github</a> （以上 <a href='https://g0v.hackpad.com/ep/profile/tC7Bqff8Vp0'/>Ronny Wang</a> ++）</li>
+<ul class="task"><li>目前只識別沒有疊到浮水印的欄位，如果能移除浮水印則更佳</li>
+<li>在 yllan 的協助下已經將上述 OCR 結果轉成文字與座標，放在</li></ul>
+<ul style="list-style: none;"><li><a href="https://github.com/yllan/TextPositionExtractor"></a><a href='https://github.com/yllan/TextPositionExtractor'/>https://github.com/yllan/TextPositionExtractor</a></li>
+<li>接著就是要以這個結果去處理文字排版，然後找出欄位對應關係，接著就是人工 captcha 了</li></ul>
+</ul>
+<ul class="task"><li>切框線確認（<a href='http://ronnywang.github.io/tw-campaign-finance/demo.html'/>demo 網頁</a>：速覽每份表格欄位切得如何）</li>
+<li>從圖檔抓出欄位資訊，所有程式碼和資料在 <a href='https://github.com/ronnywang/tw-campaign-finance'/>github</a> （以上 <a href='https://g0v.hackpad.com/ep/profile/tC7Bqff8Vp0'/>Ronny Wang</a> ++）</li>
 <li>顯示 OCR 結果、校對介面</li></ul>
 <ul class="comment"><li>clkao這是跑 Server Script?</li></ul>
 </ul>
