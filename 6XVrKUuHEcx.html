@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1291"/>
+<meta name="version" content="1362"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$6XVrKUuHEcx</title>
 </head>
 <body><h1>Rails Girls 3rd Note</h1><ul class="comment"><li>要不要 commit 到 <a href="https://github.com/g0v/g0v.today"></a>https://github.com/g0v/g0v.today 讓大家可以跟著操作? :factory:&nbsp;&nbsp;</li>
@@ -44,7 +44,7 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; t.references :session</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; t.references :speaker</p><p>&nbsp;&nbsp;&nbsp; end</p><p>&nbsp; end</p><p>指令 rake db:migrate</p><ul class="comment"><li>把設定檔寫入 sqlite 資料庫中</li></ul>
 <p>到 model &gt; speaker.rb</p><p>&nbsp; has_and_belongs_to_many :sessions</p><p>到 model &gt; sessionrb</p><p>&nbsp; has_and_belongs_to_many :speakers</p><ul class="comment"><li>讓這兩個原有的 model 知道彼此的關連</li></ul>
 
-<p><b>時段、子時段 (STI)</b></p><p><a href="http://blog.thirst.co/post/14885390861/rails-single-table-inheritance"></a>http://blog.thirst.co/post/14885390861/rails-single-table-inheritance</p><p></p><p><b>class Xxxx &lt; ActiveRecord::Base 的意思是…</b></p><p>class</p><ul><li>以下鄭重宣布，有一個新品種 (的 ruby 物件) 要誕生了！</li></ul>
+<p><b>時段、子時段 (STI)</b></p><p><a href="http://blog.thirst.co/post/14885390861/rails-single-table-inheritance"></a>http://blog.thirst.co/post/14885390861/rails-single-table-inheritance</p><p></p><p><b>為什麼 rails new 以後要 bundle install</b></p><p></p><p><b>為什麼 bundle install 以後要 rake db:migrate</b></p><p></p><p><b>為什麼 rails generate scaffold 以後要 rake db:migrate</b></p><p></p><p><b>class Xxxx &lt; ActiveRecord::Base 的意思是…</b></p><p>class</p><ul><li>以下鄭重宣布，有一個新品種 (的 ruby 物件) 要誕生了！</li></ul>
 <p>Xxxxx</p><ul><li>新品種的名稱，開頭是大寫的英文字母</li></ul>
 <p>&lt;&nbsp;</p><ul><li>屬於(?)</li></ul>
 <p>ActiveRecord::Base</p><ul><li>功能是把 Xxxx 這個品種對應到資料庫中名為 xxxx 的資料表</li></ul>
