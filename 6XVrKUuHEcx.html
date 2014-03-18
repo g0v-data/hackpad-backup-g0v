@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1362"/>
+<meta name="version" content="1485"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$6XVrKUuHEcx</title>
 </head>
 <body><h1>Rails Girls 3rd Note</h1><ul class="comment"><li>要不要 commit 到 <a href="https://github.com/g0v/g0v.today"></a>https://github.com/g0v/g0v.today 讓大家可以跟著操作? :factory:&nbsp;&nbsp;</li>
@@ -41,13 +41,15 @@
 
 <p><b>建立多對多關連</b></p><p>rails g migration (migration名稱，英文，字串，習慣用底線隔開，他會自動幫我們轉成 camel type)</p><ul class="comment"><li>會在db &gt; migration 裡面新增一個 timestamp_name.rb 檔，空的</li></ul>
 <p>到 <i>timestamp_name.rb 裡面</i></p><p>&nbsp; def change</p><p>&nbsp;&nbsp;&nbsp; create_table :sessions_speakers do |t|</p><ul class="comment"><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 先寫 session 再寫 speaker 是因為 rails 的命名規則是按照字母順序排 ( se &lt; sp )，否則他會找不到 table</li></ul>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; t.references :session</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; t.references :speaker</p><p>&nbsp;&nbsp;&nbsp; end</p><p>&nbsp; end</p><p>指令 rake db:migrate</p><ul class="comment"><li>把設定檔寫入 sqlite 資料庫中</li></ul>
-<p>到 model &gt; speaker.rb</p><p>&nbsp; has_and_belongs_to_many :sessions</p><p>到 model &gt; sessionrb</p><p>&nbsp; has_and_belongs_to_many :speakers</p><ul class="comment"><li>讓這兩個原有的 model 知道彼此的關連</li></ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; t.references :session</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; t.references :speaker</p><p>&nbsp;&nbsp;&nbsp; end</p><p>&nbsp; end</p><p>指令 rake db:migrate</p><ul class="comment"><li>把設定檔寫入 sqlite 資料庫中</li>
+<li>migration （資料庫遷移）用來控制（新增欄位）跟紀錄（別人用同一個migration檔案可以跑出一樣的結果）資料庫的儲存格式，因為資料庫本身是被gitignore掉的，不然測試環境跟上線環境的資料會混在一起</li></ul>
+<p>到 model &gt; speaker.rb</p><p>&nbsp; has_and_belongs_to_many :sessions</p><p>到 model &gt; session.rb</p><p>&nbsp; has_and_belongs_to_many :speakers</p><ul class="comment"><li>讓這兩個原有的 model 知道彼此的關連</li></ul>
 
-<p><b>時段、子時段 (STI)</b></p><p><a href="http://blog.thirst.co/post/14885390861/rails-single-table-inheritance"></a>http://blog.thirst.co/post/14885390861/rails-single-table-inheritance</p><p></p><p><b>為什麼 rails new 以後要 bundle install</b></p><p></p><p><b>為什麼 bundle install 以後要 rake db:migrate</b></p><p></p><p><b>為什麼 rails generate scaffold 以後要 rake db:migrate</b></p><p></p><p><b>class Xxxx &lt; ActiveRecord::Base 的意思是…</b></p><p>class</p><ul><li>以下鄭重宣布，有一個新品種 (的 ruby 物件) 要誕生了！</li></ul>
+<p><b>migration</b></p><p>資料庫的設定檔</p><p><b>rake db:migrate</b></p><p>讓 migration 設定檔生效</p><p><b>model &gt; xxx.rb</b></p><p>裡面放資料庫關連、自訂對資料庫的操作、驗證、儲存或刪除後要多做哪些事情(callback)</p><p>model 裡面純粹的 column 會自動對應到，所以增加欄位不用改，只有增加 relation 的時候需要額外改 model 的 .rb 檔</p><p></p><p><b>時段、子時段 (STI)</b></p><p><a href="http://blog.thirst.co/post/14885390861/rails-single-table-inheritance"></a>http://blog.thirst.co/post/14885390861/rails-single-table-inheritance</p><p></p><p><b>為什麼 rails new 以後要 bundle install</b></p><p></p><p><b>為什麼 bundle install 以後要 rake db:migrate</b></p><p></p><p><b>為什麼 rails generate scaffold 以後要 rake db:migrate</b></p><p></p><p><b>class Xxxx &lt; ActiveRecord::Base 的意思是…</b></p><p>class</p><ul><li>以下鄭重宣布，有一個新品種 (的 ruby 物件) 要誕生了！</li></ul>
 <p>Xxxxx</p><ul><li>新品種的名稱，開頭是大寫的英文字母</li></ul>
-<p>&lt;&nbsp;</p><ul><li>屬於(?)</li></ul>
+<p>&lt;&nbsp;</p><ul><li>繼承</li></ul>
 <p>ActiveRecord::Base</p><ul><li>功能是把 Xxxx 這個品種對應到資料庫中名為 xxxx 的資料表</li></ul>
+<p>::</p><ul><li>在 AR 下面切一個命名空間出來</li></ul>
 
 </body>
 </html>
