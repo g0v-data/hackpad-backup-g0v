@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="941"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$ADYWtwNY3zN</title>
+</head>
+<body><h1>20140319 現場轉播經驗</h1><p><b>設備</b></p><ul><li>WiMAX 大力玩 + Desktop + HD DV</li>
+<li>WiMAX 大力玩 + Macbook Air / Macbook Pro + HD WebCam (Logitech C920)</li>
+<li>都為 Google Hangout to YouTube</li>
+<li>大力玩<a href='http://www.g1.com.tw/play.php?s=spec'/> </a><a href="http://www.g1.com.tw/play.php?s=spec"></a>http://www.g1.com.tw/play.php?s=spec</li></ul>
+
+<p><b>應解決問題</b></p><ul><li>轉播主控台 aka 棚內主播<ul><li>主播可以遠端切換轉播畫面，因現場網路不穩定，時常會有斷線</li>
+<li>透過 Google Hangout Air 可以同時最多 10 組載具登入轉播，由主播決定播出那個畫面。</li>
+<li>使用單一 Google Hangout Session，可維持一固定 youtube 轉播網址。唯轉播仍有時間限制。</li></ul>
+</li>
+<li>應用多重載具 (Android Phone, iPhone, iPad, Laptop) 直播<ul><li>最好是使用個人帳號，而非共享帳號，以免現場設定費時。</li>
+<li>越多人持有能夠簡單上網啟動直播的裝備，越能取得更多即時畫面！</li>
+<li>主播可先建立 Google Hangout&nbsp; Air event，提供網址給現場擁有載具的人員使用。外部人員準備好可隨時在 Hangout session 中啟動轉播。</li></ul>
+</li>
+<li>網路連線問題<ul><li>現場人員太多，會癱瘓 GSM/WCDMA 電信網路，同時大量手機的行動熱點與藍牙也會使 2.4Ghz 也會過於擁擠無法使用。</li>
+<li>由於 WiMAX 使用人較少，頻譜相對寬敞。用 USB 連 WiMAX Dongle 可確保品質。</li>
+<li>破解無線網路方式 - 許多機關無線網路認證設計不良，雖需登入，但未過濾 DNS 查詢。因此可用 IPv4 over DNS tunnel 連上網路。但需要於外部設定 DNS Tunnel VPN Server - kryo.se: iodine (IP-over-DNS, IPv4 over DNS tunnel) <a href="http://code.kryo.se/iodine/"></a>http://code.kryo.se/iodine/</li>
+<li>最好仍有實體線路。</li></ul>
+</li>
+<li>電力問題<ul><li>可能資源有&nbsp;<ul><li>行動電源 - USB 行動電源，可支援手機、WiMAX Wireless AP.</li>
+<li>發電機 - 吃柴油或汽油，體積龐大、製造噪音，若於會場中央使用燃料有安全疑慮。</li>
+<li>現場電力 - 如轉播現場舞台活動、可試圖聯絡附近的燈光、音響組人員取得較好視野與電力資源。需先備好延長線 (2014-03-19 經驗)</li></ul>
+</li></ul>
+</li>
+<li>接班問題<ul><li>接力請填班表，並留下手機給主播或協調人，以接收轉播狀況之簡訊通知。</li></ul>
+</li>
+<li>雨棚<ul><li>裝備怕雨 - 解決方案 TBD</li></ul>
+</li>
+<li>現場聯絡<ul><li>由於轉播點通常位於高點或會場中心，相對擁擠，沒有足夠空間作業或討論。可於場地附近選一支援會合點，提供食物以及臨時物資支援使用。</li>
+<li>無線電數組 - 若現場人數增加，將癱瘓電信網路，造成聯絡困難。若有數組人員，可置備無線電。</li></ul>
+</li>
+<li>轉播品質<ul><li>入夜後，一般的 WebCam 拍出的畫面亮度過暗</li>
+<li>若離會場太遠，需要指向性麥克風收音。</li></ul>
+</li>
+<li>已解決<ul><li>HSDPA 在人多時很慢 改用 WiMAX (3/19經驗)</li>
+<li>WiMAX USB adapter 抓不到網路 改用 WiMAX 大力玩</li>
+<li>現場 WiFi 訊號很髒，大力玩常斷 改用 USB 連接模式</li>
+<li>Desktop 很難搬動</li>
+<li>Laptop 沒有 HDMI input 無法接 DV</li></ul>
+</ul>
+
+<p><b>技術方案調查</b></p><ul><li>&nbsp;Google Hangout</li>
+<li>&nbsp;UStream</li></ul>
+
+</body>
+</html>
