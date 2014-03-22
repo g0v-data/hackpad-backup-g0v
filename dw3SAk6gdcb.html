@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="823"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$dw3SAk6gdcb</title>
+</head>
+<body><h1>零時廣場 user story</h1><p></p><h2>meta</h2><ul class="comment"><li>ko:決定要做什麼的人是誰 pm dev qa各一，如果使用者看得到的多一個 design 最多不超過4人，最少dev + qa(實做) (sample: beautiful testing ch16) ko十三邊合寫，pm level1, dev 問支線，pm回答下一步驟，qa說有沒有辦法測（問定義）pm要一直修到手上資源可以測的程度</li>
+<li>三邊寫完以後（符合需求、可以測、可以開發）三方契約，從此接替的人只要照做即可</li>
+<li><br/></li></ul>
+<p><b>summary</b></p><ul class="comment"><li>why (一段文字)</li></ul>
+<p>讓立法院立法院內、外的現場民眾，可以即時知道主要的有排節目的地點目前的狀況、接下來的行程、以及直播並提供場內g0v夥伴（任何後台夥伴）即時的回應。</p><p></p><p><b>high level scope</b></p><ul class="comment"><li>how (一句話)</li></ul>
+<ul><li>讓每個地點的工作人員（主持組）可以事前登錄<ul><li>節目名稱、開始、結束時間、哪個單位</li>
+<li>議程變動時可以即時調整</li>
+<li>有額外網址可以附上（跟直播網址分開）</li></ul>
+</li>
+<li>讓直播組工作人員可以即時登錄<ul><li>目前的直播網址</li>
+<li>目前需要的支援<ul><li>包含但不限於排班表，即時訊息發送</li></ul>
+</li></ul>
+</li>
+<li>讓現場民眾可以瀏覽資料並上傳文字訊息</li>
+<li>讓遠端的觀眾可以<ul><li>瀏覽資料</li>
+<li>回報直播串流問題</li></ul>
+</ul>
+
+<p><b>sample user case</b></p><ul class="comment"><li>誰會來怎麼用 (一句)</li></ul>
+<ul><li>小明今天到青島東路散步，看到g0v攤位，好奇之下走進去…<s>就出不來 </s>就發現手機提示連上加入開放的ap g0v.today。</li>
+<li>小明久仰g0v大名所以就連上了，於是跳出青島場的節目表，自動顯示目前時間、他所在的位置以及其他兩場正在進行的節目。</li>
+<li>小明發現濟南場的比較好玩可是人太多走不過去，他就拿出耳機開始聽濟南的節目。</li>
+<li>小明聽到一半，發現柴油發電機開始亮紅燈逼逼叫，於是按下即時回報系統，說發生了需要處理的狀況…好心的g0v小天使就聯絡上糾察隊排除情況。</li></ul>
+
+<p><b>preq:</b></p><ul class="comment"><li>需要的東西（誰要先做完才能作）清單但不一定有</li></ul>
+<ul><li>三個場地都要有自己的ap</li>
+<li>有輪班的直播人員管理直播網址維護</li></ul>
+
+<p><b>det:時間估算（可以不用寫）</b></p><p></p><p></p><h2>mockup</h2><ul class="comment"><li>純圖，互動在上面指出，抓圖，而非互動站</li></ul>
+
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_dw3SAk6gdcb_p.41199_1395476672444_foo.jpg'/></p><p></p><p></p><p>dev 區 issue (spec)</p><p>hls每個是一區，每區一個checkbox，面寫使用者做一件事情的每個步驟</p><p>(使用者跟系統的互動) (對話樹)</p><p></p><p>打勾的表示qa可測</p><p>qa測時留言吵架</p><p>hls測完以後可以整塊移到qa區，就取消打勾，換qa測完才打勾</p><p>qa發生新問題不在scope內，在qa區自己加checkbox，如果沒有這個真的沒辦法上線才做…</p><p></p><p>等dev跟qa雙勾完pm測成品，sign off-&gt; release，</p><p>讓三個不同時區的人可以協作</p><p>ko一小時</p><p>從此打勾</p><p>design跟pm最好同一時區（都是設hls的人）</p><p></p><p></p><p></p><p></p><p></p><p></p><h2>QA</h2><ul class="task"><li>if thief want to break in, sound alarm too<ul class="task"><li>...</li></ul>
+</ul>
+
+<p></p><p></p><h2>Dev</h2><ul class="taskdone"><li>user insert card...&nbsp;&nbsp;&nbsp;<ul class="taskdone"><li>...reject invalid card&nbsp;</li>
+<li>...accept valid card, and ask password<ul class="taskdone"><li>...reject invalid password</li>
+<li>...ask for function needed<ul class="taskdone"><li>...withdrawal need to prompt cash amount<ul class="taskdone"><li>...error out if insufficient fund</li>
+<li>...output cash and card</li></ul>
+</ul>
+</ul>
+</ul>
+</ul>
+<ul class="task"><li>admin opens back panel...<ul class="task"><li>prompt for maint password<ul class="task"><li>...require physical key<ul class="task"><li>...sound alarm if key does not match</li>
+<li>...send out electric wave</li></ul>
+</ul>
+</ul>
+</ul>
+
+</body>
+</html>
