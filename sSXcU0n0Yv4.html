@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="3206"/>
+<meta name="version" content="3309"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$sSXcU0n0Yv4</title>
 </head>
 <body><h1>當新民主遇上線路松：遊行 x 網路 x 公民論壇</h1><p></p><ul class="comment"><li>台上的人如果能即時看到評論，或是（最基本的）知道每個段落有哪些、多少人在關注，可以大幅增加互動，也有助於「深入去了解這件事情、交換我們之間的意見，產生最大的社會共識」。</li>
@@ -69,27 +69,32 @@
 <li>基本上小巨蛋演唱會和凱道抗議是幾乎一樣的社會情境 + 網路環境...</li>
 <li>小巨蛋演唱會就是個大家瘋狂打卡，網路無限慢的地方XD (所有人的3G都卡住)</li></ul>
 
-<p><b>實做</b></p><p></p><ul class="taskdone"><li><a href='https://github.com/g0v/g0v.today'/>github repo</a></li></ul>
-<ul class="task"><li>import map.unisharp.net source to github (event.g0v.today repo)</li></ul>
-<ul class="taskdone"><li>手繪 draft&nbsp;</li><ul><li><a href='https://drive.google.com/folderview?id=0B0NsS2a-Qx8ZbjlxVHVBeEFvTW8&amp;usp=sharing'/>概念 &amp; layout (mobile)</a></li></ul>
+<p><b>實做</b></p><ul><li>資源整理：<ul><li>手機版<ul><li>Repo: <a href="https://github.com/g0v/g0v.today"></a>https://github.com/g0v/g0v.today</li>
+<li>Demo: <a href="http://g0v.github.io/g0v.today/osdc/public/"></a>http://g0v.github.io/g0v.today/osdc/public/</li></ul>
+</li>
+<li>電腦版<ul><li>Repo: <a href="https://github.com/g0v/conference-map-main"></a>https://github.com/g0v/conference-map-main</li></ul>
+</li>
+<li>socket.io chat server<ul><li>Repo:<a href='https://github.com/g0v/conference-map-message-server'/> </a><a href="https://github.com/g0v/conference-map-message-server"></a>https://github.com/g0v/conference-map-message-server</li></ul>
+</li>
+<li><a href='https://g0v.hackpad.com/Uif7IainCU9'/>Conference API&nbsp; 整理</a></li></ul>
+</ul>
+
+<ul class="taskdone"><li><a href='https://github.com/g0v/g0v.today'/>github repo</a></li>
+<li>import map.unisharp.net source to github</li>
+<li>手繪 draft&nbsp;</li><ul><li><a href='https://drive.google.com/folderview?id=0B0NsS2a-Qx8ZbjlxVHVBeEFvTW8&amp;usp=sharing'/>概念 &amp; layout (mobile)</a></li></ul>
 </ul>
 <ul class="taskdone"><li>網頁 mockup</li><ul><li><a href='http://g0v.github.io/g0v.today/osdc/public/'/>osdc version</a></li></ul>
 <ul class="task"><li>rails version</li></ul class="task">
 </li>
-<li>統一 API</li><ul class="task"><li>活動 i.e. OSDC_2014</li>
-<li>講者&nbsp;</li>
-<li>議程 ( = 主題 + 日期時間 + { 活動、會議室、講者的關聯} )</li>
-<li>會議室 i.e. 103A</li>
-<li>場地, i.e. TICC, 中研院</li></ul>
-</ul>
-<ul><li>討論問題： (當要做這樣的系統 <a href="http://g0v.github.io/g0v.today/osdc/public/"></a>http://g0v.github.io/g0v.today/osdc/public/ 會遇到的問題)<ul><li>conference 不一定有提供議程 API</li>
+<li>統一 API</li></ul>
+<ul class="comment"><li>討論問題： (當要做這樣的系統 <a href="http://g0v.github.io/g0v.today/osdc/public/"></a>http://g0v.github.io/g0v.today/osdc/public/ 會遇到的問題)<ul class="comment"><li>conference 不一定有提供議程 API</li>
 <li>即使有 API， 每個 conference 的 API 格式不一致</li>
-<li>conference 的議程通常一直到 conference 當天都還在持續變動。</li></ul>
+<li>conference 的議程通常一直到 conference 當天都還在持續變動。</li></ul class="comment">
 </li>
-<li>解決方案<ul><li>a. 針對每個 conference, 寫一個轉換 script, 定期轉為 g0v.today 格式的 api</li>
+<li>解決方案<ul class="comment"><li>a. 針對每個 conference, 寫一個轉換 script, 定期轉為 g0v.today 格式的 api</li>
 <li><s>b. 手動更新每個 conference 的議程資訊到某個地方存放</s></li>
-<li>c. 提供一個統一的「議程 - 場地 - 會議室」 API 格式及維護方式給各 FS/OSS conference 或其它活動</li></ul>
-<ul class="comment"><li>c 好像比較可行</li>
+<li>c. 提供一個統一的「議程 - 場地 - 會議室」 API 格式及維護方式給各 FS/OSS conference 或其它活動</li>
+<li>c 好像比較可行</li>
 <li>c +1</li>
 <li>等釋出之後，也許可以加上像 hack.g0v.tw 這樣直接用試算表做的編輯界面，比較好改?</li>
 <li>試算表編輯 +1</li></ul>
@@ -98,7 +103,7 @@
 </ul>
 </ul>
 
-<p><b>測試&nbsp;</b></p><p></p><undefined><li><b>OSDC.tw</b></li></undefined>
+<p></p><p><b>測試&nbsp;</b></p><p></p><undefined><li><b>OSDC.tw</b></li></undefined>
 
 <ul><li>以不影響既有線路組為前提，也許可以挑幾個不重疊的 5Ghz 頻道，壓力測試 dd-wrt。(=opt-in)</li>
 <li>連上 g0v.today AP 之後自動跳出某些 OSDC 相關的靜態資訊頁面和常用工具 (g0villa 體驗營?)</li>
