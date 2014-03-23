@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="195"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$S6Wk06P10ij</title>
+</head>
+<body><h1>User Story: 學運及 NPO 需求物資即時認捐清點</h1><p></p><h2>提案人</h2><p>Anonymous</p><p>hlb 代貼</p><p></p><h2>Summary</h2><p>讓有意願捐贈物資支援學運或 NPO 的民眾可以即時了解需求物資詳細狀況，以及在線上進行認捐登記，提昇物資管理中心物資控管效率，並減少捐贈物資與實際所需數量不符所造成的資源浪費。</p><p></p><h2>User Story</h2><ul><li>&nbsp;讓物資管理中心工作人員可以<ul><li>登錄物資管理中心收件資訊，如收件人、聯絡電話、收件地址等</li>
+<li>即時登錄需求物資品項、數量及備註</li>
+<li>各品項可設定需求優先權</li>
+<li>設定各品項認捐等待時間（due date）</li>
+<li>收到捐贈物資後將認捐辨識碼輸入管理後台清理需求物資品項及數量，並即時將最新狀況更新於網站上</li></ul>
+</li>
+<li>讓有意捐贈物資民眾可以<ul><li>以 Google 或 Facebook 帳號登記（目的為防止惡意攻擊）</li>
+<li>可複選認捐品項及設定數量（ref:購物車、世界展望會線上捐款）。</li>
+<li>流程完成後系統發送認捐清單（以 checklist 方式顯示）及提供認捐辨識碼、條碼，要求民眾郵寄時將辨識碼填寫在寄件人名稱，或將條碼印出貼在箱子上。</li>
+<li>完成物資捐贈並且有乖乖提供認捐辨識碼的民眾，可在物資入倉後收到系統感謝狀。</li></ul>
+<ul style="list-style: none;"><li>說明：會設定要能複選是實務上可能不僅只捐贈單一品項，也可能會分批分箱出貨，一品項一辨識碼會增加操作困難度。當然會遇到實際捐贈數量與線上登記不符的狀況，收到物資時暫時一律依線上登記為主，簡化入倉程序，實際狀況明顯落差大的由工作人員手動增加需求數量繼續募集即可。加上倉儲管理系統實在太可怕啦～～</li></ul>
+</ul>
+<ul><li>系統處理<ul><li>需求物資資訊輸入、顯示及即時更新</li>
+<li>介面上顯示需求物資品項、數量、募集截止時間、備註及認捐人數、認捐數量、已入倉數量，並以清晰易懂的方式標示優先權例如顏色</li>
+<li>認捐帳號登入、登記捐贈資訊。但暫時不處理捐贈清單線上查詢</li>
+<li>對應單一認捐帳號的認捐資料統整及募集資訊更新</li>
+<li>發送認捐清單包含不重複使用的認捐辨識碼</li>
+<li>依據認捐辨識碼即時更新募集狀況。接受輸入重複的認捐辨識碼，並 alert</li>
+<li>發送物資入倉感謝狀</li></ul>
+</ul>
+
+<h2>Sample Use Case</h2><ul><li>大雄受到感召要去青島東路，一到現場發現氣溫立馬下降十度，開始擔心參與太陽花學運的學生們是否有吃飽穿暖，用手機連上網站，發現正在募集禦寒物資及蛙鏡毛巾好折凳等，並清清楚楚標示需求物資的募集即時情況。</li>
+<li>善心大發的大雄立即用手機勾選了毛毯、暖暖包、輕便雨衣、外套，選擇了需求數量的上限，用FB帳號登入確認後，豪氣地按下送出。（系統同時發佈一篇感謝函到大雄的 timeline 上，感謝大雄）。</li>
+<li>大雄在信箱收到通知信後立馬上 24h 按照清單採購了毛毯、暖暖包、輕便雨衣、GORE-TEX 外套及 3000 杯礦泉水，並在付費資料填寫頁面將認捐辨識碼 copy &amp; paste 在寄件人名字後方。</li>
+<li>物資中心收到大雄透過 24h 所寄送的物資後清點數量，發現大雄雖然買了高貴的 GORE-TEX，但數量比當時認捐還少20件，依然把認捐辨識碼輸入，然後苦命地重新建立募集外套一件項目。</li>
+<li>收到大雄認捐辨識碼的系統，會發佈一封正妹宜靜親筆感謝信到大雄信箱，讓大雄知道捐贈物資有安全入倉，並且會被充分妥善使用（同時張貼至大雄 FB timeline）。</li></ul>
+
+<h2>討論</h2><ul><li>學運最大問題是現場網路狀況（需要說明），另外現場非常去中心化</li></ul>
+
+</body>
+</html>
