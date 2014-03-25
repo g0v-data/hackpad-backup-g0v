@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1167"/>
+<meta name="version" content="1335"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$DcgMGDWw8WQ</title>
 </head>
 <body><h1>lí kám ū thiann-tio̍h in ê giân</h1><p></p><p>Github page:</p><p><a href="https://github.com/a-tsioh/kam-u-thiann-tioh"></a>https://github.com/a-tsioh/kam-u-thiann-tioh</p><p></p><h2>目的</h2><p>Provide a webpage to search and browse public speeches made around the&nbsp;</p><p></p><h2>User story</h2><p>A typical user may not have followed the whole event or missed part of it. He wants to have a clearer picture of the though shared on the different stages around the legislative yuan.</p><p></p><h2>需要什麼</h2><ul><li>understand and select what source of data may be relevant and shall be indexed</li>
@@ -22,14 +22,16 @@
 <li>person</li>
 <li>text</li>
 <li>may have an English translation</li></ul>
-<p>From the text, we may extract some keywords (like names of politic figures, event, places...)</p><p></p><h2>dealing with videos</h2><p>Just a question, if we precise location and time of the begining of each recording, does it make sense to link it to the text feeds ?</p><p></p><p></p><h2>用的技術</h2><ul><li>Django on the serverside ( I need some python libs)</li>
-<li>elasticsearch for the index</li>
-<li>Livescript on the clientside, we may need some d3js (just because I like it)</li>
+<p>From the text, we may extract some keywords (like names of politic figures, event, places...)</p><p></p><h2>dealing with videos</h2><p>Just a question, if we precise location and time of the beginning of each recording, does it make sense to link it to the text feeds ?</p><p></p><p></p><h2>用的技術</h2><ul><li>Django on the serverside ( I need some python libs)</li>
+<li>elasticsearch for the index</li></ul>
+<ul class="comment"><li>a-tsioh: just curious, how do you plan to host the server? or do we have a hosted elaticsearch server ready? (cuz one server should be able to serve multiple projects, if the loading is not heavy)</li></ul>
+<ul><li>Livescript on the clientside, we may need some d3js (just because I like it)</li>
 <li>select a UI toolkit (no preference for now&nbsp;</li></ul>
 
 <p>----</p><p>先把FB　的 messages 放在這</p><p></p><p>_________</p><p></p><p>大家好！</p><p>我身爲國語有限制的外國人。</p><p>在現在發生的事件，資料已經多得難以處理。</p><p>很多有意思的話，我注意不到。</p><p>text 和 video 的 livestream 事實上我大腦無法處理。（你們會有這個問題嗎？）</p><p>找到的資料大部分都是 chronological.</p><p>現在有沒有計劃作一個讓人look back at what have been said</p><p>just like a search engine over the transcript/videos</p><p>或許有而有只是沒發現。</p><p>沒有的話，我願意來負責</p><ul><li><br/></li>
 <li><b><a href='https://www.facebook.com/zbryikt'/>Kirby Wu</a></b> 我有 logbot 跟 bbs 的 crawler, 文字直播跟鄉民的消息都可以做.. (logbot 其實比較好的是拿 dump database or api endpoint )</li>
 <li>video 則需要有逐字稿或至少自動翻譯.. facebook 可以建立一個專頁, 請大家把相關訊息轉入, 再用程式自動備份...其他資料來源就得 case by case?</li></ul>
+<ul class="comment"><li>PTT 八卦板上有很多其他資料的 link, 至少廣為流傳的都不會漏掉</li></ul>
 
 <ul><li><b><a href='https://www.facebook.com/pierre.magistry'/>Pierre Magistry</a></b> I was thinking about starting with the live transcription archive (and 文播記錄) that are already timestamped, this may help to align Mandarin and English and maybe even video if possible</li></ul>
 <p><b><a href='https://www.facebook.com/pierre.magistry'/>Pierre Magistry</a></b> one usecase would also be to allow people that were not following to catch up (including foreign press)</p><ul><li><b><a href='https://www.facebook.com/pierre.magistry'/>Pierre Magistry</a></b> 有些無關的事我得先處理。晚一點會回來。</li>
