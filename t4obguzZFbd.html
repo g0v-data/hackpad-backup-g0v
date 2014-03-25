@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2338"/>
+<meta name="version" content="2424"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$t4obguzZFbd</title>
 </head>
 <body><h1>鄉民關心你 - 專案開發指南</h1><p></p><p><b>技術架構(Technique Selection)</b></p><p></p><ul><li>Programming Language:&nbsp;<ul><li>Web: <a href='https://www.google.com.tw/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;ved=0CDAQFjAA&amp;url=http%3A%2F%2Flivescript.net%2F&amp;ei=afm3UebdE4TTkAW4lYDwCg&amp;usg=AFQjCNHLh2n5SJLJCBB-yTcUJpC4KnqEhQ&amp;sig2=J4XpRoDfOvq4lYkC_wBEMQ'/>LiveScript</a> (Frontend and Backend)</li>
@@ -73,12 +73,13 @@
 <li>plv8x: <a href="https://npmjs.org/package/plv8x"></a><a href='https://npmjs.org/package/plv8x'/>https://npmjs.org/package/plv8x</a></li></ul>
 </ul>
 
-<p></p><p><b>準備開發環境 For Windows&nbsp;</b></p><p></p><ol><li>安裝 Vagrant (1.3.4) <a href="http://downloads.vagrantup.com/"></a>http://downloads.vagrantup.com/<a href='http://downloads.vagrantup.com/'/>&nbsp;</a></li>
+<p></p><p><b>準備開發環境 For Windows&nbsp;</b></p><p>據說目前 windows 的安裝方式壞掉了 , 似乎無法抓到 Vbox 檔案 (我是沒有人但我不會修) - 20140325</p><ol><li>安裝 Vagrant (1.3.4) <a href="http://downloads.vagrantup.com/"></a>http://downloads.vagrantup.com/<a href='http://downloads.vagrantup.com/'/>&nbsp;</a></li>
 <li>安裝 virtalbox <a href="https://www.virtualbox.org/wiki/Downloads"></a>https://www.virtualbox.org/wiki/Downloads<a href='https://www.virtualbox.org/wiki/Downloads'/>&nbsp;</a><ol><li>確定電腦的 <i>Virtualization Technology</i> enabled&nbsp;<ol><li>how? google &quot;[motherboard] bios VT&quot;</li></ol>
 </li>
 <li>Environment variable -&gt; path added C:&#92;Program Files&#92;Oracle&#92;VirtualBox;</li></ol>
-</li>
-<li>安裝 git (<b>1.8.4</b>) <a href="http://git-scm.com/download/win"></a>http://git-scm.com/download/win<a href='http://git-scm.com/download/win'/>&nbsp;</a><ol><li>try cmd -&gt; git (看看有沒有這個指令)</li></ol>
+</ol>
+<ul style="list-style: none;"><li>注: Vagrant 1.3.4 只支援 virtalbox 4.0,4.1,4.2 版本</li></ul>
+<ol><li>安裝 git (<b>1.8.4</b>) <a href="http://git-scm.com/download/win"></a>http://git-scm.com/download/win<a href='http://git-scm.com/download/win'/>&nbsp;</a><ol><li>try cmd -&gt; git (看看有沒有這個指令)</li></ol>
 </li>
 <li>安裝 mingw <a href="http://sourceforge.net/projects/mingw/files/"></a>http://sourceforge.net/projects/mingw/files/<ol><li>MinGW install manager-&gt; Basic Setup -&gt; select&nbsp;<ol><li>mingw-developer toolkit</li>
 <li>mingy32-base&nbsp;</li>
