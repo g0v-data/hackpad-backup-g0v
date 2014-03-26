@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="549"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$aZNHYZ3GsHW</title>
+</head>
+<body><h1>立法院議場網路 SSL MITM 訊息澄清</h1><p></p><p><b>摘要</b></p><p></p><p>抗議人士反應現場網路連結 Facebook 時，出現憑證錯誤訊息。目前判斷是由於院內網路憑證過期，被重新導向到登入網站。由於登入網站使用的 SSL 憑證與 Facebook 不同，所以出現了錯誤警告訊息。解決方式使連到任何一個未加密的 http 網站，會進入登入系統，隨意填入空白資料後即可繼續上網。</p><p></p><p>但請注意，務必不要填入其他人的個人資料，以免觸犯刑法第&nbsp; 358 條「無故輸入他人帳號密碼」罪責。</p><p></p><undefined><li><b><i>尚無明顯證據顯示公部門以監聽方式，竊取現場抗議民眾資料，或篡改網站內容。&nbsp;</i></b></li></undefined>
+
+<p><b>細節</b></p><p></p><p>立法院議場二樓提供有線網路與無線網路供媒體或民眾使用，為了安全控管因素，第一次上網以及每二十四小時會被導引到無線網路登入系統 (Captive Portal <a href="https://en.wikipedia.org/wiki/Captive_portal)"></a>https://en.wikipedia.org/wiki/Captive_portal)。</p><p></p><p>實作的方式利用 DNS redirection <a href="https://en.wikipedia.org/wiki/DNS_hijacking"></a>https://en.wikipedia.org/wiki/DNS_hijacking，若該臺電腦 (依照網路卡 MAC ID 確認)尚未上網認證，則所有網域名稱查詢會指回&nbsp; <u>172.16.198.228</u> 登入網站</p><p></p><ul class="code"><li>Starting Nmap 6.40 ( <a href="http://nmap.org"></a>http://nmap.org ) at 2014-03-21 07:06 CST&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>Nmap scan report for 172.16.198.228</li>
+<li>Host is up (0.00088s latency).</li>
+<li>Not shown: 988 closed ports</li>
+<li>PORT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; STATE SERVICE</li>
+<li>80/tcp&nbsp;&nbsp;&nbsp; open&nbsp; http</li>
+<li>135/tcp&nbsp;&nbsp; open&nbsp; msrpc</li>
+<li>139/tcp&nbsp;&nbsp; open&nbsp; netbios-ssn</li>
+<li>445/tcp&nbsp;&nbsp; open&nbsp; microsoft-ds</li>
+<li>1025/tcp&nbsp; open&nbsp; NFS-or-IIS</li>
+<li>1028/tcp&nbsp; open&nbsp; unknown</li>
+<li>1030/tcp&nbsp; open&nbsp; iad1</li>
+<li>3071/tcp&nbsp; open&nbsp; csd-mgmt-port</li>
+<li>3306/tcp&nbsp; open&nbsp; mysql</li>
+<li>3389/tcp&nbsp; open&nbsp; ms-wbt-server</li>
+<li>49152/tcp open&nbsp; unknown</li>
+<li>50000/tcp open&nbsp; ibm-db2</li>
+<li>MAC Address: 00:1E:67:09:A7:F9 (Intel Corporate)</li>
+<li>Device type: general purpose</li>
+<li>Running: Microsoft Windows XP|2003</li>
+<li>OS CPE: cpe:/o:microsoft:windows_xp::sp2 cpe:/o:microsoft:windows_server_2003::sp1 cpe:/o:microsoft:windows_server_2003::sp2</li>
+<li>OS details: Microsoft Windows XP SP2 or Windows Server 2003 SP1 or SP2</li>
+<li>Network Distance: 1 hop</li>
+<li><br/></li>
+<li>OS detection performed. Please report any incorrect results at <a href="http://nmap.org/submit/"></a>http://nmap.org/submit/ .</li>
+<li>Nmap done: 1 IP address (1 host up) scanned in 15.57 seconds</li></ul>
+
+<p>院內只開放唯一 DNS 伺服器 (<u>10.12.8.3</u>) 以 UDP Port 53 連到外部網域名稱伺服器，因此使用者無法使用自訂的名稱伺服器。</p><p></p><p><b>網路安全建議</b></p><p>雖然沒有證據顯示公部門監聽網路使用或使用 MITM 中間人攻擊，但為了安全因素，建議通訊加密</p><ul><li>網頁加密技術<ul><li>Firefox 使用者請安裝 HTTPS Everywhere&nbsp; - <a href="https://www.eff.org/https-everywhere"></a>https://www.eff.org/https-everywhere</li>
+<li>Chrome 使用者請安裝 KB SSL Enforcer - <a href="https://chrome.google.com/webstore/detail/kb-ssl-enforcer/flcpelgcagfhfoegekianiofphddckof"></a>https://chrome.google.com/webstore/detail/kb-ssl-enforcer/flcpelgcagfhfoegekianiofphddckof</li></ul>
+</li>
+<li>加密通訊</li></ul>
+<ul style="list-style: none;"><li>聯絡不使用 SMS, Line, WeChat, WhatsApp. 建議採用開放源碼的 Telegram</li><ul><li><a href="https://telegram.org/"></a>https://telegram.org/</li>
+<li>iOS - Telegram Messenger on the App Store on iTunes <a href="https://itunes.apple.com/us/app/telegram-messenger/id686449807?mt=8"></a>https://itunes.apple.com/us/app/telegram-messenger/id686449807?mt=8</li>
+<li>Android - Telegram - Google Play Android 應用程式 <a href="https://play.google.com/store/apps/details?id=org.telegram.messenger"></a>https://play.google.com/store/apps/details?id=org.telegram.messenger</li>
+<li>Web - <a href="http://zhukov.github.io/webogram/"></a>http://zhukov.github.io/webogram/</li></ul>
+</li>
+<li>電子郵件請使用 GNUPG 加密 <a href="http://www.gnupg.org/"></a>http://www.gnupg.org/</li></ul>
+<ul><li>盡可能全程使用 VPN</li></ul>
+
+<p><b>參考</b></p><ul><li>蔡志展 - 在立法院周圍或議場內部上網的朋友，請安裝 EFF 的 HTTPS Everywhere, 他會自動使用 SSL... <a href="https://www.facebook.com/chihchun/posts/10152347405987915?notif_t=like"></a>https://www.facebook.com/chihchun/posts/10152347405987915?notif_t=like</li>
+<li>Hong Yu Lin - 動態時報相片 <a href="https://www.facebook.com/photo.php?fbid=10152986312632524&set=a.187162337523.159469.788597523&type=1"></a>https://www.facebook.com/photo.php?fbid=10152986312632524&amp;set=a.187162337523.159469.788597523&amp;type=1</li></ul>
+
+<p><b>原始作者</b></p><p>Rex Tsai &lt;rex.cc.tsai@gmail.com&gt; <a href="http://www.facebook.com/chihchun"></a>http://www.facebook.com/chihchun</p><p></p></body>
+</html>
