@@ -3,14 +3,15 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="602"/>
+<meta name="version" content="643"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$4tGJf2h69t4</title>
 </head>
-<body><h1>live.g0v.tw</h1><p>佔領立法院網路直播</p><p></p><p><b>要解決的問題</b></p><ul><li>現有的聯播網無法 cover 所有直播</li>
+<body><h1>live.g0v.tw 立院影城特別版</h1><p>佔領立法院網路直播</p><p></p><p><b>要解決的問題</b></p><ul><li>現有的聯播網無法 cover 所有直播</li>
 <li>新上架的直播網址需要一直更新</li>
 <li>g0v.today 工人 24 小時隨時待命放最新網址會很累</li>
-<li>過期的直播網址需要保存、可以回頭查詢</li></ul>
-<p>需要功能完整的直播專用網頁，內嵌在 g0v.today 中。網址定為 live.g0v.tw</p><p></p><p><b>mockup</b></p><p></p><p></p><p><b>功能</b></p><ul class="comment"><li>前端完成在行首加 :ballot_box_with_check: ( : 後接 ballot_box_with_check)，後端完成加 :heavy_check_mark: ( : 後接 heavy_check_mark)，驗收完成整行打勾</li></ul>
+<li>過期的直播網址需要保存、可以回頭查詢</li>
+<li>過期的直播需要連到對應的文字轉播，讓網友可以邊看邊幫忙補完文字</li></ul>
+<p>需要功能完整的直播專用網頁，可內嵌在 g0v.today 中，也可單獨瀏覽。網址為 live.g0v.tw</p><p></p><p><b>mockup</b></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_4tGJf2h69t4_p.52366_1395970196570_live.g0v.today mockup.png'/></p><p></p><p><b>功能</b></p><ul class="comment"><li>前端完成在行首加 :ballot_box_with_check: ( : 後接 ballot_box_with_check)，後端完成加 :heavy_check_mark: ( : 後接 heavy_check_mark)，驗收完成整行打勾</li></ul>
 <ul class="task"><li>使用者從 g0v.today 左側選單，按下其中一個選項，打開內嵌的 live.g0v.tw 頁面…<ul class="task"><li>…看到一個影片清單<ul class="task"><li>每個影片有時間、地點、主題等 metadata</li>
 <li>影片下面可以連到相關的文字稿</li>
 <li>使用桌機的話，一列可以有好幾個影片</li>
@@ -27,8 +28,10 @@
 <li>使用者直接打開 live.g0v.tw<ul class="task"><li>按下某個連結，可以回到 g0v.today 的 hackfoldr 內嵌頁面</li></ul class="task">
 </li>
 <li>維護人員想更新直播網址時，進入 github repo 或某後台…<ul class="task"><li>直接加一筆新的 item 並附上 meta data</li>
-<li>把舊的 off air 的 item 標上某個 class，使它 display: none</li>
-<li>設定好後前台會自動更新</li></ul>
+<li>把舊的 off air 的 item 標上某個 class，使它 display: none 之類的</li>
+<li>設定好後…<ul class="task"><li>前台會自動更新</li>
+<li>off air 的影片會自動抓取結束時間，標註在 metadata 欄位</li></ul>
+</ul>
 </ul>
 
 <p><b>技術實做</b></p><p><a href="https://github.com/g0v/ivod.ly.g0v.tw/"></a><a href='https://github.com/g0v/ivod.ly.g0v.tw/'/>https://github.com/g0v/ivod.ly.g0v.tw/</a> (= <a href="http://ivod.ly.g0v.tw/"></a><a href='http://ivod.ly.g0v.tw/'/>http://ivod.ly.g0v.tw/</a> ) 也許可以參考</p><p>簡單一點的話就是掛上 <a href="http://mediaelementjs.com/"></a><a href='http://mediaelementjs.com/'/>http://mediaelementjs.com/</a> 即可</p><p></p><p></p></body>
