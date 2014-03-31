@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="688"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$mvxkbtlXlDf</title>
+</head>
+<body><h1>User Story 空白模版 (Socialtext Style)</h1><ul class="comment"><li>空白模版，請勿直接填寫，複製後貼到你的 hackpad</li>
+<li>對 hackpad 不熟悉嗎？這裡有詳細的教學：<a href='https://g0v.hackpad.com/QUrgIRJEpv4#空白模版使用方式'/>空白模版使用方式</a></li></ul>
+
+<h2>本模版使用說明</h2><p></p><p>這份 user story 模版源於 socialtext 開發流程。這套流程的好處是，處在三個不同時區的 pm、dev、qa 可以遠端接力協作，因此，也很適合應用在開發團隊結構鬆散的 g0v 專案。另，如果有 design 加入的話，design 跟 pm 最好是同一時區，因為這兩位都是設定 high level scope 的人。流程如下：</p><p></p><p><b>籌備</b></p><ul class="comment"><li>(應該要準備一些 kickoff 會議用的資料...?)</li></ul>
+<ul><li><br/></li></ul>
+
+<p><b>kickoff meeting</b></p><ul><li>專案一開始的時候進行的簡短會議，時間約一個小時</li>
+<li>會議的目的是決定要做什麼、誰來做，會議的產出就是這份 user story (sample: beautiful testing ch16)</li>
+<li>與會者包括 pm dev qa 團隊的代表各一，如果要開發的是使用者看得到的東西，與會者會多一個 design</li>
+<li>與會人數最多 4 人，最少兩人。兩人的狀況就是 dev + qa (實做組自己開會)</li>
+<li>開會時，pm 先寫 level1 的 checklist，dev 會問接下來呢？如果失敗會怎樣？pm 接著回答下個步驟要做什麼，qa 聽完以後問這功能測試成功的定義是什麼？然後表示手頭上的資源有沒有辦法測……如此循環。最後 pm 要把文件修到手上資源可以測的程度</li>
+<li>pm dev qa 一起寫完 user story 以後，就表示專案「符合需求、可以開發、有辦法測」，這份文件就是一個三方契約，從此接替的人不管是不是原來的與會者，都只要照做即可</li></ul>
+
+<p><b>實做</b></p><ul><li>dev 在開發完的項目中打第一個勾</li>
+<li>qa 測試完以後，在該項目中打第二個勾</li>
+<li>pm 確認成品後，整行打勾表示 sign off</li>
+<li>然後那個項目就可以 release 了</li>
+<li>過程中有任何討論，可以在該項目底下 comment</li>
+<li>如果出現新 feature 發想，移到下一階段的開發</li>
+<li>QA 新增 feature sample</li><ul class="task"><li>if thief want to break in, sound alarm too<ul class="task"><li>...</li></ul>
+</ul>
+</ul>
+
+<p>以上內容由 au 口頭傳授，et 打字整理。</p><p></p><p>以下正文開始。</p><p></p><p></p><h2>Meta</h2><p></p><p><b>Summary</b></p><ul class="comment"><li>why: 要解決什麼問題、為什麼要開發這個東西 (一段文字)</li></ul>
+
+<p></p><p><b>High Level Scope</b></p><ul class="comment"><li>how: 要怎麼做才能解決上面說的問題 (幾句話)</li></ul>
+<ul><li><br/></li></ul>
+
+<p><b>Sample User Case</b></p><ul class="comment"><li>誰會來怎麼用 (幾句話)</li></ul>
+<ul><li><br/></li></ul>
+
+<p><b>Preq</b></p><ul class="comment"><li>要先具備什麼條件才能做這個 (optional)</li></ul>
+<ul><li><br/></li></ul>
+
+<p><b>Det</b></p><ul class="comment"><li>時間估算 (optional)</li></ul>
+
+<p></p><h2>Spike</h2><ul class="comment"><li>這是什麼東西？ QAQ</li></ul>
+<p>Read [SPIKE]</p><p></p><p></p><h2>Mockup</h2><ul class="comment"><li>wireframe / mockup 抓圖，如果有互動功能，在圖片上面指出來</li></ul>
+
+<p></p><h2>Spec</h2><ul class="comment"><li>由 high level scope 衍生出的對話樹，寫使用者做一件事情的每個步驟 (使用者跟系統的互動)&nbsp;</li>
+<li>dev 開發完以後在行首加上 :ballot_box_with_check: ( : 後面接 ballet... )</li>
+<li>qa 測完以後加上 :+1: ( : 後面接 +1 )&nbsp;</li>
+<li>pm 驗收完以後整行打勾</li>
+<li>deploy 後…如果全部 <s>像這樣劃掉</s> 會不會很爽？ XD</li>
+<li>qa 發現不在 scope 內的新問題時，如果沒有這個真的沒辦法上線，則自己加 checkbox，不然就等下一階段的開發再說</li></ul>
+
+<ul class="task"><li>...<ul class="task"><li>...</li>
+<li>...</li></ul class="task">
+</li>
+<li>...</li>
+<li>...</li></ul>
+
+<p></p><h2>Dev Journal</h2><ul class="comment"><li>這個我也不知道是什麼… QAQ</li></ul>
+
+<p></p><p></p></body>
+</html>
