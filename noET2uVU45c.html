@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="428"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$noET2uVU45c</title>
+</head>
+<body><h1>罷免立委 簡化工具 及 視覺化 頁面</h1><p></p><p>參考ptt FuMouDiscuss 版 Demogorgan 的文章</p><p>[爆料] 「割闌尾」計畫(0)─罷免技術優化計畫</p><p><a href="http://www.ptt.cc/bbs/FuMouDiscuss/M.1395722243.A.BF5.html"></a>http://www.ptt.cc/bbs/FuMouDiscuss/M.1395722243.A.BF5.html</p><p>[爆料] 「割闌尾」計畫(1)─計畫的動機與目的</p><p><a href="http://www.ptt.cc/bbs/FuMouDiscuss/M.1395723476.A.97A.html"></a>http://www.ptt.cc/bbs/FuMouDiscuss/M.1395723476.A.97A.html</p><p>[爆料] 「割闌尾」計畫(2)─罷免情資蒐集</p><p><a href="http://www.ptt.cc/bbs/FuMouDiscuss/M.1395724719.A.4AA.html"></a>http://www.ptt.cc/bbs/FuMouDiscuss/M.1395724719.A.4AA.html</p><p>[爆料] 「割闌尾」計畫─藍委罷免相關數據統計</p><p><a href="http://www.ptt.cc/bbs/FuMouDiscuss/M.1395756011.A.6FC.html"></a>http://www.ptt.cc/bbs/FuMouDiscuss/M.1395756011.A.6FC.html</p><p></p><p>挖坑給自己跳，以下為發想</p><p></p><ol><li>提案連署前 : &quot;願意參與&quot; 第一階段連署人數統計 視覺化網站開發<ol><li>資料蒐集</li></ol>
+<ul class="taskdone"><li>蒐集立委資料 與 兩階段需要人數資料 <a href="http://www.ptt.cc/bbs/FuMouDiscuss/M.1395756011.A.6FC.html"></a><a href='http://www.ptt.cc/bbs/FuMouDiscuss/M.1395756011.A.6FC.html'/>http://www.ptt.cc/bbs/FuMouDiscuss/M.1395756011.A.6FC.html</a>&nbsp;</li></ul>
+<ul class="task"><li>蒐集每一選區選區範圍資料(<a href="https://docs.google.com/spreadsheets/d/1U0WHHn3yGrmzOPEYf2EocDM1zXXlyZpBhBQkc-HgeKc/edit?usp=sharing)"></a>https://docs.google.com/spreadsheets/d/1U0WHHn3yGrmzOPEYf2EocDM1zXXlyZpBhBQkc-HgeKc/edit?usp=sharing)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li></ul>
+<ol><li>網站內容<ol><li>技術選擇：</li><ul class="task"><li>服務：為了擴充性，目前考慮google app engine</li>
+<li>語言：目前考慮後台Python，前端JS</li></ul>
+</ol>
+<ol><li>前台</li><ul class="task"><li>開發登入機制 FB login,<ul class="task"><li>取得email, 未來開始連署時，可以email通知連署開始，通知文件要寄到哪邊。</li>
+<li>取得年齡（方便統計分布狀況，Demogorgan 後續有不少文章把各年齡人數分出來，可能可以幫助了解重要的目標族群）</li></ul class="task">
+</li>
+<li>顯示頁面<ul class="task"><li>依據地區顯示願意參與連署人數總數及距離通過門檻的百分比。</li>
+<li>顯示地圖區塊 (API ?)</li>
+<li>每區根據人數標上顏色(API)</li></ul>
+</ul>
+</ol>
+<ol><li>後台</li><ul class="task"><li>資料庫<ul class="task"><li>欄位: 選區, id, 年齡, email</li>
+<li>減少資料庫負擔(google app engine memcache ?)</li></ul>
+</ul>
+</ol>
+</ol>
+</ol>
+<ol><li>第一階段連署中需求:&nbsp;<ol><li>簡化連署流程<ol><li>簡易產生連署文書<ol><li>輸入資料，產生檔案，方便列印後手動簽名</li></ol>
+<ul class="task"><li>確認是否所有資料需要手寫，還是只要簽名部分手寫即可?</li>
+<li>雙面列印，直接連寄送地址都印在背面，三折之後可以直接寄出。</li>
+<li>server side 產生 / client side產生</li></ul>
+</ol>
+<ol><li>簡易ibon連線列印</li><ul class="task"><li>研究asus雲端列印API，產生連署文書後可以直接送到ibon，去7-11就可以列印。<ul class="task"><li>似乎需要個人帳號，不方便，共用帳號又有個資外洩問題。</li></ul>
+</ul>
+</ol>
+</ol>
+</ol>
+<ol><li>第二階段連署中</li></ol>
+
+<p></p></body>
+</html>
