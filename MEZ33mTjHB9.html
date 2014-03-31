@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1858"/>
+<meta name="version" content="2036"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$MEZ33mTjHB9</title>
 </head>
 <body><h1>g0v addressbook iOS app</h1><p></p><h2>政府通訊錄 iOS 版</h2><p>需要聯絡政府單位或是政府官員時候，需要查詢電話資料及內容，或是聯絡相關人員之時，提供行動版的查詢功能</p><p></p><p>簡單的說就是 <a href='http://hack.g0v.tw/kuansim/g6v6MpyacFb'/>政府公開通訊錄</a> 的手機連接端，但是是離線版</p><p></p><p></p><h2>Feature Version</h2><ul><li>0.x</li><ul class="comment"><li>&nbsp;做不完再來考慮</li></ul>
@@ -60,14 +60,17 @@
 <ol><li>liked, call phone, share</li>
 <li>Related websites</li></ol>
 
-<p><b>DB:</b></p><ul><li>Entities:<ul><li>機關</li>
-<li>縣市</li>
-<li>Tag</li>
-<li>User</li>
-<li>Bookmark</li></ul>
+<p><b>DB:</b></p><ul><li>organization:<ul><li>機關名稱</li>
+<li>地址</li>
+<li>電話</li></ul>
+</li>
+<li>favorites:<ul><li>org.id</li>
+<li>標記 (BOOL</li></ul>
+</li>
+<li>contact (ly)<ul><li>姓名</li></ul>
 </ul>
 
-<p><b>分工及成員</b></p><ul><li>superbil</li>
+<p>org &lt;-&gt; fav 的關係是一對一</p><p></p><p><b>分工及成員</b></p><ul><li>superbil</li>
 <li>allenlinl</li></ul>
 
 <p></p></body>
