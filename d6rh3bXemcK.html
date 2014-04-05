@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1920"/>
+<meta name="version" content="1965"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$d6rh3bXemcK</title>
 </head>
 <body><h1>在會場中建立可靠的訊息傳遞網路</h1><h2>情境問題</h2><ul><li>一般民眾：現場網路不通</li>
@@ -27,8 +27,11 @@
 <li>提供Android、iOS 平台支援<ul><li>iOS 平台無法控制系統資源，如果單純透過 APP sandbox 的作法，也許只能透過 bluetooth or P2P 的方式達成網路共享，但是缺點是需要透過該網路的功能都必須內建在此 App，似乎不是終極解決之道。</li></ul>
 </li>
 <li>App 使用者可以作為wifi熱點分享給其他沒有安裝的人<ul><li>Android HotSpot 有人數上限: 5人</li></ul>
-</li>
-<li><br/></li></ul>
+</ul>
+<p><b>rsync 資料同步</b></p><ul><li><a href="http://rsync.samba.org/download.html"></a>http://rsync.samba.org/download.html</li>
+<li><a href="http://gimite.net/en/index.php?Run%20native%20executable%20in%20Android%20App"></a>http://gimite.net/en/index.php?Run%20native%20executable%20in%20Android%20App</li>
+<li>目的是要解決同步資料時的不完整性，理論上可做到各節點間同時是發送端也是接收端</li></ul>
+
 <h2>可能應用</h2><ul><li>用git在會場同步需要擴散的網頁資料，</li>
 <li>支援會場中民眾以點對點/群組方式互相通訊與傳輸檔案</li>
 <li>支援會場後勤管理人員資訊彙整<ul><li>做得像Pushbullet，緊急呼叫可以全面通諜(mail/irc/IM/透過周圍的人XD)該目標人員</li></ul>
