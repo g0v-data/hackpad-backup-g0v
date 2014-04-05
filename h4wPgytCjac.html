@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="3610"/>
+<meta name="version" content="4092"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$h4wPgytCjac</title>
 </head>
 <body><h1>學運現場無網路的通訊解決APP方案</h1><ul><li><b>發起人/拋磚人：Lrills</b></li>
@@ -122,8 +122,9 @@
 <li><br/></li></ul class="comment">
 </li>
 <li>我想問節點間的傳輸是always連線嗎?用bluetooth或WiFi?對外看起來可用WiFi或3/4G。Open garden提到用Bluetooth跟WiFi-Direct(Android4.x以上支援，這門檻會過高嗎?==&gt;ok)，當然可以用Bluetooth連線。WiFi點對點我們有測過，大約戶外30公尺算極限了，bluetooth理論上會更短，不過傳message bluetooth應該絕對夠用。</li></ul>
-<ul class="comment"><li>Android 4.X market share 已經過半，理論上市場接受度是可行的 <a href="http://developer.android.com/about/dashboards/index.html?utm_source=ausdroid.net"></a>http://developer.android.com/about/dashboards/index.html?utm_source=ausdroid.net</li>
-<li>ios multipeer的話是apple已經幫包裝好搜尋所有wifi or bluetooth下的peer&nbsp;</li>
+<ul class="comment"><li>ios multipeer的話是apple已經幫包裝好搜尋所有wifi or bluetooth下的peer&nbsp;</li>
+<li>Android 4.x market share 已經過半，理論上市場接受度是可行的 <a href="http://developer.android.com/about/dashboards/index.html?utm_source=ausdroid.net"></a><a href='http://developer.android.com/about/dashboards/index.html?utm_source=ausdroid.net'/>http://developer.android.com/about/dashboards/index.html?utm_source=ausdroid.net</a></li>
+<li>另外，節點間的 http 持續連線方式是不可行的，keep connection alive 會占用 device 資源，當量一大就會 crash，除非能確保 one-to-one</li>
 <li>想了解一下，wifi或bluetooth有辦法判斷距離嗎?例如訊號要多高才進行連線和資料傳輸，以這種方式篩選附近的人數</li>
 <li>想問一下在場對於開發進度的想法！要討論出一個雛型直接進行開發，或是先整理的完善一點，在4/19號的hackthon現場開發！？</li></ul>
 
@@ -140,8 +141,22 @@
 <li>那是小台基地台XD&nbsp; 用吉普車是方便颱風啊什麼時候進山裡面用的.... 那台車可以游泳的~~~</li>
 <li>已感動QQ&nbsp;&nbsp;</li>
 <li>clement是ptt的sibaseman大嗎?&nbsp; yes<ul class="comment"><li>謝謝你！需要高手qq</li>
-<li><br/></li></ul>
+<li>安安各位，結果3G網路可以通w</li></ul>
 </ul>
+<p>那是否需要把醫療事件獨立出來？</p><ul class="comment"><li>我覺得小俞 + MOSI W 的圖給出了一個開發方向，Firechat 提供了無差別發言平台，但無法針對某項訊息進行回應</li>
+<li>可以就 bbs 或論壇的形式製作，例如：</li>
+<li>1 . 依 GPS 標出事件地點</li>
+<li>2. 事件狀態粗分『待處理』『處理中』『處理中，待增援』『已解決』等等</li>
+<li>3. 一個事件底下包含內容、時間(系統產生)、地點(系統產生)、回應(依距離分出其可信度和有效性，也可用來做排序)</li>
+<li>4. 事件的產生和回應，可以用通用選項方式，加速回應速度，畢竟手持 device 的輸入速度仍舊快不過點選方式</li>
+<li>是否結合Google地圖？</li>
+<li>以上面的想法 Google Maps 是一定要的，但也需要提供依距離、狀態可進行排序、分類的列表(for offline device)</li>
+<li>誰來判斷跟決定事件狀態的處理進度？</li>
+<li>最簡單的方式當然是由事件發起人決斷，但如果遇到事件發起人被載去野放，可由現場人員發出最新狀態，但須列出該狀態發出筆數，每人限發一種狀態，並會取代同一人前一次狀態</li>
+<li>例如：[待處理]小七前有人昏倒，此事件因為發起人被野放無法即時更新狀態，現場人員即可發出狀態『[待處理(主)][處理中(3)][處理中，待增援(10)][已解決(0)]小七前有人昏倒』，從狀態中可看出大部分人認為仍須處理並增援</li>
+<li>現場人員的定義同樣可用距離決定</li>
+<li>所以可能可以用人數來判斷事件可信度(處理度)，然後顯示出來高中低這樣。</li>
+<li><br/></li></ul>
 
 </body>
 </html>
