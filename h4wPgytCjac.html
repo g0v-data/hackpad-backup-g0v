@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="3610"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$h4wPgytCjac</title>
+</head>
+<body><h1>學運現場無網路的通訊解決APP方案</h1><ul><li><b>發起人/拋磚人：Lrills</b></li>
+<li><b>狀態： </b>集結各路好漢</li>
+<li><b>專案簡介：</b></li><ul style="list-style: none;"><li>學運現場的無網路解決app方案</li><ul class="comment"><li>參考「<b>在會場中建立可靠的訊息傳遞網」</b> <a href="https://g0v.hackpad.com/d6rh3bXemcK"></a>https://g0v.hackpad.com/d6rh3bXemcK 兩案坑主可協作討論</li>
+<li><br/></li></ul>
+</ul>
+</ul>
+<ul><li><b>工作目標：</b></li><ul style="list-style: none;"><li>短期可能目標：快速開發提供反服貿運動使用</li>
+<li>長期可能目標：創造一個開放源碼的無網路通訊協定</li></ul>
+</ul>
+<ul><li><b>授權方式：</b></li>
+<li><b>使用資料：</b></li>
+<li><b>徵求夥伴（有興趣直接簽名）：</b></li>
+<li><b>NeedsWriter (撰寫基本資訊、報導專案 etc)：</b></li>
+<li><b>NeedsDesigner (介面設計)：</b></li>
+<li><b>NeedsData (擷取整理資料)：</b></li>
+<li><b>NeedsTech (程式、架站 etc)：</b></li>
+<li><b>NeedsProcess (設計作業流程)：</b></li>
+<li><b>NeedsTalkingToRealPerson (需要真人溝通協調)：</b></li></ul>
+
+<p>-----------------------------------------------------------------------------------------</p><p></p><p><a href="http://www.ptt.cc/bbs/FuMouDiscuss/M.1396630334.A.53A.html"></a>http://www.ptt.cc/bbs/FuMouDiscuss/M.1396630334.A.53A.html</p><p>ptt發想連結</p><p></p><p></p><p></p><p>--</p><ul class="comment"><li>你要不要先把PTT原文網址貼出來?</li>
+<li>好XD</li>
+<li><a href="http://www.ptt.cc/bbs/FuMouDiscuss/M.1396630334.A.53A.html"></a><a href='http://www.ptt.cc/bbs/FuMouDiscuss/M.1396630334.A.53A.html'/>http://www.ptt.cc/bbs/FuMouDiscuss/M.1396630334.A.53A.html</a></li>
+<li>ptt發想連結</li></ul>
+
+<ul class="comment"><li>其實有個很基礎的問題，就是你做成APP的話，沒有SERVER，要是在網路連線困難的情況下， 大家一開始還是沒有辦法下載XD</li>
+<li>所以可能要另外做出「任何人只要有裝APP 就可以成為第0台SERVER，雖然沒有企業CERT，但是最起碼可以提供APK給ANDROID USER下載安裝連上....」</li></ul>
+
+<ul class="comment"><li>對 大概想法是這樣但是沒有相關通訊軟體的經驗沒什麼頭緒...但是web app沒辦法控制到裝置上的藍芽...</li>
+<li>是的!! 希望能解決330那種狀況</li></ul>
+
+<ul class="comment"><li>你一樣是native app啊 ...</li>
+<li>要快速做出來的話可以考慮直接寫HTTP SERVER + 跑在 WEB SERVER上的 APP&nbsp;</li>
+<li>不過因為現在立法院外面網路順暢 甚至有 g0v 的免費 WIFI AP.....</li>
+<li>所以回過頭來 這個project是不是定義成 &quot;無網路環境下的區域通訊解決方案(含LOG)&quot; ?</li>
+<li>其實我記得 g0v 有個很類似的坑..... 但是要找找看</li>
+<li>在這裡-&gt; <a href="https://g0v.hackpad.com/d6rh3bXemcK"></a><a href='https://g0v.hackpad.com/d6rh3bXemcK'/>https://g0v.hackpad.com/d6rh3bXemcK</a></li></ul>
+
+<ul class="comment"><li>我個人認為這個APP最需要的權限是 強迫關閉手機 3g 連線XD</li>
+<li>然後自動挑幾隻當樹最上面的 node ，用 3g 連出去</li>
+<li>就跟直銷一樣...... 一路往下擴散傳資料</li>
+<li>每層 node 之間 sync 而不是p2p在 sync</li>
+<li>因為你要解決的是 330 那種 10k級的人數&nbsp;</li></ul>
+
+<ul class="comment"><li>會希望有頻道的功能分流，每個node建立起一個識別資訊，識別所屬的頻道</li>
+<li>所以是把群眾分流程幾個區塊，各用一個節點連上server這樣嗎?</li></ul>
+
+<ul class="comment"><li>如果如果是iOS的話可以做到給每個裝置一個識別資訊，搜尋附近所有的頻道。</li></ul>
+
+<ul class="comment"><li>恩一開始想的是透過每個peer發布出去的時候可以自帶一個peer的info(4KB以內的dictionary)，從這裡來作識別，如果要提供列表資訊的話會變成一定要連上internet嗎?</li></ul>
+
+<ul class="comment"><li>不是一定要連上 internet&nbsp;</li>
+<li>是在 user 推廣觀點.....</li>
+<li>今天一個 new user 進入你的場域</li>
+<li>有裝這個 APP 的人當然不用說 他們知道要開</li>
+<li>那沒裝的人呢?</li>
+<li>所以你↓↓看下面</li></ul>
+
+<ul class="comment"><li>這個其實你不配個在 internet 上的統一入口</li>
+<li>是沒辦法把 user 導進你的 intranet 或是 darknet 的</li>
+<li>但是總而言之 無論 user 是在 intranet 還是 darknet&nbsp;</li>
+<li>進來之後就是給他頻道列表讓他選 他再直接連上 primary node</li></ul>
+
+<ul class="comment"><li>坦白來說 如果沒有 g0v&nbsp;</li>
+<li>這種遊行現場的網路解決方案</li>
+<li>如果我要玩 那就是幾組 wimax+wifi ap，但是停留在 intranet 上</li>
+<li>讓user全部都連上我的 ssid 進我的 intranet</li>
+<li>然後我用幾台 android 機器跑 httpd server.....&nbsp;</li>
+<li>一切都是 web app 這樣XD</li>
+<li>你要實作 open garden (firechat...)當然沒有問題啊</li>
+<li>問題是官方也才剛實做完XD</li></ul>
+
+<ul class="comment"><li>好像真的是比較實際的做法...我沉澱一下下XD</li></ul>
+
+<ul class="comment"><li>也不是沒人再ios作http server唷 應該超多XD</li>
+<li>因為我看我每隻 player 跟 pdf reader 都有內建上傳檔案進APP用的http server 啊</li></ul>
+
+<ul class="comment"><li>綜合另外一篇看了一下稍微懂了一點...</li>
+<li>所以綜合一下可能的方案會是1.intranet 2.由可連線的node推播(如另一坑方案) 3.firechat方案&nbsp;</li>
+<li><br/></li></ul>
+
+<p></p><p>可行方案優缺點分析：</p><p><b>1.intranet</b></p><ul style="list-style: none;"><li>優：</li><ul><li>可快速由現有資源搭建或者修改，甚至不用上架到兩個 store<ul><li>活動現場支援用backpack ，真的包成一個背包出團，例如: Server pack: wimax + wifi ap + nb + nb用行動電源 + webcam</li>
+<li>Live pack: wimax + 行動電源 + iPad</li></ul>
+</li>
+<li>g0v線路松支援後，可以直接從 intranet 變成 internet&nbsp;</li></ul>
+</ul>
+<ul class="comment"><li>WiMAX hotspot 或WiFi AP support連線user數也會受限</li>
+<li>如果把 wifi ap 的天線拔掉似乎可以透過距離縮短來減少使用人數? (誤</li>
+<li>可是不巧全球一動大力玩是內建天線(毆</li>
+<li>一般WiFi AP都可以簡單調整發射功率，看看大力玩是否也可調整WiFi的發射功率。如果不行，只好拿鐵便當盒蓋住XD&nbsp;</li></ul>
+<ul style="list-style: none;"><li>缺：&nbsp;</li><ul><li>主辦單位或有心路人需在活動前準備好 Server pack 帶過去現場</li>
+<li>每個 server pack 的 session 數被 ap 限制</li>
+<li>因為是 s/c 架構，所以 server 的負載度需要考慮一下 ( node.js / backbone.js ....)</li></ul>
+</ul>
+<p><b>2.由可連線的node與雲端相連</b></p><ul style="list-style: none;"><li>優：</li><ul><li>節省 3g 資源</li>
+<li>不論地點平台都能加入</li></ul>
+</ul>
+<ul style="list-style: none;"><li>缺：</li><ul><li>需有前幾個 node (或者主辦單位都會裝的話那倒是不用煩惱)</li>
+<li>3g收訊死角造成盲區</li>
+<li>群首整組消失時? 例如整群人被水柱噴濕 offline</li></ul>
+</ul>
+<p><b>3.firechat</b></p><ul style="list-style: none;"><li>優：</li><ul><li>去中心化</li>
+<li>不論時地都可使用</li>
+<li>只要中間有node串接，理論上支援範圍無限大</li></ul>
+</ul>
+<ul style="list-style: none;"><li>缺：</li><ul><li>須先下載APP&nbsp;</li>
+<li>聽說目前版本iOS和Android不互通? (查證中...)</li></ul>
+<ul class="comment"><li><i>ref: </i><a href="http://stackoverflow.com/questions/18884705/transfer-data-between-ios-and-android-via-bluetooth"></a><i>http://stackoverflow.com/questions/18884705/transfer-data-between-ios-and-android-via-bluetooth</i><i>&nbsp;&nbsp;</i></li>
+<li>可能解法 1.android透過wifi監聽iOS device發布的bonjour服務(理論可行，但找不到實作的例子) 2.BLE (但android端有bug待解決)</li>
+<li>剛請朋友測過Firechat的iOS跟Android連通，互相找不到dervice。所以可以由iOS一個大group，Android一個大group往下去sync資訊，只要iOS跟Android兩個節點的資訊同步即可!?&nbsp;&nbsp; android也有firechat</li>
+<li>android是用什麼跟ios的firechat測的阿? 哦哦?上次我沒找到的說。我現在看到了</li></ul>
+<ul><li>p2p同步較無效率，可能無法負荷如330遊行10k up人數</li></ul>
+<ul class="comment"><li>其實應該說 10K up 到底 p2p sync 要花多久...</li>
+<li>如果10層內可以傳完所有node應該是很快的，但是無法徹底解決對同一node重複播送的問題</li>
+<li><br/></li></ul class="comment">
+</li>
+<li>我想問節點間的傳輸是always連線嗎?用bluetooth或WiFi?對外看起來可用WiFi或3/4G。Open garden提到用Bluetooth跟WiFi-Direct(Android4.x以上支援，這門檻會過高嗎?==&gt;ok)，當然可以用Bluetooth連線。WiFi點對點我們有測過，大約戶外30公尺算極限了，bluetooth理論上會更短，不過傳message bluetooth應該絕對夠用。</li></ul>
+<ul class="comment"><li>Android 4.X market share 已經過半，理論上市場接受度是可行的 <a href="http://developer.android.com/about/dashboards/index.html?utm_source=ausdroid.net"></a>http://developer.android.com/about/dashboards/index.html?utm_source=ausdroid.net</li>
+<li>ios multipeer的話是apple已經幫包裝好搜尋所有wifi or bluetooth下的peer&nbsp;</li>
+<li>想了解一下，wifi或bluetooth有辦法判斷距離嗎?例如訊號要多高才進行連線和資料傳輸，以這種方式篩選附近的人數</li>
+<li>想問一下在場對於開發進度的想法！要討論出一個雛型直接進行開發，或是先整理的完善一點，在4/19號的hackthon現場開發！？</li></ul>
+
+<p></p><p>小俞：報名UI設計！</p><p>歡迎 感謝Q口Q</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_h4wPgytCjac_p.143126_1396711214438_網路屏蔽通訊器test01-01.jpg'/></p><ul class="comment"><li>改成緊急事件回報 用途比較廣XD&nbsp;&nbsp;&nbsp;</li></ul>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_h4wPgytCjac_p.138515_1396712829267_123.jpg'/></p><p></p><p></p><ul class="comment"><li><br/></li></ul>
+
+<p>小俞：剛剛快速作了一些東西，有任何建議直接寫上來吧，其實因為現在flow還沒出來所以都亂做XDD（對了，名稱是亂取的）準備出門去守夜了掰！</p><ul class="comment"><li>現場有網路XD&nbsp;</li>
+<li>我都收不到耶？是g0v的嗎？</li>
+<li>青島東路的話 小七附近應該有 濟南的話應該很多隻啊我記得 (不過我只有用過g0v內部用的 沒用過開放給大家用的版本orz) 濟南路叫做 g0v-public 的樣子 開wifi搜尋一下</li>
+<li>那邊感覺完全被屏蔽啊QQ 中華電信工會你們不是要出來反對了嗎？快開個訊號車來嘛～</li>
+<li>人太多 3g 沒訊號正常啦 而且我還真的沒看到中華的車耶 遠傳跟台哥大很多台XD</li>
+<li>我有看過一次神奇的車子，有拍到，照片再此：<a href="https://flic.kr/p/mrS8L5"></a>https://flic.kr/p/mrS8L5</li>
+<li>但其實不知道幹嘛用的就是了....感覺是私用（？）</li>
+<li>那是小台基地台XD&nbsp; 用吉普車是方便颱風啊什麼時候進山裡面用的.... 那台車可以游泳的~~~</li>
+<li>已感動QQ&nbsp;&nbsp;</li>
+<li>clement是ptt的sibaseman大嗎?&nbsp; yes<ul class="comment"><li>謝謝你！需要高手qq</li>
+<li><br/></li></ul>
+</ul>
+
+</body>
+</html>
