@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="5073"/>
+<meta name="version" content="5133"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$h4wPgytCjac</title>
 </head>
 <body><h1>學運現場無網路的通訊解決APP方案</h1><ul><li><b>發起人/拋磚人：Lrills</b></li>
@@ -131,6 +131,8 @@
 <li>Android 4.x market share 已經過半，理論上市場接受度是可行的 <a href="http://developer.android.com/about/dashboards/index.html?utm_source=ausdroid.net"></a><a href='http://developer.android.com/about/dashboards/index.html?utm_source=ausdroid.net'/>http://developer.android.com/about/dashboards/index.html?utm_source=ausdroid.net</a></li>
 <li>另外，節點間的 http 持續連線方式是不可行的，keep connection alive 會占用 device 資源，當量一大就會 crash，除非能確保 one-to-one</li>
 <li>想了解一下，wifi或bluetooth有辦法判斷距離嗎?例如訊號要多高才進行連線和資料傳輸，以這種方式篩選附近的人數</li>
+<li>android 有 getScanResult( )，ScanResult 裡面有個值叫level可以得知wifi訊號強度(單位dBm)</li>
+<li><a href="http://developer.android.com/reference/android/net/wifi/WifiManager.html#getScanResults%28%29"></a>http://developer.android.com/reference/android/net/wifi/WifiManager.html#getScanResults%28%29</li>
 <li>想問一下在場對於開發進度的想法！要討論出一個雛型直接進行開發，或是先整理的完善一點，在4/19號的hackthon現場開發！？</li></ul>
 
 <p></p><p></p><p>小俞：報名UI設計！</p><p>歡迎 感謝Q口Q</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_h4wPgytCjac_p.143126_1396711214438_網路屏蔽通訊器test01-01.jpg'/></p><ul class="comment"><li>改成緊急事件回報 用途比較廣XD&nbsp;&nbsp;&nbsp;</li></ul>
