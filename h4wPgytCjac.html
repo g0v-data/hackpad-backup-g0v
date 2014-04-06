@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="4528"/>
+<meta name="version" content="5033"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$h4wPgytCjac</title>
 </head>
 <body><h1>學運現場無網路的通訊解決APP方案</h1><ul><li><b>發起人/拋磚人：Lrills</b></li>
@@ -90,12 +90,8 @@
 <p></p><p>可行方案優缺點分析：</p><p><b>1.intranet</b></p><ul style="list-style: none;"><li>優：</li><ul><li>可快速由現有資源搭建或者修改，甚至不用上架到兩個 store<ul><li>活動現場支援用backpack ，真的包成一個背包出團，例如: Server pack: wimax + wifi ap + nb + nb用行動電源 + webcam</li>
 <li>Live pack: wimax + 行動電源 + iPad</li></ul>
 </li>
-<li>g0v線路松支援後，可以直接從 intranet 變成 internet&nbsp;</li></ul>
+<li>g0v線路松支援後，可以直接從 intranet 變成 internet<b><i> (*1)</i></b></li></ul>
 </ul>
-<ul class="comment"><li>WiMAX hotspot 或WiFi AP support連線user數也會受限</li>
-<li>如果把 wifi ap 的天線拔掉似乎可以透過距離縮短來減少使用人數? (誤</li>
-<li>可是不巧全球一動大力玩是內建天線(毆</li>
-<li>一般WiFi AP都可以簡單調整發射功率，看看大力玩是否也可調整WiFi的發射功率。如果不行，只好拿鐵便當盒蓋住XD&nbsp;</li></ul>
 <ul style="list-style: none;"><li>缺：&nbsp;</li><ul><li>主辦單位或有心路人需在活動前準備好 Server pack 帶過去現場</li>
 <li>每個 server pack 的 session 數被 ap 限制</li>
 <li>因為是 s/c 架構，所以 server 的負載度需要考慮一下 ( node.js / backbone.js ....)</li></ul>
@@ -107,29 +103,37 @@
 <li>3g收訊死角造成盲區</li>
 <li>群首整組消失時? 例如整群人被水柱噴濕 offline</li></ul>
 </ul>
-<p><b>3.firechat</b></p><ul style="list-style: none;"><li>優：</li><ul><li>去中心化</li>
+<p><b>3.firechat(*2)</b></p><ul style="list-style: none;"><li>優：</li><ul><li>去中心化</li>
 <li>不論時地都可使用</li>
 <li>只要中間有node串接，理論上支援範圍無限大</li></ul>
 </ul>
 <ul style="list-style: none;"><li>缺：</li><ul><li>須先下載APP&nbsp;</li>
-<li>聽說目前版本iOS和Android不互通? (查證中...)</li></ul>
-<ul class="comment"><li><i>ref: </i><a href="http://stackoverflow.com/questions/18884705/transfer-data-between-ios-and-android-via-bluetooth"></a><i>http://stackoverflow.com/questions/18884705/transfer-data-between-ios-and-android-via-bluetooth</i><i>&nbsp;&nbsp;</i></li>
+<li>聽說目前版本iOS和Android不互通? (查證中...)<b><i>(*3)</i></b></li>
+<li>p2p同步較無效率，可能無法負荷如330遊行10k up人數<b><i>(*4)</i></b></li></ul>
+</ul>
+<p>*1</p><ul class="comment"><li>WiMAX hotspot 或WiFi AP support連線user數也會受限</li>
+<li>如果把 wifi ap 的天線拔掉似乎可以透過距離縮短來減少使用人數? (誤</li>
+<li>可是不巧全球一動大力玩是內建天線(毆</li>
+<li>一般WiFi AP都可以簡單調整發射功率，看看大力玩是否也可調整WiFi的發射功率。如果不行，只好拿鐵便當盒蓋住XD&nbsp;</li>
+<li>WiMAX 確定要淘汰了，未來 device 已經頃向 LTE</li>
+<li>FD-LTE系統中華電信會較先設立，目前已經cell plan中。至於WiMAX就看會不會就地升級成TD-LTE，不過device是絕對不相容的XD。但dervice都會弄成大力玩型態(誰叫WiFi普及率這麼高)，所以對APP設計(若是經WiFi-4G系統連上網)基本上影響不大</li></ul>
+<p>*2</p><ul class="comment"><li>從另外一篇文章看到有qaul.net跟Telegram都有同樣類似的效果，也可以download到手機試試看，我先借幾個Android手機來試試看這三個APP的實用性</li></ul>
+<p>*3</p><ul class="comment"><li><i>ref: </i><a href="http://stackoverflow.com/questions/18884705/transfer-data-between-ios-and-android-via-bluetooth"></a><i><a href='http://stackoverflow.com/questions/18884705/transfer-data-between-ios-and-android-via-bluetooth'/>http://stackoverflow.com/questions/18884705/transfer-data-between-ios-and-android-via-bluetooth</a></i><i>&nbsp;&nbsp;</i></li>
 <li>可能解法 1.android透過wifi監聽iOS device發布的bonjour服務(理論可行，但找不到實作的例子) 2.BLE (但android端有bug待解決)</li>
 <li>剛請朋友測過Firechat的iOS跟Android連通，互相找不到dervice。所以可以由iOS一個大group，Android一個大group往下去sync資訊，只要iOS跟Android兩個節點的資訊同步即可!?&nbsp;&nbsp; android也有firechat</li>
 <li>android是用什麼跟ios的firechat測的阿? 哦哦?上次我沒找到的說。我現在看到了</li></ul>
-<ul><li>p2p同步較無效率，可能無法負荷如330遊行10k up人數</li></ul>
-<ul class="comment"><li>其實應該說 10K up 到底 p2p sync 要花多久...</li>
+
+<p>*4</p><ul class="comment"><li>其實應該說 10K up 到底 p2p sync 要花多久...</li>
 <li>如果10層內可以傳完所有node應該是很快的，但是無法徹底解決對同一node重複播送的問題</li>
-<li><br/></li></ul class="comment">
-</li>
-<li>我想問節點間的傳輸是always連線嗎?用bluetooth或WiFi?對外看起來可用WiFi或3/4G。Open garden提到用Bluetooth跟WiFi-Direct(Android4.x以上支援，這門檻會過高嗎?==&gt;ok)，當然可以用Bluetooth連線。WiFi點對點我們有測過，大約戶外30公尺算極限了，bluetooth理論上會更短，不過傳message bluetooth應該絕對夠用。</li></ul>
-<ul class="comment"><li>ios multipeer的話是apple已經幫包裝好搜尋所有wifi or bluetooth下的peer&nbsp;</li>
+<li><br/></li>
+<li>我想問節點間的傳輸是always連線嗎?用bluetooth或WiFi?對外看起來可用WiFi或3/4G。Open garden提到用Bluetooth跟WiFi-Direct(Android4.x以上支援，這門檻會過高嗎?==&gt;ok)，當然可以用Bluetooth連線。WiFi點對點我們有測過，大約戶外30公尺算極限了，bluetooth理論上會更短，不過傳message bluetooth應該絕對夠用。</li>
+<li>ios multipeer的話是apple已經幫包裝好搜尋所有wifi or bluetooth下的peer&nbsp;</li>
 <li>Android 4.x market share 已經過半，理論上市場接受度是可行的 <a href="http://developer.android.com/about/dashboards/index.html?utm_source=ausdroid.net"></a><a href='http://developer.android.com/about/dashboards/index.html?utm_source=ausdroid.net'/>http://developer.android.com/about/dashboards/index.html?utm_source=ausdroid.net</a></li>
 <li>另外，節點間的 http 持續連線方式是不可行的，keep connection alive 會占用 device 資源，當量一大就會 crash，除非能確保 one-to-one</li>
 <li>想了解一下，wifi或bluetooth有辦法判斷距離嗎?例如訊號要多高才進行連線和資料傳輸，以這種方式篩選附近的人數</li>
 <li>想問一下在場對於開發進度的想法！要討論出一個雛型直接進行開發，或是先整理的完善一點，在4/19號的hackthon現場開發！？</li></ul>
 
-<p></p><p>小俞：報名UI設計！</p><p>歡迎 感謝Q口Q</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_h4wPgytCjac_p.143126_1396711214438_網路屏蔽通訊器test01-01.jpg'/></p><ul class="comment"><li>改成緊急事件回報 用途比較廣XD&nbsp;&nbsp;&nbsp;</li></ul>
+<p></p><p></p><p>小俞：報名UI設計！</p><p>歡迎 感謝Q口Q</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_h4wPgytCjac_p.143126_1396711214438_網路屏蔽通訊器test01-01.jpg'/></p><ul class="comment"><li>改成緊急事件回報 用途比較廣XD&nbsp;&nbsp;&nbsp;</li></ul>
 <p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_h4wPgytCjac_p.138515_1396712829267_123.jpg'/></p><p></p><p></p><ul class="comment"><li><br/></li></ul>
 
 <p>小俞：剛剛快速作了一些東西，有任何建議直接寫上來吧，其實因為現在flow還沒出來所以都亂做XDD（對了，名稱是亂取的）準備出門去守夜了掰！</p><ul class="comment"><li>現場有網路XD&nbsp;</li>
@@ -142,9 +146,10 @@
 <li>那是小台基地台XD&nbsp; 用吉普車是方便颱風啊什麼時候進山裡面用的.... 那台車可以游泳的~~~</li>
 <li>已感動QQ&nbsp;&nbsp;</li>
 <li>clement是ptt的sibaseman大嗎?&nbsp; yes<ul class="comment"><li>謝謝你！需要高手qq</li>
-<li>安安各位，結果3G網路可以通w</li></ul>
-</ul>
-<p>那是否需要把醫療事件獨立出來？</p><ul class="comment"><li>我覺得小俞 + MOSI W 的圖給出了一個開發方向，Firechat 提供了無差別發言平台，但無法針對某項訊息進行回應</li>
+<li>安安各位，結果3G網路可以通w</li></ul class="comment">
+</li>
+<li>那是否需要把醫療事件獨立出來？</li>
+<li>我覺得小俞 + MOSI W 的圖給出了一個開發方向，Firechat 提供了無差別發言平台，但無法針對某項訊息進行回應</li>
 <li>可以就 bbs 或論壇的形式製作，例如：</li>
 <li>1 . 依 GPS 標出事件地點</li>
 <li>2. 事件狀態粗分『待處理』『處理中』『處理中，待增援』『已解決』等等</li>
@@ -153,11 +158,21 @@
 <li>是否結合Google地圖？</li>
 <li>以上面的想法 Google Maps 是一定要的，但也需要提供依距離、狀態可進行排序、分類的列表(for offline device)</li>
 <li>誰來判斷跟決定事件狀態的處理進度？</li>
-<li>最簡單的方式當然是由事件發起人決斷，但如果遇到事件發起人被載去野放，可由現場人員發出最新狀態，但須列出該狀態發出筆數，每人限發一種狀態，並會取代同一人前一次狀態</li>
+<li>最簡單的方式當然是由事件發起人決斷，但如果遇到事件發起人被載去野放，可由現場人員發出最新狀態，但須列出該狀態發出筆數，每人限發一種狀態，並會取代同一事件同一人前一次狀態</li>
 <li>例如：[待處理]小七前有人昏倒，此事件因為發起人被野放無法即時更新狀態，現場人員即可發出狀態『[待處理(主)][處理中(3)][處理中，待增援(10)][已解決(0)]小七前有人昏倒』，從狀態中可看出大部分人認為仍須處理並增援</li>
 <li>現場人員的定義同樣可用距離決定</li>
 <li>所以可能可以用人數來判斷事件可信度(處理度)，然後顯示出來高中低這樣。</li>
-<li>是否需要一個server去蒐集這些information(如GPS定位點與統計人數等等)後統整？&nbsp; 另外事件選項也是盡量簡化，如醫療、警備、衝突(攻擊行為)、社會安全或其他等等</li></ul>
+<li>是否需要一個server去蒐集這些information(如GPS定位點與統計人數等等)後統整？&nbsp; 另外事件選項也是盡量簡化，如醫療、警備、衝突(攻擊行為)、社會安全或其他等等</li>
+<li>server 端要做的幾件事：</li>
+<li>1. 開發 API 供 APP 在進入網路環境中進行資料交換</li>
+<li>2. 能承受大量資料存取的儲存架構</li>
+<li>3. 資料統計與呈現頁面(<b>討論是否需要管理介面，由誰管理?</b></li>
+<li>我想到bitcoin的網路架構，而且bitcoin中的區塊鏈不用全都儲存。</li>
+<li>如果能解決資料龐大的問題，我也投 bitcoin 的網路架構一票</li></ul>
+
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_h4wPgytCjac_p.143126_1396765253855_網路屏蔽通訊器test02.jpg'/></p><p></p><p>再丟個圖給大家討論發想！！（為什麼一直回溯=&nbsp; =）</p><ul class="comment"><li>建議，將鴿子動態改成政府單位動態，應用範圍會較廣，因為你不能保證不會動用軍方武力(大誤</li>
+<li>可以談談訊號偵測的用意嗎？</li>
+<li>看看適不適合，可以加 profile settings 在搜尋戰友時可以依技能、種族...喔不，是職業分類</li></ul>
 
 </body>
 </html>
