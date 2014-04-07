@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="5309"/>
+<meta name="version" content="5433"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$h4wPgytCjac</title>
 </head>
 <body><h1>學運現場無網路的通訊解決APP方案</h1><ul><li><b>發起人/拋磚人：Lrills</b></li>
@@ -26,7 +26,12 @@
 <li><b>NeedsProcess (設計作業流程)：</b></li>
 <li><b>NeedsTalkingToRealPerson (需要真人溝通協調)：</b></li></ul>
 
-<p>-----------------------------------------------------------------------------------------</p><p></p><p><a href="http://www.ptt.cc/bbs/FuMouDiscuss/M.1396630334.A.53A.html"></a>http://www.ptt.cc/bbs/FuMouDiscuss/M.1396630334.A.53A.html</p><p>ptt發想連結</p><p></p><p>--</p><p></p><p>目前想到的p2p流程圖如下，有要更正請幫忙指出：</p><p>A:案發現場人士、Z:3/4G對外使用者(一般是現場糾察)</p><p>節點間通訊用WiFi-D或BT</p><p>為了時間上要加速實現，目前簡單用一個節點通報兩個節點，若遇到重複就pass掉重連</p><p></p><p>A---通報--&gt; B---通報----&gt;D&nbsp;&nbsp; 以此類推， 直到傳到Z 去連結server回報訊息&nbsp;&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B也通報&nbsp;&nbsp; --&gt;E</p><p>&nbsp;&nbsp;&nbsp; A也通報-&gt;C-通報--&gt;F</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C也通報--&gt;G</p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_h4wPgytCjac_p.144203_1396836272432_rect3166.png'/></p><ul class="comment"><li>是這個意思嗎?但是z要回報給server什麼呢?</li>
+<p>-----------------------------------------------------------------------------------------</p><p></p><p><a href="http://www.ptt.cc/bbs/FuMouDiscuss/M.1396630334.A.53A.html"></a>http://www.ptt.cc/bbs/FuMouDiscuss/M.1396630334.A.53A.html</p><p>ptt發想連結</p><p></p><p>--</p><p></p><p>目前想到的p2p流程圖如下，有要更正請幫忙指出：</p><p>A:案發現場人士、Z:3/4G對外使用者(一般是現場糾察)</p><p>節點間通訊用WiFi-D或BT</p><ul class="comment"><li>查資料時剛好看到這篇，裡面有提到幾個問題，雖然我都還沒查證但先提出來給大家參考：</li>
+<li>1. wifi direct似乎有些4.x以上的機型硬體不支援&nbsp;</li>
+<li>2.BT耗電，且最多與7個peer連線&nbsp;</li>
+<li>3.BT-LE較不耗電但android 4.3以上才支援</li>
+<li><a href="http://stackoverflow.com/questions/19439142/wifi-direct-bluetooth-or-internet-for-discovering-people-in-the-surrounding"></a><a href='http://stackoverflow.com/questions/19439142/wifi-direct-bluetooth-or-internet-for-discovering-people-in-the-surrounding'/>http://stackoverflow.com/questions/19439142/wifi-direct-bluetooth-or-internet-for-discovering-people-in-the-surrounding</a></li></ul>
+<p>為了時間上要加速實現，目前簡單用一個節點通報兩個節點，若遇到重複就pass掉重連</p><p></p><p>A---通報--&gt; B---通報----&gt;D&nbsp;&nbsp; 以此類推， 直到傳到Z 去連結server回報訊息&nbsp;&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B也通報&nbsp;&nbsp; --&gt;E</p><p>&nbsp;&nbsp;&nbsp; A也通報-&gt;C-通報--&gt;F</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C也通報--&gt;G</p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_h4wPgytCjac_p.144203_1396836272432_rect3166.png'/></p><ul class="comment"><li>是這個意思嗎?但是z要回報給server什麼呢?</li>
 <li>ps. 剛好看到這兩篇文章《資訊人眼裡的太陽花》，貼給大家看看</li>
 <li>&nbsp;<a href="http://www.cool3c.com/article/78110"></a><a href='/ipD7e8Cvwpd#http://www.cool3c.com/article/78110'/>http://www.cool3c.com/article/78110</a></li>
 <li><a href="http://www.cool3c.com/article/78231"></a><a href='http://www.cool3c.com/article/78231'/>http://www.cool3c.com/article/78231</a></li>
