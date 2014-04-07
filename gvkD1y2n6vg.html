@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="620"/>
+<meta name="version" content="1066"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$gvkD1y2n6vg</title>
 </head>
 <body><h1>農業生產者資訊揭露平台</h1><ul class="comment"><li>有沒有其他更簡潔有力的標題啊?</li></ul>
@@ -171,12 +171,13 @@
 <h2>背後可能遇到的問題</h2><p><b>張貼者如何署名?</b></p><ul><li>本身提供註冊機制</li></ul>
 <ul class="comment"><li>是否可能反而被利用來亂貼? (註冊一堆免洗帳號來亂搞)</li></ul>
 <ul><li>直接利用社群網站帳號登錄使用</li></ul>
+<ul class="comment"><li>可以用facebook, google, ...等現成的來註冊</li></ul>
 
 <p><b>地圖來源?</b></p><ul><li>使用 Google map<ul><li>內容較為完整</li>
 <li>量大後會有使用費的問題</li>
 <li>尚未標示者不易自行更新</li></ul>
 </li>
-<li>使用 OpenStreetMap<ul><li>鄉村地區內容較不完整，需要補完</li>
+<li>使用 OpenStreetMap&nbsp;<ul><li>鄉村地區內容較不完整，需要補完</li>
 <li>沒有使用費的問題</li>
 <li>尚未標示者可以自行更新</li></ul>
 </li>
@@ -221,11 +222,17 @@
 <li>在已留言訊息加註警語，請大家注意</li></ul>
 </ul>
 
-<h2>現有以地圖為基礎的交流網站</h2><ul><li><b>自學 2.0 (唐宗浩)</b><a href="http://bestian.github.io/shackhand/auto20.html"></a>http://bestian.github.io/shackhand/auto20.html<ul><li>使用 Open street map</li>
-<li>每人可建一個地標</li>
-<li>可在其他地標上留言</li>
-<li>地圖縮小後，所有地標重疊擠在一起</li>
-<li>其他不清楚，請幫忙補完</li></ul>
+<h2>現有以地圖為基礎的交流網站</h2><ul><li><b>自學 2.0 (唐宗浩)</b><a href="http://bestian.github.io/shackhand/auto20.html"></a>http://bestian.github.io/shackhand/auto20.html<ul><li>地圖資料庫使用 Open street map</li>
+<li>前端使用<a href='http://leafletjs.com/'/>Leaflet</a> + <a href='http://tombatossals.github.io/angular-leaflet-directive/#!/'/>Angular Leaflet</a></li>
+<li>後端使用<a href='https://www.firebase.com/'/>Firebase</a>，估計上千人的規模都還不用付費，所以目前都是免費狀態，真的很多時就要付費</li>
+<li>中端使用<a href='https://www.firebase.com/quickstart/angularjs.html'/>AngularFire</a>橋接，好處是程式碼很好寫，也有內建AB兩地即時同步</li>
+<li>每個帳號(目前是用facebook，之後再加google等註冊方式)可建一個旗幟，以自己的大頭貼作為icon</li>
+<li>在自己的旗幟上，可以標示訊息，例如身份、年級、興趣、網址、有空的時間等等</li>
+<li>填了之後隨時可以回去改，也可以刪除自己的旗幟</li>
+<li>關鍵字即時搜詢功能，不用按Enter鍵</li>
+<li>「在地中心」和「全台灣」兩張地圖可同步呈現</li>
+<li>地圖縮小後，所有地標重疊擠在一起，沒有以數字呈現的功能</li>
+<li>註：2014年，功能和樣式都有更新，前端框架也換了一個</li></ul>
 </li>
 <li><b>Meshlet微地圖 (Hung Pin Shih)</b><a href="http://www.meshlet.com/"></a>http://www.meshlet.com/<ul><li>使用 Google map</li>
 <li>每人可建一個地圖，上傳一大堆地標</li>
@@ -253,7 +260,8 @@
 </li>
 <li><b>公益訊息揭露網站</b><ul><li>愛與希望公益交流平台 <a href="https://www.facebook.com/LoveandHope520"></a><a href='https://www.facebook.com/LoveandHope520'/>https://www.facebook.com/LoveandHope520</a></li>
 <li>公益訊息張貼牆 <a href="https://www.facebook.com/post.charity.wall"></a><a href='https://www.facebook.com/post.charity.wall'/>https://www.facebook.com/post.charity.wall</a></li></ul>
-</ul>
+</li>
+<li>使用者手動登入升旗</li></ul>
 
-<p></p><p></p></body>
+<p></p></body>
 </html>
