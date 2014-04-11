@@ -3,10 +3,10 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="5597"/>
+<meta name="version" content="5648"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$h4wPgytCjac</title>
 </head>
-<body><h1>學運現場無網路的通訊解決APP方案</h1><ul><li><b>發起人/拋磚人：Lrills</b></li>
+<body><h1>學運現場無網路的通訊解決APP方案</h1><h2>關於</h2><ul><li><b>發起人/拋磚人：Lrills</b></li>
 <li><b>狀態： </b>集結各路好漢</li>
 <li><b>專案簡介：</b></li><ul style="list-style: none;"><li>學運現場的無網路解決app方案</li><ul class="comment"><li>參考「<b>在會場中建立可靠的訊息傳遞網」</b> <a href="https://g0v.hackpad.com/d6rh3bXemcK"></a>https://g0v.hackpad.com/d6rh3bXemcK 兩案坑主可協作討論</li>
 <li><br/></li></ul>
@@ -26,7 +26,7 @@
 <li><b>NeedsProcess (設計作業流程)：</b></li>
 <li><b>NeedsTalkingToRealPerson (需要真人溝通協調)：</b></li></ul>
 
-<p>-----------------------------------------------------------------------------------------</p><p></p><p><a href="http://www.ptt.cc/bbs/FuMouDiscuss/M.1396630334.A.53A.html"></a>http://www.ptt.cc/bbs/FuMouDiscuss/M.1396630334.A.53A.html</p><p>ptt發想連結</p><p></p><p>--</p><p></p><p>目前想到的p2p流程圖如下，有要更正請幫忙指出：</p><p>A:案發現場人士、Z:3/4G對外使用者(一般是現場糾察)</p><p>節點間通訊用WiFi-D或BT</p><ul class="comment"><li>查資料時剛好看到這篇，裡面有提到幾個問題，雖然我都還沒查證但先提出來給大家參考：</li>
+<h2>發想提案</h2><p><a href="http://www.ptt.cc/bbs/FuMouDiscuss/M.1396630334.A.53A.html"></a>http://www.ptt.cc/bbs/FuMouDiscuss/M.1396630334.A.53A.html</p><p>ptt發想連結</p><p></p><p>--</p><p></p><p>目前想到的p2p流程圖如下，有要更正請幫忙指出：</p><p>A:案發現場人士、Z:3/4G對外使用者(一般是現場糾察)</p><p>節點間通訊用WiFi-D或BT</p><ul class="comment"><li>查資料時剛好看到這篇，裡面有提到幾個問題，雖然我都還沒查證但先提出來給大家參考：</li>
 <li>1. wifi direct似乎有些4.x以上的機型硬體不支援&nbsp;</li>
 <li>2.BT耗電，且最多與7個peer連線&nbsp;</li>
 <li>3.BT-LE較不耗電但android 4.3以上才支援</li>
@@ -97,7 +97,7 @@
 <li>所以綜合一下可能的方案會是1.intranet 2.由可連線的node推播(如另一坑方案) 3.firechat方案&nbsp;</li>
 <li><br/></li></ul>
 
-<p></p><p>可行方案優缺點分析：</p><p><b>1.intranet</b></p><ul style="list-style: none;"><li>優：</li><ul><li>可快速由現有資源搭建或者修改，甚至不用上架到兩個 store<ul><li>活動現場支援用backpack ，真的包成一個背包出團，例如: Server pack: wimax + wifi ap + nb + nb用行動電源 + webcam</li>
+<h2>技術分析與討論</h2><p>可行方案優缺點分析：</p><p><b>1.intranet</b></p><ul style="list-style: none;"><li>優：</li><ul><li>可快速由現有資源搭建或者修改，甚至不用上架到兩個 store<ul><li>活動現場支援用backpack ，真的包成一個背包出團，例如: Server pack: wimax + wifi ap + nb + nb用行動電源 + webcam</li>
 <li>Live pack: wimax + 行動電源 + iPad</li></ul>
 </li>
 <li>g0v線路松支援後，可以直接從 intranet 變成 internet<b><i> (*1)</i></b></li></ul>
@@ -145,9 +145,10 @@
 <li><a href="http://developer.android.com/reference/android/net/wifi/WifiManager.html#getScanResults%28%29"></a>http://developer.android.com/reference/android/net/wifi/WifiManager.html#getScanResults%28%29</li>
 <li>藍牙的似乎有個RSSI值是強度(單位dBm)</li>
 <li><a href="http://stackoverflow.com/questions/15312858/get-bluetooth-signal-strength"></a>http://stackoverflow.com/questions/15312858/get-bluetooth-signal-strength</li>
-<li>想問一下在場對於開發進度的想法！要討論出一個雛型直接進行開發，或是先整理的完善一點，在4/19號的hackthon現場開發！？</li></ul>
+<li>想問一下在場對於開發進度的想法！要討論出一個雛型直接進行開發，或是先整理的完善一點，在4/19號的hackthon現場開發！？</li>
+<li>想詢問一下目前開發進度？因為昨天出關就遇到這種困擾，還差點誤事..XD</li></ul>
 
-<p></p><p></p><p>小俞：報名UI設計！</p><p>歡迎 感謝Q口Q</p><ul class="comment"><li>改成緊急事件回報 用途比較廣XD&nbsp;&nbsp;&nbsp;</li></ul>
+<p></p><h2>介面設計</h2><p>小俞：報名UI設計！</p><p>歡迎 感謝Q口Q</p><ul class="comment"><li>改成緊急事件回報 用途比較廣XD&nbsp;&nbsp;&nbsp;</li></ul>
 <p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_h4wPgytCjac_p.138515_1396712829267_123.jpg'/></p><p></p><ul class="comment"><li><br/></li></ul>
 
 <p>小俞：剛剛快速作了一些東西，有任何建議直接寫上來吧，其實因為現在flow還沒出來所以都亂做XDD（對了，名稱是亂取的）準備出門去守夜了掰！</p><ul class="comment"><li>現場有網路XD&nbsp;</li>
