@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="5780"/>
+<meta name="version" content="5910"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$h4wPgytCjac</title>
 </head>
 <body><h1>學運現場無網路的通訊解決APP方案</h1><h2>關於</h2><ul><li><b>發起人/拋磚人：Lrills</b></li>
@@ -127,7 +127,8 @@
 <li>一般WiFi AP都可以簡單調整發射功率，看看大力玩是否也可調整WiFi的發射功率。如果不行，只好拿鐵便當盒蓋住XD&nbsp;</li>
 <li>WiMAX 確定要淘汰了，未來 device 已經頃向 LTE</li>
 <li>FD-LTE系統中華電信會較先設立，目前已經cell plan中。至於WiMAX就看會不會就地升級成TD-LTE，不過device是絕對不相容的XD。但dervice都會弄成大力玩型態(誰叫WiFi普及率這麼高)，所以對APP設計(若是經WiFi-4G系統連上網)基本上影響不大</li></ul>
-<p>*2</p><ul class="comment"><li>從另外一篇文章看到有qaul.net跟Telegram都有同樣類似的效果，也可以download到手機試試看，我先借幾個Android手機來試試看這三個APP的實用性</li></ul>
+<p>*2</p><ul class="comment"><li>從另外一篇文章看到有qaul.net跟Telegram都有同樣類似的效果，也可以download到手機試試看，我先借幾個Android手機來試試看這三個APP的實用性</li>
+<li>我用了10隻Android手機試了firechat，一起打開的時候，只有3隻手機互相連線成功，剩下的找不到彼此。當中完全不知道是哪3隻手機連線中，只有講話的時候才會顯現出手機ID。而且若其中一隻手機從中途離開後重新連線會沒辦法看到兩隻之前傳送的訊息。</li></ul>
 <p>*3</p><ul class="comment"><li><i>ref: </i><a href="http://stackoverflow.com/questions/18884705/transfer-data-between-ios-and-android-via-bluetooth"></a><i><a href='http://stackoverflow.com/questions/18884705/transfer-data-between-ios-and-android-via-bluetooth'/>http://stackoverflow.com/questions/18884705/transfer-data-between-ios-and-android-via-bluetooth</a></i><i>&nbsp;&nbsp;</i></li>
 <li>可能解法 1.android透過wifi監聽iOS device發布的bonjour服務(理論可行，但找不到實作的例子) 2.BLE (但android端有bug待解決)</li>
 <li>剛請朋友測過Firechat的iOS跟Android連通，互相找不到dervice。所以可以由iOS一個大group，Android一個大group往下去sync資訊，只要iOS跟Android兩個節點的資訊同步即可!?&nbsp;&nbsp; android也有firechat</li>
@@ -147,7 +148,8 @@
 <li><a href="http://stackoverflow.com/questions/15312858/get-bluetooth-signal-strength"></a>http://stackoverflow.com/questions/15312858/get-bluetooth-signal-strength</li>
 <li>想問一下在場對於開發進度的想法！要討論出一個雛型直接進行開發，或是先整理的完善一點，在4/19號的hackthon現場開發！？</li>
 <li>想詢問一下目前開發進度？因為昨天出關就遇到這種困擾，還差點誤事..XD</li>
-<li>直接 UDP 廣播封包會不會更省事？</li></ul>
+<li>直接 UDP 廣播封包會不會更省事？</li>
+<li>UDP廣播很省事，但怕packet loss，尤其人一多，更怕不知道誰有掉誰沒掉，這變得要想辦法克服packet loss。</li></ul>
 
 <p><b>4.Zigbee 微型外接通訊設備&nbsp;</b></p><ul style="list-style: none;"><li>參考資料：<a href="http://zh.wikipedia.org/wiki/ZigBee"></a>http://zh.wikipedia.org/wiki/ZigBee</li>
 <li>優：</li><ul><li>支援大量網路節點的網路拓樸</li>
@@ -158,8 +160,9 @@
 <li>手機需要外接設備（透過micro USB / lightning / ipad 30pin）</li>
 <li>頻寬較少，僅適合傳輸文字訊息</li></ul>
 </ul>
+<ul class="comment"><li>Zigbee設備很便宜，也支援尋找附近鄰點的功能，但使用頻帶接近WiFi，很容易被WiFi干擾，要想辦法加入重傳功能或利用其他介面傳送。</li></ul>
 
-<p></p><h2>介面設計</h2><p>小俞：報名UI設計！</p><p>歡迎 感謝Q口Q</p><ul class="comment"><li>改成緊急事件回報 用途比較廣XD&nbsp;&nbsp;&nbsp;</li></ul>
+<h2>介面設計</h2><p>小俞：報名UI設計！</p><p>歡迎 感謝Q口Q</p><ul class="comment"><li>改成緊急事件回報 用途比較廣XD&nbsp;&nbsp;&nbsp;</li></ul>
 <p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_h4wPgytCjac_p.138515_1396712829267_123.jpg'/></p><p></p><ul class="comment"><li><br/></li></ul>
 
 <p>小俞：剛剛快速作了一些東西，有任何建議直接寫上來吧，其實因為現在flow還沒出來所以都亂做XDD（對了，名稱是亂取的）準備出門去守夜了掰！</p><ul class="comment"><li>現場有網路XD&nbsp;</li>
