@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="5910"/>
+<meta name="version" content="5950"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$h4wPgytCjac</title>
 </head>
 <body><h1>學運現場無網路的通訊解決APP方案</h1><h2>關於</h2><ul><li><b>發起人/拋磚人：Lrills</b></li>
@@ -149,7 +149,8 @@
 <li>想問一下在場對於開發進度的想法！要討論出一個雛型直接進行開發，或是先整理的完善一點，在4/19號的hackthon現場開發！？</li>
 <li>想詢問一下目前開發進度？因為昨天出關就遇到這種困擾，還差點誤事..XD</li>
 <li>直接 UDP 廣播封包會不會更省事？</li>
-<li>UDP廣播很省事，但怕packet loss，尤其人一多，更怕不知道誰有掉誰沒掉，這變得要想辦法克服packet loss。</li></ul>
+<li>UDP廣播很省事，但怕packet loss，尤其人一多，更怕不知道誰有掉誰沒掉，這變得要想辦法克服packet loss。</li>
+<li>packet loss的問題可以考慮用forward error correction來解, 不過缺點是會把其他tcp流量打趴</li></ul>
 
 <p><b>4.Zigbee 微型外接通訊設備&nbsp;</b></p><ul style="list-style: none;"><li>參考資料：<a href="http://zh.wikipedia.org/wiki/ZigBee"></a>http://zh.wikipedia.org/wiki/ZigBee</li>
 <li>優：</li><ul><li>支援大量網路節點的網路拓樸</li>
