@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1458"/>
+<meta name="version" content="1804"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$lk9pamtKwyr</title>
 </head>
 <body><h1>第五權電視牆監看「評」台g8v.tv草稿</h1><ul class="comment"><li>＊一言以蔽之，就是立院影城的全民版。</li>
@@ -20,9 +20,10 @@
 <undefined><li><b>本平台分近程計畫（淺坑）、中程計畫（中坑）、遠程計畫（深坑）、終極目標（無底洞），是個有如生物般會生長的有機松。</b></li></undefined>
 <ul class="comment"><li>在當分類帽決定甚麼功能是近、中、遠程目標時，我的思考方向是，以大家這次擔任中控／直播組或相關工作的經驗，如果明天馬上又有一個＂營隊＂要辦了，有鑑於前一次的教訓，甚麼功能是這個平台迫切需要有立刻有的。以便解決下次＂營隊＂進行時，預期必然又會再次出現的問題。</li></ul>
 
-<h2>近程計畫及工作進度（淺坑）</h2><p><b>授權方式</b></p><p>（程式碼部分如 MIT/BSD /文件部分，如 CC-BY）</p><p></p><p><b>說明：先做出好用的直播監看介面！</b></p><ul><li><b>三大元素：① 電視牆介面、②聊天室介面、③直播鏡頭選擇介面</b></li>
+<h2>近程計畫及工作進度（淺坑）</h2><p><b>授權方式</b></p><p>（程式碼部分如 MIT/BSD /文件部分，如 CC-BY）</p><p></p><p><b>說明：先做出好用的直播監看介面！</b></p><ul><li><b>四大元素：（1.）電視牆介面、（2.）聊天室介面、（3.）直播鏡頭選擇介面、（4.）控制台</b></li>
 <li><b>近程計劃最高指導原則：「明天有營隊，今晚就上線」！</b>優先利用現已存在的直播網路服務資源，先將其整合成好用的電視牆介面。</li>
 <li>電視牆介面指導原則：要能高度自訂尺寸大小的電視牆介面，方便使用者依自己的需求調整＂營隊＂所有的直播畫面各自的大小，讓監看中的直播畫面只要一出問題，在電視牆上就可一目了然。</li>
+<li>控制台的存與廢：控制台並非必要，若能與Hackfldr和ethercalc功能連動、且有更好的UI介面或智慧調整，取代原本控制台的功能，則控制台即可廢除，或只保留給使用者的進階控制需求。</li>
 <li>電視新聞畫面的直播來源可優先使用網路上已有的新聞直播資源。<a href='/g8v.tv-lk9pamtKwyr#:h=第四台電視新聞直播資源列表'/>第四台電視新聞直播資源列表</a>、<a href='/g8v.tv-lk9pamtKwyr#:h=法律問題相關討論'/>法律問題相關討論</a></li>
 <li>在g0v還沒有自己的直播伺服器計畫之前，由於要優先利用已存在的直播網路服務，因此電視牆要能夠嵌入各家直播畫面和聊天室的彈性。詳細技術細節討論請見「<a href='/g8v.tv-lk9pamtKwyr#:h=實況網站的選擇'/>實況平台的選擇</a>」</li><ol><li><a href="http://www.ustream.tv/"></a><a href='http://www.ustream.tv/'/>http://www.ustream.tv/</a></li>
 <li><a href="http://www.justin.tv/"></a><a href='http://www.justin.tv/'/>http://www.justin.tv/</a></li>
@@ -37,35 +38,45 @@
 </li>
 <li>可全螢幕</li>
 <li>半透明功能</li></ul>
-</ul>
-<ul class="task"><li>進階智慧調整<ul class="task"><li>根據使用者螢幕大小提供電視牆 n x n 格的範本、以及手機螢幕範本</li>
-<li>拉動／拖動每個元素時，周遭元素會自動移動、避開至新位置。</li></ul>
+<ul class="task"><li>更直覺的UI改良</li>
+<li>與Hackfoldr、ethercalc功能連動、整合與應用。</li>
+<li>電視牆開了哪些頻道、各界面的位置、大小等配置的儲存機制。目前是只要F5就得重頭來過。</li>
+<li>上面的配置能以短網址的方式分享出去。</li>
+<li>已知bug<ul class="task"><li>直播鏡頭選擇介面的控制按鈕會因為電視牆、聊天室等介面存在而消失</li></ul class="task">
+</li></ul class="task">
+</li>
+<li>進階智慧調整</li><ul class="task"><li>根據使用者螢幕大小提供電視牆 n x n 格的範本、以及手機螢幕範本</li>
+<li>拉動／拖動每個元素時，周遭元素會自動移動、避開至新位置、移回至原位置。</li></ul>
 </ul>
 </ol>
 <ol><li><b>電視牆介面支援的實況平台</b></li><ul class="taskdone"><li>Justin.tv、Twitch.tv</li></li>
 <li>Ustream.tv</li></li>
-<li>Youtube</li></ul>
+<li>Youtube</li></li>
+<li>...</li></ul>
 </ol>
 <ol><li><b>聊天室介面</b>支援的實況平台</li><ul class="taskdone"><li>Justin.tv、Twitch.tv（IRC）</li></ul>
 <ul class="task"><li>Ustream.tv</li>
-<li>Youtube</li></ul>
+<li>Youtube</li>
+<li>...</li></ul>
 </ol>
 <ol><li><b>直播鏡頭選擇介面</b>支援的實況平台</li><ul class="taskdone"><li>Justin.tv</li></ul>
 <ul class="task"><li>Usream.tv</li>
-<li>Youtube</li></ul>
+<li>Youtube</li>
+<li>...</li></ul>
 </ol>
-<p><b>成果展示</b></p><ul><li><a href="http://i.imgur.com/WOUfsm0.png"></a><a href='http://i.imgur.com/WOUfsm0.png'/>http://i.imgur.com/WOUfsm0.png</a></li></ul>
+<p><b>成果展示（2014-04-15）</b></p><ul><li><b>半透明效果示意圖</b> <a href="http://i.imgur.com/WOUfsm0.png"></a><a href='http://i.imgur.com/WOUfsm0.png'/>http://i.imgur.com/WOUfsm0.png</a></li></ul>
 <p><img src='http://i.imgur.com/WOUfsm0.png'/></p><ul><li><b>可換背景圖</b> <a href="http://i.imgur.com/PQhK5gg.png"></a><a href='http://i.imgur.com/PQhK5gg.png'/>http://i.imgur.com/PQhK5gg.png</a>&nbsp;<img src='http://i.imgur.com/PQhK5gg.png'/></li>
-<li><b>介面解說 </b><a href="http://i.imgur.com/KQYEM1u.png"></a><b><a href='http://i.imgur.com/KQYEM1u.png'/>http://i.imgur.com/KQYEM1u.png</a></b><b><img src='http://i.imgur.com/KQYEM1u.png'/></b></li>
-<li><b>直播鏡頭選擇介面拉開後</b></li></ul>
+<li><b>介面解說 </b><a href="http://i.imgur.com/G6A0gva.png"></a><u><a href='http://i.imgur.com/G6A0gva.png'/>http://i.imgur.com/G6A0gva.png</a></u><b><u><img src='http://i.imgur.com/G6A0gva.png'/></u></b></li>
+<li><b>直播鏡頭選擇介面可拉開、縮回 </b><a href="http://i.imgur.com/nGb37SG.png"></a><a href='http://i.imgur.com/nGb37SG.png'/>http://i.imgur.com/nGb37SG.png</a><b><img src='http://i.imgur.com/nGb37SG.png'/></b></li>
+<li><b>&nbsp;↑每一格電視牆、聊天室、直播鏡頭選擇介面都可以移動、調整大小、新增窗格或關閉。</b></li></ul>
 
-<h2>中程計畫及工作進度（中坑）</h2><p><b>授權方式</b></p><p>（程式碼部分如 MIT/BSD /文件部分，如 CC-BY）</p><p></p><p><b>說明：打造個人化、高自訂性的直播聯播網！以使用者（觀眾／直播主）為導向，讓大家都能submit直播連結！</b></p><ul><li><a href='/VVlHNqKaQrC'/>直播連結收集器</a>（導播台）</li>
+<p></p><h2>中程計畫及工作進度（中坑）</h2><p><b>授權方式</b></p><p>（程式碼部分如 MIT/BSD /文件部分，如 CC-BY）</p><p></p><p><b>說明：打造個人化、高自訂性的直播聯播網！以使用者（觀眾／直播主）為導向，讓大家都能submit直播連結！</b></p><ul><li><a href='/VVlHNqKaQrC'/>直播連結收集器</a>（導播台）</li>
 <li><br/></li></ul>
 <p><b>目標功能&amp;工作進度：</b></p><ol><li><br/></li>
 <li><br/></li>
 <li><br/></li></ol>
 
-<h2>遠程計畫及工作進度（深坑）</h2><p><b>授權方式</b></p><p>（程式碼部分如 MIT/BSD /文件部分，如 CC-BY）</p><p></p><p><b>說明：讓監看介面也能加入非直播影片，運用每部影片的留言評論和tag等metadata功能！</b></p><ul><li>有需要的話，g0v有自己的第四台電視新聞直播伺服器，有自己的第四台訊來源。</li></ul>
+<h2>遠程計畫及工作進度（深坑）</h2><p><b>授權方式</b></p><p>（程式碼部分如 MIT/BSD /文件部分，如 CC-BY）</p><p></p><p><b>說明：讓監看介面也能加入非直播影片，運用每部影片的留言評論和tag等metadata功能！</b></p><ul><li>有需要的話，g0v建立自己的第四台電視新聞直播伺服器，有自己的第四台訊來源。</li></ul>
 
 <p><b>目標功能&amp;工作進度：</b></p><p></p><h2>終極目標及工作進度（無底洞）</h2><p><b>授權方式</b></p><p>（程式碼部分如 MIT/BSD /文件部分，如 CC-BY）</p><p></p><p><b>說明：完善整個平台，平台間交流，與平台未來展望！</b></p><ul><li>有需要的話，g0v能建立自己的實況平台伺服器</li>
 <li>有需要的話，g0v與相關電視新聞媒體洽談網路直播服務合作方案</li>
@@ -87,51 +98,43 @@
 <li><a href='/--Fr9H87GPcUM'/>太陽花盒子-自己的媒體自己報</a></li>
 <li><a href='https://g0v.hackpad.com/g1v.tw--2KWlYWGfr7I'/>g1v.tw 壹時政府</a></li>
 <li><a href='https://g0v.hackpad.com/H3CGEk6Mqm4'/>專職社運紀錄團隊、專業起底網站、監督政府地方建設並引導公民能夠實際參與建設提案的專職組織</a></li>
+<li><a href='http://www.civilmedia.tw/about'/>公民行動影音資料庫</a></li>
 <li><a href='https://g0v.hackpad.com/XB5JOWTtnly'/>公民即時網路轉播</a><ul><li><a href="http://i.imgur.com/CknPg8X.png"></a><a href='http://i.imgur.com/CknPg8X.png'/>http://i.imgur.com/CknPg8X.png</a></li></ul>
 </ul>
-<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_lk9pamtKwyr_p.142465_1397501395734_undefined'/></p><ul style="list-style: none;"><li><br/></li></li>
-<li><br/></li></ul>
-
-<ul><li><a href='http://www.civilmedia.tw/about'/>公民行動影音資料庫</a></li></ul>
-
-<p></p><h2>實況平台的選擇（出處來自 ［挖坑／證據保存］一文 ）</h2><ul><li><a href="http://www.ustream.tv/"></a><a href='http://www.ustream.tv/'/>http://www.ustream.tv/</a></li></li>
-<li>優點：對於版權內容規範較不嚴格 (相較於 <a href="http://www.justin.tv/"></a><a href='http://www.justin.tv/'/>http://www.justin.tv/</a> )&nbsp;</li></li>
-<li>缺點：ustream實況的影音若要保留在ustream上須付費，因此建議考慮其他選擇。</li></li>
-<li>解決辦法：參考這篇將ustream串流儲存在自己的電腦再上傳至其他空間，較麻煩。</li></li>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_lk9pamtKwyr_p.142465_1397553768336_undefined'/></p><ul style="list-style: none;"><li><br/></li></ul style="list-style: none;">
+<h2>實況平台的選擇（出處來自 ［挖坑／證據保存］一文 ）</h2><p><b>實況平台</b></p><ul><li><a href="http://www.ustream.tv/"></a><a href='http://www.ustream.tv/'/>http://www.ustream.tv/</a></li><ul style="list-style: none;"><li>優點：對於版權內容規範較不嚴格 (相較於 <a href="http://www.justin.tv/"></a><a href='http://www.justin.tv/'/>http://www.justin.tv/</a> )&nbsp;</li>
+<li>缺點：ustream實況的影音若要保留在ustream上須付費，因此建議考慮其他選擇。</li>
+<li>解決辦法：參考這篇將ustream串流儲存在自己的電腦再上傳至其他空間，較麻煩。</li>
 <li><a href="http://www.ptt.cc/bbs/Live/M.1370366467.A.5A8.html"></a><a href='http://www.ptt.cc/bbs/Live/M.1370366467.A.5A8.html'/>http://www.ptt.cc/bbs/Live/M.1370366467.A.5A8.html</a> (2013/06的文章，方法是否仍然有效待驗證)</li></ul>
+</ul>
 <ul class="comment"><li>為了要將ustream的串流影音抓下來儲存，我曾試過一些常在使用的方法和軟體，例如Firefox的附加元件DownloadHelper、或是Orbit，但ustream能儲存的都是被分割成600kb x n個的flv檔，影片id值隨時間不斷變化，點到手軟不說，還得手動合併，下載下來的內容倒是實況的影音串流沒錯。以前就不用這麼麻煩，都能邊看邊儲存Live影音串流，現在改成這樣害我一時也找不到現成的解決辦法。</li></ul>
-
-<ul><li><a href="http://www.justin.tv/"></a><a href='http://www.justin.tv/'/>http://www.justin.tv/</a></li></li>
-<li>優點：實況的影音存檔保留在Justin.tv上無須付費，</li><ul style="list-style: none;"><li>可保留2~3天 (官方規則有可能會改變)</li>
+<ul><li><a href="http://www.justin.tv/"></a><a href='http://www.justin.tv/'/>http://www.justin.tv/</a></li><ul style="list-style: none;"><li>優點：實況的影音存檔保留在Justin.tv上無須付費，<ul style="list-style: none;"><li>可保留2~3天 (官方規則有可能會改變)</li>
 <li><s>若經過剪輯的影片則會無限期保留</s>(網站已取消剪輯功能)，容量無上限 (待求證)</li>
 <li>過去有方便的連結能直接傳送至Youtube保存 (目前是否仍有此機制待求證)</li></ul style="list-style: none;">
 </li>
-<li>缺點：對於版權內容規範較嚴格，有DMCA自動偵測機制，</li><ul style="list-style: none;"><li>一旦畫面偵測到有好萊塢9大影業商標或廣告，實況者的帳號有一定程度的機會被Ban。</li></ul style="list-style: none;">
-</li>
-<li><br/></li>
-<li><a href="http://www.twitch.tv/"></a><u><a href='http://www.twitch.tv/'/>http://www.twitch.tv/</a></u></li></li>
-<li>與 <a href="http://www.justin.tv/"></a><a href='http://www.justin.tv/'/>http://www.justin.tv/</a> 同一家公司，類型鎖定為遊戲實況。</li></li>
-<li>若實況非遊戲相關內容，帳號會轉換至 <a href="http://www.justin.tv/"></a><a href='http://www.justin.tv/'/>http://www.justin.tv/</a>&nbsp;</li></li>
-<li><br/></li>
-<li><a href="http://www.hitbox.tv/"></a><a href='http://www.hitbox.tv/'/>http://www.hitbox.tv/</a></li></li>
-<li>(沒用過，待其餘使用者分享心得)</li></li>
-<li><br/></li>
-<li><a href="http://www.nicovideo.jp/"></a><a href='http://www.nicovideo.jp/'/>http://www.nicovideo.jp/</a></li></li>
-<li>(沒用過，待其餘使用者分享心得)</li></li>
-<li><br/></li>
-<li><a href="http://www.youtube.com/"></a><a href='http://www.youtube.com/'/>http://www.youtube.com/</a></li></li>
-<li>(使用 <a href='http://www.google.com/+/learnmore/hangouts/?hl=zh-HK'/>Google+ Hangouts</a> 有實況最長只有8小時的限制，且沒利用實況軟體直接實況電腦畫面上的影像至Hangouts上，待其餘使用者分享心得)</li></li>
-<li><br/></li></ul>
-<ul class="comment"><li>利用現有實況網站的潛在缺點是，部分影像可能受限於各種原因可能會定時/不定時斷線，需要手動處理，這點不利於無人值守的自動錄影。</li></ul>
-<ul style="list-style: none;"><li><br/></li>
-<li>實況軟體<ul style="list-style: none;"><li><a href='http://tw.pikolive.com/liveteach/obs'/>Open Broadcaster Software教學</a> （串流至實況網站上作雲端保存之虞，本地端電腦亦可保留一份影音檔案）</li>
-<li><a href='https://obsproject.com/forum/threads/how-to-stream-on-linux.4594/'/>Open Broadcaster Software在Linux平台實況教學</a></li>
-<li><br/></li></ul>
+<li>缺點：對於版權內容規範較嚴格，有DMCA自動偵測機制，<ul style="list-style: none;"><li>一旦畫面偵測到有好萊塢9大影業商標或廣告，實況者的帳號有一定程度的機會被Ban。</li></ul>
 </ul>
-<ul><li>查了一下是f4f的串流檔，<a href='http://www.ptt.cc/bbs/AVEncode/M.1358546470.A.176.html'/>這裡</a> 有相關資訊</li></ul>
+</ul>
+<ul><li><a href="http://www.twitch.tv/"></a><u><a href='http://www.twitch.tv/'/>http://www.twitch.tv/</a></u></li><ul style="list-style: none;"><li>與 <a href="http://www.justin.tv/"></a><a href='http://www.justin.tv/'/>http://www.justin.tv/</a> 同一家公司，類型鎖定為遊戲實況。</li>
+<li>若實況非遊戲相關內容，帳號會轉換至 <a href="http://www.justin.tv/"></a><a href='http://www.justin.tv/'/>http://www.justin.tv/</a>&nbsp;</li></ul>
+</ul>
+<ul><li><a href="http://www.hitbox.tv/"></a><a href='http://www.hitbox.tv/'/>http://www.hitbox.tv/</a></li><ul style="list-style: none;"><li>(沒用過，待其餘使用者分享心得)</li></ul>
+</ul>
+<ul><li><a href="http://www.nicovideo.jp/"></a><a href='http://www.nicovideo.jp/'/>http://www.nicovideo.jp/</a></li><ul style="list-style: none;"><li>(沒用過，待其餘使用者分享心得)</li></ul>
+</ul>
+<ul><li><a href="http://www.youtube.com/"></a><a href='http://www.youtube.com/'/>http://www.youtube.com/</a></li><ul style="list-style: none;"><li>(使用 <a href='http://www.google.com/+/learnmore/hangouts/?hl=zh-HK'/>Google+ Hangouts</a> 有實況最長只有8小時的限制，且沒利用實況軟體直接實況電腦畫面上的影像至Hangouts上，待其餘使用者分享心得)</li></ul>
+</ul>
+<ul class="comment"><li>利用現有實況網站的潛在缺點是，部分影像可能受限於各種原因可能會定時/不定時斷線，需要手動處理，這點不利於無人值守的自動錄影。</li></ul>
+<p><b>實況軟體</b></p><ul style="list-style: none;"><li><a href='http://tw.pikolive.com/liveteach/obs'/>Open Broadcaster Software教學</a> （串流至實況網站上作雲端保存之虞，本地端電腦亦可保留一份影音檔案）</li>
+<li><a href='https://obsproject.com/forum/threads/how-to-stream-on-linux.4594/'/>Open Broadcaster Software在Linux平台實況教學</a></li></ul>
+<p><b>影片保存方案</b></p><ul><li>Youtube<ul><li>取得影片後，其實可以上傳到 youtube，且設定為私人影片。這樣做理論上應該可以長久保存。</li>
+<li>需要使用或擴散時，以自己帳號或傳播給可信任的帳號從 youtube 下載原始檔案即可。</li>
+<li>因為是私人影片，只要不被發現，就不存在被檢舉的可能性。</li></ul>
+</ul>
+<ul class="comment"><li>太好了華生，你突破盲點了！ＸＤ</li><ul><li>如果擔心自動檢查機制，那就需要額外進行影片左右翻轉或音軌調整。</li></ul>
+</ul>
 
-<p></p><p>取得影片後，其實可以上傳到 youtube，且設定為私人影片。這樣做理論上應該可以長久保存。</p><p>需要使用或擴散時，以自己帳號或傳播給可信任的帳號從 youtube 下載原始檔案即可。</p><p>因為是私人影片，只要不被發現，就不存在被檢舉的可能性。</p><ul class="comment"><li>太好了華生，你突破盲點了！ＸＤ</li></ul>
-<p>如果擔心自動檢查機制，那就需要額外進行影片左右翻轉或音軌調整。</p><p></p><p></p><h2>第四台電視新聞直播資源列表</h2><ul><li>news520之新聞實況站 （平台：Ustream、VLC、Sopcast）</li>
+<p></p><h2>第四台電視新聞直播資源列表</h2><ul><li>news520之新聞實況站 （平台：Ustream、VLC、Sopcast）</li>
 <li><a href='http://hapylife.tk/'/>電視直播彙整</a></li>
 <li><a href='http://vigortv.net/'/>VIGOR 網路電視</a></li>
 <li><a href='http://www.vigor-tv.com/'/>VIGOR免費網路電視線上直播</a></li></ul>
