@@ -3,11 +3,12 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1073"/>
+<meta name="version" content="1389"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$lk9pamtKwyr</title>
 </head>
 <body><h1>第五權電視牆監看「評」台g8v.tv草稿</h1><ul class="comment"><li>＊一言以蔽之，就是立院影城的全民版。</li>
-<li>＊草稿（彙集大家意見+閒聊）→ 草案 → 專／分案 → 8th黑客松提案介紹</li></ul class="comment">
+<li>＊草稿（彙集大家意見+閒聊）→ 草案 → 專／分案 → 8th黑客松提案介紹</li>
+<li>＊目前本文尚未開放public權限，等我先列完短中長期目標的綱要，以及勾出自己完成的工作進度後，就會把共筆權限改成public，讓大家一起編輯討論，然後我會開始試著先把目前我已經部分完成的簡陋成果放進hackfoldr來簡單的present一下自己的構想。</li></ul class="comment">
 <h2>前言</h2><p>　　<b>第五權在這裡我指的就是能夠監督媒體的最後一權：公民自己。</b>電視、報刊、等各種媒體都自稱是第四權，根據<a href='http://zh.wikipedia.org/wiki/%E7%AC%AC%E5%9B%9B%E6%AC%8A'/>wiki</a>：＂第四權所指的即是媒體、公眾視聽；第四權是約定俗成、自然而然形成的。源於西方「國民等級」(estates of the realm)的概念。＂</p><p>　　但最近的事件大家有目共睹，各家已預設立場的媒體，明顯操弄了 文字/影像/聲音 等各種資訊的呈現以及詮釋方式，只為了遂行其特定立場的宣揚， 已經開始偏離，甚至不再是忠實記錄、忠實反映現場狀況的新聞原點。操弄公眾視聽的情況甚至嚴重到開始 直接/間接 影響了資訊的透明與自由。</p><p>　　身為公民能做的事之一，就是拿起自己的設備，記錄下自己的所見所聞。而這個平台的目標，就是打造友善的環境以及可以高度自訂的電視牆，方便任何 直播主/觀眾 的使用。除此之外平台的終極目標也包含納入已有的電視新聞媒體、<a href='http://www.civilmedia.tw/'/>公民影音資料庫</a>等現有資源做有效運用。</p><p>　　「評」台的意思就是電視牆介面要含有irc即時聊天室（參考自<a href='http://www.justin.tv/'/>Justin.tv</a>），方便同性質的電視牆觀眾能彼此溝通，除此之外直播後的每一段影音也要有留言評論和tag等metadata功能，讓這些影音資料能有更多應用。</p><p>&nbsp;　　建置完成的介面和系統除了要能方便與hackfoldr整合之外，用途並不限於社會運動直播。目標是任何線上影音資料，無論是否正在直播（on/off line）都能適用在此一平台。讓使用者對自己的電視牆要播放甚麼內容能高度自訂。</p><ul class="comment"><li>ex.1當電視牆裡的中夭電視新聞頻道正在Live報導某處的現場畫面時，使用者可在電視牆放上自己也在現場直播的實況以茲對照，並於聊天室一起討論、留言。而這兩兩互相對照的電視牆影片可以用一個短網址來表示，方便於社交網路上分享。</li></ul>
 
 <ul class="comment"><li>ex.2電視牆正在播放某場公聽會的Live直播，講者引述過去某場立法院的開會決議狀況，此時若聊天室某使用者找到並貼上該次立法院錄影連結，其他使用者只要點擊該連結，即可在電視牆加上當時的立院錄影存檔並播放，驗證該講者所言內容是否為真。</li></ul>
@@ -19,36 +20,43 @@
 <undefined><li><b>本平台分近程計畫（淺坑）、中程計畫（中坑）、遠程計畫（深坑）、終極目標（無底洞），是個有如生物般會生長的有機松。</b></li></undefined>
 <ul class="comment"><li>在當分類帽決定甚麼功能是近、中、遠程目標時，我的思考方向是，以大家這次擔任中控／直播組或相關工作的經驗，如果明天馬上又有一個＂營隊＂要辦了，有鑑於前一次的教訓，甚麼功能是這個平台迫切需要有立刻有的。以便解決下次＂營隊＂進行時，預期必然又會再次出現的問題。</li></ul>
 
-<h2>近程計畫及工作進度（淺坑）</h2><p><b>授權方式</b></p><p>（程式碼部分如 MIT/BSD /文件部分，如 CC-BY）</p><p></p><p><b>說明：先做出好用的直播監看介面！</b></p><ul><li>先做出個能高度自訂尺寸大小的電視牆介面方便監看＂營隊＂所有的直播畫面，哪個直播畫面一出問題在電視牆上一目了然。</li>
+<h2>近程計畫及工作進度（淺坑）</h2><p><b>授權方式</b></p><p>（程式碼部分如 MIT/BSD /文件部分，如 CC-BY）</p><p></p><p><b>說明：先做出好用的直播監看介面！</b></p><ul><li><b>三大元素：① 電視牆介面、②聊天室介面、③直播鏡頭選擇介面</b></li>
+<li><b>近程計劃最高指導原則：「明天有營隊，今晚就上線」！</b>優先利用現已存在的直播網路服務資源，先將其整合成好用的電視牆介面。</li>
+<li>電視牆介面指導原則：要能高度自訂尺寸大小的電視牆介面，方便使用者依自己的需求調整＂營隊＂所有的直播畫面各自的大小，讓監看中的直播畫面只要一出問題，在電視牆上就可一目了然。</li>
 <li>電視新聞畫面的直播來源可優先使用網路上已有的新聞直播資源。<a href='/g8v.tv-lk9pamtKwyr#:h=第四台電視新聞直播資源列表'/>第四台電視新聞直播資源列表</a>、<a href='/g8v.tv-lk9pamtKwyr#:h=法律問題相關討論'/>法律問題相關討論</a></li>
-<li>在還沒有g0v自行架設的直播伺服器之前，優先利用已存在的直播網路服務，所以電視牆要能夠嵌入各家直播畫面和聊天室。詳細技術細節討論請見「<a href='/g8v.tv-lk9pamtKwyr#:h=實況網站的選擇'/>實況平台的選擇</a>」</li><ol><li><a href="http://www.ustream.tv/"></a><a href='http://www.ustream.tv/'/>http://www.ustream.tv/</a></li>
+<li>在g0v還沒有自己的直播伺服器計畫之前，由於要優先利用已存在的直播網路服務，因此電視牆要能夠嵌入各家直播畫面和聊天室的彈性。詳細技術細節討論請見「<a href='/g8v.tv-lk9pamtKwyr#:h=實況網站的選擇'/>實況平台的選擇</a>」</li><ol><li><a href="http://www.ustream.tv/"></a><a href='http://www.ustream.tv/'/>http://www.ustream.tv/</a></li>
 <li><a href="http://www.justin.tv/"></a><a href='http://www.justin.tv/'/>http://www.justin.tv/</a></li>
 <li><a href="http://www.nicovideo.jp/"></a><a href='http://www.nicovideo.jp/'/>http://www.nicovideo.jp/</a></li>
 <li><a href="http://www.twitch.tv/"></a><u><a href='http://www.twitch.tv/'/>http://www.twitch.tv/</a></u></li>
 <li><a href="http://www.hitbox.tv/"></a><a href='http://www.hitbox.tv/'/>http://www.hitbox.tv/</a></li>
 <li><a href="http://www.youtube.com/"></a><a href='http://www.youtube.com/'/>http://www.youtube.com/</a></li></ol>
 </ul>
-<p><b>目標功能&amp;工作進度：</b></p><ol><li>電視牆介面</li><ul class="task"><li>基礎介面</li><ul class="taskdone"><li>使用者可自訂電視牆每格尺寸大小</li>
-<li>可全螢幕</li></ul>
-<ul class="task"><li>根據螢幕大小提供電視牆 n x n 格的範本、手機範本</li></ul class="task">
+
+<p><b>目標功能&amp;工作進度：</b></p><ol><li><b>三大元素 電視牆介面、聊天室介面、直播鏡頭選擇介面 都要有的共同功能</b></li><ul class="taskdone"><li>介面基礎<ul class="taskdone"><li>使用者可自訂每個元素各自尺寸大小<ul class="taskdone"><li>直覺 拉動／拖動 調整大小和位置</li>
+<li>可設定尺寸、位置以利自動化精確調整的定位方式</li></ul class="taskdone">
 </li>
-<li>支援實況平台</li><ul class="taskdone"><li>Justin.tv、Twitch.tv</li></ul>
-<ul class="task"><li>Ustream.tv</li>
-<li>Youtube</li>
-<li><br/></li></ul>
+<li>可全螢幕</li>
+<li>半透明功能</li></ul>
+</ul>
+<ul class="task"><li>進階智慧調整<ul class="task"><li>根據使用者螢幕大小提供電視牆 n x n 格的範本、以及手機螢幕範本</li>
+<li>拉動／拖動每個元素時，周遭元素會自動移動、避開至新位置。</li></ul>
 </ul>
 </ol>
-<ol><li>聊天室介面支援的實況平台</li><ul class="taskdone"><li>Justin.tv、Twitch.tv（IRC）</li></ul>
+<ol><li><b>電視牆介面支援的實況平台</b></li><ul class="taskdone"><li>Justin.tv、Twitch.tv</li></li>
+<li>Ustream.tv</li></li>
+<li>Youtube</li></ul>
+</ol>
+<ol><li><b>聊天室介面</b>支援的實況平台</li><ul class="taskdone"><li>Justin.tv、Twitch.tv（IRC）</li></ul>
 <ul class="task"><li>Ustream.tv</li>
 <li>Youtube</li></ul>
 </ol>
-<ol><li>直播鏡頭選擇介面支援的實況平台</li><ul class="taskdone"><li>Justin.tv</li></ul>
+<ol><li><b>直播鏡頭選擇介面</b>支援的實況平台</li><ul class="taskdone"><li>Justin.tv</li></ul>
 <ul class="task"><li>Usream.tv</li>
 <li>Youtube</li></ul>
 </ol>
 <ol><li><br/></li></ol>
 
-<h2>中程計畫及工作進度（中坑）</h2><p><b>授權方式</b></p><p>（程式碼部分如 MIT/BSD /文件部分，如 CC-BY）</p><p></p><p><b>說明：打造個人化、高自訂性的直播聯播網！以使用者（觀眾／直播主）為導向，讓大家都能submit直播連結！</b></p><ul><li><a href='https://g0v.hackpad.com/VVlHNqKaQrC'/>社運直播導播台</a></li>
+<h2>中程計畫及工作進度（中坑）</h2><p><b>授權方式</b></p><p>（程式碼部分如 MIT/BSD /文件部分，如 CC-BY）</p><p></p><p><b>說明：打造個人化、高自訂性的直播聯播網！以使用者（觀眾／直播主）為導向，讓大家都能submit直播連結！</b></p><ul><li><a href='/VVlHNqKaQrC'/>直播連結收集器</a>（導播台）</li>
 <li><br/></li></ul>
 <p><b>目標功能&amp;工作進度：</b></p><ol><li><br/></li>
 <li><br/></li>
@@ -73,6 +81,7 @@
 <li><a href='https://sites.google.com/site/csstaco/mission-a/mission-a_live-video'/>直播網址總整理</a></li></ul>
 <ul><li><a href='https://g0v.hackpad.com/VVlHNqKaQrC'/>社運直播導播台</a></li>
 <li><a href='https://g0v.hackpad.com/-0media-B3tCT7FmOVq'/>零傳媒/ 0media</a></li>
+<li><a href='/--Fr9H87GPcUM'/>太陽花盒子-自己的媒體自己報</a></li>
 <li><a href='https://g0v.hackpad.com/g1v.tw--2KWlYWGfr7I'/>g1v.tw 壹時政府</a></li>
 <li><a href='https://g0v.hackpad.com/H3CGEk6Mqm4'/>專職社運紀錄團隊、專業起底網站、監督政府地方建設並引導公民能夠實際參與建設提案的專職組織</a></li>
 <li><a href='https://g0v.hackpad.com/XB5JOWTtnly'/>公民即時網路轉播</a><ul><li><a href="http://i.imgur.com/CknPg8X.png"></a><a href='http://i.imgur.com/CknPg8X.png'/>http://i.imgur.com/CknPg8X.png</a></li></ul>
@@ -82,7 +91,7 @@
 
 <ul><li><a href='http://www.civilmedia.tw/about'/>公民行動影音資料庫</a></li></ul>
 
-<p></p><h2>實況平台的選擇</h2><ul><li><a href="http://www.ustream.tv/"></a><a href='http://www.ustream.tv/'/>http://www.ustream.tv/</a></li></li>
+<p></p><h2>實況平台的選擇（出處來自 ［挖坑／證據保存］一文 ）</h2><ul><li><a href="http://www.ustream.tv/"></a><a href='http://www.ustream.tv/'/>http://www.ustream.tv/</a></li></li>
 <li>優點：對於版權內容規範較不嚴格 (相較於 <a href="http://www.justin.tv/"></a><a href='http://www.justin.tv/'/>http://www.justin.tv/</a> )&nbsp;</li></li>
 <li>缺點：ustream實況的影音若要保留在ustream上須付費，因此建議考慮其他選擇。</li></li>
 <li>解決辦法：參考這篇將ustream串流儲存在自己的電腦再上傳至其他空間，較麻煩。</li></li>
