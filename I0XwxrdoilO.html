@@ -3,17 +3,20 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="211"/>
+<meta name="version" content="305"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$I0XwxrdoilO</title>
 </head>
-<body><h1>addressbook-api</h1><p>Server: <a href="http://pgrest.io/hychen/api.addressbook/v0/collections/"></a>http://pgrest.io/hychen/api.addressbook/v0/collections/</p><p></p><h2>contact id </h2><p>不同的 contact 使用不同的 id 的去儲存，和 OID 分開，自行產一組 UUID</p><p></p><h2>organization: </h2><p>/organzations/</p><ul><li>paging:<ul><li>count // 總數</li>
+<body><h1>addressbook-api</h1><p>Server: <a href="http://pgrest.io/hychen/api.addressbook/v0/collections/"></a>http://pgrest.io/hychen/api.addressbook/v0/collections/</p><p>server is base on <a href='http://pgre.st/'/>PgREST</a> <a href='https://speakerdeck.com/clkao/pgrest-postgresql-javascript-and-rest'/>投影片</a></p><p></p><h2>Base mapping</h2><ul><li>paging:<ul><li>count // 總數</li>
 <li>l // 長度</li>
-<li>sk //</li></ul>
+<li>sk // offset 位置</li></ul>
 </li>
-<li>entries:</li></li>
-<li>資料的 array (<a href='http://popoloproject.com/specs/organization.html'/>popolo.organzation</a>)</li>
-<li>query:</li></li>
-<li>查詢的條件</li></ul>
+<li>entries:</li></ul>
+<ul style="list-style: none;"><li>資料的 array</li></ul>
+<ul><li>query:</li></ul>
+<ul style="list-style: none;"><li>查詢的條件</li></ul>
+
+<h2>organization: </h2><p>/organzations/</p><ul><li>entries:</li></ul>
+<ul style="list-style: none;"><li><a href='http://popoloproject.com/specs/organization.html'/>popolo.organzation</a></li></ul>
 
 <h2>Person </h2><p>/person/</p><p></p><h2>Membership: </h2><p>/membership/</p><p></p></body>
 </html>
