@@ -3,12 +3,13 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2917"/>
+<meta name="version" content="3078"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$Fr9H87GPcUM</title>
 </head>
 <body><h1>太陽花盒子－自己的媒體自己報－</h1><p>/* 命名可以再思考一下更加有公民資訊透明含意，不過也許可以不用，這個名字也是很有歷史意義。 */</p><p></p><h2>主旨：</h2><p>　　要挖的坑，設計「機上盒 or APP」，專門收看社會運動現場實況LIVE，或是大腸花魚腸花，或是和社運有關的直播，立院質詢，公聽會……等等。（<a href='http://farm9.staticflickr.com/8288/7745942538_85bbe2d9b3_c.jpg'/>概念圖１</a>）（<a href='https://www.facebook.com/photo.php?fbid=821715797842060&amp;set=a.820703047943335.1073741837.100000109433022&amp;type=3&amp;theater'/>概念圖２</a>）</p><ul class="comment"><li><s>建議把「App」改成「機上盒」，畢竟目的在把電視人的視線和網路人的視線交疊起來。無論如何就是接到電視，不是手機，也不是平板。至於機上盒的實作方式可以分流，也可以集中火力，用 App 或用刷機的方式實現。</s></li>
 <li>這主意不錯耶，「<a href='/g8v.tv-lk9pamtKwyr'/>第五權電視牆監看「評」台g8v.tv</a>」可以成為太陽花盒子之後的收視來源之一嗎www</li>
-<li>content management 會是下一個階段的問題，目前必須先做的是讓電視人有盒子可以看網路人的內容 :)</li></ul>
+<li>content management 會是下一個階段的問題，目前必須先做的是讓電視人有盒子可以看網路人的內容 :)</li>
+<li>content完全不需要擔心，如果有哪一個 channel可以有 10 萬個收視戶的話 (假設 50 萬個盒子收回 30 萬個，然後 20 萬個RMA變磚塊我們也不想理它)大概所有的藝大、新聞社團，都會想要來玩耍...</li></ul>
 
 <h2>說明：</h2><p>　　這個計畫也就是「家電上網」的其中一個環節、這個家電指的是電視，本計畫是要用市面上現成的產品來進行軟體平台的開發。</p><p>　　從市場的角度來看，用網路電視盒（棒）的意義在於，用「鍵盤+滑鼠」跟「電視遙控器」的差別，對原本只用電視吸取資訊的人降低門檻，也可以用同樣的習慣查閱網路上的資訊，擴大收視族群。</p><ul class="comment"><li>需要討論 TA (target audience) 的問題: 1)鄉下只有第4台、沒有網路的人，是不是 TA? 2) 會在手機上玩方塊看風行網的人，是不是 TA?</li>
 <li>我所定義的 TA 是這樣：有關心時事，家裡有拉固網的人，對社群不熟，沒上 FB 也沒上 PTT，沒看 Youtube 也沒玩 Line。年齡層不一定，不是所有的年輕人都對網路有依賴性。但中年以上的人來說，看手機的字太小，滑手機手很痠，不如看電視。或是家庭主婦需要常常起身做家事，可以放著看放著聽。想拉攏這些人。1) 沒網路的抱歉了 2) 手機的重度 user 應該對 FB 很熟，可以是次要 TA，因為他本來已經會關注了，多個盒子只是多一個管道。手機的輕度 user，回家會看電視不會玩手機的，是 TA。</li></ul>
@@ -76,5 +77,9 @@
 <li><a href='/APP-h4wPgytCjac'/>學運現場無網路的通訊解決APP方案</a></li>
 <li><a href='http://hack.g0v.tw/CSSTACO'/>反黑箱服貿暨佔領立法院活動專題網（含贊成意見）</a>　（<a href='https://sites.google.com/site/CSSTACO'/>作業標準書</a>）</li></ul>
 
-<p></p></body>
+<h2>進度</h2><ol><li>單芯線和轉板買好接好，可以看到 console 但是 tty 被擋起來了</li>
+<li>toolchain 可以用 crosstool-ng 來編，也可以直接抓 stlinux 2.3，<u>但是 Host&nbsp; 必須是 32 bit OS</u></li>
+<li>要來 hackth8n玩耍的人請先裝好 32bit OS ... 現場裝可能就要花掉 2 小時以上了...</li></ol>
+
+</body>
 </html>
