@@ -3,32 +3,8 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="12"/>
+<meta name="version" content="289"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$WP8sUFwcqlH</title>
 </head>
-<body><h1>#{新聞網羅，燒毀你的成見}&nbsp;</h1><p>專案介紹 | Project Readme / Meta</p><p></p><p></p><p></p><p></p><p></p><h2>要解決的問題</h2><p>專案說明</p><p></p><p>現有類似專案</p><p>（現成的是否可以直接使用？或者有什麼不足之處？國外專案可參考？）</p><p></p><p>相關專案</p><p>（衍生自某專案/衍生出某專案/API串接自某專案.）</p><p></p><p>授權方式</p><p>（程式碼部分如 MIT/BSD /文件部分，如 CC-BY）</p><p></p><p>使用資料</p><p></p><p>專案目前狀態</p><p>（構想 / 規劃 / 雛形 / 實作）</p><p></p><p></p><h2>目標與功能（要如何解決）</h2><p>預定功能</p><p></p><p></p><p>預定使用者</p><p></p><p></p><p></p><p></p><h2>徵求協作者</h2><p></p><p>分工與成員</p><ul class="task"><li>NeedsWriter: 需要文案幫手（撰寫基本資訊、報導專案etc）</li>
-<li>NeedsDesigner: 需要介面設計</li>
-<li>NeedsData: 需要資料（擷取、清理）</li>
-<li>NeedsTech: 需要技術支援（程式、架站 etc)</li>
-<li>NeedsProcess: 需要幫忙設計作業流程</li>
-<li>NeedsTalkingToRealPerson: 需要有人幫忙和其他機關聯絡</li></ul>
-<ul class="comment"><li>設定成 project registry 中的 tags，需要幫忙的會自動 promote 到 g0v project hub</li>
-<li><br/></li></ul>
-
-<h2>實作細節（非技術背景可跳填）</h2><p>協作工具</p><ul><li>github repo：</li>
-<li>hackfoldr 工作資料夾網址：</li>
-<li>google drive 共用資料夾網址：</li></ul>
-
-<p>進度與 to-do</p><ul class="comment"><li>僅供參考</li></ul>
-<ul class="task"><li>product planning（recommanded procedure from justin lee / 李易修）<ul class="task"><li>strategy</li>
-<li>scope</li>
-<li>structure</li>
-<li>wireframe</li>
-<li>visual</li></ul class="task">
-</li>
-<li>web front-end</li>
-<li>web back-end</li>
-<li>ui / visual design</li></ul>
-
-<p></p><h2>成果展示（規劃文件、雛形/草稿、原型/初稿、正式發佈/完稿）</h2><p></p><p></p><p></p><p></p><p></p><p></p><p></p></body>
+<body><h1>新聞網羅，燒毀你的成見</h1><p></p><h2>緣起</h2><p>2011年3月31號，「NewTalk新頭殼」出現一篇題為【躲不掉！ 台灣南北均測到微量碘131】的報導；隔天，「中國時報」出現一篇題為【台灣測到碘131 極微量 不傷身】 。在台灣，對於同一個事件，我們能看見多元的觀點、聽見不同的聲音。然而，當人們養成固定的視聽習慣之後，很容易會只關注特定幾家媒體，進而減少接觸不同聲音的機會，甚至最後容易對特定媒體產生成見。</p><p></p><p>就如同專案名稱，我們要網羅同一新聞事件的各種角度、各種聲音。不用到各大新聞網慢慢搜尋，透過我們的網站，就能快速的看見不同觀點的新聞。甚至在瀏覽過程中，可以和其他使用者交流討論，燒毀心中的成見，使真理越辯越明！</p><p></p><p></p><h2>專案介紹</h2><p>簡單的說，這個專案要做的是「新聞分類」+「使用者回覆交流」這兩大功能。</p><p></p><p>一般人很容易只瀏覽特定的新聞網站，因此有關聯、或相關推薦文章的來源也都是同樣的媒體。而我們要做的，就是幫大家把不同媒體的新聞放在一起，並結合回覆的功能，讓大家可以集思廣益，從新聞內容當出發點，討論之間的差異，進而深入到議題和新。</p><p></p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_WP8sUFwcqlH_p.151581_1397893596161_架構.jpg'/></p><p></p><p>我們將新聞分成七大類：「經濟、教育、衛生、環境、政治、社會、其他」</p><p></p><p>首頁包含網站介紹，還有熱門及最新議題的圖文搭配；分頁則是各個議題的文章條列；最底層的分頁，就是同一事件的不同來源之新聞內容</p><p></p><p></p><h2>要解決的問題</h2><p></p><p>１.現今每日新聞資訊量不小，蒐集與快速分類&quot;相同事件&quot;的新聞會是個考驗</p><p></p><p>２.如何做到與各大新聞網站的文章連結，提供使用者從外部連結進我們網站的管道</p><p></p><p>３.我想，其他就讓我們從實做中發現問題，從問題中學習突破吧！</p><p></p><p></p><p></p></body>
 </html>
