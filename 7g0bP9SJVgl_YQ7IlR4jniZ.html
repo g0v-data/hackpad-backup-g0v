@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="14"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$7g0bP9SJVgl_YQ7IlR4jniZ</title>
+</head>
+<body><h1>tisa.g0v.tw development</h1><p>This board contains sensitive information and was shared to &quot;invitees only&quot;.&nbsp;</p><p>Insensitive information should be going to <a href='https://g0v.hackpad.com/-g0v--SUkMbG4IV6v'/>服貿協議相關 g0v 專案</a></p><h2>Production</h2><p><b>SSH access</b></p><p>Transfer your `~/.ssh/id_rsa.pub` to authorized owners for ssh access without password.</p><ul class="code"><li>$ ssh tisa@&lt;ip&gt;</li></ul>
+<p>If you don&rsquo;t have `id_rsa.pub`, run</p><ul class="code"><li>$ ssh-keygen</li></ul>
+<p>Then you will have it in `~/.ssh/`</p><p><b>Machine List</b></p><p>For your conveniences to access rapidly, put this machines into your `~/.ssh/config` as following format.</p><ul class="code"><li>Host tisa</li>
+<li>&nbsp;&nbsp;&nbsp; HostName&nbsp; 162.243.145.68</li>
+<li>&nbsp;&nbsp;&nbsp; User&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tisa</li>
+<li>&nbsp;&nbsp;&nbsp; Port&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 22</li></ul>
+<ul><li>tisa<ul><li>Function: Reverse Proxy by Nginx</li>
+<li>IP: `162.243.145.68`</li></ul>
+</li>
+<li>tisa-app1<ul><li>Function: App</li>
+<li>IP: `107.170.210.212`</li></ul>
+</li>
+<li>tisa-app2<ul><li>Function: App</li>
+<li>IP: `107.170.209.101`</li></ul>
+</li>
+<li>tisa-app3<ul><li>Function: App</li>
+<li>IP: `107`</li></ul>
+</li>
+<li>tisa-db1<ul><li>Function: Database by Postgresql 9.3 (Postgis Extension)</li>
+<li>IP: `107.170.209.102`</li></ul>
+</ul>
+<p><b>Deployment</b></p><p>All `/tisa-app&#92;d+/` machines have a clone of codebase at `~/tisa-map`. Currently we have no capistrano script. Just run</p><ul class="code"><li>$ git pull</li></ul>
+<p>And restart unicorn server in `screen` session.</p><p><b>Database</b></p><undefined><li>setup</li></undefined>
+<ul class="code"><li>$ createuser tisa --superuser --encrypted --pwprompt</li>
+<li>$ createdb tisa</li>
+<li>$ sequel config/database.yml -m migrations</li></ul>
+<undefined><li>connection</li></undefined>
+<p>To run Sequel console, put following content in `config/database.yml`</p><ul class="code"><li>production:</li>
+<li>&nbsp;&nbsp;&nbsp; :adapter:&nbsp;&nbsp;&nbsp; postgres</li>
+<li>&nbsp;&nbsp;&nbsp; :host:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 162.243.145.68</li>
+<li>&nbsp;&nbsp;&nbsp; :database:&nbsp;&nbsp; tisa</li>
+<li>&nbsp;&nbsp;&nbsp; :username:&nbsp;&nbsp; tisa</li>
+<li>&nbsp;&nbsp;&nbsp; :password:&nbsp;&nbsp; tisamap</li>
+<li>&nbsp;&nbsp;&nbsp; :encoding:&nbsp;&nbsp; utf8</li>
+<li>&nbsp;&nbsp;&nbsp; :pool:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5</li></ul>
+<p>And run</p><ul class="code"><li>$ sequel config/database.yml</li></ul>
+<undefined><li>backup</li></undefined>
+<ul class="code"><li>$ pg_dump --blobs --verbose --format tar --encoding utf8 --file tisa-yyyy-mm-dd.tar tisa</li></ul>
+<p>Some recent backups from the production environment</p><ul><li><a href="http://140.112.20.144/tisa-2014-04-06.tar"></a>http://1<a href='http://1'/>4</a><a href='http://14'/>0</a><a href='http://140'/>.1</a><a href='http://140.1'/>1</a><a href='http://140.11'/>2</a><a href='http://140.112'/>.2</a><a href='http://140.112.2'/>0</a><a href='http://140.112.20'/>.1</a><a href='http://140.112.20.1'/>4</a><a href='http://140.112.20.14'/>4</a><a href='http://140.112.20.144'/>/</a><a href='http://140.112.20.144/'/>t</a><a href='http://140.112.20.144/t'/>i</a><a href='http://140.112.20.144/ti'/>s</a><a href='http://140.112.20.144/tis'/>a</a><a href='http://140.112.20.144/tisa'/>-</a><a href='http://140.112.20.144/tisa-'/>2</a><a href='http://140.112.20.144/tisa-2'/>0</a><a href='http://140.112.20.144/tisa-20'/>1</a><a href='http://140.112.20.144/tisa-201'/>4</a><a href='http://140.112.20.144/tisa-2014'/>-</a><a href='http://140.112.20.144/tisa-2014-'/>0</a><a href='http://140.112.20.144/tisa-2014-0'/>4</a><a href='http://140.112.20.144/tisa-2014-04'/>-</a><a href='http://140.112.20.144/tisa-2014-04-'/>0</a><a href='http://140.112.20.144/tisa-2014-04-0'/>6</a><a href='http://140.112.20.144/tisa-2014-04-06'/>.t</a><a href='http://140.112.20.144/tisa-2014-04-06.t'/>a</a><a href='http://140.112.20.144/tisa-2014-04-06.ta'/>r</a></li>
+<li><a href="http://140.112.20.144/tisa-2014-04-10.tar"></a>http://1<a href='http://1'/>4</a><a href='http://14'/>0</a><a href='http://140'/>.1</a><a href='http://140.1'/>1</a><a href='http://140.11'/>2</a><a href='http://140.112'/>.2</a><a href='http://140.112.2'/>0</a><a href='http://140.112.20'/>.1</a><a href='http://140.112.20.1'/>4</a><a href='http://140.112.20.14'/>4</a><a href='http://140.112.20.144'/>/</a><a href='http://140.112.20.144/'/>t</a><a href='http://140.112.20.144/t'/>i</a><a href='http://140.112.20.144/ti'/>s</a><a href='http://140.112.20.144/tis'/>a</a><a href='http://140.112.20.144/tisa'/>-</a><a href='http://140.112.20.144/tisa-'/>2</a><a href='http://140.112.20.144/tisa-2'/>0</a><a href='http://140.112.20.144/tisa-20'/>1</a><a href='http://140.112.20.144/tisa-201'/>4</a><a href='http://140.112.20.144/tisa-2014'/>-</a><a href='http://140.112.20.144/tisa-2014-'/>0</a><a href='http://140.112.20.144/tisa-2014-0'/>4</a><a href='http://140.112.20.144/tisa-2014-04'/>-</a><a href='http://140.112.20.144/tisa-2014-04-'/>1</a><a href='http://140.112.20.144/tisa-2014-04-1'/>0</a><a href='http://140.112.20.144/tisa-2014-04-10'/>.t</a><a href='http://140.112.20.144/tisa-2014-04-10.t'/>a</a><a href='http://140.112.20.144/tisa-2014-04-10.ta'/>r</a></li>
+<li><a href="http://140.112.20.144/tisa-2014-04-19.tar"></a>http://140.112.20.144/tisa-2014-04-19.tar</li></ul>
+<undefined><li>restore</li></undefined>
+<ul class="code"><li>$ pg_restore --verbose --clean --no-acl --no-owner -h localhost -U tisa -d tisa --format tar tisa-yyyy-mm-dd.tar</li></ul class="code">
+<h2>Development</h2><p><b>postgresql array column</b></p><p><a href="http://sequel.jeremyevans.net/rdoc-plugins/files/lib/sequel/extensions/pg_array_rb.html"></a>http://sequel.jeremyevans.net/rdoc-plugins/files/lib/sequel/extensions/pg_array_rb.html</p><p><a href="http://www.postgresql.org/docs/9.3/static/functions-array.html"></a>http://www.postgresql.org/docs/9.3/static/functions-array.html</p><p><b>postgresql json column</b></p><p><a href="http://sequel.jeremyevans.net/rdoc-plugins/files/lib/sequel/extensions/pg_json_rb.html"></a>http://sequel.jeremyevans.net/rdoc-plugins/files/lib/sequel/extensions/pg_json_rb.html</p><p><a href="http://www.postgresql.org/docs/9.3/static/functions-json.html"></a>http://www.postgresql.org/docs/9.3/static/functions-json.html</p><p><b>代碼對照表 與 服務貿易特定承諾表 對照數字(紅字, 57 個)</b></p><p><a href="https://www.dropbox.com/sh/xh488y46hgxjy6b/LFIfMNhQ_M"></a>https://www.dropbox.com/sh/xh488y46hgxjy6b/LFIfMNhQ_M</p><h2>Schema</h2><p><b>Company</b></p><table style="font-size:13px;cell-spacing: 0px; border-collapse: collapse;"><tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">id</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">integer</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">location</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">geometry(Point,4326)</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">taxid</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">character(8)</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">name</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">character varying(128)</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">address</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">text</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">categories</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">text[]</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">status</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">character varying(128)</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">owner</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">character varying(128)</td>
+</tr>
+</table>
+<p><b>Tisa</b></p><table style="font-size:13px;cell-spacing: 0px; border-collapse: collapse;"><tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">id</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">integer</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">articles</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">json</td>
+</tr>
+</table>
+<p><b>CPC</b></p><table style="font-size:13px;cell-spacing: 0px; border-collapse: collapse;"><tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">id</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">integer</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">tisa_id</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">integer</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">key</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">text</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">name</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">text</td>
+</tr>
+</table>
+<p><b>Group</b></p><table style="font-size:13px;cell-spacing: 0px; border-collapse: collapse;"><tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">id</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">integer</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">tisa_id</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">integer</td>
+</tr>
+</table>
+<p><b>Category</b></p><p><b>Standard</b></p><table style="font-size:13px;cell-spacing: 0px; border-collapse: collapse;"><tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">id</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">integer</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">type</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">integer</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">ip</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">text</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">created_at</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">timestamp without time zone</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">updated_at</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">timestamp without time zone</td>
+</tr>
+</table>
+<h2>Contributors</h2><p>&nbsp;<a href='/ep/profile/tXyPGAkvFX9'/>nchild</a> xchild@gmail.com</p><p>&nbsp;<a href='/ep/profile/nl9nKXU6Z1L'/>Shelling Ford</a> navyblueshellingford@gmail.com</p><p>&nbsp;<a href='/ep/profile/uldM12vxAYG'/>howard chi</a> chilijung@gmail.com</p><p>&nbsp;<a href='/ep/profile/z4JarLrJBea'/>Johnson Liang</a> johnsonliang7@gmail.com</p><p>&nbsp;<a href='/ep/profile/BBGX8lqNMr7'/>Shenk Wang</a> shenkyw@gmail.com</p><p>&nbsp;<a href='/ep/profile/od9zls3wnWG'/>ipa chiu</a> ipawei@gmail.com</p><p>&nbsp;<a href='/ep/profile/qaqB0AtENES'/>Lucien Lee</a> lkiral7903@gmail.com</p><p>&nbsp;洪偉 wayne930242@gmail.com</p><p>&nbsp;凜希 luanyoung@gmail.com</p><p></p><p></p></body>
+</html>
