@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1689"/>
+<meta name="version" content="1973"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$8ow2GnliH48</title>
 </head>
 <body><h1>開放政治獻金</h1><p></p><p>本專案 google drive <a href="https://drive.google.com/folderview?id=0B64VfMr63wAdRDdRaURJNEZkeU0"></a>https://drive.google.com/folderview?id=0B64VfMr63wAdRDdRaURJNEZkeU0</p><p>目前上傳：<a href='https://drive.google.com/folderview?id=0B64VfMr63wAdaUd5aEYycW5LZzA&amp;tid=0B64VfMr63wAdRDdRaURJNEZkeU0'/>馬英九</a>、<a href='https://drive.google.com/folderview?id=0B64VfMr63wAdZGN6Ymt4QnpoSkU&amp;tid=0B64VfMr63wAdRDdRaURJNEZkeU0'/>吳育昇</a>、<a href='https://drive.google.com/folderview?id=0B64VfMr63wAdZnlPUGxfSmhiYUE&amp;tid=0B64VfMr63wAdRDdRaURJNEZkeU0'/>張慶忠</a>、<a href='https://drive.google.com/folderview?id=0B64VfMr63wAdbjBLdDhHMENVenM&amp;tid=0B64VfMr63wAdRDdRaURJNEZkeU0'/>丁守中</a>、<a href='https://drive.google.com/folderview?id=0B64VfMr63wAdZHNnY0s4QlBoVW8&amp;tid=0B64VfMr63wAdRDdRaURJNEZkeU0'/>王惠美</a>、<a href='https://drive.google.com/folderview?id=0B64VfMr63wAdQmFpc3Ezd20zR1U&amp;tid=0B64VfMr63wAdRDdRaURJNEZkeU0'/>顏清標</a>、<a href='https://drive.google.com/folderview?id=0B64VfMr63wAdelNsM0YxaHFHVWc&amp;tid=0B64VfMr63wAdRDdRaURJNEZkeU0'/>徐耀昌</a>（感謝56辦公室親自<s>上山</s>到監察院砍柴）</p><p></p><h2>專案進度</h2><p>2013/ 12/22 hackath6n 討論，決議先從數位立委/政治人物的政治獻金開始找起</p><ul><li>馮光遠老師建議：吳育昇、馬英九</li>
@@ -47,32 +47,33 @@
 <li>浮水印我之前是透過 image magick 處理，透過下面這樣的指令可以有不錯的效果</li></ul>
 <ul style="list-style: none;"><li>convert {$file_orig} -morphology thicken &rsquo;1x3&gt;:1,0,1&rsquo; {$file_target}</li></ul>
 <ul class="comment"><li>把半徑 2 以下的點都拿掉效果也不錯：</li>
-<li>convert all-000.tif -morphology Close Octagon:2 result2.png&nbsp;</li></ul class="comment">
-</li>
-<li><br/></li><ul class="comment"><li>圖檔用 jpg 存好肥阿!!! 我看原始檔是純黑白的，用 png 會小很多阿~~~</li>
-<li>沒特別注意，手滑就把三千多張轉成 jpg 了 XD</li></ul>
+<li>convert all-000.tif -morphology Close Octagon:2 result2.png&nbsp;</li></ul>
+<ul class="task"><li>利用表格左上右上兩點找出浮水印的位置再強力清除處理那附近的雜點不曉得可行性多高</li>
+<li>*</li></ul>
 </ul>
-<ul class="taskdone"><li>在 yllan 的協助下已經將上述 OCR 結果轉成文字與座標，放在</li></ul>
-<ul style="list-style: none;"><li><a href="https://github.com/yllan/TextPositionExtractor"></a><a href='https://github.com/yllan/TextPositionExtractor'/>https://github.com/yllan/TextPositionExtractor</a></li>
-<li>接著就是要以這個結果去處理文字排版，然後找出欄位對應關係，接著就是人工 captcha 了</li></ul>
-<ul class="task"><li>已經將 Ronny 與 yllan 的成果合併到</li></ul>
-<ul style="list-style: none;"><li><a href="https://github.com/kiang/tw-campaign-finance"></a>https://github.com/kiang/tw-campaign-finance</li>
-<li>展示頁面可以參考</li>
-<li><a href="http://kiang.github.io/tw-campaign-finance/demo_text.html"></a><a href='http://kiang.github.io/tw-campaign-finance/demo_text.html'/>http://kiang.github.io/tw-campaign-finance/demo_text.html</a></li></ul>
 </ul>
-<ul class="task"><li>切框線確認（<a href='http://ronnywang.github.io/tw-campaign-finance/demo.html'/>demo 網頁</a>：速覽每份表格欄位切得如何）</li>
-<li>從圖檔抓出欄位資訊，所有程式碼和資料在 <a href='https://github.com/ronnywang/tw-campaign-finance'/>github</a> （以上 <a href='https://g0v.hackpad.com/ep/profile/tC7Bqff8Vp0'/>Ronny Wang</a> ++）</li>
-<li>顯示 OCR 結果、校對介面<ul class="task"><li>Timothy Lee 做了一個 <a href="https://github.com/ctiml/campaign-finance.g0v.ctiml.tw"></a><a href='https://github.com/ctiml/campaign-finance.g0v.ctiml.tw'/>https://github.com/ctiml/campaign-finance.g0v.ctiml.tw</a></li></ul>
-<ul style="list-style: none;"><li>實際上線畫面 - <a href="http://campaign-finance.g0v.ctiml.tw/cell"></a><a href='http://campaign-finance.g0v.ctiml.tw/cell'/>http://campaign-finance.g0v.ctiml.tw/cell</a></li></ul>
 </ul>
-<ul class="task"><li><a href="http://campaign-finance.g0v.ronny.tw/"></a>http://campaign-finance.g0v.ronny.tw/ 這邊是 Ronny 放的 API 連結，讓大家可以自由界接來做資料處理界面</li></ul>
-<ul class="comment"><li>clkao這是跑 Server Script?</li>
-<li><a href='https://github.com/kiang/tw-campaign-finance/issues/5'/>（來亂） 建議可以增加積分功能&nbsp; 來鼓勵大家來人工OCR</a>&nbsp;</li></ul>
-<ul class="task"><li>快捷鍵（hotkeys）<ul class="task"><li>空白鍵等於按「這是空白」</li></ul>
-<ul class="comment"><li>原建議來自<a href='https://groups.google.com/forum/#!topic/g0v-general/IBFzyI1hOH4'/>這裡</a></li>
+<p><a href="https://www.dropbox.com/s/yam9ykpcjl1kznm/sample.png"></a>https://www.dropbox.com/s/yam9ykpcjl1kznm/sample.png</p><ul class="comment"><li>圖檔用 jpg 存好肥阿!!! 我看原始檔是純黑白的，用 png 會小很多阿~~~</li>
+<li>沒特別注意，手滑就把三千多張轉成 jpg 了 XD</li></li>
+<li>在 yllan 的協助下已經將上述 OCR 結果轉成文字與座標，放在</li></li>
+<li><a href="https://github.com/yllan/TextPositionExtractor"></a><a href='https://github.com/yllan/TextPositionExtractor'/>https://github.com/yllan/TextPositionExtractor</a></li></li>
+<li>接著就是要以這個結果去處理文字排版，然後找出欄位對應關係，接著就是人工 captcha 了</li></li>
+<li>已經將 Ronny 與 yllan 的成果合併到</li></li>
+<li><a href="https://github.com/kiang/tw-campaign-finance"></a>https://github.com/kiang/tw-campaign-finance</li></li>
+<li>展示頁面可以參考</li></li>
+<li><a href="http://kiang.github.io/tw-campaign-finance/demo_text.html"></a><a href='http://kiang.github.io/tw-campaign-finance/demo_text.html'/>http://kiang.github.io/tw-campaign-finance/demo_text.html</a></li></li>
+<li>切框線確認（<a href='http://ronnywang.github.io/tw-campaign-finance/demo.html'/>demo 網頁</a>：速覽每份表格欄位切得如何）</li></li>
+<li>從圖檔抓出欄位資訊，所有程式碼和資料在 <a href='https://github.com/ronnywang/tw-campaign-finance'/>github</a> （以上 <a href='https://g0v.hackpad.com/ep/profile/tC7Bqff8Vp0'/>Ronny Wang</a> ++）</li></li>
+<li>顯示 OCR 結果、校對介面</li></li>
+<li>Timothy Lee 做了一個 <a href="https://github.com/ctiml/campaign-finance.g0v.ctiml.tw"></a><a href='https://github.com/ctiml/campaign-finance.g0v.ctiml.tw'/>https://github.com/ctiml/campaign-finance.g0v.ctiml.tw</a></li></li>
+<li>實際上線畫面 - <a href="http://campaign-finance.g0v.ctiml.tw/cell"></a><a href='http://campaign-finance.g0v.ctiml.tw/cell'/>http://campaign-finance.g0v.ctiml.tw/cell</a></li></li>
+<li><a href="http://campaign-finance.g0v.ronny.tw/"></a>http://campaign-finance.g0v.ronny.tw/ 這邊是 Ronny 放的 API 連結，讓大家可以自由界接來做資料處理界面</li>
+<li>clkao這是跑 Server Script?</li>
+<li><a href='https://github.com/kiang/tw-campaign-finance/issues/5'/>（來亂） 建議可以增加積分功能&nbsp; 來鼓勵大家來人工OCR</a>&nbsp;</li></li>
+<li>快捷鍵（hotkeys）</li></li>
+<li>空白鍵等於按「這是空白」</li>
+<li>原建議來自<a href='https://groups.google.com/forum/#!topic/g0v-general/IBFzyI1hOH4'/>這裡</a></li>
 <li><br/></li></ul>
-</ul>
-</ul>
 <ul><li>設計政治獻金資料呈現介面</li><ul class="task"><li>wireframe</li>
 <li>mockup</li>
 <li>proto</li></ul>
@@ -96,8 +97,21 @@
 
 <p>開放政治獻金 SOP</p><ul class="comment"><li>來自雨蒼建議</li></ul>
 
-<p>政治獻金懶人包</p><ul class="comment"><li>來自雨蒼建議</li>
-<li><br/></li></ul class="comment">
+<p>政治獻金懶人包</p><ul class="comment"><li>來自雨蒼建議</li></ul>
+
+<p><b>&nbsp;「開放政治獻金」粉絲頁開設中（4/20 19:00）</b></p><ul class="comment"><li>未來這頁可以擴大服務所有跟「政客x財產」相關的專案，例如「立委投票指南之股票資產」、公務員財產申報</li></ul>
+<p>需要支援：</p><ul><li>大頭貼圖片</li>
+<li>專案英文名稱 / 短網址英文縮寫</li></ul>
+<ul class="comment"><li>不知道取名 campaign finance taiwan, 簡稱 cft 會不會被打？ XD</li>
+<li>taiwan political money =&gt; tpm</li>
+<li>kiang 你好壞（大笑指）</li></ul>
+<ul><li>粉絲專頁名稱建議（取個很潮的名字很重要 XD）<ul><li>「開放政治獻金」好處是一目了然，但比較硬<ul><li>twWatch &amp; CindyLinz：<b>「公開」</b>政治獻金好像比較易懂，講「g0v 開放政治獻金」會有奇異感</li></ul>
+</li>
+<li><a href='http://zh.wikipedia.org/wiki/%E9%99%BD%E5%85%89%E6%B3%95%E6%A1%88'/>陽光法案</a>的「陽光」意象不錯，監察院也是用「陽光法案主題網」，但涵蓋範圍大於「政客財產」，第一時間比較難懂</li>
+<li>噓~~教你解開政治獻金的小秘密 by twWatch</li>
+<li>政獻核一廠 = 政治獻金核實，&quot;核一廠&quot; = 裡面可能藏有核彈？ by kiang</li></ul>
+</ul>
+
 <h2>一、目前政治獻金公開情形</h2><ul><li>《政治獻金法第21條》規定：受理申報機關應於受理申報截止後三個月內彙整列冊，供人查閱；會計報告書之收支結算表應刊登政府公報或新聞紙，並公開於電腦網路。</li>
 <li><b>網路上</b>僅能查閱「會計報告書之收支結算表」。ㄞ</li>
 <li>網路上可查到的項目：（皆為總數）<ul><li>收入部分<ul><li>個人捐贈收入</li>
