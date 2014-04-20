@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1444"/>
+<meta name="version" content="1673"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$8ow2GnliH48</title>
 </head>
 <body><h1>開放政治獻金</h1><p></p><p>本專案 google drive <a href="https://drive.google.com/folderview?id=0B64VfMr63wAdRDdRaURJNEZkeU0"></a>https://drive.google.com/folderview?id=0B64VfMr63wAdRDdRaURJNEZkeU0</p><p>目前上傳：<a href='https://drive.google.com/folderview?id=0B64VfMr63wAdaUd5aEYycW5LZzA&amp;tid=0B64VfMr63wAdRDdRaURJNEZkeU0'/>馬英九</a>、<a href='https://drive.google.com/folderview?id=0B64VfMr63wAdZGN6Ymt4QnpoSkU&amp;tid=0B64VfMr63wAdRDdRaURJNEZkeU0'/>吳育昇</a>、<a href='https://drive.google.com/folderview?id=0B64VfMr63wAdZnlPUGxfSmhiYUE&amp;tid=0B64VfMr63wAdRDdRaURJNEZkeU0'/>張慶忠</a>、<a href='https://drive.google.com/folderview?id=0B64VfMr63wAdbjBLdDhHMENVenM&amp;tid=0B64VfMr63wAdRDdRaURJNEZkeU0'/>丁守中</a>、<a href='https://drive.google.com/folderview?id=0B64VfMr63wAdZHNnY0s4QlBoVW8&amp;tid=0B64VfMr63wAdRDdRaURJNEZkeU0'/>王惠美</a>、<a href='https://drive.google.com/folderview?id=0B64VfMr63wAdQmFpc3Ezd20zR1U&amp;tid=0B64VfMr63wAdRDdRaURJNEZkeU0'/>顏清標</a>、<a href='https://drive.google.com/folderview?id=0B64VfMr63wAdelNsM0YxaHFHVWc&amp;tid=0B64VfMr63wAdRDdRaURJNEZkeU0'/>徐耀昌</a>（感謝56辦公室親自<s>上山</s>到監察院砍柴）</p><p></p><h2>專案進度</h2><p>2013/ 12/22 hackath6n 討論，決議先從數位立委/政治人物的政治獻金開始找起</p><ul><li>馮光遠老師建議：吳育昇、馬英九</li>
@@ -42,7 +42,11 @@
 <li>&nbsp;&nbsp;&nbsp; --despeckle=aggressive &#92;</li>
 <li>&nbsp;&nbsp;&nbsp; *.png out</li></ul class="task">
 </li>
-<li>&nbsp;--threshold 負越多，去污能力越強</li></ul>
+<li>&nbsp;--threshold 負越多，去污能力越強</li></ul class="task">
+</li>
+<li>浮水印我之前是透過 image magick 處理，透過下面這樣的指令可以有不錯的效果</li></ul>
+<ul style="list-style: none;"><li>convert {$file_orig} -morphology thicken &rsquo;1x3&gt;:1,0,1&rsquo; {$file_target}</li><ul class="comment"><li>圖檔用 jpg 存好肥阿!!! 我看原始檔是純黑白的，用 png 會小很多阿~~~</li>
+<li>沒特別注意，手滑就把三千多張轉成 jpg 了 XD</li></ul>
 </ul>
 </ul>
 <ul class="taskdone"><li>在 yllan 的協助下已經將上述 OCR 結果轉成文字與座標，放在</li></ul>
@@ -61,19 +65,37 @@
 <ul class="task"><li><a href="http://campaign-finance.g0v.ronny.tw/"></a>http://campaign-finance.g0v.ronny.tw/ 這邊是 Ronny 放的 API 連結，讓大家可以自由界接來做資料處理界面</li></ul>
 <ul class="comment"><li>clkao這是跑 Server Script?</li>
 <li><a href='https://github.com/kiang/tw-campaign-finance/issues/5'/>（來亂） 建議可以增加積分功能&nbsp; 來鼓勵大家來人工OCR</a>&nbsp;</li></ul>
+<ul class="task"><li>快捷鍵（hotkeys）<ul class="task"><li>空白鍵等於按「這是空白」</li></ul>
+<ul class="comment"><li>原建議來自<a href='https://groups.google.com/forum/#!topic/g0v-general/IBFzyI1hOH4'/>這裡</a></li>
+<li><br/></li></ul>
+</ul>
 </ul>
 <ul><li>設計政治獻金資料呈現介面</li><ul class="task"><li>wireframe</li>
 <li>mockup</li>
 <li>proto</li></ul>
 </ul>
-
 <p>網站設計參考</p><ul><li>口袋國會的政治獻金查詢頁面 <a href="http://xn--6or66eo1t8u6a.tw/part5_2_detail.php?sno=1"></a><a href='http://xn--6or66eo1t8u6a.tw/part5_2_detail.php?sno=1'/>http://xn--6or66eo1t8u6a.tw/part5_2_detail.php?sno=1</a></li>
 <li>第八屆立委選舉經費 <a href="http://ccw.site44.com/"></a><a href='http://ccw.site44.com/'/>http://ccw.site44.com/</a></li>
 <li>maplight <a href="http://maplight.org/us-congress/legislator/127-robert-aderholt"></a><a href='http://maplight.org/us-congress/legislator/127-robert-aderholt'/>http://maplight.org/us-congress/legislator/127-robert-aderholt</a></li></ul>
 
 <p>延伸關係對照（政、商聯姻一家親）</p><ul><li>《總統的親戚：揭開台灣權貴家族的臍帶與裙帶關係》</li></ul>
 
-<p></p><h2>一、目前政治獻金公開情形</h2><ul><li>《政治獻金法第21條》規定：受理申報機關應於受理申報截止後三個月內彙整列冊，供人查閱；會計報告書之收支結算表應刊登政府公報或新聞紙，並公開於電腦網路。</li>
+<p>浮水印圖例</p><ul><li>彌補日後可能的自動化去除仍有疏漏可能</li></ul>
+<ul class="comment"><li>原建議來自<a href='https://groups.google.com/forum/#!topic/g0v-general/IBFzyI1hOH4'/>這裡</a></li></ul>
+
+<p>開放政治獻金遊戲</p><ul><li>［成就］、［記分］、［挑戰］、［排名］<ul><li>參考 <a href='http://orteil.dashnet.org/cookieclicker/'/>Cookie Click</a></li>
+<li>延伸閱讀 <a href='http://www.books.com.tw/web/sys_serialtext/?item=0010578430'/>台灣為什麼重要？&nbsp;</a></li></ul>
+</ul>
+<ul class="comment"><li>原建議來自<a href='https://groups.google.com/forum/#!topic/g0v-general/togJIxA_7Xk'/>這裡</a></li></ul>
+
+<p>Captcha 系統</p><ul><li>參考 <a href='https://captcha.net/'/>reCAPTCHA</a></li></ul>
+<ul class="comment"><li>原建議來自<a href='https://www.facebook.com/groups/g0v.general/permalink/609945902415153/?comment_id=610269255716151&amp;offset=0&amp;total_comments=25'/>這裡</a></li></ul>
+
+<p>開放政治獻金 SOP</p><ul class="comment"><li>來自雨蒼建議</li></ul>
+
+<p>政治獻金懶人包</p><ul class="comment"><li>來自雨蒼建議</li>
+<li><br/></li></ul class="comment">
+<h2>一、目前政治獻金公開情形</h2><ul><li>《政治獻金法第21條》規定：受理申報機關應於受理申報截止後三個月內彙整列冊，供人查閱；會計報告書之收支結算表應刊登政府公報或新聞紙，並公開於電腦網路。</li>
 <li><b>網路上</b>僅能查閱「會計報告書之收支結算表」。ㄞ</li>
 <li>網路上可查到的項目：（皆為總數）<ul><li>收入部分<ul><li>個人捐贈收入</li>
 <li>營利事業捐贈收入</li>
