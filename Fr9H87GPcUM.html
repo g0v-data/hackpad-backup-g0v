@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="7669"/>
+<meta name="version" content="7854"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$Fr9H87GPcUM</title>
 </head>
 <body><h1>太陽花盒子－自己的媒體自己報－</h1><p>/* 命名可以再思考一下更加有公民資訊透明含意，不過也許可以不用，這個名字也是很有歷史意義。 */</p><p><b>第一次來的人可以跳到最底下看 FAQ (麻煩讓 FAQ 置底)</b></p><p></p><h2>主旨：</h2><p>　　要挖的坑，設計「機上盒 or APP」，專門收看社會運動現場實況LIVE，或是大腸花魚腸花，或是和社運有關的直播，立院質詢，公聽會……等等。（<a href='http://farm9.staticflickr.com/8288/7745942538_85bbe2d9b3_c.jpg'/>概念圖１</a>）（<a href='https://www.facebook.com/photo.php?fbid=821715797842060&amp;set=a.820703047943335.1073741837.100000109433022&amp;type=3&amp;theater'/>概念圖２</a>）</p><ul class="comment"><li><s>建議把「App」改成「機上盒」，畢竟目的在把電視人的視線和網路人的視線交疊起來。無論如何就是接到電視，不是手機，也不是平板。至於機上盒的實作方式可以分流，也可以集中火力，用 App 或用刷機的方式實現。</s></li>
@@ -136,6 +136,7 @@
 
 <p><b>重新刷成 Debian Wheezy</b></p><ol><li>用派樂靈丹提供的方法刷好 u-boot ... <a href="http://www.twpda.com/2013/09/sh4twbox-07.html"></a>http://www.twpda.com/2013/09/sh4twbox-07.html (<s>哇…變真的磚塊了 ...</s> ) 備份原來 USB DOM 的 image，刷 Debian wheezy。開機速度真的慢 ...&nbsp;</li>
 <li>可以用自編的 rootfs 刷機了(一樣延用 twpda 的刷機 script) 下一步是用 nfsroot 開機來加速開發。(每次更新都要重刷是很痛苦的)</li>
+<li>nfsboot 成功，對開發來說輕鬆多了，晚一點再把細節寫成文件</li>
 <li><s>目標更新成 Debian Jessie&nbsp;</s></li>
 <li>suzuke 的 github: <a href="https://github.com/suzuke/kernel-pdk7105"></a><a href='https://github.com/suzuke/kernel-pdk7105'/>https://github.com/suzuke/kernel-pdk7105</a></li></ol>
 
@@ -216,7 +217,8 @@
 
 <h2>前端 GUI 畫面</h2><p><a href="https://github.com/psdmac/SunFlowerTv"></a>https://github.com/psdmac/SunFlowerTv</p><p>靜態頁面：<a href="http://psdmac.github.io/SunFlowerTv"></a>http://psdmac.github.io/SunFlowerTv</p><p></p><h2>FAQ</h2><p>Q: 什麼是太陽花盒子？</p><p>A: 太陽花盒子目標是社會運動專屬的機上盒，或稱多媒體播放器，類似產品有中華電信的 <a href='https://zh.wikipedia.org/zh-tw/中華電信MOD'/>MOD</a>。我們發現，握鍵盤和拿搖控器的人看到的、聽到的、想到的、理解的，已經變成兩個<a href='http://zh.wikipedia.org/zh-tw/%E5%B9%B3%E8%A1%8C%E5%AE%87%E5%AE%99'/>平行宇宙</a>，這是典型的<a href='http://zh.wikipedia.org/wiki/%E6%95%B8%E4%BD%8D%E8%90%BD%E5%B7%AE'/>數位落差</a>，太陽花盒子的首要任務，就是透過最直接的影音畫面來消除落差。</p><p></p><p>Q; 為什麼要推太陽花盒子？</p><p>A: 有鑑於在台灣在這個時刻，不論有線無線的新聞都無法讓人信任，我們決定自己做機上盒，推送第一手的紀錄畫面，包括各種直播、公聽會、質詢紀錄等等到電視上。我們要創造專屬於公民的電視新聞媒體平台。</p><p></p><p>Q: 目標閱聽群眾是誰？</p><p>A: 從 318 學運發現，透過網路號召，動員的人力都是年輕族群。而透過電視了解這個運動，還會表達支持的中老年人，大多對社運並不陌生。支持社運、學運的人，除了要自己打貪反腐，了解法律、哲學、經濟等議題外，還得面對，以電視為主要資訊來源的家人，因為資訊落差所造成的觀念歧異，每每嘗試以和平開場的溝通，多以充滿失望、爭執、隔離結束所帶來的壓力。我們的目標閱聽群眾就是這些願意溝通、思考、理解政治、社會，但不太熟悉使用網路查找資料的中老年人。</p><p></p><p>Q: 什麼是網樂通？</p><p>A: 幾年前<a href='http://zh.wikipedia.org/wiki/%E7%B6%B2%E6%A8%82%E9%80%9A'/>壹傳媒免費奉送的機上盒</a>，本來做為壹電視的傳播管道，後來被 NCC 轟下架。本來社會輿論認為黎先生很紅，被 NCC 下架時還額手稱慶，這兩年發現最紅的會變紫，然後變藍…</p><ul class="comment"><li>如果有原網樂通員工，或任何壹傳媒的員工，或有人認識壹傳媒的員工，希望能幫忙牽線，我們的計畫是讓所有的網樂通還魂。330 上街的 50 萬人，都是潛在的收視戶!&nbsp;</li></ul>
 
-<p>Q: 為什麼選擇網樂通？</p><p>A: 為了降低數位落差，降低終端用戶，尤其是中老年人，的進入門檻是最重要的。網樂通有以下好處：免費、已經沒用、數量很大、已經成功放進用戶家裡。另外，這種機上盒如果收費，會被貼上營利的標籤，將招來不必要的質疑。</p><p></p><p>Q: 別的機上盒不行嗎？</p><p>A: 可以，只要閱聽人知道去哪裡找到這些資料。太陽花盒子的目的是幫你撈出這些運動的紀錄，第一手直播、第二手剪接、第三手紀錄片、還有事後的訪談、歌手 MV…等等等，與運動無關影音資料不會限制，但使用者須自己想辦法。</p><ul class="comment"><li>歌手MV?</li></ul>
+<p>Q: 為什麼選擇網樂通？</p><p>A: 為了降低數位落差，降低終端用戶，尤其是中老年人，的進入門檻是最重要的。網樂通有以下好處：免費、已經沒用、數量很大、已經成功放進用戶家裡。另外，這種機上盒如果收費，會被貼上營利的標籤，將招來不必要的質疑。</p><p></p><p>Q: 別的機上盒不行嗎？</p><p>A: 可以，只要閱聽人知道去哪裡找到這些資料。太陽花盒子的目的是幫你撈出這些運動的紀錄，第一手直播、第二手剪接、第三手紀錄片、還有事後的訪談、歌手 MV…等等等，與運動無關影音資料不會限制，但使用者須自己想辦法。</p><ul class="comment"><li>歌手MV?</li>
+<li>印象中農陣、非核家園都有小型的樂團在背後。還有像主題曲一樣的島嶼天光，應該也有人想看，重點是紀錄片還沒出來，就有很多人用島嶼天光來 tag 像紀錄片一樣的影音片段。</li></ul>
 
 <p>Q: 網樂通再多，終究停產啦~</p><p>A: 所以我們需要募集你不用的網樂通 ... 就算停產，先前壹傳媒發出的數量也夠大了。</p><p></p><p>Q: 我有網樂通，要怎麼變身成太陽花盒子？</p><p>A: (…啊&nbsp; ) 我們正在努力中。開發的進度也會不定期發佈在這個共筆裡。</p><p></p><p>Q: 我是工程師，想要幫忙，該怎麼做？</p><p>A: 請在這裡留言，跟我連絡!!&nbsp;</p><ul class="comment"><li>留言範本：我是 hbtsai 韌體工程師 / UI 設計師 / Qt 工程師 / *工程師，我想幫忙~&nbsp;</li></ul>
 
