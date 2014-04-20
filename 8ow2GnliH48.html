@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1673"/>
+<meta name="version" content="1689"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$8ow2GnliH48</title>
 </head>
 <body><h1>開放政治獻金</h1><p></p><p>本專案 google drive <a href="https://drive.google.com/folderview?id=0B64VfMr63wAdRDdRaURJNEZkeU0"></a>https://drive.google.com/folderview?id=0B64VfMr63wAdRDdRaURJNEZkeU0</p><p>目前上傳：<a href='https://drive.google.com/folderview?id=0B64VfMr63wAdaUd5aEYycW5LZzA&amp;tid=0B64VfMr63wAdRDdRaURJNEZkeU0'/>馬英九</a>、<a href='https://drive.google.com/folderview?id=0B64VfMr63wAdZGN6Ymt4QnpoSkU&amp;tid=0B64VfMr63wAdRDdRaURJNEZkeU0'/>吳育昇</a>、<a href='https://drive.google.com/folderview?id=0B64VfMr63wAdZnlPUGxfSmhiYUE&amp;tid=0B64VfMr63wAdRDdRaURJNEZkeU0'/>張慶忠</a>、<a href='https://drive.google.com/folderview?id=0B64VfMr63wAdbjBLdDhHMENVenM&amp;tid=0B64VfMr63wAdRDdRaURJNEZkeU0'/>丁守中</a>、<a href='https://drive.google.com/folderview?id=0B64VfMr63wAdZHNnY0s4QlBoVW8&amp;tid=0B64VfMr63wAdRDdRaURJNEZkeU0'/>王惠美</a>、<a href='https://drive.google.com/folderview?id=0B64VfMr63wAdQmFpc3Ezd20zR1U&amp;tid=0B64VfMr63wAdRDdRaURJNEZkeU0'/>顏清標</a>、<a href='https://drive.google.com/folderview?id=0B64VfMr63wAdelNsM0YxaHFHVWc&amp;tid=0B64VfMr63wAdRDdRaURJNEZkeU0'/>徐耀昌</a>（感謝56辦公室親自<s>上山</s>到監察院砍柴）</p><p></p><h2>專案進度</h2><p>2013/ 12/22 hackath6n 討論，決議先從數位立委/政治人物的政治獻金開始找起</p><ul><li>馮光遠老師建議：吳育昇、馬英九</li>
@@ -45,9 +45,12 @@
 <li>&nbsp;--threshold 負越多，去污能力越強</li></ul class="task">
 </li>
 <li>浮水印我之前是透過 image magick 處理，透過下面這樣的指令可以有不錯的效果</li></ul>
-<ul style="list-style: none;"><li>convert {$file_orig} -morphology thicken &rsquo;1x3&gt;:1,0,1&rsquo; {$file_target}</li><ul class="comment"><li>圖檔用 jpg 存好肥阿!!! 我看原始檔是純黑白的，用 png 會小很多阿~~~</li>
+<ul style="list-style: none;"><li>convert {$file_orig} -morphology thicken &rsquo;1x3&gt;:1,0,1&rsquo; {$file_target}</li></ul>
+<ul class="comment"><li>把半徑 2 以下的點都拿掉效果也不錯：</li>
+<li>convert all-000.tif -morphology Close Octagon:2 result2.png&nbsp;</li></ul class="comment">
+</li>
+<li><br/></li><ul class="comment"><li>圖檔用 jpg 存好肥阿!!! 我看原始檔是純黑白的，用 png 會小很多阿~~~</li>
 <li>沒特別注意，手滑就把三千多張轉成 jpg 了 XD</li></ul>
-</ul>
 </ul>
 <ul class="taskdone"><li>在 yllan 的協助下已經將上述 OCR 結果轉成文字與座標，放在</li></ul>
 <ul style="list-style: none;"><li><a href="https://github.com/yllan/TextPositionExtractor"></a><a href='https://github.com/yllan/TextPositionExtractor'/>https://github.com/yllan/TextPositionExtractor</a></li>
