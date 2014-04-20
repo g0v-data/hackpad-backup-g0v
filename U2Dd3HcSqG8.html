@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="794"/>
+<meta name="version" content="1289"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$U2Dd3HcSqG8</title>
 </head>
 <body><h1>X86型車載路由器(應付更多的攻擊和惡劣的環境)</h1><ul class="comment"><li>要不要考慮把這個視為<a href='/jgLrXNuSB33'/>這</a>個的子專案？</li>
@@ -25,9 +25,33 @@
 <li>那你覺得該怎麼做比較好&nbsp; 因為本人才剛踏入電腦因為本人才剛踏入電腦這塊3-4年 有很多需要學習</li>
 <li>先了解一下線路相關的背景知識，還有可以看看這篇：<a href='/jG9uno4d9H8'/>2014 03 08&nbsp;</a> 和這篇 <a href='/2KWlYWGfr7I'/>g1v.tw&nbsp;</a> ，很多時候除了硬體和頻寬的限制，最大的限制是使用環境和可用的預算</li>
 <li>真的要幾千人到幾萬人的Solution我相信做得出來，只是這樣如果要花1000k以上（無誤）你願意嗎？</li>
-<li>在合理的範圍提供網路，有線網路與無線網路分別都有適用的環境，在無線網路的天線方面著手也是一個方向</li></ul>
+<li>在合理的範圍提供網路，有線網路與無線網路分別都有適用的環境，在無線網路的天線方面著手也是一個方向</li>
+<li>可以講一下 Solu</li>
+<li>我說的是Solution解決方案，1000K很正常啊，ThinAP搭配Controller架構XD</li></ul>
 
-<p></p><p>小弟目前正在研究如何讓精簡型客戶端變成無線路由器，讓下次圍總統府時有更好的安全和網路體驗，目前分析的優缺點如下</p><p>優點</p><p>1.擴充性大</p><p>2.安全</p><p>3.彈性大</p><p>4.比高階路由器便宜</p><p>缺點</p><p>1.比一般路由器貴</p><p>2.攜帶不方便</p><p>3.需要技術人員來設定</p><p>4.需要電12V 5A(這部分可能要交給懂車的朋友了 直接變車載)</p><p>而所謂的精簡型客戶端就是使用INTEL ATOM VIA C7M這種處理器，至於有使用i5/i7就不用講 太貴了，然後硬碟很小2-64GB</p><p></p><p>系統就暫定用ROUTER OS X86</p><ul class="comment"><li>= = 這要錢啊，大大</li>
+<p>小弟目前正在研究如何讓精簡型客戶端變成無線路由器，讓下次圍總統府時有更好的安全和網路體驗，目前分析的優缺點如下</p><p>優點</p><p>1.擴充性大</p><ul class="comment"><li>一個Router會想要擴充什麼功能</li>
+<li>記憶體</li></ul>
+<p>2.安全</p><ul class="comment"><li>安全性取決與良好的設定，要不要說明一下這個「安全」是針對哪個方面？</li>
+<li>&nbsp;更進階的防火牆</li>
+<li>防火牆不是應用在這個層面啊，提供網路的立場，我們不應該去試著阻絕外部服務，可以做限流、QOS等處理方式，但是主動是防火牆你想要偵測哪種攻擊行為？</li>
+<li>是沒錯&nbsp;&nbsp; 但我們面對的是國家級攻擊，不守</li>
+<li>直接把你的車吊走或是拔掉源頭不就好了，哪需要那麼麻煩.....</li>
+<li>「國家等級的攻擊行為」還是沒有說清楚是「什麼」攻擊型態.</li>
+<li>抱歉&nbsp;&nbsp;&nbsp;&nbsp; 搞錯東西&nbsp; 車是可以移動</li>
+<li>沒有人會把網站放在車上.....</li>
+<li>比如說竊取封包 然後解析封包內容&nbsp; 盜用網路身分?</li></ul>
+<p>3.彈性大</p><ul class="comment"><li>同上，哪方面的「彈性」？</li>
+<li>隨時改裝隨時用</li>
+<li>那和我直接拿一台TPlink刷DDwrt直接上的差別？後者刷機時間還比較快耶.....XD</li>
+<li>但電腦並不是都只剩下路由功能阿，稍微˙重灌還可以做其他事情</li>
+<li>那就會回到上面的第一點，一個Router應該就乖乖做Router的事情，把其他的功能切去給其他系統做。</li>
+<li>這樣有非網路問題排修（ex: 系統因為影音直播沒有回應等），也不用讓包含整個網路停掉或是重新啟動。</li>
+<li>還這樣好了，車載先做有線路由，然後在接上一部無線路由，不知道效果怎樣</li>
+<li>效果就和你平常用的一樣啊，車載不過就只把DC in改成從車用電瓶啊，直接找12V的不就好了，電線接上去就直接上了XDDDD</li>
+<li>對好處就在這裡</li>
+<li>那如果直接用既有設備，連改都不用改啊XD?</li>
+<li>但移動不方便阿</li></ul>
+<p>4.比高階路由器便宜</p><p>缺點</p><p>1.比一般路由器貴</p><p>2.攜帶不方便</p><p>3.需要技術人員來設定</p><p>4.需要電12V 5A(這部分可能要交給懂車的朋友了 直接變車載)</p><p>而所謂的精簡型客戶端就是使用INTEL ATOM VIA C7M這種處理器，至於有使用i5/i7就不用講 太貴了，然後硬碟很小2-64GB</p><p></p><p>系統就暫定用LINUX</p><ul class="comment"><li>= = 這要錢啊，大大</li>
 <li>我知道&nbsp; 我等一下</li>
 <li>會改＿</li></ul>
 
