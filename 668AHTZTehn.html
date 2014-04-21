@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="549"/>
+<meta name="version" content="1296"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$668AHTZTehn</title>
 </head>
 <body><h1>太陽花紀實 - Data Format</h1><p></p><h2>逐字稿資料</h2><ul><li><a href='https://sunflowerdocumentary.hackpad.com/'/>逐字稿工作區</a></li>
@@ -39,18 +39,82 @@
 <li>包圍ＯＯＯ</li>
 <li><br/></li></ul>
 
-<p>評論 (談話/節目/ ...)</p><p>紀錄 (直播/錄影/SNG/ ...)</p><p>官方 (記者會/ ...)</p><p></p><p>定點</p><p>機動</p><p></p><p></p><p></p><h2>JSON Format</h2><p></p><p>[</p><ul class="code"><li>{</li>
-<li>&nbsp;&nbsp;&nbsp; &quot;startDate&quot;<b>:</b>&quot;2011,12,10&quot;,</li>
-<li>&nbsp;&nbsp;&nbsp; &quot;headline&quot;<b>:</b>&quot;Headline Goes Here&quot;,</li>
-<li>&nbsp;&nbsp;&nbsp; &quot;text&quot;<b>:</b>&quot;&lt;p&gt;Body text goes here, some HTML is OK&lt;/p&gt;&quot;,</li>
-<li>&nbsp;&nbsp;&nbsp; &quot;tag&quot;<b>:</b>&quot;This is Optional&quot;,</li>
-<li>&nbsp;&nbsp;&nbsp; &quot;classname&quot;<b>:</b>&quot;optionaluniqueclassnamecanbeaddedhere&quot;,</li>
-<li>&nbsp;&nbsp;&nbsp; &quot;asset&quot;<b>:</b> {</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;media&quot;<b>:</b>&quot;<a href="http://twitter.com/ArjunaSoriano/status/164181156147900416"></a><a href='http://twitter.com/ArjunaSoriano/status/164181156147900416'/>http://twitter.com/ArjunaSoriano/status/164181156147900416</a>&quot;,</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;thumbnail&quot;<b>:</b>&quot;optional-32x32px.jpg&quot;,</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;credit&quot;<b>:</b>&quot;Credit Name Goes Here&quot;,</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;caption&quot;<b>:</b>&quot;Caption text goes here&quot;</li>
+<p>評論 (談話/節目/ ...)</p><p>紀錄 (直播/錄影/SNG/ ...)</p><p>官方 (記者會/ ...)</p><p></p><p>定點</p><p>機動</p><p></p><p></p><p></p><h2>JSON Format</h2><p></p><ul><li><b>data/gist/timeline.txt</b></li>
+<li><b>data/speech/timeline.txt</b></li></ul>
+
+<ul class="code"><li>[</li>
+<li>&nbsp;&nbsp;&nbsp; {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;event_id&quot;:1,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;category&quot;:&quot;event&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;title&quot;:&rsquo;事件標題 1&rsquo;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;focus&quot;:1,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;date&quot;:{</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;full&quot;:2014-03-21T06:00:00+08:00,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;yyyy&quot;:2014,&quot;mm&quot;:3,&quot;dd&quot;:21 }</li>
 <li>&nbsp;&nbsp;&nbsp; },</li>
+<li>&nbsp;&nbsp;&nbsp; {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;speech_id&quot;:1,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;category&quot;:&quot;speech&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;title&quot;:&rsquo;演講標題 1&rsquo;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;focus&quot;:0,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;date&quot;:{</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;full&quot;:2014-03-21T06:00:00+08:00,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;yyyy&quot;:2014,&quot;mm&quot;:3,&quot;dd&quot;:21 }</li>
+<li>&nbsp;&nbsp;&nbsp; }...</li>
+<li>]</li></ul>
+
+<ul><li><b>data/gist/events.txt</b></li></ul>
+
+<ul class="code"><li>[</li>
+<li>&nbsp;&nbsp;&nbsp; {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;event_id&quot;:1,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;title&quot;:&quot;事件標題 &quot;&rsquo;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;description&quot;:&quot;事件內文 1&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;site&quot;:&quot;事件地點 1&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;thumbnail&quot;:[&quot;img/event/1.jpg&quot;],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;media&quot;<b>:[</b>&quot;<a href="https://www.youtube.com/watch?v=UKbOavrerNQ&t=53m37s"></a><u><a href='https://www.youtube.com/watch?v=UKbOavrerNQ&amp;t=53m37s'/>https://www.youtube.com/watch?v=UKbOavrerNQ&amp;t=53m37s</a></u>&quot;],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;tag&quot;:</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { &quot;id&quot;:1 , &quot;name&quot;: &quot;標籤 1&quot; },&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { &quot;id&quot;:2 , &quot;name&quot;: &quot;標籤 2&quot; }</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;hackpad&quot;:&quot;<a href="https://318.hackpad.com/--F0W0Fnhkakl"></a><a href='https://318.hackpad.com/--F0W0Fnhkakl'/>https://318.hackpad.com/--F0W0Fnhkakl</a>&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;date&quot;:{</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;full&quot;:2014-03-21T06:00:00+08:00,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;yyyy&quot;:2014,&quot;mm&quot;:3,&quot;dd&quot;:21 }</li>
+<li>&nbsp;&nbsp;&nbsp; },</li>
+<li>&nbsp;&nbsp;&nbsp; {&nbsp; &quot;event_id&quot;:1,... }</li>
+<li>]</li></ul>
+
+<ul><li><b>data/speech/events.txt</b></li></ul>
+
+<ul><li><b>data/tag.txt</b></li></ul>
+<ul class="code"><li>[</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;id&quot; : 1, &quot;name&quot; : &quot;街頭民主教室&quot;</li>
+<li>]</li></ul>
+<p>------</p><p></p><ul><li>Data</li></ul>
+<p>[</p><ul class="code"><li>{</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;id&quot;:&quot;0&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;startDate&quot;<b>:</b>&quot;<b>2014-03-21T06:00:00+08:00</b>&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;headline&quot;<b>:</b>&quot;兩岸經貿如何影響民主？&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;text&quot;<b>:</b>&quot;謝謝，天氣變冷了齁，請同學或者是在場的民眾要注意一下...&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;tag&quot;<b>:</b>&quot;街頭民主教室&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;place&quot;<b>:</b>&quot;濟南路&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;hackpad&quot;:&quot;<a href="https://318.hackpad.com/--F0W0Fnhkakl"></a>https://318.hackpad.com/--F0W0Fnhkakl&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;asset&quot;<b>:</b> {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;media&quot;<b>:</b>&quot;<a href="https://www.youtube.com/watch?v=UKbOavrerNQ&t=53m37s"></a><u><a href='https://www.youtube.com/watch?v=UKbOavrerNQ&amp;t=53m37s'/>https://www.youtube.com/watch?v=UKbOavrerNQ&amp;t=53m37s</a></u>&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;thumbnail&quot;<b>:</b>&quot;xxx.jpg&quot;</li>
+<li>&nbsp;&nbsp;&nbsp; }</li>
 <li>}</li></ul>
+<p>]</p><p></p><ul><li>Event list</li></ul>
+<p>[</p><ul class="code"><li>{</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;id&quot;:&quot;0&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;startDate&quot;<b>:</b>&quot;<b>2014-03-21T06:00:00+08:00</b>&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;headline&quot;<b>:</b>&quot;兩岸經貿如何影響民主？&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;tag&quot;<b>:</b>&quot;街頭民主教室&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;place&quot;<b>:</b>&quot;濟南路&quot;</li>
+<li>}</li></ul>
+<p>]</p><p></p><ul><li>Tag list</li></ul>
+<p>[</p><ul class="code"><li>&quot;街頭民主教室&quot;</li></ul>
 <p>]</p><p></p><h2>討論資料結構</h2><p>（<a href='https://drive.google.com/folderview?id=0B6ASgY1GMSOhWmFBMDFuZWt1LUE&amp;usp=sharing'/>開個臨時的檔案庫</a>）</p><p>現況：正在設計新的表格了～文播組～</p><p>2014-04-05／只准「零時政府」用電　議場插電有分階級？（2014-04-05中天新聞／記者唐薏程、黃琡雯）</p><p>濟南路／2014-04-02_1950to／by 劉宇庭／.mp4</p><p></p><p></p><p></p></body>
 </html>
