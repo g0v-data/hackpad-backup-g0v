@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2460"/>
+<meta name="version" content="2970"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$VVlHNqKaQrC</title>
 </head>
 <body><h1>直播導播台 Live!</h1><p>&nbsp;</p><h2> 專案說明</h2><p>太陽花運動期間由 <a href='http://g0v.today/'/>g0v.today</a> 彙整直播連結，運動之後直播連結四散不易傳播。希望透過直播連結導播台讓直播主主動 submit 連結，打造直播聯播網。</p><p></p><p><b>授權方式</b></p><p>（程式碼部分如 MIT/BSD /文件部分，如 CC-BY）</p><p>MIT, CC-BY</p><p></p><p><b>專案目前狀態</b></p><p>開發中</p><p></p><p><b>專案資訊</b></p><p>Repository: <a href="https://github.com/g0v/live"></a>https://github.com/g0v/live</p><p>Live: <a href="https://g0v.github.io/live/"></a>https://g0v.github.io/live/</p><p></p><p><b>People</b></p><ul><li><a href='http://github.com/jeffhung/'/>jeffhung</a>&nbsp;</li>
@@ -13,7 +13,8 @@
 <li><a href='/ep/profile/mO22FMSWbkB'/>Michael Wu</a></li>
 <li><u>yutin</u>&nbsp;</li>
 <li><a href='/ep/profile/Aq3Xw5pjIMW'/>NewCliCker</a></li></ul>
-<ul class="comment"><li><a href="http://on.fb.me/1h5a301"></a>http://on.fb.me/1h5a301 這個小工具的作者是yutin嗎？我們這邊應該用的上喔?</li></ul>
+<ul class="comment"><li><a href="http://on.fb.me/1h5a301"></a>http://on.fb.me/1h5a301 <s>這個小工具的作者是yutin嗎？我們這邊應該用的上喔?</s></li>
+<li>小工具的作者就是yutin沒錯 :+1:</li></ul>
 
 <p>References:</p><h2>目標與功能（要如何解決）</h2><p><b>預定使用者</b></p><p>上傳連結：社運直播人、直播關注者</p><p>回報品質：直播觀看者</p><p></p><p><b>預定功能</b></p><ul><li><b>狀態回報系統&nbsp;</b><ul><li>回報：由<u>觀看者</u>回報直播狀態，分三種：ok、有問題（選擇、或key-in）、offline</li>
 <li>統計：後接 Google analytics</li></ul>
@@ -23,7 +24,24 @@
 </ul>
 
 <p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_VVlHNqKaQrC_p.52952_1397980575871_Screen Shot 2014-04-19 at 15.02.03.png'/></p><p></p><p></p><ul><li><b>投稿/審核連結&nbsp;</b></li></ul>
-<p>由直播人投稿連結後，管理群組簡單審核後直接貼入 hackfoldr 議題首頁。</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_VVlHNqKaQrC_p.52952_1397891996950_Screen Shot 2014-04-19 at 15.19.25.png'/></p><p></p><ul><li><b>封存舊連結 history</b></li></ul>
+<p>由直播人投稿連結後，管理群組簡單審核後直接貼入 hackfoldr 議題首頁。</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_VVlHNqKaQrC_p.52952_1397891996950_Screen Shot 2014-04-19 at 15.19.25.png'/></p><ul class="comment"><li>我一直在思考以下的問題，不知道大家意見如何？</li>
+<li>現階段也許人工審核是一種做法，但是若議題遍地開花，</li>
+<li>服貿、反核、割闌尾等等每一個議題北中南都有直播實況（<a href='http://318blossomeverywhere.blogspot.tw/'/>遍地開花行事曆</a>）</li>
+<li>用人力來審核眞的是最好的方法嗎？有些直播講求時效性，等到有人批准審核時，也許實況直播就結束了。除了人工審核，我們也許要考慮增加一些自動化機制。</li>
+<li>理想上是利用各實況平台提供的api，沒有的話就利用像Yutin寫的 <a href="http://on.fb.me/1h5a301"></a><a href='http://on.fb.me/1h5a301'/>http://on.fb.me/1h5a301</a> 這工具去掃，</li>
+<li>一是掃一些定期實況主（ex.音地、nonukestw）的最新正在實況的連結，這種比較不用審核的排在前面的folder，也省卻了需要審核的人力。</li>
+<li>另一是掃各大實況平台上面頻道的title，如果有特定關鍵字的就會列表出來。（ex. g0v、服貿、反核等等，可由使用者自訂filter），這個可以放在下面的folder，觀看人數越多的頻道排越上面。</li>
+<li>由於影像實況門檻正逐年降低，素人實況者正不斷增加，這樣就可以避免素人實況者因為不知道g0v實況連播網這窗口，而成為遺珠之憾。</li>
+<li>實例：有熱心使用者為Jsutin.tv這平台寫的實況列表&nbsp;</li>
+<li><a href="http://live.gnbox.net/?page=9999"></a><a href='http://live.gnbox.net/?page=9999'/>http://live.gnbox.net/?page=9999</a>&nbsp;</li>
+<li>就是直接掃整個Justin.tv平台並且針對一些關鍵字做即時分類及排序（以上例而言就是用頻道語言或收看人數來分類及排序），列表是即時的，每次F5都會更新至最新狀態。</li>
+<li>另外一點就是利用tag功能。由於影像實況門檻正逐年降低，素人實況者正不斷增加，實況列表也許需要有tag功能來方便觀眾分類不同的實況內容，同一個實況主可能今天實況服貿、明天實況反核...etc</li>
+<li>我有整理一份全球主要實況平台清單，台灣使用者較常用的排前七名<a href="https://gist.github.com/anonymous/11149505"></a><a href='https://gist.github.com/anonymous/11149505'/>https://gist.github.com/anonymous/11149505</a></li>
+<li>人工審核的部分是為了防止有人惡意搞破壞。而審核的部分先前的討論是交由特定的Facebook社團管理員來管理，針對這些會有直播的特定議題來說，Facebook社團成員的數量應該夠多，審核的時效性應該問題不大。</li>
+<li>不過如果可以用自動化的方式把連結加入資料庫，即時性部分應該可以做得更好。</li>
+<li>tag的部分應該是有必要。</li>
+<li><br/></li></ul>
+<p>*</p><ul><li><b>封存舊連結 history</b></li></ul>
 <p>自動收集過期連結，用 timeline 方式呈現或單純列表。</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_VVlHNqKaQrC_p.52952_1397892421374_Screen Shot 2014-04-19 at 15.26.50.png'/></p><p></p><p></p><h2>系統架構</h2><p></p><p><b>Hackfoldr 整合</b></p><p></p><p>Hackfoldr 仍是一個最佳的 aggregator 解決方案。G0V Live! 利用與 hackfoldr 的 loosely integration 達成各項功能。</p><p></p><ul><li><b>影音串流支援</b></li></ul>
 <ul style="list-style: none;"><li><br/></li>
 <li>原先 hackfoldr 若有多個 tabs 皆開啓影音串流，因為切換 tab 時 iframe 僅是隱藏，故 audio 仍會播放，若同時有多個影音串流播放中，則 audio 會被 mix 在一起，反而讓人聽不清楚。</li>
@@ -44,7 +62,10 @@
 <li><a href="https://ethercalc.org/hackfoldrtest"></a><a href='https://ethercalc.org/hackfoldrtest'/>https://ethercalc.org/hackfoldrtest</a></li></ul>
 </ul>
 
-<p><b>狀態回報系統</b></p><ul><li>狀態回報控制列：<ul><li>使用 github pages，網址為 hxxp://g0v.github.io/live/status_bar.html?&lt;url&gt;</li></ul>
+<p><b>狀態回報系統</b></p><ul class="comment"><li>可用youtube API 直接查詢狀態{ live,none,upcoming }</li>
+<li>介紹: <a href="https://developers.google.com/youtube/v3/docs/videos"></a>https://developers.google.com/youtube/v3/docs/videos</li>
+<li>範例: <a href="https://www.googleapis.com/youtube/v3/videos?id=j7AA2EsI_vI&key=AIzaSyDV_AKXmKO9cMD08u3W9j6PqC00qqFgYvI&part=snippet,statistics"></a>https://www.googleapis.com/youtube/v3/videos?id=j7AA2EsI_vI&amp;key=AIzaSyDV_AKXmKO9cMD08u3W9j6PqC00qqFgYvI&amp;part=snippet,statistics</li></ul>
+<ul><li>狀態回報控制列：<ul><li>使用 github pages，網址為 hxxp://g0v.github.io/live/status_bar.html?&lt;url&gt;</li></ul>
 <ul class="task"><li>The web page of the Bar (HTML + Bootstrap)</li></ul>
 <ul class="taskdone"><li>Mechanism to deploy as github pages&nbsp;</li></ul>
 <ul class="task"><li>申請 Google Analytics</li></ul>
