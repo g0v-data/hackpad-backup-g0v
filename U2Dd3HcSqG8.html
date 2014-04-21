@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1772"/>
+<meta name="version" content="1795"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$U2Dd3HcSqG8</title>
 </head>
 <body><h1>X86型車載路由器(應付更多的攻擊和惡劣的環境) 本專案將可和<a href='/App-jgLrXNuSB33'/>此專案</a> 做延伸</h1><ul class="comment"><li>要不要考慮把這個視為<a href='/jgLrXNuSB33'/>這</a>個的子專案？</li>
@@ -21,7 +21,7 @@
 <li>真的假設100個人都放到這台AP上面，大家分到的頻寬有多小Orz</li>
 <li>若是直接接光纖，現場設備光電轉換器、Router和Layer2 Switch可以解決這個問題，只要有正確設定。</li>
 <li>我想要了解一下標題寫的「攻擊」和「惡劣環境」的範圍和情境，方便列一下嗎？</li>
-<li>惡劣環境&nbsp; 比如說 沒惡劣環境&nbsp; 比如說 沒發惡劣環境&nbsp; 比如說 沒發電機&nbsp;&nbsp;&nbsp;</li>
+<li>惡劣環境&nbsp; 比如說 沒發電機&nbsp;&nbsp;&nbsp;</li>
 <li>那你覺得該怎麼做比較好&nbsp; 因為本人才剛踏入電腦因為本人才剛踏入電腦這塊3-4年 有很多需要學習</li>
 <li>先了解一下線路相關的背景知識，還有可以看看這篇：<a href='/jG9uno4d9H8'/>2014 03 08&nbsp;</a> 和這篇 <a href='/2KWlYWGfr7I'/>g1v.tw&nbsp;</a> ，很多時候除了硬體和頻寬的限制，最大的限制是使用環境和可用的預算</li>
 <li>真的要幾千人到幾萬人的Solution我相信做得出來，只是這樣如果要花1000k以上（無誤）你願意嗎？</li>
@@ -31,11 +31,14 @@
 <li>樓上+1&nbsp;&nbsp; 真的，這個計劃是可以實行，但是應該是拿來做<a href='https://g0v.hackpad.com/jgLrXNuSB33'/>這個</a>的外圍AP用。</li>
 <li>如果是跟一般router一樣基本上就是無用了</li>
 <li>恩 的確&nbsp; 如果把它拿來做一般的ROUTER就太可惜了&nbsp;&nbsp; 好吧&nbsp; 就跟<a href='/jgLrXNuSB33'/>這個</a> 結合吧&nbsp; 但我不知道對方會不會採用</li>
-<li>但車載這部分就有勞大大們去實作了 我是一個剛要升高一的學生 經濟能力不夠啊&nbsp;&nbsp;&nbsp; 然後延伸的專案【腳踏車載AP兼擴音器】 這專案我負擔的起&nbsp; 我就先做出來</li></ul>
+<li>但車載這部分就有勞大大們去實作了 我是一個剛要升高一的學生 經濟能力不夠啊&nbsp;&nbsp;&nbsp; 然後延伸的專案【腳踏車載AP兼擴音器】 這專案我負擔的起&nbsp; 我就先做出來</li>
+<li>還是直接改裝成UTM&nbsp;</li></ul>
 
 <p>小弟目前正在研究如何讓精簡型客戶端變成無線路由器，讓下次圍總統府時有更好的安全和網路體驗，目前分析的優缺點如下</p><p>建議專案和目的分開，&quot;不因特定目的&quot;才會有更多的人投入。</p><p>優點</p><p>1.擴充性大</p><ul class="comment"><li>一個Router會想要擴充什麼功能</li>
 <li>記憶體</li>
-<li>32MB或是64MB夠用就好擴充Ram幹嘛....</li></ul>
+<li>32MB或是64MB夠用就好擴充Ram幹嘛....</li>
+<li>真的夠嗎?!</li>
+<li>聽說記憶體跟連線數有很大的關係</li></ul>
 <p>2.安全</p><ul class="comment"><li>安全性取決與良好的設定，要不要說明一下這個「安全」是針對哪個方面？</li>
 <li>&nbsp;更進階的防火牆</li>
 <li>防火牆不是應用在這個層面啊，提供網路的立場，我們不應該去試著阻絕外部服務，可以做限流、QOS等處理方式，但是主動是防火牆你想要偵測哪種攻擊行為？</li>
@@ -47,7 +50,8 @@
 <li>比如說竊取封包 然後解析封包內容&nbsp; 盜用網路身分?</li>
 <li>你用任何一種網路架構都會有上面的問題啊....</li>
 <li>無線網路傳輸本來就是broadcast，和你想要做的X86沒有關係，自己用無線網路的時候記得要用https或是打VPN通道才是解法...</li>
-<li>如果想要避開上面的問題，用有線網路也只能減少被竊取的機會，但是還是要使用端點加密不然無解</li></ul>
+<li>如果想要避開上面的問題，用有線網路也只能減少被竊取的機會，但是還是要使用端點加密不然無解</li>
+<li>別忘了X86無敵阿，可以加防毒閘道阿</li></ul>
 <p>3.彈性大</p><ul class="comment"><li>同上，哪方面的「彈性」？</li>
 <li>隨時改裝隨時用</li>
 <li>那和我直接拿一台TPlink刷DDwrt直接上的差別？後者刷機時間還比較快耶.....XD</li>
@@ -59,7 +63,8 @@
 <li>對好處就在這裡</li>
 <li>那如果直接用既有設備，連改都不用改啊XD?</li>
 <li>但移動不方便阿</li>
-<li>既有設備指的是已經存在的Router，不是x86改機....只要設備吃12V DCIN，就可以直接用</li></ul>
+<li>既有設備指的是已經存在的Router，不是x86改機....只要設備吃12V DCIN，就可以直接用</li>
+<li><br/></li></ul>
 <p>4.比高階路由器便宜</p><p>缺點</p><p>1.比一般路由器貴</p><p>2.攜帶不方便</p><p>3.需要技術人員來設定</p><p>4.需要電12V 5A(這部分可能要交給懂車的朋友了 直接變車載)</p><p>而所謂的精簡型客戶端就是使用INTEL ATOM VIA C7M這種處理器，至於有使用i5/i7就不用講 太貴了，然後硬碟很小2-64GB</p><p></p><p>系統就暫定用LINUX</p><p></p><h2>要解決的問題</h2><p>專案說明</p><p>1. 車輛改裝後的安全性問題EX:火燒車</p><p></p><p>2.比一般路由器貴</p><p></p><p>3.攜帶不方便</p><p></p><p>4.需要技術人員來設定</p><p></p><p>5.需要電12V 5A(這部分可能要交給懂車的朋友了 直接變車載)&nbsp;&nbsp;</p><h2></h2><p>然後衍生出腳踏車載擴音器和WIFI點(只使用一般AP 非x86路由器)和遙控飛機型路由器&nbsp;&nbsp;&nbsp;&nbsp; 這兩種載體載的都是純WIFI AP並不是使用X86路由器</p><h2></h2><p>目前已經討論到雛形(可以做幾部機器出來操)</p><p></p><h2>目標與功能（要如何解決）</h2><p>預定功能</p><p></p><p>提供防火牆，整合WIFI AP(可以使用純WIFIAP取代)</p><p></p><p></p><p>預定使用者</p><p>1.在WIFI車附近的群眾</p><p></p><p>2.工作人員的網路變安全˙</p><p></p><h2>徵求協作者</h2><p>分工與成員</p><ul class="taskdone"><li>NeedsWriter: 需要文案幫手（撰寫基本資訊、報導專案etc）</li>
 <li>NeedsDesigner: 需要介面設計</li>
 <li>NeedsData: 需要資料（擷取、清理）</li>
