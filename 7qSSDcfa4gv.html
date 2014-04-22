@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="415"/>
+<meta name="version" content="713"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$7qSSDcfa4gv</title>
 </head>
 <body><h1>Agricultural-trading-market</h1><p>專案Git ： <a href="https://github.com/justin761002/Agricultural-trading-market"></a>https://github.com/justin761002/Agricultural-trading-market</p><p></p><p><b>目標</b></p><p>---&gt;希望將「農產品交易行情站」的資訊以更加直覺的方式呈現給民眾。</p><p>農產品交易行情站：<a href="http://amis.afa.gov.tw/default.asp"></a><a href='http://amis.afa.gov.tw/default.asp'/>http://amis.afa.gov.tw/default.asp</a></p><p>年報[民91年&lt;==&gt;民101年](PDF)下載及申請：<a href="http://amis.afa.gov.tw/dlfile/downloads.htm"></a>http://amis.afa.gov.tw/dlfile/downloads.htm</p><p></p><ul class="comment"><li>&nbsp;關於「直覺的方式呈現」的部份，</li>
@@ -20,12 +20,25 @@
 </ul>
 <ol><li>規劃 Data-Schema</li></ol>
 <ul class="comment"><li>目前抓出來資料我是以json資料方式先存，未來要轉換成其他的可再討論。</li>
-<li>{catalog:農產品類別, code:農產品代號, name:農產品名稱, (type:農產品種類)}</li>
-<li>例：{catalog:&quot;Fruit&quot;, code&quot;:&quot;32&quot;, &quot;name&quot;:&quot;釋迦&quot;, &quot;type&quot;:&quot;鳳梨釋迦&quot;}</li>
+<li>{catalog:農產品類別, maincode:農產品主代號, code:農產品子代號, name:農產品名稱, (type:農產品種類, process: 處理別)}</li>
+<li>例：{catalog:&quot;Fruit&quot;, maincode:&quot;3&quot;, code&quot;:&quot;32&quot;, &quot;name&quot;:&quot;釋迦&quot;, &quot;type&quot;:&quot;鳳梨釋迦&quot;}</li>
+<li>資料部份個人的理想,這部份是全部通用，只要做一個資料表即可，</li>
+<li>不過也要分開資料表倒再討論。</li>
+<li>{product:&nbsp;</li>
+<li>{catalog:農產品類別, maincode:農產品主代號, code:農產品子代號, name:農產品名稱, (type:農產品種類, process: 處理別)}</li>
+<li>, upper: 上價, middle: 中價, lower: 下價, averege: 平均價, averegeChange: 平均價變動, volume: 交易量, volumeChange: 交易量變動, <b>area:交易地點, date:交易日期</b>}</li>
+<li><br/></li>
 <li>蔬菜類的html我目前轉成json格式為：</li>
 <li>檔名:民國年-月-日-市場碼.json</li>
 <li>內容:[{product: {name: 產品名稱, type: 品種名稱, process: 處理別}, upper: 上價, middle: 中價, lower: 下價, averege: 平均價, averegeChange: 平均價變動, volume: 交易量, volumeChange: 交易量變動}]</li>
 <li>資料在 <a href="https://db.tt/nqW5X4g1"></a>https://db.tt/nqW5X4g1</li></ul>
+
+<ul class="code"><li>第一點：目前不知道他的價格資料增/減及交易量增減是怎麼認定的，</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 統計方面所長的人可以出來說明一下XD</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 沒意外的話，應該是上一個交易日*(100 + 增減)% = 當日</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 不過可能要跑程式驗證一下</li>
+<li>第二點：天氣部份是不是會影響交易量(採收/搶收)，也需計入？</li>
+<li><br/></li></ul>
 <ol><li>給有意願的人幫忙Key年報資料的網頁</li>
 <li>提供查詢、呈現資料的網頁（含圖表）</li></ol>
 
