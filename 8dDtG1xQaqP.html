@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="1518"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$8dDtG1xQaqP</title>
+</head>
+<body><h1>CKAN x g0v - g0v 開放資料彙整平台</h1><p></p><h2>現況 /  為什麼</h2><p>g0v 現在有許多資料四散在各處，例如：</p><ul><li>專案自行提供的 API -&nbsp; ex 立委大頭照</li>
+<li>引用外部的開放資料 API</li>
+<li>其他外部的 pdf, doc ... 等非 API 資料來源</li></ul>
+
+<p>希望有一個地方能彙整這些資料，並且能以 「專案」、「tag」、「檔案格式」、「License」等方式快速搜尋出資料</p><p>而以上描述的使用模式，正是 CKAN 所擅長的。</p><p></p><h2>CKAN 是什麼</h2><p>CKAN 是一個開源的資料入口網，由 Open Knowledge Foundation 所發起。CKAN 官方自詡為 &quot;the world’s leading open-source data portal platform&quot;，如此稱呼確實不為過。目前 CKAN 被應用在美國、英國、日本、巴西等等國家政府的開放資料入口網，台灣也有少數開始應用的例子。</p><ul><li>美國：<a href="http://www.data.gov/"></a>http://www.data.gov/</li>
+<li>英國：<a href="http://data.gov.uk/data/search"></a>http://data.gov.uk/data/search</li>
+<li>其他例子，可見：<a href="http://ckan.org/instances/"></a>http://ckan.org/instances/</li></ul>
+
+<p>技術面：CKAN 由 Python 輔以一些後端搜尋技術開發而成，資料庫使用 Postgresql</p><p></p><p>詳細可參考官網：<a href="http://ckan.org/"></a>http://ckan.org/</p><p></p><h2>CKAN 的結構</h2><p><b>主結構</b></p><ul><li>Organization (組織) - 資料的擁有者，例如「環保局」<ul><li>DataSet (資料集) - 資料的集合，可屬於單一組織 （也可不屬於任何組織），一個資料集內可有多筆資料<ul><li>Resource （資料/資源） - 通常是一個資料來源連結與一些 metadata，參照到一個外部的資料來源（例如 <a href="http://api.ly.g0v.tw/v0/collections/"></a>http://<a href='http://example.com/xxx.csv'/>api.ly.g0v.tw/v0/collections/</a>）</li></ul>
+</ul>
+</ul>
+
+<p><b>其它</b></p><ul><li>Group (分類) - 資料集的分類，一個 DataSet 可以屬於多個分類</li>
+<li>其餘如：tag, license, map 等東西很直覺，不多作解釋</li></ul>
+
+<h2>測試</h2><ul><li>暫時測試環境：<a href="http://ckan.g0v.today"></a><a href='http://ckan.g0v.today'/>http://ckan.g0v.today</a> （我們安裝的版本為 CKAN 2.2）<ul><li>帳號：g0v 密碼：g0v</li></ul>
+</ul>
+<ul class="comment"><li>p.s. 目前未串接 SMTP, 因此如遇到需要寄信的功能 （ex Add Member 功能），會系統錯誤為正常。</li></ul>
+
+<ul><li>Issue Tracking: <a href="https://github.com/g0v/ckan"></a>https://github.com/g0v/ckan</li></ul>
+
+<h2>坑們</h2><ul class="task"><li>需要 lucene / solr 高手協助解決中文斷詞、中文搜尋問題</li></ul>
+<ul class="comment"><li>已實驗過 <a href='http://ckan-docs-tw.readthedocs.org/ja/latest/install.html#jetty8-solr4-w'/>IKAnalyzer</a> 未果（預計近期再測試別的方法）</li></ul>
+<ul class="task"><li>翻譯 （歡迎熟悉 transifex 的朋友參與：<a href="https://www.transifex.com/projects/p/ckan/language/zh_TW/"></a>https://www.transifex.com/projects/p/ckan/language/zh_TW/ 需登入並申請進入 translation team）</li></ul>
+
+<h2>技術細節</h2><p></p><ul><li>Preview<ul><li>DataExplorer: CKAN 預設可以透過 Data Explorer 以 GridView 的方式預覽 `csv` 及 `xls` 資料</li>
+<li>Browser direct preview：對於 json / html / xml ... 等資料， CKAN 會用 browser 來 preview<ul><li>例如 html 會顯示在 iframe</li></ul>
+</li>
+<li>PDF preview<ul><li>PDF Preview 需額外安裝 Extension, 目前未安裝</li></ul>
+</ul>
+</ul>
+
+<ul><li>DataStore<ul><li>CKAN 預設只作為資料的 Reference，而不直接將「資料內容」匯入。因此也只能搜尋資料 (DataSet 或 Resource) 的 Metadata，而非內容。</li>
+<li>DataStore 是一個 CKAN 的 Extension，可將「資料內容」匯入 CKAN 的 postgresql 資料庫中，並且透過介面或 API 取得或搜尋「資料內容」</li></ul>
+<ul class="comment"><li>g0v 應該暫時用不到 DataStore 因此尚未安裝在測試機</li></ul>
+</ul>
+
+<ul><li>FileStore<ul><li>類似 DataStore, 但是是上傳檔案，而非將檔案匯入資料庫</li></ul>
+<ul class="comment"><li>FileStore 功能未在測試機啟用</li></ul>
+</ul>
+
+<h2>Q & A</h2><p><b>Q: 與 </b><a href="http://data.g0v.tw"></a><b>http://d<a href='http://d'/>a</a><a href='http://da'/>t</a><a href='http://dat'/>a</a><a href='http://data'/>.g</a><a href='http://data.g'/>0</a><a href='http://data.g0'/>v</a><a href='http://data.g0v'/>.t</a><a href='http://data.g0v.t'/>w</a></b><b> 有什麼不同</b></p><p>A:&nbsp;</p><ul style="list-style: none;"><li><a href="http://data.g0v.tw"></a>http://d<a href='http://d'/>a</a><a href='http://da'/>t</a><a href='http://dat'/>a</a><a href='http://data'/>.g</a><a href='http://data.g'/>0</a><a href='http://data.g0'/>v</a><a href='http://data.g0v'/>.t</a><a href='http://data.g0v.t'/>w</a> 比較像是 data request 平台，並非用作資料彙整</li>
+<li>ronnywang 提議可將 data.g0v.tw 改為 data-request.g0v.tw&nbsp; : <a href='http://logbot.g0v.tw/channel/g0v.tw/2014-04-22/390'/>Logbot Link</a>&nbsp;</li></ul>
+
+<p><b>Q: 與 </b><a href="http://campaign-finance.g0v.olc.tw/"></a><b>http://campaign-finance.g0v.olc.tw/</b><b> 會衝突嗎？</b></p><p>A:</p><ul style="list-style: none;"><li>應不會，目前 <a href="http://campaign-finance.g0v.olc.tw/"></a><a href='http://campaign-finance.g0v.olc.tw/'/>http://campaign-finance.g0v.olc.tw/</a> 看起來可用來彙整「政治獻金」還有哪些文件需要去列印出來（推坑），與此平台（整理既有資料）的方向不同。</li>
+<li><br/></li>
+<li>請問 此系統 與 OpenStack 的架構與功能</li></ul>
+<ul class="comment"><li>CKAN 只是一個 web application, 應該與&nbsp; OpenStack 無關，請問你的問題是？</li>
+<li>因為你要管理文件與不同性質的東西 也許 OpenStack&nbsp; 系統給你參考</li>
+<li><a href="http://lab.howie.tw/2013/03/the-develpoment-trend-of-cloudstack-and-openstack.html"></a>http://lab.howie.tw/2013/03/the-develpoment-trend-of-cloudstack-and-openstack.html</li>
+<li>例如 本站 <b>第五權電視牆監看「評」台g8v.tv草稿&nbsp;&nbsp;</b></li></ul>
+<p><b><a href='/lk9pamtKwyr'/>g8v.tv</a>可能也有許多 文件要整合某個系統領域</b></p><ul class="comment"><li>所以問問兒已 沒惡意</li></ul>
+
+</body>
+</html>
