@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1349"/>
+<meta name="version" content="1859"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$668AHTZTehn</title>
 </head>
 <body><h1>太陽花紀實 - Data Format</h1><p></p><h2>逐字稿資料</h2><ul><li><a href='https://sunflowerdocumentary.hackpad.com/'/>逐字稿工作區</a></li>
@@ -39,8 +39,8 @@
 <li>包圍ＯＯＯ</li>
 <li><br/></li></ul>
 
-<p>評論 (談話/節目/ ...)</p><p>紀錄 (直播/錄影/SNG/ ...)</p><p>官方 (記者會/ ...)</p><p></p><p>定點</p><p>機動</p><p></p><p></p><p></p><h2>JSON Format</h2><p></p><ul><li><b>data/gist/timeline.json</b></li>
-<li><b>data/speech/timeline.json</b></li></ul>
+<p>評論 (談話/節目/ ...)</p><p>紀錄 (直播/錄影/SNG/ ...)</p><p>官方 (記者會/ ...)</p><p></p><p>定點</p><p>機動</p><p></p><p></p><p></p><h2>JSON Format</h2><p></p><ul><li><b>data/gist/timeline.json ( 改要時間軸 )</b></li>
+<li><b>data/speech/timeline.json ( 演講時間軸 )</b></li></ul>
 
 <ul class="code"><li>[</li>
 <li>&nbsp;&nbsp;&nbsp; {</li>
@@ -60,10 +60,11 @@
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;date&quot;:{</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;full&quot;:2014-03-21T06:00:00+08:00,</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;yyyy&quot;:2014,&quot;mm&quot;:3,&quot;dd&quot;:21 }</li>
-<li>&nbsp;&nbsp;&nbsp; }...</li>
+<li>&nbsp;&nbsp;&nbsp; },...</li>
 <li>]</li></ul>
+<ul class="comment"><li>focus 0 跟 1 有什˙麼差別阿??</li></ul>
 
-<ul><li><b>data/gist/events.json</b></li></ul>
+<ul><li><b>data/gist/events.json ( 概要所有事件 )</b></li></ul>
 
 <ul class="code"><li>[</li>
 <li>&nbsp;&nbsp;&nbsp; {</li>
@@ -82,20 +83,54 @@
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;date&quot;:{</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;full&quot;:2014-03-21T06:00:00+08:00,</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;yyyy&quot;:2014,&quot;mm&quot;:3,&quot;dd&quot;:21 }</li>
-<li>&nbsp;&nbsp;&nbsp; },</li>
-<li>&nbsp;&nbsp;&nbsp; {&nbsp; &quot;event_id&quot;:1,... }</li>
+<li>&nbsp;&nbsp;&nbsp; },...</li>
 <li>]</li></ul>
 
-<ul><li><b>data/speech/events.json</b></li></ul>
+<ul><li><b>data/speech/events.json (&nbsp; 演講所有項目 )</b></li></ul>
+<ul class="code"><li>[</li>
+<li>]</li></ul>
+
+<ul><li><b>data/tags.json ( 標籤 )</b></li></ul>
+<ul class="code"><li>[</li>
+<li>&nbsp;&nbsp;&nbsp; { &quot;id&quot; : 1, &quot;name&quot; : &quot;街頭民主教室&quot; },...</li>
+<li>]</li></ul>
+
+<ul><li><b>data/groups.json ( 無名英雄組織列表 )</b></li></ul>
+<ul class="code"><li>[</li>
+<li>&nbsp;&nbsp;&nbsp; {&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;id&quot; : 1 ,&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;name&quot; : &quot;組織 A&quot; ,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;logo&quot; : &quot;img/group/1.jpg&quot; ,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;intro&quot; : &quot;組織介紹 A&quot;</li>
+<li>&nbsp;&nbsp;&nbsp; },...</li>
+<li>]</li></ul>
+
+<ul><li><b>data/characters.json (&nbsp; 無名英雄列表 )</b></li></ul>
+<ul class="code"><li>[</li>
+<li>&nbsp;&nbsp;&nbsp; {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;id&quot; : 1,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;name&quot; : &quot;陳OO&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;group_id&quot; : 1,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;history&quot; :</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;經歷一&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;經歷二&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;經歷三&quot;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;link&quot; :</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { &quot;title&quot; : &rsquo;連結1&rsquo;, &quot;url&quot; : &rsquo;<a href="http://g0v.tw"></a>http://<a href='http://www.google.com'/>g</a>0v.tw&rsquo;},</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { &quot;title&quot; : &rsquo;連結2&rsquo;, &quot;url&quot; : &rsquo;<a href="http://g0v.tw"></a><a href='http://www.google.com/'/>http://</a><a href='http://www.google.com'/>g</a>0v.tw&rsquo;}</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;intro&quot; : &quot;人物簡介&quot;</li>
+<li>&nbsp;&nbsp;&nbsp; },...</li>
+<li>]</li></ul>
+
+<ul><li><b>data/literature/list.json ( 文宣列表 )</b></li></ul>
 <ul class="code"><li>[</li>
 <li>]</li>
 <li><br/></li></ul>
-<ul><li><b>data/tag.json</b></li></ul>
-<ul class="code"><li>[</li>
-<li>&nbsp;&nbsp;&nbsp; &quot;id&quot; : 1, &quot;name&quot; : &quot;街頭民主教室&quot;</li>
-<li>]</li></ul>
-
-<ul><li><b>data/character.json</b></li></ul>
+<ul><li><b>data/literature/categories.json ( 文宣分類 )</b></li></ul>
 <ul class="code"><li>[</li>
 <li>]</li></ul>
 
