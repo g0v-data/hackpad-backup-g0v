@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="195"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$3MX5pBhtBjZ</title>
+</head>
+<body><h1>開放政治獻金 - OCR技術討論</h1><p>給最終使用者的人工 OCR/校對網站在<a href='/--yESRO4zWakp'/>這邊</a>討論</p><p></p><p><b>圖檔格式</b></p><ul class="comment"><li>圖檔用 jpg 存好肥阿!!! 我看原始檔是純黑白的，用 png 會小很多阿~~~</li>
+<li>沒特別注意，手滑就把三千多張轉成 jpg 了 XD</li>
+<li><br/></li></ul>
+<p><b>浮水印處理</b></p><ul><li>後勤中心 <a href='https://www.facebook.com/groups/g0v.general/permalink/609945902415153/?comment_id=610031869073223&amp;offset=0&amp;total_comments=5'/>Shenk Wang 建議</a> 使用 <a href="http://scantailor.org/"></a><a href='http://scantailor.org/'/>http://scantailor.org/</a> 進行前置處理，可以補強 ClearScan 無法處理浮水印的問題，值得一試!<ul><li>Note: 我測試的參數是<ul><li>scantailor-cli &#92;</li></ul>
+<ul style="list-style: none;"><li>&nbsp;&nbsp; --layout=1&nbsp; &#92;</li>
+<li>&nbsp;&nbsp; --margins-left=10 &#92;</li>
+<li>&nbsp;&nbsp; --margins-right=10 &#92;</li>
+<li>&nbsp;&nbsp; --margins-top=5 &#92;</li>
+<li>&nbsp;&nbsp; --margins-bottom=5 &#92;</li>
+<li>&nbsp;&nbsp; --color-mode=black_and_white &#92;</li>
+<li>&nbsp;&nbsp; --threshold=-50 &#92;</li>
+<li>&nbsp;&nbsp; --despeckle=aggressive &#92;</li>
+<li>&nbsp;&nbsp; *.png out</li></ul>
+<ul><li>&nbsp;--threshold 負越多，去污能力越強</li></ul>
+</li></ul>
+</li>
+<li>浮水印我之前是透過 image magick 處理，透過下面這樣的指令可以有不錯的效果</li><ul style="list-style: none;"><li>convert {$file_orig} -morphology thicken &rsquo;1x3&gt;:1,0,1&rsquo; {$file_target}</li></ul>
+<ul class="comment"><li>把半徑 2 以下的點都拿掉效果也不錯：</li>
+<li>convert all-000.tif -morphology Close Octagon:2 result2.png&nbsp;</li></ul>
+</ul>
+<ul><li>利用表格左上右上兩點找出浮水印的位置再強力清除處理那附近的雜點不曉得可行性多高<ul><li>範例圖: <a href="https://www.dropbox.com/s/yam9ykpcjl1kznm/sample.png"></a><a href='https://www.dropbox.com/s/yam9ykpcjl1kznm/sample.png'/>https://www.dropbox.com/s/yam9ykpcjl1kznm/sample.png</a></li>
+<li>試著寫了一下，目前只要給我表格最上面那條線的兩點座標就可以把浮水印的區塊拿出來特別處理，見：</li>
+<li><a href="https://github.com/shenkyw/tw-campaign-finance/commit/070de4d3d372375c7454eb3e86019f4b1ca0cdf6"></a><a href='https://github.com/shenkyw/tw-campaign-finance/commit/070de4d3d372375c7454eb3e86019f4b1ca0cdf6'/>https://github.com/shenkyw/tw-campaign-finance/commit/070de4d3d372375c7454eb3e86019f4b1ca0cdf6</a></li></ul>
+</ul>
+
+<p><b>欄位、格式分析</b></p><ul><li>Ronny Wang 分享<a href='http://ronnywang.pixnet.net/blog/post/40488349'/>如何抓出掃描文件的每個欄位</a></li>
+<li>切框線確認（<a href='http://ronnywang.github.io/tw-campaign-finance/demo.html'/>demo 網頁</a>：速覽每份表格欄位切得如何）</li>
+<li>從圖檔抓出欄位資訊，所有程式碼和資料在 <a href='https://github.com/ronnywang/tw-campaign-finance'/>github</a> （以上 <a href='https://g0v.hackpad.com/ep/profile/tC7Bqff8Vp0'/>Ronny Wang</a> ++）</li></ul>
+
+<p><b>以現有工具自動 OCR</b></p><ul class="taskdone"><li>將 PDF 轉為 ClearScan，並做第一階段的機器識別 -au<ul class="taskdone"><li>參考<a href='https://drive.google.com/file/d/0B9tD1zENsweyektyYUU0NlpKeXM/edit?usp=sharing'/>範例檔</a> ，其中文字已可剪下貼上</li>
+<li>已經上載 ClearScan + OCR 結果: <a href="https://drive.google.com/folderview?id=0B9tD1zENsweyUmZycEhWZjR5MUk&usp=sharing"></a><a href='https://drive.google.com/folderview?id=0B9tD1zENsweyUmZycEhWZjR5MUk&amp;usp=sharing'/>https://drive.google.com/folderview?id=0B9tD1zENsweyUmZycEhWZjR5MUk&amp;usp=sharing</a></li><ul><li>目前只識別沒有疊到浮水印的欄位，如果能移除浮水印則更佳</li><ul class="comment"><li>在 yllan 的協助下已經將上述 OCR 結果轉成文字與座標，放在</li></ul>
+</ul>
+</li>
+<li><a href="https://github.com/yllan/TextPositionExtractor"></a><a href='https://github.com/yllan/TextPositionExtractor'/>https://github.com/yllan/TextPositionExtractor</a></li></li>
+<li>接著就是要以這個結果去處理文字排版，然後找出欄位對應關係，接著就是人工 captcha 了</li></li>
+<li>已經將 Ronny 與 yllan 的成果合併到</li></li>
+<li><a href="https://github.com/kiang/tw-campaign-finance"></a><a href='https://github.com/kiang/tw-campaign-finance'/>https://github.com/kiang/tw-campaign-finance</a></li></li>
+<li>展示頁面可以參考</li></li>
+<li><a href="http://kiang.github.io/tw-campaign-finance/demo_text.html"></a><a href='http://kiang.github.io/tw-campaign-finance/demo_text.html'/>http://kiang.github.io/tw-campaign-finance/demo_text.html</a></li></ul>
+</ul>
+
+<p><b>整合開發</b></p><ul><li>polor1010</li><ul class="task"><li>圖檔做文字的擷取，包含過濾浮水印，和文字定位（目前只能定位數字）</li></ul>
+<ul style="list-style: none;"><li><a href="https://www.dropbox.com/s/0dlkiyik1s6ypqb/WordExtract.zip"></a><a href='https://www.dropbox.com/s/0dlkiyik1s6ypqb/WordExtract.zip'/>https://www.dropbox.com/s/0dlkiyik1s6ypqb/WordExtract.zip</a> （處理結果 ）&nbsp;</li><ul class="task"><li>數字辨識演算法攥寫中</li>
+<li>數字辨識結果更新至政治獻金伺服器</li></ul>
+<ul class="taskdone"><li>程式碼請參照 <a href="https://github.com/polor1010/tw-campaign-finance-recogntion"></a><a href='https://github.com/polor1010/tw-campaign-finance-recogntion'/>https://github.com/polor1010/tw-campaign-finance-recogntion</a></li></ul>
+</ul>
+</ul>
+
+<p><b>其他</b></p><ul><li><br/></li></ul>
+
+</body>
+</html>
