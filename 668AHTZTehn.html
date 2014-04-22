@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1296"/>
+<meta name="version" content="1349"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$668AHTZTehn</title>
 </head>
 <body><h1>太陽花紀實 - Data Format</h1><p></p><h2>逐字稿資料</h2><ul><li><a href='https://sunflowerdocumentary.hackpad.com/'/>逐字稿工作區</a></li>
@@ -39,8 +39,8 @@
 <li>包圍ＯＯＯ</li>
 <li><br/></li></ul>
 
-<p>評論 (談話/節目/ ...)</p><p>紀錄 (直播/錄影/SNG/ ...)</p><p>官方 (記者會/ ...)</p><p></p><p>定點</p><p>機動</p><p></p><p></p><p></p><h2>JSON Format</h2><p></p><ul><li><b>data/gist/timeline.txt</b></li>
-<li><b>data/speech/timeline.txt</b></li></ul>
+<p>評論 (談話/節目/ ...)</p><p>紀錄 (直播/錄影/SNG/ ...)</p><p>官方 (記者會/ ...)</p><p></p><p>定點</p><p>機動</p><p></p><p></p><p></p><h2>JSON Format</h2><p></p><ul><li><b>data/gist/timeline.json</b></li>
+<li><b>data/speech/timeline.json</b></li></ul>
 
 <ul class="code"><li>[</li>
 <li>&nbsp;&nbsp;&nbsp; {</li>
@@ -63,7 +63,7 @@
 <li>&nbsp;&nbsp;&nbsp; }...</li>
 <li>]</li></ul>
 
-<ul><li><b>data/gist/events.txt</b></li></ul>
+<ul><li><b>data/gist/events.json</b></li></ul>
 
 <ul class="code"><li>[</li>
 <li>&nbsp;&nbsp;&nbsp; {</li>
@@ -86,12 +86,19 @@
 <li>&nbsp;&nbsp;&nbsp; {&nbsp; &quot;event_id&quot;:1,... }</li>
 <li>]</li></ul>
 
-<ul><li><b>data/speech/events.txt</b></li></ul>
-
-<ul><li><b>data/tag.txt</b></li></ul>
+<ul><li><b>data/speech/events.json</b></li></ul>
+<ul class="code"><li>[</li>
+<li>]</li>
+<li><br/></li></ul>
+<ul><li><b>data/tag.json</b></li></ul>
 <ul class="code"><li>[</li>
 <li>&nbsp;&nbsp;&nbsp; &quot;id&quot; : 1, &quot;name&quot; : &quot;街頭民主教室&quot;</li>
 <li>]</li></ul>
+
+<ul><li><b>data/character.json</b></li></ul>
+<ul class="code"><li>[</li>
+<li>]</li></ul>
+
 <p>------</p><p></p><ul><li>Data</li></ul>
 <p>[</p><ul class="code"><li>{</li>
 <li>&nbsp;&nbsp;&nbsp; &quot;id&quot;:&quot;0&quot;,</li>
