@@ -3,10 +3,10 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1871"/>
+<meta name="version" content="3171"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$668AHTZTehn</title>
 </head>
-<body><h1>太陽花紀實 - Data Format</h1><p></p><h2>逐字稿資料</h2><ul><li><a href='https://sunflowerdocumentary.hackpad.com/'/>逐字稿工作區</a></li>
+<body><h1>太陽花紀實 - API Document</h1><p></p><h2>逐字稿資料</h2><ul><li><a href='https://sunflowerdocumentary.hackpad.com/'/>逐字稿工作區</a></li>
 <li><a href='https://docs.google.com/spreadsheet/lv?key=0AgrKKMBahhsEdC1PSU8xRFZ4cXZrNEN3R1d1d2xMSmc&amp;f=true&amp;noheader=true&amp;gid=0'/>街頭民主教室</a></li>
 <li><a href='https://hackpad.com/410-FRzDUBto4Vj'/>文播組逐字稿</a></li></ul>
 
@@ -39,64 +39,75 @@
 <li>包圍ＯＯＯ</li>
 <li><br/></li></ul>
 
-<p>評論 (談話/節目/ ...)</p><p>紀錄 (直播/錄影/SNG/ ...)</p><p>官方 (記者會/ ...)</p><p></p><p>定點</p><p>機動</p><p></p><p></p><p></p><h2>JSON Format</h2><p></p><ul><li><b>data/gist/timeline.json ( 改要時間軸 )</b></li>
-<li><b>data/speech/timeline.json ( 演講時間軸 )</b></li></ul>
+<p>評論 (談話/節目/ ...)</p><p>紀錄 (直播/錄影/SNG/ ...)</p><p>官方 (記者會/ ...)</p><p></p><p>定點</p><p>機動</p><p></p><p></p><p></p><h2>JSON Format</h2><p></p><p><b>時間軸 Timeline&nbsp;</b></p><p></p><undefined><li><b><u>REQUEST</u></b></li></undefined>
 
+<ul style="list-style: none;"><li><a href="http://sunflower-documentary-api.herokuapp.com/api/1.0/timeline"></a><a href='http://sunflower-documentary-api.herokuapp.com/api/1.0/timeline'/>http://sunflower-documentary-api.herokuapp.com/api/1.0/timeline</a></li></ul>
+<ul><li><b>data/gist.json ( 概要時間軸 )</b></li>
+<li><b>data/speech.json ( 演講時間軸 )</b></li></ul>
+<ul style="list-style: none;"><li><br/></li></ul>
+<undefined><li><b><u>RESPONSE</u></b></li></undefined>
 <ul class="code"><li>[</li>
 <li>&nbsp;&nbsp;&nbsp; {</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;event_id&quot;:1,</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;category&quot;:&quot;event&quot;,</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;title&quot;:&rsquo;事件標題 1&rsquo;,</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;focus&quot;:1,</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;date&quot;:{</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;full&quot;:2014-03-21T06:00:00+08:00,</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;yyyy&quot;:2014,&quot;mm&quot;:3,&quot;dd&quot;:21 }</li>
-<li>&nbsp;&nbsp;&nbsp; },</li>
-<li>&nbsp;&nbsp;&nbsp; {</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;speech_id&quot;:1,</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;category&quot;:&quot;speech&quot;,</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;title&quot;:&rsquo;演講標題 1&rsquo;,</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;focus&quot;:0,</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;date&quot;:{</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;full&quot;:2014-03-21T06:00:00+08:00,</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;yyyy&quot;:2014,&quot;mm&quot;:3,&quot;dd&quot;:21 }</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;event_id&quot;: 1,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;focus&quot;: 1,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;title&quot;: &quot;兩岸經貿如何影響民主？&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;date&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;yyyy&quot; : 2014, &quot;mm&quot; : 3, &quot;dd&quot; : 21,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;hh&quot; : 0, &quot;ii&quot; :0, &quot;ss&quot; : 0 }</li>
 <li>&nbsp;&nbsp;&nbsp; },...</li>
 <li>]</li></ul>
+
 <ul class="comment"><li>focus 0 跟 1 有什˙麼差別阿??</li>
-<li>在時間軸上是否為粗體顯示 ( 表示較重要的事件 )</li></ul>
+<li>在時間軸上是否為粗體顯示 ( 表示較重要的事件 )</li>
+<li>了解!</li>
+<li>還有我們好像沒有 category 的分類 ，只有 tag&nbsp; XD，我這邊用 tag 篩?</li></ul>
 
-<ul><li><b>data/gist/events.json ( 概要所有事件 )</b></li></ul>
-
+<p><b>事件 Event</b></p><p></p><undefined><li><b><u>REQUEST :&nbsp;</u></b></li></undefined>
+<ul style="list-style: none;"><li><br/></li>
+<li><a href="http://sunflower-documentary-api.herokuapp.com/api/1.0/events"></a>http://sunflower-documentary-api.herokuapp.com/api/1.0/events</li></ul>
+<ul><li><b>data/events/###(event_id).json</b></li><ul style="list-style: none;"><li><br/></li></ul>
+</ul>
+<undefined><li><b><u>RESPONSE :&nbsp;</u></b></li></undefined>
 <ul class="code"><li>[</li>
 <li>&nbsp;&nbsp;&nbsp; {</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;event_id&quot;:1,</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;title&quot;:&quot;事件標題 &quot;&rsquo;,</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;description&quot;:&quot;事件內文 1&quot;,</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;site&quot;:&quot;事件地點 1&quot;,</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;thumbnail&quot;:[&quot;img/event/1.jpg&quot;],</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;media&quot;<b>:[</b>&quot;<a href="https://www.youtube.com/watch?v=UKbOavrerNQ&t=53m37s"></a><u><a href='https://www.youtube.com/watch?v=UKbOavrerNQ&amp;t=53m37s'/>https://www.youtube.com/watch?v=UKbOavrerNQ&amp;t=53m37s</a></u>&quot;],</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;tag&quot;:</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { &quot;id&quot;:1 , &quot;name&quot;: &quot;標籤 1&quot; },&nbsp;</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { &quot;id&quot;:2 , &quot;name&quot;: &quot;標籤 2&quot; }</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ],</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;hackpad&quot;:&quot;<a href="https://318.hackpad.com/--F0W0Fnhkakl"></a><a href='https://318.hackpad.com/--F0W0Fnhkakl'/>https://318.hackpad.com/--F0W0Fnhkakl</a>&quot;,</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;date&quot;:{</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;full&quot;:2014-03-21T06:00:00+08:00,</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;yyyy&quot;:2014,&quot;mm&quot;:3,&quot;dd&quot;:21 }</li>
-<li>&nbsp;&nbsp;&nbsp; },...</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;event_id&quot;: 1,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;title&quot;: &quot;兩岸經貿如何影響民主？&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;description&quot;: &quot;逐字在此&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;site&quot;: &quot;濟南路&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;thumbnail&quot;: [&quot;img/event/1.jpg&quot;],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;media&quot;: [</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;<a href="https://www.youtube.com/watch?v=UKbOavrerNQ&t=53m37s"></a><a href='https://www.youtube.com/watch?v=UKbOavrerNQ&amp;t=53m37s'/>https://www.youtube.com/watch?v=UKbOavrerNQ&amp;t=53m37s</a>&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;<a href="https://www.youtube.com/watch?v=UKbOavrerNQ&t=53m36s"></a><a href='https://www.youtube.com/watch?v=UKbOavrerNQ&amp;t=53m36s'/>https://www.youtube.com/watch?v=UKbOavrerNQ&amp;t=53m36s</a>&quot;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;tag&quot;: [</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { &quot;id&quot;: 1, name&quot;: &quot;街頭民主教室&quot; },</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { &quot;id&quot;: 2, name&quot;: &quot;太陽花&quot; },...</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;hackpad&quot;: &quot;<a href="https://318.hackpad.com/--F0W0Fnhkakl"></a><a href='https://318.hackpad.com/--F0W0Fnhkakl'/>https://318.hackpad.com/--F0W0Fnhkakl</a>&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;date&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;yyyy&quot; : 2014, &quot;mm&quot; : 3, &quot;dd&quot; : 21,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;hh&quot; : 0, &quot;ii&quot; :0, &quot;ss&quot; : 0 }</li>
+<li>&nbsp;&nbsp;&nbsp; }</li>
 <li>]</li></ul>
 
-<ul><li><b>data/speech/events.json (&nbsp; 演講所有項目 )</b></li></ul>
-<ul class="code"><li>[</li>
-<li>]</li></ul>
+<p><b>標籤 Tags</b></p><p></p><undefined><li><b><u>REQUEST :&nbsp;</u></b></li></undefined>
+<ul style="list-style: none;"><li><br/></li>
+<li><a href="http://sunflower-documentary-api.herokuapp.com/api/1.0/tags"></a><a href='http://sunflower-documentary-api.herokuapp.com/api/1.0/events'/>http://sunflower-documentary-api.herokuapp.com/api/1.0/</a><a href='http://sunflower-documentary-api.herokuapp.com/api/1.0/tags'/>tags</a></li></ul>
+<ul><li><b>data/tags.json</b></li><ul style="list-style: none;"><li><br/></li></ul>
+</ul>
+<undefined><li><b><u>RESPONSE :&nbsp;</u></b></li></undefined>
 
-<ul><li><b>data/tags.json ( 標籤 )</b></li></ul>
 <ul class="code"><li>[</li>
 <li>&nbsp;&nbsp;&nbsp; { &quot;id&quot; : 1, &quot;name&quot; : &quot;街頭民主教室&quot; },...</li>
 <li>]</li></ul>
 
-<ul><li><b>data/groups.json ( 無名英雄組織列表 )</b></li></ul>
+<p><b>組織列表 Groups</b></p><p></p><undefined><li><b><u>REQUEST :&nbsp;</u></b></li></undefined>
+
+<ul style="list-style: none;"><li>暫無資料</li></ul>
+<ul><li><b>data/groups.json ( 組織列表 )</b></li><ul style="list-style: none;"><li><br/></li></ul>
+</ul>
+<undefined><li><b><u>RESPONSE :&nbsp;</u></b></li></undefined>
+
 <ul class="code"><li>[</li>
 <li>&nbsp;&nbsp;&nbsp; {&nbsp;</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;id&quot; : 1 ,&nbsp;</li>
@@ -106,7 +117,13 @@
 <li>&nbsp;&nbsp;&nbsp; },...</li>
 <li>]</li></ul>
 
-<ul><li><b>data/characters.json (&nbsp; 無名英雄列表 )</b></li></ul>
+<p><b>無名英雄 Characters</b></p><p></p><undefined><li><b><u>REQUEST :&nbsp;</u></b></li></undefined>
+<ul style="list-style: none;"><li><br/></li>
+<li>暫無資料</li></ul>
+<ul><li><b>data/characters.json ( 無名英雄組織列表 )</b></li><ul style="list-style: none;"><li><br/></li></ul>
+</ul>
+<undefined><li><b><u>RESPONSE :&nbsp;</u></b></li></undefined>
+
 <ul class="code"><li>[</li>
 <li>&nbsp;&nbsp;&nbsp; {</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;id&quot; : 1,</li>
@@ -120,45 +137,24 @@
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ],</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;link&quot; :</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { &quot;title&quot; : &rsquo;連結1&rsquo;, &quot;url&quot; : &rsquo;<a href="http://g0v.tw"></a>http://<a href='http://www.google.com'/>g</a>0v.tw&rsquo;},</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { &quot;title&quot; : &rsquo;連結2&rsquo;, &quot;url&quot; : &rsquo;<a href="http://g0v.tw"></a><a href='http://www.google.com/'/>http://</a><a href='http://www.google.com'/>g</a>0v.tw&rsquo;}</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { &quot;title&quot; : &rsquo;連結1&rsquo;, &quot;url&quot; : &rsquo;<a href="http://g0v.tw"></a><a href='http://g0v.tw/'/>http://g0v.tw</a>&rsquo;},</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { &quot;title&quot; : &rsquo;連結2&rsquo;, &quot;url&quot; : &rsquo;<a href="http://g0v.tw"></a><a href='http://g0v.tw/'/>http://g0v.tw</a>&rsquo;}</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ],</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;intro&quot; : &quot;人物簡介&quot;</li>
 <li>&nbsp;&nbsp;&nbsp; },...</li>
-<li>]</li></ul>
-
-<ul><li><b>data/literature/list.json ( 文宣列表 )</b></li></ul>
-<ul class="code"><li>[</li>
 <li>]</li>
 <li><br/></li></ul>
-<ul><li><b>data/literature/categories.json ( 文宣分類 )</b></li></ul>
-<ul class="code"><li>[</li>
-<li>]</li></ul>
 
-<p>------</p><p></p><ul><li>Data</li></ul>
-<p>[</p><ul class="code"><li>{</li>
-<li>&nbsp;&nbsp;&nbsp; &quot;id&quot;:&quot;0&quot;,</li>
-<li>&nbsp;&nbsp;&nbsp; &quot;startDate&quot;<b>:</b>&quot;<b>2014-03-21T06:00:00+08:00</b>&quot;,</li>
-<li>&nbsp;&nbsp;&nbsp; &quot;headline&quot;<b>:</b>&quot;兩岸經貿如何影響民主？&quot;,</li>
-<li>&nbsp;&nbsp;&nbsp; &quot;text&quot;<b>:</b>&quot;謝謝，天氣變冷了齁，請同學或者是在場的民眾要注意一下...&quot;,</li>
-<li>&nbsp;&nbsp;&nbsp; &quot;tag&quot;<b>:</b>&quot;街頭民主教室&quot;,</li>
-<li>&nbsp;&nbsp;&nbsp; &quot;place&quot;<b>:</b>&quot;濟南路&quot;,</li>
-<li>&nbsp;&nbsp;&nbsp; &quot;hackpad&quot;:&quot;<a href="https://318.hackpad.com/--F0W0Fnhkakl"></a>https://318.hackpad.com/--F0W0Fnhkakl&quot;,</li>
-<li>&nbsp;&nbsp;&nbsp; &quot;asset&quot;<b>:</b> {</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;media&quot;<b>:</b>&quot;<a href="https://www.youtube.com/watch?v=UKbOavrerNQ&t=53m37s"></a><u><a href='https://www.youtube.com/watch?v=UKbOavrerNQ&amp;t=53m37s'/>https://www.youtube.com/watch?v=UKbOavrerNQ&amp;t=53m37s</a></u>&quot;,</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;thumbnail&quot;<b>:</b>&quot;xxx.jpg&quot;</li>
-<li>&nbsp;&nbsp;&nbsp; }</li>
-<li>}</li></ul>
-<p>]</p><p></p><ul><li>Event list</li></ul>
-<p>[</p><ul class="code"><li>{</li>
-<li>&nbsp;&nbsp;&nbsp; &quot;id&quot;:&quot;0&quot;,</li>
-<li>&nbsp;&nbsp;&nbsp; &quot;startDate&quot;<b>:</b>&quot;<b>2014-03-21T06:00:00+08:00</b>&quot;,</li>
-<li>&nbsp;&nbsp;&nbsp; &quot;headline&quot;<b>:</b>&quot;兩岸經貿如何影響民主？&quot;,</li>
-<li>&nbsp;&nbsp;&nbsp; &quot;tag&quot;<b>:</b>&quot;街頭民主教室&quot;,</li>
-<li>&nbsp;&nbsp;&nbsp; &quot;place&quot;<b>:</b>&quot;濟南路&quot;</li>
-<li>}</li></ul>
-<p>]</p><p></p><ul><li>Tag list</li></ul>
-<p>[</p><ul class="code"><li>&quot;街頭民主教室&quot;</li></ul>
-<p>]</p><p></p><h2>討論資料結構</h2><p>（<a href='https://drive.google.com/folderview?id=0B6ASgY1GMSOhWmFBMDFuZWt1LUE&amp;usp=sharing'/>開個臨時的檔案庫</a>）</p><p>現況：正在設計新的表格了～文播組～</p><ul class="comment"><li>表格接近完成，4/22會上線(開放第一周給大家開始接力)做逐字，本週內會完成相關連結建置～</li></ul>
+<p><b>文宣列表 Literature</b></p><p></p><undefined><li><b><u>REQUEST :&nbsp;</u></b></li></undefined>
+<ul style="list-style: none;"><li><br/></li>
+<li>暫無資料</li></ul>
+<ul><li><b>data/literature.json ( 文宣列表 )</b></li><ul style="list-style: none;"><li><br/></li></ul>
+</ul>
+<undefined><li><b><u>RESPONSE :&nbsp;</u></b></li></undefined>
+<ul style="list-style: none;"><li><br/></li>
+<li>暫無資料</li></ul>
+
+<undefined><li><br/></li></undefined>
+<h2>討論資料結構</h2><p>（<a href='https://drive.google.com/folderview?id=0B6ASgY1GMSOhWmFBMDFuZWt1LUE&amp;usp=sharing'/>開個臨時的檔案庫</a>）</p><p>現況：正在設計新的表格了～文播組～</p><ul class="comment"><li>表格接近完成，4/22會上線(開放第一周給大家開始接力)做逐字，本週內會完成相關連結建置～</li></ul>
 <p>2014-04-05／只准「零時政府」用電　議場插電有分階級？（2014-04-05中天新聞／記者唐薏程、黃琡雯）</p><p>濟南路／2014-04-02_1950to／by 劉宇庭／.mp4</p><p></p><p></p><p></p></body>
 </html>
