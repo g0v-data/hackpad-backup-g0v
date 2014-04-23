@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="3041"/>
+<meta name="version" content="3060"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$VVlHNqKaQrC</title>
 </head>
 <body><h1>直播導播台 Live!</h1><p>&nbsp;</p><h2> 專案說明</h2><p>太陽花運動期間由 <a href='http://g0v.today/'/>g0v.today</a> 彙整直播連結，運動之後直播連結四散不易傳播。希望透過直播連結導播台讓直播主主動 submit 連結，打造直播聯播網。</p><p></p><p><b>授權方式</b></p><p>（程式碼部分如 MIT/BSD /文件部分，如 CC-BY）</p><p>MIT, CC-BY</p><p></p><p><b>專案目前狀態</b></p><p>開發中</p><p></p><p><b>專案資訊</b></p><p>Repository: <a href="https://github.com/g0v/live"></a>https://github.com/g0v/live</p><p>Live: <a href="https://g0v.github.io/live/"></a>https://g0v.github.io/live/</p><p></p><p><b>People</b></p><ul><li><a href='http://github.com/jeffhung/'/>jeffhung</a>&nbsp;</li>
@@ -85,7 +85,7 @@
 <p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_VVlHNqKaQrC_p.66898_1398058893946_螢幕截圖 2014-04-21 13.41.05.png'/></p><ul class="comment"><li><br/></li>
 <li>原始碼 <a href="https://github.com/g0v/live/tree/link-manager"></a><a href='https://github.com/g0v/live/tree/link-manager'/>https://github.com/g0v/live/tree/link-manager</a></li></ul>
 
-<p>4/23版</p><p>這本版本的想法是讓使用者提供網址就好。收到的網址再由rsghost那邊確認後，把直播帳號加入直播掃描清單，之後就無需手動加入。</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_VVlHNqKaQrC_p.66898_1398244511548_livelink.png'/></p><p></p><p></p><p><b>影音串流資料庫</b></p><p></p><p>儘管狀態回報系統使用 Google Analytics 記錄大家的狀態回報，我們仍然需要有個地方收集<u>欲</u>上稿的影音串流。目前看來 <a href='/ep/profile/tRqSYxn3iNC'/>Justin Lee</a> 選擇使用 firebase 儲存。</p><ul class="comment"><li>能否麻煩 <a href='/ep/profile/tRqSYxn3iNC'/>Justin Lee</a> 寫一下 firebase 那邊的 schema 設計？Thanks.</li>
+<p>4/23版</p><p>這本版本的想法是讓使用者提供網址就好。收到的網址再由rsghost那邊確認後，把直播帳號加入直播掃描清單，之後就無需手動加入。</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_VVlHNqKaQrC_p.66898_1398244511548_livelink.png'/></p><p>demo網頁暫時放在善心人士支援的server上，未轉址前勿流出</p><p><a href="http://60.251.163.74/~g0vlive"></a>http://60.251.163.74/~g0vlive</p><p></p><p><b>影音串流資料庫</b></p><p></p><p>儘管狀態回報系統使用 Google Analytics 記錄大家的狀態回報，我們仍然需要有個地方收集<u>欲</u>上稿的影音串流。目前看來 <a href='/ep/profile/tRqSYxn3iNC'/>Justin Lee</a> 選擇使用 firebase 儲存。</p><ul class="comment"><li>能否麻煩 <a href='/ep/profile/tRqSYxn3iNC'/>Justin Lee</a> 寫一下 firebase 那邊的 schema 設計？Thanks.</li>
 <li><s>目前是timestamp, title, url，還在調整當中</s></li>
 <li>只存url, added_at</li></ul>
 <p>&nbsp;</p><p>已下架的影音串流，仍應留在資料庫裡，於 archive 畫面以 timeline 顯現。</p><ul class="comment"><li>在 hackath8n 的討論裡，我們的共識是，所有 events 皆保留。</li></ul>
