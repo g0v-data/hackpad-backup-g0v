@@ -3,10 +3,10 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="3060"/>
+<meta name="version" content="3266"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$VVlHNqKaQrC</title>
 </head>
-<body><h1>直播導播台 Live!</h1><p>&nbsp;</p><h2> 專案說明</h2><p>太陽花運動期間由 <a href='http://g0v.today/'/>g0v.today</a> 彙整直播連結，運動之後直播連結四散不易傳播。希望透過直播連結導播台讓直播主主動 submit 連結，打造直播聯播網。</p><p></p><p><b>授權方式</b></p><p>（程式碼部分如 MIT/BSD /文件部分，如 CC-BY）</p><p>MIT, CC-BY</p><p></p><p><b>專案目前狀態</b></p><p>開發中</p><p></p><p><b>專案資訊</b></p><p>Repository: <a href="https://github.com/g0v/live"></a>https://github.com/g0v/live</p><p>Live: <a href="https://g0v.github.io/live/"></a>https://g0v.github.io/live/</p><p></p><p><b>People</b></p><ul><li><a href='http://github.com/jeffhung/'/>jeffhung</a>&nbsp;</li>
+<body><h1>直播導播台 Live!</h1><p>&nbsp;</p><h2> 專案說明</h2><p>太陽花運動期間由 <a href='http://g0v.today/'/>g0v.today</a> 彙整直播連結，運動之後直播連結四散不易傳播。希望透過直播連結導播台讓直播主主動 submit 連結，打造直播聯播網。</p><p></p><p><b>授權方式</b></p><p>（程式碼部分如 MIT/BSD /文件部分，如 CC-BY）</p><p>MIT, CC-BY</p><p></p><p><b>專案目前狀態</b></p><p>開發中</p><p></p><p><b>專案資訊</b></p><p>Repository: <a href="https://github.com/g0v/live"></a>https://github.com/g0v/live</p><p>Live: <a href="https://g0v.github.io/live/"></a>https://g0v.github.io/live/</p><p>Link Manager: <a href="http://g0v.github.io/live/link_manager"></a>http://g0v.github.io/live/link_manager</p><p>Status Bar: <a href="http://g0v.github.io/live/status_bar.html"></a>http://g0v.github.io/live/status_bar.html</p><p></p><p><b>People</b></p><ul><li><a href='http://github.com/jeffhung/'/>jeffhung</a>&nbsp;</li>
 <li><a href='/ep/profile/tRqSYxn3iNC'/>J</a><a href='/ep/profile/tRqSYxn3iNC'/>ustin Lee</a></li>
 <li>rsghost</li>
 <li><a href='/ep/profile/od9zls3wnWG'/>ipa chiu</a></li>
@@ -40,6 +40,8 @@
 <li>人工審核的部分是為了防止有人惡意搞破壞。而審核的部分先前的討論是交由特定的Facebook社團管理員來管理，針對這些會有直播的特定議題來說，Facebook社團成員的數量應該夠多，審核的時效性應該問題不大。</li>
 <li>不過如果可以用自動化的方式把連結加入資料庫，即時性部分應該可以做得更好。</li>
 <li>tag的部分應該是有必要。</li>
+<li>用 tag+1。</li>
+<li>審核的部分，也許另外一種做法是類似 reddit、slashdot，讓 -1 比較多的自動沈下去。不過怎麼防 bot 也許就要再多想想了。有沒有人有相關系統的實作經驗可以分享的？</li>
 <li><br/></li></ul>
 <p>*</p><ul><li><b>封存舊連結 history</b></li></ul>
 <p>自動收集過期連結，用 timeline 方式呈現或單純列表。</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_VVlHNqKaQrC_p.52952_1397892421374_Screen Shot 2014-04-19 at 15.26.50.png'/></p><p></p><p></p><h2>系統架構</h2><p></p><p><b>Hackfoldr 整合</b></p><p></p><p>Hackfoldr 仍是一個最佳的 aggregator 解決方案。G0V Live! 利用與 hackfoldr 的 loosely integration 達成各項功能。</p><p></p><ul><li><b>影音串流支援</b></li></ul>
@@ -65,13 +67,17 @@
 <p><b>狀態回報系統</b></p><ul class="comment"><li>可用youtube API 直接查詢狀態{ live,none,upcoming }</li>
 <li>介紹: <a href="https://developers.google.com/youtube/v3/docs/videos"></a>https://developers.google.com/youtube/v3/docs/videos</li>
 <li>範例: <a href="https://www.googleapis.com/youtube/v3/videos?id=j7AA2EsI_vI&key=AIzaSyDV_AKXmKO9cMD08u3W9j6PqC00qqFgYvI&part=snippet,statistics"></a>https://www.googleapis.com/youtube/v3/videos?id=j7AA2EsI_vI&amp;key=AIzaSyDV_AKXmKO9cMD08u3W9j6PqC00qqFgYvI&amp;part=snippet,statistics</li></ul>
-<ul><li>狀態回報控制列：<ul><li>使用 github pages，網址為 hxxp://g0v.github.io/live/status_bar.html?&lt;url&gt;</li></ul>
-<ul class="task"><li>The web page of the Bar (HTML + Bootstrap)</li></ul>
-<ul class="taskdone"><li>Mechanism to deploy as github pages&nbsp;</li></ul>
-<ul class="task"><li>申請 Google Analytics</li></ul>
-<ul class="comment"><li>我在我自己的 Google Analytics 頁面下開了一個 g0v 的 account，於底下開了一個 g0v-live 的 property。</li>
-<li>有沒有誰熟悉 Google Analytics 的？</li></ul>
+<ul><li>狀態回報控制列：<ul><li>使用 github pages，網址為 hxxp://g0v.github.io/live/status_bar.html?&lt;url&gt;</li>
+<li>畫面：</li></ul>
 </ul>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_VVlHNqKaQrC_p.56216_1398351768361_Screenshot 2014-04-24 23.02.29.png'/></p><ul class="task"><li>The web page of the Bar (HTML + Bootstrap)<ul class="task"><li>mouse-over 「訂閱」按鈕時，pop up 說明解釋將會收到直播狀態改變通報。</li><ul><li>直播狀態改變通報 = 鄉民們按左邊按鈕的 events with proper aggregation</li></ul>
+</ul>
+</li>
+<li>Mechanism to deploy as github pages&nbsp;</li><ul class="code"><li>請在 root folder 下打 `make deploy` 或 `./deploy.sh`。</li></ul>
+</li>
+<li>申請 Google Analytics</li></li>
+<li>我在我自己的 Google Analytics 頁面下開了一個 g0v 的 account，於底下開了一個 g0v-live 的 property。</li></li>
+<li>有沒有誰熟悉 Google Analytics 的？</li></ul>
 <ul><li>clkao enhanced hackfoldr:<ul><li><a href="http://hackfoldr.org/hackfoldrtest/9S9TGa-b0pU"></a>http://hackfoldr.org/hackfoldrtest/9S9TGa-b0pU</li>
 <li><a href="https://ethercalc.org/hackfoldrtest"></a>https://ethercalc.org/hackfoldrtest</li></ul>
 </li>
@@ -83,9 +89,13 @@
 <p><b>上稿審核界面</b></p><p></p><ul class="comment"><li>之前 <a href='/ep/profile/tRqSYxn3iNC'/>Justin Lee</a> 放上來的畫面不見了。:-(</li>
 <li>下面的圖是4/19版</li></ul>
 <p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_VVlHNqKaQrC_p.66898_1398058893946_螢幕截圖 2014-04-21 13.41.05.png'/></p><ul class="comment"><li><br/></li>
-<li>原始碼 <a href="https://github.com/g0v/live/tree/link-manager"></a><a href='https://github.com/g0v/live/tree/link-manager'/>https://github.com/g0v/live/tree/link-manager</a></li></ul>
+<li>原始碼 <a href="https://github.com/g0v/live/tree/link-manager"></a><a href='https://github.com/g0v/live/tree/link-manager'/>https://github.com/g0v/live/tree/link-manager</a></li>
+<li>Thanks <a href='/ep/profile/tRqSYxn3iNC'/>Justin Lee</a>, I&rsquo;ve merged link-manager branch to master.</li></ul>
 
-<p>4/23版</p><p>這本版本的想法是讓使用者提供網址就好。收到的網址再由rsghost那邊確認後，把直播帳號加入直播掃描清單，之後就無需手動加入。</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_VVlHNqKaQrC_p.66898_1398244511548_livelink.png'/></p><p>demo網頁暫時放在善心人士支援的server上，未轉址前勿流出</p><p><a href="http://60.251.163.74/~g0vlive"></a>http://60.251.163.74/~g0vlive</p><p></p><p><b>影音串流資料庫</b></p><p></p><p>儘管狀態回報系統使用 Google Analytics 記錄大家的狀態回報，我們仍然需要有個地方收集<u>欲</u>上稿的影音串流。目前看來 <a href='/ep/profile/tRqSYxn3iNC'/>Justin Lee</a> 選擇使用 firebase 儲存。</p><ul class="comment"><li>能否麻煩 <a href='/ep/profile/tRqSYxn3iNC'/>Justin Lee</a> 寫一下 firebase 那邊的 schema 設計？Thanks.</li>
+<p>4/23版</p><p>這本版本的想法是讓使用者提供網址就好。收到的網址再由rsghost那邊確認後，把直播帳號加入直播掃描清單，之後就無需手動加入。</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_VVlHNqKaQrC_p.66898_1398244511548_livelink.png'/></p><p>demo網頁暫時放在善心人士支援的server上，未轉址前勿流出</p><p><a href="http://60.251.163.74/~g0vlive"></a>http://60.251.163.74/~g0vlive</p><ul class="comment"><li>已 deploy 至 github pages: <a href="http://g0v.github.io/live/link_manager/"></a>http://g0v.github.io/live/link_manager/</li></ul>
+<ul class="task"><li>自動抓取影音 title</li></ul>
+
+<p><b>影音串流資料庫</b></p><p></p><p>儘管狀態回報系統使用 Google Analytics 記錄大家的狀態回報，我們仍然需要有個地方收集<u>欲</u>上稿的影音串流。目前看來 <a href='/ep/profile/tRqSYxn3iNC'/>Justin Lee</a> 選擇使用 firebase 儲存。</p><ul class="comment"><li>能否麻煩 <a href='/ep/profile/tRqSYxn3iNC'/>Justin Lee</a> 寫一下 firebase 那邊的 schema 設計？Thanks.</li>
 <li><s>目前是timestamp, title, url，還在調整當中</s></li>
 <li>只存url, added_at</li></ul>
 <p>&nbsp;</p><p>已下架的影音串流，仍應留在資料庫裡，於 archive 畫面以 timeline 顯現。</p><ul class="comment"><li>在 hackath8n 的討論裡，我們的共識是，所有 events 皆保留。</li></ul>
