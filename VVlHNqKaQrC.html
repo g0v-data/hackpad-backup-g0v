@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="3277"/>
+<meta name="version" content="3410"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$VVlHNqKaQrC</title>
 </head>
 <body><h1>直播導播台 Live!</h1><p>&nbsp;</p><h2> 專案說明</h2><p>太陽花運動期間由 <a href='http://g0v.today/'/>g0v.today</a> 彙整直播連結，運動之後直播連結四散不易傳播。希望透過直播連結導播台讓直播主主動 submit 連結，打造直播聯播網。</p><p></p><p><b>授權方式</b></p><p>（程式碼部分如 MIT/BSD /文件部分，如 CC-BY）</p><p>MIT, CC-BY</p><p></p><p><b>專案目前狀態</b></p><p>開發中</p><p></p><p><b>專案資訊</b></p><p>Repository: <a href="https://github.com/g0v/live"></a>https://github.com/g0v/live</p><p>Live: <a href="https://g0v.github.io/live/"></a>https://g0v.github.io/live/</p><p>Link Manager: <a href="http://g0v.github.io/live/link_manager"></a>http://g0v.github.io/live/link_manager</p><p>Status Bar: <a href="http://g0v.github.io/live/status_bar.html"></a>http://g0v.github.io/live/status_bar.html</p><p></p><p><b>People</b></p><ul><li><a href='http://github.com/jeffhung/'/>jeffhung</a>&nbsp;</li>
@@ -42,6 +42,8 @@
 <li>tag的部分應該是有必要。</li>
 <li>用 tag+1。</li>
 <li>審核的部分，也許另外一種做法是類似 reddit、slashdot，讓 -1 比較多的自動沈下去。不過怎麼防 bot 也許就要再多想想了。有沒有人有相關系統的實作經驗可以分享的？</li>
+<li>贊同，實作的部分我覺得可以先參考實況平台的api，比如說Justin.tv的api有提供<a href='http://goo.gl/0eV7ec'/>收看人數/人次</a>，這種的指標就可以優先利用，不過缺點就是當該平台api改板就...0rz</li>
+<li>ref. Justin.tv api <a href='http://zh-tw.justin.tv/p/api'/>Doc</a>、<a href='https://github.com/justintv/twitch-api'/>GitHub</a></li>
 <li><br/></li></ul>
 <p>*</p><ul><li><b>封存舊連結 history</b></li></ul>
 <p>自動收集過期連結，用 timeline 方式呈現或單純列表。</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_VVlHNqKaQrC_p.52952_1397892421374_Screen Shot 2014-04-19 at 15.26.50.png'/></p><p></p><p></p><h2>系統架構</h2><p></p><p><b>Hackfoldr 整合</b></p><p></p><p>Hackfoldr 仍是一個最佳的 aggregator 解決方案。G0V Live! 利用與 hackfoldr 的 loosely integration 達成各項功能。</p><p></p><ul><li><b>影音串流支援</b></li></ul>
@@ -52,7 +54,6 @@
 <li>ustream</li></ul>
 <ul class="comment"><li>欲增加支援需直接修改 hackfoldr，歡迎提供 patch 直接送 pull request 至 <a href="https://github.com/hackfoldr/hackfoldr"></a><a href='https://github.com/hackfoldr/hackfoldr'/>https://github.com/hackfoldr/hackfoldr</a></li></ul>
 </ul>
-
 <ul><li>內嵌狀態回報控制列</li></ul>
 
 <ul style="list-style: none;"><li>在切換到影音串流的 tab 之後，若有在 ethercalc 上加上 bar=&quot;&lt;url&gt;&quot; 的 attribute，便會自動外增一個 iframe 顯示 &lt;url&gt;。此 &lt;url&gt; 即為狀態回報系統的狀態回報控制列，格式為： bar=&quot;hxxp://g0v.github.io/live/status_bar.html?&lt;url&gt;&quot;</li><ul class="taskdone"><li>依據 bar 設定顯示 iframe</li></ul>
@@ -86,9 +87,8 @@
 <ul class="comment"><li>抱歉剛剛誤刪了一位朋友(是RSGHOST嗎？)在製作後端的訊息，現在確實需要後端的支援。</li>
 <li><s>在現場的時候，我已經寫了一部份的網頁，在用Firebase做後端遇到一些狀況，如果可以人幫忙處理後端就太好了</s>。</li></ul>
 
-<p><b>上稿審核界面</b></p><p></p><ul class="comment"><li>之前 <a href='/ep/profile/tRqSYxn3iNC'/>Justin Lee</a> 放上來的畫面不見了。:-(</li>
-<li>下面的圖是4/19版</li></ul>
-<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_VVlHNqKaQrC_p.66898_1398058893946_螢幕截圖 2014-04-21 13.41.05.png'/></p><ul class="comment"><li><br/></li>
+<p><b>上稿審核界面</b></p><p></p><ul class="comment"><li>之前 <a href='/ep/profile/tRqSYxn3iNC'/>Justin Lee</a> 放上來的畫面不見了。:-(</li></ul>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_VVlHNqKaQrC_p.66898_1398357794498_livelink.png'/></p><p></p><ul class="comment"><li><br/></li>
 <li>原始碼 <a href="https://github.com/g0v/live/tree/link-manager"></a><a href='https://github.com/g0v/live/tree/link-manager'/>https://github.com/g0v/live/tree/link-manager</a></li>
 <li>Thanks <a href='/ep/profile/tRqSYxn3iNC'/>Justin Lee</a>, I&rsquo;ve merged link-manager branch to master.</li></ul>
 
