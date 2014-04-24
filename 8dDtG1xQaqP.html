@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1632"/>
+<meta name="version" content="1783"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$8dDtG1xQaqP</title>
 </head>
 <body><h1>CKAN x g0v - g0v 開放資料彙整平台</h1><p></p><h2>現況 /  為什麼</h2><p>g0v 現在有許多資料四散在各處，例如：</p><ul><li>專案自行提供的 API -&nbsp; ex 立委大頭照</li>
@@ -27,11 +27,18 @@
 
 <ul><li>Issue Tracking: <a href="https://github.com/g0v/ckan"></a>https://github.com/g0v/ckan</li></ul>
 
-<h2>坑們</h2><ul class="task"><li>需要 lucene / solr 高手協助解決中文斷詞、中文搜尋問題</li></ul>
+<h2>坑們</h2><ul class="task"><li>需要 lucene / solr 高手協助解決中文斷詞、中文搜尋問題 :a:&nbsp; 較急迫！</li></ul>
 <ul class="comment"><li>已實驗過 <a href='http://ckan-docs-tw.readthedocs.org/ja/latest/install.html#jetty8-solr4-w'/>IKAnalyzer</a> 未果（預計近期再測試別的方法）</li></ul>
+<ul class="task"><li>將 g0v 出產的 API 整理到 CKAN<ul class="task"><li>ly -&nbsp; <a href="http://api.ly.g0v.tw"></a><a href='http://api.ly.g0v.tw'/>http://api.ly.g0v.tw</a></li>
+<li>AddressBook</li>
+<li>新聞小幫手</li></ul>
+<ul class="comment"><li>其它請補充</li></ul>
+</ul>
 <ul class="task"><li>翻譯 （歡迎熟悉 transifex 的朋友參與：<a href="https://www.transifex.com/projects/p/ckan/language/zh_TW/"></a>https://www.transifex.com/projects/p/ckan/language/zh_TW/ 需登入並申請進入 translation team）</li></ul>
+<ul class="comment"><li>isacl: 我已經申請到 CKAN translation team 帳號了，最近正在翻譯中，如果有什麼翻譯的建議，但懶得申請 transifex 帳號，可以在此提出，我可代為貼到 transifex。感激。</li>
+<li>累積一定的翻譯修正之後，會更新到 <a href="http://ckan.g0v.today"></a>http://c<a href='http://c'/>k</a><a href='http://ck'/>a</a><a href='http://cka'/>n</a><a href='http://ckan'/>.g</a><a href='http://ckan.g'/>0</a><a href='http://ckan.g0'/>v</a><a href='http://ckan.g0v'/>.t</a><a href='http://ckan.g0v.t'/>o</a><a href='http://ckan.g0v.to'/>d</a><a href='http://ckan.g0v.tod'/>a</a><a href='http://ckan.g0v.toda'/>y</a> 供大家預覽</li></ul>
 
-<h2>技術細節</h2><p></p><ul><li>Preview<ul><li>DataExplorer: CKAN 預設可以透過 Data Explorer 以 GridView 的方式預覽 `csv` 及 `xls` 資料</li>
+<p></p><h2>技術細節</h2><p></p><ul><li>Preview<ul><li>DataExplorer: CKAN 預設可以透過 Data Explorer 以 GridView 的方式預覽 `csv` 及 `xls` 資料</li>
 <li>Browser direct preview：對於 json / html / xml ... 等資料， CKAN 會用 browser 來 preview<ul><li>例如 html 會顯示在 iframe</li></ul>
 </li>
 <li>PDF preview<ul><li>PDF Preview 需額外安裝 Extension, 目前未安裝</li></ul>
