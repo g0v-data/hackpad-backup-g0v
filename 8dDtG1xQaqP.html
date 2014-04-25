@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1995"/>
+<meta name="version" content="2756"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$8dDtG1xQaqP</title>
 </head>
 <body><h1>CKAN x g0v - g0v 開放資料彙整平台</h1><p></p><h2>現況 /  為什麼</h2><p>g0v 現在有許多資料四散在各處，例如：</p><ul><li>專案自行提供的 API -&nbsp; ex 立委大頭照</li>
@@ -27,20 +27,33 @@
 
 <ul><li>Issue Tracking: <a href="https://github.com/g0v/ckan"></a>https://github.com/g0v/ckan</li></ul>
 
-<h2>坑們</h2><ul class="task"><li>需要 lucene / solr 高手協助解決中文斷詞、中文搜尋問題 :a:&nbsp; 較急迫！</li></ul>
+<h2>坑們</h2><ul class="comment"><li>如對於系統架設面有興趣，歡迎於 irc ping isacl, 很樂意開 ssh 登入帳號給您。</li></ul>
+
+<ul class="task"><li>需要 lucene / solr 高手協助解決中文斷詞、中文搜尋問題 :a:</li></ul>
 <ul class="comment"><li>已實驗過 <a href='http://ckan-docs-tw.readthedocs.org/ja/latest/install.html#jetty8-solr4-w'/>IKAnalyzer</a> 未果（預計近期再測試別的方法）</li>
 <li>試試 <a href="https://hackpad.com/CKAN-1.8--zhur2gtjcRk"></a><a href='https://hackpad.com/CKAN-1.8--zhur2gtjcRk'/>https://hackpad.com/CKAN-1.8--zhur2gtjcRk</a> ？ 嗯...好像是一樣的...</li>
-<li>第零次動員戡亂黑客松 時有發表一個當時跟青平台合作的CKAN，後來沒人用就關掉了，但 2.0a 的源碼在 <a href="https://github.com/opendatatw/ckan"></a>https://github.com/opendatatw/ckan ，不確定是否有幫助。</li></ul>
-<ul class="task"><li>將 g0v 出產的 API 整理到 CKAN<ul class="task"><li>ly -&nbsp; <a href="http://api.ly.g0v.tw"></a><a href='http://api.ly.g0v.tw'/>http://api.ly.g0v.tw</a></li>
+<li>第零次動員戡亂黑客松 時有發表一個當時跟青平台合作的CKAN，後來沒人用就關掉了，但 2.0a 的源碼在 <a href="https://github.com/opendatatw/ckan"></a>https://github.com/opendatatw/ckan ，不確定是否有幫助。</li>
+<li>謝謝！我再試試看。（IKAnalyzer 應該只是在小地方出錯，我會換個版本試試看。但也想尋求其他比較新的解決方案 IKAnalyzer 看似很久沒更新了）。</li></ul>
+<ul><li>資料整理</li><ul class="task"><li>將 g0v 使用到的外來 (data.gov.tw 或其他地方) 開放資料整理自 CKAN (參考 <a href='http://tinyurl.com/nx4gpdh'/>Q&amp;A - Q2</a> )</li>
+<li>將 g0v 出產的 API 或資料整理到 CKAN<ul class="task"><li>ly -&nbsp; <a href="http://api.ly.g0v.tw"></a><a href='http://api.ly.g0v.tw'/>http://api.ly.g0v.tw</a></li>
 <li>AddressBook</li>
 <li>新聞小幫手</li></ul>
+</ul>
 <ul class="comment"><li>其它請補充</li>
-<li>這邊是只要把資料連結或是Export出來的資料用他的介面新增進去?</li></ul>
+<li>這邊是只要把資料連結或是Export出來的資料用他的介面新增進去?</li>
+<li>皆可</li>
+<li>&nbsp;+ 對於已經有放資料的主機或是已經開放 API 的專案，直接在 CKAN 加入連結即可。（避免資料重複在兩個地方）</li>
+<li>&nbsp;+ 對於沒有架設 API 的專案，若想透過 CKAN 提供 API, 可將資料匯入 `CKAN DataStore`。Ref: <a href='http://docs.ckan.org/en/ckan-2.2/datastore.html#the-datastore-api'/>DataStore API</a>&nbsp; ，會有基本的 Search API 可使用。</li></ul>
 </ul>
 <ul class="task"><li>翻譯 （歡迎熟悉 transifex 的朋友參與：<a href="https://www.transifex.com/projects/p/ckan/language/zh_TW/"></a>https://www.transifex.com/projects/p/ckan/language/zh_TW/ 需登入並申請進入 translation team）</li></ul>
 <ul class="comment"><li>isacl: 我已經申請到 CKAN translation team 帳號了，最近正在翻譯中，如果有什麼翻譯的建議，但懶得申請 transifex 帳號，可以在此提出，我可代為貼到 transifex。感激。</li>
 <li>累積一定的翻譯修正之後，會更新到 <a href="http://ckan.g0v.today"></a>http://c<a href='http://c'/>k</a><a href='http://ck'/>a</a><a href='http://cka'/>n</a><a href='http://ckan'/>.g</a><a href='http://ckan.g'/>0</a><a href='http://ckan.g0'/>v</a><a href='http://ckan.g0v'/>.t</a><a href='http://ckan.g0v.t'/>o</a><a href='http://ckan.g0v.to'/>d</a><a href='http://ckan.g0v.tod'/>a</a><a href='http://ckan.g0v.toda'/>y</a> 供大家預覽</li>
-<li>應該已經把 ISACL 加到專案協調者，就可以自行翻譯新增成員了。加油XD</li></ul>
+<li>應該已經把 ISACL 加到專案協調者，就可以自行翻譯新增成員了。加油XD</li>
+<li>charlesc? 感謝幫我加入 m(_ _)m 能有前輩指點真是幸運</li></ul>
+<ul><li>Extensions</li><ul class="task"><li>Install DataStore Extension</li>
+<li>Install FileStore Extension</li>
+<li>Install PDF Preview Extension</li></ul>
+</ul>
 
 <p></p><h2>技術細節</h2><p></p><ul><li>Preview<ul><li>DataExplorer: CKAN 預設可以透過 Data Explorer 以 GridView 的方式預覽 `csv` 及 `xls` 資料</li>
 <li>Browser direct preview：對於 json / html / xml ... 等資料， CKAN 會用 browser 來 preview<ul><li>例如 html 會顯示在 iframe</li></ul>
@@ -58,14 +71,21 @@
 <ul class="comment"><li>FileStore 功能未在測試機啟用</li></ul>
 </ul>
 
-<h2>Q & A</h2><p><b>Q: 與 </b><a href="http://data.g0v.tw"></a><b>http://d<a href='http://d'/>a</a><a href='http://da'/>t</a><a href='http://dat'/>a</a><a href='http://data'/>.g</a><a href='http://data.g'/>0</a><a href='http://data.g0'/>v</a><a href='http://data.g0v'/>.t</a><a href='http://data.g0v.t'/>w</a></b><b> 有什麼不同</b></p><p>A:&nbsp;</p><ul style="list-style: none;"><li><a href="http://data.g0v.tw"></a>http://d<a href='http://d'/>a</a><a href='http://da'/>t</a><a href='http://dat'/>a</a><a href='http://data'/>.g</a><a href='http://data.g'/>0</a><a href='http://data.g0'/>v</a><a href='http://data.g0v'/>.t</a><a href='http://data.g0v.t'/>w</a> 比較像是 data request 平台，並非用作資料彙整</li>
-<li>ronnywang 提議可將 data.g0v.tw 改為 data-request.g0v.tw&nbsp; : <a href='http://logbot.g0v.tw/channel/g0v.tw/2014-04-22/390'/>Logbot Link</a>&nbsp;</li><ul class="comment"><li>那是不是data.g0v.tw的資料都應該forward過來? 就是那邊如果有人提供答案了的話就自動加過來</li></ul>
+<h2>Q & A</h2><p><b>Q1: 與 </b><a href="http://data.g0v.tw"></a><b>http://d<a href='http://d'/>a</a><a href='http://da'/>t</a><a href='http://dat'/>a</a><a href='http://data'/>.g</a><a href='http://data.g'/>0</a><a href='http://data.g0'/>v</a><a href='http://data.g0v'/>.t</a><a href='http://data.g0v.t'/>w</a></b><b> 有什麼不同</b></p><p>A:&nbsp;</p><ul style="list-style: none;"><li><a href="http://data.g0v.tw"></a>http://d<a href='http://d'/>a</a><a href='http://da'/>t</a><a href='http://dat'/>a</a><a href='http://data'/>.g</a><a href='http://data.g'/>0</a><a href='http://data.g0'/>v</a><a href='http://data.g0v'/>.t</a><a href='http://data.g0v.t'/>w</a> 比較像是 data request 平台，並非用作資料彙整</li>
+<li>ronnywang 提議可將 data.g0v.tw 改為 data-request.g0v.tw&nbsp; : <a href='http://logbot.g0v.tw/channel/g0v.tw/2014-04-22/390'/>Logbot Link</a>&nbsp;</li><ul class="comment"><li>那是不是data.g0v.tw的資料都應該forward過來? 就是那邊如果有人提供答案了的話就自動加過來</li>
+<li>Good idea! 但如果資料來源已經在 data.gov.tw （政府開放資料平台）了，不確定是否要加 (reference) 到 g0v CKAN.</li>
+<li>updated: 我的想法是：若資料已經在 `data.gov.tw` 但這是 g0v 專案有使用到的資料。可將之 (用連結 reference) 加到 g0v CKAN。因此 g0v CKAN 可以漸漸成為所有 g0v 專案貢獻者想要找與專案相關的資料、API&nbsp; 的入口網站。</li></ul>
 </ul>
 
-<p><b>Q: 與 </b><a href="http://campaign-finance.g0v.olc.tw/"></a><b>http://campaign-finance.g0v.olc.tw/</b><b> 會衝突嗎？</b></p><p>A:</p><ul style="list-style: none;"><li>應不會，目前 <a href="http://campaign-finance.g0v.olc.tw/"></a><a href='http://campaign-finance.g0v.olc.tw/'/>http://campaign-finance.g0v.olc.tw/</a> 看起來可用來彙整「政治獻金」還有哪些文件需要去列印出來（推坑），與此平台（整理既有資料）的方向不同。</li>
-<li>簡單的說就是一個認領資料的地方，為了避免有重複認領的情況才設置，或是幫忙補充應該要提早認領的原因等等；討論區的形式比較不正式，在還沒有更好的選擇之前先將就著用？</li>
-<li><br/></li>
-<li>請問 此系統 與 OpenStack 的架構與功能</li></ul>
+<p><b>Q2: 與 </b><a href="http://data.gov.tw"></a><b><a href='http://data.g0v.tw'/>http://data.g</a><a href='http://data.gv.tw'/>o</a><a href='http://data.g0v.tw'/>v.tw</a></b><b> (政府開放資料入口) 有什麼不同</b></p><p>A:</p><ul style="list-style: none;"><li>延伸自前項的討論：</li></ul>
+<ul><li>`g0v CKAN` 專為 g0v 專案而設<ul><li>若資料已經在 `data.gov.tw` ，但資料是 g0v 專案有使用到的資料。可將之 (用連結 reference) 加到 `g0v CKAN`。因此 `g0v CKAN` 可以漸漸成為所有 g0v 專案參與者想要找與專案相關的資料、專案相關 API&nbsp; 的入口網站。</li>
+<li>可用 tag 或 group 等方式，標注該資料是被應用在哪個 g0v 專案。</li></ul>
+</ul>
+
+<p><b>Q3: 與 </b><a href="http://campaign-finance.g0v.olc.tw/"></a><b>http://campaign-finance.g0v.olc.tw/</b><b> 會衝突嗎？</b></p><p>A:</p><ul style="list-style: none;"><li>應不會，目前 <a href="http://campaign-finance.g0v.olc.tw/"></a><a href='http://campaign-finance.g0v.olc.tw/'/>http://campaign-finance.g0v.olc.tw/</a> 看起來可用來彙整「政治獻金」還有哪些文件需要去列印出來（推坑），與此平台（整理既有資料）的方向不同。</li>
+<li>簡單的說就是一個認領資料的地方，為了避免有重複認領的情況才設置，或是幫忙補充應該要提早認領的原因等等；討論區的形式比較不正式，在還沒有更好的選擇之前先將就著用？</li></ul>
+
+<p></p><h2>其他相關討論</h2><p></p><ul style="list-style: none;"><li>請問 此系統 與 OpenStack 的架構與功能</li></ul>
 <ul class="comment"><li>CKAN 只是一個 web application, 應該與&nbsp; OpenStack 無關，請問你的問題是？</li>
 <li>因為你要管理文件與不同性質的東西 也許 OpenStack&nbsp; 系統給你參考</li>
 <li><a href="http://lab.howie.tw/2013/03/the-develpoment-trend-of-cloudstack-and-openstack.html"></a>http://lab.howie.tw/2013/03/the-develpoment-trend-of-cloudstack-and-openstack.html</li>
@@ -81,7 +101,7 @@
 <li>Python中的API：OpenStack裡的最秘而不宣</li>
 <li><b>與Python綁定編寫的OpenStack自動化腳本</b></li>
 <li><a href="http://www.ibm.com/developerworks/cloud/library/cl-openstack-pythonapis/index.html?ca=drs-"></a>http://www.ibm.com/developerworks/cloud/library/cl-openstack-pythonapis/index.html?ca=drs-</li>
-<li><br/></li></ul>
+<li>Thanks. I will check it out when I got some time.</li></ul>
 
 </body>
 </html>
