@@ -3,13 +3,17 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="316"/>
+<meta name="version" content="893"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$3MX5pBhtBjZ</title>
 </head>
 <body><h1>開放政治獻金 - OCR技術討論</h1><p>給最終使用者的人工 OCR/校對網站在<a href='/--yESRO4zWakp'/>這邊</a>討論</p><p></p><p><b>圖檔格式</b></p><ul class="comment"><li>圖檔用 jpg 存好肥阿!!! 我看原始檔是純黑白的，用 png 會小很多阿~~~</li>
 <li>沒特別注意，手滑就把三千多張轉成 jpg 了 XD</li>
-<li><br/></li></ul>
-<p><b>浮水印處理</b></p><ul><li>後勤中心 <a href='https://www.facebook.com/groups/g0v.general/permalink/609945902415153/?comment_id=610031869073223&amp;offset=0&amp;total_comments=5'/>Shenk Wang 建議</a> 使用 <a href="http://scantailor.org/"></a><a href='http://scantailor.org/'/>http://scantailor.org/</a> 進行前置處理，可以補強 ClearScan 無法處理浮水印的問題，值得一試!<ul><li>Note: 我測試的參數是<ul><li>scantailor-cli &#92;</li></ul>
+<li>如果原圖是彩色或灰階建議就存 jpg 比較能保留比較多顏色資訊。如果原圖是純黑白，那用 png 會比較小。</li></ul>
+<p><b>浮水印處理</b></p><ul><li>浮水印 sample</li></ul>
+<ul style="list-style: none;"><li>目前掃描的結果有兩種比較不一樣的 pattern</li><ol><li><a href="http://pic.pimg.tw/ronnywang/1398355833-3935933860.jpg"></a>http://pic.pimg.tw/ronnywang/1398355833-3935933860.jpg 字比較粗，浮水印的點比較小</li>
+<li><a href="http://pic.pimg.tw/ronnywang/1398356068-3799096785.jpg"></a>http://pic.pimg.tw/ronnywang/1398356068-3799096785.jpg 字比較細，浮水印的點比較大</li></ol>
+</ul>
+<ul><li>後勤中心 <a href='https://www.facebook.com/groups/g0v.general/permalink/609945902415153/?comment_id=610031869073223&amp;offset=0&amp;total_comments=5'/>Shenk Wang 建議</a> 使用 <a href="http://scantailor.org/"></a><a href='http://scantailor.org/'/>http://scantailor.org/</a> 進行前置處理，可以補強 ClearScan 無法處理浮水印的問題，值得一試!<ul><li>Note: 我測試的參數是<ul><li>scantailor-cli &#92;</li></ul>
 <ul style="list-style: none;"><li>&nbsp;&nbsp; --layout=1&nbsp; &#92;</li>
 <li>&nbsp;&nbsp; --margins-left=10 &#92;</li>
 <li>&nbsp;&nbsp; --margins-right=10 &#92;</li>
@@ -24,8 +28,21 @@
 </li>
 <li>浮水印我之前是透過 image magick 處理，透過下面這樣的指令可以有不錯的效果</li><ul style="list-style: none;"><li>convert {$file_orig} -morphology thicken &rsquo;1x3&gt;:1,0,1&rsquo; {$file_target}</li></ul>
 <ul class="comment"><li>把半徑 2 以下的點都拿掉效果也不錯：</li>
-<li>convert all-000.tif -morphology Close Octagon:2 result2.png&nbsp;</li></ul>
+<li>convert all-000.tif -morphology Close Octagon:2 result2.png&nbsp;</li>
+<li>(sample a) 先正規化 (平均分散灰階值)&nbsp; --&gt; 模糊 (去雜訊)&nbsp; --&gt; 然後二元化:</li>
+<li>convert -normalize -gaussian-blur 2x2 -threshold 70% input.png output.png</li>
+<li>結果如下: <a href="https://www.dropbox.com/s/p71d2vcss7rv6mt/ImageMagic_dewatermark.png"></a>https://www.dropbox.com/s/p71d2vcss7rv6mt/ImageMagic_dewatermark.png</li>
+<li>高斯效果參數可見此文件：<a href="http://www.imagemagick.org/Usage/blur/#blur_args"></a><a href='http://www.imagemagick.org/Usage/blur/#blur_args'/>http://www.imagemagick.org/Usage/blur/#blur_args</a>　</li></ul class="comment">
+</li>
+<li><br/></li></ul>
+<ul class="comment"><li>sample a 混合 <a href='/ep/profile/G4yGGowBe3x'/>Finjon Kiang</a>&nbsp; 的方法<ul class="comment"><li>sample a 結果:<a href='https://www.dropbox.com/s/00peomxdk60q2jb/ImageMagic_sample_a_3935933860.png'/> </a><a href="https://www.dropbox.com/s/00peomxdk60q2jb/ImageMagic_sample_a_3935933860.png"></a><a href='https://www.dropbox.com/s/00peomxdk60q2jb/ImageMagic_sample_a_3935933860.png'/>https://www.dropbox.com/s/00peomxdk60q2jb/ImageMagic_sample_a_3935933860.png</a></li>
+<li>sample a 參數: convert -morphology thicken &rsquo;1x3&gt;:1,0,1&rsquo; -normalize -gaussian-blur 1x3 -threshold 60% 1input.jpg output.png</li>
+<li><br/></li>
+<li>sample a 三合一</li>
+<li>sample a 3in1 結果: <a href="https://www.dropbox.com/s/xiy5qrbdm8ywnsi/ImageMagic_sample_a_3935933860-3in1.png"></a><a href='https://www.dropbox.com/s/xiy5qrbdm8ywnsi/ImageMagic_sample_a_3935933860-3in1.png'/>https://www.dropbox.com/s/xiy5qrbdm8ywnsi/ImageMagic_sample_a_3935933860-3in1.png</a></li>
+<li>sample a 3in1 參數: convert -morphology thicken &rsquo;1x3&gt;:1,0,1&rsquo; -normalize -gaussian-blur 1x3 -threshold 60% -morphology Close Octagon:1.5 1398355833-3935933860.jpg output.png</li></ul>
 </ul>
+
 <ul><li>利用表格左上右上兩點找出浮水印的位置再強力清除處理那附近的雜點不曉得可行性多高<ul><li>範例圖: <a href="https://www.dropbox.com/s/yam9ykpcjl1kznm/sample.png"></a><a href='https://www.dropbox.com/s/yam9ykpcjl1kznm/sample.png'/>https://www.dropbox.com/s/yam9ykpcjl1kznm/sample.png</a></li>
 <li>試著寫了一下，目前只要給我表格最上面那條線的兩點座標就可以把浮水印的區塊拿出來特別處理，見：</li>
 <li><a href="https://github.com/shenkyw/tw-campaign-finance/commit/070de4d3d372375c7454eb3e86019f4b1ca0cdf6"></a><a href='https://github.com/shenkyw/tw-campaign-finance/commit/070de4d3d372375c7454eb3e86019f4b1ca0cdf6'/>https://github.com/shenkyw/tw-campaign-finance/commit/070de4d3d372375c7454eb3e86019f4b1ca0cdf6</a></li></ul>
@@ -45,6 +62,11 @@
 <li><a href="https://github.com/kiang/tw-campaign-finance"></a><a href='https://github.com/kiang/tw-campaign-finance'/>https://github.com/kiang/tw-campaign-finance</a></li></li>
 <li>展示頁面可以參考</li></li>
 <li><a href="http://kiang.github.io/tw-campaign-finance/demo_text.html"></a><a href='http://kiang.github.io/tw-campaign-finance/demo_text.html'/>http://kiang.github.io/tw-campaign-finance/demo_text.html</a></li></ul>
+</li>
+<li>使用 tesseract 辨識</li></li>
+<li>參考 sample code: <a href="https://github.com/hialan/php-strip-watermark/blob/master/php/batch_tesseract.php"></a>https://github.com/hialan/php-strip-watermark/blob/master/php/batch_tesseract.php</li><ul><li>英文數字辨識較佳</li>
+<li>中文偶爾會成功<ul><li>測試結果，目前每個豆腐高 50 px ，中文辨識率較佳</li></ul>
+</ul>
 </ul>
 
 <p><b>整合開發</b></p><ul><li>polor1010</li><ul class="task"><li>圖檔做文字的擷取，包含過濾浮水印，和文字定位（目前只能定位數字）</li></ul>
