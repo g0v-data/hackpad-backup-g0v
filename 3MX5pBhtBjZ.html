@@ -3,15 +3,16 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="893"/>
+<meta name="version" content="968"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$3MX5pBhtBjZ</title>
 </head>
 <body><h1>開放政治獻金 - OCR技術討論</h1><p>給最終使用者的人工 OCR/校對網站在<a href='/--yESRO4zWakp'/>這邊</a>討論</p><p></p><p><b>圖檔格式</b></p><ul class="comment"><li>圖檔用 jpg 存好肥阿!!! 我看原始檔是純黑白的，用 png 會小很多阿~~~</li>
 <li>沒特別注意，手滑就把三千多張轉成 jpg 了 XD</li>
 <li>如果原圖是彩色或灰階建議就存 jpg 比較能保留比較多顏色資訊。如果原圖是純黑白，那用 png 會比較小。</li></ul>
 <p><b>浮水印處理</b></p><ul><li>浮水印 sample</li></ul>
-<ul style="list-style: none;"><li>目前掃描的結果有兩種比較不一樣的 pattern</li><ol><li><a href="http://pic.pimg.tw/ronnywang/1398355833-3935933860.jpg"></a>http://pic.pimg.tw/ronnywang/1398355833-3935933860.jpg 字比較粗，浮水印的點比較小</li>
-<li><a href="http://pic.pimg.tw/ronnywang/1398356068-3799096785.jpg"></a>http://pic.pimg.tw/ronnywang/1398356068-3799096785.jpg 字比較細，浮水印的點比較大</li></ol>
+<ul style="list-style: none;"><li>目前掃描的結果至少有三種比較不一樣的 pattern</li><ol><li><a href="http://pic.pimg.tw/ronnywang/1398355833-3935933860.jpg"></a>http://pic.pimg.tw/ronnywang/1398355833-3935933860.jpg 字比較粗，浮水印的點比較小</li>
+<li><a href="http://pic.pimg.tw/ronnywang/1398356068-3799096785.jpg"></a>http://pic.pimg.tw/ronnywang/1398356068-3799096785.jpg 字比較細，浮水印的點比較大</li>
+<li><a href="http://pic.pimg.tw/ronnywang/1398270666-705020037.png"></a>http://pic.pimg.tw/ronnywang/1398270666-705020037.png&nbsp;</li></ol>
 </ul>
 <ul><li>後勤中心 <a href='https://www.facebook.com/groups/g0v.general/permalink/609945902415153/?comment_id=610031869073223&amp;offset=0&amp;total_comments=5'/>Shenk Wang 建議</a> 使用 <a href="http://scantailor.org/"></a><a href='http://scantailor.org/'/>http://scantailor.org/</a> 進行前置處理，可以補強 ClearScan 無法處理浮水印的問題，值得一試!<ul><li>Note: 我測試的參數是<ul><li>scantailor-cli &#92;</li></ul>
 <ul style="list-style: none;"><li>&nbsp;&nbsp; --layout=1&nbsp; &#92;</li>
@@ -40,7 +41,11 @@
 <li><br/></li>
 <li>sample a 三合一</li>
 <li>sample a 3in1 結果: <a href="https://www.dropbox.com/s/xiy5qrbdm8ywnsi/ImageMagic_sample_a_3935933860-3in1.png"></a><a href='https://www.dropbox.com/s/xiy5qrbdm8ywnsi/ImageMagic_sample_a_3935933860-3in1.png'/>https://www.dropbox.com/s/xiy5qrbdm8ywnsi/ImageMagic_sample_a_3935933860-3in1.png</a></li>
-<li>sample a 3in1 參數: convert -morphology thicken &rsquo;1x3&gt;:1,0,1&rsquo; -normalize -gaussian-blur 1x3 -threshold 60% -morphology Close Octagon:1.5 1398355833-3935933860.jpg output.png</li></ul>
+<li>sample a 3in1 參數: convert -morphology thicken &rsquo;1x3&gt;:1,0,1&rsquo; -normalize -gaussian-blur 1x3 -threshold 60% -morphology Close Octagon:1.5 1398355833-3935933860.jpg output.png</li>
+<li><br/></li>
+<li>sample c&nbsp;&nbsp;</li>
+<li>sample c 結果: <a href="https://www.dropbox.com/s/1hkdu564wdpd795/ImageMagic_sample_c.png"></a>https://www.dropbox.com/s/1hkdu564wdpd795/ImageMagic_sample_c.png</li>
+<li>sample c 參數: convert -morphology thicken &rsquo;1x3&gt;:1,0,1&rsquo; -normalize -threshold 70% sample_c.png output.png</li></ul>
 </ul>
 
 <ul><li>利用表格左上右上兩點找出浮水印的位置再強力清除處理那附近的雜點不曉得可行性多高<ul><li>範例圖: <a href="https://www.dropbox.com/s/yam9ykpcjl1kznm/sample.png"></a><a href='https://www.dropbox.com/s/yam9ykpcjl1kznm/sample.png'/>https://www.dropbox.com/s/yam9ykpcjl1kznm/sample.png</a></li>
