@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="9263"/>
+<meta name="version" content="9443"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$Fr9H87GPcUM</title>
 </head>
 <body><h1>太陽花盒子－自己的媒體自己報－</h1><p>/* 命名可以再思考一下更加有公民資訊透明含意，不過也許可以不用，這個名字也是很有歷史意義。 */</p><p><b>第一次來的人可以跳到最底下看 FAQ (麻煩讓 FAQ 置底)</b></p><p></p><h2>主旨：</h2><p>　　要挖的坑，設計「機上盒 or APP」，專門收看社會運動現場實況LIVE，或是大腸花魚腸花，或是和社運有關的直播，立院質詢，公聽會……等等。（<a href='http://farm9.staticflickr.com/8288/7745942538_85bbe2d9b3_c.jpg'/>概念圖１</a>）（<a href='https://www.facebook.com/photo.php?fbid=821715797842060&amp;set=a.820703047943335.1073741837.100000109433022&amp;type=3&amp;theater'/>概念圖２</a>）</p><ul class="comment"><li><s>建議把「App」改成「機上盒」，畢竟目的在把電視人的視線和網路人的視線交疊起來。無論如何就是接到電視，不是手機，也不是平板。至於機上盒的實作方式可以分流，也可以集中火力，用 App 或用刷機的方式實現。</s></li>
@@ -95,12 +95,12 @@
 <li>網樂通開發/研究/貢獻/準開發者 <a href="https://www.facebook.com/groups/401123299994345/"></a><a href='https://www.facebook.com/groups/401123299994345/'/>https://www.facebook.com/groups/401123299994345/</a></li></ul>
 
 <p></p><p><b>Debian/Ubuntu Linux for sh4 環境建置</b></p><undefined><li><b>Linux Container</b></li></undefined>
-<p>(Host OS: Ubuntu 14.04 i386, Guest OS: Debian sid sh4)</p><ol><li>安裝 lxc 以及 qemu-user-static</li></ol>
-<ul class="code"><li>sudo apt-get install lxc qemu-user-static debian-archive-keyring debian-ports-archive-keyring</li></ul>
-<ol><li>修改 /usr/share/lxc/templates/lxc-debian (workaround)<ol><li>將 190 行附近的 debootstrap --verbose 改成 qemu-debootstrap --verbose --keyring=/usr/share/keyrings/debian-ports-archive-keyring.gpg</li>
-<li>讓 download_debian() 裡面的 packages=debian-archive-keyring,debian-ports-archive-keyring # 減少安裝的軟體套件，因為 sh4 可能會有許多軟體套件缺少的問題。</li>
-<li>將 36 行附近的變數改成 MIRROR=${MIRROR:-<a href="http://ftp.debian-ports.org/debian/"></a>http://ftp.debian-ports.org/debian/}</li><ul class="comment"><li>如果 E: Couldn&rsquo;t download packages: xxx 多試幾次即可.&nbsp; 進去後沒有 gcc , 還沒找到該裝哪個套件...</li>
-<li>我覺得 E: Couldn&rsquo;t download packages: xxx 的問題是 ISP 網路連線品質不好的問題，我用 Hinet 常常會遇到，但是換成台灣大哥大的 3G 網路就好了，跟我所說的軟體套件缺少的問題不一樣，我說的問題是真的就沒有那些軟體套件。&gt;_&lt;</li></ul>
+<p>(Host OS: Ubuntu 14.04, Guest OS: Debian sid sh4)</p><ol><li>安裝 lxc 以及 qemu-user-static</li></ol>
+<ul class="code"><li>sudo apt-get install lxc qemu-user-static:i386 debian-archive-keyring debian-ports-archive-keyring</li></ul>
+<ol><li>修改 /usr/share/lxc/templates/lxc-debian (workaround)<ol><li>將 36 行附近的變數改成 MIRROR=${MIRROR:-<a href="http://ftp.debian-ports.org/debian/"></a><a href='http://ftp.debian-ports.org/debian/'/>http://ftp.debian-ports.org/debian/</a>}</li>
+<li>將 190 行附近的 debootstrap --verbose 改成 qemu-debootstrap --verbose --keyring=/usr/share/keyrings/debian-ports-archive-keyring.gpg</li>
+<li>將 163 行附近的 download_debian() 裡面的 packages=debian-archive-keyring,debian-ports-archive-keyring # 減少安裝的軟體套件，因為 sh4 可能會有許多軟體套件缺少的問題。</li><ul class="comment"><li>如果 E: Couldn&rsquo;t download packages: xxx 多試幾次即可.&nbsp; 進去後沒有 gcc , 還沒找到該裝哪個套件...</li>
+<li>我覺得 E: Couldn&rsquo;t download packages: xxx 的問題是 ISP 網路或是所使用的網路設備品質不好的關係，我自己在家用社區寬頻 (後面接 Hinet) 常常會遇到，但是換成台灣大哥大的 3G 行動網路就好了，跟我所說的軟體套件缺少的問題不一樣，我說的問題是真的就沒有那些軟體套件，目前覺得可以用下面提到的 pbuilder 將缺少的套件補齊。&gt;_&lt;</li></ul>
 </ol>
 </ol>
 <ol><li>產生 Linux Container</li></ol>
@@ -112,7 +112,8 @@
 <p>P.S. 目前 sh4 裡面無法使用網路，正在設法解決這個問題。問題的根源可能是因為 <a href="https://packages.debian.org/search?keywords=iproute2&searchon=names&suite=all&section=all"></a>https://packages.debian.org/search?keywords=iproute2&amp;searchon=names&amp;suite=all&amp;section=all 這個套件沒有在 sh4 裡面。(沒什麼人在用的 CPU 果然支援很差... Orz)</p><p></p><ul class="comment"><li>目前 Ubuntu 14.04 上面的 qemu-user-static 不支援網樂通所使用的 SH7724</li>
 <li>`/usr/bin/qemu-sh4-static -cpu help` 只出現 SH7750R, SH7751R, SH7785 不過編譯出來的套件應該是通用的 (需要驗證一下)</li>
 <li>qemu-user-static 我是直接從source code rebuild就可以用了</li>
-<li>我已經成功在 Ubuntu 14.04 i386 的環境底下建立 Debian sh4 (sid) 的 Linux Container 並且登入使用，qemu-user-static 不用特別處理。</li></ul>
+<li>我已經成功在 Ubuntu 14.04 i386 的環境底下建立 Debian sid sh4 的 Linux Container 並且登入使用，qemu-user-static 不用特別處理。</li>
+<li>其實在 Ubuntu 14.04 amd64 上面也可以成功建立起 Debian sid sh4 的 Linux Container 只要安裝 qemu-user-static:i386 就可以了，感謝 Debian 提供 multiarch 支援。 &lt;(_ _)&gt;</li></ul>
 
 <undefined><li><b>Pbuilder</b></li></undefined>
 <p>(Host OS: Ubuntu 14.04 i386)</p><ol><li>安裝 ubuntu-dev-tools 以及 qemu-user-static</li></ol>
