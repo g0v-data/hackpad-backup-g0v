@@ -3,10 +3,10 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="385"/>
+<meta name="version" content="474"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$I0XwxrdoilO</title>
 </head>
-<body><h1>addressbook-api</h1><p>Server: <a href="http://pgrest.io/hychen/api.addressbook/v0/collections/"></a>http://pgrest.io/hychen/api.addressbook/v0/collections/</p><p>server is base on <a href='http://pgre.st/'/>PgREST</a> <a href='https://speakerdeck.com/clkao/pgrest-postgresql-javascript-and-rest'/>投影片</a></p><p></p><p><a href='https://gist.github.com/Superbil/11076880'/>how to host api.addressbook at local</a></p><p></p><h2>server side</h2><p>/:type/search?name=&quot;keyword&quot;</p><p></p><h2>Base mapping</h2><ul><li>paging:<ul><li>count // 總數</li>
+<body><h1>addressbook-api</h1><p>Server: <a href="http://pgrest.io/hychen/api.addressbook/v0/collections/"></a>http://pgrest.io/hychen/api.addressbook/v0/collections/</p><p>server is base on <a href='http://pgre.st/'/>PgREST</a> <a href='https://speakerdeck.com/clkao/pgrest-postgresql-javascript-and-rest'/>投影片</a></p><p></p><p><a href='https://gist.github.com/Superbil/11076880'/>how to host api.addressbook at local</a></p><p></p><h2>server side</h2><p>:type is organization, person, membership</p><p></p><p><b>Search</b></p><p>/:type/search?name=&quot;keyword&quot;</p><p>/:type/search/:name/?keyword=&quot;keyword&quot;</p><h2>Base mapping</h2><ul><li>paging:<ul><li>count // 總數</li>
 <li>l // 長度</li>
 <li>sk // offset 位置</li></ul>
 </li>
