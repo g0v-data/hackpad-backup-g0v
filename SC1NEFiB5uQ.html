@@ -3,14 +3,18 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1052"/>
+<meta name="version" content="1179"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$SC1NEFiB5uQ</title>
 </head>
 <body><h1>中立電力資訊分析與蒐集平台</h1><p>fb 討論串：<a href="https://www.facebook.com/groups/g0v.general/permalink/614352328641177/?stream_ref=3"></a>https://www.facebook.com/groups/g0v.general/permalink/614352328641177/?stream_ref=3</p><p></p><h2>要解決的問題</h2><p>&gt; 電力系統中立資訊與數據分析資訊一直都不好找，太亂了。</p><p></p><p><b>發起人、拋磚人：<a href='https://www.facebook.com/yuyuopop?fref=nf'/>Opop Kuo</a></b></p><p></p><p><b>專案說明</b></p><p>&gt; 若有資訊正確分析指出改善電力系統其實可以全面廢核，或許可以讓更多人覺醒反核(至少核四)、而不會願意冒核災風險。</p><p>&gt; 擁核的立場其實也有許多須正視之處，不可偏頗無視，台灣電力確實存在短期可見之問題</p><p>&gt; 網路上關於電力浪費的謠言也常見錯誤、造成台電專業被質疑，民意與台電專家的對立相立原因若起始於錯誤也非大眾之福。</p><p></p><p>希望催生項目：中立電力資訊分析與蒐集平台</p><p></p><p><b>現有類似專案</b></p><p>（現成的是否可以直接使用？或者有什麼不足之處？國外專案可參考？）</p><p></p><p><b>相關專案</b></p><p>（衍生自某專案/衍生出某專案/API串接自某專案.）</p><p><a href='/1xcAfdHtkv0'/>省電取代蓋電廠，數據收集</a></p><p></p><p><b>授權方式</b></p><p>（程式碼部分如 MIT/BSD /文件部分，如 CC-BY）</p><ul class="comment"><li>資料數據本身無著作權之適用，若有編排則本專案成果應為編輯著作。</li></ul>
 
 <p><b>使用資料</b></p><p><a href='http://slidesha.re/1cLDjta'/>我國電力需求零成長評估報告</a></p><ul class="comment"><li>此報告易讀性很差，若需降低進入門檻可參閱<a href='http://power.hotline.tw/'/>懶人包</a>。</li>
 <li>能源局每年都有「長期負載預測與電源開發規劃摘要報告」，另外去年臺灣綜合研究院開始做電力負載預測（<a href='http://www.tri.org.tw/action/past1.html?id=236'/>參考</a> ）。</li></ul>
-<p><a href='http://my2050.twenergy.org.tw'/>台灣2050能源供需情境模擬系統</a></p><ul class="comment"><li>可由進階版連結<a href='http://2050.twenergy.org.tw/tw2050calculator.xlsx'/>下載核心模型</a>。</li></ul>
+<p><a href='http://my2050.twenergy.org.tw'/>台灣2050能源供需情境模擬系統</a></p><ul class="comment"><li>可由進階版連結<a href='http://2050.twenergy.org.tw/tw2050calculator.xlsx'/>下載核心模型</a>。</li>
+<li><a href='http://2050.twenergy.org.tw/'/>進階版</a>左下角每一個產業點進去，會有工研院的 PDF 資料，說明該產業可以如何省電，分成 Level 1 ~ Level 4 四種程度的方案（ex: <a href='http://2050.twenergy.org.tw/assets/onepage/%E7%85%A7%E6%98%8E.v4.pdf'/>服務業照明的方案</a>）程度越高，就越擾民 (?)。</li>
+<li>右下角每一個再生能源也都可以點進去，介紹該再生能源在台灣可以如何使用，分成 Level 1 ~ Level 4 四種發展程度（ex: <a href='http://2050.twenergy.org.tw/assets/onepage/%E6%B5%B7%E6%B4%8B%E8%83%BD.v5.pdf'/>海洋能</a>） 程度越高，就越需要仰賴技術突破。</li>
+<li>另外，在進階版選好能源路徑之後，他可以在最上面算出 2050 年時的台電購電成本、碳排放量，以及 GDP 衝擊。</li>
+<li><br/></li></ul>
 
 <p><b>專案目前狀態</b></p><p>（構想 / 規劃 / 雛形 / 實作）</p><p>架構 (子架構也在 fb 上需要整理)</p><p>a. 電力現有資訊</p><ul style="list-style: none;"><li>a.1 台灣分區電網架構</li>
 <li>a.2 各區電力供需情形<ul style="list-style: none;"><li>1) 年平均用量</li>
