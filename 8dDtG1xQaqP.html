@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2758"/>
+<meta name="version" content="2790"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$8dDtG1xQaqP</title>
 </head>
 <body><h1>g0v x CKAN - 開放資料彙整平台</h1><p></p><h2>現況 /  為什麼</h2><p>g0v 現在有許多資料四散在各處，例如：</p><ul><li>專案自行提供的 API -&nbsp; ex 立委大頭照</li>
@@ -29,11 +29,12 @@
 
 <h2>坑們</h2><ul class="comment"><li>如對於系統架設面有興趣，歡迎於 irc ping isacl, 很樂意開 ssh 登入帳號給您。</li></ul>
 
-<ul class="task"><li>需要 lucene / solr 高手協助解決中文斷詞、中文搜尋問題 :a:</li></ul>
+<ul class="taskdone"><li>需要 lucene / solr 高手協助解決中文斷詞、中文搜尋問題</li></ul>
 <ul class="comment"><li>已實驗過 <a href='http://ckan-docs-tw.readthedocs.org/ja/latest/install.html#jetty8-solr4-w'/>IKAnalyzer</a> 未果（預計近期再測試別的方法）</li>
 <li>試試 <a href="https://hackpad.com/CKAN-1.8--zhur2gtjcRk"></a><a href='https://hackpad.com/CKAN-1.8--zhur2gtjcRk'/>https://hackpad.com/CKAN-1.8--zhur2gtjcRk</a> ？ 嗯...好像是一樣的...</li>
 <li>第零次動員戡亂黑客松 時有發表一個當時跟青平台合作的CKAN，後來沒人用就關掉了，但 2.0a 的源碼在 <a href="https://github.com/opendatatw/ckan"></a>https://github.com/opendatatw/ckan ，不確定是否有幫助。</li>
-<li>謝謝！我再試試看。（IKAnalyzer 應該只是在小地方出錯，我會換個版本試試看。但也想尋求其他比較新的解決方案 IKAnalyzer 看似很久沒更新了）。</li></ul>
+<li>謝謝！我再試試看。（IKAnalyzer 應該只是在小地方出錯，我會換個版本試試看。但也想尋求其他比較新的解決方案 IKAnalyzer 看似很久沒更新了）。</li>
+<li>換了一個 IKAnalyzer 版本。should be fixed now.&nbsp;</li></ul>
 <ul><li>資料整理</li><ul class="task"><li>將 g0v 使用到的外來 (data.gov.tw 或其他地方) 開放資料整理自 CKAN (參考 <a href='http://tinyurl.com/nx4gpdh'/>Q&amp;A - Q2</a> )</li>
 <li>將 g0v 出產的 API 或資料整理到 CKAN<ul class="task"><li>ly -&nbsp; <a href="http://api.ly.g0v.tw"></a><a href='http://api.ly.g0v.tw'/>http://api.ly.g0v.tw</a></li>
 <li>AddressBook</li>
