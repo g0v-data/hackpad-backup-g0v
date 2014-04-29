@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1167"/>
+<meta name="version" content="1202"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$I0XwxrdoilO</title>
 </head>
 <body><h1>addressbook-api</h1><p>Server: <a href="http://pgrest.io/hychen/api.addressbook/v0/collections/"></a>http://pgrest.io/hychen/api.addressbook/v0/collections/</p><p>server is base on <a href='http://pgre.st/'/>PgREST</a> <a href='https://speakerdeck.com/clkao/pgrest-postgresql-javascript-and-rest'/>投影片</a></p><p></p><p><a href='https://gist.github.com/Superbil/11076880'/>how to host api.addressbook at local</a></p><p></p><h2>server side</h2><p>:type is organization, person, membership</p><p></p><p><b>Search</b></p><ul><li><b>global search</b></li></ul>
@@ -18,7 +18,8 @@
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;sk&quot;: 0</li>
 <li>&nbsp;&nbsp;&nbsp; },</li>
 <li>&nbsp;&nbsp;&nbsp; &quot;entries&quot;: [</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {s</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;memberships&quot;: [</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ],</li>
@@ -102,7 +103,9 @@
 
 <h2>Base mapping</h2><ul><li>paging:<ul><li>count // 總數</li>
 <li>l // 長度</li>
-<li>sk // offset 位置</li></ul>
+<li>sk // offset 位置</li>
+<li>fo: only return entry if fo is true</li>
+<li>c: only return count if c is true</li></ul>
 </li>
 <li>entries:</li></ul>
 <ul style="list-style: none;"><li>資料的 array</li></ul>
