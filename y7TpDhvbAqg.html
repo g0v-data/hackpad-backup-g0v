@@ -3,13 +3,24 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1998"/>
+<meta name="version" content="2320"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$y7TpDhvbAqg</title>
 </head>
-<body><h1>Project Code : 4AM (評價系統初設共筆區)</h1><p></p><p>哈囉，這裡是提供4AM計畫 - 評價系統的共筆區，請先到此瞭解專案提案本文喔 &gt;&gt;&gt;&gt;&gt; <a href='/YGd0FvMp9Vr'/>這裡</a></p><p></p><ul class="comment"><li>有些名詞還未定，在描述內容裡可能稍有出入，之後得幫一些專詞或指標發明APP專用、好記的名字。</li>
+<body><h1>Project Code : 4AM&nbsp; | 評價系統建立規範</h1><p></p><p>哈囉，這裡是提供4AM計畫 - 評價系統的共筆區，請先到此瞭解專案提案本文喔 &gt;&gt;&gt;&gt;&gt; <a href='/YGd0FvMp9Vr'/>這裡</a></p><p></p><ul class="comment"><li>有些名詞還未定，在描述內容裡可能稍有出入，之後得幫一些專詞或指標發明APP專用、好記的名字。</li>
 <li>例如「媒水準」、「媒品味」之類的，反正就是需要個指標&nbsp;</li></ul>
 
-<h2>～＊神聖的不可違逆區＊～(最優先原則)</h2><p>雖然是個訴求很簡單的App，但是大家都清楚，只要扯到政治，不免會有人什麼理由都能拿出來攻擊。因此在評價系統這塊，也是此專案的核心這塊，務必要做到不能讓人挑出毛病，更不能讓有心人可以輕易操弄數據！</p><p></p><h2>系統架構</h2><p>這個部份明天會再生一張類似流程圖的東西讓大家瞭解整個UX的運作概念，這樣會比較好發想怎</p><p></p><p>不過大致上是這樣想的：</p><ol><li>一則不客觀的新聞會先有 「專家回覆」或「使用者回報」<ol><li>然後才有使用者(含專家)對上面兩種回報方式給予「推」或「噓」來表示支持或不認同<ol><li>接下來，專家的部分，系統會根據回覆舉報項目以及其他會員的認同度，計算出該扣新聞多少分 (如果專家亂答，網友很多都不接受，那麼新聞分數就會被扣比較少，反之會扣更多一點)</li>
+<h2>設計原則檢核表</h2><ul class="task"><li>1. 應能讓使用者能輕易瞭解運作原理及公平性</li>
+<li>2.應能適當反應專家意見之重要性，讓專家會員願意使用</li>
+<li>3.應能適當反應使用者真正的客觀程度：<ul class="task"><li>a.是否讓使用者評分前就看到評價概況？</li>
+<li>b.使用者評分時間及次數是否有限制？</li>
+<li>c.隨機讓使用者評分？</li></ul class="task">
+</li>
+<li>4.應能區分不同類別之新聞，某些適合使用評價系統，某些則不適合：<ul class="task"><li>a.即時更新的非定稿新聞不</li>
+<li>b.影片為主的新聞</li></ul class="task">
+</li>
+<li>5.</li></ul>
+
+<p></p><h2>系統架構</h2><p>這個部份明天會再生一張類似流程圖的東西讓大家瞭解整個UX的運作概念，這樣會比較好發想怎</p><p></p><p>不過大致上是這樣想的：</p><ol><li>一則不客觀的新聞會先有 「專家回覆」或「使用者回報」<ol><li>然後才有使用者(含專家)對上面兩種回報方式給予「推」或「噓」來表示支持或不認同<ol><li>接下來，專家的部分，系統會根據回覆舉報項目以及其他會員的認同度，計算出該扣新聞多少分 (如果專家亂答，網友很多都不接受，那麼新聞分數就會被扣比較少，反之會扣更多一點)</li>
 <li>使用者回報也是一樣，會有另一個屬於使用者評分的分數</li></ol>
 </ol>
 </ol>
