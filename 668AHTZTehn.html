@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="3171"/>
+<meta name="version" content="3242"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$668AHTZTehn</title>
 </head>
 <body><h1>太陽花紀實 - API Document</h1><p></p><h2>逐字稿資料</h2><ul><li><a href='https://sunflowerdocumentary.hackpad.com/'/>逐字稿工作區</a></li>
@@ -52,6 +52,7 @@
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;focus&quot;: 1,</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;title&quot;: &quot;兩岸經貿如何影響民主？&quot;,</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;date&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;full&quot; : 2014-03-21T00:00:00+08:00,</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;yyyy&quot; : 2014, &quot;mm&quot; : 3, &quot;dd&quot; : 21,</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;hh&quot; : 0, &quot;ii&quot; :0, &quot;ss&quot; : 0 }</li>
 <li>&nbsp;&nbsp;&nbsp; },...</li>
@@ -60,7 +61,8 @@
 <ul class="comment"><li>focus 0 跟 1 有什˙麼差別阿??</li>
 <li>在時間軸上是否為粗體顯示 ( 表示較重要的事件 )</li>
 <li>了解!</li>
-<li>還有我們好像沒有 category 的分類 ，只有 tag&nbsp; XD，我這邊用 tag 篩?</li></ul>
+<li>還有我們好像沒有 category 的分類 ，只有 tag&nbsp; XD，我這邊用 tag 篩?</li>
+<li>新增 full 時間欄位。</li></ul>
 
 <p><b>事件 Event</b></p><p></p><undefined><li><b><u>REQUEST :&nbsp;</u></b></li></undefined>
 <ul style="list-style: none;"><li><br/></li>
@@ -72,7 +74,8 @@
 <li>&nbsp;&nbsp;&nbsp; {</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;event_id&quot;: 1,</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;title&quot;: &quot;兩岸經貿如何影響民主？&quot;,</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;description&quot;: &quot;逐字在此&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;description_ch&quot;: &quot;逐字在此&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;description_en&quot;: &quot;英文逐字在此&quot;,</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;site&quot;: &quot;濟南路&quot;,</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;thumbnail&quot;: [&quot;img/event/1.jpg&quot;],</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;media&quot;: [</li>
@@ -83,12 +86,16 @@
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { &quot;id&quot;: 1, name&quot;: &quot;街頭民主教室&quot; },</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { &quot;id&quot;: 2, name&quot;: &quot;太陽花&quot; },...</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ],</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;hackpad&quot;: &quot;<a href="https://318.hackpad.com/--F0W0Fnhkakl"></a><a href='https://318.hackpad.com/--F0W0Fnhkakl'/>https://318.hackpad.com/--F0W0Fnhkakl</a>&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;hackpad_ch&quot;: &quot;<a href="https://318.hackpad.com/--F0W0Fnhkakl"></a><a href='https://318.hackpad.com/--F0W0Fnhkakl'/>https://318.hackpad.com/--F0W0Fnhkakl</a>&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;hackpad_en&quot;: &quot;&quot;,</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;date&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;full&quot; : 2014-03-21T00:00:00+08:00,</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;yyyy&quot; : 2014, &quot;mm&quot; : 3, &quot;dd&quot; : 21,</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;hh&quot; : 0, &quot;ii&quot; :0, &quot;ss&quot; : 0 }</li>
 <li>&nbsp;&nbsp;&nbsp; }</li>
 <li>]</li></ul>
+<ul class="comment"><li>新增英文逐字稿的欄位</li>
+<li>新增 full 時間欄位</li></ul>
 
 <p><b>標籤 Tags</b></p><p></p><undefined><li><b><u>REQUEST :&nbsp;</u></b></li></undefined>
 <ul style="list-style: none;"><li><br/></li>
