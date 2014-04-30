@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="3888"/>
+<meta name="version" content="4099"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$VVlHNqKaQrC</title>
 </head>
 <body><h1>直播導播台 Live!</h1><p>&nbsp;</p><h2> 專案說明</h2><p>太陽花運動期間由 <a href='http://g0v.today/'/>g0v.today</a> 彙整直播連結，運動之後直播連結四散不易傳播。希望透過直播連結導播台讓直播主主動 submit 連結，打造直播聯播網。</p><p></p><p><b>授權方式</b></p><p>（程式碼部分如 MIT/BSD /文件部分，如 CC-BY）</p><p>MIT, CC-BY</p><p></p><p><b>專案目前狀態</b></p><p>開發中</p><p></p><p><b>專案資訊</b></p><p>Repository: <a href="https://github.com/g0v/live"></a>https://github.com/g0v/live</p><p>Live: <a href="https://g0v.github.io/live/"></a>https://g0v.github.io/live/</p><p>Link Manager: <a href="http://g0v.github.io/live/link_manager"></a>http://g0v.github.io/live/link_manager</p><p>Status Bar: <a href="http://g0v.github.io/live/status_bar.html"></a>http://g0v.github.io/live/status_bar.html</p><p></p><p><b>People</b></p><ul><li><a href='http://github.com/jeffhung/'/>jeffhung</a>&nbsp;</li>
@@ -95,12 +95,23 @@
 <li>有沒有誰熟悉 Google Analytics 的？</li>
 <li>將 Google Analytics 的 account 開給需要的人。以下為有權限的人（有需要的人請把自己加進去，已經有權限的人請幫忙開）：</li><ul class="taskdone"><li>jeffhung</li></ul class="taskdone">
 </li>
-<li>加上 social likes 按鈕，方便散佈資訊，並顯示 like counts。<ul class="task"><li>應該搭配 video 的 title，目前因為還抓不到，所以 title 的值為 &lt;title&gt;。</li></ul>
+<li>加上 social likes 按鈕，方便散佈資訊，並顯示 like counts。<ul class="task"><li>應該搭配 video 的 title，目前因為還抓不到，所以 title 的值為 &lt;title&gt;。</li></ul class="task">
 </li>
+<li>bar 上面的「回報錯誤」看起來像是個按鈕，常會引人點按。</li></li>
 <li>當按下狀態回報按鈕時，發送 event 至 Google Analytics</li></ul>
 <p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_VVlHNqKaQrC_p.56216_1398615671128_Screenshot 2014-04-28 00.20.06.png'/></p><ul style="list-style: none;"><li><br/></li></ul>
 <p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_VVlHNqKaQrC_p.56216_1398615655405_Screenshot 2014-04-28 00.19.46.png'/></p><ul class="taskdone"><li>當 event 發送出去之後，暫時 disable 所有通報按鈕 N minutes。</li></li>
-<li>目前 default 設定為 disable 5 分鐘。</li></ul>
+<li>目前 default 設定為 disable 5 分鐘。</li></li>
+<li>說明頁面</li><ul class="comment"><li><a href='/ep/profile/tRqSYxn3iNC'/>Justin Lee</a> , 你可以幫忙嗎？我開了一個檔案在&nbsp; app/assets/help.html。</li></li>
+<li>需要以另開新頁的方式開啟說明頁面，因為 status_bar 會被 &lt;iframe&gt; 包起來使用，上下寬度很小，沒有空間使用 pop-up。</li></li>
+<li>應該以 role 為單位解說。如：</li><ul><li>想成為直播主，我可以做什麼？</li><ul class="task"><li>可附上「<a href='https://billy3321.github.io/live_tutorial/'/>簡易完成SNG-Ustream直播教學簡易版</a> 」的連結。</li></ul>
+</li>
+<li>觀看直播時，我可以幫忙什麼？</li></ul>
+</li>
+<li>Mock-up:</li></ul>
+</ul>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_VVlHNqKaQrC_p.56216_1398873818945_page-help.png'/></p><ul class="comment"><li>此 mockup 使用 Blasamiq 繪製，使用 Balsamiq 參與 open source 專案可以<a href='http://support.balsamiq.com/customer/portal/articles/105924'/>去信</a>獲得免費 license。</li></li>
+<li>需要 TXT 協助。</li></ul>
 <ul><li>clkao enhanced hackfoldr:<ul><li><a href="http://hackfoldr.org/hackfoldrtest/9S9TGa-b0pU"></a>http://hackfoldr.org/hackfoldrtest/9S9TGa-b0pU</li>
 <li><a href="https://ethercalc.org/hackfoldrtest"></a>https://ethercalc.org/hackfoldrtest</li></ul>
 </li>
