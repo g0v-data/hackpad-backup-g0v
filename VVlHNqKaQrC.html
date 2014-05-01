@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="4121"/>
+<meta name="version" content="4226"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$VVlHNqKaQrC</title>
 </head>
 <body><h1>直播導播台 Live!</h1><p>&nbsp;</p><h2> 專案說明</h2><p>太陽花運動期間由 <a href='http://g0v.today/'/>g0v.today</a> 彙整直播連結，運動之後直播連結四散不易傳播。希望透過直播連結導播台讓直播主主動 submit 連結，打造直播聯播網。</p><p></p><p><b>授權方式</b></p><p>（程式碼部分如 MIT/BSD /文件部分，如 CC-BY）</p><p>MIT, CC-BY</p><p></p><p><b>專案目前狀態</b></p><p>開發中</p><p></p><p><b>專案資訊</b></p><p>Repository: <a href="https://github.com/g0v/live"></a>https://github.com/g0v/live</p><p>Live: <a href="https://g0v.github.io/live/"></a>https://g0v.github.io/live/</p><p>Link Manager: <a href="http://g0v.github.io/live/link_manager"></a>http://g0v.github.io/live/link_manager</p><p>Status Bar: <a href="http://g0v.github.io/live/status_bar.html"></a>http://g0v.github.io/live/status_bar.html</p><p></p><p><b>People</b></p><ul><li><a href='http://github.com/jeffhung/'/>jeffhung</a>&nbsp;</li>
@@ -111,7 +111,19 @@
 <li>Mock-up:</li></ul>
 </ul>
 <p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_VVlHNqKaQrC_p.56216_1398873818945_page-help.png'/></p><ul class="comment"><li>此 mockup 使用 Blasamiq 繪製，使用 Balsamiq 參與 open source 專案可以<a href='http://support.balsamiq.com/customer/portal/articles/105924'/>去信</a>獲得免費 license。</li></li>
-<li>需要 TXT 協助。</li></ul>
+<li>需要 TXT 協助。</li></li>
+<li>定時匯整記錄於 Google Analytics 的狀態回報，並依據 subscription 發送給 subscribers</li></li>
+<li>能夠以 service account 登入使用 google analytics api<ul class="comment"><li>這邊我卡關了，以下先列出參考資料：</li>
+<li><a href="https://github.com/google/google-api-nodejs-client/blob/master/examples/jwt.js"></a>https://github.com/google/google-api-nodejs-client/blob/master/examples/jwt.js</li>
+<li><a href="https://developers.google.com/admin-sdk/directory/v1/guides/delegation"></a>https://developers.google.com/admin-sdk/directory/v1/guides/delegation</li>
+<li><a href="http://www.labnol.org/internet/google-apps-free/26926/"></a>http://www.labnol.org/internet/google-apps-free/26926/</li>
+<li><a href="https://developers.google.com/analytics/devguides/reporting/core/v3/reference"></a>https://developers.google.com/analytics/devguides/reporting/core/v3/reference</li>
+<li><a href="https://developers.google.com/accounts/docs/OAuth2ServiceAccount"></a>https://developers.google.com/accounts/docs/OAuth2ServiceAccount</li>
+<li><a href="http://dannysu.com/2014/01/16/google-api-service-account/"></a>http://dannysu.com/2014/01/16/google-api-service-account/</li>
+<li>hxxps://gist.github.com/PaquitoSoft/4451865</li></li></ul class="comment">
+</li>
+<li>抓取 category 為 VideoStatus 的 events，並整理之。</li></li>
+<li>發送給 subscribers</li></ul>
 <ul><li>clkao enhanced hackfoldr:<ul><li><a href="http://hackfoldr.org/hackfoldrtest/9S9TGa-b0pU"></a>http://hackfoldr.org/hackfoldrtest/9S9TGa-b0pU</li>
 <li><a href="https://ethercalc.org/hackfoldrtest"></a>https://ethercalc.org/hackfoldrtest</li></ul>
 </li>
