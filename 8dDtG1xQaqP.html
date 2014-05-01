@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2790"/>
+<meta name="version" content="2934"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$8dDtG1xQaqP</title>
 </head>
 <body><h1>g0v x CKAN - 開放資料彙整平台</h1><p></p><h2>現況 /  為什麼</h2><p>g0v 現在有許多資料四散在各處，例如：</p><ul><li>專案自行提供的 API -&nbsp; ex 立委大頭照</li>
@@ -18,8 +18,12 @@
 </ul>
 </ul>
 
-<p><b>其它</b></p><ul><li>Group (分類) - 資料集的分類，一個 DataSet 可以屬於多個分類</li>
-<li>其餘如：tag, license, map 等東西很直覺，不多作解釋</li></ul>
+<p><b>其它</b></p><ul><li>Group (分類) - 資料集的分類，一個 DataSet 可以屬於多個分類<ul><li>Group 的 member 可將 dataset 加入或移出 group</li></ul>
+</li>
+<li>其餘如：tag, license, map 等東西很直覺，不多作解釋</li>
+<li>Organization 在 ckan 2.2 以後，可以多層</li>
+<li>Organization 的 member 可以看到該 organization 的 private dataset</li>
+<li>Organization 的 editor 與 admin 可以在 organization 底下新增 dataset</li></ul>
 
 <h2>測試</h2><ul><li>暫時測試環境：<a href="http://ckan.g0v.today"></a><a href='http://ckan.g0v.today'/>http://ckan.g0v.today</a> （我們安裝的版本為 CKAN 2.2）<ul><li>帳號：g0v 密碼：g0v</li></ul>
 </ul>
@@ -53,11 +57,12 @@
 <li>charlesc? 感謝幫我加入 m(_ _)m 能有前輩指點真是幸運</li></ul>
 <ul><li>Extensions</li><ul class="task"><li>Install DataStore Extension</li>
 <li>Install FileStore Extension</li>
-<li>Install PDF Preview Extension</li></ul>
+<li>Install PDF Preview Extension</li>
+<li>Install Organization Hierarchy Extension</li></ul>
 </ul>
 
-<p></p><h2>技術細節</h2><p></p><ul><li>Preview<ul><li>DataExplorer: CKAN 預設可以透過 Data Explorer 以 GridView 的方式預覽 `csv` 及 `xls` 資料</li>
-<li>Browser direct preview：對於 json / html / xml ... 等資料， CKAN 會用 browser 來 preview<ul><li>例如 html 會顯示在 iframe</li></ul>
+<p></p><h2>技術細節</h2><p></p><ul><li>Preview<ul><li>DataExplorer: CKAN 預設可以透過&nbsp; <i><a href='http://docs.ckan.org/en/latest/maintaining/data-viewer.html#data-explorer'/>recline preview extension</a></i> 以 GridView 的方式預覽 `csv` 及 `xls` 資料</li>
+<li>Text preview：對於 json / html / xml ... 等資料， CKAN 會用 browser 來 preview<ul><li>例如 html 會顯示在 iframe</li></ul>
 </li>
 <li>PDF preview<ul><li>PDF Preview 需額外安裝 Extension, 目前未安裝</li></ul>
 </ul>
