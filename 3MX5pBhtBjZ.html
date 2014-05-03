@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1174"/>
+<meta name="version" content="1196"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$3MX5pBhtBjZ</title>
 </head>
 <body><h1>開放政治獻金 - OCR技術討論</h1><p>給最終使用者的人工 OCR/校對網站在<a href='/--yESRO4zWakp'/>這邊</a>討論</p><p></p><p><b>圖檔格式</b></p><ul class="comment"><li>圖檔用 jpg 存好肥阿!!! 我看原始檔是純黑白的，用 png 會小很多阿~~~</li>
@@ -72,7 +72,10 @@
 <li>使用 tesseract 辨識</li></li>
 <li>參考 sample code: <a href="https://github.com/hialan/php-strip-watermark/blob/master/php/batch_tesseract.php"></a>https://github.com/hialan/php-strip-watermark/blob/master/php/batch_tesseract.php</li><ul><li>英文數字辨識較佳</li>
 <li>中文偶爾會成功<ul><li>測試結果，目前每個豆腐高 50 px ，中文辨識率較佳</li></ul>
-</ul>
+</li>
+<li>辨識訓練工具 - <a href="http://vietocr.sourceforge.net/training.html"></a><a href='http://vietocr.sourceforge.net/training.html'/>http://vietocr.sourceforge.net/training.html</a></li></li>
+<li>可以藉由這個工具去產生比較好的 OCR 資料庫，這樣一來就可以提昇辨識結果</li>
+<li>各種外掛 - <a href="https://code.google.com/p/tesseract-ocr/wiki/AddOns"></a><a href='https://code.google.com/p/tesseract-ocr/wiki/AddOns'/>https://code.google.com/p/tesseract-ocr/wiki/AddOns</a></li></ul>
 </li>
 <li><a href="https://github.com/buganini/ocrap"></a>https://github.com/buganini/ocrap</li></li>
 <li>以行為單位半自動的辨識，需要人工介入，接網站API的部份待實作，但網站上看起來有些(舊?)資料似乎沒有deskew，表格沒切好，遇到這種狀況miss rate會很高</li></ul>
