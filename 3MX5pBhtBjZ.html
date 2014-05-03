@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1196"/>
+<meta name="version" content="1226"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$3MX5pBhtBjZ</title>
 </head>
 <body><h1>開放政治獻金 - OCR技術討論</h1><p>給最終使用者的人工 OCR/校對網站在<a href='/--yESRO4zWakp'/>這邊</a>討論</p><p></p><p><b>圖檔格式</b></p><ul class="comment"><li>圖檔用 jpg 存好肥阿!!! 我看原始檔是純黑白的，用 png 會小很多阿~~~</li>
@@ -57,6 +57,7 @@
 <li>切框線確認（<a href='http://ronnywang.github.io/tw-campaign-finance/demo.html'/>demo 網頁</a>：速覽每份表格欄位切得如何）</li>
 <li>從圖檔抓出欄位資訊，所有程式碼和資料在 <a href='https://github.com/ronnywang/tw-campaign-finance'/>github</a> （以上 <a href='https://g0v.hackpad.com/ep/profile/tC7Bqff8Vp0'/>Ronny Wang</a> ++）</li>
 <li>&quot;發現 tesseract 的 hocr config 可以抓出有字的 bbox: tesseract foo.png out/foo hocr -- 輸出是 html tag. 姑且不論辨識是否正確，拿到 bbox 後至少可以切出來做人工ocr&quot; <a href='http://logbot.g0v.tw/channel/g0v.tw/2014-05-02/671'/>from gugod1 @ irc</a></li></ul>
+<ul class="comment"><li>輸出格式為 <a href="http://en.wikipedia.org/wiki/HOCR"></a>http://en.wikipedia.org/wiki/HOCR ，透過 <a href='https://github.com/kiang/tw-campaign-finance/blob/master/scripts/kiang/13_jpg2bbox.php'/>這個</a> 程式測試了一百多張圖片，還是會有些遺漏的情況，浮水印的干擾也是一個問題</li></ul>
 
 <p><b>以現有工具自動 OCR</b></p><ul class="taskdone"><li>將 PDF 轉為 ClearScan，並做第一階段的機器識別 -au<ul class="taskdone"><li>參考<a href='https://drive.google.com/file/d/0B9tD1zENsweyektyYUU0NlpKeXM/edit?usp=sharing'/>範例檔</a> ，其中文字已可剪下貼上</li>
 <li>已經上載 ClearScan + OCR 結果: <a href="https://drive.google.com/folderview?id=0B9tD1zENsweyUmZycEhWZjR5MUk&usp=sharing"></a><a href='https://drive.google.com/folderview?id=0B9tD1zENsweyUmZycEhWZjR5MUk&amp;usp=sharing'/>https://drive.google.com/folderview?id=0B9tD1zENsweyUmZycEhWZjR5MUk&amp;usp=sharing</a></li><ul><li>目前只識別沒有疊到浮水印的欄位，如果能移除浮水印則更佳</li><ul class="comment"><li>在 yllan 的協助下已經將上述 OCR 結果轉成文字與座標，放在</li></ul>
