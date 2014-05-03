@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="10729"/>
+<meta name="version" content="11054"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$Fr9H87GPcUM</title>
 </head>
 <body><h1>太陽花盒子－自己的媒體自己報－</h1><p>/* 命名可以再思考一下更加有公民資訊透明含意，不過也許可以不用，這個名字也是很有歷史意義。 */</p><p><b>第一次來的人可以跳到最底下看 FAQ (麻煩讓 FAQ 置底)</b></p><p></p><h2>主旨：</h2><p>　　要挖的坑，設計「機上盒 or APP」，專門收看社會運動現場實況LIVE，或是大腸花魚腸花，或是和社運有關的直播，立院質詢，公聽會……等等。（<a href='http://farm9.staticflickr.com/8288/7745942538_85bbe2d9b3_c.jpg'/>概念圖１</a>）（<a href='https://www.facebook.com/photo.php?fbid=821715797842060&amp;set=a.820703047943335.1073741837.100000109433022&amp;type=3&amp;theater'/>概念圖２</a>）</p><ul class="comment"><li><s>建議把「App」改成「機上盒」，畢竟目的在把電視人的視線和網路人的視線交疊起來。無論如何就是接到電視，不是手機，也不是平板。至於機上盒的實作方式可以分流，也可以集中火力，用 App 或用刷機的方式實現。</s></li>
@@ -134,14 +134,19 @@
 <p><b>給新手的 Cross-Compilation Tool-Chain</b></p><ul><li>如果還沒刷好 image: <a href="http://www.twpda.com/2013/09/sh4twbox-07.html"></a>http://www.twpda.com/2013/09/sh4twbox-07.html<a href='http://www.twpda.com/2013/09/sh4twbox-07.html(我刷的是'/> </a>(我刷的是 sh4twbox-0.9.2.txz 剩下的來 cross-compile ?)</li>
 <li>這篇文把我想寫的都寫完了: <a href="http://jackden-diary.blogspot.tw/2013/05/install-stlinux-23-on-ubuntu-1204-32bit.html"></a>http://jackden-diary.blogspot.tw/2013/05/install-stlinux-23-on-ubuntu-1204-32bit.html</li>
 <li>看安裝後的事項就好:&nbsp; <a href="http://goo.gl/DrR7B6"></a>http://goo.gl/DrR7B6</li>
-<li>apt-get&nbsp; install nfs-server tftpd-hpa</li>
-<li>/etc/exportfs 改成 /srv/nfs *(rw,no_subtree_check,sync,all_squash,anonuid=0,anongid=0)</li>
-<li>anon = 0 是為了&nbsp; uboot mount NFS時有些檔案需要&nbsp; 要 uid=0</li>
-<li>mkdir -p /srv/nfs ; chown nobody:nogroup /srv/nfs</li>
-<li>改一下 /etc/default/tftpd-hpa 設一下 static IP</li>
-<li>/srv/tftp 裡放 kernel source<ul><li>從這邊下載: <a href="http://www.ptt.cc/bbs/Linux/M.1374821355.A.95F.html"></a>http://www.ptt.cc/bbs/Linux/M.1374821355.A.95F.html</li>
-<li>PATH 加上 /opt/STM/STLinux-2.3/host/bin</li>
-<li>compile好後，執行 ./autoDone.sh 把 vmlinux.ub 複製到 /srv/tftp</li></ul>
+<li>網路規劃:<ul><li>[Host] 192.168.100.1 (eth0)</li>
+<li>[VM] VirtualBox 裡的 12.04 LTS 32-bit 192.168.100.2 (橋接介面卡)</li></ul>
+</li>
+<li>[host] apt-get&nbsp; install nfs-server tftpd-hpa</li>
+<li>[host] /etc/exportfs 改成 /srv/nfs *(rw,no_subtree_check,sync,all_squash,anonuid=0,anongid=0)<ul><li>anon = 0 是為了&nbsp; uboot mount NFS時有些檔案需要&nbsp; 要 uid=0</li></ul>
+</li>
+<li>[host] mkdir -p /srv/nfs ; chown nobody:nogroup /srv/nfs</li>
+<li>[VM] mount -t vboxsf srv /srv 這樣比較方便</li>
+<li>改一下 /etc/default/tftpd-hpa 設一下 static IP (可以用預設)</li>
+<li>/srv/tftp 裡放 kernel source<ul><li>[host] 從這邊下載: <a href="http://www.ptt.cc/bbs/Linux/M.1374821355.A.95F.html"></a>http://www.ptt.cc/bbs/Linux/M.1374821355.A.95F.html</li>
+<li>[VM] PATH 加上 /opt/STM/STLinux-2.3/host/bin</li>
+<li>[VM] compile好後，執行 ./autoDone.sh 把 vmlinux.ub 複製到 /srv/tftp</li>
+<li>VM 基本上就是個 server, 我都是從 host ssh 進 VM 做 cross-compile</li></ul>
 </li>
 <li>重開網樂通，進 uboot (多按幾次 [enter])<ul><li>print - 顯示目前設定</li>
 <li>setenv ipaddr 192.168.100.5</li>
@@ -151,6 +156,15 @@
 <li>PDK7105&gt; bootm 0x80000000</li></ul>
 </li>
 <li>開機 log: <a href="https://gist.github.com/miaoski/11344418"></a>https://gist.github.com/miaoski/11344418</li></ul>
+<p>Cross-Compile 一個 Hello World</p><ul><li>隨便寫</li></ul>
+<ul class="code"><li>#include &lt;stdio.h&gt;</li>
+<li>int main() {</li>
+<li>&nbsp;&nbsp;&nbsp; puts(&quot;Hello World.&quot;);</li>
+<li>&nbsp;&nbsp;&nbsp; return 0;</li>
+<li>}</li></ul>
+<ul><li>[VM] sh4-linux-gcc hello.c</li>
+<li>[VM] cp a.out /srv/nfs/root/usr/local/bin/hello</li>
+<li>開進網樂通. /usr/local/bin/hello</li></ul>
 
 <p></p><h2>延伸閱讀</h2><ul><li><a href='/VVlHNqKaQrC'/>直播連結收集器（導播台）</a></li>
 <li><a href='/g8v.tv-lk9pamtKwyr'/>第五權電視牆監看「評」台g8v.tv草稿</a></li>
@@ -175,7 +189,7 @@
 
 <p><b>重新刷成 Debian Wheezy</b></p><ol><li>用派樂靈丹提供的方法刷好 u-boot ... <a href="http://www.twpda.com/2013/09/sh4twbox-07.html"></a>http://www.twpda.com/2013/09/sh4twbox-07.html (<s>哇…變真的磚塊了 ...</s> ) 備份原來 USB DOM 的 image，刷 Debian wheezy。開機速度真的慢 ...&nbsp;</li>
 <li>可以用自編的 rootfs 刷機了(一樣延用 twpda 的刷機 script) 下一步是用 nfsroot 開機來加速開發。(每次更新都要重刷是很痛苦的)</li>
-<li>nfsboot 成功，對開發來說輕鬆多了，晚一點再把細節寫成文件</li>
+<li>nfsboot 成功，對開發來說輕鬆多了，晚一點再把細節寫成文件(細節在下面，請參考)</li>
 <li><s>目標更新成 Debian Jessie&nbsp;</s></li>
 <li>suzuke 的 github: <a href="https://github.com/suzuke/kernel-pdk7105"></a><a href='https://github.com/suzuke/kernel-pdk7105'/>https://github.com/suzuke/kernel-pdk7105</a></li></ol>
 
