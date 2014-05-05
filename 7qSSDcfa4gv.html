@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="743"/>
+<meta name="version" content="773"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$7qSSDcfa4gv</title>
 </head>
 <body><h1>Agricultural-trading-market</h1><p>專案Git ： <a href="https://github.com/justin761002/Agricultural-trading-market"></a>https://github.com/justin761002/Agricultural-trading-market</p><p></p><p><b>目標</b></p><p>---&gt;希望將「農產品交易行情站」的資訊以更加直覺的方式呈現給民眾。</p><p>農產品交易行情站：<a href="http://amis.afa.gov.tw/default.asp"></a><a href='http://amis.afa.gov.tw/default.asp'/>http://amis.afa.gov.tw/default.asp</a></p><p>年報[民91年&lt;==&gt;民101年](PDF)下載及申請：<a href="http://amis.afa.gov.tw/dlfile/downloads.htm"></a>http://amis.afa.gov.tw/dlfile/downloads.htm</p><p></p><ul class="comment"><li>&nbsp;關於「直覺的方式呈現」的部份，</li>
@@ -16,7 +16,10 @@
 <ul class="comment"><li>農產品代號已抓取完畢(單一產品部份)</li>
 <li>至於要不要抓細項分類，再討論。<ul class="comment"><li>寫了一個很陽春的crawler爬102年的蔬菜類</li>
 <li><a href="https://github.com/chikei/g0v-atm-parser"></a>https://github.com/chikei/g0v-atm-parser</li>
-<li>爬出來的資料在 <a href="https://db.tt/WfLxlJeR"></a>https://db.tt/WfLxlJeR 歡迎取用</li></ul>
+<li>爬出來的資料在 <a href="https://db.tt/WfLxlJeR"></a>https://db.tt/WfLxlJeR 歡迎取用</li>
+<li>網路上找到這個</li>
+<li>資料爬蟲 <a href="https://github.com/yhunglee/agri_data_crawler"></a>https://github.com/yhunglee/agri_data_crawler</li>
+<li>視覺化&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://muyueh.com/30/veggieprice/ggplot2/"></a>http://muyueh.com/30/veggieprice/ggplot2/</li></ul>
 </ul>
 <ol><li>規劃 Data-Schema</li></ol>
 <ul class="comment"><li>目前抓出來資料我是以json資料方式先存，未來要轉換成其他的可再討論。</li>
@@ -31,7 +34,8 @@
 <li>蔬菜類的html我目前轉成json格式為：</li>
 <li>檔名:民國年-月-日-市場碼.json</li>
 <li>內容:[{product: {name: 產品名稱, type: 品種名稱, process: 處理別}, upper: 上價, middle: 中價, lower: 下價, averege: 平均價, averegeChange: 平均價變動, volume: 交易量, volumeChange: 交易量變動}]</li>
-<li>資料在 <a href="https://db.tt/nqW5X4g1"></a>https://db.tt/nqW5X4g1</li></ul>
+<li>資料在 <a href="https://db.tt/nqW5X4g1"></a>https://db.tt/nqW5X4g1</li>
+<li><br/></li></ul>
 
 <ul class="code"><li>第一點：目前不知道他的價格資料增/減及交易量增減是怎麼認定的，</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 統計方面所長的人可以出來說明一下XD</li>
