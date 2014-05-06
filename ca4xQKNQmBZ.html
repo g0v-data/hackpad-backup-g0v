@@ -3,13 +3,14 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="45"/>
+<meta name="version" content="60"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$ca4xQKNQmBZ</title>
 </head>
 <body><h1>仿聲鳥計畫</h1><p><b>Story</b></p><p>貳零壹肆年四月十一日，中正一分局包圍事件，由於擴音設備不足，帶頭的人講一句，群眾跟著講一句，句句複誦。直到有抗議人士緊急借用麥克風，始的有發聲權力。警方針對此次突發抗議事件，均將持有揚聲器者視為主謀，優先偵查起訴。這類突發抗議事件沒有實質領頭人，群眾的聲音，應該由群眾建立，話語權也不該只由揚聲器擁有者持有，參與網路者，即有話語權。</p><p>許多人都擁有具備小型喇叭的智慧型手機，若有群眾聚集，可利用手機的連網能力建立一小型「仿聲」網路，並透過網路傳播語音資料，並同步最大聲量播放，若大量群眾同意加入網路，即可擴音。</p><p></p><p><b>Implementation</b></p><ul><li>Android first, iOS later.</li>
 <li>Wi-Fi Peer-to-Peer | Android Developers <a href="https://developer.android.com/guide/topics/connectivity/wifip2p.html"></a><a href='https://developer.android.com/guide/topics/connectivity/wifip2p.html'/>https://developer.android.com/guide/topics/connectivity/wifip2p.html</a></li>
 <li>UDP-based broadcasting Protocol for Audio.<ul><li>synchronization is key for audio quality.</li></ul>
-</ul>
+</li>
+<li><a href='https://play.google.com/store/apps/details?id=ki.bluetalkie'/>Blue Talkie</a> - 藍芽對講機</li></ul>
 
 <p><b>Risks</b></p><ul><li>latency - 技術上會有音訊延遲問題。</li>
 <li>RF interference - 2.4Ghz 之 RF 干擾，可能使網路難以建立</li>
