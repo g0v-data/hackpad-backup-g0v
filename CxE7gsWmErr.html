@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1675"/>
+<meta name="version" content="1803"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$CxE7gsWmErr</title>
 </head>
 <body><h1>超農域---農業藥劑系統</h1><p>因為三個系統(加上延伸的)整個太肥了，所以把三農系統拆解成三個hackpad，整理到<a href='http://hack.g0v.tw/agriculture'/>hackfoldr</a>中，方便作業，不過三個以及後來可能延伸或增加的系統希望未來是可以組合或連動的，並且也應用在智慧型裝置上方便民眾和相關單位使用，藉以促進農業的資訊和管理更便利和開放。</p><ul class="comment"><li>如果我的體重也可以這樣拆解就好了(?)</li></ul>
@@ -40,10 +40,33 @@
 
 <h2>資料架構</h2><p>藥劑</p><p>許可證號：ref 藥劑 (、廠商？)</p><p>作物/作物類別：ref 作物類別</p><p>害物/害物類別：ref 害物類別</p><p>藥劑使用方法：ref 藥劑、作物/作物類別、害物/害物類別</p><ul class="comment"><li>調查一下作物與害物類別是否為單一分類</li></ul>
 
-<h2>文案</h2><p><b>我是農夫（查詢藥劑使用方式）</b></p><p>本區收錄各種藥劑的標準使用方法。請於搜尋框內輸入欲搜尋的關鍵字（例如農藥名稱）。</p><p></p><p>本區原始資料來源於行政院農業委員會動植物防疫檢疫局<a href='http://pesticide.baphiq.gov.tw/web/Insecticides_MenuItem1.aspx'/>農藥資訊服務網</a>，版權仍為行政院農業委員會動植物防疫檢疫局所有。</p><p><b>主要顯示</b></p><p>中文名、商品名(廠牌名稱，在許可證那邊可以找到)、使用方法、含量(%)、稀釋倍數(使用時)、劑型、安全採收期、使用次數、每公頃用量，以及併入衛服部的殘留量規定</p><p>其他的都可以藏在看更多之類的，因為農民最主要會用到的應該就是這幾項目</p><p></p><p><b>新增副本</b></p><ul><li>同一種作物可用的藥劑分散在不同名稱之下，例如單獨查詢茼蒿只有3種藥劑，其他可以用在茼蒿的藥劑要從&quot;菊科葉菜類&quot;找出來，這個副本需要整個挖出來整理</li></ul>
+<h2>文案</h2><p><b>我是農夫（查詢藥劑使用方式）</b></p><p>本區收錄各種藥劑的標準使用方法。請於搜尋框內輸入欲搜尋的關鍵字（例如農藥名稱）。</p><p></p><p>本區原始資料來源於行政院農業委員會動植物防疫檢疫局<a href='http://pesticide.baphiq.gov.tw/web/Insecticides_MenuItem1.aspx'/>農藥資訊服務網</a>，版權仍為行政院農業委員會動植物防疫檢疫局所有。</p><p><b>主要顯示</b></p><p>中文名、商品名(廠牌名稱，在許可證那邊可以找到)、使用方法、含量(%)、稀釋倍數(使用時)、劑型、安全採收期、使用次數、每公頃用量，以及併入衛服部的殘留量規定</p><p>其他的都可以藏在看更多之類的，因為農民最主要會用到的應該就是這幾項目</p><p></p><p><b>新增副本</b></p><ol><li>同一種作物可用的藥劑分散在不同名稱之下，例如單獨查詢茼蒿只有3種藥劑，其他可以用在茼蒿的藥劑要從&quot;菊科葉菜類&quot;找出來，這個副本需要整個挖出來整理</li></ol>
 <ul class="comment"><li>(用比喻來說就像找劍這種武器，搜尋&quot;劍&quot;只找到鐵劍，其他像是玄鐵劍、無塵劍還是青冥劍要從&quot;握柄武器&quot;這個項目裡面搜尋才可以找到)</li></ul>
-<ul><li>新增不同作物交叉比對可以共用/不能共用的藥劑種類(不能共用這個選項壽命應該很短，那是讓專責單位比出來以後傷腦筋解決用的)，例如芹菜X菠菜 或&nbsp; 芹菜X菠菜X空心菜，因為有不少農民會同一塊田混種不同作物或不同作物的輪作，若用到A可用B不能用的藥劑，那B就有殘留或使用未推薦用藥的可能。</li>
-<li>目前出現的所有作物名稱：<a href="https://gist.github.com/simonpai/c9c0f5a6eba8aec64b0e"></a>https://gist.github.com/simonpai/c9c0f5a6eba8aec64b0e</li></ul>
+<ul><li>目前整理該副本較混亂的分類內容如下</li></ul>
+<ul style="list-style: none;"><li><b>豆菜類</b>(大豆、豌豆、菜豆、豇豆、萊豆、蠶豆、扁豆、翼豆)</li>
+<li><b>乾豆類</b>(大豆、落花生、紅豆、綠豆)</li>
+<li><b>豆科作物幼苗</b>(大豆、豌豆、菜豆、豇豆、萊豆、蠶豆、扁豆、翼豆、落花生、紅豆、綠豆、花豆、樹豆)&nbsp;</li>
+<li><b>十字花科</b>(不結球及結球白菜、甘藍、花椰菜、青花菜、包心芥菜、抱子甘藍、球莖甘藍、芥藍、芥菜、薺菜、油菜、葉用蘿蔔)</li>
+<li><b>菊科</b>(包括不結球、半結球及結球萵苣、茼蒿、紅鳳菜、白鳳菜、昭和草、艾草、牛蒡、黑婆羅門蔘)</li>
+<li><b>蔥科</b>(包括蔥、蒜、韭、洋蔥、珠蔥、蕗蕎)</li>
+<li><b>蔥科葉菜類</b>(蔥、蒜、韭)</li>
+<li><b>瓜菜類</b>(胡瓜、小黃瓜、苦瓜、絲瓜、冬瓜、南瓜、扁蒲、隼人瓜、越瓜及夏南瓜)</li>
+<li><b>瓜果類</b>(西瓜、香瓜、洋香瓜)</li>
+<li><b>茄科</b>(番茄、甜椒、茄子、辣椒、枸杞、另含根莖菜類馬鈴薯)</li>
+<li><b>茄科果菜類</b>(番茄、甜椒、茄子、辣椒、枸杞)</li>
+<li><b>根莖菜類</b>--這個要獨立作業了，每個每個不同</li>
+<li><b>菊科根莖菜類</b>(牛蒡)*--額外注意</li>
+<li><b>薔薇科果樹</b>(梨、桃、梅、李、杏、蘋果、枇杷、櫻桃)</li>
+<li>害蟲似乎又有一些處在另外一個狀態= =&quot;</li>
+<li><b>菊科葉菜類夜蛾類</b>(萵苣、茼蒿、紅鳳菜、結球萵苣)</li>
+<li>觀賞花卉、觀賞植物、行道樹部分需要另行討論</li>
+<li>雜草算是另外一個系統，</li>
+<li>如果點進去雜草區還會有其他使用對象說明</li>
+<li><a href='http://www.tactri.gov.tw/wSite/htdocs/ppmtable/weeds.pdf'/>常見雜草</a>&nbsp; (PDF)</li>
+<li>生長調節又是另外一章了</li></ul>
+
+<ol><li>新增不同作物交叉比對可以共用/不能共用的藥劑種類(不能共用這個選項壽命應該很短，那是讓專責單位比出來以後傷腦筋解決用的)，例如芹菜X菠菜 或&nbsp; 芹菜X菠菜X空心菜，因為有不少農民會同一塊田混種不同作物或不同作物的輪作，若用到A可用B不能用的藥劑，那B就有殘留或使用未推薦用藥的可能。</li></ol>
+<ul><li>目前出現的所有作物名稱：<a href="https://gist.github.com/simonpai/c9c0f5a6eba8aec64b0e"></a>https://gist.github.com/simonpai/c9c0f5a6eba8aec64b0e</li></ul>
 <ul class="comment"><li>「園」38 筆、「類」24 筆、「地」6 筆、「科」22 筆、「苗」8 筆</li></ul>
 
 <p>文字解釋:</p><ul><li><b>中文名: </b>藥劑本身原體(主要有效成分)的中文名稱</li>
