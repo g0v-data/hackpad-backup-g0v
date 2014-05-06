@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="175"/>
+<meta name="version" content="196"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$ca4xQKNQmBZ</title>
 </head>
 <body><h1>仿聲鳥計畫</h1><p><b>Story</b></p><p>貳零壹肆年四月十一日，中正一分局包圍事件，由於擴音設備不足，帶頭的人講一句，群眾跟著講一句，句句複誦。直到有抗議人士緊急借用麥克風，始的有發聲權力。警方針對此次突發抗議事件，均將持有揚聲器者視為主謀，優先偵查起訴。這類突發抗議事件沒有實質領頭人，群眾的聲音，應該由群眾建立，話語權也不該只由揚聲器擁有者持有，參與網路者，即有話語權。</p><p>許多人都擁有具備小型喇叭的智慧型手機，若有群眾聚集，可利用手機的連網能力建立一小型「仿聲」網路，並透過網路傳播語音資料，並同步最大聲量播放，若大量群眾同意加入網路，即可擴音。</p><p></p><p><b>Implementation</b></p><ul><li>Android first, iOS later.</li>
@@ -16,11 +16,13 @@
 <li>scalability - 行動裝置作為 P2P GO (group owner) 可能無法承載大量 client. 另外 wifi p2p 模式仍為中央式網路，無 Mesh Network 的 topological structure 擴散能力。</li>
 <li>security - 很容易被 DoS 擊敗，如 RF Jamming, De-auth Attack.</li></ul>
 
-<p></p><h2>References</h2><p></p><p><b>Android&nbsp;</b></p><ul><li><a href='https://play.google.com/store/apps/details?id=ki.bluetalkie'/>Blue Talkie</a> - 藍芽對講機<ul><li>Pro</li>
+<p>#Intercom</p><p></p><h2>References</h2><p></p><p><b>Android&nbsp;</b></p><ul><li><a href='https://play.google.com/store/apps/details?id=ki.bluetalkie'/>Blue Talkie</a> - 藍芽對講機<ul><li>Pro</li>
 <li>Con - B luetooth, one master only accept 7 slaves in one piconet.</li></ul>
 </li>
 <li>pttdroid - pttdroid is a Push To Talk VoIP app for Android - Google Project Hosting <a href="https://code.google.com/p/pttdroid/"></a>https://code.google.com/p/pttdroid/</li>
-<li>Push2Talk Free - Google Play Android 應用程式 <a href="https://play.google.com/store/apps/details?id=com.ambientic.push2talk"></a>https://play.google.com/store/apps/details?id=com.ambientic.push2talk</li></ul>
+<li>Push2Talk Free -&nbsp; <a href="https://play.google.com/store/apps/details?id=com.ambientic.push2talk"></a>https://play.google.com/store/apps/details?id=com.ambientic.push2talk</li>
+<li>Android Intercom -&nbsp; <a href="https://play.google.com/store/apps/details?id=com.androidintercom"></a>https://play.google.com/store/apps/details?id=com.androidintercom<ul><li><a href="http://iteamserver.iteam.upv.es/revista/2012/4_ITEAM_2012.pdf"></a>http://iteamserver.iteam.upv.es/revista/2012/4_ITEAM_2012.<b>pdf</b></li></ul>
+</ul>
 
 <p><b>人前還喇叭，人後偷雞鴨</b></p><ul><li>還我喇叭花行動小組--5/5(一)上午11:00前進中正一 <a href="https://www.facebook.com/events/635227179893048/?ref=22"></a><a href='https://www.facebook.com/events/635227179893048/?ref=22'/>https://www.facebook.com/events/635227179893048/?ref=22</a></li>
 <li>[爆卦] 八六遭上銬帶走 - 看板 Gossiping - 批踢踢實業坊 <a href="http://www.ptt.cc/bbs/Gossiping/M.1399267673.A.B0E.html"></a><a href='http://www.ptt.cc/bbs/Gossiping/M.1399267673.A.B0E.html'/>http://www.ptt.cc/bbs/Gossiping/M.1399267673.A.B0E.html</a></li>
