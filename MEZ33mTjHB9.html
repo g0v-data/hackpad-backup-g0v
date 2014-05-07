@@ -3,13 +3,18 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2294"/>
+<meta name="version" content="2528"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$MEZ33mTjHB9</title>
 </head>
 <body><h1>g0v addressbook iOS app</h1><p></p><h2>政府通訊錄 iOS 版</h2><p>需要聯絡政府單位或是政府官員時候，需要查詢電話資料及內容，或是聯絡相關人員之時，提供行動版的查詢功能</p><p></p><p>簡單的說就是 <a href='http://hack.g0v.tw/kuansim/g6v6MpyacFb'/>政府公開通訊錄</a> 的手機連接端，但是是離線版</p><p></p><p></p><h2>Feature Version</h2><ul><li>0.x<ul><li>提供 URL open 的功能，讓其他 app 可以直接開啟或查詢</li></ul>
 </li>
 <li>0.1</li></ul>
-<ul style="list-style: none;"><li>基本功能及使用情境設定、回報錯誤資料功能</li></ul>
+<ul style="list-style: none;"><li>基本功能及使用情境設定、回報錯誤資料功能</li><ul class="task"><li>主要查詢頁面，可選人員或是機關</li>
+<li>查詢結果頁面</li>
+<li>標記結果頁面</li>
+<li>詳細資料頁面</li>
+<li>設定頁面</li></ul>
+</ul>
 
 <h2>Strategy</h2><p>主要目標：</p><ul><li>可以提供快速查詢功能</li>
 <li>從標記清單中快速找回聯絡人</li>
@@ -31,14 +36,15 @@
 <li>資料格式</li><ul><li><a href='http://popoloproject.com/specs/organization.html#serialization'/>機關單位(popolo.organization)</a> <a href='https://github.com/g0v/addressbook/issues/10'/>討論</a></li></ul>
 </ul>
 
-<h2>Wireframe / Content</h2><ul><li>查詢頁面<ul><li>詳細資料頁面 (機關單位/單一聯絡人)</li><ul class="comment"><li>項目從通訊錄的需要欄位中統整</li></ul>
-<ul><li>名稱</li></ul>
+<h2>Wireframe / Content</h2><ul><li>查詢頁面<ul><li>詳細資料頁面 (機關單位/單一聯絡人)<ul><li>照片 (機關照片或是人員照片)</li>
+<li>名稱</li></ul>
 <ul style="list-style: none;"><li>點選提供複製名稱</li></ul>
 <ul><li>電話</li></ul>
 <ul style="list-style: none;"><li>點選直接使用系統電話播出</li></ul>
 <ul><li>地址</li></ul>
-<ul style="list-style: none;"><li>點選打開地圖程式 (Ex: Google Map)</li></ul>
-<ul><li>標記該筆資料</li></ul>
+<ul style="list-style: none;"><li>點選打開地圖程式 (Ex: Google Map or Apple Map)</li></ul>
+<ul><li>標記該筆資料</li>
+<li>備註</li></ul>
 </li></ul>
 </li>
 <li>標記頁面<ul><li>顯示有標記的聯絡人</li>
