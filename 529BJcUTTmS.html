@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="1150"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$529BJcUTTmS</title>
+</head>
+<body><h1>政府開放資料品質檢驗機制</h1><p></p><h2>緣起</h2><p></p><p>5/2 零時政府參與者 jimmyhuang, muyueh &amp; tkirby 前往科技部參與開放資料座談，座談中提及五星開放資料與資料品質的問題，張善政部長談到請零時政府評估是否可能協助建立資料品質檢測的機制。</p><p></p><p>由於資料品質定義廣，從資料量、更新頻率、正確性、詳細度、精確度、修改記錄到大家常談論的格式等都屬於品質的一環，希望能夠透過社群討論出一個完整且有效的方式，來提升政府開放資料的整體素質。</p><p></p><h2>討論</h2><p>(先隨便列些綱目，請自己加)</p><p></p><p><b>政府開放資料應該要注意的地方</b></p><ul><li>釋出格式應為開放格式<ul><li>可建立常見/推薦格式列表，比方說 csv, json, shp, topojson, px, png, etc...</li></ul>
+</li>
+<li>程式可讀性</li>
+<li>提供恰當授權<ul><li>可建立常用/推薦授權列表</li></ul>
+</li>
+<li>若需收費，需有適當理由，否則依規費法，收零元即可<ul><li>應建立收費準則，包含費用如何評估等等</li></ul>
+</li>
+<li>編碼應使用 utf-8，而且不應該再看到用圖片代替的文字了</li>
+<li>各種實體應有獨一無二的 id 可指涉 (像是縣市代碼)<ul><li>另外，即使是用名稱，也應用同個名稱指涉同個實體。臺北、台北這種分身問題應該要避免。</li></ul>
+</li>
+<li>資料要有妥善的說明，例如資料來源，計算方式，誤差值，數字單位等等。<ul><li>可降低資料誤用率</li>
+<li>甚至資料建置的成本、人力等等都可以附帶？有需要嗎？</li></ul>
+</li>
+<li>常用的資料類型要規範其形式。例如<ul><li>電話: 規定使用 02-23227787(市話) 、 886-223227787(國際) 、 0912312312(其他) 格式</li>
+<li>地址</li>
+<li>排版文字: 使用 html 排版或是 white-space preserved 形式的排版？</li></ul>
+</li>
+<li>提供統計數字時應同時提供原始資料備檢驗</li>
+<li>歷史資料均應留存</li>
+<li>試算表表格排版資訊移除後應該也要可讀</li>
+<li>相似的資料應該統一建立在一份資料集中。比方說，生物多樣性資料。</li>
+<li>自動化，盡量以已經建置資料庫系統的資料為基礎，定時、自動轉出資料，減少人工介入造成的錯誤與延遲</li>
+<li>應該有一個統一的資料倉儲，在資料入倉前能夠設計一些自動檢查措施，提高資料的品質</li></ul>
+
+<p><b>如果有會更好的東西</b></p><ul><li>使用 REST URL Pattern</li>
+<li>示範性資料展示平台，例如<ul><li>地理相關，如地標：依經緯度可在地圖上預覽</li>
+<li>GDP：可顯示線圖</li>
+<li>城市 3D模型： WebGL 預覽</li></ul>
+</li>
+<li>API<ul><li>例如，若有一天郵局開放地址中翻英的算法與資料，仍然可提供展示平台跟轉換 API。</li>
+<li>API 架構與規範也需要訂好。可參考 google api ， google maps, cse, plus, youtube 等等 api 的機制其實是統合的。東一份西一份什麼的，最討厭了。</li></ul>
+</li>
+<li>不同單位部會間應統一資料系統，例如<ul><li>若牽涉數值表格，則都用 CSV</li>
+<li>人口數統計一律建立各年齡層統計表</li>
+<li>依此類推</li></ul>
+</li>
+<li>若各單位釋出同質性資料，應由上級單位規範格式</li>
+<li>有資料的前提下，資料單位越細越好，提供統計資料不如提供原始資料。例如<ul><li>各鄉鎮人口資訊可做至村里甚至鄰</li>
+<li>交通事故可提供經緯度</li></ul>
+</li>
+<li>無資料但有經費的前提下，可將提升資料細緻度規劃至單位未來的施政計劃中</li>
+<li>有類似 RSS 機制可以知道資料更新</li>
+<li>資料錯誤回報平台<ul><li>透過 id 指涉錯誤資料以利回報</li>
+<li>資料修正進度查詢</li>
+<li>程式可處理之勘誤表 (如 patch file or 資料建入版本管理系統)</li></ul>
+</li>
+<li><br/></li></ul>
+
+<p><b>除了上述兩項，可以用來評量的標準</b></p><ul><li>各單位資料開放量</li>
+<li>各單位資料開放進程</li>
+<li>各單位根據民間回饋的資料修正率</li>
+<li>開放資料五顆星達成率</li>
+<li>資料開放格式是否滿足上級單位之要求</li>
+<li>民間的評鑑</li>
+<li>理論上夠好的資料應該很容易就可以轉換到相容的格式，例如 csv 轉成 xls 。這是否可列為指標之一？</li></ul>
+
+<p><b>做法面上，讓資料變得更完善的機制該怎麼實作？</b></p><ul><li>定期的資料黑客松<ul><li>獎金鼓勵參與？或是利用更現代的方式例如成就系統之類的..</li></ul>
+</li>
+<li>專門的評鑑機構<ul><li>資料上線後，可送至機構審查，不曉得是否為好做法？</li></ul>
+</li>
+<li>程式自動審查<ul><li>開放資料同時提供 meta data，由程式檢查欄位是否齊全</li>
+<li>編碼、表格的資料形態，</li>
+<li>資料正確性 (比方說, 明明是縣市名稱，卻跑出鄉鎮名，或是名字打錯)</li></ul>
+</li>
+<li>紙本資料全面電子化計劃<ul><li>有鑒於政治獻金、建築執照等資訊都是紙本掃描，這類形態的資料是否可以專案處理？全國性的清查此類資料，建立資料轉換小組，利用網站透過群眾外包或是雇員將資料建檔。</li></ul>
+</ul>
+
+<p><b>廣義的開放資料</b></p><ul><li>政府網站是否應該開放源碼？</li>
+<li>是否可接受民眾 pull request？</li>
+<li>若有的話，不涉及軍事機密之演算法是否可開放？</li>
+<li>科技部考不考慮利用、推廣並積極參與開源社群？</li></ul>
+
+<p><b>其他意見</b></p><ul><li>(請補充)</li></ul>
+
+</body>
+</html>
