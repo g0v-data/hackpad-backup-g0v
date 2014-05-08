@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1361"/>
+<meta name="version" content="1478"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$529BJcUTTmS</title>
 </head>
 <body><h1>政府開放資料品質檢驗機制</h1><p></p><h2>緣起</h2><p></p><p>5/2 零時政府參與者 jimmyhuang, muyueh &amp; tkirby 前往科技部參與開放資料座談，座談中提及五星開放資料與資料品質的問題，張善政部長談到請零時政府評估是否可能協助建立資料品質檢測的機制。</p><p></p><p>由於資料品質定義廣，從資料量、更新頻率、正確性、詳細度、精確度、修改記錄到大家常談論的格式等都屬於品質的一環，希望能夠透過社群討論出一個完整且有效的方式，來提升政府開放資料的整體素質。</p><p></p><h2>討論</h2><p>(先隨便列些綱目，請自己加)</p><p></p><p><b>政府開放資料應該要注意的地方</b></p><ul><li>釋出格式應為開放格式<ul><li>可建立常見/推薦格式列表，比方說 csv, json, shp, topojson, px, png, etc...</li></ul>
@@ -45,7 +45,9 @@
 <li>城市 3D模型： WebGL 預覽</li></ul>
 </li>
 <li>API<ul><li>例如，若有一天郵局開放地址中翻英的算法與資料，仍然可提供展示平台跟轉換 API。</li>
-<li>API 架構與規範也需要訂好。可參考 google api ， google maps, cse, plus, youtube 等等 api 的機制其實是統合的。東一份西一份什麼的，最討厭了。</li></ul>
+<li>API 架構與規範也需要訂好。可參考 google api ， google maps, cse, plus, youtube 等等 api 的機制其實是統合的。東一份西一份什麼的，最討厭了。</li>
+<li>API盡量遵循標準format, 例如HATEOAS, SWAGGER 另外並提供api 相關的document</li>
+<li>可以的話也提供i18n API，方便開發i18n的相關應用</li></ul>
 </li>
 <li>不同單位部會間應統一資料系統，例如<ul><li>若牽涉數值表格，則都用 CSV</li>
 <li>人口數統計一律建立各年齡層統計表</li>
