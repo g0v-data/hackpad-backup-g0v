@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1303"/>
+<meta name="version" content="1361"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$529BJcUTTmS</title>
 </head>
 <body><h1>政府開放資料品質檢驗機制</h1><p></p><h2>緣起</h2><p></p><p>5/2 零時政府參與者 jimmyhuang, muyueh &amp; tkirby 前往科技部參與開放資料座談，座談中提及五星開放資料與資料品質的問題，張善政部長談到請零時政府評估是否可能協助建立資料品質檢測的機制。</p><p></p><p>由於資料品質定義廣，從資料量、更新頻率、正確性、詳細度、精確度、修改記錄到大家常談論的格式等都屬於品質的一環，希望能夠透過社群討論出一個完整且有效的方式，來提升政府開放資料的整體素質。</p><p></p><h2>討論</h2><p>(先隨便列些綱目，請自己加)</p><p></p><p><b>政府開放資料應該要注意的地方</b></p><ul><li>釋出格式應為開放格式<ul><li>可建立常見/推薦格式列表，比方說 csv, json, shp, topojson, px, png, etc...</li></ul>
@@ -16,13 +16,15 @@
 </ul>
 <ul><li>編碼應使用 utf-8，而且不應該再看到用圖片代替的文字了</li>
 <li>各種實體應有獨一無二的 id 可指涉 (像是縣市代碼)<ul><li>另外，即使是用名稱，也應用同個名稱指涉同個實體。臺北、台北這種分身問題應該要避免。</li></ul>
-</li>
-<li>資料要有妥善的說明，例如資料來源，計算方式，誤差值，數字單位等等。<ul><li>可降低資料誤用率</li>
+<ul class="comment"><li>目前organization目前有一份orgcode, 但目前沒有所有實體單位的清單</li></ul>
+</ul>
+<ul><li>資料要有妥善的說明，例如資料來源，計算方式，誤差值，數字單位等等。<ul><li>可降低資料誤用率</li>
 <li>甚至資料建置的成本、人力等等都可以附帶？有需要嗎？</li></ul>
 </li>
 <li>常用的資料類型要規範其形式。例如<ul><li>電話: 規定使用 02-23227787(市話) 、 886-223227787(國際) 、 0912312312(其他) 格式</li>
-<li>地址</li>
-<li>排版文字: 使用 html 排版或是 white-space preserved 形式的排版？</li><ul class="comment"><li>統一用markdown會不會比較好處理？</li></ul>
+<li>地址</li></ul>
+<ul class="comment"><li>上面這個可follow VCard 規範? 然後地址也許順便也可以給一下經緯度</li></ul>
+<ul><li>排版文字: 使用 html 排版或是 white-space preserved 形式的排版？</li><ul class="comment"><li>統一用markdown會不會比較好處理？</li></ul>
 </ul>
 </ul>
 <ul><li>提供統計數字時應同時提供原始資料備檢驗</li>
