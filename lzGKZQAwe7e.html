@@ -3,8 +3,46 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="621"/>
+<meta name="version" content="1221"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$lzGKZQAwe7e</title>
 </head>
-<body><h1>跳票人</h1><p></p><p><b>目的</b></p><p>希望可以讓平常比較少參與政治的公民，</p><p>也可以在投票前夕，很快地看出來，</p><p>哪些候選人開的政見比較有機會跳票。</p><p></p><p><b>怎麼做</b></p><p>把現在舉辦的選舉裡的候選人，仔細挑出來，</p><p>檢視他們之前參選時，都提了什麼政見，</p><p>如果沒當選就算了，</p><p>但如果有當選，那就要一項一項看他們施政的成績如何。</p><p></p><p><b>施政成績怎麼評</b></p><p>我這裡假設說，施政的結果在新聞上一定找得到，</p><p>所以一個人的每項政見，都會跟著一串新聞，</p><p>每一則新聞都可以讓大家評論，</p><p>是正向的新聞 (有在認真做事) 還是負面的新聞 (亂做一通) ，</p><p>累積起來，就知道這個人說話有沒有算話。</p><p></p><p><b>短期目標</b></p><p>能夠影響到年底市長與市議員的選舉。</p><p></p><p><b>初步 UI 設計</b></p><p>這裡是我畫的 wireframe ：</p><p><a href="https://docs.google.com/presentation/d/1B3d_9Bh5cXysQUSUKMfDO9z1qF7r6ZmIkhfGQhY4mtc/pub?start=false&loop=false&delayms=3000"></a>https://docs.google.com/presentation/d/1B3d_9Bh5cXysQUSUKMfDO9z1qF7r6ZmIkhfGQhY4mtc/pub?start=false&amp;loop=false&amp;delayms=3000</p><p></p><p>現在都還很不成熟，請大家批評指教，</p><p>謝謝。</p><p></p><p><b>打完之後</b></p><p>才發現早就已經有超級類似的提案了XD</p><p><a href="https://g0v.hackpad.com/SP93kHqeeFM"></a>https://g0v.hackpad.com/SP93kHqeeFM</p><p></p><p></p></body>
+<body><h1>動民主 - 真度計</h1><p></p><h2>專案簡介</h2><p><b>專案說明</b></p><p>希望可以讓平常比較少參與政治的公民，</p><p>也可以在投票前夕，很快地看出來，</p><p>哪些候選人開的政見比較有機會跳票。</p><p></p><p><b>發起人/拋磚人</b>：</p><p>動民主家族裡的某個人…？</p><p>是在 <a href='/iBRhXaRlfZh'/>2.0 app a.k.a. 1.337</a> 裡看到的XD</p><p></p><h2>目標與功能（要如何解決）</h2><p><b>預定功能</b></p><ul><li>把現在舉辦的選舉裡的候選人，仔細挑出來，</li></ul>
+<ul style="list-style: none;"><li>檢視他們之前參選時，都提了什麼政見，</li>
+<li>如果有當選，那就要一項一項看他們施政的成績如何。</li></ul>
+<ul><li>一個人的每項政見，這裡都會跟著一串新聞，每一則新聞都可以讓大家評論，</li></ul>
+<ul style="list-style: none;"><li>是正向的新聞 (有在認真做事) 還是負面的新聞 (亂做一通) ，</li>
+<li>累積起來，就知道這個人說話有沒有算話。</li></ul>
+<ul><li>在政見和新聞的蒐集和整理這部份，可以半自動地來用爬蟲加上一些人工的處理，</li></ul>
+<ul style="list-style: none;"><li>但是在評論和正負向的標註，這就一定要靠群眾來做了。</li></ul>
+
+<p><b>預定使用者</b></p><ul><li>平常就有在關心政治的人</li></ul>
+<ul style="list-style: none;"><li>這一群人可以負責對新聞做評論，標註正負向，</li>
+<li>也可以新增一則新聞到一個政見裡。</li></ul>
+
+<ul><li>到投票前一天才會關心要投給誰的人</li></ul>
+<ul style="list-style: none;"><li>可以上來點幾下滑鼠，</li>
+<li>很快就看出來選區裡的候選人，哪一個的鼻子最長。</li></ul>
+
+<h2>要解決的問題</h2><p>現有類似專案</p><p>（現成的是否可以直接使用？或者有什麼不足之處？國外專案可參考？）</p><p>候選人政見專案 <a href="https://g0v.hackpad.com/SP93kHqeeFM"></a><a href='https://g0v.hackpad.com/SP93kHqeeFM'/>https://g0v.hackpad.com/SP93kHqeeFM</a></p><p>歐巴馬真度計 <a href="http://www.politifact.com/truth-o-meter/promises/obameter/"></a>http://www.politifact.com/truth-o-meter/promises/obameter/</p><p></p><p>相關專案</p><p>（衍生自某專案/衍生出某專案/API串接自某專案.）</p><p>希望可以有爬新聞的 API …</p><p></p><p>授權方式</p><p>（程式碼部分如 MIT/BSD /文件部分，如 CC-BY）</p><p>我之前自己都是用 BSD 3-Clause ，但因為還沒有開始寫，所以其實都可以XD</p><p></p><p>使用資料</p><p>正在整理中…</p><p></p><p>專案目前狀態</p><p>（構想 / 規劃 / 雛形 / 實作）</p><p>目前只有畫一個初步構想的 wireframe</p><p><a href="https://docs.google.com/presentation/d/1B3d_9Bh5cXysQUSUKMfDO9z1qF7r6ZmIkhfGQhY4mtc/pub?start=false&loop=false&delayms=3000"></a><a href='https://docs.google.com/presentation/d/1B3d_9Bh5cXysQUSUKMfDO9z1qF7r6ZmIkhfGQhY4mtc/pub?start=false&amp;loop=false&amp;delayms=3000'/>https://docs.google.com/presentation/d/1B3d_9Bh5cXysQUSUKMfDO9z1qF7r6ZmIkhfGQhY4mtc/pub?start=false&amp;loop=false&amp;delayms=3000</a></p><p></p><h2>徵求協作者</h2><p>發起人/拋磚人：</p><p>分工與成員 (請自行填寫)</p><ul class="task"><li>NeedsWriter: 需要文案幫手（撰寫基本資訊、報導專案etc）</li>
+<li>NeedsDesigner: 需要介面設計</li>
+<li>NeedsData: 需要資料（擷取、清理）</li>
+<li>NeedsTech: 需要技術支援（程式、架站 etc)</li>
+<li>NeedsProcess: 需要幫忙設計作業流程</li>
+<li>NeedsTalkingToRealPerson: 需要有人幫忙和其他機關聯絡</li></ul>
+
+<h2>實作細節（非技術背景可跳填）</h2><p>協作工具</p><ul><li>github repo：N/A</li>
+<li>hackfoldr 工作資料夾網址：N/A</li>
+<li>google drive 共用資料夾網址：N/A</li></ul>
+
+<p>進度與 to-do</p><ul class="task"><li>product planning（recommanded procedure from justin lee / 李易修）<ul class="task"><li>strategy</li>
+<li>scope</li>
+<li>structure</li>
+<li>wireframe</li>
+<li>visual</li></ul class="task">
+</li>
+<li>web front-end</li>
+<li>web back-end</li>
+<li>ui / visual design</li></ul>
+
+<p></p><h2>成果展示（規劃文件、雛形/草稿、原型/初稿、正式發佈/完稿）</h2><p></p><p>初步構想的 wireframe</p><p><a href="https://docs.google.com/presentation/d/1B3d_9Bh5cXysQUSUKMfDO9z1qF7r6ZmIkhfGQhY4mtc/pub?start=false&loop=false&delayms=3000"></a><a href='https://docs.google.com/presentation/d/1B3d_9Bh5cXysQUSUKMfDO9z1qF7r6ZmIkhfGQhY4mtc/pub?start=false&amp;loop=false&amp;delayms=3000'/>https://docs.google.com/presentation/d/1B3d_9Bh5cXysQUSUKMfDO9z1qF7r6ZmIkhfGQhY4mtc/pub?start=false&amp;loop=false&amp;delayms=3000</a></p><p></p><p></p><p></p></body>
 </html>
