@@ -3,12 +3,13 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="150"/>
+<meta name="version" content="261"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$ntF2esfIsSj</title>
 </head>
-<body><h1>逐字稿打字坊</h1><ul class="comment"><li>還是要叫 G0V打字坊 ?</li>
-<li><br/></li></ul>
-<p>This pad text is synchronized as you type, so that everyone viewing this page sees the same text.&nbsp; This allows you to collaborate seamlessly on documents!</p><p></p><p>完整心智圖</p><p><img src='http://i.imgur.com/fDHoqdM.jpg'/></p><p><a href="http://i.imgur.com/fDHoqdM.jpg"></a>http://i.imgur.com/fDHoqdM.jpg</p><p></p><h2>目的</h2><p>整合需要逐字稿的資源，方便大家一起跳坑</p><ul><li>現在各種需要上字幕的影音檔案越來越多，每個都要個別挖坑再上來請人幫忙打字，實在有點麻煩</li>
+<body><h1>逐字稿打字坊</h1><ul class="comment"><li>還是要叫 G0V打字坊 比較好?</li>
+<li>好專案！推（先幫加到最接近的「聽打共筆」collection，未來可和文播相關專案經驗結合）</li></ul>
+
+<p>原始心智圖</p><p><img src='http://i.imgur.com/fDHoqdM.jpg'/></p><p><a href="http://i.imgur.com/fDHoqdM.jpg"></a>http://i.imgur.com/fDHoqdM.jpg</p><p></p><h2>目的</h2><p>整合需要逐字稿的資源，方便大家一起跳坑</p><ul><li>現在各種需要上字幕的影音檔案越來越多，每個都要個別挖坑再上來請人幫忙打字，實在有點麻煩</li>
 <li>要挖坑或跳坑都需要有一定的技術門檻，不是每個人都知道怎麼做</li>
 <li>仿照P2P分享原理，由系統自動整合原始文件並加以分割，然後提供專案網址，方便分享給更多有空的人幫忙打字</li>
 <li>如此可以降低門檻，提高志工參與率，或許也能提高供檔者把原始文件拿出來建檔的意願，讓更多東西得以曝光</li></ul>
@@ -43,7 +44,8 @@
 </li>
 <li>文件<ul><li>直接上傳</li>
 <li>各別JPG掃描檔是否可自動合併?&nbsp;</li>
-<li>或由上傳者自己合併成pdf再上傳?</li></ul>
+<li>或由上傳者自己合併成pdf再上傳?</li>
+<li>掃描檔可否先經過OCR初步辨識後，再分段交由志工校對以節省時間?</li></ul>
 </li></ul>
 </li>
 <li><b>切割</b><ul><li>影片、錄音檔<ul><li>依固定時間分段(1分 or 5分?)</li>
@@ -55,11 +57,12 @@
 <li><b>封裝</b><ul><li>每個專案提供獨立網址，方便分享找志工</li>
 <li>系統提供此檔案的基本資料(標題、長度、頁數)</li></ul>
 </li>
-<li><b>測試</b><ul><li>系統顯示目前各分段處理情形(待領、打字中、完成)</li>
-<li>志工挑選[待領]片段</li>
+<li><b>測試</b><ul><li>系統顯示目前各分段處理情形</li></ul>
+<ul style="list-style: none;"><li>～以燈號顯示：紅：待領、黃：打字中、綠：完成</li></ul>
+<ul><li>志工挑選[待領]片段</li>
 <li>系統顯示該段內容(影片、聲音或文件)</li>
 <li>志工直接將文字輸入在下方，完成後送出</li>
-<li>繼續認領下一段</li></ul>
+<li>回到前面繼續認領下一片段</li></ul>
 </li>
 <li><b>組裝</b><ul><li>後臺顯示已完成片段內容，可供檢查是否有問題</li>
 <li>確認後，系統自動合併輸出</li>
@@ -67,12 +70,14 @@
 <li>校對稿：時間+內容 或 頁數+內容</li></ul>
 </ul>
 
-<h2>可能遇到的問題</h2><p></p><ul><li>挖到寶了怎麼處理<ul><li>問題：如果挖到大量掃描文件，還要這樣逐篇處理嗎?</li>
+<h2>可能遇到的問題</h2><ul><li>挖到寶了怎麼處理<ul><li>問題：如果挖到大量掃描文件，還要這樣逐篇處理嗎?</li>
 <li>建議對策：支援壓縮檔上傳，並由系統自動挖出裡面的文件檔批次處理</li>
-<li>衍生問題：要如何讓系統自動辨識那些檔案是需要處理的?</li></ul>
+<li>衍生問題：要如何讓系統自動辨識那些檔案是需要處理的?</li>
+<li>衍生對策：掃描檔可否先經過OCR初步辨識後，再分段交由志工校對以節省時間?這樣在處理大批文件時應該會更有效率。</li></ul>
 </li>
-<li>志工有空全程在線上輸入嗎?<ul><li>問題：線上直接輸入固然方便，但志工會有被綁住的感覺</li>
-<li>建議對策：除線上直接輸入外，另提供附件上傳功能</li>
+<li>志工有空全程在線上輸入嗎?<ul><li>問題：線上直接輸入固然方便，但志工會有被綁住的感覺&nbsp;</li></ul>
+<ul style="list-style: none;"><li>～不能下載離線打完再上線回傳嗎?</li></ul>
+<ul><li>建議對策：除線上直接輸入外，另提供附件上傳功能</li>
 <li>衍生問題：附件只限TXT檔嗎?</li></ul>
 </li>
 <li>逐字稿不一定是純文字<ul><li>問題：線上直接輸入只適合純文字，但掃描文件可能包含表格和插圖</li>
