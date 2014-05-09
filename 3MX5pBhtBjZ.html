@@ -3,14 +3,27 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1319"/>
+<meta name="version" content="2004"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$3MX5pBhtBjZ</title>
 </head>
 <body><h1>開放政治獻金 - OCR技術討論</h1><p>給最終使用者的人工 OCR/校對網站在<a href='/--yESRO4zWakp'/>這邊</a>討論</p><p></p><p><b>圖檔格式</b></p><ul class="comment"><li>圖檔用 jpg 存好肥阿!!! 我看原始檔是純黑白的，用 png 會小很多阿~~~</li>
 <li>沒特別注意，手滑就把三千多張轉成 jpg 了 XD</li>
-<li>如果原圖是彩色或灰階建議就存 jpg 比較能保留比較多顏色資訊。如果原圖是純黑白，那用 png 會比較小。</li>
-<li>請問這樣的圖好處理嗎？<a href="https://drive.google.com/folderview?id=0ByObdQAbysqebkxvWlRqU1ZfUVE&usp=sharing"></a>https://drive.google.com/folderview?id=0ByObdQAbysqebkxvWlRqU1ZfUVE&amp;usp=sharing</li>
-<li>看起來文字的部份有點模糊，也許可以試試四分割形式，或是把掃描的解析度放大一倍試試（ 150dpi =&gt; 300 dpi ? ）</li></ul>
+<li>如果原圖是彩色或灰階建議就存 jpg 比較能保留比較多顏色資訊。如果原圖是純黑白，那用 png 會比較小。原圖是純黑白，會灰階是因為掃描髒掉的問題。。。btw我是掃描組的，大家好</li></ul>
+<p><b>縮印?</b></p><ul class="comment"><li>請問這樣的圖好處理嗎？<a href="https://drive.google.com/folderview?id=0ByObdQAbysqebkxvWlRqU1ZfUVE&usp=sharing"></a>https://drive.google.com/folderview?id=0ByObdQAbysqebkxvWlRqU1ZfUVE&amp;usp=sharing</li>
+<li>看起來文字的部份有點模糊，也許可以試試四分割形式，或是把掃描的解析度放大一倍試試（ 150dpi =&gt; 300 dpi ? ）</li>
+<li>為什麼要弄成這樣? 有什麼好處?</li>
+<li>這樣子人工介入處理速度會快一點，但是可能打亂原有 OCR 程序，其實還是建議單頁列印</li>
+<li>是在監察院的印表機印出來時就已經縮起來了嘛? 還是後來 scan 完再縮的?</li>
+<li>監察院列印吧，掃描可以自動送紙就沒必要多此一舉了</li>
+<li>縮印最大的問題是影像品質可能會變差，首先一般印表機 600 或 1200 dpi, 若要維持一樣的品質, 2x2 頂多 3x3 再多的話雜訊就容易影響程式 OCR. 或是一些相似字人工可能也不易分辨</li>
+<li>過去處理的經驗是還可以，畢竟只是黑白的，但會擔心造成程式處理錯誤ㄝ</li>
+<li>ㄧ因為現在帶出監察院的速度是每分鐘２００筆，預計半年可以帶完然後要十幾萬 。鄉民key的速度至少每分鐘３００筆。</li>
+<li>所以先鋒部隊(我)到監察院發現可以多頁合印還能加框。</li>
+<li>那有量縮印的速度嗎? 印的速度變快, 但產生的速度應該不變</li>
+<li>1.2分鐘500筆，速度快一倍有。至少省了六，七萬元的影印費</li>
+<li>目前的圖看起來問題在 scan 的 dpi 不夠. 建議試試用灰階掃描, 1200dpi 以上(或其他解析度看效果如何. BTW, 你自己用肉眼(+放大鏡)看, 縮成 3x6 還有辦法分辨上面的字嗎?3*6無法辨識(遮臉)</li>
+<li>所以目前有直向2*4和橫向3*3，晚一點處理</li>
+<li>然後每頁還有框，我就不用分割再上傳，直接後台處理掉(btw,親自到監察院會被系統氣死。一次只能查500筆，一頁只能印20筆，也只有金額跟日期可以升降序。。)聽起來很容易操作錯誤漏印?是的500筆要自己按下一頁500筆，確認，輸出pdf(共25頁)，列印，按。。不能全選真的很機車</li></ul>
 
 <p><b>浮水印處理</b></p><ul><li>浮水印 sample</li></ul>
 <ul style="list-style: none;"><li>目前掃描的結果至少有三種比較不一樣的 pattern</li><ol><li><a href="http://pic.pimg.tw/ronnywang/1398355833-3935933860.jpg"></a>http://pic.pimg.tw/ronnywang/1398355833-3935933860.jpg 字比較粗，浮水印的點比較小</li>
