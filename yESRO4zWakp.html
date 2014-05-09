@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="230"/>
+<meta name="version" content="536"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$yESRO4zWakp</title>
 </head>
 <body><h1>開放政治獻金 - 人工校對、OCR網站設計</h1><p>初步資料處理、OCR 討論請見 <a href='/3MX5pBhtBjZ'/>OCR</a>, 之後需要人工校對</p><p></p><p><b>待校對的資料</b></p><ul><li><a href="http://campaign-finance.g0v.ronny.tw/"></a><a href='http://campaign-finance.g0v.ronny.tw/'/>http://campaign-finance.g0v.ronny.tw/</a> 這邊是 Ronny 放的 API 連結(輸入 index, 輸出切出來的圖檔)，讓大家可以自由界接來做資料處理界面</li></ul>
@@ -36,6 +36,18 @@
 <li>提供回上一步的功能，不然按太快就回不去了</li>
 <li>取眾數而非以最後一筆輸入為準</li></ul>
 </ul>
+
+<ul class="task"><li>以直行為單位分開設計，「+1」扭可能要拆成「數字關」「日期關」「收支項目關」「是否關」「地獄打字關」還可以配合成就系統<ul class="task"><li>因為是監察院倒出來的，本來就是資料庫的型式，逆回去可以增加除錯率</li>
+<li>數字關不可能出現文字(收入欄跟支出欄)</li>
+<li>收支項目關只有那十幾種，可以只用滑鼠點(收支項目欄)</li>
+<li>日期關可以只輸入YYYMMDD，還可以檢查YYY要介於０９０～１０５，MM。DD也是</li>
+<li>是否關可以用滑鼠</li>
+<li>有一欄是身份證字號，统編，和匿名，可以分快篩關跟地獄身份證關，统編關</li>
+<li>如果每一列需要一個key值的話，建議用日日期+序號+名稱，應該可以找到唯一值</li>
+<li>可能要幫每一行加1~2個分類欄</li>
+<li>這應該很快，把現有的複製出來，改讀取的範圍跟輸入的界面就好了</li></ul>
+</ul>
+
 <p>浮水印圖例</p><ul><li>彌補日後可能的自動化去除仍有疏漏可能</li></ul>
 <ul class="comment"><li>原建議來自<a href='https://groups.google.com/forum/#!topic/g0v-general/IBFzyI1hOH4'/>這裡</a></li></ul>
 
