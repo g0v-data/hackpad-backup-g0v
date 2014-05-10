@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="11859"/>
+<meta name="version" content="12396"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$Fr9H87GPcUM</title>
 </head>
 <body><h1>太陽花盒子－自己的媒體自己報－</h1><p>/* 命名可以再思考一下更加有公民資訊透明含意，不過也許可以不用，這個名字也是很有歷史意義。 */</p><p><b>第一次來的人可以跳到最底下看 FAQ (麻煩讓 FAQ 置底)</b></p><p></p><h2>主旨：</h2><p>　　要挖的坑，設計「機上盒 or APP」，專門收看社會運動現場實況LIVE，或是大腸花魚腸花，或是和社運有關的直播，立院質詢，公聽會……等等。（<a href='http://farm9.staticflickr.com/8288/7745942538_85bbe2d9b3_c.jpg'/>概念圖１</a>）（<a href='https://www.facebook.com/photo.php?fbid=821715797842060&amp;set=a.820703047943335.1073741837.100000109433022&amp;type=3&amp;theater'/>概念圖２</a>）</p><ul class="comment"><li><s>建議把「App」改成「機上盒」，畢竟目的在把電視人的視線和網路人的視線交疊起來。無論如何就是接到電視，不是手機，也不是平板。至於機上盒的實作方式可以分流，也可以集中火力，用 App 或用刷機的方式實現。</s></li>
@@ -98,7 +98,7 @@
 <p></p><p><b>開發者社群</b></p><ul><li>網樂通改機俱樂部 <a href="https://www.facebook.com/groups/477359555618518/"></a><a href='https://www.facebook.com/groups/477359555618518/'/>https://www.facebook.com/groups/477359555618518/</a></li>
 <li>網樂通開發/研究/貢獻/準開發者 <a href="https://www.facebook.com/groups/401123299994345/"></a><a href='https://www.facebook.com/groups/401123299994345/'/>https://www.facebook.com/groups/401123299994345/</a></li></ul>
 
-<p></p><p><b>Debian/Ubuntu Linux for sh4 環境建置 (此路不通，需要開疆闢土)</b></p><undefined><li><b>lxc (Linux Container)</b></li></undefined>
+<p></p><p><b>Debian for sh4 環境建置</b></p><undefined><li><b>Linux Container (sid) (此路不通，需要開疆闢土)</b></li></undefined>
 <p>Host OS: Ubuntu 14.04, ... (歡迎補充其它可以使用的 Debian/Ubuntu 版本)</p><ol><li>安裝 lxc 以及 qemu-user-static</li></ol>
 <ul class="code"><li>sudo apt-get install lxc qemu-user-static:i386 debian-archive-keyring debian-ports-archive-keyring</li></ul>
 <ol><li>修改 /usr/share/lxc/templates/lxc-debian (workaround)<ol><li>將 36 行附近的變數改成 MIRROR=${MIRROR:-<a href="http://ftp.debian-ports.org/debian/"></a><a href='http://ftp.debian-ports.org/debian/'/>http://ftp.debian-ports.org/debian/</a>}</li>
@@ -124,15 +124,38 @@
 <li>qemu-user-static 我是直接從source code rebuild就可以用了</li>
 <li>我已經成功在 Ubuntu 14.04 i386 的環境底下建立 Debian sid sh4 的 Linux Container 並且登入使用，qemu-user-static 不用特別處理。</li>
 <li>其實在 Ubuntu 14.04 amd64 上面也可以成功建立起 Debian sid sh4 的 Linux Container 只要安裝 qemu-user-static:i386 就可以了，感謝 Debian 提供 multiarch 支援。 &lt;(_ _)&gt;</li></ul>
+<undefined><li><b>Linux Container (wheezy)</b></li></undefined>
+<p>Host OS: Ubuntu 14.04, ... (歡迎補充其它可以使用的 Debian/Ubuntu 版本)</p><ol><li>安裝 lxc 以及 qemu-user-static</li></ol>
+<ul class="code"><li>sudo apt-get install lxc qemu-user-static:i386 debian-archive-keyring debian-ports-archive-keyring</li></ul>
+<ol><li>修改 /usr/share/lxc/templates/lxc-debian (workaround)<ol><li>將 36 行附近的變數改成 MIRROR=${MIRROR:-<a href="http://download.si-linux.co.jp/debian-sh/wheezy-sh4/"></a><a href='http://ftp.debian-ports.org/debian/'/>http://download.si-linux.co.jp/debian-sh/wheezy-sh4/</a>}</li>
+<li>將 190 行附近的 `debootstrap --verbose` 改成 `qemu-debootstrap --verbose --no-check-gpg`</li>
+<li>將 163 行附近的 download_debian() 裡面的 packages 變數中的 dialog 那行移除掉 # 因為目前 si-linux 沒有提供 dialog 這個套件</li></ol>
+</li>
+<li>產生 Linux Container</li></ol>
+<ul class="code"><li>sudo lxc-create -t debian -n wheezy -- -a sh4 -r wheezy -c 2&gt;&amp;1 | tee sh4-debug.log</li></ul>
+<ol><li>啟動 Linux Container</li></ol>
+<ul class="code"><li>sudo lxc-start -n wheezy</li></ul>
+<ol><li>修改 /etc/apt/sources.list</li></ol>
+<ul class="code"><li>deb <a href="http://download.si-linux.co.jp/debian-sh/wheezy-sh4/"></a>http://download.si-linux.co.jp/debian-sh/wheezy-sh4/ wheezy main contrib non-free</li>
+<li>deb-src <a href="http://free.nchc.org.tw/debian/"></a>http://free.nchc.org.tw/debian/ wheezy main contrib non-free</li></ul>
+<ol><li>設定 Linux Container 的網路</li></ol>
+<ul class="code"><li>ifconfig eth0 10.0.3.2 # 指定 Static IP</li>
+<li>route add default gw 10.0.3.1 # 設定 Gateway</li>
+<li>echo &quot;nameserver 8.8.8.8&quot; &gt; /etc/resolv.conf # 設定 DNS</li></ul>
+<ol><li>更新 apt index</li></ol>
+<ul class="code"><li>apt-get update</li></ul>
+<ol><li>關掉 gpg signature checks</li></ol>
+<ul class="code"><li>echo &rsquo;APT::Get::AllowUnauthenticated &quot;true&quot;;&rsquo; &gt; /etc/apt/apt.conf # 因為 si-linux 沒有 sign deb 所以乾脆關掉</li></ul>
+<ol><li>接下來就是跟使用一般的 Debian 系統一樣了。 Have fun. :D</li></ol>
 
-<undefined><li><b>pbuilder</b></li></undefined>
+<undefined><li><b>pbuilder (sid) (此路不通，需要開疆闢土)</b></li></undefined>
 <p>Host OS: Ubuntu 14.04, ... (歡迎補充其它可以使用的 Debian/Ubuntu 版本)</p><ol><li>安裝 ubuntu-dev-tools 以及 qemu-user-static</li></ol>
 <ul class="code"><li>sudo apt-get install ubuntu-dev-tools qemu-user-static:i386 debian-archive-keyring debian-ports-archive-keyring</li></ul>
 <ol><li>執行 pbuilder-dist 創建一個新的 chroot.</li></ol>
-<ul class="code"><li>PBUILDER_DIST_DEBIAN_MIRROR=<a href="http://ftp.debian-ports.org/debian"></a>http://ftp.debian-ports.org/debian pbuilder-dist unstable sh4 create --debootstrapopts --keyring=/usr/share/keyrings/debian-ports-archive-keyring.gpg</li></ul>
-<ul class="comment"><li>建議使用 --keyring=/usr/share/keyrings/debian-ports-archive-keyring.gpg 來檢查套件的合法性</li>
-<li>14.04 不用 sudo. 但，我仍然&nbsp; E: qemu-debootstrap failed</li>
-<li>我也遇到了這個問題，我看了一下發現跟上面 lxc 遇到的問題一樣，因為有缺一些必要的套件，或是即使有套件，但是套件本身的版號還是不夠新。</li>
+<ul class="code"><li>PBUILDER_DIST_DEBIAN_MIRROR=<a href="http://ftp.debian-ports.org/debian"></a>http://ftp.debian-ports.org/debian pbuilder-dist unstable sh4 create --debootstrapopts --keyring=/usr/share/keyrings/debian-ports-archive-keyring.gpg</li><ul class="comment"><li>建議使用 --keyring=/usr/share/keyrings/debian-ports-archive-keyring.gpg 來檢查套件的合法性來取代使用 --no-check-gpg</li></ul class="comment">
+</li>
+<li>14.04 不用 sudo. 但，我仍然&nbsp; E: qemu-debootstrap failed</li></ul>
+<ul class="comment"><li>我也遇到了這個問題，我看了一下發現跟上面 lxc 遇到的問題一樣，因為有缺一些必要的套件，或是即使有套件，但是套件本身的版號還是不夠新。</li>
 <li>awk libbz2-1.0 libc6 libdb5.1 libdebconfclient0 libgcc1 liblzma5 libselinux1 libtinfo5 multiarch-support systemd-sysv tar upstart zlib1g</li></ul>
 
 <undefined><li><b>Debian 移植資訊</b></li></undefined>
@@ -206,6 +229,10 @@
 <ul><li>[VM] sh4-linux-gcc hello.c</li>
 <li>[VM] cp a.out /srv/nfs/root/usr/local/bin/hello</li>
 <li>開進網樂通. /usr/local/bin/hello</li></ul>
+
+<p><b>派樂靈丹版的 firmware 怎麼 load</b></p><ul><li>cp ./STM/STLinux-2.3/devkit/sh4/target/lib/firmware/component_7105_pdk7105.fw /srv/twbox092/lib/firmware/component.fw</li>
+<li>cp ./STM/STLinux-2.3/devkit/sh4/target/lib/firmware/fdvo0_7105.fw /srv/twbox092/lib/firmware/fdvo0.fw</li>
+<li>可是 stm312 還是沒有記憶體... 再想想辦法 :(</li></ul>
 
 <p></p><h2>延伸閱讀</h2><ul><li><a href='https://chrome.google.com/webstore/detail/livetw/fhcffinobmpdchcoapdeoinhdmlihiok'/>LiveTW／社會上事件現場，網路實況轉播列表工具／Chrome外掛／&nbsp;</a>&nbsp;</li>
 <li><a href='/VVlHNqKaQrC'/>直播連結收集器（導播台）</a></li>
