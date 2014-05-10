@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1143"/>
+<meta name="version" content="1200"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$QZ7WShK1gPu</title>
 </head>
 <body><h1>20140510支持松-太陽花盒子</h1><p></p><p>#太陽花盒子 <a href='http://ccsp.kktix.cc/events/hackathon'/>黑客松</a>&nbsp; TODO List</p><p><b>Member</b></p><p></p><h2>User Story</h2><ul class="task"><li>FourDollars: 想要完成 Debian/SH4 開發基礎平台</li><ul class="taskdone"><li>確認 qemu/lxc 建立出來的環境裡面編譯出來的 Hello World 程式可以直接放在網樂通上面執行</li>
@@ -23,16 +23,19 @@
 </ul>
 <ul class="task"><li>Linux Kernel 意外被刪掉了，所以自己的 Linux Kernel 自己編譯。</li><ul><li><a href="http://www.ptt.cc/bbs/Linux/M.1374821355.A.95F.html"></a>http://www.ptt.cc/bbs/Linux/M.1374821355.A.95F.html&nbsp;</li></ul>
 </ul>
-<ul class="task"><li>建立 package archive</li></ul class="task">
+<ul class="task"><li>建立 personal Debian archive (以 mplayer 為目標)</li><ul><li>debarchiver - Tool to sort debian packages into a package archive.</li></ul>
+</ul>
+</ul>
+<ul class="task"><li>Rex: 確認硬體解碼可以運作<ul class="task"><li>gstreamer 測試失敗</li></ul class="task">
 </li>
-<li>Rex: 確認硬體解碼可以運作</li>
 <li>Rex: 確認可以用 USB Pendriver 散布安裝檔案</li><ul class="taskdone"><li>確認 u-boot 從 USB 開機 的 boot script</li><ul class="comment"><li>&nbsp;update_uboot=usb start;fatload usb 0 80000000 u-boot.bin;update_spi_uboot&nbsp;</li></ul>
 </ul>
 <ul class="taskdone"><li>確認 original u-boot, boot from usb 開機流程&nbsp;</li></ul>
 </ul>
 <ul class="task"><li>Rex: 希望完成一個可以展示播放功能的基礎使用者界面</li><ul class="taskdone"><li>決定使用的開發工具為何 (Android, XBMC, Qt, DirectFB)</li></ul>
 </ul>
-<ul class="comment"><li>&nbsp;xmbc works</li><ul class="task"><li>解讀 <a href="https://github.com/g0v/live"></a>https://github.com/g0v/live</li>
+<ul class="comment"><li>&nbsp;xmbc works</li></ul>
+<ul class="task"><li>&nbsp;Rex: live stream API 整合<ul class="task"><li>解讀 <a href="https://github.com/g0v/live"></a>https://github.com/g0v/live</li>
 <li>解讀&nbsp;<a href='/668AHTZTehn'/> API Document</a></li></ul class="task">
 </li>
 <li>Miaoski: 把 X 開起來...</li><ul class="taskdone"><li>確定 ST231 co-processors 兩顆都可以 init (FW 大概沒指望了?)</li></ul>
@@ -61,38 +64,6 @@
 <p><b>u-boot</b></p><p>* 派樂靈丹 - TWPDA: 再探 網樂通 uboot code (UBOOTWPDA) <a href="http://www.twpda.com/2013/08/uboot-code.html"></a>http://www.twpda.com/2013/08/uboot-code.html</p><p>* dlintw/twpda-uboot <a href="https://github.com/dlintw/twpda-uboot"></a>https://github.com/dlintw/twpda-uboot</p><p></p><ul class="code"><li>37895f3b538dcc4c9e19cc8b23c4bd3fc32642ff&nbsp; www.fulldynamic.com/download/GPL/linux-sh4-2.6.23.17_stm23_A18B.tar.gz</li>
 <li>aba4734671e975c1a6d3c4436acd8efaa4d80373&nbsp; www.fulldynamic.com/download/GPL/U-boot_sourcecode.zip</li></ul>
 <ul class="task"><li>檢查 STLinux, 派樂靈丹的 diff</li></ul>
-
-<h2>Scope</h2><ul class="comment"><li>提供/不提供哪些功能？</li>
-<li>這些功能的使用流程各自是什麼？</li>
-<li>（產出文件：flow chart）</li></ul>
-
-<h2>Structure</h2><ul class="comment"><li>首頁、level 1、level 2... 共有哪些頁面？</li>
-<li>頁面之間的連結關係長什麼樣子？</li>
-<li>（產出文件：網站架構圖）</li></ul>
-
-<h2>Wireframe / Content</h2><ul class="comment"><li><i>每頁的內容各自是什麼？</i></li>
-<li>頁面上各元素大概會放在什麼位置、有多大尺寸？</li>
-<li>頁面上有哪些與使用者互動的區塊？</li>
-<li><i>（產出文件：文案、頁面框線圖）</i></li></ul>
-
-<h2>Visual</h2><ul class="comment"><li>每頁實際上看起來會長什麼樣子</li>
-<li>精確的排版、配色、字體大小、視覺特效</li>
-<li>（產出文件：識別系統 / 設計稿 / prototype）</li></ul>
-
-<p></p><p></p><h2>Misc</h2><ul class="code"><li>root@NextNAS-wheezy:/stmfb/framebuffer_test# cat /etc/apt/sources.list</li>
-<li>deb [arch=all] <a href="http://ftp.tw.debian.org/debian/"></a>http://ftp.tw.debian.org/debian/ wheezy main contrib non-free</li>
-<li>deb [arch=sh4] <a href="http://www.si-linux.co.jp/pub/debian-sh/wheezy-sh4"></a>http://www.si-linux.co.jp/pub/debian-sh/wheezy-sh4 wheezy main</li>
-<li>deb-src <a href="http://ftp.tw.debian.org/debian/"></a>http://ftp.tw.debian.org/debian/ wheezy main contrib non-free</li>
-<li>deb [arch=sh4] <a href="http://download.si-linux.co.jp/debian-sh/wheezy-sh4/"></a>http://download.si-linux.co.jp/debian-sh/wheezy-sh4/ wheezy main contrib non-free</li>
-<li><br/></li>
-<li># Taiwan User Group local repository</li>
-<li>#deb <a href="http://forum.cse.yzu.edu.tw/debian-sh4/"></a>http://forum.cse.yzu.edu.tw/debian-sh4/ wheezy all</li>
-<li>deb <a href="http://forum.cse.yzu.edu.tw/Linux/debian-sh4/"></a>http://forum.cse.yzu.edu.tw/Linux/debian-sh4/ wheezy all</li>
-<li><br/></li>
-<li># original settings from Debian Wheezy rootfs author Chia-Cheng Huang</li>
-<li>deb <a href="http://1.34.239.30/wheezy-sh4/debian"></a>http://1.34.239.30/wheezy-sh4/debian wheezy main</li>
-<li>deb <a href="http://1.34.239.30/wheezy-sh4-test/debian"></a>http://1.34.239.30/wheezy-sh4-test/debian wheezy test</li>
-<li><br/></li></ul>
 
 </body>
 </html>
