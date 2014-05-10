@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="11534"/>
+<meta name="version" content="11859"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$Fr9H87GPcUM</title>
 </head>
 <body><h1>太陽花盒子－自己的媒體自己報－</h1><p>/* 命名可以再思考一下更加有公民資訊透明含意，不過也許可以不用，這個名字也是很有歷史意義。 */</p><p><b>第一次來的人可以跳到最底下看 FAQ (麻煩讓 FAQ 置底)</b></p><p></p><h2>主旨：</h2><p>　　要挖的坑，設計「機上盒 or APP」，專門收看社會運動現場實況LIVE，或是大腸花魚腸花，或是和社運有關的直播，立院質詢，公聽會……等等。（<a href='http://farm9.staticflickr.com/8288/7745942538_85bbe2d9b3_c.jpg'/>概念圖１</a>）（<a href='https://www.facebook.com/photo.php?fbid=821715797842060&amp;set=a.820703047943335.1073741837.100000109433022&amp;type=3&amp;theater'/>概念圖２</a>）</p><ul class="comment"><li><s>建議把「App」改成「機上盒」，畢竟目的在把電視人的視線和網路人的視線交疊起來。無論如何就是接到電視，不是手機，也不是平板。至於機上盒的實作方式可以分流，也可以集中火力，用 App 或用刷機的方式實現。</s></li>
@@ -113,7 +113,13 @@
 <ul class="code"><li>sudo lxc-start -n sid -d</li></ul>
 <ol><li>登入 Linux Container</li></ol>
 <ul class="code"><li>sudo lxc-console -n sid</li></ul>
-<p>P.S. 目前 sh4 裡面無法使用網路，正在設法解決這個問題。問題的根源可能是因為 <a href="https://packages.debian.org/search?keywords=iproute2&searchon=names&suite=all&section=all"></a>https://packages.debian.org/search?keywords=iproute2&amp;searchon=names&amp;suite=all&amp;section=all 這個套件沒有在 sh4 裡面。(沒什麼人在用的 CPU 果然支援很差... Orz)</p><p>P.S. 在正常情況底下，依照以上提到的步驟應該是可以成功地建立出 sh4 的 Linux Container，除非遇到了 DNS 解析的問題，`while :; do nslookup ftp.debian-ports.org | grep &quot;No answer&quot;; done` 這個指令可以用來檢查當下使用的網路是否有 DNS 解析的問題發生，如果沒有問題的話，應該是不會產生任何輸出，停止指令請用 Ctrl-C 停止。</p><p>遇到這個問題有一個 workaround 的方法，就是修改 /usr/share/debootstrap/functions 裡面的 wgetprogress() 在 wget 後面加上 --tries=10 重覆試十次，下面的 pbuilder 也可以使用。</p><p></p><ul class="comment"><li>目前 Ubuntu 14.04 上面的 qemu-user-static 不支援網樂通所使用的 SH7724</li>
+<p>補充資訊：</p><ul><li>前 sh4 裡面無法使用網路，正在設法解決這個問題。問題的根源可能是因為 <a href="https://packages.debian.org/search?keywords=iproute2&searchon=names&suite=all&section=all"></a>https://packages.debian.org/search?keywords=iproute2&amp;searchon=names&amp;suite=all&amp;section=all 這個套件沒有在 sh4 裡面。(沒什麼人在用的 CPU 果然支援很差... Orz)</li>
+<li>在正常情況底下，依照以上提到的步驟應該是可以成功地建立出 sh4 的 Linux Container，除非遇到了 DNS 解析的問題，`while :; do nslookup ftp.debian-ports.org | grep &quot;No answer&quot;; done` 這個指令可以用來檢查當下使用的網路是否有 DNS 解析的問題發生，如果沒有問題的話，應該是不會產生任何輸出，停止指令請用 Ctrl-C 停止。</li></ul>
+<ul style="list-style: none;"><li>遇到這個問題有一個 workaround 的方法，就是修改 /usr/share/debootstrap/functions 裡面的 wgetprogress() 在 wget 後面加上 --tries=10 重覆試十次，下面的 pbuilder 也可以使用。</li></ul>
+<ul><li>啟動之後的 rootfs 會存在 /var/lib/lxc/sid/rootfs/ 底下</li>
+<li>已確認 Linux Container (Debian/sh4) 裡面編譯出來的 Hello World 程式可以直接放到網樂通上面執行</li></ul>
+
+<ul class="comment"><li>目前 Ubuntu 14.04 上面的 qemu-user-static 不支援網樂通所使用的 SH7724</li>
 <li>`/usr/bin/qemu-sh4-static -cpu help` 只出現 SH7750R, SH7751R, SH7785 不過編譯出來的套件應該是通用的 (需要驗證一下)</li>
 <li>qemu-user-static 我是直接從source code rebuild就可以用了</li>
 <li>我已經成功在 Ubuntu 14.04 i386 的環境底下建立 Debian sid sh4 的 Linux Container 並且登入使用，qemu-user-static 不用特別處理。</li>
@@ -153,16 +159,19 @@
 <li>[VM] compile好後，執行 ./autoDone.sh 把 vmlinux.ub 複製到 /srv/tftp</li>
 <li>VM 基本上就是個 server, 我都是從 host ssh 進 VM 做 cross-compile</li></ul>
 </li>
-<li>重開網樂通，進 uboot (多按幾次 [enter])<ul><li>print - 顯示目前設定</li>
-<li>setenv ipaddr 192.168.100.5</li>
+<li>重開網樂通，進 uboot (多按幾次 [enter])<ul><li>print - 顯示目前設定</li></ul>
+</ul>
+<ul class="code"><li>setenv ipaddr 192.168.100.5</li>
 <li>setenv serverip 192.168.100.1</li>
 <li>tftp 80000000 vmlinux.ub</li>
-<li>setenv ip 192.168.100.5:192.168.100.1:192.168.100.1:255.255.255.0:sh4:eth0:off</li>
-<li>setenv cm 16m@0x10000000,16m@0x11000000</li>
-<li>setenv bootargs console=ttyAS0,115200 nfsroot=192.168.100.1:/srv/nfs/root root=/dev/nfs rw ip=${ip} mem=256M coprocessor_mem=${cm}</li>
-<li>PDK7105&gt; bootm 0x80000000</li></ul>
-</li>
-<li>開機 log: <a href="https://gist.github.com/miaoski/11344418"></a>https://gist.github.com/miaoski/11344418</li>
+<li>setenv ip ip=192.168.100.5:192.168.100.1:192.168.100.1:255.255.255.0:sh4:eth0:off</li>
+<li>setenv cm coprossor_mem=16m@0x10000000,16m@0x11000000</li>
+<li>setenv nwhwconf nwhwconf=device:eth0,hwaddr:24:cf:21:b2:a4:76</li>
+<li>setenv console console=ttyAS0,115200</li>
+<li>setenv nfsroot nfsroot=192.168.100.1:/srv/nfs/root</li>
+<li>setenv bootargs ${console} ${nfsroot} root=/dev/nfs rw ${ip} mem=256M ${cm} ${nwhwconf}</li>
+<li>bootm 0x80000000</li></ul>
+<ul><li>開機 log: <a href="https://gist.github.com/miaoski/11344418"></a>https://gist.github.com/miaoski/11344418</li>
 <li>舊的 bootargs=console=ttyAS0,115200 rootdelay=0 root=/dev/sda2 rootfstype=ext4 rw rootflags=data=journal nwhwconf=device:eth0,hwaddr:10:08:E2:12:06:BD phyaddr:0,watchdog:5000 mem=256M bigphysarea=2048 bootcmd=usbcfg 0; usb start; usb info; usb part; fatload usb 0:1 80000000 vmlinux.ub; bootm 80000000</li>
 <li>網卡最好接 Hub 不然 reset link 的時候 IP 可能會掉.</li>
 <li>別忘了 <a href='/ep/profile/ADv4ZTWzjah'/>Chia-Cheng Huang</a> 的 debian repo 已經改到</li></ul>
@@ -184,6 +193,8 @@
 <ul><li><a href="http://www.stlinux.com/howto/multiple-CPUs/STb7100-ST231"></a>http://www.stlinux.com/howto/multiple-CPUs/STb7100-ST231<ul><li>把 ST40 boot 起來後，再 boot 兩顆 ST231.</li>
 <li>需要使用 stslave 開啟程式，才會放到 ST231 上執行.</li>
 <li>Kernel: Device Drivers&quot; / &quot;STM specific devices&quot; 下請選 firmware coprocessor support</li></ul>
+</li>
+<li>如果 kernel cmdline 長度不夠，會被切掉的話:<ul><li>修改 linux/include/include/asm-generic/setup.h 裡的 COMMAND_LINE_SIZE 加大到 1024</li></ul>
 </ul>
 
 <p><b>Cross-Compile 一個 Hello World</b></p><ul><li>隨便寫</li></ul>
