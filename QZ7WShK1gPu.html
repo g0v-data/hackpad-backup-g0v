@@ -3,10 +3,10 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1248"/>
+<meta name="version" content="1251"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$QZ7WShK1gPu</title>
 </head>
-<body><h1>20140510支持松-太陽花盒子</h1><p></p><p>#太陽花盒子 <a href='http://ccsp.kktix.cc/events/hackathon'/>黑客松</a>&nbsp; TODO List</p><p><b>Member</b></p><p></p><h2>User Story</h2><ul class="task"><li>FourDollars: 想要完成 Debian/SH4 開發基礎平台</li><ul class="taskdone"><li>確認 qemu/lxc 建立出來的環境裡面編譯出來的 Hello World 程式可以直接放在網樂通上面執行</li>
+<body><h1>20140510支持松-太陽花盒子</h1><p></p><p>#太陽花盒子 <a href='http://ccsp.kktix.cc/events/hackathon'/>黑客松</a>&nbsp; TODO List</p><p><b>Member</b></p><p></p><h2>User Story</h2><ul class="taskdone"><li>FourDollars: 想要完成 Debian/SH4 開發基礎平台<ul class="taskdone"><li>確認 qemu/lxc 建立出來的環境裡面編譯出來的 Hello World 程式可以直接放在網樂通上面執行</li>
 <li>使用 <a href="http://download.si-linux.co.jp/debian-sh/wheezy-sh4/"></a>http://download.si-linux.co.jp/debian-sh/wheezy-sh4/ 建立 Debian/wheezy 的 Linux Container</li>
 <li>透過 NFS 分享 Linux Container 的 rootfs 給網樂通使用</li><ul><li>安裝 nfs-kernel-server 修改 /etc/exports<ul><li>/var/lib/lxc/wheezy-sh4/rootfs 10.42.0.*(rw,sync,no_subtree_check,all_squash,anonuid=0,anongid=0)</li></ul>
 </li>
@@ -23,7 +23,7 @@
 </ul>
 <ul class="taskdone"><li>Linux Kernel 意外被刪掉了，所以自己的 Linux Kernel 自己編譯。</li><ul><li><a href="http://www.ptt.cc/bbs/Linux/M.1374821355.A.95F.html"></a>http://www.ptt.cc/bbs/Linux/M.1374821355.A.95F.html</li></ul>
 </ul>
-<ul class="task"><li>建立 personal Debian archive (以 mplayer 為目標)</li><ul><li><a href="https://wiki.debian.org/HowToSetupADebianRepository"></a>https://wiki.debian.org/HowToSetupADebianRepository - 最後選擇使用 reprepro</li>
+<ul class="taskdone"><li>建立 personal Debian archive <s>(以 mplayer 為目標)</s></li><ul><li><a href="https://wiki.debian.org/HowToSetupADebianRepository"></a>https://wiki.debian.org/HowToSetupADebianRepository - 最後選擇使用 reprepro</li>
 <li>寫了一些輔助的 script 放在 <a href="https://github.com/fourdollars/debian-sh4"></a>https://github.com/fourdollars/debian-sh4 上面</li>
 <li>deb <a href="http://people.linux.org.tw/~fourdollars/debian/"></a>http://people.linux.org.tw/~fourdollars/debian/ wheezy main contrib non-free</li>
 <li>deb-src <a href="http://people.linux.org.tw/~fourdollars/debian/"></a>http://people.linux.org.tw/~fourdollars/debian/ wheezy main contrib non-free</li></ul>
