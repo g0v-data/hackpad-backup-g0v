@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="258"/>
+<meta name="version" content="260"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$IAcggxN9suJ</title>
 </head>
 <body><h1>提案：小蜜蜂簽名檔產生器</h1><h2>構想</h2><p>因為現有的小蜜蜂官方傳單，只有附總隊網址的QR code，對平常就是以使用桌上型電腦為主的人來講，不是那麼有親和力，而且沒有宣傳在地蜂巢的效果，所以想要一個自動產生器，在傳單的底部加入總隊跟在地蜂巢網址。</p><p></p><h2>簽名檔範例</h2><p>例如說</p><p><img src='https://i.imgur.com/ycyLHQC.jpg'/></p><p><a href="https://i.imgur.com/ycyLHQC.jpg"></a>https://i.imgur.com/ycyLHQC.jpg</p><p>這張傳單，下面加上</p><p><img src='https://i.imgur.com/w3ijW80.jpg'/></p><p></p><p>這樣的簽名檔以後</p><p>變成這樣</p><p><img src='https://i.imgur.com/II2NiiE.jpg'/></p><p><a href="https://i.imgur.com/II2NiiE.jpg"></a>https://i.imgur.com/II2NiiE.jpg</p><p></p><h2>希望能夠實作的形式</h2><p>希望是網頁表單，例如說像報告產生器 <a href="http://taphy.com/taphyd/bb3"></a>http://taphy.com/taphyd/bb3</p><p>這種</p><p>只要使用者打入蜂巢網址跟名字，還有傳單網址，就會在伺服器上面生成傳單的pdf檔。</p><p></p><h2>流程</h2><ol><li>匯入pdf檔，並轉換成A4大小的圖檔<b> (『圖片1』)</b></li>
@@ -13,8 +13,5 @@
 <li>(optional)把圖片3匯出成pdf</li>
 <li>提供使用者下載連結</li></ol>
 
-<h2>目前最困難的地方</h2><ol><li>找到一個可以放PHP的網頁空間</li>
-<li>本人不會寫程式</li></ol>
-
-<p></p><p></p></body>
+<p></p><p></p><p></p></body>
 </html>
