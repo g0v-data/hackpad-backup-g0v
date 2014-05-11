@@ -3,10 +3,10 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1251"/>
+<meta name="version" content="1880"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$QZ7WShK1gPu</title>
 </head>
-<body><h1>20140510支持松-太陽花盒子</h1><p></p><p>#太陽花盒子 <a href='http://ccsp.kktix.cc/events/hackathon'/>黑客松</a>&nbsp; TODO List</p><p><b>Member</b></p><p></p><h2>User Story</h2><ul class="taskdone"><li>FourDollars: 想要完成 Debian/SH4 開發基礎平台<ul class="taskdone"><li>確認 qemu/lxc 建立出來的環境裡面編譯出來的 Hello World 程式可以直接放在網樂通上面執行</li>
+<body><h1>20140510支持松-太陽花盒子</h1><p></p><p>#太陽花盒子 <a href='http://ccsp.kktix.cc/events/hackathon'/>黑客松</a>&nbsp; <a href="http://hackfoldr.org/2014ccsp/"></a><a href='http://hackfoldr.org/2014ccsp/'/>http://hackfoldr.org/2014ccsp/</a></p><h2>User Story</h2><ul class="taskdone"><li>FourDollars: 想要完成 Debian/SH4 開發基礎平台<ul class="taskdone"><li>確認 qemu/lxc 建立出來的環境裡面編譯出來的 Hello World 程式可以直接放在網樂通上面執行</li>
 <li>使用 <a href="http://download.si-linux.co.jp/debian-sh/wheezy-sh4/"></a>http://download.si-linux.co.jp/debian-sh/wheezy-sh4/ 建立 Debian/wheezy 的 Linux Container</li>
 <li>透過 NFS 分享 Linux Container 的 rootfs 給網樂通使用</li><ul><li>安裝 nfs-kernel-server 修改 /etc/exports<ul><li>/var/lib/lxc/wheezy-sh4/rootfs 10.42.0.*(rw,sync,no_subtree_check,all_squash,anonuid=0,anongid=0)</li></ul>
 </li>
@@ -29,25 +29,41 @@
 <li>deb-src <a href="http://people.linux.org.tw/~fourdollars/debian/"></a>http://people.linux.org.tw/~fourdollars/debian/ wheezy main contrib non-free</li></ul>
 </ul>
 </ul>
-<ul class="task"><li>Rex: 確認硬體解碼可以運作<ul class="task"><li>gstreamer 測試失敗</li></ul class="task">
+<ul class="taskdone"><li>Rex: 確認硬體解碼可以運作<ul class="taskdone"><li>測試 gstreamer 解碼</li></ul>
+</ul>
+<ul class="comment"><li>&nbsp;失敗。疑似 xbmc 用的 gst library binding 跟 gst-launch 用的不一致</li></ul>
+<ul class="taskdone"><li>Rex: 確認可以用 USB Pendriver 散布安裝檔案<ul class="taskdone"><li>確認 u-boot 從 USB 開機 的 boot script</li><ul class="comment"><li>&nbsp;update_uboot=usb start;fatload usb 0 80000000 u-boot.bin;update_spi_uboot&nbsp;</li></ul>
+</ul>
+<ul class="taskdone"><li>確認 original u-boot, boot from usb 開機流程&nbsp;</li></ul class="taskdone">
 </li>
-<li>Rex: 確認可以用 USB Pendriver 散布安裝檔案</li><ul class="taskdone"><li>確認 u-boot 從 USB 開機 的 boot script</li><ul class="comment"><li>&nbsp;update_uboot=usb start;fatload usb 0 80000000 u-boot.bin;update_spi_uboot&nbsp;</li></ul>
+<li>Rex: 希望完成一個可以展示播放功能的基礎使用者界面<ul class="taskdone"><li>決定使用的開發工具為何 (Android, XBMC, Qt, DirectFB)</li></ul>
 </ul>
-<ul class="taskdone"><li>確認 original u-boot, boot from usb 開機流程&nbsp;</li></ul>
+<ul class="comment"><li>&nbsp;xmbc (directfb) works, 但是有幾個問題</li>
+<li>1. lircd 實在太慢，需要研究為什麼會高度延遲</li>
+<li>2. Youtube 播放失敗、MP4 播放失敗。</li>
+<li>3. XBMC 的 memory footprint 太高。機器共 256M, 需留下一半給 coprocessor 使用 (<a href='http://lwn.net/Articles/111132/'/>bigphysarea</a> )</li>
+<li>。xbmc 遠遠需要超過 120Mb.</li>
+<li>4. Duckbox 有一套自己的 build system,&nbsp;</li>
+<li>使用 STLinux prebuilt BSP.&nbsp;</li>
+<li>使用 STLinux 是出的 src.rpm (但是這些 src.rpm 的格式有些問題，造成新版的 rpm 讀取 spec 檔案會失敗)</li>
+<li>STLinux 做了一個 DirectFB-1.0.1/gfxdrivers/stgfx/</li>
+<li>gstreamere codec 硬幹在 xbmc-nightly/xbmc/cores/gstplayer/GSTPlayer.cpp</li>
+<li>目前台灣玩家沒有統一的 code repository. 整合上需要修改 makefile, backport xbmc, integrate firmware binaries.</li>
+<li><br/></li>
+<li>目前無 Qt port, 需要檢查 EGL 相容性。</li></ul>
+<ul class="task"><li><s>&nbsp;Rex: live stream API 整合</s><ul class="task"><li><s>解讀 </s><a href="https://github.com/g0v/live"></a><s>https://github.com/g0v/live</s></li>
+<li><s>解讀&nbsp;<a href='/668AHTZTehn'/> API Document</a></s></li></ul>
 </ul>
-<ul class="task"><li>Rex: 希望完成一個可以展示播放功能的基礎使用者界面</li><ul class="taskdone"><li>決定使用的開發工具為何 (Android, XBMC, Qt, DirectFB)</li></ul>
+<ul class="comment"><li>&nbsp;沒空整合 API.</li></ul>
+<ul class="task"><li>Miaoski: 把 X 開起來...</li><ul class="taskdone"><li>確定 ST231 co-processors 兩顆都可以 init (FW 大概沒指望了?)</li></ul>
 </ul>
-<ul class="comment"><li>&nbsp;xmbc works</li></ul>
-<ul class="task"><li>&nbsp;Rex: live stream API 整合<ul class="task"><li>解讀 <a href="https://github.com/g0v/live"></a>https://github.com/g0v/live</li>
-<li>解讀&nbsp;<a href='/668AHTZTehn'/> API Document</a></li></ul class="task">
-</li>
-<li>Miaoski: 把 X 開起來...</li><ul class="taskdone"><li>確定 ST231 co-processors 兩顆都可以 init (FW 大概沒指望了?)</li></ul>
+<ul class="comment"><li>用了噁心的方法: 用 Hans Yu 的 XBMC distribution 裡的 kernel + /lib/modules/*.ko 配上派樂靈丹的 rootfs 以及裡面的 fbtest 程式... 總之看得到東西了，但卻沒辦法自己 compile 出來。</li>
+<li>*.elf 和 *.fw 可以在 STLinux-2.4 找到。還沒試過用 Hans Yu 的 .config 能不能做出一樣的東西.</li><ul class="task"><li>看有沒有 qwx 或 X 可以用</li></ul>
 </ul>
-<ul class="comment"><li>用了噁心的方法: 用 Hans Yu 的 XBMC distribution 裡的 kernel + /lib/modules/*.ko 配上派樂靈丹的 rootfs 以及裡面的 fbtest 程式... 總之看得到東西了，但卻沒辦法自己 compile 出來。</li><ul class="task"><li>看有沒有 qwx 或 X 可以用</li></ul>
+<ul class="comment"><li>有 xorg 但開不進去，因為它一直想寫 /dev/tty0</li>
+<li>原廠有 xorg, 不知道改了什麼就是 <a href="ftp://ftp.stlinux.com/pub/stlinux/2.4/updates/SRPMS/"></a><a href='ftp://ftp.stlinux.com/pub/stlinux/2.4/updates/SRPMS/'/>ftp://ftp.stlinux.com/pub/stlinux/2.4/updates/SRPMS/</a></li><ul class="task"><li>升級到 Wheezy 7.5</li></ul>
 </ul>
-<ul class="comment"><li>有 xorg 但 xfce 還在測</li><ul class="task"><li>升級到 Wheezy 7.5</li></ul>
-</ul>
-<ul class="comment"><li>apt-get dist-upgrade</li><ul class="taskdone"><li>嘗試派樂靈丹 0.9.2 載入 FB firmware (root 密碼 wb1234)</li></ul>
+<ul class="comment"><li>apt-get dist-upgrade 但有一堆 failed dependency 想想現在還是別升級比較安心。</li><ul class="taskdone"><li>嘗試派樂靈丹 0.9.2 載入 FB firmware (root 密碼 wb1234)</li></ul>
 </ul>
 
 <h2>需要工具</h2><ul><li>USB TTL Debug cable.</li>
@@ -59,14 +75,19 @@
 </li>
 <li>電視一台</li></ul>
 
-<p><b>References</b></p><ul><li>NextVOD <a href="https://gist.github.com/chihchun/753181"></a>https://gist.github.com/chihchun/753181</li>
+<p><b>References</b></p><ul><li>硬體資訊等 NextVOD <a href="https://gist.github.com/chihchun/753181"></a>https://gist.github.com/chihchun/753181</li>
 <li>Debian on NextVOD STB <a href="https://gist.github.com/chihchun/754972"></a>https://gist.github.com/chihchun/754972</li>
 <li><a href="http://stwp26.cyberhood.net.tw/NextNAS/target.NexNAS-wheezy-sh4twbox092.tgz"></a>http://stwp26.cyberhood.net.tw/NextNAS/target.NexNAS-wheezy-sh4twbox092.tgz root wb1234</li>
 <li><a href="https://www.kernel.org/doc/Documentation/filesystems/nfs/nfsroot.txt"></a>https://www.kernel.org/doc/Documentation/filesystems/nfs/nfsroot.txt</li></ul>
 
-<p><b>u-boot</b></p><p>* 派樂靈丹 - TWPDA: 再探 網樂通 uboot code (UBOOTWPDA) <a href="http://www.twpda.com/2013/08/uboot-code.html"></a>http://www.twpda.com/2013/08/uboot-code.html</p><p>* dlintw/twpda-uboot <a href="https://github.com/dlintw/twpda-uboot"></a>https://github.com/dlintw/twpda-uboot</p><p></p><ul class="code"><li>37895f3b538dcc4c9e19cc8b23c4bd3fc32642ff&nbsp; www.fulldynamic.com/download/GPL/linux-sh4-2.6.23.17_stm23_A18B.tar.gz</li>
+<h2>工作紀錄</h2><p><b>u-boot</b></p><ul><li>派樂靈丹 - TWPDA: 再探 網樂通 uboot code (UBOOTWPDA) <a href="http://www.twpda.com/2013/08/uboot-code.html"></a>http://www.twpda.com/2013/08/uboot-code.html</li>
+<li>dlintw/twpda-uboot <a href="https://github.com/dlintw/twpda-uboot"></a>https://github.com/dlintw/twpda-uboot</li>
+<li>git.stlinux.com Git - stm/u-boot.git/summary <a href="http://git.stlinux.com/?p=stm/u-boot.git;a=summary"></a><a href='http://git.stlinux.com/?p=stm/u-boot.git;a=summary'/>http://git.stlinux.com/?p=stm/u-boot.git;a=summary</a></li>
+<li>Modifying U-Boot | STLinux <a href="http://stlinux.com/node/126"></a><a href='http://stlinux.com/node/126'/>http://stlinux.com/node/126</a></li>
+<li>Porting U-Boot To A New Board | STLinux <a href="http://stlinux.com/node/127"></a><a href='http://stlinux.com/node/127'/>http://stlinux.com/node/127</a></li></ul>
+<ul class="code"><li>37895f3b538dcc4c9e19cc8b23c4bd3fc32642ff&nbsp; www.fulldynamic.com/download/GPL/linux-sh4-2.6.23.17_stm23_A18B.tar.gz</li>
 <li>aba4734671e975c1a6d3c4436acd8efaa4d80373&nbsp; www.fulldynamic.com/download/GPL/U-boot_sourcecode.zip</li></ul>
 <ul class="task"><li>檢查 STLinux, 派樂靈丹的 diff</li></ul>
 
-</body>
+<p><b>活動花絮</b></p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_QZ7WShK1gPu_p.62065_1399787455528_10257356_10152449872462915_1296144759199530547_n.jpg'/></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_QZ7WShK1gPu_p.62065_1399787464431_1901428_10152450178202915_183971513227859945_n.jpg'/></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_QZ7WShK1gPu_p.62065_1399787439323_10356362_10152450178157915_1626908079512262042_n.jpg'/></p><p></p><p></p></body>
 </html>
