@@ -3,10 +3,10 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2051"/>
+<meta name="version" content="2139"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$QZ7WShK1gPu</title>
 </head>
-<body><h1>20140510支持松-太陽花盒子</h1><p><a href='/Fr9H87GPcUM'/>太陽花盒子</a> <a href='http://ccsp.kktix.cc/events/hackathon'/>黑客松</a>&nbsp; <a href="http://hackfoldr.org/2014ccsp/"></a><a href='http://hackfoldr.org/2014ccsp/'/>http://hackfoldr.org/2014ccsp/</a></p><p></p><h2>User Story</h2><ul class="taskdone"><li>FourDollars: 想要完成 Debian/SH4 開發基礎平台<ul class="taskdone"><li>確認 qemu/lxc 建立出來的環境裡面編譯出來的 Hello World 程式可以直接放在網樂通上面執行</li>
+<body><h1>20140510支持松-太陽花盒子</h1><p><a href='/Fr9H87GPcUM'/>太陽花盒子</a> <a href='http://ccsp.kktix.cc/events/hackathon'/>黑客松</a>&nbsp; <a href="http://hackfoldr.org/2014ccsp/"></a><a href='http://hackfoldr.org/2014ccsp/'/>http://hackfoldr.org/2014ccsp/</a></p><p></p><h2>User Story</h2><p><b>FourDollars</b></p><ul class="taskdone"><li>FourDollars: 想要完成 Debian/SH4 開發基礎平台<ul class="taskdone"><li>確認 qemu/lxc 建立出來的環境裡面編譯出來的 Hello World 程式可以直接放在網樂通上面執行</li>
 <li>使用 <a href="http://download.si-linux.co.jp/debian-sh/wheezy-sh4/"></a>http://download.si-linux.co.jp/debian-sh/wheezy-sh4/ 建立 Debian/wheezy 的 Linux Container</li>
 <li>透過 NFS 分享 Linux Container 的 rootfs 給網樂通使用</li><ul><li>安裝 nfs-kernel-server 修改 /etc/exports<ul><li>/var/lib/lxc/wheezy-sh4/rootfs 10.42.0.*(rw,sync,no_subtree_check,all_squash,anonuid=0,anongid=0)</li></ul>
 </li>
@@ -29,7 +29,8 @@
 <li>deb-src <a href="http://people.linux.org.tw/~fourdollars/debian/"></a>http://people.linux.org.tw/~fourdollars/debian/ wheezy main contrib non-free</li></ul>
 </ul>
 </ul>
-<ul class="taskdone"><li>Rex: 確認硬體解碼可以運作<ul class="taskdone"><li>測試 gstreamer 解碼</li></ul>
+
+<p><b>Rex</b></p><ul class="taskdone"><li>Rex: 確認硬體解碼可以運作<ul class="taskdone"><li>測試 gstreamer 解碼</li></ul>
 </ul>
 <ul class="comment"><li>&nbsp;失敗。疑似 xbmc 用的 gst library binding 跟 gst-launch 用的不一致</li></ul>
 <ul class="taskdone"><li>Rex: 確認可以用 USB Pendriver 散布安裝檔案<ul class="taskdone"><li>確認 u-boot 從 USB 開機 的 boot script</li><ul class="comment"><li>&nbsp;update_uboot=usb start;fatload usb 0 80000000 u-boot.bin;update_spi_uboot&nbsp;</li></ul>
@@ -55,7 +56,7 @@
 <li><s>解讀&nbsp;<a href='/668AHTZTehn'/> API Document</a></s></li></ul>
 </ul>
 <ul class="comment"><li>&nbsp;沒空整合 API.</li></ul>
-<ul class="task"><li>Miaoski: 把 X 開起來...</li><ul class="taskdone"><li>確定 ST231 co-processors 兩顆都可以 init (FW 大概沒指望了?)</li></ul>
+<p><b>Miaoski</b></p><ul class="task"><li>Miaoski: 把 X 開起來...</li><ul class="taskdone"><li>確定 ST231 co-processors 兩顆都可以 init (FW 大概沒指望了?)</li></ul>
 </ul>
 <ul class="comment"><li>用了噁心的方法: 用 Hans Yu 的 XBMC distribution 裡的 kernel + /lib/modules/*.ko 配上派樂靈丹的 rootfs 以及裡面的 fbtest 程式... 總之看得到東西了，但卻沒辦法自己 compile 出來。</li>
 <li>*.elf 和 *.fw 可以在 STLinux-2.4 找到。還沒試過用 Hans Yu 的 .config 能不能做出一樣的東西.</li><ul class="task"><li>看有沒有 qwx 或 X 可以用</li></ul>
@@ -65,6 +66,8 @@
 </ul>
 <ul class="comment"><li>apt-get dist-upgrade 但有一堆 failed dependency 想想現在還是別升級比較安心。</li><ul class="taskdone"><li>嘗試派樂靈丹 0.9.2 載入 FB firmware (root 密碼 wb1234)</li></ul>
 </ul>
+
+<p><b>Conrad</b></p><ul class="task"><li>...</li></ul>
 
 <h2>需要工具</h2><ul><li>USB TTL Debug cable.</li>
 <li>USB Pendriver</li>
@@ -90,6 +93,7 @@
 <ul class="task"><li>檢查 STLinux, 派樂靈丹的 diff</li></ul>
 
 <p><b>活動花絮</b></p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_QZ7WShK1gPu_p.62065_1399787455528_10257356_10152449872462915_1296144759199530547_n.jpg'/></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_QZ7WShK1gPu_p.62065_1399787464431_1901428_10152450178202915_183971513227859945_n.jpg'/></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_QZ7WShK1gPu_p.62065_1399787439323_10356362_10152450178157915_1626908079512262042_n.jpg'/></p><p></p><p></p><p>Jack&gt; 請問 如果我可以寄一台mk802 贊助研究 該如何寄給你們</p><p>Jack&gt; mk802系列 記的是 友善之臂 當初自立門戶的員工 所copy產出</p><p><a href='http://www.arm9.net/'/>Jack&gt; </a><a href="http://www.arm9.net/"></a>http://www.arm9.net/</p><p><a href='http://www.360doc.com/content/12/0412/14/9413880_203022427.shtml'/>Jack&gt; </a><a href="http://www.360doc.com/content/12/0412/14/9413880_203022427.shtml"></a>http://www.360doc.com/content/12/0412/14/9413880_203022427.shtml</p><p><a href='http://www.arm9.net/Mini210s.asp'/>Jack&gt; </a><a href="http://www.arm9.net/Mini210s.asp"></a>http://www.arm9.net/Mini210s.asp</p><ul class="comment"><li>Hi Jack, 可以寄到台北郵政35-45信箱林哲民收。謝謝！</li>
+<li>友善之臂這幾個 mini / tiny 都不便宜呢... 從 1000 RMB 起跳.</li>
 <li>請問是那一代？我手上還有四台 mk802</li></ul>
 
 <p>Michael_LI＞［請問］有人帶去攜帶型的液晶螢幕，知道是哪個廠牌嗎？以及動態畫面延遲會很明顯嗎？／正在找這個東西，比較中／</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_QZ7WShK1gPu_p.62065_1399863088398_IMG_20140512_105013.jpg'/></p><p></p></body>
