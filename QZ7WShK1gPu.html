@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2475"/>
+<meta name="version" content="2903"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$QZ7WShK1gPu</title>
 </head>
 <body><h1>20140510支持松-太陽花盒子</h1><p><a href='/Fr9H87GPcUM'/>太陽花盒子</a> <a href='http://ccsp.kktix.cc/events/hackathon'/>黑客松</a>&nbsp; <a href="http://hackfoldr.org/2014ccsp/"></a><a href='http://hackfoldr.org/2014ccsp/'/>http://hackfoldr.org/2014ccsp/</a></p><p></p><h2>User Story</h2><p><b>FourDollars</b></p><ul class="taskdone"><li>FourDollars: 想要完成 Debian/SH4 開發基礎平台<ul class="taskdone"><li>確認 qemu/lxc 建立出來的環境裡面編譯出來的 Hello World 程式可以直接放在網樂通上面執行</li>
@@ -92,7 +92,30 @@
 <li>aba4734671e975c1a6d3c4436acd8efaa4d80373&nbsp; www.fulldynamic.com/download/GPL/U-boot_sourcecode.zip</li></ul>
 <ul class="task"><li>檢查 STLinux, 派樂靈丹的 diff</li></ul>
 
-<p><b>活動花絮</b></p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_QZ7WShK1gPu_p.62065_1399787455528_10257356_10152449872462915_1296144759199530547_n.jpg'/></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_QZ7WShK1gPu_p.62065_1399787464431_1901428_10152450178202915_183971513227859945_n.jpg'/></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_QZ7WShK1gPu_p.62065_1399787439323_10356362_10152450178157915_1626908079512262042_n.jpg'/></p><p></p><p></p><p>Jack&gt; 請問 如果我可以寄一台mk802 贊助研究 該如何寄給你們</p><p>Jack&gt; mk802系列 記的是 友善之臂 當初自立門戶的員工 所copy產出</p><p><a href='http://www.arm9.net/'/>Jack&gt; </a><a href="http://www.arm9.net/"></a>http://www.arm9.net/</p><p><a href='http://www.360doc.com/content/12/0412/14/9413880_203022427.shtml'/>Jack&gt; </a><a href="http://www.360doc.com/content/12/0412/14/9413880_203022427.shtml"></a>http://www.360doc.com/content/12/0412/14/9413880_203022427.shtml</p><p><a href='http://www.arm9.net/Mini210s.asp'/>Jack&gt; </a><a href="http://www.arm9.net/Mini210s.asp"></a>http://www.arm9.net/Mini210s.asp</p><ul class="comment"><li>Hi Jack, 可以寄到台北郵政35-45信箱林哲民收。謝謝！</li>
+<p>試用 xmbc 的 vmlinux.ub + FourDollars 的 mplayer:</p><ul><li>軟解，放 320x240 還不錯，更大就糟了</li>
+<li>可以 mplayer -zoom -x 900 -y 600 -geometry 50%:50% 但速度很慢</li>
+<li>播放的時候背景底圖 (如果有的話) 會左右亂動.</li>
+<li><s>可能是 display1 / display2 的問題，再檢查一下 insmod 那邊.</s>不設 display2 一樣會晃</li>
+<li>必須要 mem=256M 不然 bpa 的 LMI_IO 不能建立 (why? mem=240M 不行喲)</li>
+<li>uboot 參數:</li></ul>
+<ul class="code"><li>tftp 80000000 xbmc.ub</li>
+<li>setenv nfsroot nfsroot=192.168.100.1:/srv/nfs/root root=/dev/nfs rw</li>
+<li>setenv mem phyaddr:0,watchdog:5000 mem=256M bigphysarea=2048</li>
+<li>setenv bootargs ${console} rootdelay=0 ${nfsroot} ${nwhwconf} ${mem} ${ip}</li>
+<li>bootm 0x80000000</li></ul>
+
+<p>試用 Hans Yu 的 e2</p><ul><li>必須 mem=240M 才能正常 init 各項模組</li>
+<li>mem=120M 會 kernel panic</li>
+<li>因為沒有搖控器，就卡在 Video input selection (/usr/local/bin/enigma2) 的畫面了</li>
+<li>gst-launch-0.10 playbin2 uri=<a href="file:///root/somefile.avi"></a>file:///root/somefile.avi 的 codec 似乎只有 H.264 但仍然放不出畫面</li>
+<li>uboot 參數:</li></ul>
+<ul class="code"><li>tftp 80000000 e2.ub</li>
+<li>setenv nfsroot nfsroot=192.168.100.1:/srv/nfs/e2 root=/dev/nfs rw</li>
+<li>setenv mem phyaddr:0,watchdog:5000 mem=240M bigphysarea=2048</li>
+<li>setenv bootargs ${console} rootdelay=0 ${nfsroot} ${nwhwconf} ${mem} ${ip}</li>
+<li>bootm 0x80000000</li></ul>
+
+<p></p><p></p><p><b>活動花絮</b></p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_QZ7WShK1gPu_p.62065_1399787455528_10257356_10152449872462915_1296144759199530547_n.jpg'/></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_QZ7WShK1gPu_p.62065_1399787464431_1901428_10152450178202915_183971513227859945_n.jpg'/></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_QZ7WShK1gPu_p.62065_1399787439323_10356362_10152450178157915_1626908079512262042_n.jpg'/></p><p></p><p></p><p>Jack&gt; 請問 如果我可以寄一台mk802 贊助研究 該如何寄給你們</p><p>Jack&gt; mk802系列 記的是 友善之臂 當初自立門戶的員工 所copy產出</p><p><a href='http://www.arm9.net/'/>Jack&gt; </a><a href="http://www.arm9.net/"></a>http://www.arm9.net/</p><p><a href='http://www.360doc.com/content/12/0412/14/9413880_203022427.shtml'/>Jack&gt; </a><a href="http://www.360doc.com/content/12/0412/14/9413880_203022427.shtml"></a>http://www.360doc.com/content/12/0412/14/9413880_203022427.shtml</p><p><a href='http://www.arm9.net/Mini210s.asp'/>Jack&gt; </a><a href="http://www.arm9.net/Mini210s.asp"></a>http://www.arm9.net/Mini210s.asp</p><ul class="comment"><li>Hi Jack, 可以寄到台北郵政35-45信箱林哲民收。謝謝！</li>
 <li>友善之臂這幾個 mini / tiny 都不便宜呢... 從 1000 RMB 起跳.</li>
 <li>請問是那一代？我手上還有四台 mk802</li>
 <li>台灣的更貴 喔&nbsp; 且沒有編輯程式&nbsp; 但這樣也後有後面 不過也比較知道 他們的後面如何防堵&nbsp;</li>
