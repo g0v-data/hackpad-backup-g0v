@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="343"/>
+<meta name="version" content="393"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$CqldbNZaFhM</title>
 </head>
 <body><h1>動民主家族 - 整體開發方向</h1><p></p><p><b>目前計畫</b></p><ol><li>凡是需要持續參與的公民行動，都替它做一個對應的服務</li><ul><li>找零感可參考 <a href='http://hack.g0v.tw/don-democracy/iBRhXaRlfZh'/>目前已發想的服務</a> ，想到新的歡迎繼續在裡面補完</li></ul>
@@ -16,13 +16,14 @@
 
 <p><b>介面藍圖</b></p><ul><li>每個獨立服務各自用自己喜歡的 UI</li>
 <li>如果對 UI 沒有想法，就用公民臉書的通用 UI</li>
-<li>公民臉書通用 UI 說明<ul><li>nav bar 的用途類似 google 的那條<ul><li>左上角可回到公民臉書首頁</li>
+<li>公民臉書通用 UI 說明<ul><li>nav bar 的用途類似 google 的那條，需要時也可以做成 tabzilla 那種可以收起來的<ul><li>左上角可回到公民臉書首頁</li>
 <li>右上角可登入、設定</li>
-<li>中間可連到各服務自己的首頁（議題、提案、專案、公聽、記者會、真度計、……等）</li></ul>
+<li>中間可連到各服務自己的首頁（議題、提案、專案、公聽、記者會、真度計、……等，預計會跟 google apps 一樣一直擴充）</li></ul>
 </li>
 <li>公民臉書首頁<ul><li>沒有 header 區塊</li>
-<li>左邊有類 facebook 的 sidebar，sidebar 內容由使用者自訂釘選</li>
-<li>右邊 sidebar 以外的區域是對應的 timeline / stream，顯示從各服務 api 抓進來的內容</li>
+<li>左邊有類 facebook 的 sidebar，sidebar 內容由使用者自訂釘選<ul><li>sidebar 加 navbar，整個畫面的導覽邏輯是「上面是系統全域的，左邊是我自訂的」</li></ul>
+</li>
+<li>右邊內容區域是對應的 timeline / stream，顯示從各服務 api 抓進來的內容</li>
 <li>在公民臉書內，sidebar 就等於 navbar，瀏覽過程中基本上一直都會在，只有在點進去最底層單一的 entry 中的時候才沒有 sidebar。（layout 保持穩定，不要像 facebook 一樣，sidebar 一下出現一下消失，明明看起來是同一層的東西點進去卻像跑到另一個網站… &gt;_&lt;）</li></ul>
 </li>
 <li>公民臉書底下各服務首頁<ul><li>有 header 區塊以資區別，讓人知道現在不是在首頁喔，是在某個特定服務頁</li>
