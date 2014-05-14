@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="4480"/>
+<meta name="version" content="4829"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$y7TpDhvbAqg</title>
 </head>
 <body><h1>APP4AM&nbsp; | 評價系統設計規範</h1><p></p><p>這裡是提供4AM計畫 - 評價系統的共筆區，請先到此瞭解專案提案本文喔 &gt;&gt;&gt;&gt;&gt; <a href='/YGd0FvMp9Vr'/>這裡</a></p><p></p><ul class="comment"><li>有些名詞還未定，在描述內容裡可能稍有出入，之後得幫一些專詞或指標發明APP專用、好記的名字。&nbsp;</li></ul>
@@ -18,7 +18,8 @@
 <li>3.應能適當反應使用者真正的客觀程度：<ul class="task"><li>a.一次性評分，下評斷後就不能改變&nbsp; (應適當提高獎勵權重)</li>
 <li>b.是否讓使用者評分前就看到評價概況？ (只顯示投票人數，不顯示正反比例)</li>
 <li>c.使用者評分時間及次數是否有限制？</li>
-<li>d.隨機讓使用者評分？</li></ul class="task">
+<li>d.隨機讓使用者評分？</li>
+<li>e.在投票人數不斷變動的情況下如何判定使用者投的對錯？</li></ul class="task">
 </li>
 <li>4.應能區分不同類別之新聞，某些適合使用評價系統，某些則不適合：<ul class="task"><li>a.即時更新的非定稿新聞</li>
 <li>b.影片為主的新聞</li></ul class="task">
@@ -34,6 +35,14 @@
 
 <p><b>&nbsp;考慮中的功能</b></p><ul class="task"><li>讓具名使用者可以不透過評論員確認違反項目就直接除黴 (新增當事人爆卦功能)</li>
 <li>有沒有可能直接在回覆時同步出現在各新聞下面的FB留言板 (郭律師建議)</li></ul>
+
+<h2>動態權重設計的問題與解法</h2><p>設計初衷：因為不希望評價到最後是拼人數的狀況，所以提出動態權重系統</p><p>引發疑慮：</p><ol><li>在變動的投票人數下如何正確判斷誰對誰錯，而給與加權獎勵或懲罰？</li>
+<li>如果看結果決定對錯，會導致有心使用者<u>較晚投票</u>以賺取高確率報酬</li>
+<li><br/></li></ol>
+
+<p>可能的解決方法：</p><ol><li>雙指標制，將評論員和使用者分開，但項目依然由評論員糾出，混合爛蕃茄系統</li>
+<li>窄化動態上下限，但讓積分攀升難度提高</li>
+<li>在投票時間內隨機產生評價權限，並限定名額，也限定不可短時間在類似TAG投票</li></ol>
 
 <h2>評價指標</h2><p>為了讓使用者能快速的認知一則新聞的客觀性，必須要有適當的量化數值，目前暫定是「發黴指數」、「可除黴次數」兩個指標。</p><p></p><p><b>發黴指數</b></p><p>指一則新聞違反新聞倫理的嚴重程度，基本上由專家定出違反項目、使用者評價定出的項目(認同/反對)，由系統計算出分數。詳細計算方式會再補充。</p><p></p><p><b>可除黴次數</b></p><p>當新聞違反的項目可補救時(例:少訪問某幾方，因此未平衡報導)，就提供一個契機讓熱血媒體(也可以是發稿媒體)、或具名使用者(包含專家)來幫忙補完新聞內容，因此違反這些嚴重項目時一開始發黴指數不會加這麼多，但會隨著時間和瀏覽人數而快速增加，媒體業者要是擔心自己新聞發黴就得加強素質或事後緊急補救啦~~</p><p></p><ul class="comment"><li>兩個指標在新聞列表中並不一定適合同時列出，在設計UI時需考慮不要讓資訊量過多而影響UX</li></ul>
 
