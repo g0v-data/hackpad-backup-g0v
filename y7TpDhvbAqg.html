@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="4829"/>
+<meta name="version" content="4868"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$y7TpDhvbAqg</title>
 </head>
 <body><h1>APP4AM&nbsp; | 評價系統設計規範</h1><p></p><p>這裡是提供4AM計畫 - 評價系統的共筆區，請先到此瞭解專案提案本文喔 &gt;&gt;&gt;&gt;&gt; <a href='/YGd0FvMp9Vr'/>這裡</a></p><p></p><ul class="comment"><li>有些名詞還未定，在描述內容裡可能稍有出入，之後得幫一些專詞或指標發明APP專用、好記的名字。&nbsp;</li></ul>
@@ -42,7 +42,9 @@
 
 <p>可能的解決方法：</p><ol><li>雙指標制，將評論員和使用者分開，但項目依然由評論員糾出，混合爛蕃茄系統</li>
 <li>窄化動態上下限，但讓積分攀升難度提高</li>
-<li>在投票時間內隨機產生評價權限，並限定名額，也限定不可短時間在類似TAG投票</li></ol>
+<li>在投票時間內隨機產生評價權限，並限定名額，也限定不可短時間在類似TAG(同事件)投票</li>
+<li>想投票的人就看不到總分，已看到總分的就不可投票 (形同挑戰模式)</li>
+<li><br/></li></ol>
 
 <h2>評價指標</h2><p>為了讓使用者能快速的認知一則新聞的客觀性，必須要有適當的量化數值，目前暫定是「發黴指數」、「可除黴次數」兩個指標。</p><p></p><p><b>發黴指數</b></p><p>指一則新聞違反新聞倫理的嚴重程度，基本上由專家定出違反項目、使用者評價定出的項目(認同/反對)，由系統計算出分數。詳細計算方式會再補充。</p><p></p><p><b>可除黴次數</b></p><p>當新聞違反的項目可補救時(例:少訪問某幾方，因此未平衡報導)，就提供一個契機讓熱血媒體(也可以是發稿媒體)、或具名使用者(包含專家)來幫忙補完新聞內容，因此違反這些嚴重項目時一開始發黴指數不會加這麼多，但會隨著時間和瀏覽人數而快速增加，媒體業者要是擔心自己新聞發黴就得加強素質或事後緊急補救啦~~</p><p></p><ul class="comment"><li>兩個指標在新聞列表中並不一定適合同時列出，在設計UI時需考慮不要讓資訊量過多而影響UX</li></ul>
 
