@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1657"/>
+<meta name="version" content="2343"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$529BJcUTTmS</title>
 </head>
 <body><h1>政府開放資料品質檢驗機制</h1><p></p><h2>緣起</h2><p></p><p>5/2 零時政府參與者 jimmyhuang, muyueh &amp; tkirby 前往科技部參與開放資料座談，座談中提及五星開放資料與資料品質的問題，張善政部長談到請零時政府評估是否可能協助建立資料品質檢測的機制。</p><p></p><p>由於資料品質定義廣，從資料量、更新頻率、正確性、詳細度、精確度、修改記錄到大家常談論的格式等都屬於品質的一環，希望能夠透過社群討論出一個完整且有效的方式，來提升政府開放資料的整體素質。</p><p></p><ul><li>5/2 <a href='https://docs.google.com/document/d/1IRdyS_jkChZRTT90GqCJbXlKQxnzCtiRwBovN_Dc7JI/edit?usp=sharing'/>會議記錄</a>&nbsp;</li>
@@ -102,6 +102,14 @@
 <li>是否可接受民眾 pull request？</li>
 <li>若有的話，不涉及軍事機密之演算法是否可開放？</li>
 <li>科技部考不考慮利用、推廣並積極參與開源社群？</li></ul>
+
+<p><b>開放資料五顆星的原則應用於資料品質的議題</b></p><ul><li>TimBL的開放資料五顆星所著重的點在於資料的開放性，因此第一顆星的開放資料就要是以開放授權釋出，若這資料還是結構化資料(非圖片，機器難以處理的)，那滿足二顆星，如果進一步是非專屬格式，如CSV，則滿足三顆星，若資料可以開放到，資料集中每一筆資料本身在網路中都有一個URI來指涉，就滿足了第四顆星的開放資料，一般做法就是以RDF的格式，因為有了URI，所以資料集中的資料可以透過語意相互連結，這就是五顆星等級開放資料，也就是常說的Linked Open Data。</li>
+<li>政府資料要做到五顆星等級的資料在技術成本上很高，目前歐美各國也僅只有少數國家有，多數國家多是三顆星等級的資料，若有需求，再依照資料特性與系統服務的目的來轉換資料為RDF格式，並設計ontology(知識本體)，扮演的角色很像資料庫的schema，促使資料能夠相互連結。</li>
+<li>若單就這開放資料五顆星的等級，個人覺得無法解決，目前開放資料品質的問題。拾人牙慧，英國ODI為開放資料證書(<a href='https://certificates.theodi.org/overview'/>Open Data Certificates</a>)，設計出幾個資料品質評估面向，或許是可以參考的:<ul><li><b>法律需求(Legal Requirements)</b>：權利(Rights)、授權(Licensing)、隱私(Privacy)</li>
+<li><b>技術資訊(Technical Requirements)：</b>資料所在地(Locations)、格式(Formats)、信任(Trust)</li>
+<li><b>實用資訊(Practical Requirements)：</b>可檢索性(Findability)、 資料的準確性(Accuracy)、 品質(Quality)、保證(Guarantees)</li>
+<li><b>社會資訊(Social Requirements)</b>：文件檔案(Documentation)、支持(Support)、服務(Service)</li></ul>
+</ul>
 
 <p><b>其他意見</b></p><ul><li>(請補充)</li></ul>
 <p>小弟覺得目前大部分政府網站，其對象都是人。政府這邊還沒有建立專門針對程式應用，寫API管道的概念，是目前最大的問題。</p><p></p><ul><li>我覺得 Schee 那邊針對城市所做的調查感覺蠻不錯的：<a href="http://tw-city.census.okfn.org/"></a>http://tw-city.census.okfn.org/</li></ul>
