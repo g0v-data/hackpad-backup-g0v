@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1077"/>
+<meta name="version" content="1136"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$FK7eBR4BdAj</title>
 </head>
 <body><h1>在 Fire.app 中使用 Jade 樣板語法（以 Windows 版為例）</h1><ul class="comment"><li>Linux 跟 Mac 請以此類推... XD</li></ul>
@@ -12,8 +12,9 @@
 <li>方法三：參加 g0v 專案或找認識的人要檔案</li></ul>
 </ol>
 <ol><li>設定專案<ol><li>到你的專案資料夾中，把根目錄下的config.rb檔案弄成<a href='https://gist.github.com/ETBlue/8481039'/>這樣</a>。跟原本的config.rb不同的地方在於多了第1-3行。</li>
-<li>同樣在專案資料夾根目錄下，新增<a href='https://gist.github.com/ETBlue/8481193'/>這個檔案</a>。如果你的作業系統是Windows，要把第18、19行的「etblue」改成你的Windows使用者名稱。</li>
-<li>在專案資料夾的根目錄下，開一個叫做views的資料夾，把你的.jade檔案放在裡面</li>
+<li>同樣在專案資料夾根目錄下，新增<a href='https://gist.github.com/ETBlue/8481193'/>這個檔案</a>。如果你的作業系統是Windows，要把第18、19行的「etblue」改成你的Windows使用者名稱。</li><ul><li>如果執行時出現找不到 jade 的錯誤訊息，但是明明已經安裝 jade 了，那麼檢查 c:/users/etblue/appdata/roaming/npm/node_modules/jade/bin/jade 這個檔案是否存在，2014/05/16 新版 jade 需要加上 .js 副檔名才能用，因此需要在 tilt_jade.rb 內把兩個用到 jade 的路徑都改成 c:/users/etblue/appdata/roaming/npm/node_modules/jade/bin/jade<b>.js</b></li></ul>
+</ol>
+<ol><li>在專案資料夾的根目錄下，開一個叫做views的資料夾，把你的.jade檔案放在裡面</li>
 <li>在專案資料夾的根目錄下，開一個叫做public的資料夾，給Fire.app等一下輸出檔案用</li>
 <li>把css、js、img…等資料夾，都移到public資料夾內</li></ol>
 </li>
