@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1092"/>
+<meta name="version" content="1103"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$iBRhXaRlfZh</title>
 </head>
 <body><h1>動民主 2.0 app 化 a.k.a. 動民主 1.337</h1><p>將龐雜的動民主 2.0 系統，根據使用者意圖將不同面向的 feature 拆分成獨立小 apps 以接觸更多初階使用者，進階使用者則繼續使用原本的 facebook style 介面，後端資料彼此共通。</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_iBRhXaRlfZh_p.52366_1392183413371_動民主家族app關係圖.png'/></p><p></p><p></p><p></p><p>開發優先順序：最有新聞價值的零時記者會優先，其他從左下（使用門檻最低）到右上（使用門檻最高）。</p><p></p><p><b>總站：原本的動民主 2.0 dynamic democracy</b></p><p>democracy.g0v.tw</p><p>偽臉書公民社交系統</p><p></p><h2>共用元件</h2><p></p><p><b>民主書籤列 tabmocracy</b></p><p>動民主家族 switch，類似 tabzilla</p><p></p><p><b>民主儀表版 dashmocraboard</b></p><p>動民主 apps 總覽，含通知提示</p><p></p><h2>樞紐app：資訊彙總</h2><p></p><p><b>全民記者會 zero press</b></p><p>zeropress.democracy.g0v.tw</p><p>公民提問指定政治人物作答，列出高人氣但未答問題，可以替政治人物的回答評分，群眾發問機制類似 uservoice / google moderator</p><p><a href='/JouO9fcJvnN#動民主-1.337-全民記者會：資料架構'/>動民主 1.337 全民記者會</a></p><p><a href='https://github.com/g0v/askkk'/>市長給問嗎</a></p><p></p><p><b>懶懶苞 lazy bud</b></p><p>lazybud.democracy.g0v.tw</p><p>從其他 app 的內容匯入成各種格式的精簡懶人包，有分類和綜合的排名。已經看過的懶懶苞會開花，還沒看過的懶懶苞會打鼾。</p><p></p><h2>應景app：活動期間</h2><p></p><p><b>競選擂臺 arena</b></p><p>arena.democracy.g0v.tw</p><p>根據當時選舉活動，在競技場內開設北市擂臺、中市擂臺、南市擂臺、高雄擂臺、屏東擂臺、花蓮擂臺、台東擂臺、總統擂臺、立委擂臺……etc.，包含各種面向的候選人比較，資料來源為膝部狗仔、真度計、全民記者會。</p><p>（可能直接整合在全民記者會中）</p><p></p><p><b>政見比一比 views compete</b></p><p>viewscompete.democracy.g0v.tw</p><p>競選擂臺的一部分</p><p>內容參考「候選人政見專頁」 <a href="https://g0v.hackpad.com/SP93kHqeeFM"></a>https://g0v.hackpad.com/SP93kHqeeFM</p><p>（可能直接整合在全民記者會中）</p><p></p><p><b>零時廣場</b></p><p></p><p><b>全民公聽</b></p><p>七問八答精簡版</p><p></p><p><b>全民公投/罷免</b></p><p><a href='/cbeSqmtPCjX'/>全民公投 app</a></p><p></p><p></p><h2>議題app：研究背景知識</h2><p></p><p><b>七問八答 at sevens and eights</b></p><p>78.democracy.g0v.tw</p><p>知識系統，即動民主 2.0 的議題功能，類似 quora</p><p></p><h2>提案app：規劃政策</h2><p></p><p><b>許願池 wish pool</b></p><p>wishpool.democracy.g0v.tw</p><p>類似希望地圖</p><p></p><p><b>連連看 connect it</b></p><p>connectit.democracy.g0v.tw</p><p>腦力激盪系統，即動民主 2.0 的便利貼功能</p><p></p><p><b>政策玻璃屋 policy watch</b></p><p>policywatch.democracy.g0v.tw</p><p></p><p><b>政策共筆 policy wiki</b></p><p>policywiki.democracy.g0v.tw</p><p>政策共筆系統，即動民主 2.0 的提案撰寫功能</p><p></p><h2>專案app：追蹤執行狀況</h2><p></p><p><b>膝部狗仔 stalkeraknee</b></p><p>stalkeraknee.democracy.g0v.tw</p><p>追蹤每個政治人物的客觀資料，建立完整資料庫供其他 app 使用</p><p>基本資料</p><ul><li>姓名、照片</li>
@@ -23,7 +23,7 @@
 <li>旗下政務官財產演化圖</li></ul>
 <p>病毒、蠕蟲與木馬</p><ul><li>弊案</li>
 <li>政策風向球</li></ul>
-<p>系統診斷（真度計）</p><p></p><p><b>真度計 nose meter</b></p><p>nosemeter.democracy.g0v.tw</p><p>政見追追追（政見轉彎、跳票、…obameter，edgar 追蹤流程）</p><ul><li>歷年政見內容</li>
+<p>系統診斷（真度計）</p><p></p><p><b>真度計 nose meter [ <a href='/--lzGKZQAwe7e'/>hackpad</a>&nbsp; ]</b></p><p>nosemeter.democracy.g0v.tw</p><p>政見追追追（政見轉彎、跳票、…obameter，edgar 追蹤流程）</p><ul><li>歷年政見內容</li>
 <li>目前政見與本屆當選政見比較（轉彎率、跳票率）</li>
 <li>toley: 鄉鎮里長政見追蹤（常常很多屆同一個人）</li></ul>
 <p>弊案發生率</p><p>不明財產增加率</p><p></p><p>#動民主</p><p></p></body>
