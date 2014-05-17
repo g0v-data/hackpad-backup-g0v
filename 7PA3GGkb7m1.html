@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2531"/>
+<meta name="version" content="2598"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$7PA3GGkb7m1</title>
 </head>
 <body><h1>公務員出國考察追蹤網_政大WebProgramming第三組</h1><p>我們是政大Web Programming設計課程的學生，參考的g0v專案是『公務員出國考察網』</p><ul class="comment"><li>這個專案目前已上線，請說明你們增加或修改的部分。</li>
@@ -12,7 +12,9 @@
 
 <ul><li>使用資料</li></ul>
 <p>行政院- 公務出國報告資訊網：<a href="http://report.nat.gov.tw/ReportFront/index.jspx"></a>http://report.nat.gov.tw/ReportFront/index.jspx</p><p></p><ul><li>預設新功能</li></ul>
-<p>(一)</p><p>目標: 讓使用者可以評價政府官員出國考察的行程，用以判斷是否有哪一項是大眾普遍懷疑有浪費資源的行為。促進討論，讓公務行程的資訊透明化。</p><p></p><p>功能: 對於每項行程增加喜好評論功能透過facebook的API功能(例如like,dislike,comment,使用者用facebook帳號登入發表自己的like或dislike)發布到facebook</p><p>透過like&amp;dislike的功能讓dislike數較多的行程優先顯示在首頁</p><ul class="comment"><li>FB 並無 dislike功能, how do you implement this function?</li></ul>
+<p>(一)</p><p>目標: 讓使用者可以評價政府官員出國考察的行程，用以判斷是否有哪一項是大眾普遍懷疑有浪費資源的行為。促進討論，讓公務行程的資訊透明化。</p><p></p><p>功能: 對於每項行程增加喜好評論功能透過facebook的API功能(例如like,dislike,comment,使用者用facebook帳號登入發表自己的like或dislike)發布到facebook</p><p>透過like&amp;dislike的功能讓dislike數較多的行程優先顯示在首頁</p><ul class="comment"><li>FB 並無 dislike功能, how do you implement this function?</li>
+<li>dislike的功能，目前的想法是，對於每一筆行程加一個參數存在資料庫，不知道可不可行，會再研究看看~</li>
+<li>這個功能是想建立一個行程評價排行榜，希望替使用者在第一時間內找到他的目標</li></ul>
 
 <p>(二)</p><p>精簡化各項行程表重點內容，其他細項以bar的方式呈現</p><p>如:</p><p>(1 ) wiki手機版頁面(拉bar小選單):</p><p><a href="http://zh.m.wikipedia.org/wiki/%E5%A4%AA%E9%99%BD%E8%8A%B1%E5%AD%B8%E9%81%8B)"></a>http://zh.m.wikipedia.org/wiki/%E5%A4%AA%E9%99%BD%E8%8A%B1%E5%AD%B8%E9%81%8B)</p><p>(2) Facebook的「閱讀更多」功能</p><ul class="comment"><li>請補上行程表的mockup!! (desktop &amp; mobile responsive version)</li></ul>
 
