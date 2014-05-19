@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="3772"/>
+<meta name="version" content="4017"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$529BJcUTTmS</title>
 </head>
 <body><h1>政府開放資料品質檢驗機制</h1><p></p><h2>緣起</h2><p></p><p>5/2 零時政府參與者 jimmyhuang, muyueh &amp; tkirby 前往科技部參與開放資料座談，座談中提及五星開放資料與資料品質的問題，張善政部長談到請零時政府評估是否可能協助建立資料品質檢測的機制。</p><p></p><p>由於資料品質定義廣，從資料量、更新頻率、正確性、詳細度、精確度、修改記錄到大家常談論的格式等都屬於品質的一環，希望能夠透過社群討論出一個完整且有效的方式，來提升政府開放資料的整體素質。</p><p></p><ul><li>5/2 <a href='https://docs.google.com/document/d/1IRdyS_jkChZRTT90GqCJbXlKQxnzCtiRwBovN_Dc7JI/edit?usp=sharing'/>會議記錄</a>&nbsp;</li>
@@ -95,6 +95,7 @@
 <ul><li>紙本資料全面電子化計劃<ul><li>有鑒於政治獻金、建築執照等資訊都是紙本掃描，這類形態的資料是否可以專案處理？全國性的清查此類資料，建立資料轉換小組，利用網站透過群眾外包或是雇員將資料建檔。</li></ul>
 </li>
 <li>讓一般民眾傳達意見的管道<ul><li>除了駭客之外，建議有一個管道，讓一般民眾提一些意見。</li></ul>
+<ul class="comment"><li>data.gov.tw 可以算是目前的管道</li></ul>
 </ul>
 
 <p><b>廣義的開放資料</b></p><ul><li>政府網站是否應該開放源碼？</li>
@@ -113,7 +114,7 @@
 <p><b>其他意見</b></p><ul><li>(請補充)</li></ul>
 <p>小弟覺得目前大部分政府網站，其對象都是人。政府這邊還沒有建立專門針對程式應用，寫API管道的概念，是目前最大的問題。</p><p></p><ul><li>我覺得 Schee 那邊針對城市所做的調查感覺蠻不錯的：<a href="http://tw-city.census.okfn.org/"></a>http://tw-city.census.okfn.org/</li></ul>
 
-<h2>意見匯整</h2><p>下方開始將上方的討論總結</p><p></p><h2>g0v 社群建議針對政府開放資料品質檢驗應注意之要點</h2><p></p><p><b>導言</b></p><p>為促進民間創意發想，開放資料之原則應以負向表列為主 -- 除了表列出不應開放資料之外，所有的資料均應遵循適當原則公開給大眾使用。負向表列之建立則除非涉及法律或國安問題，應以儘量開放為原則。</p><p></p><p><b>開放之資料必須具備的條件 (必要條件)</b></p><p>所有的必要條件都應該達成。若未能達到所有必要條件，則不及格。</p><ul><li>資料開放率需夠高<ul><li>「不夠」開放的資料等於沒有開放</li></ul>
+<h2>意見匯整</h2><p>下方開始將上方的討論總結</p><p></p><h2>g0v 社群建議政府開放資料品質檢驗應注意之要點</h2><p></p><p><b>導言</b></p><p>為促進民間創意發想，開放資料之原則應以負向表列為主 -- 除了表列出不應開放資料之外，所有的資料均應遵循適當原則公開給大眾使用。負向表列之建立則除非涉及法律或國安問題，應以儘量開放為原則。</p><p></p><p><b>開放之資料必須具備的條件 (必要條件)</b></p><p>所有的必要條件都應該達成。若未能達到所有必要條件，則不及格。</p><ul><li>資料開放率需夠高<ul><li>「不夠」開放的資料等於沒有開放</li></ul>
 </li>
 <li>使用正確且開放的格式<ul><li>(開放) 資料使用之格式應普及，並不需使用收費軟體開啓。例如，不應使用 doc, xls 等格式。</li>
 <li>(開放) 使用的格式應有格式之說明，讓任何人都能夠自行撰寫讀取程式。</li>
@@ -158,10 +159,11 @@
 </li>
 <li>民間回饋處理之效率及完成率</li></ul>
 
-<p>主動提升開放資料之建議做法</p><ul><li>定期資料黑客松<ul><li>由政府單位列出可提供之資料列表，於黑客松時應民眾需求提供，藉以了解</li></ul>
+<p><b>主動提升開放資料品質之建議做法</b></p><ul><li>定期資料黑客松<ul><li>由政府單位列出可提供之資料列表，於黑客松時應民眾需求提供，藉以了解民間需求並獲取回饋以了解開放之資料品質</li></ul>
 </li>
-<li>程式自動審查</li>
+<li>程式自動審查<ul><li>建立基本規則例如格式驗證, 編碼分析、縣市鄉鎮名稱比對等等先做一遍評量，可節省大量人工</li></ul>
+</li>
 <li>紙本資料全面電子化</li></ul>
 
-</body>
+<p><b>社群針對開放資料品質檢驗所能提供之協助</b></p><p>由於零時政府並未組織化，民眾參與均為自發性、志願性，其產出並沒有強制力或約束力，因此除非找到個人願意提供協助，否則無法對政府單位提出實質上的承諾。然而目前有 g0v 專案計劃要建立開放資料整理平台( <a href="http://data.g0v.tw"></a>http://data.g0v.tw )，基於開放源碼的出發點，屆時可作為開放資料整理的示範網站，供政府參考。</p><p></p></body>
 </html>
