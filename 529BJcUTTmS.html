@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2349"/>
+<meta name="version" content="3772"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$529BJcUTTmS</title>
 </head>
 <body><h1>政府開放資料品質檢驗機制</h1><p></p><h2>緣起</h2><p></p><p>5/2 零時政府參與者 jimmyhuang, muyueh &amp; tkirby 前往科技部參與開放資料座談，座談中提及五星開放資料與資料品質的問題，張善政部長談到請零時政府評估是否可能協助建立資料品質檢測的機制。</p><p></p><p>由於資料品質定義廣，從資料量、更新頻率、正確性、詳細度、精確度、修改記錄到大家常談論的格式等都屬於品質的一環，希望能夠透過社群討論出一個完整且有效的方式，來提升政府開放資料的整體素質。</p><p></p><ul><li>5/2 <a href='https://docs.google.com/document/d/1IRdyS_jkChZRTT90GqCJbXlKQxnzCtiRwBovN_Dc7JI/edit?usp=sharing'/>會議記錄</a>&nbsp;</li>
@@ -113,5 +113,55 @@
 <p><b>其他意見</b></p><ul><li>(請補充)</li></ul>
 <p>小弟覺得目前大部分政府網站，其對象都是人。政府這邊還沒有建立專門針對程式應用，寫API管道的概念，是目前最大的問題。</p><p></p><ul><li>我覺得 Schee 那邊針對城市所做的調查感覺蠻不錯的：<a href="http://tw-city.census.okfn.org/"></a>http://tw-city.census.okfn.org/</li></ul>
 
-<p></p></body>
+<h2>意見匯整</h2><p>下方開始將上方的討論總結</p><p></p><h2>g0v 社群建議針對政府開放資料品質檢驗應注意之要點</h2><p></p><p><b>導言</b></p><p>為促進民間創意發想，開放資料之原則應以負向表列為主 -- 除了表列出不應開放資料之外，所有的資料均應遵循適當原則公開給大眾使用。負向表列之建立則除非涉及法律或國安問題，應以儘量開放為原則。</p><p></p><p><b>開放之資料必須具備的條件 (必要條件)</b></p><p>所有的必要條件都應該達成。若未能達到所有必要條件，則不及格。</p><ul><li>資料開放率需夠高<ul><li>「不夠」開放的資料等於沒有開放</li></ul>
+</li>
+<li>使用正確且開放的格式<ul><li>(開放) 資料使用之格式應普及，並不需使用收費軟體開啓。例如，不應使用 doc, xls 等格式。</li>
+<li>(開放) 使用的格式應有格式之說明，讓任何人都能夠自行撰寫讀取程式。</li>
+<li>(正確) 應提供各類型資料之建議格式列表。例如，表列或統計資料應使用 csv ，不應使用 pdf。</li></ul>
+</li>
+<li>提供使用授權<ul><li>一般情況下，資料不應限制使用範圍及用途</li>
+<li>無論範圍受限與否，資料必須附帶其可用範圍的清楚說明</li></ul>
+</li>
+<li>提供資料說明<ul><li>應提供資料來源、計算公式、誤差範圍及其他與資料意涵之說明，避免資料遭誤用。<ul><li>例如，人口普查之方式，死亡率之計算法等等，給定經緯度之誤差範圍等等。</li></ul>
+</ul>
+</ul>
+
+<p><b>對開放資料品質有幫助的條件 (充份條件)</b></p><p>若能達成充分條件，則為良好的開放資料。</p><ul><li>提供版本資訊<ul><li>明確記錄資料修訂的內容及時間。例如 2010 年台北縣更名為新北市，或村里改名、合併等資料。</li>
+<li>資料更改之記錄應視為另一種開放資料，並遵循所有開放資料應有之規範。</li></ul>
+</li>
+<li>提供歷史資料<ul><li>針對不同時間點提供不同版本之資料，例如給定一個時間點，取得當時隻全國村里界圖。</li>
+<li>過去曾釋出的資料在未來也應該能夠取得 (例如，YouBike 的資料並無留存，無法取得過往資料)</li></ul>
+</li>
+<li>資料統一<ul><li>政府應針對各類型的資料給與表現的標準。<ul><li>例如，各部會間提到台北市時，「臺北市」「台北市」「台北」都有人用，不統一造成混亂。</li>
+<li>又例如電話號碼 02-1234-56787、12345678、(02)12345678也都有人用，處理上有困難。</li></ul>
+</li>
+<li>常見的資料統一方針如下，僅為舉例<ul><li>統一使用 utf-8 編碼</li>
+<li>統一使用 markdown 或 html 排版</li>
+<li>統一使用代碼表示各鄉鎮，例如 ISO 3166-2:TW 中使用 TW-CYI 代表嘉義縣</li>
+<li>避免使用全形空白</li></ul>
+</li></ul>
+</li>
+<li>足夠的資料細緻度<ul><li>例如，提供各鄉鎮而非各縣市的統計資料。</li>
+<li>又例如，提供經緯度而非概略地址(例如，中正路口檳榔攤斜對面之類)</li></ul>
+</li>
+<li>示範性資料展示平台<ul><li>除了提供資料以外，也提供瀏覽之介面<ul><li>例如提供 shp 檔之餘，也可先在線上地圖預覽 shp 之內容</li></ul>
+</li></ul>
+</li>
+<li>統一的 API 介面<ul><li>例如由 data.gov.tw 統一使用 REST 規範提供資料。比方說，2013年台北市大安區男性 25~30歲人口數據可由下列網址提供：<ul><li><a href="http://data.gov.tw/moi/population/taipei/daan/2013/man/25-30/"></a>http://data.gov.tw/moi/population/taipei/daan/2013/man/2<a href='http://data.gov.tw/moi/population/taipei/daan/2013/man/2-30/'/>5</a>-30/</li>
+<li>也可為中文網址: <a href="http://data.gov.tw/內政/人口/台北市/大安區/2013/男性/25-30/"></a>http://data.gov.tw/內政/人口/台北市/大安區/2013/男性/25-30/</li></ul>
+</li></ul>
+</li>
+<li>提供即時資料<ul><li>資料若能隨時保持在最新也是大大加分。</li></ul>
+</ul>
+
+<p><b>開放資料品質的其他評分方式</b></p><ul><li>資料開放規劃及進程<ul><li>各單位是否建立單位內所有資料之列表，並評估不可釋出之資料後，提出資料開放之進程？</li></ul>
+</li>
+<li>民間回饋處理之效率及完成率</li></ul>
+
+<p>主動提升開放資料之建議做法</p><ul><li>定期資料黑客松<ul><li>由政府單位列出可提供之資料列表，於黑客松時應民眾需求提供，藉以了解</li></ul>
+</li>
+<li>程式自動審查</li>
+<li>紙本資料全面電子化</li></ul>
+
+</body>
 </html>
