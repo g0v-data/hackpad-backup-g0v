@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="20"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$h6fOoDAd9qZ</title>
+</head>
+<body><h1>民間司改會-陪偵平台</h1><p></p><ul><li>舊 hackpad： <a href="https://hackpad.com/--ltsoiiHdSbX"></a>https://hackpad.com/--ltsoiiHdSbX</li>
+<li>專案代號&nbsp; JRF-<i>attorney</i></li></ul>
+<ul class="comment"><li>accompany/defend 會不會比 follow 合適？或乾脆用 attorney xD</li>
+<li>可以XDD</li>
+<li>xD 用 attorney 感覺有潛力包括其他可能的服務 xD</li></ul>
+<ul><li>什麼是隨偵？&nbsp;<ul><li>一般抗議活動時往往會有抗議民眾被警方帶走偵訊，為維護這些抗議民眾的權益，司改會協調義務律師前往現場協助民眾面對偵查。往往是事件驅動，並隨著各種事件的大小而有不同程度的驅動量。</li>
+<li>本平台目的是確保每位當事人皆有律師陪同偵訊，並降低辦公室與當事人、律師間反覆確認的聯繫行政工作。</li></ul>
+</li>
+<li>為什麼發起？<ul><li>因為 TonyQ 去參與民間司改會 323 聯合訴訟時，跟執秘梅慧聊到他是資訊人，所以意外跌坑。主要是他們現在並沒有一個可以讓律師認養陪偵案件的有效系統，在聯繫律師的過程往往需要透過大量電話簡訊往返與確認，而且如果沒有辦法馬上接到回音的話，容易有多個律師去協助一個陪偵當事人的資源浪費的狀況。（除非案子很特殊，不然通常不需要多個律師到場）</li></ul>
+<ul class="comment"><li>請問這是不是代表某些時候的確需要不只一個律師？如果是這樣的話，資料欄位或許可以加數量？&nbsp;</li>
+<li>之前跟梅慧確認時提到這種時候通常非常特殊（ex.魏揚），可以作為特例處理。</li>
+<li>了解。雖然我覺得以資料庫和寫程式的角度來說，加上數量其實不難 xD</li>
+<li>我覺得可以保留擴充空間 就初期來講先以簡化介面為主 XD&nbsp; （用最小單位推進） (ps.我想用 mongo XDD)</li>
+<li>喔如果只是介面的話就先當作 n = 1 顯示第一個律師之類的 (mongo 會讓這件事情比較困難嗎？）</li>
+<li>不會 可能比較簡單 因為他可以巢狀存資料。只要多 push 一個律師進去就好 XD</li>
+<li>我的個人意見是一開始就要用 list, 但是 UI 先顯示第一個（如果非空）</li>
+<li>Sure :)</li>
+<li>或者是說，因為司改會及律師之間也不容易掌握現場有多少律師，所以許多熱心的律師就乾脆直接到現場，但有時候其實現場的律師已足夠</li></ul>
+<ul><li>加上民間司改會目前沒有太多行政人力可以做這件事情，如 318 學運期間曾有上百次的陪偵需求，聯繫相當浪費資源，若未來面對可能更大的抗爭規模，能否即時做出準備讓義務律師團能夠盡最大心力幫忙，是此一平台很重要的事情。</li></ul>
+<ul class="comment"><li>且其實目前我們較難協助中南部的陪偵（中南部是有義務律師的），希望未來此平台也可以協助中南部的陪偵</li></ul>
+</ul>
+<ul><li>功能需求：（以下是以需求暨規劃書的方式列出，如得有現成套件可以取代可以討論、但請注意功能是否符合）<ul><li>Web<ul><li>主要 user：司改會、律師</li>
+<li>資料庫，資料表有<ul><li>律師資料<ul><li>姓名</li>
+<li>律師證號</li>
+<li>登錄公會</li>
+<li>可陪偵地點</li></ul>
+<ul class="comment"><li>【可陪偵地點】此欄位需要律師可自行編修</li>
+<li>會在 app (client) 區的規劃裡面</li></ul>
+<ul><li>聯繫電話<ul><li>白天<ul><li>市話（選填）</li>
+<li>手機</li></ul>
+</li>
+<li>夜間<ul><li>市話（選填）</li>
+<li>手機</li></ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+<ul class="comment"><li>&nbsp; <a href='https://hackpad.com/ep/profile/AymLJPx1IpL'/>Miffy Chen</a> 連手機都需要切到日夜這麼細嗎 QQ</li>
+<li>如此安排是因為希望可確保夜間的聯繫，所以特別強調出來，我也猜想此欄位應該會與白天的一致，但在與雨凡討論後覺得還是細分，以避免聯繫上的狀況</li><ul><li>E-mail</li>
+<li>Line ID（選填）</li></li>
+<li>若平台有類似聊天室的功能，讓義務律師們可留下訊息，那就更完美了XD 就不需有Line ID這個欄位</li></li>
+<li>流行的聯絡方式一直變，建議不要綁死 Line</li></li>
+<li>同意，或許平台上是否可能有留言板的功能，讓彼此可留下資訊</li></li>
+<li>建議可用 {聯絡方式/資訊} 一組。例如 {skype/xxx} {line/ooo}</li>
+<li>案件資料</li>
+<li>姓名</li>
+<li>電話</li>
+<li>逮捕原因（案由）</li>
+<li>陪偵地點：地名(通常都是派出所)、地址、map</li>
+<li>陪偵地點區域（縣市，因為律師需要註冊該縣市律師才能執業，所以區域很重要）（至少 UI 中由陪偵地點自動推出）<ul><li>基隆律師公會</li>
+<li>台北（含士林，板橋，台北地方法院）</li>
+<li>桃園</li>
+<li>新竹</li>
+<li>苗栗</li>
+<li>台中</li>
+<li>南投</li>
+<li>彰化</li>
+<li>雲林</li>
+<li>嘉義</li>
+<li>台南</li>
+<li>高雄</li>
+<li>屏東</li>
+<li>台東</li>
+<li>花蓮</li>
+<li>宜蘭</li></li></ul>
+</li>
+<li>看起來「陪偵地點區域」可以由「陪偵地點」推出。</li></li>
+<li>agree 當初是不知道有哪些律師公會，剛跟 isabel.hou 討論後找到律師公會名單應該能看看能不能再簡化介面</li></li>
+<li>看來最好的設計，是 UI 會幫你推，但不強制一定要一致，這樣可以手動調整應付特殊狀況</li></li>
+<li>這個陪偵地區要去對上面律師資料中的”可陪偵區域“才有辦法發訊息。</li></li>
+<li>先確認律師工會的清單是變動性不大的吧 XD&nbsp;&nbsp; 原則上這清單會從 server 來。(web)&nbsp;</li></li>
+<li>這些推論和檢查我認為都是合理的，但我認為都要保留手動違反這些限制的空間，應付資料來不及更新、奇妙的特殊狀況等問題。</li>
+<li>案件狀態（依照 新收案、已確認陪偵、陪偵中、已結束、取消）</li>
+<li>接案律師（資料庫中允許多位，但 UI 先最多顯示一位）</li>
+<li>預計到達時間</li>
+<li>到達時間</li>
+<li>陪偵結果紀錄</li>
+<li>介面</li>
+<li>公開介面</li>
+<li>目前沒有規劃頁面，TonyQ 有建議，可以把義務律師接的案子列出來作為對義務律師的正回饋（還在討論中）。</li>
+<li>內部介面（草案是以&nbsp; jrf.org.tw domain 的 gmail 作為驗證）</li>
+<li>司改會 key in 案件資料表單<ul><li>Key 完後直接發 notification 給所有該陪偵區域律師詢問他們意願</li></ul>
+</li>
+<li>顯示所有案件資料列表（依照 新收案、已確認陪偵、陪偵中、已結束）</li>
+<li>顯示特定律師承接的案件與狀態</li>
+<li>司改會確認律師註冊是否正確的設定頁（律師需要先註冊再由司改會確認）</li>
+<li>司改會邀請律師註冊的頁面</li></li>
+<li>讓司改會也可邀請律師如何？這樣可能可以讓平台轉換更容易。</li></li>
+<li>有道理。</li></li>
+<li>同意。</li>
+<li>App (iOS/Android)</li>
+<li>主要 user：律師</li>
+<li>介面</li>
+<li>（選擇性）靜音：可以預先設定目前願意服務範圍，超出的請求不會吵。或乾脆全靜音。</li>
+<li>通知：當可服務區域內有案子時會收到通知，並決定、回應是否去處理。（若接案時已有人處理會顯示已有人處理，(目前)一案以一人為主。）</li></ul>
+</ul>
+<ul class="comment"><li>反正目前 UI 只能輸入一筆，n == list.size() 就代表不需要幫手了</li><ul><li>註冊：同網站律師資料表，註冊後等待司改會 approve（如果被邀請則免）&lt;&lt; 這裡需要填寫可服務範圍</li></li>
+<li>但有可能律師剛好今天跑到其他地方去啦（我的意思就是這沒有解決物理性位置）</li></li>
+<li>律師要先登記才能服務</li></li>
+<li>這是指登錄區域，不是物理性位置。</li></li>
+<li>聽起來現在是需要再切一個平常可以服務的區域跟登錄區域? 我原本的想法是直接用登錄區域&lt;</li></ul>
+</ul>
+<ul class="comment"><li>我覺得如果要讓律師覺得好用，可能要有「靜音」功能 xD</li>
+<li>yep 加個讓他可以選擇只只接收哪些區域好了（但一定在登錄區域內） （hackpad這系統是不是跟新酷音有仇啊Q_Q）</li>
+<li>直接忽略就好了啦。真的，一開始不要想太複雜。我不太可能每天去手動調位置，老實說。不過要能不要一直響。</li>
+<li>好吧先做第一版出來再來調整 XD 我也覺得應該先收斂需求 哈哈</li>
+<li>那就先用振動吧，這個通知該怎麼做可以再想一想。（狀態顯示正在刻 web） XDDD</li><ul><li>接案：可選擇是否接案，接案後要寫預計到達時間跟用律師手機簡訊通知當事人</li>
+<li>案件管理：瀏覽過去兩個月案子(?)&nbsp;</li>
+<li>帳號管理：更新註冊資料</li></ul>
+</ul>
+<ul class="comment"><li>讓律師願意主動回報目前所在地點或是被動選擇案件區域如何？假設大家都同樣有空、意願相似的話，是不是比較近的人去移動成本最小？（這跟司改會通知要發給誰是兩回事）</li>
+<li>我沒有寫清楚，目前其實計畫會是 pool ，就是傳送給該區的所有人，看誰先回應這樣。（是有談到一個可以讓律師設定在線上或不在線上，但我覺得這個有點太複雜） （另外這個系統也應該要可以允許非原本的義務律師來加入）</li>
+<li>對我的意思就是這樣。至少讓律師被動的選擇願意接受的範圍。</li></ul>
+<ul><li>進展：<ul><li><a href='https://hackpad.com/ep/profile/HUoUqaJnV2n'/>Tonyq Wang</a> 認養 Web<ul><li><a href="https://github.com/JRF-attorney/jrf-attorney-web"></a><a href='https://github.com/JRF-attorney/jrf-attorney-web'/>https://github.com/JRF-attorney/jrf-attorney-web</a></li><ul class="task"><li>移進 g0v<ul class="task"><li>跟司改會確認過 open 的問題</li></ul class="task">
+</li>
+<li>建立正式測試站</li><ul class="taskdone"><li>api 的註冊(register method) 並可回傳 sid&nbsp;</li>
+<li>後台權限認證</li></ul>
+<ul class="task"><li>建立/編輯案件</li>
+<li>api 查詢相關 method</li>
+<li>android client</li>
+<li>iOS client</li></ul>
+</ul>
+</ul>
+</ul>
+</ul>
+
+<ul class="comment"><li>我有個想法：也許之後還可以做給當事人用的 app.</li>
+<li>同意</li>
+<li>像是社運的場合如果可以單鍵送出似乎很方便。不過也許要先跟司改會註冊帳號之類的。</li>
+<li>之前警方函送幫社運直播的公民記者時，我們在直播社團（<b><a href='https://www.facebook.com/groups/1484094481805577/'/>公民議題網路直播現場攝影與網路監看組</a></b>）有討論過這件事，<a href='https://g0v.hackpad.com/ep/profile/v2FoVsCJSQ7'/>Rhozan</a> 當時也有和司改會及義務律師團搭上線，當時的討論在這邊 <a href="https://www.facebook.com/groups/1484094481805577/permalink/1502955929919432/"></a><a href='https://www.facebook.com/groups/1484094481805577/permalink/1502955929919432/'/>https://www.facebook.com/groups/1484094481805577/permalink/1502955929919432/</a></li>
+<li>目前對於目前對於當事人最主要的問題在於身份的確認與回報的正確性，目前還沒有足夠多的資料與經驗來佐證這些事情，可能之後再跟司改會來討論後續的發展。我是覺得如果能夠有信得過得中介人來幫忙回報，對系統會有不錯的加分。因為如果是錯務的回報對這制度還是蠻麻煩的。XD</li>
+<li>其實這是我們最期盼的狀況，完全的開放給大眾，將報案、義務律師接案、律師聯繫當事人並前往陪偵，完全在平台上進行，不過如同TONYQ所說，在確保訊息驗證的部分我們還沒想出可以解決的好方法。</li>
+<li><u>噢對！不好意思忘了自我介紹，我是司改會梅慧，非常開心能認識大家，也非常感謝你們的跳坑協助 XD</u></li></ul>
+
+<p></p><p></p><p></p></body>
+</html>
