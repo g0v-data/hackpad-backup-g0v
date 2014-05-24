@@ -3,15 +3,15 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="440"/>
+<meta name="version" content="449"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$eDY68cTC3Hv</title>
 </head>
-<body><h1>地方政府開放資料彙整與評比建議</h1><p></p><p><b>前情提要</b></p><p></p><p>【利益揭露】由於 ODA 邀請 clkao 至倫敦出席 opendata 交流，但因旅費無法直接報銷，需要找個 project 來做，因此雙方同意藉由進行「地方政府開放資料評比規劃」顧問案，經費 NT$105k 來 cover 旅費。ODA 方面同意所有產出原始碼以 MIT License 釋出、相關報告以 CC-BY-ND 釋出。</p><p></p><p>*</p><p><a href="https://speakerdeck.com/clkao/di-fang-zheng-fu-kai-fang-zi-liao-ping-bi-gui-hua"></a>https://speakerdeck.com/clkao/di-fang-zheng-fu-kai-fang-zi-liao-ping-bi-gui-hua</p><p></p><p><b>預計進行</b></p><p></p><p>架設 local.data.g0v.tw, 讓大家幫忙填寫各種「單一資料在各地方政府釋出的狀況」，例如「違法勞基法名單」，在各縣市的「公開方式」、「授權」、「更新頻率」、「g0v 已處理過資訊」等現況。</p><p></p><p>可以從 <a href="https://github.com/okfn/opendatacensus/"></a>https://github.com/okfn/opendatacensus/ 直接改（不過他 backend 是 google spreadsheet，動態增加資料集種類會有點麻煩），或直接用 pgrest 弄一個類似的。</p><ul class="comment"><li>或可以用 data.g0v.tw 開一個新欄位，對 data 進行縣市行政區的分類</li>
+<body><h1>地方政府開放資料彙整與評比建議</h1><p></p><p><b>前情提要</b></p><p></p><p>【利益揭露】由於 ODA 邀請 clkao 至倫敦出席 opendata 交流，但因旅費無法直接報銷，需要找個 project 來做，因此雙方同意藉由進行「地方政府開放資料評比規劃」顧問案，經費 NT$105k 來 cover 旅費（預計實際工時 20hr）。ODA 方面同意所有產出原始碼以 MIT License 釋出、相關報告以 CC-BY-ND 釋出。</p><p></p><p>*</p><p><a href="https://speakerdeck.com/clkao/di-fang-zheng-fu-kai-fang-zi-liao-ping-bi-gui-hua"></a>https://speakerdeck.com/clkao/di-fang-zheng-fu-kai-fang-zi-liao-ping-bi-gui-hua</p><p></p><p><b>預計進行</b></p><p></p><p>架設 local.data.g0v.tw, 讓大家幫忙填寫各種「單一資料在各地方政府釋出的狀況」，例如「違法勞基法名單」，在各縣市的「公開方式」、「授權」、「更新頻率」、「g0v 已處理過資訊」等現況。</p><p></p><p>可以從 <a href="https://github.com/okfn/opendatacensus/"></a>https://github.com/okfn/opendatacensus/ 直接改（不過他 backend 是 google spreadsheet，動態增加資料集種類會有點麻煩），或直接用 pgrest 弄一個類似的。</p><ul class="comment"><li>或可以用 data.g0v.tw 開一個新欄位，對 data 進行縣市行政區的分類</li>
 <li>然後用用 api 撈統計餵進去給 opendatacensus</li>
 <li>主要覺得比較難的部份，是如何處理「更新」的偵測、自動化問題？</li>
 <li><a href="http://tw-city.census.okfn.org/"></a>http://tw-city.census.okfn.org/ CfT弄的</li></ul>
 
-<p>對社群來說，可以順便整理各類已經從地方政府分別處理好、有在利用的資料，而 ODA 可由上述產出的資料現況，選擇一些指標性資料，來作為地方政府的評比依據。</p><p></p><p><b>評比相關想法</b></p><p></p><p>（此處評比部分由&nbsp; ODA 進行，但他們也很樂意聽取社群意見）</p><p></p><p>評比部分預計於七月實際進行，可考量的評分方式：</p><ul><li>指標性資料集的開放現況</li>
+<p>對社群來說，可以順便整理各類已經從地方政府分別處理好、有在利用的資料，而 ODA 可由上述產出的資料現況，選擇一些指標性資料，來作為地方政府的評比依據。</p><p></p><p><b>評比相關想法</b></p><p></p><p>（此處實際評比部分由&nbsp; ODA 進行，不在本顧問案中，但他們也很樂意聽取社群意見）</p><p></p><p>評比部分預計於七月實際進行，可考量的評分方式：</p><ul><li>指標性資料集的開放現況</li>
 <li>資料集在評比活動進行期間有所改善</li>
 <li>(your idea?)</li></ul>
 
