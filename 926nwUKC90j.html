@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="6759"/>
+<meta name="version" content="7194"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$926nwUKC90j</title>
 </head>
 <body><h1>5 月萌典松: moed4ct 含直播及文字轉播</h1><ul class="comment"><li>所以以後萌典松場次數字是要加在 &quot;e&quot; 還是 &quot;i&quot; 哩（轉眼珠）</li>
@@ -165,22 +165,35 @@
 <p>poga: ET 叫我幫他做便利貼系統…像 loomio 提案前應該有個 brainstroming 的步驟。動民主其中一部份是作公民臉書……</p><ul><li>mockup：把便利貼想成一份 list，大家可以在上面加加減減加標籤grouping投票…etc，上面的 bar 可以顯現這個 list 裡頭大家同意度的分佈。這是一個類似便利貼的系統，但不是像其他動民主需要有階段性，內容會不停被修改，沒有停止的一天。這個系統沒有說要什麼時候決議，是永無止境的演化，團體可以在某個時間點把這個清單當下的狀態收割走，當作是他的民意基礎去做他要做的事情。這個系統不負責後面的事情。</li>
 <li>另外<a href='http://g0v.github.io/don-republic/public/index.html'/>公民臉書</a>的部分…參考 github 把大家的操作行為弄成 timeline 的形式，現在還沒做。</li></ul>
 
-<p>Kiwi補充：Airesis可以跑了，大致準備如下</p><ul><li>Airesis是一個與其他開源軟體緊密結合的rails軟體，一個環節沒扣上就不會動</li>
-<li>poga fork <a href="https://github.com/poga/Airesis"></a>https://github.com/poga/Airesis<ul><li>驗證過這個版本有解決讀取yaml語系文件的問題(自從ruby 1.9以來使用psych yaml parser的utf8處理方式，這與其他branch的airesis使用的是ruby 1.8版的syck來讀取而有所不同，但現在沒人在裝1.8了...)</li></ul>
+<p>Kiwi補充：Airesis可以跑了，大致準備如下</p><ul><li>Airesis是一個與其他開源軟體緊密結合的rails軟體，一個環節沒扣上就不會動，基本社群服務功能都有，所以也需要許多資源來正式架設</li>
+<li>poga fork <a href="https://github.com/poga/Airesis"></a>https://github.com/poga/Airesis<ul><li>驗證過這個版本有解決讀取yaml語系文件的問題(自從ruby 1.9以來使用psych yaml parser的utf8處理方式，這與其他branch的airesis使用的是ruby 1.8版的syck來讀取而有所不同，但現在沒人在裝1.8了...)</li>
+<li>有些hard code的訊息之類的...是義大利文，不知道是做啥用的</li></ul>
 </li>
-<li>一個可以用的domain name，至少要有一個&quot;.&quot;，如webserver.tw<ul><li>他的url_for有改過，盡量要讓domain name長得像www.xxx.xx或xxx.xx，否則可能會有其他bug，這個是程式判斷的，與設定檔無關</li></ul>
+<li>一個可以用的domain name，至少要有一個&quot;.&quot;，如webserver.tw<ul><li>他的url_for有改過，盡量要讓domain name長得像www.xxx.xx或xxx.xx。有用subdomain作為group的設計，多個xxx.airesis.tw都可以跑在同一個site上而不會混亂。</li></ul>
 </li>
 <li>正式上線需要資源<ul><li>要正式上線要申請一堆social app的app_id ... 跳過(device, omniauth-xxx)</li>
-<li>需要一個mail relay server (maktoub, resque)</li></ul>
+<li>需要一個正式的mail relay server，大量認證信和電子報才不會被擋(maktoub, resque)<ul><li><a href='http://vovo2000.com/phpbb2/viewtopic-336398.html'/>如何讓我公司的 MAIL 不會被設定為「垃圾郵件」</a></li></ul>
 </li>
+<li>solr server與rails的db分開，將rails的db,solr,redis擺在一起的話，那就要加個SSD還是硬碟免得IO卡在一起</li></ul>
+</li>
+<li>wkhtmltopdf(wicked_pdf)<ul><li>下載wkhtmltopdf的binary至一個特定目錄並且設定config/initializers/wkhtmltopdf.rb:WickedPdf.config</li></ul>
+</li>
+<li>PostgreSQL &gt; 8.4<ul><li>雖然有看到文章說要9.1不過我測試schema是OK的</li></ul>
+</li>
+<li>Redis &gt; 2.6 (resque, redis)</li>
+<li>Solr &gt; 3.5, rake sunspot:solr:run/start (sunspot, sunspot-solr)<ul><li><a href="https://github.com/sunspot/sunspot/wiki/Upgrading-sunspot_solr-Solr-Instance"></a>https://github.com/sunspot/sunspot/wiki/Upgrading-sunspot_solr-Solr-Instance</li>
+<li>正式上線必須評估是不是要使用solr 3.5，3.5已經是很久以前的東。很奇怪的是sunspot好像沒打算解決solr4的相容問題，此外現在solr開發主力都移往solr4，將來會難以維護</li></ul>
+</li>
+<li>nodejs&nbsp; &gt; 0.10 (coffee-script, execjs)</li>
+<li>Faye &gt; 1.0 , rackup private_pub.ru -s thin (-D) (faye, private_pub)</li>
 <li>將config/*.yml.example複製成*.yml</li>
-<li>下載wkhtmltopdf的binary至一個特定目錄並且設定config/initializers/wkhtmltopdf.rb:WickedPdf.config(wicked_pdf)</li>
-<li>PostgreSQL &gt; 8.4 (雖然有看到文章說要9.1不過我看schema是OK的)</li>
-<li>Redis &gt; 2.6</li>
-<li>Solr &gt; 4.8 (還沒詳細測試...明天再補)(sunspot)</li>
-<li>nodejs&nbsp; &gt; 0.10</li>
-<li>rake db:setup</li></ul>
-<p><img src='https://dl.dropboxusercontent.com/u/16968403/g0v/airesis_1.png'/></p><p><img src='https://dl.dropboxusercontent.com/u/16968403/g0v/airesis_2.png'/></p><p></p><p><b>收播後特別節目</b></p><p>書櫃小區聊天：</p><ul><li>公務單位組長、科長、第一線承辦之間斷層（ a0kman 順序是這樣嗎？）；輿論</li>
+<li>rake db:setup</li>
+<li>建立測試帳號</li><ol><li>建立帳號，你將會收不到驗證信</li>
+<li>用email在rails console裡找到你的user</li>
+<li>confirmed_at = updated_at, user_type = UserType.find 1</li>
+<li>save</li></ol>
+</ul>
+<p><img src='https://dl.dropboxusercontent.com/u/16968403/g0v/airesis_1.png'/></p><p><img src='https://dl.dropboxusercontent.com/u/16968403/g0v/airesis_2.png'/></p><p><img src='https://dl.dropboxusercontent.com/u/16968403/g0v/airesis_3.png'/></p><p></p><p></p><p><b>收播後特別節目</b></p><p>書櫃小區聊天：</p><ul><li>公務單位組長、科長、第一線承辦之間斷層（ a0kman 順序是這樣嗎？）；輿論</li>
 <li>海埔新生或邊緣弱勢之三不管地帶→（要資源或關注）→跨部會小組（政務委員名單）→疊床架屋大政府</li>
 <li>a0kman: 有些條文可能暗示會出現的填海作業及污染工業；自經區與難以監督的前店後廠；農地轉工業用地，農地縮減，真糧食危機</li>
 <li><a href='https://hackpad.com/dJuZFfVKopG'/>問題家庭共筆</a>、台灣戰後嬰兒潮 / 解嚴世代、島國 mobility 與壓力鍋處境、標籤思維習性</li></ul>
