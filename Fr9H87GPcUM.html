@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="13981"/>
+<meta name="version" content="14017"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$Fr9H87GPcUM</title>
 </head>
 <body><h1>太陽花盒子－自己的媒體自己報－</h1><p>/* 命名可以再思考一下更加有公民資訊透明含意，不過也許可以不用，這個名字也是很有歷史意義。 */</p><p><b>第一次來的人可以跳到最底下看 FAQ (麻煩讓 FAQ 置底)</b></p><ul class="comment"><li>經過嘗試，網樂通的開發成本偏高 (遙控器的 delay 太嚴重，播放影片的 navigation 會失敗， youtube, justin, ustream 的 plugin 要另外開發，需要再自己維護 repo server)，time-to-market 太長，還有即使完工，其 availability 的不確定很性高。目前決定暫停開發，轉為評估 android tv，可能選 mk802 / A10 為目標平台。高單價的 android tv platform 還有 mk808 和 rk3066。請對 android tv 有經驗的朋友不吝指教。因為 solution 改了，assumption 也改了， TA 也會跟著調整。目前鎖定為有能力自行設定 android tv 且與長輩同住的朋友。</li></ul>
@@ -28,7 +28,9 @@
 <p><b>&nbsp;Android版</b></p><p>發想人： Michael_LI</p><p>　　本人提議 Android 環境的電視盒，主要認為此平台長遠看來都是主流，影響力比較大，本人可以提供一款商業產品進行測試與開發。</p><ul class="comment"><li>Michael 我們打算評估 Android TV 的 solution，想請教你手上的平台的 hw spec，還有它的成本，有沒有紅外線和搖控器和開發套件等等。</li>
 <li>既然要開發 Android 我只能先評估看看 <a href="https://github.com/Urucas/OpenYoutubePlugin"></a><a href='https://github.com/Urucas/OpenYoutubePlugin'/>https://github.com/Urucas/OpenYoutubePlugin</a> 的可行性，如果不好用，可能就要再推其他 Android 工程師坑了。</li>
 <li>可以參考一下 inLiveTw (<a href="https://github.com/inLiveTW)"></a>https://github.com/inLiveTW) 他們已經有用Cordova 了，只是還有些細部要調整。</li>
-<li>那個只是用 in-app browser 去開網頁，那個都還要去點一下才會播放，不適合電視的體驗，之前敝公司開發產品也遇到無法自動播放的問題，上面貼的是整合了 Youtube SDK 的 cordova 套件，希望好用囉。&nbsp;</li></ul>
+<li>那個只是用 in-app browser 去開網頁，那個都還要去點一下才會播放，不適合電視的體驗，之前敝公司開發產品也遇到無法自動播放的問題，上面貼的是整合了 Youtube SDK 的 cordova 套件，希望好用囉。&nbsp;</li>
+<li>可以開新頁討論，這頁有點長到太可怕。</li>
+<li>另外改成 Android solution, 可以不管使用的硬體平台，直接做 TV Launcher 或 App 即可。</li></ul>
 
 <p><b>Linux版</b></p><p>發想人：Michael_LI</p><p><b>　　硬體：</b><a href='http://zh.wikipedia.org/wiki/%E6%A0%91%E8%8E%93%E6%B4%BE'/>Raspberry Pi 樹莓派</a>&nbsp;</p><p>　　這是比較便宜的且公開的軟硬體資源，如果有可能的話，可以直接變成行動轉播平台（人肉ＳＮＧ車），這樣子就是一個硬體具有兩種用途，也不一定要用到高價位的平板電腦。</p><p>補充：收入比較高的大都市社會運動，跟落後國家血腥鎮壓的社會運動，網路與硬體使用有非常非常大的區別。</p><ul class="comment"><li>或許可以朝開發XMBC的模組方向走，因為其跨平台(Android、 Linux、 BSD、 Mac OS X、iOS、Windows)且Open Source，</li>
 <li>這樣的話主要可以推行樹莓派的整合版本，但若使用者本身無意願購買樹莓派或無法入手的話也可自行使用別的系統當載體。</li>
