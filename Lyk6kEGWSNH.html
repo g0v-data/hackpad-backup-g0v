@@ -3,27 +3,22 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="415"/>
+<meta name="version" content="1019"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$Lyk6kEGWSNH</title>
 </head>
-<body><h1>g0vcaptcha</h1><p></p><h2>Strategy</h2><p>此專案的目的在批次處理文件的掃描圖檔，轉換為文字。</p><p></p><p>*.gov.tw 上許多報告文件雖是 PDF，但其內容卻是紙本報告掃描而成的圖檔，無法快速傳成文字格式、或建立索引。因此必需要由人工來處理。</p><p></p><p>運作方面，打算仿效 recaptcha 的方式，先把圖檔切成較小的文字區塊，一方面可以丟給程式做 OCR，另一方面做出界面讓使用者提供正確答案。</p><p></p><h2>Scope</h2><ul class="comment"><li>提供/不提供哪些功能？</li>
-<li>這些功能的使用流程各自是什麼？</li>
-<li>（產出文件：flow chart）</li></ul>
+<body><h1>g0vcaptcha</h1><p></p><h2>Strategy</h2><p>此專案的目的在批次處理文件的掃描圖檔，轉換為文字。</p><p></p><p>*.gov.tw 上許多報告文件雖是 PDF，但其內容卻是紙本報告掃描而成的圖檔，無法快速傳成文字格式、或建立索引。因此必需要由人工來處理。</p><p></p><p>運作方面，打算仿效 recaptcha 的方式，先把圖檔切成較小的文字區塊，一方面可以丟給程式做 OCR，另一方面做出界面讓使用者提供正確答案。</p><p></p><p>最終的產品，是把上傳的圖檔轉成純文字格式，讓人可以搜尋，或讓外部搜尋引擎可以抓取內容回去。</p><p></p><h2>Scope</h2><p>git repo: <a href="https://github.com/g0v/g0vcaptcha"></a><a href='https://github.com/g0v/g0vcaptcha'/>https://github.com/g0v/g0vcaptcha</a></p><p></p><p>Web App</p><ul class="taskdone"><li>讓人上傳文件</li>
+<li>顯示機器辨識的結果</li></ul>
+<ul class="task"><li>讓人可修正機器辨識的文字</li>
+<li>顯示人工辨識的結果</li>
+<li>提供搜尋介面，讓人可搜尋文件內容</li>
+<li>提供每份文件的靜態版，讓外部搜尋引擎抓取</li>
+<li>讓人可提供文件的輔助資訊，例如：來源，摘要，原下載網址。</li></ul>
 
-<h2>Structure</h2><ul class="comment"><li>首頁、level 1、level 2... 共有哪些頁面？</li>
-<li>頁面之間的連結關係長什麼樣子？</li>
-<li>（產出文件：網站架構圖）</li></ul>
+<p>Background job</p><ul class="taskdone"><li>抓取文件中有字的區塊，並進行機器辨識</li><ul class="comment"><li>目前使用 tesseract 做成 HOCR 格式的輸出。</li></ul>
+</ul>
+<ul class="task"><li>整合所有區塊，製成成靜態版（純文字及 HTML）</li></ul>
 
-<h2>Wireframe / Content</h2><ul class="comment"><li><i>每頁的內容各自是什麼？</i></li>
-<li>頁面上各元素大概會放在什麼位置、有多大尺寸？</li>
-<li>頁面上有哪些與使用者互動的區塊？</li>
-<li><i>（產出文件：文案、頁面框線圖）</i></li></ul>
-
-<h2>Visual</h2><ul class="comment"><li>每頁實際上看起來會長什麼樣子</li>
-<li>精確的排版、配色、字體大小、視覺特效</li>
-<li>（產出文件：識別系統 / 設計稿 / prototype）</li></ul>
-
-<h2>白老鼠/狗食部落客</h2><ul><li>如果有這功能，我可以把我們所有客戶的captcha都逐步換上。</li></ul>
+<p></p><h2>Structure</h2><p></p><h2>Wireframe / Content</h2><p></p><h2>Visual</h2><p></p><h2>白老鼠/狗食部落客</h2><ul><li>如果有這功能，我可以把我們所有客戶的captcha都逐步換上。</li></ul>
 
 <p></p><p></p></body>
 </html>
