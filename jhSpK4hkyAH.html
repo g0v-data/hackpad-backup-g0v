@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="714"/>
+<meta name="version" content="749"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$jhSpK4hkyAH</title>
 </head>
 <body><h1>20140614 前端教學松：ly zorro 教學 / ve 學習筆記</h1><p></p><p>非正規安裝 zorro 強大 sublime plugin</p><p></p><p>IE 8~9 之間有很大變動，不是作給老人家看的，往下支援到 IE9 就好</p><p></p><p>table 流網站演示跟它的問題</p><p></p><p><a href="http://codepen.io/"></a>http://codepen.io/ 可以看到很厲害的作品。雖然要大家安裝本機環境，但初期學習可以多利用線上環境</p><p></p><p></p><p>Display: 控制 element 的排版顯示方式</p><p><a href="http://www.w3schools.com/cssref/pr_class_display.asp"></a>http://www.w3schools.com/cssref/pr_class_display.asp</p><p>常用的是 block（很像 &lt;div&gt;） / inline（一排，只會對齊底部） / inline block（一排有多個元素對齊上方）</p><p>也可以用 float，但沒有高度，需要指定一個有高度的 div 或 element /&nbsp;</p><p><a href="http://www.w3schools.com/html/html_blocks.asp"></a>http://www.w3schools.com/html/html_blocks.asp</p><p></p><p>查詢</p><p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML"></a>https://developer.mozilla.org/en-US/docs/Web/HTML（比較新）</p><p><a href="http://www.w3schools.com/"></a><a href='http://www.w3schools.com/html/html_blocks.asp'/>http://www.w3schools.com/</a>（比較穩定）</p><p></p><p>reset CSS</p><p>不同瀏覽器實際呈現方式不同，用 reset 可洗掉預設樣式，自己指定要幾 px....</p><p></p><p></p><p>沒有背 element 名稱沒關係，用 chrome inspect element 然後隨打即搜！（好強大！）</p><p></p><p></p><h2>CSS format 疊層樣式表</h2><p>ly：HTML 雖然是敘述性的，但表達能力其實不太好（木訥）</p><p>CSS 每一條都是一個 rule</p><p>敘述範本 {color: yellow;}</p><p>這樣還不會有用，還要有個選擇器 selector（早期HTML叫 tag，現在叫 element 居多）</p><p>body</p><p>{color: yellow;}</p><p></p><p>CSS reference</p><p></p><p>相容性最好：chrome &gt; firefox &gt; safari &gt; IE，寫完要去 IE 測</p><p></p><h2>ly 講課 Part</h2><p>selector</p><ul><li>id 唯一元素<ul><li>#XXX{...}</li></ul>
@@ -11,5 +11,9 @@
 <li>class 群類，可以有很多個。用空格分開，即可套用多個不同 class<ul><li>.XXX{...}</li></ul>
 </ul>
 
-<p>套用位階：後 class &gt; 前 class；specific &gt; general; id &gt; class; class &gt; element name</p><p>大魔王別亂用： !important</p><p></p><p>新手錯誤：取很多 ID</p><p></p><p><a href='http://flukeout.github.io/'/>CSS Diner </a>(CSS selector互動教學)</p><p></p><p>不建議用 Dreamweaver / frontpage：因為會產生冗餘程式碼</p><p></p><p>下堂課再講 CSS 佈局</p><p></p><p>Chrome Element Inspector - network 看網頁載入速度</p><p></p></body>
+<p>套用位階：後 class &gt; 前 class；specific &gt; general; id &gt; class; class &gt; element name</p><p>大魔王別亂用： !important</p><p></p><p>新手錯誤：取很多 ID</p><p></p><p><a href='http://flukeout.github.io/'/>CSS Diner </a>(CSS selector互動教學)</p><p></p><p>不建議用 Dreamweaver / frontpage：因為會產生冗餘程式碼</p><p></p><p>下堂課再講 CSS 佈局</p><p></p><p>Chrome Element Inspector - network 看網頁載入速度</p><p></p><p>建議習順序</p><ul><li>HTML 寫個自介靜態網頁（要放進哪些內容）</li>
+<li>CSS 開始排版</li>
+<li>jQuery 加入動態效果</li></ul>
+
+</body>
 </html>
