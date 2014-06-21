@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="768"/>
+<meta name="version" content="1494"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$Luax4CXQgio</title>
 </head>
 <body><h1>開放政治獻金 at 還我土地 hackath9n</h1><p></p><h2>目前成果</h2><p>技術</p><ul><li>葉隊長縮印術</li>
@@ -44,5 +44,35 @@
 <li>芻議修改辦法文案（面向公民）</li>
 <li>新任監察院</li></ul>
 
-<h2>本日填坑</h2><p></p></body>
+<h2>本日填坑</h2><ul><li>ihower: <a href="https://github.com/ihower/dcf"></a>https://github.com/ihower/dcf 基於榮尼王的原始資料，提供 JSON API 應用，包括搜尋、根據捐贈者查詢....etc</li></ul>
+
+<h2>討論</h2><ul><li>可能查詢用API需求<ul><li>輸入：無　回傳：所有目前已有資料的政治人物</li>
+<li>輸入：政治人物名稱　回傳：該政治人物名稱下的所有專戶<ul><li>輸入：政治人物名稱　回傳：該政治人物名稱下的概略資料(專戶總金額、總筆數、最大額捐贈/支出、最小額捐贈/支出平均每人)</li></ul>
+</li>
+<li>輸入：專戶名稱　回傳：該專戶下的概略資料(專戶總金額、總筆數、最大額捐贈/支出、最小額捐贈/支出平均每人)<ul><li>輸入：專戶名稱　回傳：該專戶下的每一筆資料</li></ul>
+</li>
+<li>輸入：專戶名稱、第幾筆、第幾列　回傳：該筆資料的原始圖檔網址</li>
+<li>輸入：公司名稱或商人名稱　回傳：該公司或商人捐贈的所有資料</li>
+<li>輸入：無　回傳：所有政治獻金資料，以一筆為單位，包含該筆資料的專戶名稱、政治人物名稱，兩百筆（暫定）為一頁，回傳頁數。<ul><li>輸入：所有政治獻金資料的所在頁數　回傳：該頁數的所有資料</li>
+<li>讓使用者大規模檢索、統計分析時使用</li></ul>
+</li></ul>
+</li>
+<li>可能UPDATE API需求（？）<ul><li>輸入：更新人、更新政治人物、專戶名稱、資料行列數　執行：檢查權限，新增或更新資料</li></ul>
+</ul>
+
+<p><b>JSON API</b></p><p></p><ul><li>LIsts<ul><li>/politicians</li>
+<li>/politician/{id}/accounts</li>
+<li>/accounts</li>
+<li>/donators</li></ul>
+</li>
+<li>Overview<ul><li>/politicians/{id}</li>
+<li>/politician/{id}/accounts/{account_id}</li>
+<li>/donators/{id}</li></ul>
+</li>
+<li>Transactions<ul><li>/politicians/{id}/transactions</li>
+<li>/politicians/{id}/accounts/{account_id}/transactions</li>
+<li>/donators/{id}</li></ul>
+</ul>
+
+<p></p><p></p></body>
 </html>
