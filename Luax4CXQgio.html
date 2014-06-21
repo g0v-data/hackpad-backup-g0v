@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1690"/>
+<meta name="version" content="2248"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$Luax4CXQgio</title>
 </head>
 <body><h1>開放政治獻金 at 還我土地 hackath9n</h1><p></p><h2>目前成果</h2><p>技術</p><ul><li>葉隊長縮印術</li>
@@ -44,9 +44,24 @@
 <li>芻議修改辦法文案（面向公民）</li>
 <li>新任監察院</li></ul>
 
-<h2>本日填坑</h2><ul><li>ihower: <a href="https://github.com/ihower/dcf"></a>https://github.com/ihower/dcf 基於榮尼王的原始資料，提供 JSON API 應用，包括根據捐贈者查詢....etc</li>
-<li>mrbigmouth: <a href="http://campaign-finance.meteor.com/"></a>http://campaign-finance.meteor.com/&nbsp;&nbsp;</li></ul>
-<p>　　將lackneets 政治獻金資料庫的網站去掉非關版面的程式碼</p><p>　　準備配合ihower的後端程式，重建正規化的搜尋機制</p><p>　　程式碼由於現在還要等Venev的設計，現在等於沒有，就先不放上github了</p><p></p><h2>討論</h2><ul><li>可能查詢用API需求<ul><li>輸入：無　回傳：所有目前已有資料的政治人物</li>
+<h2>本日填坑</h2><ul><li>ihower: <a href="https://github.com/ihower/dcf"></a>https://github.com/ihower/dcf（後端資料，第一次填坑就上手++）<ul><li>基於榮尼王的原始資料，進行資料正規化、分析及提供 JSON API 應用，包括根據捐贈者和廠商查詢、捐贈和支出排序....etc</li></ul>
+</li>
+<li>mrbigmouth: <a href="http://campaign-finance.meteor.com/"></a>http://campaign-finance.meteor.com/&nbsp; （前端，第一次填坑就上手++）<ul><li>將 lackneets 政治獻金資料庫的網站去掉非關版面的程式碼</li>
+<li>準備配合ihower的後端程式，重建正規化的搜尋機制</li>
+<li>程式碼由於現在還要等 venev的 mockup 設計，現在等於沒有，就先不放上github了</li></ul>
+</li>
+<li>venev（推坑、版面設計、TXT）<ul><li>開始首頁 mockup，分「人物 / 公司名搜尋」、「選區搜尋」、「依不同層級選舉瀏覽」三種進路</li>
+<li>review 列印 SOP，葉隊長 3x3 縮印術確認 OK，今晚前可完稿，考慮跟 OCR 豆腐一起發<ul><li>揪～竟 3x3 縮印術可以省多少錢＆時間呢？</li></ul>
+</li></ul>
+</li>
+<li>ronnywang（切豆腐）<ul><li>開放政治獻金 - 資料蒐集&nbsp;&nbsp;</li>
+<li>處理最近一批豆腐，最近可以開始 OCR</li></ul>
+</li>
+<li>Timothy（OCR）<ul><li>聽說帳號系統 ready 了 ^O^<ul><li><i>需要個人成就頁面設計 &lt;- 視覺設計師！</i></li></ul>
+</ul>
+</ul>
+
+<p><b>&nbsp;前後端討論</b></p><ul><li>可能查詢用API需求<ul><li>輸入：無　回傳：所有目前已有資料的政治人物</li>
 <li>輸入：政治人物名稱　回傳：該政治人物名稱下的所有專戶<ul><li>輸入：政治人物名稱　回傳：該政治人物名稱下的概略資料(專戶總金額、總筆數、最大額捐贈/支出、最小額捐贈/支出平均每人)</li></ul>
 </li>
 <li>輸入：專戶名稱　回傳：該專戶下的概略資料(專戶總金額、總筆數、最大額捐贈/支出、最小額捐贈/支出平均每人)<ul><li>輸入：專戶名稱　回傳：該專戶下的每一筆資料</li></ul>
@@ -61,20 +76,32 @@
 </ul>
 
 <p><b>JSON API</b></p><p></p><ul><li>LIsts<ul><li>/politicians</li>
-<li>/donators</li></ul>
-</li>
-<li>Overview<ul><li>/politicians/{id}</li>
-<li>/politician/{id}/accounts/{account_id}</li>
-<li>/donators/{id}</li></ul>
+<li>/donators</li>
+<li>/accounts</li>
+<li>/codes</li></ul>
 </li>
 <li>Transactions<ul><li>/politicians/{id}/transactions</li>
-<li>/politicians/{id}/accounts/{account_id}/transactions</li>
-<li>/donators/{id}</li></ul>
+<li>/accounts/{id}/transactions</li>
+<li>/donators/{id}/transactions</li>
+<li>?xxx_id=xxx&nbsp; (filter)</li></ul>
 </ul>
 
-<p></p><h2>修改 / 新坑</h2><ul><li>lackneets：資料不要接最新的、接 review 過的</li>
-<li>clkao：立委認領進度坑（consult 葉隊長）</li>
-<li>ronnywang: 群眾外包檢查切線</li></ul>
+<p><b>JSON API Example</b></p><p></p><ul><li>政治人物列表 <a href="http://dcf.ihower.tw/politicians"></a>http://dcf.ihower.tw/<a href='http://dcf.ihower.tw/'/>politicians</a></li>
+<li>政治人物 獻金明細 <a href="http://dcf.ihower.tw/politicians/119/transactions"></a>http://dcf.ihower.tw/politicians/119/transactions</li>
+<li>賬戶列表 <a href="http://dcf.ihower.tw/accounts"></a>http://dcf.ihower.tw/accounts</li>
+<li>賬戶 獻金明細 <a href="http://dcf.ihower.tw/accounts/121/transactions"></a>http://dcf.ihower.tw/accounts/121/transactions</li>
+<li>支出廠商排名 <a href="http://dcf.ihower.tw/donators?order=payout_amount"></a>http://dcf.ihower.tw/donators?order=payout_amount</li>
+<li>捐贈廠商排名 <a href="http://dcf.ihower.tw/donators?order=income_amount"></a>http://dcf.ihower.tw/donators?order=income_amount</li>
+<li>廠商獻金/支出明細 <a href="http://dcf.ihower.tw/donators/19604/transactions"></a>http://dcf.ihower.tw/donators/19604/transactions</li></ul>
+
+<ul class="comment"><li>&nbsp;106.187.36.122 dcf.ihower.tw</li></ul>
+
+<h2>修改請求 / 新坑發現</h2><ul><li>lackneets：資料請不要接最新的、接 review 過的</li>
+<li>clkao：立委認領進度坑（ref. 葉隊長任務包，併入網站設計）</li>
+<li>ronnywang: 群眾外包切線檢查機制</li>
+<li>需要比對總額 / 細目加總：例如黃昭順沒印支出細目</li>
+<li>「個人成就頁面」需要版面設計（目前有 e-mail、輸入筆數）</li>
+<li>採用立委投票指南 &gt; 政治獻金既有成果</li></ul>
 
 </body>
 </html>
