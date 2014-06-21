@@ -3,12 +3,13 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1035"/>
+<meta name="version" content="1101"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$Lyk6kEGWSNH</title>
 </head>
 <body><h1>g0cr / g0vcaptcha</h1><p></p><h2>Strategy</h2><p>此專案的目的在批次處理文件的掃描圖檔，轉換為文字。</p><p></p><p>*.gov.tw 上許多報告文件雖是 PDF，但其內容卻是紙本報告掃描而成的圖檔，無法快速傳成文字格式、或建立索引。因此必需要由人工來處理。</p><p></p><p>運作方面，打算仿效 recaptcha 的方式，先把圖檔切成較小的文字區塊，一方面可以丟給程式做 OCR，另一方面做出界面讓使用者提供正確答案。</p><p></p><p>最終的產品，是把上傳的圖檔轉成純文字格式，讓人可以搜尋，或讓外部搜尋引擎可以抓取內容回去。</p><p></p><h2>Scope</h2><p>web app: <a href="http://g0cr.gugod.org/"></a>http://g<a href='http://g'/>0</a><a href='http://g0'/>c</a><a href='http://g0c'/>r</a><a href='http://g0cr'/>.g</a><a href='http://g0cr.g'/>u</a><a href='http://g0cr.gu'/>g</a><a href='http://g0cr.gug'/>o</a><a href='http://g0cr.gugo'/>d.o</a><a href='http://g0cr.gugod.o'/>r</a><a href='http://g0cr.gugod.or'/>g</a><a href='http://g0cr.gugod.org'/>/</a></p><p>git repo: <a href="https://github.com/g0v/g0vcaptch"></a><a href='https://github.com/g0v/g0vcaptcha'/>https://github.com/g0v/g0vcaptch</a></p><p></p><p></p><p>Web App</p><ul class="taskdone"><li>讓人上傳文件</li>
 <li>顯示機器辨識的結果</li></ul>
-<ul class="task"><li>讓人可修正機器辨識的文字</li>
+<ul class="task"><li>實做多種機器辨識演算法，以提升整體的正確率（recall）</li>
+<li>讓人可修正機器辨識的文字</li>
 <li>顯示人工辨識的結果</li>
 <li>提供搜尋介面，讓人可搜尋文件內容</li>
 <li>提供每份文件的靜態版，讓外部搜尋引擎抓取</li>
