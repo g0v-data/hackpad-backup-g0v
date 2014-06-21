@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="4944"/>
+<meta name="version" content="5047"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$7PA3GGkb7m1</title>
 </head>
 <body><h1>公務員出國考察追蹤網_政大WebProgramming第三組</h1><p>我們是政大Web Programming設計課程的學生，合作的g0v專案是『公務員出國考察網』</p><p></p><p>小組成員：</p><p>資科三&nbsp; 郭士傑&nbsp; 100703009</p><p>資科三&nbsp; 吳孟翰&nbsp; 100703052 (組長)</p><p>傳播三&nbsp; 楊翔伊&nbsp; 100404012</p><p>日文二&nbsp; 陳玉美&nbsp; 101506002</p><p>資管三&nbsp; 謝孟霖&nbsp; 100306062</p><p>地政三&nbsp; 黃悅&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 100207430</p><p></p><p></p><h2>目標理想</h2><ul><li>與現有g0v專案『公務員出國考察網』合作，將網站架構實體化</li></ul>
@@ -53,9 +53,12 @@
 </ul>
 <ul class="task"><li>國家統計頁面</li></ul>
 <ul style="list-style: none;"><li>改善國家統計頁面的內容顯示，除了現有地圖國家統計外，將新增可看到時間區間的部門資料。</li>
-<li>實際執行 →依地區分析行程<ul style="list-style: none;"><li>→給定時間區間，定部門的行程分析</li>
-<li><br/></li></ul>
+<li>實際執行 →依地區分析行程<ul style="list-style: none;"><li>→給定時間區間，定部門的行程分析</li></ul>
 </ul>
+
+<ul class="task"><li>資料庫重新規劃與補完</li></ul>
+<ul style="list-style: none;"><li>現有資料庫的規劃不夠完善，而目前擁有「中央政府」資料，未來需擴及到「地方政府」資料</li>
+<li><br/></li></ul>
 <ul class="taskdone"><li>合併主題分類與施政分類</li></ul>
 <ul style="list-style: none;"><li>主題分類＋施政分類 → ＂主題分類＂。因兩項內容分別為施政的主題與對象，而原有資料的分項資訊稍嫌複雜，容易令使用者混淆，所以將之合併。</li>
 <li><br/></li></ul>
@@ -75,21 +78,16 @@
 <li>google drive 共用資料（Core &amp; Path sheet）</li></ol>
 
 <p></p><h2>專案狀態</h2><p><b>（一）雛形初稿</b></p><ul><li>網站架構 (structure)：</li></ul>
-<ul style="list-style: none;"><li>更新版0618：</li></ul>
-<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_7PA3GGkb7m1_p.149121_1403082800184_CIID.jpg'/><img src='http://'/></p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_7PA3GGkb7m1_p.149121_1403082409339_CIID.jpg'/></p><p></p><p></p><p></p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_7PA3GGkb7m1_p.149121_1400058902708_公務人員考察追蹤.jpg'/></p><p></p><ul><li>LOGO圖示</li></ul>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_7PA3GGkb7m1_p.149121_1403082800184_CIID.jpg'/></p><p></p><ul><li>LOGO圖示</li></ul>
 <p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_7PA3GGkb7m1_p.149066_1402840581698_LOGO.png'/></p><p></p><ul><li>Core &amp; Path sheet&nbsp; (5/3修)</li></ul>
 <ul style="list-style: none;"><li>首頁：<a href="http://ppt.cc/FRqW"></a><a href='http://ppt.cc/FRqW'/>http://ppt.cc/FRqW</a></li>
 <li>行程：<a href="http://ppt.cc/6JR4"></a>http://ppt.cc/6JR4</li>
 <li>公務員：<a href="http://ppt.cc/Aa37"></a><a href='http://ppt.cc/Aa37'/>http://ppt.cc/Aa37</a></li></ul>
 
-<ul class="comment"><li>「熱門／喜愛 考察城市排行」是宣傳旅遊景點的網站才需要的資訊 (--&gt; 與 user&rsquo;s goal 不相符)</li>
+<ul class="comment"><li>「熱門／喜愛 考察城市排行」是宣傳旅遊景點的網站才需要的資訊</li>
 <li>主要目標是要看到公務人員出國是否有假公濟私的行為才是設計重點。&nbsp;</li>
 <li>預算資料目前無法取得。</li>
-<li>0) FB上有轉貼不錯的思考點: <a href="http://blog.ilyagram.org/post/84932490386"></a><a href='http://blog.ilyagram.org/post/84932490386'/>http://blog.ilyagram.org/post/84932490386</a>，你們應該要針對這部分做討論。</li>
-<li>1) Logo 不該是 core content --&gt; core content指的是該頁最重要的內容</li>
-<li>4) 每個 core object都要有一份 core &amp; path sheet，目前少了一份 「公務員」。</li>
-<li>5) 以上內容請在下週二(5/20)之前補上!</li>
-<li>收到..謝謝老師</li></ul>
+<li>FB上有轉貼不錯的思考點: <a href="http://blog.ilyagram.org/post/84932490386"></a><a href='http://blog.ilyagram.org/post/84932490386'/>http://blog.ilyagram.org/post/84932490386</a>，你們應該要針對這部分做討論。</li></ul>
 
 <p></p><p><b>（二）網站分頁</b></p><ul><li><a href="http://rohanwu.github.io/wp2014s_project/"></a><a href='http://rohanwu.github.io/wp2014s_project/'/>http://rohanwu.github.io/wp2014s_project/</a></li></ul>
 <ul style="list-style: none;"><li>首頁 &gt; 報告查找 &gt; 國際護理協會四年期...</li>
@@ -103,12 +101,8 @@
 <li><a href="http://rohanwu.github.io/BootstrapTest/"></a>http://rohanwu.github.io/BootstrapTest/（*單一頁面，請以行動裝置瀏覽）</li>
 <li><a href="https://www.dropbox.com/s/w7g904vzu6zu7ik/crawler.rar"></a>https://www.dropbox.com/s/w7g904vzu6zu7ik/crawler.rar（爬蟲：定期更新資料）</li></ul>
 
-<p></p><p></p><p>● 期末Demo 評審/助教建議：</p><p>‧Jones老師 :&nbsp;</p><p>首頁→可顯示即時更新統計資訊(ex:每個月 哪個部門 出國最多次 去哪 多少人？)</p><p>報告查找→可將時間搜尋分開</p><p>部門分類→如果資料庫之值=0, 則不顯示該部門資料</p><p>Table之Responsive顯示可考慮為&quot;卡片式&quot;</p><p></p><p>‧王康文學長：</p><p>首頁→Icon可設計為點擊超聯結</p><p>Bootstrap的特效→會讓人想點→可以設計成點擊超聯結</p><p>時間搜尋→改成點選日期</p><p>時間搜尋→搜尋欄大小修改</p><p>可於Navigation bar放上搜尋列</p><p>網站圖像化</p><p></p><p>‧台大助教：</p><p>想想User來網站最想要獲得的資訊是什麼？為何user會想來此網站？</p><p>搜尋→可以Key words合併形式呈現</p><p></p><p></p><ul class="comment"><li>1）&nbsp; FB group 上有提你們新設計的navigation架構有問題、也未考慮responsive design. 請做修改並回覆。</li>
-<li>2） 統計資料也可考慮用 d3.js來呈現</li>
-<li>請問有沒有要 opensource，有的話要注意一下license問題喔，成果發表加油。</li>
-<li>已收到建議！</li></ul>
-
-<p></p><h2>授權方式</h2><ul><li>採取「MIT License」授權條款 <a href="http://opensource.org/licenses/MIT"></a>http://opensource.org/licenses/MIT</li>
+<ul><li>期末Demo 評審/助教建議</li></ul>
+<p>*Jones老師 :&nbsp;</p><p>首頁→可顯示即時更新統計資訊(ex:每個月 哪個部門 出國最多次 去哪 多少人？)</p><p>報告查找→可將時間搜尋分開</p><p>部門分類→如果資料庫之值=0, 則不顯示該部門資料</p><p>Table之Responsive顯示可考慮為&quot;卡片式&quot;</p><p></p><p>*王康文學長：</p><p>首頁→Icon可設計為點擊超聯結</p><p>Bootstrap的特效→會讓人想點→可以設計成點擊超聯結</p><p>時間搜尋→改成點選日期</p><p>時間搜尋→搜尋欄大小修改</p><p>可於Navigation bar放上搜尋列</p><p>網站圖像化</p><p></p><p>*台大助教：</p><p>想想User來網站最想要獲得的資訊是什麼？為何user會想來此網站？</p><p>搜尋→可以Key words合併形式呈現</p><p></p><p></p><h2>授權方式</h2><ul><li>採取「MIT License」授權條款 <a href="http://opensource.org/licenses/MIT"></a>http://opensource.org/licenses/MIT</li>
 <li>使用者有大範圍的利用權利＋少量義務（Non-copyleft Licenses）</li></ul>
 <ol><li>明示提醒商標權未授權</li>
 <li>明示提醒可收費提供擔保</li>
