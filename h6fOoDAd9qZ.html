@@ -3,44 +3,141 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="89"/>
+<meta name="version" content="1475"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$h6fOoDAd9qZ</title>
 </head>
 <body><h1>義務律師陪偵平台</h1><p></p><p>Hackath9n 簡報: <a href="https://docs.google.com/presentation/d/1y87Zs-fG_9eLnp_jKSPKo2EKGJAsqgo5-nhmqlAChzQ/view"></a>https://docs.google.com/presentation/d/1y87Zs-fG_9eLnp_jKSPKo2EKGJAsqgo5-nhmqlAChzQ/view</p><p></p><ul><li>舊 hackpad： <a href="https://hackpad.com/--ltsoiiHdSbX"></a>https://hackpad.com/--ltsoiiHdSbX</li>
 <li>專案代號&nbsp; JRF-<i>attorney</i></li></ul>
 <ul class="comment"><li>accompany/defend 會不會比 follow 合適？或乾脆用 attorney xD</li>
 <li>可以XDD</li>
-<li>xD 用 attorney 感覺有潛力包括其他可能的服務 xD</li></ul>
-<ul><li>什麼是陪偵？&nbsp;<ul><li>一般抗議活動時往往會有抗議民眾被警方帶走偵訊，為維護這些抗議民眾的權益，司改會協調義務律師前往現場協助民眾面對偵查。往往是事件驅動，並隨著各種事件的大小而有不同程度的驅動量。</li>
+<li>xD 用 attorney 感覺有潛力包括其他可能的服務 xD</li></ul class="comment">
+<h2>什麼是陪偵？ </h2><ul><li>一般抗議活動時往往會有抗議民眾被警方帶走偵訊，為維護這些抗議民眾的權益，司改會協調義務律師前往現場協助民眾面對偵查。往往是事件驅動，並隨著各種事件的大小而有不同程度的驅動量。</li>
 <li>本平台目的是確保每位當事人皆有律師陪同偵訊，並降低NGOs（目前平台為司改會）與當事人、律師間反覆確認的聯繫行政工作。</li></ul>
-</li>
-<li>為什麼發起？<ul><li>因為 TonyQ 去參與民間司改會 323 聯合訴訟時，跟執秘梅慧聊到他是資訊人，所以意外跌坑。主要是他們現在並沒有一個可以讓律師認養陪偵案件的有效系統，在聯繫律師的過程往往需要透過大量電話簡訊往返與確認，而且如果沒有辦法馬上接到回音的話，容易有多個律師去協助一個陪偵當事人的資源浪費的狀況。（除非案子很特殊，不然通常不需要多個律師到場）</li></ul>
-<ul class="comment"><li>請問這是不是代表某些時候的確需要不只一個律師？如果是這樣的話，資料欄位或許可以加數量？&nbsp;</li>
-<li>之前跟梅慧確認時提到這種時候通常非常特殊（ex.魏揚），可以作為特例處理。</li>
-<li>了解。雖然我覺得以資料庫和寫程式的角度來說，加上數量其實不難 xD</li>
-<li>我覺得可以保留擴充空間 就初期來講先以簡化介面為主 XD&nbsp; （用最小單位推進） (ps.我想用 mongo XDD)</li>
-<li>喔如果只是介面的話就先當作 n = 1 顯示第一個律師之類的 (mongo 會讓這件事情比較困難嗎？）</li>
-<li>不會 可能比較簡單 因為他可以巢狀存資料。只要多 push 一個律師進去就好 XD</li>
-<li>我的個人意見是一開始就要用 list, 但是 UI 先顯示第一個（如果非空）</li>
-<li>Sure :)</li>
-<li>或者是說，因為司改會及律師之間也不容易掌握現場有多少律師，所以許多熱心的律師就乾脆直接到現場，但有時候其實現場的律師已足夠</li></ul>
-<ul><li>加上民間司改會目前沒有太多行政人力可以做這件事情，如 318 學運期間曾有上百次的陪偵需求，聯繫相當浪費資源，若未來面對可能更大的抗爭規模，能否即時做出準備讓義務律師團能夠盡最大心力幫忙，是此一平台很重要的事情。</li></ul>
-<ul class="comment"><li>且其實目前我們較難協助中南部的陪偵（中南部是有義務律師的），希望未來此平台也可以協助中南部的陪偵</li></ul>
+<h2>為什麼發起？</h2><ul><li>因為 TonyQ 去參與民間司改會 323 聯合訴訟時，跟執秘梅慧聊到他是資訊人，所以意外跌坑。主要是他們現在並沒有一個可以讓律師認養陪偵案件的有效系統，在聯繫律師的過程往往需要透過大量電話簡訊往返與確認，而且如果沒有辦法馬上接到回音的話，容易有多個律師去協助一個陪偵當事人的資源浪費的狀況。（除非案子很特殊，不然通常不需要多個律師到場）</li></li>
+<li>請問這是不是代表某些時候的確需要不只一個律師？如果是這樣的話，資料欄位或許可以加數量？&nbsp;</li></li>
+<li>之前跟梅慧確認時提到這種時候通常非常特殊（ex.魏揚），可以作為特例處理。</li></li>
+<li>了解。雖然我覺得以資料庫和寫程式的角度來說，加上數量其實不難 xD</li></li>
+<li>我覺得可以保留擴充空間 就初期來講先以簡化介面為主 XD&nbsp; （用最小單位推進） (ps.我想用 mongo XDD)</li></li>
+<li>喔如果只是介面的話就先當作 n = 1 顯示第一個律師之類的 (mongo 會讓這件事情比較困難嗎？）</li></li>
+<li>不會 可能比較簡單 因為他可以巢狀存資料。只要多 push 一個律師進去就好 XD</li></li>
+<li>我的個人意見是一開始就要用 list, 但是 UI 先顯示第一個（如果非空）</li></li>
+<li>Sure :)</li></li>
+<li>或者是說，因為司改會及律師之間也不容易掌握現場有多少律師，所以許多熱心的律師就乾脆直接到現場，但有時候其實現場的律師已足夠</li>
+<li>加上民間司改會目前沒有太多行政人力可以做這件事情，如 318 學運期間曾有上百次的陪偵需求，聯繫相當浪費資源，若未來面對可能更大的抗爭規模，能否即時做出準備讓義務律師團能夠盡最大心力幫忙，是此一平台很重要的事情。</li></li>
+<li>且其實目前我們較難協助中南部的陪偵（中南部是有義務律師的），希望未來此平台也可以協助中南部的陪偵</li></li>
+<li>我有一點想法想確認一下：請問這個平台提供公民需求尋找義務律師，那麼律師是否僅透過司改會聯繫？</li></li>
+<li>之所以提出這問題的想法是：如果該平台僅提供公民聯繫司改會，那麼由司改會單向聯繫各律師，縱使避免「公民有需求卻無法及時有義務律師」以及「無須過多律師確有太多義務律師到場」等兩種情況，聯繫過程也仍是資源消耗。</li></li>
+<li>假若公民和律師「雙方」都透過該平台聯繫呢？也就是說，作為一個及時為公民服務的平台，公民有「及時找到律師」的需求，而義務律師也希望「及時到現場且避免『過多律師造成不必要』」，所以對於律師來說，律師也要能在平台上確認及時資訊，而非被動聯繫。不知司改會覺得這樣的建置方式如何？</li>
+<li>功能需求：（以下是以需求暨規劃書的方式列出，如得有現成套件可以取代可以討論、但請注意功能是否符合）</li></ul>
+
+<h2>FLOW</h2><p><b>Client</b></p><ul style="list-style: none;"><li><b>request - (A)</b></li><ul><li>求救電話的清單</li>
+<li>律師還未到場的注意事項（搜集現場證據）</li></ul>
 </ul>
-<ul><li>功能需求：（以下是以需求暨規劃書的方式列出，如得有現成套件可以取代可以討論、但請注意功能是否符合）<ul><li>Web<ul><li>主要 user：NGOs（目前暫以司改會、台權會為主，將來希望能有更多NGOs加入）、律師</li>
-<li>資料庫，資料表有<ul><li>律師資料<ul><li>姓名</li>
-<li>律師證號</li>
-<li>登錄公會</li>
-<li>可陪偵地點</li></ul>
-<ul class="comment"><li>【可陪偵地點】此欄位需要律師可自行編修</li>
-<li>會在 app (client) 區的規劃裡面</li></ul>
-<ul><li>聯繫電話<ul><li>白天<ul><li>市話（選填）</li>
+<ul style="list-style: none;"><li><b>have state - (N)</b></li><ul><li>簡訊回覆：XXX律師約於OO時間到達。若有問題，請致電（律師電話，及NGO號碼）。</li></ul>
+</ul>
+<p><b>Middleman</b></p><ul style="list-style: none;"><li><b>have(A) - (B)</b></li>
+<li><b>make sure (A) is ture - (C)</b></li>
+<li><b>register this event - (D)</b></li><ul><li>填表格-案主資料<ul><li>接案的NGO單位（下拉式選單-可以新增 NGO 單位）</li>
+<li>姓名</li>
+<li>電話</li>
+<li>逮捕原因（案由）</li>
+<li>案主地點：自由選填+縣市（下拉式選單）</li>
+<li>陪偵律師</li></ul>
+</ul>
+</ul>
+<ul style="list-style: none;"><li><b>connect with lawyer - (E)</b></li><ul><li>On-call 的律師清單<ul><li>姓名</li>
+<li>可陪偵地點</li>
+<li>聯繫電話<ul><li>白天<ul><li>市話（選填）</li>
 <li>手機</li></ul>
 </li>
 <li>夜間<ul><li>市話（選填）</li>
 <li>手機</li></ul>
+</li></ul>
+</li></ul>
+</li>
+<li>E-mail</li></ul>
+</ul>
+<ul style="list-style: none;"><li><b>have(G) - (H)</b></li>
+<li><b>have candidate - (I)</b></li><ul><li>從陪偵清單上，得知案件處理狀況</li></ul>
+</ul>
+<ul style="list-style: none;"><li><b>sent Detail &amp; change state - (K)</b></li>
+<li><b>notify client - (M)</b></li></ul>
+<p><b>Laywer</b></p><ul style="list-style: none;"><li><b>get the request - (F)</b></li><ul><li>陪偵清單：<ul><li>timestap</li>
+<li>接案的NGO單位（下拉式選單-可以新增 NGO 單位）</li>
+<li>案主資料<ul><li>姓名</li>
+<li>電話</li>
+<li>逮捕原因（案由）</li>
+<li>陪偵地點</li></ul>
+</li>
+<li>案件處理的狀況</li>
+<li>認領案件（按鈕）</li></ul>
 </ul>
 </ul>
+<ul style="list-style: none;"><li><b>answer variable - (G)</b></li><ul><li>陪偵清單：回覆之後，顯示律師的名稱（或帳號）連結，內有聯繫資訊</li></ul>
+</ul>
+<ul style="list-style: none;"><li><b>get feedback - (J)</b></li>
+<li><b>get detail - (L)</b></li>
+<li><br/></li></ul style="list-style: none;">
+<h2>Web 欄位資料-主要 user</h2><p><b>NGO</b></p><p>（目前暫以司改會、台權會為主，將來希望能有更多NGOs加入）</p><ul><li>接到電話，確認訊息正確性</li>
+<li>登入帳號密碼</li>
+<li>填表格-案主資料<ul><li>接案的NGO單位（下拉式選單-可以新增 NGO 單位）</li>
+<li>姓名</li>
+<li>電話</li>
+<li>逮捕原因（案由）</li>
+<li>案主地點：自由選填+縣市（下拉式選單）</li></ul>
+</li>
+<li>新增律師<ul><li>姓名</li>
+<li>律師證號</li>
+<li>登錄公會</li>
+<li>可陪偵地點</li>
+<li>聯繫電話<ul><li>白天<ul><li>市話（選填）</li>
+<li>手機</li></ul>
+</li>
+<li>夜間<ul><li>市話（選填）</li>
+<li>手機</li></ul>
+</li></ul>
+</li>
+<li>E-mail</li></ul>
+</li>
+<li>審核律師註冊資料</li>
+<li>陪偵清單：timestap+案主資料+案件處理的狀況</li>
+<li>On-call 的律師清單</li></ul>
+<p><b>律師</b></p><ul><li>登入帳號、密碼</li>
+<li>註冊成為義務律師<ul><li>帳號（email）</li>
+<li>密碼</li>
+<li>姓名</li>
+<li>律師證號</li>
+<li>登錄公會（可多選）</li>
+<li>可陪偵地點（下拉選單，律師可修改）</li>
+<li>聯繫電話<ul><li>白天<ul><li>市話（選填）</li>
+<li>手機</li></ul>
+</li>
+<li>夜間<ul><li>市話（選填）</li>
+<li>手機</li></ul>
+</li></ul>
+</li>
+<li>E-mail</li></ul>
+</li>
+<li>個人設定<ul><li>可以控制自己線上／線下的狀況</li>
+<li>修改資料</li></ul>
+</li>
+<li>被推播通知新案件成立（最好可以是所在地的案件）</li>
+<li>陪偵清單：案主資料+案件處理的狀況+認領案件（按鈕）</li>
+<li>On-call 的律師清單</li></ul>
+<p><b>案主</b></p><ul><li>求救電話的清單</li>
+<li>律師還未到場的注意事項（搜集現場證據）</li></ul>
+
+<h2>User Story</h2><p>王小明是一個關心社會議題的年輕人，今天他為了反自由貿易經濟區，再次走上街頭。在捷運上，他先點開最近安裝的 App 「律師陪偵平台」，閱讀「若被逮捕」的注意事項。</p><p></p><p>到達目的地後，沒想到警察忽然強制驅離，王小明在混亂中被壓制在地逮捕，並被帶到中正一分局，過程中他的手機摔壞了。一旁的朋友陳大福看到，馬上拿出手機也點開「律師陪偵平台」App，點進「通報案件」，從提供法律協助的 NGO 清單中，隨便挑一個打電話。</p><p></p><p>Miffy：「喂，司改會，您好」</p><p>陳大福：「你好，我的朋友王小明被逮捕了，請問有律師可以協助嗎？」</p><p>Miffy：「好的，請先提供一下你朋友的資料。請問他的姓名？手機？目前所在的派出所？被逮捕的案由？您的電話？接下來我們會聯繫律師，大約需要 XX 分鐘，結束後會以簡訊傳送處理結果，你也可以再打電話過來確認。」</p><p></p><p>Miffy 打開「律師陪偵平台」網頁版，登入之後，把剛剛的通報資料key-in。接著，打開陪偵清單，確認一下剛剛通報的案件內容。接著，等待大約 10 分鐘，看看陪偵清單上的案件狀態，是否有律師認領。</p><p></p><p>正在永康街家中的律師曾小凱，手機螢幕顯示了有中正一分局的案件通報，他馬上打開 App，看見有人因為違反社會秩序而被拘留于中正一分局，於是按下「認領案件」按鈕，並且馬上打電話到中正一分局，與王小明聯絡。</p><p></p><p></p><h2>過往討論</h2><ul><li>資料庫，資料表有<ul><li>律師資料<ul><li>姓名</li>
+<li>律師證號</li>
+<li>登錄公會</li>
+<li>可陪偵地點</li></li>
+<li>【可陪偵地點】此欄位需要律師可自行編修</li></li>
+<li>會在 app (client) 區的規劃裡面</li>
+<li>聯繫電話<ul><li>白天<ul><li>市話（選填）</li>
+<li>手機</li></ul>
+</li>
+<li>夜間<ul><li>市話（選填）</li>
+<li>手機</li></ul>
 </ul>
 </ul>
 </ul>
