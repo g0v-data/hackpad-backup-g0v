@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="882"/>
+<meta name="version" content="1039"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$b80fhUVlnBe</title>
 </head>
 <body><h1>hackfoldr 使用說明</h1><p></p><p>你知道嗎？近來的太陽花（ <a href="http://g0v.today"></a>http://g0v.today ）、停建核四（<a href="http://nonuke.today"></a>http://nonuke.today ）等公民運動，都採用 hackfoldr（唸作 hack-folder）來架設資訊入口網站。</p><p></p><p>hackfoldr 是 g0v 開源專案之一，本來是為了整理社群在黑客松產出的大量文件而誕生。現在，它是個開放給所有人使用的平台，你也可以為專案、活動，建立屬於自己的「黑客公事包」，讓所有文件、網頁一目了然。</p><p></p><p>以下，說明開始（原文轉自 <a href="http://hackfoldr.org/about"></a>http://hackfoldr.org/about，並補註使用者觀點說明。如有版本差異，請以原始網址內容為準。）</p><p></p><h2>Welcome to Hackfoldr</h2><p>Hackfoldr 是你的黑客公事包，用一個網址就可以和夥伴們分享所有的專案文件！ :D</p><p></p><h2>為你的專案製作 hackfoldr</h2><p>&nbsp;<b>建立 hackfoldr</b></p><ul><li>想好專案英文網址名稱（例如：your-project-name）</li>
@@ -32,5 +32,12 @@
 <li>在 /d/ 後面，直到下個斜線為止的文數字就是試算表的 ID，放到 hackfoldr.org/ 後面即為網址，例如 <a href="http://hackfoldr.org/1Wbk0HiD4yRVus3qXzA2d8a7LmZ3wYWCSWWdGD39sWsU"></a>http://hackfoldr.org/1Wbk0HiD4yRVus3qXzA2d8a7LmZ3wYWCSWWdGD39sWsU</li>
 <li>如有需要，可運用 bit.ly 等短網址服務自訂網址。</li></ol>
 
-<p>試算表內的格式和 ethercalc 相同，但<b><u>目前不支援空白行</u></b>，第一個空白行以下的資料將被忽略。</p><p></p><p></p><p></p></body>
+<p>試算表內的格式和 ethercalc 相同，但<b><u>目前不支援空白行</u></b>，第一個空白行以下的資料將被忽略。</p><p></p><h2>Hackfoldr / Ethercalc 的備份與還原</h2><p><b>系統自動備份清單</b></p><p><a href="https://ethercalc.org/static/history/(你的專案的英文網址名稱)/"></a>https://ethercalc.org/static/history/<a href='https://ethercalc.org/static/history/G8VTV/'/>(你的專案的英文網址名稱)</a>/</p><p></p><p><b>還原方法</b></p><p>方法一：</p><ul style="list-style: none;"><li>使用 ethercalc 的復原界面（待補）</li></ul>
+
+<p>方法二：</p><ul class="code"><li>目前的復原方式可以用 Clipboard -&gt; SocialCalc save format -&gt; .txt 貼進文字框 -&gt; load SC clipboard with this -&gt; 回 A1 貼上 來達成</li></ul>
+
+<p>方法三：</p><ul class="code"><li>使用命令列的回復方式（cmd.exe、powershell、bash、terminal）</li>
+<li>curl <a href="https://ethercalc.org/static/history/(你的專案的英文網址名稱)/(欲還原的文件編號).txt"></a><a href='https://ethercalc.org/static/history/G8VTV/1403598901269.txt'/>https://ethercalc.org/static/history/</a><a href='https://ethercalc.org/static/history/(%E4%BD%A0%E7%9A%84%E5%B0%88%E6%A1%88%E7%9A%84%E8%8B%B1%E6%96%87%E7%B6%B2%E5%9D%80%E5%90%8D%E7%A8%B1)/'/>(你的專案的英文網址名稱)</a><a href='https://ethercalc.org/static/history/G8VTV/1403598901269.txt'/>/</a><a href='https://ethercalc.org/static/history/(你的專案的英文網址名稱)/1403598901269.txt'/>(</a>欲還原的文件編號<a href='https://ethercalc.org/static/history/(你的專案的英文網址名稱)/(文件編號1403598901269.txt'/>)</a><a href='https://ethercalc.org/static/history/G8VTV/1403598901269.txt'/>.txt</a> | curl -i -X PUT --data-binary @- <a href="https://ethercalc.org/_/(你的專案的英文網址名稱)"></a><a href='https://ethercalc.org/_/G8VTV'/>https://ethercalc.org/_/</a><a href='https://ethercalc.org/static/history/(%E4%BD%A0%E7%9A%84%E5%B0%88%E6%A1%88%E7%9A%84%E8%8B%B1%E6%96%87%E7%B6%B2%E5%9D%80%E5%90%8D%E7%A8%B1)/(%E6%96%87%E4%BB%B6%E7%B7%A8%E8%99%9F).txt'/>(你的專案的英文網址名稱)</a></li></ul>
+
+</body>
 </html>
