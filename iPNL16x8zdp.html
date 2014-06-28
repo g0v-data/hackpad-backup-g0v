@@ -3,15 +3,29 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="547"/>
+<meta name="version" content="969"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$iPNL16x8zdp</title>
 </head>
 <body><h1>國會大代誌-完善議案追蹤</h1><p></p><p>提案題目：國會大代誌-完善議案追蹤</p><p></p><p>提案內容：</p><ul class="taskdone"><li>架 api.ly</li></ul>
-<ul class="task"><li>了解 ly.g0v.tw 與 api.ly 的架構</li>
-<li>解 <a href='https://github.com/g0v/ly.g0v.tw/issues/132'/>g0v/ly.g0v.tw#132</a></li>
+<ul class="task"><li>了解 api.ly 的架構</li>
+<li>了解 ly.g0v.tw 的架構</li>
+<li>解 <a href='https://github.com/g0v/ly.g0v.tw/issues/132'/>g0v/ly.g0v.tw#132</a>：目前只有院會會議，尚未抓取委員會會議</li></ul>
+<ul class="code"><li>首先從 calendar 裡抓到該 sitting 的所有開會的日期</li>
+<li>eg. 該 issue 的會議有四次日期：2014-01-06, 2014-01-06, 2014-01-08, 2014-01-08</li>
+<li>到官網用 sitting 的屆別、會期、開會日期搜索：</li>
+<li><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_iPNL16x8zdp_p.193478_1403960759360_bank.png'/></li>
+<li><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_iPNL16x8zdp_p.193478_1403961504416_bank.png'/></li>
+<li>用 sitting 的 name 搜索頁面：</li>
+<li><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_iPNL16x8zdp_p.193478_1403961616920_bank.png'/></li>
+<li>拿到 meeting_no, meeting_time, department_code：</li>
+<li><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_iPNL16x8zdp_p.193478_1403962037719_bank.png'/></li>
+<li>call getMeetingAgenda：</li>
+<li><a href="https://github.com/g0v/twlyparser/blob/master/src/misq.ls#L392"></a>https://github.com/g0v/twlyparser/blob/master/src/misq.ls#L392</li>
+<li>把這些 motions 放入資料庫，完成</li></ul>
+<ul class="task"><li>解 <a href='https://github.com/g0v/api.ly/issues/62'/>g0v/api.ly#62</a>：設定 pgq, plv8js 手續複雜</li>
 <li>替 ly.g0v.tw, api.ly 撰寫測試</li></ul>
 
-<p>提案進度：</p><ul><li>7/20 號前了解 ly.g0v.tw 與 api.ly 的架構，並修掉 g0v/ly.g0v.tw#132 <a href='https://github.com/g0v/ly.g0v.tw/issues/132'/>g0v/ly.g0v.tw#132</a></li>
+<p>提案進度：</p><ul><li>7/20 號前了解 ly.g0v.tw 與 api.ly 的架構，並修掉 <a href='https://github.com/g0v/ly.g0v.tw/issues/132'/>g0v/ly.g0v.tw#132</a></li>
 <li>8/20 號前以 g0v/ly.g0v.tw#132 為出發點，完善議會追蹤，包括撰寫測試</li>
 <li>9/20 號前依進度增加更完善的：文件、測試、功能</li></ul>
 
