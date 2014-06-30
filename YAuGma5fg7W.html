@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="4606"/>
+<meta name="version" content="4681"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$YAuGma5fg7W</title>
 </head>
 <body><h1>GIS(地理訊息系統)人力資源量產計畫暨自學手冊</h1><p></p><h2>緒論</h2><p><b>緣起</b></p><p>在太陽花學運之後，有很多後續團體鎖定選舉相關事務進行運作，其中以割闌尾、小蜜蜂、大家來選里長為代表。</p><p>近年來，使用GIS投入選舉行為分析的頻率越來越高，常見於媒體於選舉過後的統計報導(繪製各陣營選上的地區，如圖一)。同理，也可以將GIS預先用於地區投票偏好以及社會因素的分析，預先補強支持度不足的地區，以達到勝選的目的。</p><p>由於，過去GIS的學習資源大多難以接觸且需要具備統計的背景知識，使得GIS的人力資源往往是所費不貲的，但是經由自學以投入相關的社會運動，可以創造出難以估計的擁澳效益。</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_YAuGma5fg7W_p.168714_1402040378483_undefined'/></p><p>圖一 第八屆立法委員當選立委黨籍分布圖</p><p></p><p><b>應用範圍</b></p><ol><li><b>割闌尾計畫</b>：找出各鄉鎮市區或村里的在野支持力量，並嘗試予以統整及動員，並於選區內開拓更多的在野支持力量。</li>
@@ -547,7 +547,9 @@
 <li>簡略說明: <a href="https://github.com/bestian/shackhand/"></a>https://github.com/bestian/shackhand/</li></ul>
 </ul>
 
-<p><b>遠期計畫</b></p><p>建置圖資檔(.shp)與資料庫檔(.dbf)的共享與交流平台。</p><ul class="comment"><li>可以用R統計軟體連結圖資檔和資料庫檔鋪設平台，使用者只要能夠整理出有TV_ALL(鄉鎮市區+村里名)的欄位和資料欄位的.csv檔，丟入檔案後就能出圖。</li></ul>
+<p><b>遠期計畫</b></p><p>建置圖資檔(.shp)與資料庫檔(.dbf)的共享與交流平台。</p><ul class="comment"><li>可以用R統計軟體連結圖資檔和資料庫檔鋪設平台，使用者只要能夠整理出有TV_ALL(鄉鎮市區+村里名)的欄位和資料欄位的.csv檔，丟入檔案後就能出圖。</li>
+<li>其實在村里級的分析時，會遇到很多問題，因為村里增修還蠻頻繁的，而有時鎮會升格為市，因此需要確定資料及是哪個時間點的。在 <a href="https://github.com/g0v/twhgis/releases"></a>https://github.com/g0v/twhgis/releases 有列出每個不同時間點的所有村里列表，因此一個選擇是把統計資料的區域先對應到 ivid</li>
+<li>不過跨時分析還有很多問題待解決，例如跨越直轄市改制就相當複雜，還有若一個里分隔成兩個，之前的就沒有資料，但可以用面積計算出估計值並註記之。</li></ul>
 
 </body>
 </html>
