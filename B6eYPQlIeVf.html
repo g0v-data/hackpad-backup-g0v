@@ -3,14 +3,14 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2653"/>
+<meta name="version" content="2771"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$B6eYPQlIeVf</title>
 </head>
 <body><h1>第二次除黴會議紀錄</h1><p>此文件路徑：<a href='http://hackfoldr.org/app4am'/>全民除黴計畫hackfoldr</a> / 會議紀錄 / 這裡</p><p></p><p><b>會議資訊</b></p><p>會議名稱：第二次除黴會議</p><p>時間：2014/06/28 PM 1:30~5:30</p><p>地點：伯朗咖啡科大店，大包廂一半。&nbsp; 簡評：環保頗吵，人多結帳慢，不考慮再去</p><p>與會者：大嘴、呂沛宸、佑丞、Wilber、Dino、Michael ，共6位 (3位新成員)&nbsp;</p><p></p><p></p><h2>＜一＞會議紀錄摘要 (匯整中)</h2><undefined><li><b>會前小談</b></li></undefined>
 <p>Michael : 加入新聞小幫手的動機（１８個月之前的遠因）是因為<a href='https://zh.wikipedia.org/zh-tw/2012%E5%B9%B4%E6%9D%B1%E4%BA%AC%E5%8F%B0%E7%81%A3%E5%A5%B3%E7%95%99%E5%AD%B8%E7%94%9F%E5%91%BD%E6%A1%88'/>日本臺灣留學生殺人事件</a>中媒體過於誇張的報導行徑。目前專注於新聞小幫手專案的新聞分析及組織化、目標國際化的可能性上。</p><p></p><undefined><li>超濃縮自我介紹 (僅列一下新朋友)</li></undefined>
 <p>Michael：新聞小幫手資料整理與新聞分析者</p><p>大嘴：主要新聞來源是PTT，主流媒體的新聞管道已經看都不想看了</p><p>Dino：因為ETC的事件對媒體問題感受也滿深的</p><p></p><undefined><li>舊進度追蹤 → 檢討</li></undefined>
 <ul class="task"><li>建立聯絡名單資料庫 → 還沒填的快填吧</li>
-<li>開始建立媒體識讀資料庫 → 佑丞再去找低年級學妹借，不用途：app會有識讀文章、網站會有完整資料</li></ul>
+<li>開始建立媒體識讀資料庫 → 佑丞再去找低年級學妹借，用途：app會有識讀文章、網站會有完整資料</li></ul>
 <ul class="taskdone"><li><s>初期需主動找新聞評論，因此開始蒐集各大報頭板新聞的網路版內容(以 Word 存在 Google Drive 資料夾內，每日一個新資料夾)</s>&nbsp; 可搭配其他計畫的爬新聞技術自動化，先取消人工紀錄了，抱歉&gt;&lt;</li>
 <li>技術後端開始嘗試建立新聞資料庫</li>
 <li>建立新聞歸納分類標準 (計畫目標訂定以網路媒體為主，但初期會先挑選平面媒體也有的新聞，增加除黴傳播效益)</li><ul><li>不理會原有媒體的分類，採用複數標籤形式，半自動半手動分類</li></ul>
@@ -28,6 +28,7 @@
 <li>考慮做出可信樣本數的人力成本</li>
 <li>如果已有相關調查，說不定就可省下來，要再麻煩佑丞或郁芳有空查一下，目前我查過的資料只有&nbsp; <a href='http://cc.shu.edu.tw/~cjc/downloads/activity/2013/7-12/102091801.pdf'/>2013臺灣民眾媒體評鑑大調查與十年回顧</a> (不過佑丞好像不太相信這個XD)</li>
 <li>備註：趕８月份設計出問卷、收集到問卷，可能性很低，Michael建議先用簡單的評分結構代替，之後再改成正式的。</li></ul>
+<ul class="comment"><li>推薦用IPA分析法，簡單好用</li></ul>
 
 <p><b>2.3.App部份</b></p><p>UI設計修正</p><ul><li>媒體業者的名字要放大</li>
 <li>使用者蒐尋議題時，資料的顯示方式</li>
@@ -40,11 +41,14 @@
 <p><b>&nbsp;2.4.後台與程式部份</b></p><ul><li>Michael有租虛擬主機願意借我們用（需評估可不可行）</li>
 <li>資料庫系統使用 Mongo <a href="http://zh.wikipedia.org/wiki/MongoDB"></a>http://zh.wikipedia.org/wiki/MongoDB</li>
 <li>有後台人力資料管理需求所以需要一個介面</li>
-<li>大嘴推薦 Meteor&nbsp; ，參考 <a href='http://goo.gl/JmOvzg'/>Meteor 初體驗</a>&nbsp;</li>
+<li>大嘴推薦 Meteor&nbsp; ，參考 <a href='http://goo.gl/JmOvzg'/>Meteor 初體驗</a>&nbsp;<ul><li>主要是針對DDP的部份，建置起來後可以提供給所有網站前端甚至是手機APP使用，而不用花時間寫一堆資料API。</li>
+<li><a href="http://meteorhacks.com/introduction-to-ddp.html"></a>http://meteorhacks.com/introduction-to-ddp.html</li></ul>
+</li>
 <li>不然就是用json (?)</li></ul>
 
 <p><b>2.5.接收訊息者的觀點（也就是APP使用著）</b></p><ul><li>只看到排在最上面是最爛的新聞，沒有吸引力，還不如有「看好戲」的機制讓人有動力「看別人犯錯細節」的「見獵心喜」，促進使用者人數。</li>
 <li>新聞訊息要有「組織化」的功能（像組織圖），讓接收者知道各項新聞訊息是怎樣子的一個脈絡，屬於正面意義。（完全是編輯台人工處裡）</li></ul>
+<ul class="comment"><li>是指能在新聞內文標明出像5W(何人、何事、何地、為何、...) 這樣的脈絡嗎？</li></ul>
 
 <p><b>&nbsp;2.6.雜項</b></p><ul><li>因為兩位工程師加入，Wilber就專心做資料庫部分，app轉由Dino幫忙，大嘴待Wilber那邊OK後幫忙寫後台管理功能。</li>
 <li>先手機版，再Web版。</li>
