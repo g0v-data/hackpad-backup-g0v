@@ -3,15 +3,15 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2672"/>
+<meta name="version" content="3097"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$3EHKLPXSTny</title>
 </head>
-<body><h1>評價系統</h1><p></p><p></p><h2>1.基本方向</h2><ol><li>新聞本來就該做到客觀報導，因此評價系統只有<b>扣分</b>，無法加分<i><sup>註1</sup></i></li>
+<body><h1>評價系統</h1><p>此文件路徑：<a href='http://hackfoldr.org/app4am'/>全民除黴計畫hackfoldr</a> / 系統設計 / 這裡</p><p></p><h2>1.基本方向</h2><ol><li>新聞本來就該做到客觀報導，因此評價系統只有<b>扣分</b>，無法加分<i><sup>註1</sup></i></li>
 <li>從三個角度提供使用者看新聞時有額外的參考資訊：<ol><li><b>綜合評價分數 </b>：最快速的瞭解方式，也能一定程度防止殺人標題新聞</li>
 <li><b>違規項目及短評</b> ：提供只想進一步瞭解新聞問題，不想看落落長分析文的使用者簡便的方式</li>
 <li><b>長文回覆</b> ：要深入瞭解議題的使用者便可透過此管道獲得完整的真相</li></ol>
 </ol>
-<ul class="comment"><li>長文回覆在手機上基本上難以操作，雖然仍會做出輸入介面，但基本上希望能和其他組織合作，導入對方的文章為主，並提供合作對象的網站連結。(待細部討論)</li></ul>
+<ul class="comment"><li>長文回覆在行動裝置基本上難以操作，雖然仍會做出輸入介面，但希望能和其他組織合作，導入對方的文章為主，並提供合作對象的網站連結。(待細部討論)</li></ul>
 <ol><li>透過盡可能完整的機制提供資訊達到<u>足夠客觀</u>、<u>易於閱讀</u>、<u>主動補充</u>、<u>便於分享</u>&nbsp;</li>
 <li>計畫本身的定位是評價平台，非以自主產生新聞為目的，也非主打討論功能</li>
 <li>需有足夠的策略幫助、鼓勵好報導，不要只是讓社會對媒體更不信任，而是用理性但監督不斷的心態面對媒體</li>
@@ -37,5 +37,17 @@
 </ul>
 <p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_3EHKLPXSTny_p.150769_1404394585779_[評價方式] 評論員s.png'/></p><p></p><p><b>3.3 分析</b></p><p>長文分析，需由特別評論員從<u>議題面</u>發佈，影響新聞最廣，條件也最難 (待詳細制定，初期可能無法實裝？)</p><ul><li>重要性：直接省掉使用者還得用關鍵字去找相關優文的時間，對懶人來說超級方便</li>
 <li>因為回覆內容直接關聯到該議題的相關新聞上，連帶觸及率非常廣，不是傳統媒體的投書和論壇形式所能比擬，除黴效果強之外，也需要詳加制定規則以免被濫用。另外也涉及技術門檻(是否正確關聯到真正相關的新聞群)</li></ul>
-<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_3EHKLPXSTny_p.150769_1404397828950_[評價方式] 評論員長文s.png'/></p><p></p><p></p><p></p><p></p><h2>4.評價流程</h2><p></p><p></p><p></p><p></p><h2>5.分數呈現與統計方式</h2><p></p><p></p><p></p><p></p><p></p><p></p></body>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_3EHKLPXSTny_p.150769_1404397828950_[評價方式] 評論員長文s.png'/></p><p></p><p></p><p></p><p></p><h2>4.評價流程</h2><p></p><p></p><p></p><p></p><h2>5.分數呈現與統計方式</h2><p></p><p></p><h2>9.其他細節</h2><p><b>9.1 記者修正新聞相關問題</b></p><ul><li>是否有辦法能即時在新聞被抓出某些錯誤時通知記者</li>
+<li>如何判定記者有修改文章？(送出修正後→news-diff抓到新版→比對時間差在許可範圍內？)</li>
+<li>UI如何顯示已配合修改之新聞？</li></ul>
+
+<p><b>9.2 長文回覆(分析) 的內容來源及顯示問題</b></p><ul><li>內容來源<ul><li>1. 評論員克服萬難在行動裝置上輸入 (需有訊息即時備份功能，不然乾脆不要放上去)</li>
+<li>2.評論員在電腦上處理好資料，透過其他app，如google keep / evernote，將內容貼上並發佈</li>
+<li>3.直接在PC Web端做好輸入介面，最方便也能增加網站瀏覽必要性</li>
+<li>4.和其他計畫合作，API接收對方挑好最精華的文章 (但要怎麼歸類到我們的標籤裡?)</li></ul>
+</li>
+<li>顯示問題<ul><li><br/></li></ul>
+</ul>
+
+</body>
 </html>
