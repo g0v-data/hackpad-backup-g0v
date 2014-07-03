@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="4835"/>
+<meta name="version" content="4840"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$YAuGma5fg7W</title>
 </head>
 <body><h1>GIS(地理訊息系統)人力資源量產計畫暨自學手冊</h1><p></p><h2>緒論</h2><p><b>緣起</b></p><p>在太陽花學運之後，有很多後續團體鎖定選舉相關事務進行運作，其中以割闌尾、小蜜蜂、大家來選里長為代表。</p><p>近年來，使用GIS投入選舉行為分析的頻率越來越高，常見於媒體於選舉過後的統計報導(繪製各陣營選上的地區，如圖一)。同理，也可以將GIS預先用於地區投票偏好以及社會因素的分析，預先補強支持度不足的地區，以達到勝選的目的。</p><p>由於，過去GIS的學習資源大多難以接觸且需要具備統計的背景知識，使得GIS的人力資源往往是所費不貲的，但是經由自學以投入相關的社會運動，可以創造出難以估計的擁澳效益。</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_YAuGma5fg7W_p.168714_1402040378483_undefined'/></p><p>圖一 第八屆立法委員當選立委黨籍分布圖</p><p></p><p><b>應用範圍</b></p><ol><li><b>割闌尾計畫</b>：找出各鄉鎮市區或村里的在野支持力量，並嘗試予以統整及動員，並於選區內開拓更多的在野支持力量。</li>
@@ -23,15 +23,15 @@
 <ul style="list-style: none;"><li>在GIS中繪製地圖，有個很重要的零件是.dbf檔，是地圖上所有資料的存放處。</li>
 <li>Excel在選取所有檔案的情況下可讀取.dbf檔，但是轉存要在Access中匯入Excel檔後再匯出成.dbf檔。</li>
 <li>但Office 2013已經停止對.dbf檔的支援了，使用者要另尋替代方案。</li></ul>
-<ol><li><b>LibreOffice</b>&nbsp;</li></ol>
+<ol><li><b>·,：/LibreOffice</b>&nbsp;</li></ol>
 <ul style="list-style: none;"><li>一個免費、可讀˙取.dbf檔的程式，但是若儲存格有過長數值時會出錯(容許19位數值)。</li></ul>
-<ol><li><b>DBF Commander</b></li></ol>
+<ol><li><b>&rsquo;DBF Commander</b></li></ol>
 <ul style="list-style: none;"><li>英文軟體，是可以編寫和儲存.dbf檔的程式。</li></ul>
 
 <p><b>相關資料</b></p><undefined><li><b>圖資部分</b></li></undefined>
 <ol><li>台灣村里界(含澎湖)修正村里屬性資料 <a href="http://goo.gl/rbmHzv"></a>http://goo.gl/rbmHzv</li>
 <li>台灣行政區界資料- 村里 <a href="http://data.gov.tw/node/5968"></a><a href='http://data.gov.tw/node/5968'/>http://data.gov.tw/node/5968</a>&nbsp; (點選SHP下載)</li></ol>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - 鄉鎮 <a href="http://data.gov.tw/node/7441"></a><a href='http://data.gov.tw/node/7441'/>http://data.gov.tw/node/7441</a>&nbsp;&nbsp; (點選SHP下載)</p><ul class="comment"><li>鄉鎮市區界可以利用村里界Dissolve</li>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - 鄉鎮<a href="http://data.gov.tw/node/7441"></a><a href='http://data.gov.tw/node/7441'/>http://data.gov.tw/node/7441</a>&nbsp;&nbsp; (點選SHP下載)</p><ul class="comment"><li>鄉鎮市區界可以利用村里界Dissolve</li>
 <li>Dissolve的技術我還沒學會，目前還有一個需求量大的是立委選區的.shp檔</li>
 <li>我有將 MyServant 的立委選區資料轉為 json 格式使用 <a href="https://github.com/kiang/MyServant/blob/master/myservant/json/data/legislator_election_district_list.json"></a>https://github.com/kiang/MyServant/blob/master/myservant/json/data/legislator_election_district_list.json</li>
 <li>鄉鎮的 shp file 有部分縣市前面會加上臺灣省，要小心處理 (現在用工人智慧 XD)</li></ul>
