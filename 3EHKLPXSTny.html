@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="3768"/>
+<meta name="version" content="4593"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$3EHKLPXSTny</title>
 </head>
 <body><h1>評價系統</h1><p><sup>此文件路徑：<a href='http://hackfoldr.org/app4am'/>全民除黴計畫hackfoldr</a> / 系統設計 / 這裡</sup></p><p></p><h2>1.基本方向</h2><ol><li>新聞本來就該做到客觀報導，因此評價系統只有<b>扣分</b>，無法加分<i><sup>註1</sup></i></li>
@@ -49,21 +49,29 @@
 <li>長文回覆(限評論員)：仿照一般論壇發文形式，只是需額外選則「違規分類和違規細項」</li></ul>
 </ul>
 
-<p></p><h2>5.分數呈現與統計方式</h2><p></p><p><b>5.1 分數呈現</b></p><ul><li>顯示區塊<ul><li>議題列表：顯示所有新聞來源的平均分數</li>
-<li>新聞列表：顯示綜合評論員打臉數量與一般使用者評價的分數</li>
-<li>單篇新聞：各別顯示評論員與一般使用者的評價狀況</li></ul>
+<p></p><h2>5.分數呈現與統計方式</h2><p><b>5.1 分數呈現</b></p><p>待補一段摘要說明這段在講什麼，以及設計重點</p><ul><li>顯示區塊<ul><li>議題列表：顯示所有新聞來源的平均分數<ul><li>UI：待補</li></ul>
+</li>
+<li>新聞列表：顯示綜合評論員打臉數量與一般使用者評價的分數<ul><li>UI：待補&nbsp; (直接列出違規最嚴重的項目名稱？)</li></ul>
+</li>
+<li>單篇新聞：各別顯示評論員與一般使用者的評價狀況 / 確認違規的項目<ul><li>簡易顯示：在看新聞內文時就可看到，不需要切換到評價分析頁面 (暫定放在新聞照片區)</li>
+<li>完整顯示：</li></ul>
+</li></ul>
 </li>
 <li>顯示方式<ul><li>議題列表：？</li>
-<li>新聞列表：違規層級or綜合分數</li>
-<li>單篇新聞：百分比與人數</li>
+<li>新聞列表：直接列出違規最嚴重的項目名稱？</li>
+<li>單篇新聞：依不同Tab有不同顯示方式<ul><li>Tab1 ：新聞內文：百分比與人數</li>
+<li>Tab2：評價&amp;打臉狀況</li>
+<li>Tab3：長文回覆與??? (尚未詳訂)</li></ul>
+</li>
 <li><br/></li></ul>
 </ul>
-<p><b>5.2 統計方式</b></p><ul><li><br/><ul><li>議題列表：</li>
-<li>新聞列表：</li>
-<li>單篇新聞：<ul><li>快評：各大項投票相對百分比/人數切換？</li>
-<li>打臉：</li></ul>
+<p><b>5.2 統計方式</b></p><p>盡量符合直觀好理解，又不會造成伺服器負擔太大的方式</p><ul><li>使用者評價：<ul><li>評價人數：最簡單的方式，票票等值，容易作弊及落入比人數的情形，<u>不考慮使用</u></li>
+<li>評價人數+信任指數(暫名)：依「付責」概念，賦予能提供越多信任數據的會員較高權重，例如只有綁FB沒有綁手機的會員評價值是0.5，有加綁手機IMEI的會員是1，有實名認證的是2。當信任指數超過評價人數時，代表其投票較可信任，反之如果投票人數大幅超過信任指數時，代表可能是灌票，較無參考價值。</li>
+<li><b>範例</b></li></ul>
 </ul>
-</ul>
+<ul style="list-style: none;"><li>下面兩張圖各代表上面兩種統計顯示方式，如果用第一種，會認為項目C才是最嚴重的，但是如果加入信任指數，可能因為項目A的投票會員都有較高的可信度，結果項目A才是實際上比較具嚴重的違規，項目C可能是被灌票所產生的。</li>
+<li>這種方式也將政治參與責任的概念放進來，希望提醒閱聽人，不真正參與就是可能被不肖人士影響結果。</li></ul>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_3EHKLPXSTny_p.150769_1404633643607_信任指數模擬1.PNG'/></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_3EHKLPXSTny_p.150769_1404631784959_信任指數模擬2.PNG'/></p><p></p><ul><li>評論員打臉：</li></ul>
 
 <p></p><h2>9.其他細節</h2><p></p><p><b>9.1 長文回覆(分析) 的內容來源及顯示問題</b></p><ul><li>內容來源<ul><li>1. 評論員克服萬難在行動裝置上輸入 (需有訊息即時備份功能，不然乾脆不要放上去)</li>
 <li>2.評論員在電腦上處理好資料，透過其他app，如google keep / evernote，將內容貼上並發佈</li>
