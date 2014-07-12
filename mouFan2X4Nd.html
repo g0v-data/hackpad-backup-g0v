@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1288"/>
+<meta name="version" content="1519"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$mouFan2X4Nd</title>
 </head>
 <body><h1>OpenEvSys 中文化</h1><p></p><p>提案: <u>TonyQ</u></p><p><a href="https://www.facebook.com/groups/g0v.general/permalink/647760865300323/"></a>https://www.facebook.com/groups/g0v.general/permalink/647760865300323/</p><p></p><p>現有各國語系文字檔，目前計畫參考 en.json 英文語系</p><p><a href="https://github.com/huridocs/OpenEvSys/tree/master/translate/translated/js"></a>https://github.com/huridocs/OpenEvSys/tree/master/translate/translated/js</p><p></p><p>目前著手進行：</p><ul class="comment"><li>架設 demo 網站。注意，此網站僅供測試用，</li>
@@ -13,7 +13,17 @@
 <li>admin/admin</li>
 <li>dataentry/dataentry</li>
 <li>analyst/analyst</li>
+<li>原本的 translation.txt機制太難用，來做出從 json 翻譯出需要的字典檔的 fork</li>
+<li><br/></li>
 <li><br/></li></ul>
+<p>目前遇到的困難：</p><ul class="comment"><li>這個 project 裡面還有個 translations.txt，裡面的詞都是一樣的。目前我看 php 的 code 的猜測是，其實我們要翻譯 translations.txt，然後再去 generate 這些 en.json 檔。有熟悉php 的朋友可以幫忙確定一下嗎?</li>
+<li>Confirmed , 你說的沒錯.&nbsp;</li>
+<li>根據 <a href="https://github.com/huridocs/OpenEvSys/blob/master/translate/generate.php"></a>https://github.com/huridocs/OpenEvSys/blob/master/translate/generate.php 的邏輯的確是這樣</li>
+<li>不過我 translation.txt 看起來是 tab 分隔的 csv ，多語系擠一起不好編輯，我覺得我們還是先照原本計畫先翻完 .json，然後再來想辦法塞回 translation.txt，照理說是會 1:1 對應的。</li>
+<li>或是簡單點，直接 hack 他，把 json 讀回來變成 translation array 後面流程照舊。</li>
+<li><br/></li>
+<li><br/></li></ul>
+
 <p><b>討論區</b></p><ul class="comment"><li>699 &quot;ervention information&quot;不知如何翻譯。</li>
 <li>705 &quot;Erase&quot; 跟 707 &quot;Clear&quot; 都翻成「清除」？</li>
 <li>user: 使用者, person是翻成「人」嘛XD?</li>
