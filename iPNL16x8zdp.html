@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1752"/>
+<meta name="version" content="1940"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$iPNL16x8zdp</title>
 </head>
 <body><h1>國會大代誌-完善議案追蹤</h1><p></p><p>提案題目：國會大代誌-完善議案追蹤</p><p></p><p>提案內容：</p><ul class="taskdone"><li>架 api.ly</li>
@@ -52,9 +52,18 @@
 <li><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_iPNL16x8zdp_p.193478_1405045009045_bank.png'/></li>
 <li>成果(行動裝置，max-width &lt;= 1120px)：</li>
 <li><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_iPNL16x8zdp_p.193478_1405045046887_bank2.png'/></li></ul>
-<ul class="task"><li>解 <a href='https://github.com/g0v/api.ly/issues/62'/>g0v/api.ly#62</a>：設定 pgq, plv8js 手續複雜，使用 docker 包裝成一個 app</li></ul>
+<ul class="taskdone"><li>解 <a href='https://github.com/g0v/api.ly/issues/62'/>g0v/api.ly#62</a>：設定 pgq, plv8js 手續複雜，使用 docker 包裝成一個 app</li></ul>
 <ul class="code"><li>pgrest 安裝指南：</li>
-<li><a href="https://github.com/pgrest/pgrest/wiki/Installation"></a>https://github.com/pgrest/pgrest/wiki/Installation</li></ul>
+<li><a href="https://github.com/pgrest/pgrest/wiki/Installation"></a>https://github.com/pgrest/pgrest/wiki/Installation</li>
+<li>成果：</li>
+<li>1. 安裝 docker</li>
+<li>2. 建立 image</li>
+<li>&nbsp;&nbsp;&nbsp; $ ./docker/build-image.sh</li>
+<li>3. 執行 postgres</li>
+<li>&nbsp;&nbsp;&nbsp; $ ./docker/postgres.sh</li>
+<li>4. 執行 api.ly</li>
+<li>&nbsp;&nbsp;&nbsp; $ ./docker/app.sh</li>
+<li>5. 開啟瀏覽器觀看 <a href="http://127.0.0.1:3000/collections/sittings"></a>http://127.0.0.1:3000/collections/sittings</li></ul>
 <ul class="task"><li>替 ly.g0v.tw, api.ly 撰寫測試</li></ul>
 
 <p>提案進度：</p><ul><li>7/20 號前了解 ly.g0v.tw 與 api.ly 的架構，並修掉 <a href='https://github.com/g0v/ly.g0v.tw/issues/132'/>g0v/ly.g0v.tw#132</a></li>
