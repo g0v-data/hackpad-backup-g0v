@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1519"/>
+<meta name="version" content="1566"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$mouFan2X4Nd</title>
 </head>
 <body><h1>OpenEvSys 中文化</h1><p></p><p>提案: <u>TonyQ</u></p><p><a href="https://www.facebook.com/groups/g0v.general/permalink/647760865300323/"></a>https://www.facebook.com/groups/g0v.general/permalink/647760865300323/</p><p></p><p>現有各國語系文字檔，目前計畫參考 en.json 英文語系</p><p><a href="https://github.com/huridocs/OpenEvSys/tree/master/translate/translated/js"></a>https://github.com/huridocs/OpenEvSys/tree/master/translate/translated/js</p><p></p><p>目前著手進行：</p><ul class="comment"><li>架設 demo 網站。注意，此網站僅供測試用，</li>
@@ -14,13 +14,20 @@
 <li>dataentry/dataentry</li>
 <li>analyst/analyst</li>
 <li>原本的 translation.txt機制太難用，來做出從 json 翻譯出需要的字典檔的 fork</li>
+<li>Done</li>
+<li>應急可以先 merge 我的 commit&nbsp;</li>
+<li><a href="https://github.com/tony1223/OpenEvSys/commit/bb87ef6c11bd43277f6a8bcf11b590748f3c6eb4"></a>https://github.com/tony1223/OpenEvSys/commit/bb87ef6c11bd43277f6a8bcf11b590748f3c6eb4</li>
+<li><br/></li>
+<li>我把翻譯的原始檔放在這 <a href="https://github.com/tony1223/OpenEvSys/blob/master/translate/translation_zh_tw.json"></a>https://github.com/tony1223/OpenEvSys/blob/master/translate/translation_zh_tw.json</li>
+<li>然後跑&nbsp; <a href="http://localhost/OpenEvSys/translate/generate_zhtw.php"></a>http://localhost/OpenEvSys/translate/generate_zhtw.php 就能自動建立對應的語系檔了。</li>
 <li><br/></li>
 <li><br/></li></ul>
 <p>目前遇到的困難：</p><ul class="comment"><li>這個 project 裡面還有個 translations.txt，裡面的詞都是一樣的。目前我看 php 的 code 的猜測是，其實我們要翻譯 translations.txt，然後再去 generate 這些 en.json 檔。有熟悉php 的朋友可以幫忙確定一下嗎?</li>
 <li>Confirmed , 你說的沒錯.&nbsp;</li>
 <li>根據 <a href="https://github.com/huridocs/OpenEvSys/blob/master/translate/generate.php"></a>https://github.com/huridocs/OpenEvSys/blob/master/translate/generate.php 的邏輯的確是這樣</li>
 <li>不過我 translation.txt 看起來是 tab 分隔的 csv ，多語系擠一起不好編輯，我覺得我們還是先照原本計畫先翻完 .json，然後再來想辦法塞回 translation.txt，照理說是會 1:1 對應的。</li>
-<li>或是簡單點，直接 hack 他，把 json 讀回來變成 translation array 後面流程照舊。</li>
+<li>或是簡單點，直接 hack 他，把 json 讀回來變成 translation array 後面流程照舊，</li>
+<li>語系檔的部份我應該已經先做出條應急的路了，請參考「目前著手進行」裡面我的留言。</li>
 <li><br/></li>
 <li><br/></li></ul>
 
@@ -140,7 +147,7 @@
 <li>&quot;CLARIFYING_NOTE&quot;: &quot;Clarifying Note&quot;,</li>
 <li>&quot;CLARIFYING_NOTES&quot;: &quot;Clarifying Notes&quot;,</li>
 <li>&quot;CLEAR&quot;: &quot;清除&quot;,</li>
-<li>&quot;CLICK_TO_DOWNLOAD_EVENTS_XML_FILE_OF_ALL_RECORDS_IN_THIS_OPENEVSYS_&quot;: &quot;Click to download Events XML file of all records in this OpenEvSys.&quot;,</li>
+<li>&quot;CLICK_TO_DOWNLOAD_EVENTS_XML_FILE_OF_ALL_RECORDS_IN_THIS_OPENEVSYS_&quot;: &quot;Click to download Events XML file of all records in this OpenEvSys.&quot;,DATE_CREATED</li>
 <li>&quot;CLICK_TO_SELECT_AN_OPTION&quot;: &quot;Click to select an option&quot;,</li>
 <li>&quot;CLOSE&quot;: &quot;Close&quot;,</li>
 <li>&quot;COLUMN_RESET_BACK_TO_ORIGINAL_VALUES_&quot;: &quot;Column reset back to original values.&quot;,</li>
@@ -168,7 +175,7 @@
 <li>&quot;DATA_EXCHANGE&quot;: &quot;Data exchange&quot;,</li>
 <li>&quot;DATABASE_ERROR&quot;: &quot;資料庫錯誤&quot;,</li>
 <li>&quot;DATE&quot;: &quot;Date&quot;,</li>
-<li>&quot;DATE_CREATED&quot;: &quot;建立日期&quot;</li>
+<li>&quot;DATE_CREATED&quot;: &quot;建立日期&quot;,</li>
 <li>&quot;DATE_FIELD_&quot;:&quot;歸檔日期&quot;,</li>
 <li>&quot;DATE_OF_INTERVENTION&quot;: &quot;Date of Intervention&quot;,</li>
 <li>&quot;DATE_OF_SOURCE_MATERIAL&quot;: &quot;Date of Source Material&quot;,</li>
@@ -517,8 +524,8 @@
 <li>&quot;SHOW_ALL&quot;: &quot;Show all&quot;,</li>
 <li>&quot;SHOW_SEARCH_FORM&quot;: &quot;Show search form&quot;,</li>
 <li>&quot;SHOW_SUPPORTING_DOCUMENT_S_&quot;: &quot;Show Supporting Document(s)&quot;,</li>
-<li>&quot;SIGN_IN&quot;: &quot;Sign in&quot;,</li>
-<li>&quot;SIGN_IN_TO_OPENEVSYS&quot;: &quot;Sign in to OpenEvSys&quot;,</li>
+<li>&quot;SIGN_IN&quot;: &quot;登入&quot;,</li>
+<li>&quot;SIGN_IN_TO_OPENEVSYS&quot;: &quot;登入到 OpenEvSys&quot;,</li>
 <li>&quot;SIGN_OUT&quot;: &quot;登出&quot;,</li>
 <li>&quot;SOME_ERRORS_OCCURED_WHILE_IMPORTING_DATA_&quot;: &quot;Some errors occurred while importing data:&quot;,</li>
 <li>&quot;SOUND_LIKE&quot;: &quot;sound like&quot;,</li>
@@ -639,12 +646,12 @@
 <li>&quot;YEAR_S__&quot;: &quot;年:&quot;,</li>
 <li>&quot;YES&quot;: &quot;是、同意&quot;,</li>
 <li>&quot;YOU_ARE_ABOUT_TO_DELETE_AN_EVENT__THIS_MEANS_YOU_WILL_DELETE_THE_RECORDS_LISTED_BELOW__DO_YOU_WANT_TO_CONTINUE_&quot;: &quot;You are about to delete an Event. This means you will delete the records listed below. Do you want to continue?&quot;,</li>
-<li>&quot;YOU_CANNOT_CHANGE_THE_ADMINISTRATOR_PERMISSIONS_&quot;: &quot;你不能改變管理員的權限&quot;,</li>
-<li>&quot;YOU_CANNOT_DELETE_OTHER_ADMIN_USERS_&quot;: &quot;你不能刪除其他admin users &quot;,</li>
-<li>&quot;YOU_CANNOT_DELETE_THE_ADMINISTRATOR_ACCOUNT_&quot;: &quot;你不刪除管理員的帳號&quot;,</li>
+<li>&quot;YOU_CANNOT_CHANGE_THE_ADMINISTRATOR_PERMISSIONS_&quot;: &quot;你不能變更管理員的權限&quot;,</li>
+<li>&quot;YOU_CANNOT_DELETE_OTHER_ADMIN_USERS_&quot;: &quot;你不能刪除其他管理員&quot;,</li>
+<li>&quot;YOU_CANNOT_DELETE_THE_ADMINISTRATOR_ACCOUNT_&quot;: &quot;你不能刪除管理員的帳號&quot;,</li>
 <li>&quot;YOU_CANNOT_DELETE_THE_DEFAULT_LANGUAGE&quot;: &quot;你不能刪除預設的語系&quot;,</li>
 <li>&quot;YOU_CANNOT_DELETE_YOURSELF_FROM_THE_LIST_OF_USERS_&quot;: &quot;你不能從使用者列表內刪除你自己&quot;,</li>
-<li>&quot;YOU_DO_NOT_HAVE_PERMISSION_TO_EDIT_OTHER_ADMIN_USERS_DETAILS_&quot;: &quot;你沒有權限去編輯其他 admin users 資訊.&quot;,</li>
+<li>&quot;YOU_DO_NOT_HAVE_PERMISSION_TO_EDIT_OTHER_ADMIN_USERS_DETAILS_&quot;: &quot;你沒有編輯其他管理員的資訊的權限.&quot;,</li>
 <li>&quot;YOU_HAVE_ALSO_SELECTED_SOME_PARENT_TERM_S___IF_YOU_PROCEED_THE_CHILDRENS_OF_THOSE_TERMS_WILL_ALSO_BE_DELETED_&quot;: &quot;You have also selected some parent term(s), if you proceed the children&rsquo;s of those terms will also be deleted.&quot;,</li>
 <li>&quot;YOU_MUST_FILL_IN_THIS_FIELD&quot;: &quot;你必須填寫這個欄位&quot;,</li>
 <li>&quot;YOU_NEED_TO_SELECT_AN_ENTITY_BEFORE_COUNTING&quot;: &quot;You need to select an entity before counting&quot;,</li>
