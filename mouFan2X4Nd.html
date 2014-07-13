@@ -3,10 +3,10 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1566"/>
+<meta name="version" content="1727"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$mouFan2X4Nd</title>
 </head>
-<body><h1>OpenEvSys 中文化</h1><p></p><p>提案: <u>TonyQ</u></p><p><a href="https://www.facebook.com/groups/g0v.general/permalink/647760865300323/"></a>https://www.facebook.com/groups/g0v.general/permalink/647760865300323/</p><p></p><p>現有各國語系文字檔，目前計畫參考 en.json 英文語系</p><p><a href="https://github.com/huridocs/OpenEvSys/tree/master/translate/translated/js"></a>https://github.com/huridocs/OpenEvSys/tree/master/translate/translated/js</p><p></p><p>目前著手進行：</p><ul class="comment"><li>架設 demo 網站。注意，此網站僅供測試用，</li>
+<body><h1>OpenEvSys 中文化</h1><p></p><p>提案: <u>TonyQ</u></p><p><a href="https://www.facebook.com/groups/g0v.general/permalink/647760865300323/"></a>https://www.facebook.com/groups/g0v.general/permalink/647760865300323/</p><p></p><p>現有各國語系文字檔，目前計畫參考 en.json 英文語系</p><p><a href="https://github.com/huridocs/OpenEvSys/tree/master/translate/translated/js"></a>https://github.com/huridocs/OpenEvSys/tree/master/translate/translated/js</p><p></p><p>初步成果截圖：<a href="http://gyazo.com/ec5e43ca15f2d63c00cce68c9979ca0a"></a>http://gyazo.com/ec5e43ca15f2d63c00cce68c9979ca0a</p><p>目前著手進行：</p><ul class="comment"><li>架設 demo 網站。注意，此網站僅供測試用，</li>
 <li>測試過程視需要可能reset 資料庫，請勿放置重要資料</li>
 <li><a href="http://162.222.176.96/demo"></a>http://<a href='http://162.222.176.96/demo'/>162.222.176.96</a>/demo</li>
 <li>測試帳號密碼：</li>
@@ -20,6 +20,9 @@
 <li><br/></li>
 <li>我把翻譯的原始檔放在這 <a href="https://github.com/tony1223/OpenEvSys/blob/master/translate/translation_zh_tw.json"></a>https://github.com/tony1223/OpenEvSys/blob/master/translate/translation_zh_tw.json</li>
 <li>然後跑&nbsp; <a href="http://localhost/OpenEvSys/translate/generate_zhtw.php"></a>http://localhost/OpenEvSys/translate/generate_zhtw.php 就能自動建立對應的語系檔了。</li>
+<li>了解。我已經把你的 patch 放上測試網站，可以看初步成果截圖。</li>
+<li>我的想法是可以把目前翻譯好的放回 translations.txt ，然後用 ethercalc 來編輯。</li>
+<li>在ethercalc 上翻譯好以後，可以輸出 csv，到時候再轉成 translations.txt，然後發 pull request 給 huridocs/OpenEvSys</li>
 <li><br/></li>
 <li><br/></li></ul>
 <p>目前遇到的困難：</p><ul class="comment"><li>這個 project 裡面還有個 translations.txt，裡面的詞都是一樣的。目前我看 php 的 code 的猜測是，其實我們要翻譯 translations.txt，然後再去 generate 這些 en.json 檔。有熟悉php 的朋友可以幫忙確定一下嗎?</li>
