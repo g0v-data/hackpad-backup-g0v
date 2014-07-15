@@ -3,25 +3,14 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="208"/>
+<meta name="version" content="236"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$ZjlnDReZvPr</title>
 </head>
 <body><h1>公有地大行動－網站架構討論</h1><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_ZjlnDReZvPr_p.172171_1405083618576_2014-07-11_205035.jpg'/></p><p><a href="https://realtimeboard.com/app/52801606/POPonFIRE/"></a><a href='https://realtimeboard.com/app/52801606/POPonFIRE/'/>https://realtimeboard.com/app/52801606/POPonFIRE/</a></p><p></p><h2>文案型的內容</h2><p>【ABOUT 計畫說明】</p><p>【國土架構說明】</p><p>【土地開發的潛規則，火線的火法】</p><p>【公共的願景與個案案例】</p><p>【WIKI 的方法】</p><p></p><h2>功能性的部分</h2><p></p><p>我先丟一下幾個課題：</p><p></p><p><b>&nbsp;關於地號與地址，面積與形狀</b></p><p></p><ul><li>有些資料只有地號，理想上，如果我們有ＧＩＳ地籍圖，其實是可以把該筆地號的邊界形狀也呈現出來，問題是，ＧＩＳ地籍圖是要動態地更新的，基本上應該只有地政司持續更新，我個人是覺得，哪天路上撿到了每年都更新的完整台灣測繪地籍圖系統，那就可以用地號連帶著邊界形狀一起呈現每筆資料</li></ul>
 
-<ol><li><a href="https://osmtw.hackpad.com/Open-Geo-Data-for-Government-5YtEoKVphQF"></a>https://osmtw.hackpad.com/Open-Geo-Data-for-Government-5YtEoKVphQF</li>
-<li>地號與其地號對應的邊界座標 api</li><ul class="comment"><li><i>話說地號和地址對應經緯度，據說有上千萬筆data entry，還有maintain更新、正確性問題</i></li></ul class="comment">
-</li>
-<li><a href="http://whgis.nlsc.gov.tw/"></a><a href='http://whgis.nlsc.gov.tw/'/>http://whgis.nlsc.gov.tw/</a> -&gt; 國圖查詢展示 -&gt; then can get 地號 from a point.</li></ol>
-<ul class="comment"><li>Draw a shape over the boundaries, then can download its KML!</li>
-<li><a href="http://easymap.land.moi.gov.tw/K02Web/K02Land.jsp"></a><a href='http://easymap.land.moi.gov.tw/K02Web/K02Land.jsp'/>http://easymap.land.moi.gov.tw/K02Web/K02Land.jsp</a> can see 地籍圖 and neighboring...</li>
-<li><a href="http://navimap.land.moi.gov.tw/"></a><a href='http://navimap.land.moi.gov.tw/'/>http://navimap.land.moi.gov.tw/</a></li>
-<li><a href="http://ngis.afasi.gov.tw/"></a><a href='http://ngis.afasi.gov.tw/'/>http://ngis.afasi.gov.tw/</a></li>
-<li><a href="http://landquery.taichung.gov.tw/query/noncityland.jsp"></a><a href='http://landquery.taichung.gov.tw/query/noncityland.jsp'/>http://landquery.taichung.gov.tw/query/noncityland.jsp</a> can look up each parcel&rsquo;s</li>
-<li>山坡地保育區&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 林業用地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and size.</li></ul>
+<p><a href="https://osmtw.hackpad.com/Open-Geo-Data-for-Government-5YtEoKVphQF"></a>https://osmtw.hackpad.com/Open-Geo-Data-for-Government-5YtEoKVphQF</p><p>地號與其地號對應的邊界座標 api</p><p>話說地號和地址對應經緯度，據說有上千萬筆data entry，還有maintain更新、正確性問題</p><p><a href="http://whgis.nlsc.gov.tw/"></a><a href='http://whgis.nlsc.gov.tw/'/>http://whgis.nlsc.gov.tw/</a> -&gt; 國圖查詢展示 -&gt; then can get 地號 from a point.</p><p>Draw a shape over the boundaries, then can download its KML!</p><p><a href="http://easymap.land.moi.gov.tw/K02Web/K02Land.jsp"></a><a href='http://easymap.land.moi.gov.tw/K02Web/K02Land.jsp'/>http://easymap.land.moi.gov.tw/K02Web/K02Land.jsp</a> can see 地籍圖 and neighboring...</p><p><a href="http://navimap.land.moi.gov.tw/"></a><a href='http://navimap.land.moi.gov.tw/'/>http://navimap.land.moi.gov.tw/</a></p><p><a href="http://ngis.afasi.gov.tw/"></a><a href='http://ngis.afasi.gov.tw/'/>http://ngis.afasi.gov.tw/</a></p><p><a href="http://landquery.taichung.gov.tw/query/noncityland.jsp"></a><a href='http://landquery.taichung.gov.tw/query/noncityland.jsp'/>http://landquery.taichung.gov.tw/query/noncityland.jsp</a> can look up each parcel&rsquo;s</p><p>山坡地保育區、林業用地 and size.</p><p>臺北市數值地籍地段圖</p><p><a href="http://data.taipei.gov.tw/opendata/apply/NewDataContent?oid=0D9364CD-1677-4EAB-827B-7DA8E37785EB#"></a><a href='http://data.taipei.gov.tw/opendata/apply/NewDataContent?oid=0D9364CD-1677-4EAB-827B-7DA8E37785EB#'/>http://data.taipei.gov.tw/opendata/apply/NewDataContent?oid=0D9364CD-1677-4EAB-827B-7DA8E37785EB#</a></p><p>國土測繪圖資網路地圖服務地標資訊</p><p><a href="https://github.com/ronnywang/maps.nlsc.gov.tw/tree/master/landmark"></a><a href='https://github.com/ronnywang/maps.nlsc.gov.tw/tree/master/landmark'/>https://github.com/ronnywang/maps.nlsc.gov.tw/tree/master/landmark</a></p><p></p><p></p><p></p><ul><li>所以，把地號轉成地址，繼而成為經緯度，來落點；面積，就以同面積的圓形來呈現，即上回黑客松時所討論的呈現方式</li></ul>
 
-<ul><li>所以，把地號轉成地址，繼而成為經緯度，來落點；面積，就以同面積的圓形來呈現，即上回黑客松時所討論的呈現方式</li></ul>
-
-<p>國土測繪圖資網路地圖服務地標資訊</p><p><a href="https://github.com/ronnywang/maps.nlsc.gov.tw/tree/master/landmark"></a>https://github.com/ronnywang/maps.nlsc.gov.tw/tree/master/landmark</p><p></p><ul><li>但是，我稍微看了一下幾個土地資料，其實縱然是兩筆土地，但是其實是相鄰著，地號也連續著，理想上，如果可以辨識出來，這兩筆土地是地號向連地理相鄰，那麼，不排除可以整合呈現。但是也很難講這樣就一定比較好，因為對於地政與財政系統來說，他們還是會保留土地的單筆單筆。</li></ul>
+<ul><li>但是，我稍微看了一下幾個土地資料，其實縱然是兩筆土地，但是其實是相鄰著，地號也連續著，理想上，如果可以辨識出來，這兩筆土地是地號向連地理相鄰，那麼，不排除可以整合呈現。但是也很難講這樣就一定比較好，因為對於地政與財政系統來說，他們還是會保留土地的單筆單筆。</li></ul>
 
 <p><b>關於資料：土地大小</b></p><p></p><ul><li>目前有看到的公有土地資料，若以面積大小來分類，其實可以分成：</li></ul>
 
