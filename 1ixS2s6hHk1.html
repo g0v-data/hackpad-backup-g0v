@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="468"/>
+<meta name="version" content="952"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$1ixS2s6hHk1</title>
 </head>
 <body><h1>politwoops 進度規劃</h1><p>這是 watchOut x g0v summer code project.</p><p>後端 fork from <a href="https://github.com/sunlightlabs/politwoops-tweet-collector"></a>https://github.com/sunlightlabs/politwoops-tweet-collector</p><p>前端 fork from <a href="https://github.com/sunlightlabs/politwoops"></a>https://github.com/sunlightlabs/politwoops</p><p>後端是主要進度。</p><p></p><h2>預計進度</h2><ol><li>把 politwoops.tw 整個架起來</li>
@@ -11,8 +11,13 @@
 <li>做資料測試</li>
 <li>修 mockup and web 介面</li></ol>
 <ul class="comment"><li>依目前 (7/15) 看 code 的狀況， 2 &amp; 3 應該會混在一起做；如果有類似 tweepy 的 FB library 則應該會在 8 月初前完成，沒有的話可能得自幹類似 tweepy 的 library.... 那在 8/20 前會完成 ( 後端能做 demo</li></ul class="comment">
-<h2>進度現況</h2><ul class="taskdone"><li>把 politwoops 整個架起來</li></ul>
-<ul class="comment"><li>這裡會補上實際操作</li></ul>
+<h2>進度現況</h2><ul class="taskdone"><li>把 <a href='https://github.com/sunlightlabs/politwoops-tweet-collector'/>politwoops </a>整個架起來(後端)</li></ul>
+<ul class="comment"><li>測試用的機器是跑 Lubuntu 12 &amp; 14，</li>
+<li>dependencies 包括: git, python, pip, pythonsqldb, mysql, beanstalkd, tweepy(新版) 跟原project requirements 內的python相關套件。</li>
+<li>pip在 lubuntu 下要用 easy_install 安裝，直接用 apt-get 到後面會炸掉...(原因不明)</li>
+<li>照 README.md 跑到 Running 前， config 檔寫好之後 create database，資料表的部份因為相依在前端的project，這邊先用 ly提供的 <a href='https://gist.github.com/yhsiang/d8bb81aa488ba9bebf39'/>sql schema</a> ，倒進 databse 。</li>
+<li>切進 politicians tables, 加入測試用的 twitter_id &amp; infos.</li>
+<li>跑 Running.&nbsp;&nbsp; (( 第三支截圖用的不跑，config中用 # 把 [AWS] 下的設定都註解掉</li></ul>
 <ul class="task"><li>建後端的 collector<ul class="task"><li>把 collector 主要在跑的三支 .py 看懂<ul class="task"><li>tweets-client.py</li><ul class="comment"><li>補上邏輯結構</li></ul>
 </ul>
 <ul class="task"><li>politwoops-worker.py</li></ul>
