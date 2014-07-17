@@ -3,14 +3,21 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2010"/>
+<meta name="version" content="2356"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$1ixS2s6hHk1</title>
 </head>
 <body><h1>politwoops 進度規劃</h1><p>這是 watchOut x g0v summer code project.</p><p>後端 fork from <a href="https://github.com/sunlightlabs/politwoops-tweet-collector"></a>https://github.com/sunlightlabs/politwoops-tweet-collector</p><p>前端 fork from <a href="https://github.com/sunlightlabs/politwoops"></a>https://github.com/sunlightlabs/politwoops</p><p>後端是主要進度。</p><p></p><h2>預計進度</h2><ol><li>把 politwoops.tw 整個架起來</li>
 <li>建後端的 collector</li>
 <li>做資料測試</li>
 <li>修 mockup and web 介面</li></ol>
-<ul class="comment"><li>依目前 (7/15) 看 code 的狀況， 2 &amp; 3 應該會混在一起做；如果有類似 tweepy 的 FB library 則應該會在 8 月初前完成，沒有的話可能得自幹類似 tweepy 的 library.... 那在 8/20 前會完成 ( 後端能做 demo</li></ul class="comment">
+<ul class="comment"><li>依目前 (7/15) 看 code 的狀況， 2 &amp; 3 應該會混在一起做；如果有類似 tweepy 的 FB library 則應該會在 8 月初前完成，沒有的話可能得自幹類似 tweepy 的 library.... 那在 8/20 前會完成 ( 後端能做 demo</li>
+<li>那這禮拜的進度就是先玩一下facebook oauth 和facebook api?</li>
+<li>玩 fb api ing LOL</li>
+<li>應該要申請一個faebook app,拿到app id跟app key之後，在app裡面填上去，根據facebook 的oauth流程，可以拿到user的access token，不過public posts應該不用這樣? XD</li>
+<li>我先從 graph API Explorer 做測試XD 但我的牆實在是太髒了lol...感覺要申請一個空帳號來抓會比較好明白會出哪些data</li>
+<li>ya, 申請一個空帳號，另外也可以看能不能抓到某個政治人物facebook的public posts</li>
+<li><a href="https://developers.facebook.com/docs/public_feed"></a><a href='https://developers.facebook.com/docs/public_feed'/>https://developers.facebook.com/docs/public_feed</a>&nbsp;&nbsp; 另外這邊好像有ˋ提到delete的東西參考一下</li>
+<li>! ok我去研究看看XD</li></ul class="comment">
 <h2>進度現況</h2><ul class="taskdone"><li>把 <a href='https://github.com/sunlightlabs/politwoops-tweet-collector'/>politwoops </a>整個架起來(後端)</li></ul>
 <ul class="comment"><li>測試用的機器是跑 Lubuntu 12 &amp; 14，</li>
 <li>dependencies 包括: git, python, pip, pythonsqldb, mysql, beanstalkd, tweepy(新版) 跟原project requirements 內的python相關套件。</li>
@@ -23,7 +30,8 @@
 </ul>
 <ul class="task"><li><a href='https://github.com/sunlightlabs/politwoops-tweet-collector/blob/master/bin/politwoops-worker.py'/>politwoops-worker.py</a></li><ul><li>主要進入點在 Line:105，監測 beanstalk 有沒有 job ( put from tweets-client )，再做處理(L:121)。</li></ul>
 </ul>
-<ul class="task"><li>screenshot-worker.py</li><ul class="comment"><li>這支主要是跑截圖， ly 說先不管它XD</li></ul>
+<ul class="task"><li>screenshot-worker.py</li><ul class="comment"><li>這支主要是跑截圖， ly 說先不管它XD</li>
+<li>ya 這個前面完成再來做</li></ul>
 </ul>
 </ul>
 </ul>
@@ -31,8 +39,11 @@
 <h2>備註 & 討論</h2><ul><li><a href='https://github.com/tweepy/tweepy'/>tweepy github</a></li><ul class="comment"><li>核心的 library 是 tweepy 跟 beanstalk ，但 beanstalk 主要是處理資料流，最大的問題還是在 tweepy 上。</li>
 <li>我有跑去看了一下 tweepy 的 source code ，不太確定它 streaming.listener 讀的資料是在自己的 twitter 牆上? 沒啥在用 twitter 不太理解它的運作方式....囧。</li>
 <li>假想的情況是， api 是 listener 自己的 twitter 牆 ( twitter 是在每個 following tweet 的時候都會一併出現在 follower 的牆上吧? )，再針對 tweet 做判讀( tweet content )，所以在 on_data 的時候可以直接從 data.has_key() 裡面判斷資料.....</li>
-<li>但現在比較實質的問題是 FB 的 api 沒有 delete 的 status, 提供的 library 也不全(昨天的 <a href='https://github.com/pythonforfacebook/facebook-sdk'/>FB-pysdk</a> 也沒有類似像 tweepy 的 api 囧，目前的情況比較可能得自幹類似的功能QQ</li></ul>
-</ul>
+<li>但現在比較實質的問題是 FB 的 api 沒有 delete 的 status, 提供的 library 也不全(昨天的 <a href='https://github.com/pythonforfacebook/facebook-sdk'/>FB-pysdk</a> 也沒有類似像 tweepy 的 api 囧，目前的情況比較可能得自幹類似的功能QQ</li></ul class="comment">
+</li>
+<li><a href="https://developers.facebook.com/docs/public_feed"></a>https://developers.facebook.com/docs/public_feed</li></ul>
+<ul class="comment"><li>這裡有提到facebook posts要不要參考一下?</li>
+<li><br/></li></ul>
 
 </body>
 </html>
