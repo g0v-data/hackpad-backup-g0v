@@ -3,10 +3,10 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2495"/>
+<meta name="version" content="2895"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$1ixS2s6hHk1</title>
 </head>
-<body><h1>politwoops 進度規劃</h1><p>這是 watchOut x g0v summer code project.</p><p>後端 fork from <a href="https://github.com/sunlightlabs/politwoops-tweet-collector"></a>https://github.com/sunlightlabs/politwoops-tweet-collector</p><p>前端 fork from <a href="https://github.com/sunlightlabs/politwoops"></a>https://github.com/sunlightlabs/politwoops</p><p>後端是主要進度。</p><p></p><h2>預計進度</h2><ol><li>把 politwoops.tw 整個架起來</li>
+<body><h1>politwoops 進度<s>規劃</s>現況</h1><p>這是 watchOut x g0v summer code project.</p><p>後端 fork from <a href="https://github.com/sunlightlabs/politwoops-tweet-collector"></a>https://github.com/sunlightlabs/politwoops-tweet-collector</p><p>前端 fork from <a href="https://github.com/sunlightlabs/politwoops"></a>https://github.com/sunlightlabs/politwoops</p><p>後端是主要進度。</p><p></p><h2>預計進度</h2><ol><li>把 politwoops.tw 整個架起來</li>
 <li>建後端的 collector</li>
 <li>做資料測試</li>
 <li>修 mockup and web 介面</li></ol>
@@ -34,17 +34,22 @@
 <li>ya 這個前面完成再來做</li></ul>
 </ul>
 </ul>
-<ul class="task"><li>Write a api like tweepy&rsquo;s on_data()</li><ul class="comment"><li>tweets-client 的資料來源是 tweepy 的 on_data funciton (讀 twitter 牆面的資料)，目前找到可用的 FB Python api 只有 <a href='https://github.com/pythonforfacebook/facebook-sdk'/>faceboook-sdk</a></li></ul>
-</ul>
-</ul>
-
+<ul class="task"><li>Write a api like tweepy&rsquo;s on_data()</li><ul class="comment"><li>using <a href='https://github.com/pythonforfacebook/facebook-sdk'/>faceboook-sdk</a></li></li>
+<li>GraphAPI可以讀到：自己的 wall post 出現的內容、特定使用者(by id)的 feeds</li><ul><li>讀自己的 wall post 比較近似 tweepy 的 streamListener</li>
+<li><br/></li></ul>
+</li></ul class="comment">
+</li></ul class="task">
+</li></ul class="task">
 <h2>備註 & 討論</h2><ul><li><a href='https://github.com/tweepy/tweepy'/>tweepy github</a></li><ul class="comment"><li>核心的 library 是 tweepy 跟 beanstalk ，但 beanstalk 主要是處理資料流，最大的問題還是在 tweepy 上。</li>
 <li>我有跑去看了一下 tweepy 的 source code ，不太確定它 streaming.listener 讀的資料是在自己的 twitter 牆上? 沒啥在用 twitter 不太理解它的運作方式....囧。</li>
 <li>假想的情況是， api 是 listener 自己的 twitter 牆 ( twitter 是在每個 following tweet 的時候都會一併出現在 follower 的牆上吧? )，再針對 tweet 做判讀( tweet content )，所以在 on_data 的時候可以直接從 data.has_key() 裡面判斷資料.....</li>
 <li>但現在比較實質的問題是 FB 的 api 沒有 delete 的 status, 提供的 library 也不全(昨天的 <a href='https://github.com/pythonforfacebook/facebook-sdk'/>FB-pysdk</a> 也沒有類似像 tweepy 的 api 囧，目前的情況比較可能得自幹類似的功能QQ</li></ul class="comment">
 </li>
 <li><a href="https://developers.facebook.com/docs/public_feed"></a>https://developers.facebook.com/docs/public_feed</li></ul>
-<ul class="comment"><li>這裡有提到facebook posts要不要參考一下?</li></ul>
+<ul class="comment"><li>這裡有提到facebook posts要不要參考一下?</li>
+<li>tweets-client 的資料來源是 tweepy 的 on_data funciton (讀 twitter 牆面的資料)，目前找到可用的 FB Python api 只有 <a href='https://github.com/pythonforfacebook/facebook-sdk'/>faceboook-sdk</a> ...fbsdk 從 GraphAPI 讀到 FB 牆面的資料( dict 格式, keys: data, paging )，但每次讀到的資料不確定一不一樣 囧<ul class="comment"><li>paging 內的 previous &amp; next 回傳的是 url (帶 accesstoken )</li>
+<li>data 內是 list feeds，再根據每筆 feed 會有不同的 keys()</li></ul>
+</ul>
 
 </body>
 </html>
