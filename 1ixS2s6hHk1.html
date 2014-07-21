@@ -3,10 +3,12 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="3069"/>
+<meta name="version" content="3907"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$1ixS2s6hHk1</title>
 </head>
-<body><h1>politwoops 進度<s>規劃</s>現況</h1><p>這是 watchOut x g0v summer code project.</p><p>後端 fork from <a href="https://github.com/sunlightlabs/politwoops-tweet-collector"></a>https://github.com/sunlightlabs/politwoops-tweet-collector</p><p>前端 fork from <a href="https://github.com/sunlightlabs/politwoops"></a>https://github.com/sunlightlabs/politwoops</p><p>後端是主要進度。</p><p></p><h2>預計進度</h2><ol><li>把 politwoops.tw 整個架起來</li>
+<body><h1>politwoops 進度<s>規劃</s>現況</h1><p>這是 watchOut x g0v summer code project.</p><p>後端 fork from <a href="https://github.com/sunlightlabs/politwoops-tweet-collector"></a>https://github.com/sunlightlabs/politwoops-tweet-collector</p><p>前端 fork from <a href="https://github.com/sunlightlabs/politwoops"></a>https://github.com/sunlightlabs/politwoops</p><p>後端是主要進度。</p><ul class="comment"><li>&nbsp;<a href='https://developers.facebook.com/tools/explorer'/>FB explorer</a> 、 Python&rsquo;s <a href='https://github.com/pythonforfacebook/facebook-sdk'/>faceboook-sdk</a></li>
+<li><br/></li></ul class="comment">
+<h2>預計進度</h2><ol><li>把 politwoops.tw 整個架起來</li>
 <li>建後端的 collector</li>
 <li>做資料測試</li>
 <li>修 mockup and web 介面</li></ol>
@@ -37,8 +39,18 @@
 <ul class="task"><li>Write a api like tweepy&rsquo;s on_data()</li><ul class="comment"><li>using <a href='https://github.com/pythonforfacebook/facebook-sdk'/>faceboook-sdk</a></li></li>
 <li>GraphAPI可以讀到：</li><ul><li>自己的 wall post 出現的內容<ul><li>讀自己的 wall post 比較近似 tweepy 的 streamListener</li></ul>
 </li>
-<li>特定使用者(by id)的 feeds<ul><li>粉絲頁的 id 可以從 data-uid 取得，但 user 的 data-id 卻不見得能夠被 api 讀取( 從chrome-&gt; F12-&gt; data-id )</li>
-<li><br/></li></ul>
+<li>特定使用者(by id)的 feeds<ul><li>粉絲頁的 id 可以從 data-uid 取得，但 user 的 data-id 卻不見得能夠被 api 讀取( 從chrome-&gt; F12-&gt; data-id )</li><ul class="comment"><li>後來發現這是 v2.0 api 的問題=___= 剛改成 unversioned 就可以從 data-uid 抓到 feeds 了</li>
+<li>=_= (((但我用自己的 data-uid 測還是不行....</li>
+<li>這真的超詭異的... <a href="https://graph.facebook.com/"></a>https://graph.facebook.com/{data-uid}/ 可以讀到資料，但/feed?access_token 卻 OAuth deny...</li></ul>
+</ul>
+</ul>
+</li>
+<li>API 的選擇(既然要做得像 tweepy 就叫 feepy 了(X))</li><ul><li>write like tweepy streamListener<ul><li>只負責讀自己的home feeds (這樣得開一個新的帳號去 follow &amp; like politicians )</li>
+<li>好處是如果被 politicians add friend 的話可以爬到 friend 級的 feed (沒被限制的話</li>
+<li>壞處是 feeds 的排序...一般在看的時候可以選 top stories / most recent ，從 fb-sdk 抓下來的 data 不知道是怎麼排的。(而且資料一多的話 listener 有可能漏掉</li></ul>
+</li>
+<li>a politician have a listener<ul><li>個別監聽(?)比較不會有漏訊息的問題，但 deleted feed 似乎還是無解...目前想到的做法是用 feed url 是不是導向 404 的方式去抓(但感覺頗有點難QAQ)</li>
+<li>uid 不易取得。而且有些 user 就算抓到了 uid ，feeds 的資料還是空的...(不知道是不是版本的問題)</li></ul>
 </li></ul>
 </li></ul class="comment">
 </li></ul class="task">
@@ -51,8 +63,16 @@
 <li><a href="https://developers.facebook.com/docs/public_feed"></a>https://developers.facebook.com/docs/public_feed</li></ul>
 <ul class="comment"><li>這裡有提到facebook posts要不要參考一下?</li>
 <li>tweets-client 的資料來源是 tweepy 的 on_data funciton (讀 twitter 牆面的資料)，目前找到可用的 FB Python api 只有 <a href='https://github.com/pythonforfacebook/facebook-sdk'/>faceboook-sdk</a> ...fbsdk 從 GraphAPI 讀到 FB 牆面的資料( dict 格式, keys: data, paging )，但每次讀到的資料不確定一不一樣 囧<ul class="comment"><li>paging 內的 previous &amp; next 回傳的是 url (帶 accesstoken )</li>
-<li>data 內是 list feeds，再根據每筆 feed 會有不同的 keys()</li></ul>
+<li>data 內是 list feeds，再根據每筆 feed 會有不同的 keys() 示意圖↓</li>
+<li><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_1ixS2s6hHk1_p.65547_1405934550690_polit.png'/></li></ul>
 </ul>
+<ul><li>FB API 問題</li></ul>
+<ul class="comment"><li>post ref: <a href="https://developers.facebook.com/docs/graph-api/reference/v2.0/post/"></a>https://developers.facebook.com/docs/graph-api/reference/v2.0/post/</li>
+<li>沒有提供 edit history 可以讀</li>
+<li>沒有提供 deleted feed 可以讀 QAQ!! (↓ 參考</li>
+<li><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_1ixS2s6hHk1_p.65547_1405936240353_edit.png'/></li>
+<li>feed&rsquo;s uni link 可以在 actions: 裡面找到 ( comment &amp; like )。 ( for deleted)</li>
+<li>周倪安這篇改了四次，但在抓下來的資料裡面只有 create_time 跟 updated_time 能看出明顯的差異... (for edited)</li></ul>
 
 </body>
 </html>
