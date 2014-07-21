@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2895"/>
+<meta name="version" content="3069"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$1ixS2s6hHk1</title>
 </head>
 <body><h1>politwoops 進度<s>規劃</s>現況</h1><p>這是 watchOut x g0v summer code project.</p><p>後端 fork from <a href="https://github.com/sunlightlabs/politwoops-tweet-collector"></a>https://github.com/sunlightlabs/politwoops-tweet-collector</p><p>前端 fork from <a href="https://github.com/sunlightlabs/politwoops"></a>https://github.com/sunlightlabs/politwoops</p><p>後端是主要進度。</p><p></p><h2>預計進度</h2><ol><li>把 politwoops.tw 整個架起來</li>
@@ -35,8 +35,11 @@
 </ul>
 </ul>
 <ul class="task"><li>Write a api like tweepy&rsquo;s on_data()</li><ul class="comment"><li>using <a href='https://github.com/pythonforfacebook/facebook-sdk'/>faceboook-sdk</a></li></li>
-<li>GraphAPI可以讀到：自己的 wall post 出現的內容、特定使用者(by id)的 feeds</li><ul><li>讀自己的 wall post 比較近似 tweepy 的 streamListener</li>
+<li>GraphAPI可以讀到：</li><ul><li>自己的 wall post 出現的內容<ul><li>讀自己的 wall post 比較近似 tweepy 的 streamListener</li></ul>
+</li>
+<li>特定使用者(by id)的 feeds<ul><li>粉絲頁的 id 可以從 data-uid 取得，但 user 的 data-id 卻不見得能夠被 api 讀取( 從chrome-&gt; F12-&gt; data-id )</li>
 <li><br/></li></ul>
+</li></ul>
 </li></ul class="comment">
 </li></ul class="task">
 </li></ul class="task">
