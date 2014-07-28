@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="309"/>
+<meta name="version" content="386"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$5wyYu217bLy</title>
 </head>
 <body><h1>公有土地資料庫－介面設計</h1><p></p><h2>近期討論</h2><p></p><p><b>20140702 Pre-Alpha版 from Donald&nbsp;</b></p><ul style="list-style: none;"><li>根據手稿Mockup做出來的<a href='http://codepen.io/dz1984/full/aldfI'/>Pre-Alpha版</a>，請給點建議。另外，請大家協助一下：</li>
@@ -32,6 +32,19 @@
 <li>以及意見回饋</li>
 <li>「會拿來怎麼用？」</li></ul>
 </ul>
+
+<h2>地圖介面設計</h2><p>需要處理的問題：</p><ul><li>現在的「火線地圖」如果用多邊形呈現在地圖上，在大尺度（例如顯示整個中部地區）大概會小到看不清楚。<ul><li>可能要：地圖旁邊需要條列出每塊地的地址<ul><li>mouseover 的時候，那塊地的多邊形會亮起來</li>
+<li>click 的時候，地圖會捲到那塊地的位置</li></ul>
+</li></ul>
+</li>
+<li>pre-alpha 版的上下兩區操作有點混淆，也可以更節省空間。<ul><li>可能要：移除下方的檢索結果，把檢索結果顯示在上方的地圖裡，讓整個介面只有一份地圖。</li></ul>
+</li>
+<li>現在搜尋不到「我的位置（例如我家）附近的公有地」<ul><li>可能要：增加「搜尋附近的公有地」的功能</li></ul>
+</li>
+<li>現在沒有追蹤特定某塊地的頁面，這樣無法形成討論<ul><li>可能要：每塊地有自己的條目頁</li></ul>
+</ul>
+
+<ul class="comment"><li>可以參考之前有個「服貿地圖」專案 <a href="https://github.com/g0v/tisa-map"></a>https://github.com/g0v/tisa-map</li></ul>
 
 <p></p><p></p></body>
 </html>
