@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="5192"/>
+<meta name="version" content="5665"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$1ixS2s6hHk1</title>
 </head>
 <body><h1>politwoops 進度<s>規劃</s>現況</h1><p>這是 watchOut x g0v summer code project.</p><p>後端 fork from <a href="https://github.com/sunlightlabs/politwoops-tweet-collector"></a>https://github.com/sunlightlabs/politwoops-tweet-collector</p><p>前端 fork from <a href="https://github.com/sunlightlabs/politwoops"></a>https://github.com/sunlightlabs/politwoops</p><p>後端是主要進度。</p><ul class="comment"><li>&nbsp;<a href='https://developers.facebook.com/tools/explorer'/>FB explorer</a> 、 Python&rsquo;s <a href='https://github.com/pythonforfacebook/facebook-sdk'/>faceboook-sdk</a></li></ul>
@@ -95,5 +95,18 @@
 <ul><li>FB api 可以用 since, until (Unix timestamp格式)去抓時間區間的feeds，但這只限於created_time。</li><ul class="comment"><li>updated_time 可能還是得一個一個比對...=_= post feed 感覺就是免洗啊 囧...</li></ul>
 </ul>
 
-<h2>進度日誌(?</h2><p></p></body>
+<h2>進度日誌(?</h2><p></p><p><b>API差異</b></p><ul><li><b>twitter</b><ul><li>沒有 edit 功能</li>
+<li>API有提供轉推(retweet)的資訊</li><ul class="comment"><li>&quot;retweet_status&rsquo; = False || { <a href='https://dev.twitter.com/docs/entities#retweets'/>entities</a> }&nbsp;</li></ul>
+</ul>
+</ul>
+<ul><li><b>Facebook</b><ul><li>有edit 功能，但 API 不提供比對</li>
+<li>沒有獨立提供 shared via 的資訊</li><ul class="comment"><li>但可用 feed 內的 type, status_type, link 做比對(通常是 shared_story + [type] + link</li></ul>
+</ul>
+</ul>
+<ul class="code"><li>type = [&rsquo;status&rsquo;, &rsquo;link&rsquo;, &rsquo;video&rsquo;, &rsquo;photo&rsquo;]</li>
+<li>status_type = [&rsquo;mobile_status_update&rsquo;, &rsquo;created_note&rsquo;, &rsquo;added_photos&rsquo;, &rsquo;added_video&rsquo;, &rsquo;shared_story&rsquo;, &rsquo;created_group&rsquo;, &rsquo;created_event&rsquo;, &rsquo;wall_post&rsquo;, &rsquo;app_created_story&rsquo;, &rsquo;published_story&rsquo;, &rsquo;tagged_in_photo&rsquo;, &rsquo;approved_friend&rsquo;]</li>
+<li><br/></li><ul><li><br/></li></ul>
+</ul>
+
+</body>
 </html>
