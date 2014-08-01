@@ -3,21 +3,38 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1816"/>
+<meta name="version" content="3470"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$QXHns2XZrIo</title>
 </head>
-<body><h1>hackfoldr 災況資訊整合 SOP</h1><p>這是各種 SOP 系列的其中一篇。若不會使用 hackfoldr 的話請參考<a href='/hackfoldr--b80fhUVlnBe'/>使用說明</a>。</p><p></p><p>使用時機請自行判定，<s>俗話說先搶先贏</s>....通常具有一定規模的災害情況，都有可能會需要。尤其是資訊很零散，事件又很緊急的時候。</p><p>簡單的判定方法：發現所有新聞台跳針的只播報該災害。</p><p></p><h2>準備作業</h2><ol><li>在 irc 上討論並詢問意見。 (說不定有人已經先開好了 hackfoldr..</li>
+<body><h1>hackfoldr 災況資訊整合 SOP</h1><p>這是各種 SOP 系列的其中一篇。若不會使用 hackfoldr 的話請參考<a href='/hackfoldr--b80fhUVlnBe'/>使用說明</a>。</p><p></p><p>使用時機請自行判定，<s>俗話說先搶先贏</s>....通常具有一定規模的災害情況，都有可能會需要。尤其是資訊很零散，事件又很緊急的時候。</p><p>簡單的判定方法：發現所有新聞台跳針的只播報該災害。</p><p></p><h2>準備作業</h2><p><b>前置流程</b></p><ol><li>在 irc 上討論並詢問意見。 (說不定有人已經先開好了 hackfoldr..</li>
 <li>確認有可能的資訊來源</li>
 <li>想個簡單好記的 hackfoldr 名稱，建立 hackfoldr</li><ul class="comment"><li>&nbsp;如果你還不會用 hackfoldr，請參考上方的<a href='https://g0v.hackpad.com/hackfoldr--b80fhUVlnBe'/>使用說明</a>。</li></ul>
 </ol>
-<ol><li>編輯後台的基本資訊</li>
-<li>散佈 hackfoldr 的連結</li></ol>
-<p>&quot;&quot;&quot;</p><p>所謂流量可能看起來有點玄…總之如果可能編輯後台的<u>人數非常多</u>而且<u>不間斷</u>，請考慮以下的流量問題，並使用替代方案。 ((為了整個 g0v 的 hackfoldr....</p><p>&quot;&quot;&quot;</p><p><b>流量問題</b></p><ul style="list-style: none;"><li>這是一個慘痛的經驗... (0801高雄氣爆事件)</li>
-<li>以往的後台(ethercalc.org)，在高流量的情況下都是鎖起來的(( like g0v.today(318), nonuke...etc</li></ul>
-<ul class="comment"><li>g0v.today 會鎖是因為有人用 api 攻擊後台資料...</li></ul>
-<ul style="list-style: none;"><li>但 801 的情況是有大量鄉民在後台逗留跟編輯，造成 ethercalc 無法負荷，最後吐了 502 error。</li></ul>
+<ol><li>編輯後台的基本資訊</li></ol>
 
-<p>目前的解決方式是使用 google spreadsheets 的備案(使用方式參考<a href='/hackfoldr--b80fhUVlnBe#:h=使用-Google-Spreadsheet-管理-hackf'/>使用說明</a>)，</p><ul><li>優點是：<ul><li>不會有流量問題(可以幫 au 省流量)</li>
+<p><b>編輯提醒</b></p><ul><li>hackfoldr 太長的話請善用短網址。</li><ul class="comment"><li>像是 bit.ly 之類的服務，簡短好記、可改名很重要。</li></ul>
+</ul>
+<ul><li>有地圖的話請放在第一格。<ul><li>像是google 的 mapsengine 之類的，embed 話會像↓</li>
+<li>mapsengine.google.com/map/embed?mid={ map_id }</li></ul>
+</li>
+<li>順手上鎖<ul><li>ethercalc 有 lock 功能，為了避免會進後台的人誤刪、故意刪、亂刪…etc，上鎖很重要</li></ul>
+</li>
+<li>反序插入<ul><li>新的資料放置在最上方，較方便關心事件的人閱讀。</li></ul>
+</li>
+<li>勤勞備份<ul><li>自動備份功能請洽 au...</li>
+<li>手動備份的方式可以參考 hackfoldr 的 <i><a href='https://g0v.hackpad.com/hackfoldr--b80fhUVlnBe'/>使用說明</a></i></li></ul>
+</li>
+<li>不隨便留白<ul><li>ethercalc 在多人編輯的情況下，很不方便刪除多餘的列(row)，因此「請不要隨地留白」</li></ul>
+</li>
+<li>影片盡量用 embed 語法<ul><li>youtube 的話請把 <b>watch?v= </b>改成 embed/</li>
+<li>ustream 的話點共用→迴紋針(取得連結)，把 <b>/channel/</b> 改成 /embed/</li></ul>
+</ul>
+
+<p><b>流量問題</b></p><p>這是一個慘痛的經驗... (0801高雄氣爆事件)</p><p>以往的後台(ethercalc.org)，在高流量的情況下都是鎖起來的(( like g0v.today(318), nonuke...etc</p><ul class="comment"><li>g0v.today 會鎖是因為有人用 api 攻擊後台資料...</li></ul>
+<p>但 801 的情況是有大量鄉民在後台逗留跟編輯，造成 ethercalc 無法負荷，最後吐了 502 error。</p><ul class="code"><li># 所謂流量可能看起來有點玄…總之如果可能編輯後台的<u>人數非常多</u>而且<u>不間斷</u>，請考慮使用替代方案。</li>
+<li># ((為了整個 g0v 的 hackfoldr....</li></ul>
+
+<p>目前的解決方式是使用 google spreadsheets 的備案(使用方式參考<a href='https://g0v.hackpad.com/hackfoldr--b80fhUVlnBe#:h=使用-Google-Spreadsheet-管理-hackf'/>使用說明</a>)，</p><ul><li>優點是：<ul><li>不會有流量問題(可以幫 au 省流量)</li>
 <li>前台無連結至後台(除非另外加)</li>
 <li>後台可以有管制編輯權限</li>
 <li>操作較近似 excel ，有中文、可以上色</li>
@@ -30,23 +47,33 @@
 <ul><li>不可以「留白」，每列(row)一定要有東西</li></ul>
 </ul>
 
-<h2>開始作業</h2><ul><li>hackfoldr 太長的話請善用短網址。</li><ul class="comment"><li>像是 bit.ly 之類的服務，簡短好記、可改名很重要。</li></ul>
+<h2>散佈資訊</h2><p><b>發散</b></p><ul><li>把 hackfoldr 的網址散佈到可能關心事件的社群、討論區、PTT板中。</li><ul class="comment"><li>可以的話使用好記的短網址服務，例如 bit.ly</li></ul>
 </ul>
-<ul><li>有地圖的話請放在第一格。<ul><li>像是google 的 mapsengine 之類的，embed 話會像↓</li>
-<li>mapsengine.google.com/map/embed?mid={ map_id }</li></ul>
+<ul><li>撐住第一波<s>鄉民DDoS</s> 資訊海，然後著手整理。</li></ul>
+<p><b>聚焦</b></p><ul><li>依事件的核心做分類(編成foldr)，例如志工、物資、災況、直播、影音、資訊回報區等。</li>
+<li>若有現場地圖，務必放在第一頁。(會是打開hackfoldr第一眼看到的資訊)</li><ul class="comment"><li>若有針對事件產生的核心精神，可考慮取代地圖的位置(地圖改放第二頁)。 可參考 <a href='http://g0v.today'/>g0v.today</a></li></ul>
+</ul>
+<p><b>維護</b></p><ul><li>hackfoldr 有一定曝光度後，後台的編輯人數↑，維護的難度也會↑。</li><ul class="comment"><li>除了不熟悉 ethercalc 的編輯者外，也容易有想做亂的滋事份子XD</li></ul>
+</ul>
+<ul><li>定時備份是一個很好的方式，自動備份的問題可洽 au 。</li>
+<li>流量過大導致 ehtercalc 不穩定的話，可能需要轉成靜態或是定時更新。 (這部份也請洽 au</li><ul class="comment"><li>若是用 google spreadsheets 產生的 hackfoldr 比較不會有這個問題，但在<b>發散</b>的時期則會收到較少的資訊，google文件的編輯權控管會使得可編輯人數減少。</li></ul>
+</ul>
+<ul><li>驗證資訊的來源<ul><li>這部份容易發生在<b>志工和物資</b>需求的部份，現場若沒有直播、管理中心(like 318)，容易造成關心事件的人一直想捐物資/當志工的情況。</li>
+<li>解決的方式是：先產生表單(google form)請他們填寫，若確認現場真的有需求時，再將收集到的資訊回傳給現場的窗口。</li><ul class="comment"><li>志工的部份需注意個資法的問題，建表單時需特別小心。</li>
+<li>物資的部份可以請捐助者填寫能夠負荷的部份，及運送方式等；避免物資過剩，務必請對方不要先行購買(製作)。</li></ul class="comment">
+</li></ul class="comment">
 </li>
-<li>順手上鎖<ul><li>ethercalc 有 lock 功能，為了避免會進後台的人誤刪、故意刪、亂刪…etc，上鎖很重要</li></ul>
+<li><br/></li></ul>
+<h2>事件檢討</h2><p>這部份是發生在事件中(穩定) - 結束後，通常會有一系列的檢討(討論/謾罵)文章出現。</p><ul class="comment"><li>大概就是一個把 hackfoldr 從 資訊集中地 打包成 事件懶人包 的概念。</li></ul>
+<p><b>收歛</b></p><ul><li>在事件結束之前，可先針對相關的討論做個別的收集。(正反方)</li><ul class="comment"><li>這種時候通常需要的不是「這篇文章講得很中立」這件事，而是把有實質內容(討論/檢討型)的文章收集起來。</li></ul>
+<ul><li>可考慮另外開一個 spreadsheet 收集，或是直接在 hackfoldr 的最下方做收集。</li>
+<li>若有要收集報紙的專欄、專文等，可另外分類。</li></ul>
 </li>
-<li>勤勞備份<ul><li>自動備份功能請洽 au...</li>
-<li>手動備份的方式可以參考 hackfoldr 的 <i><a href='https://g0v.hackpad.com/hackfoldr--b80fhUVlnBe'/>使用說明</a></i></li></ul>
-</li>
-<li>不隨便留白<ul><li>ethercalc 在多人編輯的情況下，很不方便刪除多餘的列(row)，因此「請不要隨地留白」</li></ul>
-</li>
-<li>影片盡量用 embed 語法<ul><li>youtube 的話請把 <b>watch?v= </b>改成 embed/</li>
-<li>ustream 的話點共用→迴紋針(取得連結)，把 <b>/channel/</b> 改成 /embed/</li></ul>
+<li>事件結束之後，請調整第一頁(landing page)的文章。</li><ul class="comment"><li>有考慮過放置 wiki 的條目，但似乎不太適合？</li></ul>
+<ul><li>第一頁最好能簡要描述完整事發經過。</li></ul>
 </ul>
 
-<h2>補充資訊</h2><ul class="comment"><li>討論可以寫在這(?)，有任何想新加上去的東西也可以直接往上面編輯。</li>
+<h2>補充資訊</h2><ul class="comment"><li>討論可以寫在這(?)，<b>有任何想新加上去的東西也可以直接往上面編輯</b>。</li>
 <li>噢噢像是一些蝙輯 ethercalc (hackfoldr 後台)的 tips 也請盡情補補補補補充....</li>
 <li>以免大量鄉民入侵誤刪亂填隨便用....</li>
 <li>btw, 後台 link 的部份似乎可以放在spreadsheet 裡面 (自己 embed自己的感覺)，但不知道實做出來感覺如何(呃</li></ul>
