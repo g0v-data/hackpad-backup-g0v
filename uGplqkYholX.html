@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="463"/>
+<meta name="version" content="466"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$uGplqkYholX</title>
 </head>
 <body><h1>議員投票指南－架站流程</h1><ul style="list-style: none;"><li><a href='https://docs.google.com/spreadsheets/d/1JB2zLj8ZZqvnv31NvfwlR7HO_b99AtTjO_Gj1qMilL4/edit#gid=0'/>各縣市議會透明狀況</a></li><ul><li><b>最後呈現</b><ul><li>範例：<a href='http://councils.g0v.tw/'/>台北市</a></li></ul>
@@ -37,7 +37,7 @@
 <li>會議記錄通常有包含出缺席紀錄，抓出缺席紀錄可參考（<a href='https://github.com/g0v/councilor-voter-guide/blob/master/parser/votes/votes.py#L129-L131'/>出席</a>、<a href='https://github.com/g0v/councilor-voter-guide/blob/master/parser/votes/votes.py#L132-L134'/>缺席</a>）。</li></li>
 <li>上述抓出缺席紀錄用到一個等下也會用到的function，從一串文字中提取出是&quot;人&quot;（議員/立委）的部分，並轉換為該員的id回傳，<a href='https://github.com/g0v/councilor-voter-guide/blob/master/parser/votes/votes.py#L114-L120'/>可參考</a>。</li></li>
 <li>重頭戲表決，首先需要一個function可以遍歷每個表決，建議先閱讀議事錄後開工，以台北市議會為例，表決內容和表決名單是連貫的，故這裡採用遍歷表決名單的方式，<a href='https://github.com/g0v/councilor-voter-guide/blob/master/parser/votes/votes.py#L54-L68'/>可參考</a>。</li></li>
-<li>再來可利用上上樓的function抓出表決名單中的&quot;人&quot;的id，一般可分為贊成、反對、棄權，請自行決定贊成、反對、棄權要以什麼值表達，這裡使用1、-1、0來代表，翻遍之後運算脫黨表決。</li></li>
+<li>再來可利用上上樓的function抓出表決名單中的&quot;人&quot;的id，一般可分為贊成、反對、棄權，請自行決定贊成、反對、棄權要以什麼值表達，這裡使用1、-1、0來代表，方便之後運算脫黨表決。</li></li>
 <li>最後是最難的部分，取出表決的內容，各縣市、甚至同縣市各屆都建議分開來寫，常因紀錄者用字或習慣而有不同，以台北市第11屆為例，<a href='https://github.com/g0v/councilor-voter-guide/blob/master/parser/votes/votes.py#L38-L51'/>可參考</a>。</li></li>
 <li><br/></li></ol>
 </ol>
