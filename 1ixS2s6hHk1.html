@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="5774"/>
+<meta name="version" content="6170"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$1ixS2s6hHk1</title>
 </head>
 <body><h1>politwoops 進度<s>規劃</s>現況</h1><p>這是 watchOut x g0v summer code project.</p><p>後端 fork from <a href="https://github.com/sunlightlabs/politwoops-tweet-collector"></a>https://github.com/sunlightlabs/politwoops-tweet-collector</p><p>前端 fork from <a href="https://github.com/sunlightlabs/politwoops"></a>https://github.com/sunlightlabs/politwoops</p><p>後端是主要進度。</p><ul class="comment"><li>&nbsp;<a href='https://developers.facebook.com/tools/explorer'/>FB explorer</a> 、 Python&rsquo;s <a href='https://github.com/pythonforfacebook/facebook-sdk'/>faceboook-sdk</a></li></ul>
@@ -67,12 +67,16 @@
 <li>1. exception 沒有全抓到, 有時候會 response error ( 目前是用vm測長掛，有可能是節電功能的關係XD</li>
 <li>2. filter() 有一些參數沒寫完 (預計是要拿來做 edited &amp; deleted 的功能, 這部份會再補上)</li>
 <li>3. token expired 的問題 ( expired 的問題不知道何解.... 查到的大部份都是解決app&rsquo;s token expired, 但如果用 app 的 token 抓不到自己的 wall post. ( /v2.0/me/home/ can&rsquo;t request)</li>
-<li>&nbsp;&nbsp;&nbsp; 這部份算是 fb &amp; twitter api 的差異, twitter 有 customer_id &amp; secret, 但 fb 找不到 customer_id &amp; secret....=_=</li><ul class="task"><li>Stream 功能完善化&nbsp; // expect finish: 7/28~<ul class="task"><li>edited feed, add key(&rsquo;edited&rsquo;)</li><ul class="comment"><li>ly 說這部份可以參考 news-diff</li></ul>
+<li>&nbsp;&nbsp;&nbsp; 這部份算是 fb &amp; twitter api 的差異, twitter 有 customer_id &amp; secret, 但 fb 找不到 customer_id &amp; secret....=_=</li><ul class="task"><li>Stream 功能完善化&nbsp; // expect finish: 7/28~<ul class="task"><li>edited feed, add key(&rsquo;edited&rsquo;)</li><ul class="comment"><li>ly 說這部份可以參考 news-diff</li>
+<li>用 async stream 實做，primary stream 1min to req ； secodary stream 5min req, to check updated_time != created_time</li></ul>
 </ul>
-<ul class="task"><li>deleted feed&nbsp;</li><ul class="comment"><li>這部份可能得跳過囧...</li></ul>
+<ul class="task"><li>deleted feed&nbsp;</li><ul class="comment"><li><s>這部份可能得跳過囧...</s></li>
+<li>後來決定改第二支 -worker 的 handle_deletion。原本的刪除(因為沒 deleted key)，改成讀 feeds table 再對 FB api 做個別查詢，去驗證 feed exist or not.</li></ul>
 </ul>
 </ul>
-<ul class="task"><li>套回 collector 做測試&nbsp; // expect finish: 8/3~</li></ul class="task">
+<ul class="task"><li>套回 collector 做測試&nbsp; // expect finish: 8/3~</li><ul class="comment"><li>not here, (上週把 stream 完善一半就....跑去幫忙81了QQ)</li>
+<li>目前打算直接把 -worker &amp; -client rewrite 之後讓它跑看看, 原 collector repo 已 fork.</li></ul class="comment">
+</li></ul class="task">
 </li></ul class="comment">
 <h2>備註 & 討論</h2><ul><li><a href='https://github.com/tweepy/tweepy'/>tweepy github</a></li><ul class="comment"><li>核心的 library 是 tweepy 跟 beanstalk ，但 beanstalk 主要是處理資料流，最大的問題還是在 tweepy 上。</li>
 <li>我有跑去看了一下 tweepy 的 source code ，不太確定它 streaming.listener 讀的資料是在自己的 twitter 牆上? 沒啥在用 twitter 不太理解它的運作方式....囧。</li>
