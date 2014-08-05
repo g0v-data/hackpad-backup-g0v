@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2035"/>
+<meta name="version" content="2089"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$vtLwiUfYgcc</title>
 </head>
 <body><h1>全國重度級急救責任醫院急診即時訊息</h1><p></p><p>源頭 : 衛服部網頁</p><p>URL:&nbsp; <a href="http://www.mohw.gov.tw/CHT/DOMA/DM1_P.aspx?f_list_no=608&fod_list_no=4680&doc_no=43081"></a>http://www.mohw.gov.tw/CHT/DOMA/DM1_P.aspx?f_list_no=608&amp;fod_list_no=4680&amp;doc_no=43081</p><p>資料來源 : 各醫院網頁&nbsp;</p><p></p><ul class="comment"><li>開始寫請先填表認領，卡關再到 irc 上求救</li></ul>
@@ -19,7 +19,8 @@
 <li>&nbsp; pending_icu: 0,&nbsp;&nbsp;&nbsp; //&nbsp;&nbsp; (integer) 等待加護病床人數</li>
 <li>&nbsp; update_time: 1407206929 // (epoch time), null 表示原始資料未提供</li>
 <li>}</li></ul>
-
+<ul class="comment"><li>Hosptial_SN 有 0 (&lt;-數字)開頭, 先用 str 了</li>
+<li><br/></li></ul>
 <p>資料格式 : (很多都不是JSON, 而是單純HTML table)</p><ul style="list-style: none;"><li>醫院代號 : 1434020015&nbsp;&nbsp; ( integer )</li></ul>
 <ul class="comment"><li>醫院代號對照表及地址或座標？</li>
 <li><a href="http://www.nhi.gov.tw/webdata/webdata.aspx?menu=20&menu_id=712&webdata_id=660"></a>http://www.nhi.gov.tw/webdata/webdata.aspx?menu=20&amp;menu_id=712&amp;webdata_id=660, 當中的 <a href="http://www.nhi.gov.tw/Resource/webdata/8568_1_hospbsc.zip"></a>http://www.nhi.gov.tw/Resource/webdata/8568_1_hospbsc.zip<a href='http://www.nhi.gov.tw/Resource/webdata/8568_1_hospbsc.zip可能要extract'/>&nbsp;</a> 可能要extract , 裡面格式 (分局別,醫事機構代碼,醫事機構名稱,機構地址,電話區域號碼 ,電話號碼,特約類別,型態別,醫事機構種類,終止合約或歇業日期)&nbsp;</li>
@@ -59,11 +60,11 @@
 <li>啊.. 我剛剛才發現要用 date，我的 script 是輸出 timestamp Q__Q</li>
 <li>來改一下貼上 gist 的 code.. QQ</li>
 <li>timestamp is better actually</li></ul>
-<ul style="list-style: none;"><li>向119通報滿床 (Full_reported): 是/否 ( bool )</li>
-<li>等待看診人數 (Pending_doctor) : ( integer )</li>
-<li>等待推床人數 (Pending_bed): ( integer )</li>
-<li>等待住院人數 (Pending_ward) : ( integer )</li>
-<li>等待加護病床人數 (Pending_ICU): ( integer )</li></ul>
+<ul style="list-style: none;"><li>向119通報滿床 (full_reported): 是/否 ( bool )</li>
+<li>等待看診人數 (pending_doctor) : ( integer )</li>
+<li>等待推床人數 (pending_bed): ( integer )</li>
+<li>等待住院人數 (pending_ward) : ( integer )</li>
+<li>等待加護病床人數 (pending_icu): ( integer )</li></ul>
 <ul class="comment"><li>是否有以上欄位的正式英文說法？好像有點長，我改一下簡短的</li>
 <li>好像沒有, 可能要再查看看</li>
 <li>業內人士直接發明說法吧!</li>
