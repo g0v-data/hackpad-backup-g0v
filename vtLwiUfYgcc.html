@@ -3,15 +3,17 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2315"/>
+<meta name="version" content="2517"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$vtLwiUfYgcc</title>
 </head>
-<body><h1>全國重度級急救責任醫院急診即時訊息</h1><p></p><p>源頭 : 衛服部網頁</p><p>URL:&nbsp; <a href="http://www.mohw.gov.tw/CHT/DOMA/DM1_P.aspx?f_list_no=608&fod_list_no=4680&doc_no=43081"></a>http://www.mohw.gov.tw/CHT/DOMA/DM1_P.aspx?f_list_no=608&amp;fod_list_no=4680&amp;doc_no=43081</p><p>資料來源 : 各醫院網頁&nbsp;</p><p></p><ul class="comment"><li>開始寫請先填表認領，卡關再到 irc 上求救</li></ul>
-<p>填表：<a href="https://ethercalc.org/twer"></a>https://ethercalc.org/twer</p><p></p><p>請幫忙確認，並在檢驗人處填上自己 id。</p><ul><li>crawler 產出格式(stdout)</li>
-<li>若 commandline 執行外還需要特別安裝其他東西也請註明。</li>
-<li>若醫院提供欄位有多或少也請註明</li></ul>
+<body><h1>全國重度級急救責任醫院急診即時訊息</h1><p>源頭 : 衛服部網頁</p><p>URL:&nbsp; <a href="http://www.mohw.gov.tw/CHT/DOMA/DM1_P.aspx?f_list_no=608&fod_list_no=4680&doc_no=43081"></a><a href='http://www.mohw.gov.tw/CHT/DOMA/DM1_P.aspx?f_list_no=608&amp;fod_list_no=4680&amp;doc_no=43081'/>http://www.mohw.gov.tw/CHT/DOMA/DM1_P.aspx?f_list_no=608&amp;fod_list_no=4680&amp;doc_no=43081</a></p><p>資料來源 : 各醫院網頁&nbsp;</p><p></p><h2>Data</h2><p>填表：<a href="https://ethercalc.org/twer"></a><a href='https://ethercalc.org/twer'/>https://ethercalc.org/twer</a></p><ul class="comment"><li>開始寫請先填表認領，卡關再到 irc 上求救</li></ul>
+
+<p>請幫忙確認，並在檢驗人處填上自己 id。</p><ul><li>crawler 產出格式(stdout)</li>
+<li>若 commandline 執行外還需要特別安裝其他東西也請註明。</li><ul class="comment"><li>python libs: requests ((其他應該可以直接import</li></ul>
+</ul>
+<ul><li>若醫院提供欄位有多或少也請註明</li></ul>
 <ul class="comment"><li>台大醫院有「等待掛號人數」</li></ul>
-<p>格式應為：</p><ul class="code"><li>{</li>
+<p><b>格式應為：</b></p><ul class="code"><li>{</li>
 <li>&nbsp; full_reported : true,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // (bool) 向119通報滿床, null 表示未提供</li>
 <li>&nbsp; hospital_sn&nbsp;&nbsp; : &quot;0439010518&quot; // (string) 醫院代號</li>
 <li>&nbsp; pending_doctor: 0,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // (integer) 等待看診人數</li>
@@ -20,71 +22,16 @@
 <li>&nbsp; pending_icu&nbsp;&nbsp; : 0,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // (integer) 等待加護病床人數</li>
 <li>&nbsp; update_time&nbsp;&nbsp; : 1407206929&nbsp;&nbsp; // (epoch time) null 表示原始資料未提供</li>
 <li>}</li></ul>
-<ul class="comment"><li>Hosptial_SN(醫院代號) 有數字 0 開頭, 先用 str 了</li>
-<li>資料應該還有個 hospital_sn.. 補上去</li>
-<li>SN or sn ? QQ, and I use uppercase ICU QQQQQ ( bcz it&rsquo;s means &quot; Intensive Care Unit &quot; .</li>
-<li>其實我也不確定大小寫有沒有慣例.. Orz</li></ul>
 
-<p>資料格式 : (很多都不是JSON, 而是單純HTML table)</p><ul style="list-style: none;"><li>醫院代號 : 1434020015&nbsp;&nbsp; ( <s>integer</s> string )</li></ul>
-<ul class="comment"><li>醫院代號對照表及地址或座標？</li>
-<li><a href="http://www.nhi.gov.tw/webdata/webdata.aspx?menu=20&menu_id=712&webdata_id=660"></a>http://www.nhi.gov.tw/webdata/webdata.aspx?menu=20&amp;menu_id=712&amp;webdata_id=660, 當中的 <a href="http://www.nhi.gov.tw/Resource/webdata/8568_1_hospbsc.zip"></a>http://www.nhi.gov.tw/Resource/webdata/8568_1_hospbsc.zip<a href='http://www.nhi.gov.tw/Resource/webdata/8568_1_hospbsc.zip可能要extract'/>&nbsp;</a> 可能要extract , 裡面格式 (分局別,醫事機構代碼,醫事機構名稱,機構地址,電話區域號碼 ,電話號碼,特約類別,型態別,醫事機構種類,終止合約或歇業日期)&nbsp;</li>
-<li>&quot;重度&quot; 醫療院所, 都是通過醫院評鑑, 所以變動大約一年一次</li>
-<li>醫事機構代碼 = 代號 (exp :&quot;1&quot;,&quot;1434020015&quot;,&quot;財團法人羅許基金會羅東博愛醫院&quot;,&quot;宜蘭縣羅東鎮南昌街８１、８３號及站前南路６１、６３號&quot;,&quot;03&quot;,&quot;9543131&quot;,&quot;2&quot;,&quot;01&quot;,&quot;A&quot;,&quot;&quot;)&nbsp;</li>
-<li><a href="http://data.gov.tw/node/6143"></a>http://data.gov.tw/node/6143 只有地址電話，沒有代號</li>
-<li>請問 <a href='/ep/profile/A93H5P2uBrp'/>昕迪 李</a> 是不是有處理過這份資料？</li>
-<li>剛剛砍到 有用到工人智慧 <a href="https://gist.github.com/mcdlee/a3a7d55767e6f26fec44"></a>https://gist.github.com/mcdlee/a3a7d55767e6f26fec44</li>
-<li>從 nhi.gov.tw parse 出來的醫院名稱和代號 <a href="http://cornguo.nlplab.tw/temp/hospital/parsed.txt"></a>http://cornguo.nlplab.tw/temp/hospital/parsed.txt</li>
-<li>光田醫療社團法人光田綜合醫院 只查得到一個代號</li>
-<li>有些 wiki 有 ((呃啊不過都填完了....</li>
-<li>醫院代號有 0 開頭和英文字母開頭，也有中間夾英文的，或許定成 string 比較好 (?)</li>
-<li>咦咦咦咦?! (((完全沒注意</li>
-<li>btw, 榮總的網站有點妙 →→ <a href="http://www.vghtpe.gov.tw/ser.html"></a>http://www.vghtpe.gov.tw/ser.html ←←</li>
-<li>怎麼個妙法 @@?</li>
-<li>無法理解包兩次&nbsp; iframe 的用意XD... btw, 因為沒時間可以爬所以...update_time = &rsquo; per ten mins &rsquo;</li>
-<li>喔喔.. 我看到的好你拆出來的 iframe url，原來要看原始網頁 XD</li>
-<li>我猜大概是所有 content 都用 iframe 包 html，然後剛好那一頁又放了另外一個 iframe 指到別的地方去 ww</li>
-<li>表格怪怪的... 三總我剛沒爬........(au 說起來要爬就以就跳過惹..) 但格子裡面有東西QAQQQ</li>
-<li>表格歪掉了.. Orz</li>
-<li>用工人智慧整理一下好了</li>
-<li>看來只有幾格歪掉，現在應該正常了?</li>
-<li>fixed~ hackpad 的表格果然不能太期待(X)</li>
-<li>又歪掉了..&nbsp; 啊啊啊啊啊啊 Orz</li>
-<li>有種做錯動作會爆炸的感覺 QQ，已修正表格</li>
-<li>準備來去吃早餐惹XDDD ((留點坑給別人填 lol</li>
-<li>剛剛發現長庚的寫一次可以用好幾次.. 囧</li>
-<li>我要去睡覺了 Q___Q (← 睡前看到坑就跳下去)</li>
-<li>應該很容易 port 到其他語言，因為幾乎都是用 regExp 硬幹..</li>
-<li>regexp 超快XD</li>
-<li>真的，本來在想是不是用 shell script 就可以打完收工了 XD</li>
-<li>好啦晚安 (?) (趴床)</li></ul>
-
-<ul style="list-style: none;"><li>更新日期 (update_time)： 2014/08/03 23:44:14 (<s>Date</s> timestamp)</li></ul>
-<ul class="comment"><li>有的似乎是直接顯示現在時間，所以應該要存 date retrieved &amp; display</li>
-<li>有的沒有顯示現在時間, 反而出現&quot;下次更新時間&quot;</li>
-<li>啊.. 我剛剛才發現要用 date，我的 script 是輸出 timestamp Q__Q</li>
-<li>來改一下貼上 gist 的 code.. QQ</li>
-<li>timestamp is better actually</li>
-<li>Hmm.. 所以要改成 timestamp 嗎?</li>
-<li>自問自答，看到表格上其他 commit 改成了 timestamp，那就從善如流吧</li></ul>
-
-<ul style="list-style: none;"><li>向119通報滿床 (full_reported): 是/否 ( bool )</li>
+<p>資料格式 : (很多都不是JSON, 而是單純HTML table)</p><ul style="list-style: none;"><li>醫院代號 : 1434020015&nbsp;&nbsp; ( <s>integer</s> string )</li>
+<li>更新日期 (update_time)： 2014/08/03 23:44:14 (<s>Date</s> timestamp)</li>
+<li>向119通報滿床 (full_reported): 是/否 ( bool )</li>
 <li>等待看診人數 (pending_doctor) : ( integer )</li>
 <li>等待推床人數 (pending_bed): ( integer )</li>
 <li>等待住院人數 (pending_ward) : ( integer )</li>
-<li>等待加護病床人數 (pending_icu): ( integer )</li></ul>
-<ul class="comment"><li>是否有以上欄位的正式英文說法？好像有點長，我改一下簡短的</li>
-<li>好像沒有, 可能要再查看看</li>
-<li>業內人士直接發明說法吧!</li>
-<li>業內人士先走過留下痕跡，晚些時候來補。(不好意思我是高雄人，剛交班，目前累死...請先讓我睡，明天再說..........)</li>
-<li>ps.事實上可以直接從衛服部的資料庫調資料，只是我對這部分的資料後續處理完全不懂，所以還需要請資訊人才加以協助。</li>
-<li>&quot;衛服部的資料庫調資料&quot; : 是open data 嗎 ?</li>
-<li>open data...對醫院來說是，我們內部看到的就是一個表格，上面有所有的資料。(畢竟真的出事醫院人員也沒時間去各醫院網頁看資訊啊！但重點是那個系統得登入到衛服部才看的到)</li>
-<li>但對外就是各醫院網頁所揭露的資訊這樣...所以我不知道這樣算不算是open data？</li>
-<li>對<s>攻城獅</s>工程師來說...如果是 excel 表格的話轉成 csv 就可以算是 open data (? 但重點是要開放出來....(csv算是好用格式</li>
-<li>然後，我不知道那資料是csv還是html還是啥.....(我沒能力分辨，抱歉。)</li>
-<li>如果是登入才要的到的資料 =&gt; 不如直接抓網站上的, 日後還可以統計</li></ul>
-
-<p>TABLE 1 (範例)</p><p>即時: 2014.8.3.0:00&nbsp; ( 大概要多久parsing 一次 ? 每家醫院update 間隔不同?</p><table style="font-size:13px;cell-spacing: 0px; border-collapse: collapse;"><tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#37291;&#38498;</td>
+<li>等待加護病床人數 (pending_icu): ( integer )</li>
+<li><br/></li></ul style="list-style: none;">
+<h2>layout</h2><p><b>TABLE 1 (範例)</b></p><p>即時: 2014.8.3.0:00&nbsp; ( 大概要多久parsing 一次 ? 每家醫院update 間隔不同?</p><table style="font-size:13px;cell-spacing: 0px; border-collapse: collapse;"><tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#37291;&#38498;</td>
 <td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Report_to_119_capacity_full</td>
 <td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Waiting_to_see_doctor</td>
 <td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Waiting_for_ER_bed</td>
@@ -120,8 +67,65 @@
 <td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">3</td>
 </tr>
 </table>
-<p>預計產出模式:</p><p>第一種: 按即時狀況, 在地圖呈現 (heat map)</p><p>第二種: 按醫院別, X軸(時間), Y 軸(等床人數 etc)&nbsp; 按照不同時間呈現</p><p>第三種: 看 archive historical data 看特定 pattern</p><p></p><p>產出預期成效:</p><ol><li>讓民眾得知目前各重症醫院 &quot;擁塞&quot; 程度</li>
+<p><b>預計產出模式:</b></p><p>第一種: 按即時狀況, 在地圖呈現 (heat map)</p><p>第二種: 按醫院別, X軸(時間), Y 軸(等床人數 etc)&nbsp; 按照不同時間呈現</p><p>第三種: 看 archive historical data 看特定 pattern</p><p></p><p><b>產出預期成效:</b></p><ol><li>讓民眾得知目前各重症醫院 &quot;擁塞&quot; 程度</li>
 <li>重大疾病爆發時間時, 各重症醫院承受程度</li></ol>
 
-<p>PS: FB g0v 討論區 <a href="https://www.facebook.com/groups/g0v.general/660961490646927/?notif_t=like"></a>https://www.facebook.com/groups/g0v.general/660961490646927/?notif_t=like</p><p></p></body>
+<h2>issues and talks</h2><p>FB g0v 討論區 <a href="https://www.facebook.com/groups/g0v.general/660961490646927/?notif_t=like"></a>https://www.facebook.com/groups/g0v.general/660961490646927/?notif_t=like</p><p></p><p>Hospital_SN:</p><ul class="comment"><li>Hosptial_SN(醫院代號) 有數字 0 開頭, 先用 str 了</li>
+<li>資料應該還有個 hospital_sn.. 補上去</li>
+<li>SN or sn ? QQ, and I use uppercase ICU QQQQQ ( bcz it&rsquo;s means &quot; Intensive Care Unit &quot; .</li>
+<li>其實我也不確定大小寫有沒有慣例.. Orz</li></ul>
+
+<ul class="comment"><li>醫院代號對照表及地址或座標？</li>
+<li><a href="http://www.nhi.gov.tw/webdata/webdata.aspx?menu=20&menu_id=712&webdata_id=660"></a><a href='http://www.nhi.gov.tw/webdata/webdata.aspx?menu=20&amp;menu_id=712&amp;webdata_id=660'/>http://www.nhi.gov.tw/webdata/webdata.aspx?menu=20&amp;menu_id=712&amp;webdata_id=660</a>, 當中的 <a href="http://www.nhi.gov.tw/Resource/webdata/8568_1_hospbsc.zip"></a><a href='http://www.nhi.gov.tw/Resource/webdata/8568_1_hospbsc.zip'/>http://www.nhi.gov.tw/Resource/webdata/8568_1_hospbsc.zip</a><a href='http://www.nhi.gov.tw/Resource/webdata/8568_1_hospbsc.zip%E5%8F%AF%E8%83%BD%E8%A6%81extract'/>&nbsp;</a> 可能要extract , 裡面格式 (分局別,醫事機構代碼,醫事機構名稱,機構地址,電話區域號碼 ,電話號碼,特約類別,型態別,醫事機構種類,終止合約或歇業日期)&nbsp;</li>
+<li>&quot;重度&quot; 醫療院所, 都是通過醫院評鑑, 所以變動大約一年一次</li>
+<li>醫事機構代碼 = 代號 (exp :&quot;1&quot;,&quot;1434020015&quot;,&quot;財團法人羅許基金會羅東博愛醫院&quot;,&quot;宜蘭縣羅東鎮南昌街８１、８３號及站前南路６１、６３號&quot;,&quot;03&quot;,&quot;9543131&quot;,&quot;2&quot;,&quot;01&quot;,&quot;A&quot;,&quot;&quot;)&nbsp;</li>
+<li><a href="http://data.gov.tw/node/6143"></a><a href='http://data.gov.tw/node/6143'/>http://data.gov.tw/node/6143</a> 只有地址電話，沒有代號</li>
+<li>請問 <a href='https://g0v.hackpad.com/ep/profile/A93H5P2uBrp'/>昕迪 李</a> 是不是有處理過這份資料？</li>
+<li>剛剛砍到 有用到工人智慧 <a href="https://gist.github.com/mcdlee/a3a7d55767e6f26fec44"></a><a href='https://gist.github.com/mcdlee/a3a7d55767e6f26fec44'/>https://gist.github.com/mcdlee/a3a7d55767e6f26fec44</a></li>
+<li>從 nhi.gov.tw parse 出來的醫院名稱和代號 <a href="http://cornguo.nlplab.tw/temp/hospital/parsed.txt"></a><a href='http://cornguo.nlplab.tw/temp/hospital/parsed.txt'/>http://cornguo.nlplab.tw/temp/hospital/parsed.txt</a></li>
+<li>光田醫療社團法人光田綜合醫院 只查得到一個代號</li>
+<li>有些 wiki 有 ((呃啊不過都填完了....</li>
+<li>醫院代號有 0 開頭和英文字母開頭，也有中間夾英文的，或許定成 string 比較好 (?)</li>
+<li>咦咦咦咦?! (((完全沒注意</li>
+<li>btw, 榮總的網站有點妙 →→ <a href="http://www.vghtpe.gov.tw/ser.html"></a><a href='http://www.vghtpe.gov.tw/ser.html'/>http://www.vghtpe.gov.tw/ser.html</a> ←←</li>
+<li>怎麼個妙法 @@?</li>
+<li>無法理解包兩次&nbsp; iframe 的用意XD... btw, 因為沒時間可以爬所以...update_time = &rsquo; per ten mins &rsquo;</li>
+<li>喔喔.. 我看到的好你拆出來的 iframe url，原來要看原始網頁 XD</li>
+<li>我猜大概是所有 content 都用 iframe 包 html，然後剛好那一頁又放了另外一個 iframe 指到別的地方去 ww</li>
+<li>表格怪怪的... 三總我剛沒爬........(au 說起來要爬就以就跳過惹..) 但格子裡面有東西QAQQQ</li>
+<li>表格歪掉了.. Orz</li>
+<li>用工人智慧整理一下好了</li>
+<li>看來只有幾格歪掉，現在應該正常了?</li>
+<li>fixed~ hackpad 的表格果然不能太期待(X)</li>
+<li>又歪掉了..&nbsp; 啊啊啊啊啊啊 Orz</li>
+<li>有種做錯動作會爆炸的感覺 QQ，已修正表格</li>
+<li>準備來去吃早餐惹XDDD ((留點坑給別人填 lol</li>
+<li>剛剛發現長庚的寫一次可以用好幾次.. 囧</li>
+<li>我要去睡覺了 Q___Q (← 睡前看到坑就跳下去)</li>
+<li>應該很容易 port 到其他語言，因為幾乎都是用 regExp 硬幹..</li>
+<li>regexp 超快XD</li>
+<li>真的，本來在想是不是用 shell script 就可以打完收工了 XD</li>
+<li>好啦晚安 (?) (趴床)</li></ul>
+
+<p>update_time:</p><ul class="comment"><li>有的似乎是直接顯示現在時間，所以應該要存 date retrieved &amp; display</li>
+<li>有的沒有顯示現在時間, 反而出現&quot;下次更新時間&quot;</li>
+<li>啊.. 我剛剛才發現要用 date，我的 script 是輸出 timestamp Q__Q</li>
+<li>來改一下貼上 gist 的 code.. QQ</li>
+<li>timestamp is better actually</li>
+<li>Hmm.. 所以要改成 timestamp 嗎?</li>
+<li>自問自答，看到表格上其他 commit 改成了 timestamp，那就從善如流吧</li></ul>
+
+<p>pending_icu:</p><ul class="comment"><li>是否有以上欄位的正式英文說法？好像有點長，我改一下簡短的</li>
+<li>好像沒有, 可能要再查看看</li>
+<li>業內人士直接發明說法吧!</li>
+<li>業內人士先走過留下痕跡，晚些時候來補。(不好意思我是高雄人，剛交班，目前累死...請先讓我睡，明天再說..........)</li>
+<li>ps.事實上可以直接從衛服部的資料庫調資料，只是我對這部分的資料後續處理完全不懂，所以還需要請資訊人才加以協助。</li>
+<li>&quot;衛服部的資料庫調資料&quot; : 是open data 嗎 ?</li>
+<li>open data...對醫院來說是，我們內部看到的就是一個表格，上面有所有的資料。(畢竟真的出事醫院人員也沒時間去各醫院網頁看資訊啊！但重點是那個系統得登入到衛服部才看的到)</li>
+<li>但對外就是各醫院網頁所揭露的資訊這樣...所以我不知道這樣算不算是open data？</li>
+<li>對<s>攻城獅</s>工程師來說...如果是 excel 表格的話轉成 csv 就可以算是 open data (? 但重點是要開放出來....(csv算是好用格式</li>
+<li>然後，我不知道那資料是csv還是html還是啥.....(我沒能力分辨，抱歉。)</li>
+<li>如果是登入才要的到的資料 =&gt; 不如直接抓網站上的, 日後還可以統計</li></ul>
+
+</body>
 </html>
