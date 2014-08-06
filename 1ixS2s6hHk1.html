@@ -3,32 +3,19 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="6170"/>
+<meta name="version" content="6231"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$1ixS2s6hHk1</title>
 </head>
 <body><h1>politwoops 進度<s>規劃</s>現況</h1><p>這是 watchOut x g0v summer code project.</p><p>後端 fork from <a href="https://github.com/sunlightlabs/politwoops-tweet-collector"></a>https://github.com/sunlightlabs/politwoops-tweet-collector</p><p>前端 fork from <a href="https://github.com/sunlightlabs/politwoops"></a>https://github.com/sunlightlabs/politwoops</p><p>後端是主要進度。</p><ul class="comment"><li>&nbsp;<a href='https://developers.facebook.com/tools/explorer'/>FB explorer</a> 、 Python&rsquo;s <a href='https://github.com/pythonforfacebook/facebook-sdk'/>faceboook-sdk</a></li></ul>
-<p>github repo: <a href="https://github.com/lanfon72/feepy"></a>https://github.com/lanfon72/feepy</p><ul class="comment"><li>先 fork fb-sdk 下來改</li>
+<p>github repo: <a href='https://github.com/lanfon72/feepy'/>feepy</a>、<a href='https://github.com/lanfon72/twpolitwoops-collector'/>twpolitwoops-collector</a></p><ul class="comment"><li>先 fork fb-sdk 下來改</li>
 <li><br/></li></ul class="comment">
 <h2>預計進度</h2><ol><li>把 politwoops.tw 整個架起來</li>
 <li>建後端的 collector</li>
 <li>做資料測試</li>
 <li>修 mockup and web 介面</li></ol>
-<ul class="comment"><li>依目前 (7/15) 看 code 的狀況， 2 &amp; 3 應該會混在一起做；如果有類似 tweepy 的 FB library 則應該會在 8 月初前完成，沒有的話可能得自幹類似 tweepy 的 library.... 那在 8/20 前會完成 ( 後端能做 demo</li>
-<li>那這禮拜的進度就是先玩一下facebook oauth 和facebook api?</li>
-<li>玩 fb api ing LOL</li>
-<li>應該要申請一個faebook app,拿到app id跟app key之後，在app裡面填上去，根據facebook 的oauth流程，可以拿到user的access token，不過public posts應該不用這樣? XD</li>
-<li>我先從 graph API Explorer 做測試XD 但我的牆實在是太髒了lol...感覺要申請一個空帳號來抓會比較好明白會出哪些data</li>
-<li>ya, 申請一個空帳號，另外也可以看能不能抓到某個政治人物facebook的public posts</li>
-<li><a href="https://developers.facebook.com/docs/public_feed"></a><a href='https://developers.facebook.com/docs/public_feed'/>https://developers.facebook.com/docs/public_feed</a>&nbsp;&nbsp; 另外這邊好像有ˋ提到delete的東西參考一下</li>
-<li>! ok我去研究看看XD</li></ul class="comment">
-<h2>進度現況</h2><ul class="taskdone"><li>把 <a href='https://github.com/sunlightlabs/politwoops-tweet-collector'/>politwoops </a>整個架起來(後端)</li></ul>
-<ul class="comment"><li>測試用的機器是跑 Lubuntu 12 &amp; 14，</li>
-<li>dependencies 包括: git, python, pip, pythonsqldb, mysql, beanstalkd, tweepy(新版) 跟原project requirements 內的python相關套件。</li>
-<li>pip在 lubuntu 下要用 easy_install 安裝，直接用 apt-get 到後面會炸掉...(原因不明)</li>
-<li>照 README.md 跑到 Running 前， config 檔寫好之後 create database，資料表的部份因為相依在前端的project，這邊先用 ly提供的 <a href='https://gist.github.com/yhsiang/d8bb81aa488ba9bebf39'/>sql schema</a> ，倒進 databse 。</li>
-<li>切進 politicians tables, 加入測試用的 twitter_id &amp; infos.</li>
-<li>跑 Running.&nbsp;&nbsp; (( 第三支截圖用的不跑，config中用 # 把 [AWS] 下的設定都註解掉</li></ul>
-<ul class="taskdone"><li>建後端的 collector&nbsp;&nbsp; <b>//screenshot-worker 先 pass 了, so finished at week: 7/13~</b><ul class="taskdone"><li>把 collector 主要在跑的三支 .py 看懂<ul class="taskdone"><li><a href='https://github.com/sunlightlabs/politwoops-tweet-collector/blob/master/bin/tweets-client.py'/>tweets-client.py</a></li><ul><li>主要進入點在 Line:158，跑兩個thread當heartbeat用(一個避免當掉)，在stream_forever 裡會跑 tweepy 的 stream listener ( L:150&amp;151)</li>
+
+<h2>進度現況</h2><ul class="taskdone"><li>把 <a href='https://github.com/sunlightlabs/politwoops-tweet-collector'/>politwoops </a>整個架起來(後端) #1</li>
+<li>建後端的 collector&nbsp;&nbsp; <b>//screenshot-worker 先 pass 了, so finished at week: 7/13~</b><ul class="taskdone"><li>把 collector 主要在跑的三支 .py 看懂<ul class="taskdone"><li><a href='https://github.com/sunlightlabs/politwoops-tweet-collector/blob/master/bin/tweets-client.py'/>tweets-client.py</a></li><ul><li>主要進入點在 Line:158，跑兩個thread當heartbeat用(一個避免當掉)，在stream_forever 裡會跑 tweepy 的 stream listener ( L:150&amp;151)</li>
 <li>核心的結構應該算是 L:60 的 class ，把 tweepy 讀到的資料 put 進 beanstalkc ，然後 alert 。 (接下來就沒它的事了XD)</li></ul>
 </ul>
 <ul class="taskdone"><li><a href='https://github.com/sunlightlabs/politwoops-tweet-collector/blob/master/bin/politwoops-worker.py'/>politwoops-worker.py</a></li><ul><li>主要進入點在 Line:105，監測 beanstalk 有沒有 job ( put from tweets-client )，再做處理(L:121)。</li></ul>
@@ -108,7 +95,21 @@
 </ul>
 </ul>
 <ul class="code"><li>type = [&rsquo;status&rsquo;, &rsquo;link&rsquo;, &rsquo;video&rsquo;, &rsquo;photo&rsquo;]</li>
-<li>status_type = [&rsquo;mobile_status_update&rsquo;, &rsquo;created_note&rsquo;, &rsquo;added_photos&rsquo;, &rsquo;added_video&rsquo;, &rsquo;shared_story&rsquo;, &rsquo;created_group&rsquo;, &rsquo;created_event&rsquo;, &rsquo;wall_post&rsquo;, &rsquo;app_created_story&rsquo;, &rsquo;published_story&rsquo;, &rsquo;tagged_in_photo&rsquo;, &rsquo;approved_friend&rsquo;]</li></ul>
+<li>status_type = [&rsquo;mobile_status_update&rsquo;, &rsquo;created_note&rsquo;, &rsquo;added_photos&rsquo;, &rsquo;added_video&rsquo;, &rsquo;shared_story&rsquo;, &rsquo;created_group&rsquo;, &rsquo;created_event&rsquo;, &rsquo;wall_post&rsquo;, &rsquo;app_created_story&rsquo;, &rsquo;published_story&rsquo;, &rsquo;tagged_in_photo&rsquo;, &rsquo;approved_friend&rsquo;]</li></ul class="code">
+<h2>talks</h2><ul class="comment"><li>依目前 (7/15) 看 code 的狀況， 2 &amp; 3 應該會混在一起做；如果有類似 tweepy 的 FB library 則應該會在 8 月初前完成，沒有的話可能得自幹類似 tweepy 的 library.... 那在 8/20 前會完成 ( 後端能做 demo</li>
+<li>那這禮拜的進度就是先玩一下facebook oauth 和facebook api?</li>
+<li>玩 fb api ing LOL</li>
+<li>應該要申請一個faebook app,拿到app id跟app key之後，在app裡面填上去，根據facebook 的oauth流程，可以拿到user的access token，不過public posts應該不用這樣? XD</li>
+<li>我先從 graph API Explorer 做測試XD 但我的牆實在是太髒了lol...感覺要申請一個空帳號來抓會比較好明白會出哪些data</li>
+<li>ya, 申請一個空帳號，另外也可以看能不能抓到某個政治人物facebook的public posts</li>
+<li><a href="https://developers.facebook.com/docs/public_feed"></a><a href='https://developers.facebook.com/docs/public_feed'/>https://developers.facebook.com/docs/public_feed</a>&nbsp;&nbsp; 另外這邊好像有ˋ提到delete的東西參考一下</li>
+<li>! ok我去研究看看XD</li></ul>
+<p>#1&nbsp;</p><ul class="comment"><li>測試用的機器是跑 Lubuntu 12 &amp; 14，</li>
+<li>dependencies 包括: git, python, pip, pythonsqldb, mysql, beanstalkd, tweepy(新版) 跟原project requirements 內的python相關套件。</li>
+<li>pip在 lubuntu 下要用 easy_install 安裝，直接用 apt-get 到後面會炸掉...(原因不明)</li>
+<li>照 README.md 跑到 Running 前， config 檔寫好之後 create database，資料表的部份因為相依在前端的project，這邊先用 ly提供的 <a href='https://gist.github.com/yhsiang/d8bb81aa488ba9bebf39'/>sql schema</a> ，倒進 databse 。</li>
+<li>切進 politicians tables, 加入測試用的 twitter_id &amp; infos.</li>
+<li>跑 Running.&nbsp;&nbsp; (( 第三支截圖用的不跑，config中用 # 把 [AWS] 下的設定都註解掉</li></ul>
 
-<p></p></body>
+</body>
 </html>
