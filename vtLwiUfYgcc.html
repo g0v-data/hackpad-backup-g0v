@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2576"/>
+<meta name="version" content="2810"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$vtLwiUfYgcc</title>
 </head>
 <body><h1>全國重度級急救責任醫院急診即時訊息</h1><p>源頭 : 衛服部網頁</p><p>URL:&nbsp; <a href="http://www.mohw.gov.tw/CHT/DOMA/DM1_P.aspx?f_list_no=608&fod_list_no=4680&doc_no=43081"></a><a href='http://www.mohw.gov.tw/CHT/DOMA/DM1_P.aspx?f_list_no=608&amp;fod_list_no=4680&amp;doc_no=43081'/>http://www.mohw.gov.tw/CHT/DOMA/DM1_P.aspx?f_list_no=608&amp;fod_list_no=4680&amp;doc_no=43081</a></p><p>資料來源 : 各醫院網頁&nbsp;</p><p></p><h2>Data</h2><p>填表：<a href="https://ethercalc.org/twer"></a><a href='https://ethercalc.org/twer'/>https://ethercalc.org/twer</a></p><ul class="comment"><li>開始寫請先填表認領，卡關再到 irc 上求救</li></ul>
@@ -15,7 +15,7 @@
 <ul class="comment"><li>台大醫院有「等待掛號人數」</li></ul>
 <p><b>格式應為：</b></p><ul class="code"><li>{</li>
 <li>&nbsp; full_reported : true,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // (bool) 向119通報滿床, null 表示未提供</li>
-<li>&nbsp; hospital_sn&nbsp;&nbsp; : &quot;0439010518&quot; // (string) 醫院代號</li>
+<li>&nbsp; hospital_sn&nbsp;&nbsp; : &quot;0439010518&quot; // (string) 醫院代號 lenth = 10</li>
 <li>&nbsp; pending_doctor: 0,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // (integer) 等待看診人數</li>
 <li>&nbsp; pending_bed&nbsp;&nbsp; : 0,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // (integer) 等待推床人數</li>
 <li>&nbsp; pending_ward&nbsp; : 0,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // (integer) 等待住院人數</li>
@@ -70,10 +70,15 @@
 <p><b>預計產出模式:</b></p><p>第一種: 按即時狀況, 在地圖呈現 (heat map)</p><p>第二種: 按醫院別, X軸(時間), Y 軸(等床人數 etc)&nbsp; 按照不同時間呈現</p><p>第三種: 看 archive historical data 看特定 pattern</p><p></p><p><b>產出預期成效:</b></p><ol><li>讓民眾得知目前各重症醫院 &quot;擁塞&quot; 程度</li>
 <li>重大疾病爆發時間時, 各重症醫院承受程度</li></ol>
 
-<h2>issues and talks</h2><p>FB g0v 討論區 <a href="https://www.facebook.com/groups/g0v.general/660961490646927/?notif_t=like"></a>https://www.facebook.com/groups/g0v.general/660961490646927/?notif_t=like</p><p></p><p>Hospital_SN:</p><ul class="comment"><li>Hosptial_SN(醫院代號) 有數字 0 開頭, 先用 str 了</li>
+<h2>issues and talks</h2><p>FB g0v 討論區 <a href="https://www.facebook.com/groups/g0v.general/660961490646927/?notif_t=like"></a>https://www.facebook.com/groups/g0v.general/660961490646927/?notif_t=like</p><p></p><p>capture_time: ( or named grab_time ?)</p><ul class="comment"><li>還是應該是叫 crawling time XDDD or needn&rsquo;t this key(?</li>
+<li>repo 開在 <a href="https://github.com/lanfon72/twER_liveboard"></a><a href='https://github.com/lanfon72/twER_liveboard'/>https://github.com/lanfon72/twER_liveboard</a> (小更新要edit 1x 個 gist 網頁實在是太痛苦了...)</li>
+<li>目前有問題的是 print 的 json 要用[{ key:value }] , 還是直接 { key:value } ? ((感覺是直接用{}....</li></ul>
+
+<p>Hospital_sn:</p><ul class="comment"><li>Hosptial_SN(醫院代號) 有數字 0 開頭, 先用 str 了</li>
 <li>資料應該還有個 hospital_sn.. 補上去</li>
 <li>SN or sn ? QQ, and I use uppercase ICU QQQQQ ( bcz it&rsquo;s means &quot; Intensive Care Unit &quot; .</li>
-<li>其實我也不確定大小寫有沒有慣例.. Orz</li></ul>
+<li>其實我也不確定大小寫有沒有慣例.. Orz</li>
+<li>看來是都用小寫XD 只好改小寫了QQQ</li></ul>
 
 <ul class="comment"><li>醫院代號對照表及地址或座標？</li>
 <li><a href="http://www.nhi.gov.tw/webdata/webdata.aspx?menu=20&menu_id=712&webdata_id=660"></a><a href='http://www.nhi.gov.tw/webdata/webdata.aspx?menu=20&amp;menu_id=712&amp;webdata_id=660'/>http://www.nhi.gov.tw/webdata/webdata.aspx?menu=20&amp;menu_id=712&amp;webdata_id=660</a>, 當中的 <a href="http://www.nhi.gov.tw/Resource/webdata/8568_1_hospbsc.zip"></a><a href='http://www.nhi.gov.tw/Resource/webdata/8568_1_hospbsc.zip'/>http://www.nhi.gov.tw/Resource/webdata/8568_1_hospbsc.zip</a><a href='http://www.nhi.gov.tw/Resource/webdata/8568_1_hospbsc.zip%E5%8F%AF%E8%83%BD%E8%A6%81extract'/>&nbsp;</a> 可能要extract , 裡面格式 (分局別,醫事機構代碼,醫事機構名稱,機構地址,電話區域號碼 ,電話號碼,特約類別,型態別,醫事機構種類,終止合約或歇業日期)&nbsp;</li>
