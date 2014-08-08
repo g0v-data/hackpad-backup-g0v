@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2857"/>
+<meta name="version" content="2859"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$vtLwiUfYgcc</title>
 </head>
 <body><h1>全國重度級急救責任醫院急診即時訊息</h1><p>源頭 : 衛服部網頁</p><p>URL:&nbsp; <a href="http://www.mohw.gov.tw/CHT/DOMA/DM1_P.aspx?f_list_no=608&fod_list_no=4680&doc_no=43081"></a><a href='http://www.mohw.gov.tw/CHT/DOMA/DM1_P.aspx?f_list_no=608&amp;fod_list_no=4680&amp;doc_no=43081'/>http://www.mohw.gov.tw/CHT/DOMA/DM1_P.aspx?f_list_no=608&amp;fod_list_no=4680&amp;doc_no=43081</a></p><p>資料來源 : 各醫院網頁&nbsp;</p><p></p><h2>目前進度</h2><p>Aggregator: <a href="http://github.com/g0v/er.mohw"></a>http://github.com/g0v/<a href='http://github.com/g0v/mohw'/>e</a>r<a href='http://github.com/g0v/ermohw'/>.</a>mohw</p><p></p><p>資料每 20 分鐘塞入 influx db, 可以如此取得：</p><p></p><p>curl -G &rsquo;<a href="http://api-beta.ly.g0v.tw:8086/db/twer/series?u=guest&p=guest"></a>http://api-beta.ly.g0v.tw:8086/db/twer/series?u=guest&amp;p=guest&rsquo; --data-urlencode &quot;q=select last(pending_ward) as pending_ward, difference(pending_ward) as pending_ward_diff from ER group by hospital_sn, time(1h) fill(0) where time &gt; now() - 3h&quot;</p><p></p><h2>Data</h2><p>填表：<a href="https://ethercalc.org/twer"></a><a href='https://ethercalc.org/twer'/>https://ethercalc.org/twer</a></p><ul class="comment"><li>開始寫請先填表認領，卡關再到 irc 上求救</li></ul>
