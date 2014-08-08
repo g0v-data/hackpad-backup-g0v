@@ -3,21 +3,80 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1375"/>
+<meta name="version" content="2138"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$0.jmm9642fog5vcxr</title>
 </head>
-<body><h1>Hackfoldr 2.0 功能列表</h1><p></p><p>範例：<a href="http://hack.etblue.tw/welcome-to-hackfoldr"></a>http://hack.etblue.tw/welcome-to-hackfoldr</p><p></p><h2>前台使用者導覽</h2><p></p><p><b>時光麵包屑</b></p><p>按時鐘按鈕，可以找到之前看過的 foldr。</p><p>在同一台電腦、同一個瀏覽器看過的 foldr，都會被記住。實作方式是使用 html5 的 local storage。</p><p></p><p><b>說明文件連結</b></p><p>按問號按鈕，可以連到說明文件的 foldr。說明文件是 hackpad，所以可以直接在文件上留言發問或回報臭蟲。</p><p></p><p><b>伸縮鏡頭</b></p><p>按放大鏡按鈕，可以單獨放大右邊內容區域。</p><p>在同一台電腦、同一個瀏覽器設定的放大比例，都會被記住，下次打開任一 foldr 都會套用之前設定的放大比例。實作方式是使用 html5 的 local storage。</p><p></p><p><b>全螢幕</b></p><p>按 &lt; 按鈕，可以把側邊欄收起來，讓內容放大到全螢幕 -3rem。</p><p>這個功能只有在 desktop layout 會用到。</p><p></p><p><b>分享首頁</b></p><p>按 foldr 標題，可以回到 foldr 首頁，網址列上面會出現漂亮的、容易分享的網址。</p><p>從 foldr 首頁進入，會自動秀出第一個連結網頁的內容。</p><p></p><p><b>分享內頁</b></p><p>按選單上的連結，網址列上面會出現該內頁的獨立網址。</p><p>從內頁獨立網址進入，會自動秀出指定的內頁。</p><p></p><p><b>展開 subfoldr</b></p><p></p><p></p><p><b>行動版</b></p><p></p><p></p><h2>後台編輯與權限控管</h2><p></p><p>↓gui and browser↓</p><p></p><p><b>指定 foldr 首頁網址</b></p><p>ethercalc id（如果沒跟別人撞名的話）</p><p>google spreadsheet id</p><p></p><p><b>從 foldr 首頁直達編輯台</b></p><p>首頁網址後面加 /edit</p><p></p><p>↓gui and spreadsheet↓</p><p></p><p><b>在 foldr 中加入網址</b></p><p></p><p><b>新增 hackpad 文件同時在 foldr 中加入網址</b></p><p></p><p><b>調整順序</b></p><p></p><p>↓spreadsheet only↓</p><p></p><p><b>加標籤</b></p><p></p><p><b>讓選單項目在新視窗打開</b></p><p></p><p><b>新增子資料夾</b></p><p></p><p><b>讓選單項目回到頂層</b></p><p></p><p><b>設定 foldr 選項</b></p><p></p><p><b>設定後台編輯權限</b></p><p></p><p><b>設定跳板</b></p><p></p><p></p><p></p><h2>白牌打包</h2><p></p><p>只要</p><ol><li>擁有一個頂層網址</li>
-<li>擁有一個 github 帳號</li></ol>
-<p>就可以打造屬於自己的 hackfoldr 介面，可以打開隱藏的快捷選單，把自己需要的常用連結內建到 hackfoldr 導覽列裡。詳細步驟：(tbd)</p><p></p><p></p><h2>附錄：編輯試算表時，可以在儲存格內使用的語法</h2><p></p><p><b>#，註解 (任一行裡的任一格)</b></p><p>一行裡面，有任一格子的開頭是 # 號，整行當會被標記成註解，標記成註解以後，就可以亂寫，不會影響到左邊的選單 XD 註解通常是用來留言，告訴其他人哪一格不要動之類的。</p><p></p><p><b>google spreadsheet id (A1)</b></p><p>A1 格子的內容如果不是註解，而且又 &gt;= 40 字元，會被當作是 google spreadsheed id 解讀，此時資料來源轉由 google spreadsheet 提供，ethercalc 本身只扮演提供好看網址的跳板。</p><p></p><p><b>網址 (A coulmn)</b></p><p>就是網址…</p><p></p><p><b>&lt;，選單層級 (A coulmn)</b></p><p>&lt; 代表接下來的連結是 top level，不會被收在 subfoldr 裡面</p><p></p><p><b>標題 (B column)</b></p><p>從上面數來第一個有資料的 B column 格子，就是 foldr 標題。在這之後：</p><ul><li>當網址 A column 沒有資料時，B column 就是 subfoldr 標題。</li>
-<li>當網址 A column 有資料，且不是 &lt; 或 &gt; 時，B column 就是連結標題。</li></ul>
+<body><h1>Hackfoldr 2.0 功能列表</h1><p></p><p>範例：<a href="http://hack.etblue.tw/welcome-to-hackfoldr"></a>http://hack.etblue.tw/welcome-to-hackfoldr</p><p></p><h2>前台使用者導覽</h2><p></p><p><b>時光麵包屑</b></p><ul><li>按時鐘按鈕，可以找到之前看過的 foldr（html5 local storage）<ul><li>在同一台電腦、同一個瀏覽器看過的 foldr，都會被記住</li></ul>
+</ul>
 
-<p><b>選項 (C column)</b></p><p>foldr 標題的選項：</p><ul><li>hide - 隱藏後台，按鉛筆按鈕時試算表不會出現。但網址輸入 /edit 還是可以看到。</li>
-<li>unsortable - 不可排序，按鉛筆按鈕後選單的拖曳排序功能不會啟動。</li></ul>
+<p><b>說明文件連結</b></p><ul><li>按問號按鈕，可以連到說明文件的 foldr。說明文件是 hackpad，所以可以直接在文件上留言發問或回報臭蟲（html href）</li></ul>
+
+<p><b>伸縮鏡頭</b></p><ul><li>按放大鏡按鈕，可以單獨放大右邊內容區域（css zoom / transform）</li>
+<li>在同一台電腦、同一個瀏覽器設定的放大比例，都會被記住，下次打開任一 foldr 都會套用之前設定的放大比例（html5 local storage）</li></ul>
+
+<p><b>全視窗</b></p><ul><li>按 &lt; 按鈕，可以把側邊欄收起來，讓內容放大到全視窗 -3rem（jquery）<ul><li>這個功能只有在 desktop layout 會用到</li></ul>
+</ul>
+
+<p><b>分享首頁</b></p><ul><li>按 foldr 標題，可以回到 foldr 首頁，網址列上面會出現漂亮的、容易分享的網址（javascript）</li>
+<li>從 foldr 首頁進入，會自動秀出第一個連結網頁的內容（javascript）</li></ul>
+
+<p><b>分享內頁</b></p><ul><li>按選單上的連結，網址列上面會出現該內頁的獨立網址（javascript）</li>
+<li>從內頁獨立網址進入，會自動秀出指定的內頁（javascript）</li></ul>
+
+<p><b>展開 subfoldr</b></p><ul><li>按一下 subfoldr 標題可以展開或收合（semantic ui accordion）</li>
+<li>從內頁獨立網址進入，包含那個網址的 subfoldr 會自動展開（jquery）</li>
+<li>沒有特別指定的話，包含三個以下項目的 subfoldr 會預設展開（jquery）</li></ul>
+
+<p><b>行動版</b></p><ul><li>視窗寬度在 1024px、640px、480px 時各自會套用不同的版面（ css media query）</li>
+<li>手機或平板上畫面不會被瀏覽器自動縮小（css viewport）</li></ul>
+
+<p><b>自動圖示</b></p><ul><li>會在新分頁打開的連結，會自動標註新分頁圖示（jquery）</li>
+<li>常用服務如 hackpad、gdocs、youtube、kktix …等的連結項目，會顯示對應的圖示（handlebars）<ul><li>目前沒有直接取 favicon 來用，是因為各家 favicon 設計品質良莠不齊，怕破壞畫面… XD</li></ul>
+</ul>
+
+<h2>後台編輯與權限控管</h2><p></p><p>↓gui and browser↓</p><p></p><p><b>指定 foldr 首頁網址</b></p><ul><li>好記網址：ethercalc id，如果沒跟別人撞名的話（ethercalc）</li>
+<li>隱密網址：google spreadsheet id（google docs）</li></ul>
+
+<p><b>進入編輯模式</b></p><ul><li>首頁網址後面加 /edit（javascript）</li>
+<li>按鉛筆按鈕（jquery）</li></ul>
+
+<p>↓gui and spreadsheet↓</p><p></p><p><b>在 foldr 中加入網址</b></p><ul><li>編輯模式中按 + 按鈕後填寫表單（semantic ui form）</li>
+<li>編輯模式中在 spreadsheet 手動填入網址與想呈現的標題到正確的欄位（ethercalc）</li></ul>
+
+<p><b>新增 hackpad 文件同時在 foldr 中加入網址</b></p><ul><li>編輯模式中按 + 按鈕後填寫表單（semantic ui form）</li>
+<li>編輯模式中在 spreadsheet 手動填入網址與想呈現的標題到正確的欄位。網址可以是 https://*.hackpad.com/ 後面接想要的 pad id，如果沒跟別人撞名的話，按下網址會自動打開新的 hackpad（hackpad, ethercalc）</li></ul>
+
+<p><b>調整順序</b></p><ul><li>編輯模式中拖曳左邊的選單項目（jquery ui sortable）</li>
+<li>編輯模式中在 spreadsheet 手動複製、貼上、插入、刪除（ethercalc）</li></ul>
+
+<p>↓spreadsheet only↓</p><p></p><p><b>加標籤</b></p><ul><li>連結網址的 column d 可設定標籤顏色和內容文字（handlebars）</li></ul>
+
+<p><b>讓選單項目在新視窗打開</b></p><ul><li>連結網址的 column c 包含 blank 關鍵字時，該連結會設定為 target = &quot;_blank&quot;（handlebars）</li></ul>
+
+<p><b>新增子資料夾</b></p><ul><li>column a 空白，但 column b 有資料時，會被視為子資料夾（javascript）</li></ul>
+
+<p><b>讓選單項目回到頂層</b></p><ul><li>column a 開頭為 &lt; 號時，以下的連結項目會被歸到 subfoldr 之外，變回頂層項目（javascript）</li></ul>
+
+<p><b>設定 foldr 選項</b></p><ul><li>foldr 標題列的 column c 包含 hide 關鍵字時，使用者無法直接從 ui 中打開試算表（javascript）</li>
+<li>foldr 標題列的 column c 包含 unsortable 關鍵字時，使用者無法拖曳調整順序（javascript）</li></ul>
+
+<p><b>設定後台編輯權限</b></p><ul><li>使用 ethercalc 當資料來源時，任何人都可編輯，但可利用鎖定功能來減少誤編（ethercalc）</li>
+<li>使用 google spreadsheet 當資料來源時，可利用 google docs 的權限管理（google docs）</li></ul>
+
+<p><b>設定跳板</b></p><ul><li>需要擁有 ethercalc 的好看網址，又希望使用 google spreadsheet 當資料來源時，可將 ethercalc 設定為跳板，自動導向到指定的 google spreadsheet，詳附錄（javascript）</li></ul>
+
+<h2>白牌打包</h2><p></p><p>只要</p><ol><li>擁有一個頂層網址</li>
+<li>擁有一個 github 帳號</li></ol>
+<p>就可以打造屬於自己的 hackfoldr 介面，可以打開隱藏的快捷選單，把自己需要的常用連結內建到 hackfoldr 導覽列裡。詳細步驟：(tbd)</p><p></p><h2>附錄：編輯試算表時，可以在儲存格內使用的語法</h2><p></p><p><b>#，註解 (任一行裡的任一格)</b></p><p>一行裡面，有任一格子的開頭是 # 號，整行當會被標記成註解，標記成註解以後，就可以亂寫，不會影響到左邊的選單 XD 註解通常是用來留言，告訴其他人哪一格不要動之類的。</p><p></p><p><b>google spreadsheet id (A1)</b></p><p>A1 格子的內容如果不是註解，而且又 &gt;= 40 字元，會被當作是 google spreadsheed id 解讀，此時資料來源轉由 google spreadsheet 提供，ethercalc 本身只扮演提供好看網址的跳板。</p><p></p><p><b>網址 (A coulmn)</b></p><p>就是網址…</p><p></p><p><b>&lt;，選單層級 (A coulmn)</b></p><p>&lt; 代表接下來的連結是 top level，不會被收在 subfoldr 裡面</p><p></p><p><b>標題 (B column)</b></p><p>從上面數來第一個有資料的 B column 格子，就是 foldr 標題。在這之後：</p><ul><li>當網址 A column 沒有資料時，B column 就是 subfoldr 標題</li>
+<li>當網址 A column 有資料，且不是 &lt; 或 &gt; 時，B column 就是連結標題</li></ul>
+
+<p><b>選項 (C column)</b></p><p>foldr 標題的選項：</p><ul><li>hide - 隱藏後台，按鉛筆按鈕時試算表不會出現。但內行的人在網址輸入 /edit 還是可以看到試算表</li>
+<li>unsortable - 不可排序，按鉛筆按鈕後選單的拖曳排序功能不會啟動</li></ul>
 <p>subfoldr 的選項：</p><ul><li>expand - 預設展開</li>
 <li>collapse - 預設收合</li>
-<li>如果沒特別設定，連結項目在 3 個以下的 subfoldr 會自動展開，超過 3 個的 subfoldr 會自動收合。</li></ul>
+<li>如果沒特別設定，連結項目在 3 個以下的 subfoldr 會自動展開，超過 3 個的 subfoldr 會自動收合</li></ul>
 <p>link item 的選項：</p><ul><li>blank - 在新視窗打開連結</li>
-<li>如果沒特別設定，一些已知的不可內嵌的網頁會自動設定成在新視窗打開。</li></ul>
+<li>如果沒特別設定，一些已知的不可內嵌的網頁會自動設定成在新視窗打開</li></ul>
 
 <p><b>標籤 (D column, for link items only)</b></p><p>格式：</p><ul><li>標籤內容 - 會用預設的顏色（灰色）顯示標籤內容</li>
 <li>標籤顏色 標籤內容 - 會用指定的顏色顯示標籤內容</li></ul>
@@ -30,11 +89,11 @@
 <li>orange</li></ul>
 </li>
 <li>淺色系<ul><li>gray</li>
-<li>pink</li>
-<li>yellow</li>
 <li>green</li>
 <li>blue</li>
-<li>purple</li></ul>
+<li>purple</li>
+<li>pink</li>
+<li>yellow</li></ul>
 </ul>
 
 </body>
