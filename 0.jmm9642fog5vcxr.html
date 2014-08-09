@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2138"/>
+<meta name="version" content="2397"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$0.jmm9642fog5vcxr</title>
 </head>
 <body><h1>Hackfoldr 2.0 功能列表</h1><p></p><p>範例：<a href="http://hack.etblue.tw/welcome-to-hackfoldr"></a>http://hack.etblue.tw/welcome-to-hackfoldr</p><p></p><h2>前台使用者導覽</h2><p></p><p><b>時光麵包屑</b></p><ul><li>按時鐘按鈕，可以找到之前看過的 foldr（html5 local storage）<ul><li>在同一台電腦、同一個瀏覽器看過的 foldr，都會被記住</li></ul>
@@ -65,9 +65,40 @@
 
 <p><b>設定跳板</b></p><ul><li>需要擁有 ethercalc 的好看網址，又希望使用 google spreadsheet 當資料來源時，可將 ethercalc 設定為跳板，自動導向到指定的 google spreadsheet，詳附錄（javascript）</li></ul>
 
-<h2>白牌打包</h2><p></p><p>只要</p><ol><li>擁有一個頂層網址</li>
-<li>擁有一個 github 帳號</li></ol>
-<p>就可以打造屬於自己的 hackfoldr 介面，可以打開隱藏的快捷選單，把自己需要的常用連結內建到 hackfoldr 導覽列裡。詳細步驟：(tbd)</p><p></p><h2>附錄：編輯試算表時，可以在儲存格內使用的語法</h2><p></p><p><b>#，註解 (任一行裡的任一格)</b></p><p>一行裡面，有任一格子的開頭是 # 號，整行當會被標記成註解，標記成註解以後，就可以亂寫，不會影響到左邊的選單 XD 註解通常是用來留言，告訴其他人哪一格不要動之類的。</p><p></p><p><b>google spreadsheet id (A1)</b></p><p>A1 格子的內容如果不是註解，而且又 &gt;= 40 字元，會被當作是 google spreadsheed id 解讀，此時資料來源轉由 google spreadsheet 提供，ethercalc 本身只扮演提供好看網址的跳板。</p><p></p><p><b>網址 (A coulmn)</b></p><p>就是網址…</p><p></p><p><b>&lt;，選單層級 (A coulmn)</b></p><p>&lt; 代表接下來的連結是 top level，不會被收在 subfoldr 裡面</p><p></p><p><b>標題 (B column)</b></p><p>從上面數來第一個有資料的 B column 格子，就是 foldr 標題。在這之後：</p><ul><li>當網址 A column 沒有資料時，B column 就是 subfoldr 標題</li>
+<h2>白牌打包</h2><p></p><p>只要</p><ul><li>擁有一個頂層網址</li>
+<li>擁有一個 github 帳號</li></ul>
+<p>就可以 fork 屬於自己的 hackfoldr。</p><p></p><p>自架 hackfoldr 的好處：</p><ul><li>可自訂首頁打開的預設 foldr</li>
+<li>可打開隱藏的快捷選單，把常用連結內建到 hackfoldr 導覽列</li>
+<li>可自訂關連的 hackpad 站台</li></ul>
+
+<p><b>步驟</b></p><p></p><undefined><li>fork github repo</li></undefined>
+<ul><li>到 <a href="https://github.com/hackfoldr/hackfoldr-2.0"></a>https://github.com/hackfoldr/hackfoldr-2.0 按右上角 Fork 按鈕</li></ul>
+
+<undefined><li>修改 github repo 的 CNAME 檔案</li></undefined>
+<ul><li>內容改成你想使用的網址，範例：<a href="https://github.com/hackfoldr/hackfoldr-2.0/blob/master/CNAME"></a>https://github.com/hackfoldr/hackfoldr-2.0/blob/master/CNAME</li></ul>
+
+<undefined><li>使用域名管理服務設定網址，例如 amazon 的 router 53</li></undefined>
+<p>設定範例：</p><ul><li>name: hack.etblue.tw.</li>
+<li>type: CNAME</li>
+<li>value: etblue.github.io</li>
+<li>evaluate target: -</li>
+<li>health check id: -</li>
+<li>ttl: 300</li></ul>
+
+<undefined><li>等待域名生效</li></undefined>
+<ul><li>一般來說不會太久，十分鐘之類的，除非 TTL 設定成超長時間</li></ul>
+
+<undefined><li>等待期間，可先自訂你的 hackfoldr</li></undefined>
+<ul><li>打開你的 repo，切換到 gh-pages branch</li>
+<li>打開你的 repo 裡的 index.html 檔案，按鉛筆按鈕編輯 <a href="https://github.com/hackfoldr/hackfoldr-2.0/blob/gh-pages/index.html"></a>https://github.com/hackfoldr/hackfoldr-2.0/blob/gh-pages/index.html</li>
+<li>依樣畫葫蘆做這幾件事情<ul><li><a href="https://github.com/moztw/hackfoldr-moztw/commit/73f712e028f7dd446750dde4aa9e90cda4a48bda"></a>https://github.com/moztw/hackfoldr-moztw/commit/73f712e028f7dd446750dde4aa9e90cda4a48bda</li>
+<li><a href="https://github.com/moztw/hackfoldr-moztw/commit/a08f238e2e32b61273827943b1d3b4f5f21c67ab"></a>https://github.com/moztw/hackfoldr-moztw/commit/a08f238e2e32b61273827943b1d3b4f5f21c67ab</li>
+<li><a href="https://github.com/moztw/hackfoldr-moztw/commit/ccb57c3541c2ba370161bae7a3683a99a861dfe4"></a>https://github.com/moztw/hackfoldr-moztw/commit/ccb57c3541c2ba370161bae7a3683a99a861dfe4</li>
+<li><a href="https://github.com/moztw/hackfoldr-moztw/commit/dba706726b0cb0004e74ad9ff5cf9a816367deb8"></a>https://github.com/moztw/hackfoldr-moztw/commit/dba706726b0cb0004e74ad9ff5cf9a816367deb8</li></ul>
+<undefined><li><br/></li></undefined>
+</ul>
+
+<h2>附錄：編輯試算表時，可以在儲存格內使用的語法</h2><p></p><p><b>#，註解 (任一行裡的任一格)</b></p><p>一行裡面，有任一格子的開頭是 # 號，整行當會被標記成註解，標記成註解以後，就可以亂寫，不會影響到左邊的選單 XD 註解通常是用來留言，告訴其他人哪一格不要動之類的。</p><p></p><p><b>google spreadsheet id (A1)</b></p><p>A1 格子的內容如果不是註解，而且又 &gt;= 40 字元，會被當作是 google spreadsheed id 解讀，此時資料來源轉由 google spreadsheet 提供，ethercalc 本身只扮演提供好看網址的跳板。</p><p></p><p><b>網址 (A coulmn)</b></p><p>就是網址…</p><p></p><p><b>&lt;，選單層級 (A coulmn)</b></p><p>&lt; 代表接下來的連結是 top level，不會被收在 subfoldr 裡面</p><p></p><p><b>標題 (B column)</b></p><p>從上面數來第一個有資料的 B column 格子，就是 foldr 標題。在這之後：</p><ul><li>當網址 A column 沒有資料時，B column 就是 subfoldr 標題</li>
 <li>當網址 A column 有資料，且不是 &lt; 或 &gt; 時，B column 就是連結標題</li></ul>
 
 <p><b>選項 (C column)</b></p><p>foldr 標題的選項：</p><ul><li>hide - 隱藏後台，按鉛筆按鈕時試算表不會出現。但內行的人在網址輸入 /edit 還是可以看到試算表</li>
