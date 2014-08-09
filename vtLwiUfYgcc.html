@@ -3,10 +3,10 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="3115"/>
+<meta name="version" content="3118"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$vtLwiUfYgcc</title>
 </head>
-<body><h1>全國重度級急救責任醫院急診即時訊息</h1><p>源頭 : 衛服部網頁</p><p>URL:&nbsp; <a href="http://www.mohw.gov.tw/CHT/DOMA/DM1_P.aspx?f_list_no=608&fod_list_no=4680&doc_no=43081"></a><a href='http://www.mohw.gov.tw/CHT/DOMA/DM1_P.aspx?f_list_no=608&amp;fod_list_no=4680&amp;doc_no=43081'/>http://www.mohw.gov.tw/CHT/DOMA/DM1_P.aspx?f_list_no=608&amp;fod_list_no=4680&amp;doc_no=43081</a></p><p>資料來源 : 各醫院網頁&nbsp;</p><p></p><h2>目前進度</h2><p>Aggregator: <a href="http://github.com/g0v/er.mohw"></a>http://github.com/g0v/<a href='http://github.com/g0v/mohw'/>e</a>r<a href='http://github.com/g0v/ermohw'/>.</a>mohw</p><p></p><p>資料每 20 分鐘塞入 influx db, 可以如此取得：</p><p></p><p><a href='http://api-beta.ly.g0v.tw:8086/db/twer/series?u=guest&amp;p=guest&amp;q=select%20last(pending_ward)%20as%20ward,%20DIFFERENCE(pending_ward)%20as%20ward_diff%20from%20ER%20group%20by%20hospital_sn,%20time(1h)%20where%20time%20%3E%20now()%20-%2024h'/>最近 24hr </a><a href='http://api-beta.ly.g0v.tw:8086/db/twer/series?u=guest&amp;p=guest&amp;q=select%20last(pending_ward)%20as%20ward,%20DIFFERENCE(pending_ward)%20as%20ward_diff%20from%20ER%20group%20by%20hospital_sn,%20time(1h)%20where%20time%20%3E%20now()%20-%2024h'/>等</a><a href='http://api-beta.ly.g0v.tw:8086/db/twer/series?u=guest&amp;p=guest&amp;q=select%20last(pending_ward)%20as%20ward,%20DIFFERENCE(pending_ward)%20as%20ward_diff%20from%20ER%20group%20by%20hospital_sn,%20time(1h)%20where%20time%20%3E%20now()%20-%2024h'/>待住院狀態</a>: select last(pending_ward) as ward, DIFFERENCE(pending_ward) as ward_diff&nbsp; from ER group by hospital_sn, time(1h) where time &gt; now() - 24h</p><p></p><p>Dashboard: <a href="http://api-beta.ly.g0v.tw:5601/#/dashboard/file/default.json"></a>http://api-beta.ly.g0v.tw:5601/#/dashboard/file/default.json</p><ul class="comment"><li>Q1:怎樣可以save modified as default ?</li>
+<body><h1>全國重度級急救責任醫院急診即時訊息</h1><p>源頭 : 衛服部網頁</p><p>URL:&nbsp; <a href="http://www.mohw.gov.tw/CHT/DOMA/DM1_P.aspx?f_list_no=608&fod_list_no=4680&doc_no=43081"></a><a href='http://www.mohw.gov.tw/CHT/DOMA/DM1_P.aspx?f_list_no=608&amp;fod_list_no=4680&amp;doc_no=43081'/>http://www.mohw.gov.tw/CHT/DOMA/DM1_P.aspx?f_list_no=608&amp;fod_list_no=4680&amp;doc_no=43081</a></p><p>資料來源 : 各醫院網頁&nbsp;</p><p></p><h2>目前進度</h2><p>Aggregator: <a href="http://github.com/g0v/er.mohw"></a>http://github.com/g0v/<a href='http://github.com/g0v/mohw'/>e</a>r<a href='http://github.com/g0v/ermohw'/>.</a>mohw</p><p></p><p>資料每 20 分鐘塞入 influx db, 可以如此取得：</p><p></p><p><a href='http://api-beta.ly.g0v.tw:8086/db/twer/series?u=guest&amp;p=guest&amp;q=select%20last(pending_ward)%20as%20ward,%20DIFFERENCE(pending_ward)%20as%20ward_diff%20from%20ER%20group%20by%20hospital_sn,%20time(1h)%20where%20time%20%3E%20now()%20-%2024h'/>最近 24hr 等待住院狀態</a>: select last(pending_ward) as ward, DIFFERENCE(pending_ward) as ward_diff&nbsp; from ER group by hospital_sn, time(1h) where time &gt; now() - 24h</p><p></p><p>Dashboard: <a href="http://api-beta.ly.g0v.tw:5601/#/dashboard/file/default.json"></a>http://api-beta.ly.g0v.tw:5601/#/dashboard/file/default.json</p><ul class="comment"><li>Q1:怎樣可以save modified as default ?</li>
 <li>Q2: hospital_sn 要改為醫院名嗎? 或者要提供對應?</li>
 <li><br/></li></ul>
 <p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_vtLwiUfYgcc_p.61087_1407558186006_螢幕快照 2014-08-09 下午12.22.50.jpg'/></p><p></p><p>SQL-like query syntax</p><p>指定醫院</p><ul style="list-style: none;"><li>等普通病床變化 &quot;select&nbsp; difference(pending_ward) from &quot;ER.1142100017&quot; where&nbsp; time &gt; 1407542794s and time &lt; 1407560867s&nbsp;&nbsp;&nbsp;&nbsp; group by time(1h)&nbsp; order asc&quot;</li>
@@ -39,43 +39,7 @@
 <li>等待住院人數 (pending_ward) : ( integer )</li>
 <li>等待加護病床人數 (pending_icu): ( integer )</li>
 <li><br/></li></ul style="list-style: none;">
-<h2>layout</h2><p><b>TABLE 1 (範例)</b></p><p>即時: 2014.8.3.0:00&nbsp; ( 大概要多久parsing 一次 ? 每家醫院update 間隔不同?</p><table style="font-size:13px;cell-spacing: 0px; border-collapse: collapse;"><tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#37291;&#38498;</td>
-<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Report_to_119_capacity_full</td>
-<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Waiting_to_see_doctor</td>
-<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Waiting_for_ER_bed</td>
-<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Waiting_for_ward_admission</td>
-<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Waiting_for_ICU_admission</td>
-</tr>
-<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">A</td>
-<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Y</td>
-<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">3</td>
-<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">3</td>
-<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">3</td>
-<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">3</td>
-</tr>
-<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">B</td>
-<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">N</td>
-<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">0</td>
-<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">4</td>
-<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">3</td>
-<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">3</td>
-</tr>
-<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">C</td>
-<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">N</td>
-<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">0</td>
-<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">4</td>
-<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">0</td>
-<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">3</td>
-</tr>
-<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">D</td>
-<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">N</td>
-<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">0</td>
-<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">4</td>
-<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">0</td>
-<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">3</td>
-</tr>
-</table>
-<p><b>預計產出模式:</b></p><p>第一種: 按即時狀況, 在地圖呈現 (heat map)</p><p>第二種: 按醫院別, X軸(時間), Y 軸(等床人數 etc)&nbsp; 按照不同時間呈現</p><p>第三種: 看 archive historical data 看特定 pattern</p><p></p><p><b>產出預期成效:</b></p><ol><li>讓民眾得知目前各重症醫院 &quot;擁塞&quot; 程度</li>
+<h2>layout</h2><p><b>產出預期成效:</b></p><ol><li>讓民眾得知目前各重症醫院 &quot;擁塞&quot; 程度</li>
 <li>重大疾病爆發時間時, 各重症醫院承受程度</li></ol>
 
 <h2>issues and talks</h2><p>FB g0v 討論區 <a href="https://www.facebook.com/groups/g0v.general/660961490646927/?notif_t=like"></a>https://www.facebook.com/groups/g0v.general/660961490646927/?notif_t=like</p><p></p><p>capture_time: ( or named grab_time ?)</p><ul class="comment"><li>還是應該是叫 crawling time XDDD or needn&rsquo;t this key(?</li>
