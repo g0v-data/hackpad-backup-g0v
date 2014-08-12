@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="4982"/>
+<meta name="version" content="4999"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$vtLwiUfYgcc</title>
 </head>
 <body><h1>全國重度級急救責任醫院急診即時訊息</h1><p>源頭 : 衛服部網頁</p><p>URL:&nbsp; <a href="http://www.mohw.gov.tw/CHT/DOMA/DM1_P.aspx?f_list_no=608&fod_list_no=4680&doc_no=43081"></a><a href='http://www.mohw.gov.tw/CHT/DOMA/DM1_P.aspx?f_list_no=608&amp;fod_list_no=4680&amp;doc_no=43081'/>http://www.mohw.gov.tw/CHT/DOMA/DM1_P.aspx?f_list_no=608&amp;fod_list_no=4680&amp;doc_no=43081</a></p><p>資料來源 : 各醫院網頁&nbsp;</p><p></p><h2>目前進度</h2><p>Dashboard: <a href="http://er.mohw.g0v.tw/"></a>http://er.mohw.g0v.tw/</p><ul class="comment"><li>Q1:怎樣可以save modified as default ?<ul class="comment"><li>現在不行，先用 export</li></ul class="comment">
@@ -113,6 +113,8 @@
 <li>Hmm.. 所以要改成 timestamp 嗎?</li>
 <li>自問自答，看到表格上其他 commit 改成了 timestamp，那就從善如流吧</li>
 <li>請問有都修正成timestamp了嗎？ 我用<a href='http://api-beta.ly.g0v.tw:8086/db/twer/series?u=guest&amp;p=guest&amp;q=select%20last(pending_ward)%20as%20ward,%20DIFFERENCE(pending_ward)%20as%20ward_diff%20from%20ER%20group%20by%20hospital_sn,%20time(1h)%20where%20time%20%3E%20now()%20-%2024h'/>最近 24hr 等待住院狀態</a>這個範例抓出來的timestamp超迷的...</li>
+<li>自問自答：timestamp看來好像是毫秒單位，所以除以1000就對了</li>
+<li><br/></li>
 <li><br/></li></ul>
 
 <p>pending_icu:</p><ul class="comment"><li>是否有以上欄位的正式英文說法？好像有點長，我改一下簡短的</li>
