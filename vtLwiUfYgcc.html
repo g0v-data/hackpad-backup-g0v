@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="5320"/>
+<meta name="version" content="5327"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$vtLwiUfYgcc</title>
 </head>
 <body><h1>全國重度級急救責任醫院急診即時訊息</h1><p>源頭 : 衛服部網頁</p><p>URL:&nbsp; <a href="http://www.mohw.gov.tw/CHT/DOMA/DM1_P.aspx?f_list_no=608&fod_list_no=4680&doc_no=43081"></a><a href='http://www.mohw.gov.tw/CHT/DOMA/DM1_P.aspx?f_list_no=608&amp;fod_list_no=4680&amp;doc_no=43081'/>http://www.mohw.gov.tw/CHT/DOMA/DM1_P.aspx?f_list_no=608&amp;fod_list_no=4680&amp;doc_no=43081</a></p><p>資料來源 : 各醫院網頁&nbsp;</p><p></p><h2>目前進度</h2><p>Dashboard: <a href="http://er.mohw.g0v.tw/"></a>http://er.mohw.g0v.tw/</p><ul class="comment"><li>Q1:怎樣可以save modified as default ?<ul class="comment"><li>現在不行，先用 export</li></ul class="comment">
@@ -49,7 +49,9 @@
 </ul>
 <ul style="list-style: none;"><li>1101020018|1101100011|1301200010|0501110514|0601160016|0401180014|1101150011)/&nbsp; where&nbsp; time &gt; now() - 24h&nbsp;&nbsp;&nbsp;&nbsp; group by time(1h)&nbsp; order asc</li></ul>
 <ul class="comment"><li>請問區域有詳細清單嘛？ex:北區有哪幾家</li>
-<li>見下↓ <b>crawler 填表</b>&nbsp;</li></ul>
+<li>見下↓ <b>crawler 填表</b>&nbsp;</li>
+<li>感謝</li>
+<li><br/></li></ul>
 
 <p></p><p></p><h2>原始資料處理</h2><p>Aggregator: <a href="http://github.com/g0v/er.mohw"></a><a href='http://github.com/g0v/er.mohw'/>http://github.com/g0v/er.mohw</a>, grafana branch for local changes</p><p></p><p>資料每 20 分鐘塞入 influx db, 可以如此取得：</p><p></p><p>crawler 填表：<a href="https://ethercalc.org/twer"></a><a href='https://ethercalc.org/twer'/>https://ethercalc.org/twer</a></p><ul class="comment"><li>開始寫請先填表認領，卡關再到 irc 上求救</li></ul>
 
