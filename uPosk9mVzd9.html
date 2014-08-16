@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="1166"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$uPosk9mVzd9</title>
+</head>
+<body><h1>資料庫Schema</h1><p>以後直接在這邊修改，留下紀錄吧</p><p>最近更新是根據8/16的討論後重新設計的DB Schema</p><p><a href="https://g0v.hackpad.com/X2h4X1iYek7"></a>https://g0v.hackpad.com/X2h4X1iYek7</p><p></p><p>DB使用Mongo</p><p></p><p>Collection －News：抓取到的新聞</p><ul style="list-style: none;"><li>欄位：<ul style="list-style: none;"><li>[_id]：預設主鍵。內容物為ObjectID。</li>
+<li>[newspaper]：此新聞所屬媒體。內容物為字串。</li>
+<li>[topicId]：此新聞歸屬議題，由後臺指派。內容物為ObjectID陣列，ObjectID對應Collection－Topic的主鍵。</li>
+<li>[title]：新聞標題。內容物為字串。</li>
+<li>[article]：新聞內容。內容物為字串。</li>
+<li>[newsTime]：新聞發布時間。內容物為Date物件。</li>
+<li>[createTime]：資料建立時間。內容物為Date物件。</li>
+<li>[updateTime]：資料更新時間。內容物為Date物件。</li>
+<li>[author]：新聞作者。內容物為字串。</li>
+<li>[picture]：新聞相關圖片。內容物為網址字串陣列。</li>
+<li>[sourceUrl]：新聞來源網址。內容物為字串。</li>
+<li>[score]：新聞分數，定時依據Collection －Comment的資料計算而出。內容物為物件，各屬性分別儲存不同類別、評論員等級的分數。</li></ul style="list-style: none;">
+</li>
+<li>索引：<ul style="list-style: none;"><li>主鍵：[_id]，唯一性。</li>
+<li>索引：[topicId]。</li>
+<li>索引：[newsTime]，倒序。</li></ul>
+</ul>
+
+<p>Collection －Topic：議題列表，由後臺編輯。</p><ul style="list-style: none;"><li>欄位：<ul style="list-style: none;"><li>[_id]：預設主鍵。內容物為ObjectID。</li>
+<li>[name]：議題名稱。內容物為字串。</li>
+<li>[sort]：在App顯示時的排序，直接由後臺設定。內容物為數字。</li>
+<li>[topicTagSet]：議題關鍵字。內容物為字串陣列。</li>
+<li>[score]：本議題目前的發霉分數，定時依據Collection －Comment的資料計算而出。內容物為物件，各屬性分別儲存不同類別、評論員等級的分數。</li>
+<li>[latestTime]：議題最後更新時間，指派新聞至某議題時亦會更新此時間。內容物為Date物件。</li></ul style="list-style: none;">
+</li>
+<li>索引：<ul style="list-style: none;"><li>主鍵：[_id]，唯一性。</li>
+<li>索引：[latestTime]，倒序。</li></ul>
+</ul>
+
+<p>Collection－Comment：評論列表，來源為App使用者評論。</p><ul style="list-style: none;"><li>欄位：<ul style="list-style: none;"><li>[_id]：預設主鍵。內容物為ObjectID。</li>
+<li>[news]：評論的新聞。內容物為ObjectID，對應至Collection－News的主鍵。</li>
+<li>[user]：評論者。內容物為字串，對應至使用者資料的主鍵。</li>
+<li>[level]：評論等級，紀錄評論者評論時的會員等級（註冊、認證、專家）。內容物為字串。</li>
+<li>[version]：評論時所使用的評論機制版本。內容物為字串。</li>
+<li>[score]：評論分數，當評論送出後，後臺依據評論機制版本與評論選項內容計算而出。內容物為數字。</li>
+<li>[data]：評論資料，記錄使用者送出評論時勾選跟填入的所有資料。可能會有的論述亦存在其中，顯示時前段依評論機制版本取出展示。內容物為物件，物件格式依評論機制版本而有不同。</li></ul style="list-style: none;">
+</li>
+<li>索引：<ul style="list-style: none;"><li>主鍵：[_id]，唯一性。</li>
+<li>唯一鍵：[news]＋[user]，唯一性。</li>
+<li>索引：[news]+[level]+[version]+[score]。</li>
+<li><br/></li></ul>
+</ul>
+
+<p></p><p></p><p></p><ul style="list-style: none;"><li><br/></li>
+<li><br/></li>
+<li><br/></li></ul>
+
+<p></p><p></p><p></p></body>
+</html>
