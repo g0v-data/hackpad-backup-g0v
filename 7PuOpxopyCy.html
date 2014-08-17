@@ -3,11 +3,12 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="5229"/>
+<meta name="version" content="5291"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$7PuOpxopyCy</title>
 </head>
 <body><h1>公有地大行動！POP on Fire!</h1><p></p><p>公有地大行動 POP on Fire - Publicly Owned Property on Fire</p><p>專案位置：<a href="http://hackfoldr.org/POPonFire"></a><u>http://hackfoldr.org/POPonFire</u>、<a href='https://github.com/g0v/POPonFire '/>GitHub</a>、<a href='https://www.facebook.com/groups/1417173811903954/'/>FB group</a></p><p>近期活動：20140830-31 預計參與<a href='http://twconf.data-sci.org/registration/signup.html'/>第拾次g0v黑客松</a></p><p><b>子計畫：<a href='http://g0v.github.io/POPonFire/'/>天龍特公地</a></b></p><p></p><h2>簡介短版</h2><ul><li>彙整「火線上的」公有土地資料</li>
-<li>地圖視覺化＋可檢索</li></ul>
+<li>地圖視覺化＋可檢索</li>
+<li>架構：</li></ul>
 <p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_7PuOpxopyCy_p.172171_1408282294100_20140721 公有地項目.jpg'/></p><p></p><p></p><h2>簡介長版</h2><p><b>出發點：公有土地資訊，全民都有知的權利</b></p><p>&nbsp;</p><ul><li><b>量：公有地總量每年持續下降！近十年已賣掉一萬公頃，以及，有些曖昧的公有土地</b>，例如台灣銀行的土地，算不算公有土地呢？縱使沒有被整塊賣掉，還是有許多假公真私的爭議，似是而非的活化動作，例如：<ul><li>公有土地參與都更卻換回豪宅而讓售給土地開發者，案例新聞</li>
 <li>被設定地上權70年，案例新聞</li>
 <li>BOT促參的方式，案例新聞</li></ul>
@@ -18,49 +19,22 @@
 <ul><li><b>我們想知道：</b>哪裡有公有地，公有地準備要被賣掉、開發的土地有多少，我們用「火線上」的公有土地，來稱呼這些準備被開發處分的公有土地們，有的是一去不復返的私有化，有的是假公真私地被開發，<b>想彙整政府「火線上」公有土地資料，公共地呈現出來，便於使大家了解。</b>也會介紹重要的<b>案例</b>：已私有化的(帝寶)，開發中的(公辦都更)，準備被設想要開發的(台北市空軍總部)...</li></ul>
 
 <ul><li><b>我們可以：進一步監督公有土地有沒有好好運用！</b> 每一筆公有土地被開發、處分，原因是什麼、為什麼、如何進行、結果是？具體的訴求與監督可以展開；<b>當然，想想如何更好地運用公有土地？</b>公有土地與未來與當前的諸多議題，何去何從？歸納出好的公有土地運用觀點與政策機制、國際案例，或有群眾提案的方案想像？什麼樣才是好的公有土地運用方式呢？</li></ul>
-
-<p><b>土地資料架構</b></p><ul><li>以產權觀點來看的話，本國土地：</li></ul>
-
-<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_7PuOpxopyCy_p.150415_1403340603680_%E5%85%AC%E6%9C%89%E5%9C%B0%E9%A1%9E%E5%88%A5%E8%88%87%E8%99%95%E7%90%86%E6%96%B9%E5%BC%8Fv.2.jpg'/></p><p></p><ul style="list-style: none;"><li><br/></li></ul>
-<p><b>火線上的公有土地類型一覽表</b></p><p>火線，一言以蔽之，就是我們需要關注監督的意思；除了公有土地，也包含戰後各單位接收日產的土地：</p><p></p><ul><li>財政系統經手處分（招標、促參）的公有地</li>
-<li>官股與國營事業土地</li>
-<li>國民黨黨產</li>
-<li>學產地（ex 台灣大學、師範大學...）</li>
-<li>暫時性運用（ex&nbsp; 北市更新處URS、國產署...）</li>
-<li>公有地參與開發計畫（ex&nbsp; 全國經建計劃、都市更新、BOT...）</li>
-<li>產業用地</li>
-<li>容積與容積獎勵相關</li>
-<li>有爭議議題的海域/水域</li>
-<li>原住民傳統領域被登記為公有土地的議題</li>
-<li>...</li></ul>
-
-<p></p><h2>目標與功能：公有土地的公共監督</h2><p><b>專案預定功能</b></p><ul><li>［查詢］公有土地公開整合查詢檢索功能<ul><li>依照「地區位置」來查詢，例如，「台北市大安區」的公有土地</li>
+<ul style="list-style: none;"><li><br/></li></ul>
+<p><b>火線＝需要被關心</b></p><p>火線，一言以蔽之，就是我們需要關注監督的意思；除了公有土地，也包含戰後各單位接收日產的土地：財政系統經手處分（招標、促參）的公有地、官股與國營事業土地、國民黨黨產、學產地（ex 台灣大學、師範大學...）、暫時性運用（ex&nbsp; 北市更新處URS、國產署...）、公有地參與開發計畫（ex&nbsp; 全國經建計劃、都市更新、BOT...）、產業用地、容積與容積獎勵相關、有爭議議題的海域/水域、原住民傳統領域被登記為公有土地的議題、...等等。</p><p></p><p></p><h2>目標與功能：公有土地的公共監督</h2><p></p><p><b>專案預定功能</b></p><ol><li>［查詢］公有土地公開整合查詢檢索功能</li><ul><li>依照「地區位置」來查詢，例如，「台北市大安區」的公有土地</li>
 <li>依照「開發方式」來查詢，例如，全台灣被劃入「都市更新」單元內的公有土地</li>
 <li>依照「經管單位」來查詢，例如，「國有財產署」的公有土地</li>
 <li>依照政商關係、政策發起單位、政策名稱，等等關鍵字來查詢</li>
 <li>...等等</li></ul>
-</li>
-<li>［協作］手動讓大家來分工的「國土wiki」：<ul><li>土地與空間的種類，其主管機關與機構，相關法令與運用的條例辦法、開發方式、相關政策方向</li>
+</ol>
+<ol><li>［協作］手動讓大家來分工的「國土wiki」：</li><ul><li>土地與空間的種類，其主管機關與機構，相關法令與運用的條例辦法、開發方式、相關政策方向</li>
 <li>如何協作、如何拼圖，流程雛形，介面形塑，資料品質，資料的可運用度</li>
 <li>需要建立可供人工手動登載資料的匯入方式，並研擬如何以自主合法方式/民代監督等雙重管道,批次取得公有地資訊</li></ul>
 <ul class="comment"><li>說明：1.政府並無公有地整合圖資(ex.同樣是公有地,屬國有財產局與新北市政府,未整合在一份資料上) 2.民眾無法直接取得,可透過查詢機制但有難度且須花費(以土地筆數計)</li></ul>
 <ul><li>結合「大家來提案、政策表態」，提供公有地市民提案 ; 動民主</li></ul>
-</li>
-<li>［議題企劃］更多趣味呈現方法，讓使用者了解公有土地的議題內涵；例如遊戲化；標售/租變動的通報系統 （如APP？）</li></ul>
+</ol>
+<ol><li>［議題企劃］更多趣味呈現方法，讓使用者了解公有土地的議題內涵；例如遊戲化；標售/租變動的通報系統 （如APP？）</li></ol>
 
-<p></p><p><b>預定使用者</b></p><ul><li>開放資料的社群</li>
-<li>資料視覺化呈現專業者</li>
-<li>相關議題研究者與團體 (例如土地研究、公營事業監督團體)</li>
-<li>有此土地公義內涵觀點的學者，楊重信、廖本全、李承嘉</li>
-<li>民意代表與助理</li>
-<li>社區範圍內的社區空間調查者</li>
-<li>不動產開發業界的吹哨者</li>
-<li>人壽業、金融業的吹哨者</li>
-<li>空間規畫與建築設計業界的吹哨者</li>
-<li>公部門內的響應者</li>
-<li>...</li></ul>
-
-<p><b>專案推動架構</b></p><ul style="list-style: none;"><li>基本上簡單的想法是：首先，指認出我們應該關心的公有土地，找到它的資料來源，將這個資料抓下來，並且公開彙整地呈現給民眾，民眾可以更容易知道土地資料來來認識公有土地的現況，也可以參與倡議與改變的行動。</li></ul>
+<p><b>預定使用者</b></p><ul><li>參考 <a href="http://hackfoldr.org/POPonFire/OKQO6As3zU1"></a>http://hackfoldr.org/POPonFire/OKQO6As3zU1</li></ul>
 
 <p><b>授權方式</b></p><ul><li>程式 MIT License</li>
 <li>文件 CC BY</li></ul>
@@ -75,26 +49,42 @@
 <li><a href='http://hackfoldr.org/POPonFire/keNUrWLVbPW'/>重要個案研究集</a></li>
 <li><a href='http://hackfoldr.org/POPonFire/LaMQWTTYnvH'/>政策與文獻匯整</a></li></ul>
 
-<p></p><h2>預期社會效果：監督、遊說、議題推廣</h2><p></p><p><b>捲動團體單位（<a href='http://hackfoldr.org/POPonFire/OKQO6As3zU1'/>pad</a>）</b></p><p></p><ul style="list-style: none;"><li>相關機制面向的推動：與民意代表之間，非正式交流、資料與觀點提供；例如，都市計畫通盤檢討的專業都計語彙用詞的翻譯與互動，與有心關注地區內國土議題的社區合作，針對都市計畫通盤檢討來深化與體現好的土地觀點內涵。</li>
-<li><br/></li>
-<li>宣傳推廣：有了網站與初步的運作雛形後，我們可以前往許多場合，給予演講宣傳，學術機構、社區大學、議題專業社群場合，等等。形成一套公有土地議題操作的SOP，則我們可以鼓勵不同地區的人，自主發起議題推廣的活動。我們先要幫忙釐清想好演練過，的確有推廣的效果這樣。</li>
-<li><br/></li>
-<li>活動推廣：到容獎開放空間去散步；或是蚊子館、公有地去籌辦什麼東西之類的，讓更多人能夠過現場的活動來認識此議題。</li>
-<li><br/></li></ul>
-<p><b>公共監理</b></p><p></p><ul style="list-style: none;"><li>公有土地資產的公共監理</li><ul><li>標售與私有化監督</li>
-<li>開發合理性監督</li></ul>
-</ul>
-
-<ul style="list-style: none;"><li>國土若標售又被炒作到什麼高價，或是如何輕易被標售</li>
+<p></p><h2>預期社會效果：監督、遊說、議題推廣</h2><p></p><p><b>捲動團體單位（<a href='http://hackfoldr.org/POPonFire/OKQO6As3zU1'/>pad</a>）</b></p><p>相關機制面向的推動：與民意代表之間，非正式交流、資料與觀點提供；例如，都市計畫通盤檢討的專業都計語彙用詞的翻譯與互動，與有心關注地區內國土議題的社區合作，針對都市計畫通盤檢討來深化與體現好的土地觀點內涵。</p><p>宣傳推廣：有了網站與初步的運作雛形後，我們可以前往許多場合，給予演講宣傳，學術機構、社區大學、議題專業社群場合，等等。形成一套公有土地議題操作的SOP，則我們可以鼓勵不同地區的人，自主發起議題推廣的活動。我們先要幫忙釐清想好演練過，的確有推廣的效果這樣。</p><p>活動推廣：到容獎開放空間去散步；或是蚊子館、公有地去籌辦什麼東西之類的，讓更多人能夠過現場的活動來認識此議題。</p><ul style="list-style: none;"><li><br/></li></ul>
+<p><b>公共監理</b></p><p>公有土地資產的公共監理</p><ul><li>標售與私有化監督</li>
+<li>開發合理性監督</li>
+<li>國土若標售又被炒作到什麼高價，或是如何輕易被標售</li>
 <li>國土產權流失的後果會是什麼</li>
 <li>除了賣之外，公有地，在區域計畫與非/都市計畫管制之下，應該如何扮演角色</li>
 <li>有多少允建面積？</li>
-<li>待研究：<a href='http://www.stat.gov.tw/mp.asp?mp=4'/>中華民國統計資訊網</a>&nbsp;&nbsp;&nbsp; 國民幸福指標等等等</li>
-<li><br/></li></ul>
-<p><b>&nbsp;公有土地，適當活用的國民願景（<a href='http://hackfoldr.org/POPonFire/09RaHIX5QCC'/>pad</a>）</b></p><ul style="list-style: none;"><li><br/></li>
-<li>提高社宅存量、因應人口結構轉變的社會福利設施、防災減災設施、協助社會實業創新育成、都市園圃與城鄉串聯、生態公園、農業育成...</li></ul>
+<li>待研究：<a href='http://www.stat.gov.tw/mp.asp?mp=4'/>中華民國統計資訊網</a>&nbsp;&nbsp;&nbsp; 國民幸福指標等等等</li></ul>
+<ul style="list-style: none;"><li><br/></li></ul>
+<p><b>&nbsp;公有土地，適當活用的國民願景（<a href='http://hackfoldr.org/POPonFire/09RaHIX5QCC'/>pad</a>）</b></p><p>提高社宅存量、因應人口結構轉變的社會福利設施、防災減災設施、協助社會實業創新育成、都市園圃與城鄉串聯、生態公園、農業育成...</p><p></p><p></p><h2>相關專案</h2><p></p><p><b>（一）議題與土地型資料的整合專案</b></p><p></p><undefined><li><b>民間專案</b></li></undefined>
+<ul><li><a href='https://g0v.hackpad.com/gXClCsJc6Fg'/>地誌，BOT地圖</a><ul><li>地理式地呈現全台BOT個案，位置與個案細節</li></ul>
+</li>
+<li><a href='https://g0v.hackpad.com/--P8EaNXkcT11'/>環評</a><ul><li>針對環保署環境影響評估的個案</li></ul>
+</li>
+<li><a href='http://wuchangkang.blogspot.tw/2014/01/app.html'/>蚊子館app</a><ul><li>整合姚瑞中發起的系列調查，低度利用的公有建築與園區資產</li></ul>
+</li>
+<li><a href='https://emovements.hackpad.com/eCourt--GKI6ZGjacBa'/>eCourt (侏羅紀公園特區)</a>&nbsp;<ul><li>有進行議題訴訟的個案，於地圖上呈現</li></ul>
+</li>
+<li><a href='http://goo.gl/w47HgC'/>近期台北市國土活化資產整理(圖片</a>)，匯整官方與報紙新聞，民間團體自行繪製</li>
+<li><a href='https://g0v.hackpad.com/jPVzPFmcdrt'/>大家來野餐</a><ul><li>容積獎勵開放空間</li></ul>
+</li>
+<li>twgeojson<ul><li><a href="https://github.com/g0v/twgeojson"></a><a href='https://github.com/g0v/twgeojson'/>https://github.com/g0v/twgeojson</a></li></ul>
+</li>
+<li>環境儀表板：用儀表板的模式，把環境相關的資訊視覺化整理出來。<ul><li><a href="https://github.com/g0v/moer.g0v.tw"></a><a href='https://github.com/g0v/moer.g0v.tw'/>https://github.com/g0v/moer.g0v.tw</a></li>
+<li><a href="http://github.ronny.tw/ronnywang/sandbox/blob/master/20131221/map.json"></a><a href='http://github.ronny.tw/ronnywang/sandbox/blob/master/20131221/map.json'/>http://github.ronny.tw/ronnywang/sandbox/blob/master/20131221/map.json</a></li></ul>
+</ul>
 
-<p></p><p></p><h2>相關專案</h2><p></p><p><b>（一）議題與土地型資料的整合專案</b></p><p></p><undefined><li><b>其他國際案例</b></li></undefined>
+<undefined><li><b>公部門</b></li></undefined>
+<ul><li>&nbsp;<a href='http://comgis.moi.gov.tw/System/SystemDetail.aspx?seq=2'/>公有土地管理地理資訊系統</a>，建置計畫</li>
+<li>產業用地，<a href='http://ngis.nat.gov.tw/iland/mapSearch.aspx'/>國發會產業用地供給資訊平台</a></li>
+<li><a href='http://wetland-tw.tcd.gov.tw/WetLandWeb/map.php'/>濕地</a></li>
+<li><a href='http://spaceshare-taipei.net/'/>SPACE SHARE TAIPEI</a><ul><li>以地圖呈現台北市願意分享空間的單位與屋主</li>
+<li>介面呈現方式可參考</li></ul>
+</ul>
+
+<undefined><li><b>其他國際案例</b></li></undefined>
 <ul><li><a href='http://www.freespaceberlin.org/'/>FREE SAPCE BERLIN</a><ul><li>標示市區內土地的危急狀態，發起實體討論活動</li></ul>
 </li>
 <li><a href='http://596acres.org/'/>NewYork&nbsp; 596 ACRES</a></li>
@@ -145,5 +135,5 @@
 <ul><li><a href='https://g0v.hackpad.com/H3CGEk6Mqm4'/>專職社運紀錄團隊、專業起底網站、監督政府地方建設並引導公民能夠實際參與建設提案的專職組織</a><ul><li>「g1v也許可以成為監督政府地方建設並引導公民能夠實際參與建設提案的發想」</li></ul>
 </ul>
 
-<h2>專案大事紀</h2><p><a href='http://hackfoldr.org/POPonFire/N8IVVSC0H2f'/>Hackpad</a>, <a href='http://hackfoldr.org/POPonFire/http%253A%252F%252Fcdn.knightlab.com%252Flibs%252Ftimeline%252Flatest%252Fembed%252Findex.html%253Fsource%253D0At_8DflSpia2dG5XYlI3OTR5bS1wNnFQT1cxZXQ2TUE%2526font%253DBevan-PotanoSans%2526maptype%253Dtoner%2526lang%253Den%2526hash_bookmark%253Dtrue%2526height%253D650'/>Timeline</a></p><p></p></body>
+<p></p><p></p><h2>專案大事紀</h2><p><a href='http://hackfoldr.org/POPonFire/N8IVVSC0H2f'/>Hackpad</a>, <a href='http://hackfoldr.org/POPonFire/http%253A%252F%252Fcdn.knightlab.com%252Flibs%252Ftimeline%252Flatest%252Fembed%252Findex.html%253Fsource%253D0At_8DflSpia2dG5XYlI3OTR5bS1wNnFQT1cxZXQ2TUE%2526font%253DBevan-PotanoSans%2526maptype%253Dtoner%2526lang%253Den%2526hash_bookmark%253Dtrue%2526height%253D650'/>Timeline</a></p><p></p></body>
 </html>
