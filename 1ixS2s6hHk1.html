@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="8215"/>
+<meta name="version" content="8271"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$1ixS2s6hHk1</title>
 </head>
 <body><h1>politwoops 進度<s>規劃</s>現況</h1><p>這是 watchOut x g0v summer code project.</p><p>後端 fork from <a href="https://github.com/sunlightlabs/politwoops-tweet-collector"></a>https://github.com/sunlightlabs/politwoops-tweet-collector</p><p>前端 fork from <a href="https://github.com/sunlightlabs/politwoops"></a>https://github.com/sunlightlabs/politwoops</p><p>後端是主要進度。</p><ul class="comment"><li>&nbsp;<a href='https://developers.facebook.com/tools/explorer'/>FB explorer</a> 、 Python&rsquo;s <a href='https://github.com/pythonforfacebook/facebook-sdk'/>faceboook-sdk</a></li></ul>
@@ -24,7 +24,7 @@
 <p><b>待解 issues</b></p><ul><li>Client</li><ul class="taskdone"><li>FB access_token expire</li>
 <li>增加其他政治人物資料(eg. 市長) in <a href='/2014--i0ONbY1gXpY'/>市長候選人</a></li>
 <li>streaming.py 的 access exception handle. ( set retry )</li></ul>
-<ul class="task"><li>access_token extend, rewrite into .ini</li></ul>
+<ul class="task"><li>access_token extend, should rewrite into .ini</li></ul>
 </ul>
 
 <ul><li>Database</li><ul class="task"><li>SQL table fields</li><ul class="taskdone"><li>politicians</li>
@@ -45,8 +45,10 @@
 <li>3. 其他(總之先暫存=_=</li></ul>
 </ul>
 </ul>
-<ul class="task"><li>deleted feed<s> stream</s> checker</li><ul class="comment"><li>目前的 idea 是每 3~5 mins 從 feeds 裡面用 id 一個一個讀(避免用 feed stream 有可能會漏掉的問題</li>
+<ul class="taskdone"><li>deleted feed<s> stream</s> checker</li><ul class="comment"><li>目前的 idea 是每 3~5 mins 從 feeds 裡面用 id 一個一個讀(避免用 feed stream 有可能會漏掉的問題</li>
 <li>但有個問題是「讀不到不見得被刪掉」=_=</li></ul>
+<ul class="task"><li>deleted_feeds 有少...(可能是cursor.execute太快 lol...)</li>
+<li>check feed should separate by time.</li></ul>
 </ul>
 <ul class="taskdone"><li><s>edited feed stream</s></li><ul class="comment"><li>和 deleted feed stream, -worker 併在一起了。</li>
 <li>feed_edited 的做法寫在 talks #2.</li></ul>
