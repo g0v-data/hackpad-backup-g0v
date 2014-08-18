@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="466"/>
+<meta name="version" content="484"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$uGplqkYholX</title>
 </head>
 <body><h1>議員投票指南－架站流程</h1><ul style="list-style: none;"><li><a href='https://docs.google.com/spreadsheets/d/1JB2zLj8ZZqvnv31NvfwlR7HO_b99AtTjO_Gj1qMilL4/edit#gid=0'/>各縣市議會透明狀況</a></li><ul><li><b>最後呈現</b><ul><li>範例：<a href='http://councils.g0v.tw/'/>台北市</a></li></ul>
@@ -17,7 +17,7 @@
 <li><b>流程</b></li></li>
 <li>要先有人的資料，之後在提案或表決的內容中才可辨別出&quot;人&quot;(議員/立委)的部分</li><ol><li><b>人的基本資料</b><ol><li><a href='https://github.com/g0v/councilor-voter-guide/blob/master/crawler/taipei/spiders/councilor_terms_spider.py'/>crawler</a>：</li></li>
 <li>政治人物有一些基本欄位，<a href='https://github.com/g0v/councilor-voter-guide/blob/master/crawler/taipei/items.py#L8'/>可參考</a>councilor部分。</li></li>
-<li>找來源網站時，請盡量先從有<b>歷屆</b>議員/立委的網頁抓起，如網站有提供人的唯一識別碼也可拿來使用，否則請自己拼湊出一些唯一識別的辦法（例本站以姓名+生日）</li>
+<li>找來源網站時，請盡量先從有<b>歷屆</b>議員/立委的網頁抓起，如網站有提供人的唯一識別碼也可拿來使用，否則請自己拼湊出一些唯一識別的辦法（例本站以python uuid module）</li>
 <li><a href='https://github.com/g0v/councilor-voter-guide/blob/master/parser/councilors/councilors.py'/>parser</a>：</li></li>
 <li>從json檔將感興趣的資料放進database，建議將人的database table分成兩個，<b>一個主表</b>，<b>一個存各屆的詳細資訊</b>，詳細table schema可參考（<a href='https://github.com/g0v/councilor-voter-guide/blob/master/voter_guide/councilors/models.py#L20'/>主表</a>、<a href='https://github.com/g0v/councilor-voter-guide/blob/master/voter_guide/councilors/models.py#L28'/>各屆</a>）。</li></li>
 <li>儲存各屆人的資訊時稍微注意term_end、in_office等容易忘記的欄位。</li></ol>
