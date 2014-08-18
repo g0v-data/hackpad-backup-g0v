@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="8271"/>
+<meta name="version" content="8560"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$1ixS2s6hHk1</title>
 </head>
 <body><h1>politwoops 進度<s>規劃</s>現況</h1><p>這是 watchOut x g0v summer code project.</p><p>後端 fork from <a href="https://github.com/sunlightlabs/politwoops-tweet-collector"></a>https://github.com/sunlightlabs/politwoops-tweet-collector</p><p>前端 fork from <a href="https://github.com/sunlightlabs/politwoops"></a>https://github.com/sunlightlabs/politwoops</p><p>後端是主要進度。</p><ul class="comment"><li>&nbsp;<a href='https://developers.facebook.com/tools/explorer'/>FB explorer</a> 、 Python&rsquo;s <a href='https://github.com/pythonforfacebook/facebook-sdk'/>faceboook-sdk</a></li></ul>
@@ -26,34 +26,42 @@
 <li>streaming.py 的 access exception handle. ( set retry )</li></ul>
 <ul class="task"><li>access_token extend, should rewrite into .ini</li></ul>
 </ul>
+<ul><li>Worker</li><ul class="task"><li><br/></li></ul>
+</ul>
+<ul><li>Checker</li><ul class="task"><li>check feed should separate by time.</li>
+<li>deleted_feeds 有少...(可能是cursor.execute太快 lol...)</li><ul class="comment"><li>deleted_feeds的問題猜測是 CPU 速度 &gt; I/O... 先用 sleep a tick 測看看</li></ul>
+</ul>
+</ul>
 
-<ul><li>Database</li><ul class="task"><li>SQL table fields</li><ul class="taskdone"><li>politicians</li>
+<p></p><ul><li>Database</li><ul class="task"><li>SQL table fields</li><ul class="taskdone"><li>politicians</li>
 <li>tweets → feeds</li>
-<li>deleted_tweets → deleted_feeds</li><ul class="comment"><li>feed be deleted 的驗證蠻卡的... 一般的 like post, comment post 沒辦法從 api 取得，</li>
-<li>和實際被刪除的 feed 一樣會被 api return error.</li></ul>
+<li>deleted_tweets → deleted_feeds</li>
+<li><s>edited_feeds&nbsp;</s></li>
+<li>normal_users</li>
+<li>tmp_feeds</li></ul class="taskdone">
+</li>
+<li>deleted feed<s> stream</s> checker</li></ul>
+<ul class="taskdone"><li><s>edited feed stream</s></li></ul>
 </ul>
-<ul class="taskdone"><li><s>edited_feeds&nbsp;</s></li><ul class="comment"><li>↑edited_feeds 需新增(但大量更新感覺資料會非常多...囧</li>
-<li>不確定啥用的： users, account_links, offices, pages, statistics</li>
+
+<p><b>comments: order by desc.</b></p><ul class="code"><li>不確定啥用的tables： users, account_links, offices, pages, statistics</li>
 <li>parties應該是政黨(party)的資料，tweet_images 是圖檔的儲存資料，schema_migrations 應該是tables versions(?</li>
-<li>改存在 feeds 的 feed_edited column.</li></ul>
-</ul>
-<ul class="taskdone"><li>normal_users</li><ul class="comment"><li>存一些 &quot; found user id not in politicians &quot; 的「一般人」或是原本取得的 politician uid 是錯的，也會先丟進這裡。</li>
-<li>had a column: ignored (被確認為一般人)</li></ul>
-</ul>
-<ul class="taskdone"><li>tmp_feeds</li><ul class="comment"><li>1. normal_users&rsquo; feed but not be ignore.</li>
-<li>2. deleted_feeds 的暫存</li>
-<li>3. 其他(總之先暫存=_=</li></ul>
-</ul>
-</ul>
-<ul class="taskdone"><li>deleted feed<s> stream</s> checker</li><ul class="comment"><li>目前的 idea 是每 3~5 mins 從 feeds 裡面用 id 一個一個讀(避免用 feed stream 有可能會漏掉的問題</li>
+<li>feed be deleted 的驗證蠻卡的... 一般的 like post, comment post 沒辦法從 api 取得，</li>
+<li>和實際被刪除的 feed 一樣會被 api return error.</li>
+<li>edited_feeds 需新增(但大量更新感覺資料會非常多...囧</li>
+<li>edited_feeds 改存在 feeds 的 feed_edited column.</li>
+<li>edited_feed stream 和 deleted feed stream, -worker 併在一起了。</li>
+<li>feed_edited 的做法寫在 talks #2.</li>
+<li><br/></li>
+<li>normal_users:</li>
+<li>&nbsp;&nbsp;&nbsp; 存一些 &quot; found user id not in politicians &quot; 的「一般人」或是原本取得的 politician uid 是錯的，也會先丟進這裡。had a column: ignored (被確認為一般人)</li>
+<li>tmp_feeds:</li>
+<li>&nbsp;&nbsp;&nbsp; 1. normal_users&rsquo; feed but not be ignore.</li>
+<li>&nbsp;&nbsp;&nbsp; 2. deleted_feeds 的暫存</li>
+<li>&nbsp;&nbsp;&nbsp; 3. 其他(總之先暫存=_=</li>
+<li>feeds_checker:</li>
+<li>目前的 idea 是每 3~5 mins 從 feeds 裡面用 id 一個一個讀(避免用 feed stream 有可能會漏掉的問題</li>
 <li>但有個問題是「讀不到不見得被刪掉」=_=</li></ul>
-<ul class="task"><li>deleted_feeds 有少...(可能是cursor.execute太快 lol...)</li>
-<li>check feed should separate by time.</li></ul>
-</ul>
-<ul class="taskdone"><li><s>edited feed stream</s></li><ul class="comment"><li>和 deleted feed stream, -worker 併在一起了。</li>
-<li>feed_edited 的做法寫在 talks #2.</li></ul>
-</ul>
-</ul>
 
 <p></p><p><b>=========分水嶺==========</b></p><ul class="taskdone"><li>把 <a href='https://github.com/sunlightlabs/politwoops-tweet-collector'/>politwoops </a>整個架起來(後端) #1</li>
 <li>建後端的 collector&nbsp;&nbsp; <b>//screenshot-worker 先 pass 了, so finished at week: 7/13~</b><ul class="taskdone"><li>把 collector 主要在跑的三支 .py 看懂<ul class="taskdone"><li><a href='https://github.com/sunlightlabs/politwoops-tweet-collector/blob/master/bin/tweets-client.py'/>tweets-client.py</a></li><ul><li>主要進入點在 Line:158，跑兩個thread當heartbeat用(一個避免當掉)，在stream_forever 裡會跑 tweepy 的 stream listener ( L:150&amp;151)</li>
