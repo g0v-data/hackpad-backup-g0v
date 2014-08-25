@@ -3,8 +3,13 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="474"/>
+<meta name="version" content="518"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$tNjgWNOSylC</title>
 </head>
-<body><h1>Build code</h1><p>Modem:</p><p>AMSS&#92;modem_proc&#92;build&#92;ms&#92;build.cmd xxxx.xxxx.prod BUILD_VER=xxxxxxxx</p><p></p><p>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8610.gen.prod&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Multimode</p><p>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8610.wg.prod&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W+G</p><p>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8610.notd.prod&nbsp; C+G</p><p>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8610.tg.prod&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; T+G</p><p>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8610.tsts.prod&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TSTS</p><p></p><p>HLOS.bin</p><p>#合成 HLOS.bin</p><p>cd common&#92;build&#92;bin</p><p>python common/build/update_common_info.py</p><p></p><p>生成 AMSS&#92;common&#92;build&#92;bin&#92;asic&#92;NON-HLOS.bin</p><p></p></body>
+<body><h1>Build code</h1><ol><li>install active Perl</li>
+<li>install active Python</li>
+<li>install Hexagon</li>
+<li>set env variable ARMTOOLS = RVCT221</li></ol>
+
+<p>Modem:</p><p>AMSS&#92;modem_proc&#92;build&#92;ms&#92;build.cmd xxxx.xxxx.prod BUILD_VER=xxxxxxxx</p><p></p><p>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8610.gen.prod&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Multimode</p><p>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8610.wg.prod&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W+G</p><p>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8610.notd.prod&nbsp; C+G</p><p>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8610.tg.prod&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; T+G</p><p>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8610.tsts.prod&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TSTS</p><p></p><p>HLOS.bin</p><p>#合成 HLOS.bin</p><p>cd common&#92;build&#92;bin</p><p>python common/build/update_common_info.py</p><p></p><p>生成 AMSS&#92;common&#92;build&#92;bin&#92;asic&#92;NON-HLOS.bin</p><p></p></body>
 </html>
