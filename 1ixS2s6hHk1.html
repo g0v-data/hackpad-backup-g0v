@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="8840"/>
+<meta name="version" content="9592"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$1ixS2s6hHk1</title>
 </head>
 <body><h1>politwoops.tw 進度<s>規劃</s>現況</h1><p>這是 watchOut x g0v summer code project.</p><p>後端 fork from <a href="https://github.com/sunlightlabs/politwoops-tweet-collector"></a>https://github.com/sunlightlabs/politwoops-tweet-collector</p><p>前端 fork from <a href="https://github.com/sunlightlabs/politwoops"></a>https://github.com/sunlightlabs/politwoops</p><p>後端是主要進度。</p><ul class="comment"><li>&nbsp;<a href='https://developers.facebook.com/tools/explorer'/>FB explorer</a> 、 Python&rsquo;s <a href='https://github.com/pythonforfacebook/facebook-sdk'/>faceboook-sdk</a></li></ul>
@@ -14,14 +14,15 @@
 <li>做資料測試</li>
 <li>修 mockup and web 介面</li></ol>
 
-<h2>進度現況</h2><p>The 2nd part.</p><ol><li>做個簡單的 web 介面 to show data.</li>
+<h2>進度現況</h2><p>The 2nd part.</p><ul class="task"><li>做個簡單的 web 介面 to show data.</li>
 <li>實做 screenshot-worker 功能</li>
-<li>建前端 ( politwoops&rsquo; rails )</li></ol>
+<li>建前端 ( politwoops&rsquo; rails )</li>
+<li>additional: <s>不</s>部會的新聞稿 RSS collector.</li><ul class="comment"><li>Ref: <a href="http://logbot.g0v.tw/channel/g0v.tw/2014-08-21#18"></a>http://logbot.g0v.tw/channel/g0v.tw/2014-08-21#18</li></ul>
+</ul>
 
 <ul class="comment"><li><s>預計</s>希望星期一(8/18)可以 checker 生出來，這樣可以留星期二做 ppt...</li>
-<li>星期三應該可以早點到草辦(?) 討論一下第二階段的核心重點囧...</li></ul>
-
-<ul class="comment"><li>發現寫日誌↓太痛苦了只好放棄QAQ<ul class="comment"><li>8/7 建了專用帳號<a href='https://www.facebook.com/profile.php?id=100006371201016'/>林艸艸</a>，把公督盟的立委 FB、專頁 資訊都 follow 完成並取得 uid.</li>
+<li>星期三應該可以早點到草辦(?) 討論一下第二階段的核心重點囧...</li>
+<li>發現寫日誌↓太痛苦了只好放棄QAQ<ul class="comment"><li>8/7 建了專用帳號<a href='https://www.facebook.com/profile.php?id=100006371201016'/>林艸艸</a>，把公督盟的立委 FB、專頁 資訊都 follow 完成並取得 uid.</li>
 <li><i>8/6 先把 feed_stream 套回 -client, 並修正 -work, 讓 -client 讀到的資料可以被 -work 存取。</i></li></ul>
 </ul>
 
@@ -42,18 +43,39 @@
 </ul>
 </ul>
 
-<ul><li>Database</li><ul class="task"><li>SQL table fields</li><ul class="taskdone"><li>politicians</li>
+<ul><li>Database</li><ul class="task"><li>tables redesign</li><ul class="comment"><li>↓ redisign 的重點, politicians 和 politwoops 所用的 tables 重複</li></ul>
+<ul class="task"><li>feeds</li>
+<li>deleted_feeds</li>
+<li>politicians</li><ul class="comment"><li>↓新產生的 tables, 應該是不需要 redesign</li></ul>
+</ul>
+<ul class="taskdone"><li><i>normal_users： id(PK, auto), user_name, facebook_id, ignored</i></li>
+<li>tmp_feeds：id(PK, feed&rsquo;s id), user_id, user_name, content, created, modified, feed, feed_type</li></ul>
+<ul class="task"><li>parties：id(PK, auto), name, created_at, updated_at, display_name</li>
+<li>offices：id(PK, auto), title, abbreviation</li><ul class="comment"><li>↓「應該」不會用到的原 politwoops tables</li></ul>
+</ul>
+<ul class="task"><li>pages：id(PK, auto), title, slug, content, created_at, updated_at, language</li>
+<li>statistics： id(PK, auto), what, when, amount, created_at, updated_at</li>
+<li>account_links：id(PK, auto), politician_id, link_id, created_at, updated_at</li>
+<li>account_types：id(PK, auto), name</li>
+<li>schema_migrations：version</li>
+<li>users</li><ul class="comment"><li>users 應該是前端用的, 就不列出來了</li>
+<li>↓確定不會使用的 tables</li></ul>
+</ul>
+<ul class="task"><li>tweet_images：id(PK, auto), url, tweet_id, created_at, updated_at</li>
+<li>deleted_tweets：id, user_name, content, deleted, created, modified, tweet, politician_id, approved, reviewed, reviewed_at, review_message, retweeted_id, retweeted_content, retweeted_user_name</li><ul class="comment"><li>原本應該有一個 tweets 的 table, 但被我改名成 feeds 了XD... 格式和 deleted_tweets 類似</li></ul>
+</ul>
+</ul>
+<ul class="taskdone"><li>SQL table fields<ul class="taskdone"><li>politicians</li>
 <li>tweets → feeds</li>
-<li>deleted_tweets → deleted_feeds</li>
+<li><s>deleted_tweets </s>→ deleted_feeds</li>
 <li><s>edited_feeds&nbsp;</s></li>
 <li>normal_users</li>
 <li>tmp_feeds</li></ul class="taskdone">
 </li>
-<li>deleted feed<s> stream</s> checker</li></ul>
-<ul class="taskdone"><li><s>edited feed stream</s></li></ul>
+<li>deleted feed<s> stream</s> checker</li>
+<li><s>edited feed stream</s></li></ul>
 </ul>
-
-<p><b>comments: order by desc.</b></p><ul class="code"><li>不確定啥用的tables： users, account_links, offices, pages, statistics</li>
+<p>---</p><p><b>comments: order by desc.</b></p><ul class="code"><li>不確定啥用的tables： users, account_links, offices, pages, statistics</li>
 <li>parties應該是政黨(party)的資料，tweet_images 是圖檔的儲存資料，schema_migrations 應該是tables versions(?</li>
 <li>feed be deleted 的驗證蠻卡的... 一般的 like post, comment post 沒辦法從 api 取得，</li>
 <li>和實際被刪除的 feed 一樣會被 api return error.</li>
