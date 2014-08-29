@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="2118"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$BO7zPeNfxg8</title>
+</head>
+<body><h1>黑客松 | 新聞啄木鳥 demo</h1><p>兩個月一次的大松來了，APP4AM也想在這兩天中間做點成果出來</p><p>不過在評價機制上一直有不少懸而未決的地方，不如就先做個簡單版的吧！</p><p></p><p>時程：</p><p>Now ~ 8/30 14:30&nbsp; 討論目標、能做到的程度等</p><p>8/30 15:00 ~8/31 17:00 實作</p><p></p><h2>DEMO目標</h2><p>先簡單寫一下</p><ul><li>有助於宣傳這個APP的重要性及可行性，推坑~!</li>
+<li>讓在場朋友參與簡單評價和評論</li></ul>
+
+<p></p><h2>基本架構</h2><p>APP → 議題 → 四大報新聞列表 → 單篇新聞</p><p>├→ 帳號系統 → 使用者種類 → 使用者權限</p><p>├→ 評價系統 → 評價流程 → 評價結果</p><p>└→ 防弊系統</p><p></p><h2>APP</h2><p>網域：</p><p>資料庫：</p><p>若可能涉及個資安全/系統問題請勿放上來</p><p></p><h2>帳號系統</h2><ul><li>訪客 -&gt; 只能閱讀 -&gt; 沒有計分來源 -&gt; 不討論</li>
+<li>註冊會員-&gt; 投票新聞項目</li>
+<li>認證會員-&gt; 投票新聞項目+ (評論)</li>
+<li>專家評論員-&gt; 投票新聞項目+ (評論)</li></ul>
+<p>資格自動升級問題，DEMO先不實作，除非時間夠，另外DEMO需要預設訪客就能評論，放寬門檻</p><p></p><h2>評價系統</h2><p>考量到DEMO時間限制的可能性，也對於之前未有結論的部分做了調整，大幅度的簡化了評價流程，讓整個系統能有更多彈性，以PTT的互動討論模式作為參考。</p><ul class="comment"><li>和之前最大的差別只在於分數只計算到大項，並把大項類別縮減成3大項。</li>
+<li>細項一樣在、150字評價一樣在，但是要不要操作到這麼細就是使用者自由。</li></ul>
+
+<p><b>違規項目： 3項(項目暫訂)</b></p><ul><li>傳遞真相</li>
+<li>社會責任</li>
+<li>廣告利益</li></ul>
+<p>問題：能不能只選擇細項不填評價？</p><p></p><p><b>評價選項：3種(詞彙暫訂)</b></p><ol><li>肯定</li>
+<li>否定</li>
+<li>無意見(不選)</li></ol>
+<p>選擇後expand出細項，有權限的使用者可以自由選擇要不要填</p><p>(類似在PTT推噓文，但內容要純推/噓或是寫上意見的感覺)</p><p></p><p><b>評價結果：3種(推薦/無意見/負評)</b></p><p>以上面違規項目和評價選項可交叉出以下幾種可能性</p><ol><li>推薦1項，無意見2項</li>
+<li>推薦2項，無意見1項</li>
+<li>推薦3項</li>
+<li>推薦1項 ，無意見1項，否定1項</li>
+<li>無意見1項，否定2項</li>
+<li>否定3項</li></ol>
+<undefined><li>資料庫紀錄值： 1.評價項目的&quot;數量&quot;，2.評價項目的分數(乘上使用者權重)</li><ul class="comment"><li>為防弊和灌票，加入使用者權重去計算&nbsp; ex: 推薦1項，無意見2項 → 送出值=0.33x使用者權重</li></ul>
+</undefined>
+
+<p><b>顯示方式：</b></p><ol><li>議題或新聞列表：<ol><li>顯示推薦指數高的新聞&nbsp;&nbsp;</li>
+<li>顯示否定指數高的新聞</li>
+<li>顯示爭議新聞(推薦和否定值差不多的新聞)</li></ol>
+</li>
+<li>單篇新聞：<ol><li>依使用者喜好設定顯示 or 我們先決定一種方式</li></ol>
+</ol>
+
+<h2>防弊 (作為未來參考，DEMO先不考慮實作)</h2><p>除了原本就設定的綁定FB、綁定手機之外，可能的方式和討論</p><p></p><p><b>加權計算</b></p><p>如同上面提到的，把使用者評價x使用者加權送出值，來避免大量帳號灌分影響評價客觀性的問題</p><p></p><p><b>資格限制</b></p><p>碰到重大議題時，或使用系統自動判斷某些條件(ex:評價人數已超過xxxx)後，限制評價身份(如權限、註冊天數、評價次數等等)。但這種限制不論是否人為加上都可能會有爭議，需要仔細討論。</p><p></p><p></p><p></p></body>
+</html>
