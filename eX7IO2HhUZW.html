@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="708"/>
+<meta name="version" content="855"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$eX7IO2HhUZW</title>
 </head>
 <body><h1>長期照顧</h1><p></p><p>Q:服務提供者有的是醫療背景, 有的是社服背景 ; 經費部分有的是NGO/NPO, 有的是拿政府預算;&nbsp; 但是這些服務提供者分散各地, 民眾無法一覽到底所在的地區有多少服務提供者, 有多少不同的服務形態, 聯絡方式為何?</p><p></p><p>A: 預計產出:</p><ol><li>盤點資料 (公部門 opendata 將來資料一個月update一次) + 其他NGO (如羅慧夫)</li>
@@ -18,13 +18,22 @@
 <p>P:</p><ol><li>公部門不見得會將 &quot;非政府出資&quot; 的服務提供單位資料一起呈現</li></ol>
 
 <p>Reference :&nbsp;</p><ol><li>公部門 : <a href='http://www.mohw.gov.tw/cht/DONAHC/Index.aspx'/>護理及健康照護司首頁</a></li>
-<li>法源 : <a href='https:// http://ly.g0v.tw/bills/1619L13287'/>長期照護保險法草案</a></li></ol>
+<li>法源 : <a href='https://ly.g0v.tw/bills/1619L13287'/>長期照護保險法草案</a></li></ol>
 
 <p>Data:&nbsp; data.gov.tw</p><p>Origin : <a href='http://data.gov.tw/iisi/logaccess?dataUrl=http%3A%2F%2Fwww.sfaa.gov.tw%2FSFAA%2FPages%2Fashx%2FFile.ashx%3FFilePath%3D%7E%2FFile%2FAttach%2F2630%2FFile_3754.xls&amp;type=CSV&amp;nid=8577'/>安養機構名冊</a> , excel file</p><ul class="comment"><li><b>收容對象</b> 和 <b>核定收容人數</b> 不太好 parse， (這兩個欄位應該是動態更新?)</li>
 <li>8/26 新檔案, 不知多久 update 一次. 不過內部消息, 大盤點中</li></ul>
-<p>JSON 格式:&nbsp;</p><p></p><p></p><p>( 以下待盤點&nbsp;</p><p><b>各縣市長照管理中心</b></p><p></p><p><b>機構式</b></p><p>亞急性慢性病機構</p><p>!護理之家</p><p>!長期照護機構</p><p>!安養機構</p><p>!養護機構</p><p>榮民之家</p><p>!老人公寓</p><p>!身心障礙機構</p><p></p><p></p><p><b>居家式</b></p><p>居家護理</p><p>居家營養/復健</p><p>居家服務</p><p>送餐服務</p><p>緊急救援通報系統</p><p>居家無障礙設施改善</p><p>喘息服務</p><p>!輔具購買租借</p><ul class="comment"><li>衛生福利部社會及家庭署多功能輔具資源整合推廣中 <a href="http://repat.sfaa.gov.tw/catr/page/"></a>http://repat.sfaa.gov.tw/catr/page/</li>
-<li>衛生福利部社會及家庭署多功能輔具資源整合推廣中心（國立陽明大學ICF暨輔助科技研究中心）<a href="http://repat.sfaa.gov.tw/"></a>http://repat.sfaa.gov.tw/</li></ul>
+<p>JSON 格式: <a href="https://gist.github.com/lanfon72/52b849b834dfd73a8738"></a>https://gist.github.com/lanfon72/52b849b834dfd73a8738</p><p>csv: <a href="https://gist.github.com/lanfon72/390970e3235d73602a7d"></a>https://gist.github.com/lanfon72/390970e3235d73602a7d</p><ul class="comment"><li>缺 <b>核定收容人數</b> 和 <b>收容對象</b> 兩個欄位，json內容主要是機構基本資料</li>
+<li>可能會需要 re-parse，部份電話有多筆(且格式不完全相同，有些中間會有「- 」)</li>
+<li>btw, 記得用 utf8 + 開...</li></ul>
 
+<p></p><p>( 以下待盤點&nbsp;</p><p><b>各縣市長照管理中心</b></p><p></p><p><b>機構式</b></p><p>亞急性慢性病機構</p><p>!護理之家</p><p>!長期照護機構</p><p>!安養機構</p><p>!養護機構</p><p>榮民之家</p><p>!老人公寓</p><p>!身心障礙機構</p><p></p><p></p><p><b>居家式</b></p><p>居家護理</p><p>居家營養/復健</p><p>居家服務</p><p>送餐服務</p><p>緊急救援通報系統</p><p>居家無障礙設施改善</p><p>喘息服務</p><p>!輔具購買租借</p><ul class="comment"><li>衛生福利部社會及家庭署多功能輔具資源整合推廣中 <a href="http://repat.sfaa.gov.tw/catr/page/"></a>http://repat.sfaa.gov.tw/catr/page/</li>
+<li>衛生福利部社會及家庭署多功能輔具資源整合推廣中心（國立陽明大學ICF暨輔助科技研究中心）<a href="http://repat.sfaa.gov.tw/"></a>http://repat.sfaa.gov.tw/</li>
+<li><a href='http://www.sunable.net/node/513'/>行無礙資源推廣協會</a></li>
+<li>財團法人第一社會福利基金會附設第一輔具資源中心</li>
+<li>&nbsp;新北市輔具資源中心</li>
+<li>台中市肢體傷殘關懷協會</li>
+<li><a href='http://www.tyad.org.tw/tyatc/'/>桃園縣輔具資源中心</a></li>
+<li><br/></li></ul>
 <p><b>社區式</b></p><p>!日間照顧</p><p>!送餐服務</p><p>!關懷據點</p><p>!喘息服務</p><p></p><p>日托</p><p>照顧住宅</p><p>老人住宅</p><p>家庭託顧</p><p>社區定點用餐</p><p></p><p><b>其他</b></p><p>交通服務</p><p>聯結式服務</p><p>呼吸器照護</p><p>安寧照護</p><p>失智症/植物人照護</p><p></p><p>潛在服務提供者: 但服務提供項目不確定</p><ol><li>醫院 <a href="https://gist.github.com/clkao/760f162de2bb7e832224"></a>https://gist.github.com/clkao/760f162de2bb7e832224</li>
 <li>NGO <a href="https://github.com/pm5/npo-data/blob/master/data/npolist.json"></a>https://github.com/pm5/npo-data/blob/master/data/npolist.json</li>
 <li>其他私人機構&nbsp;&nbsp;</li></ol>
