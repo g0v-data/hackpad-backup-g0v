@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="9592"/>
+<meta name="version" content="9643"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$1ixS2s6hHk1</title>
 </head>
 <body><h1>politwoops.tw 進度<s>規劃</s>現況</h1><p>這是 watchOut x g0v summer code project.</p><p>後端 fork from <a href="https://github.com/sunlightlabs/politwoops-tweet-collector"></a>https://github.com/sunlightlabs/politwoops-tweet-collector</p><p>前端 fork from <a href="https://github.com/sunlightlabs/politwoops"></a>https://github.com/sunlightlabs/politwoops</p><p>後端是主要進度。</p><ul class="comment"><li>&nbsp;<a href='https://developers.facebook.com/tools/explorer'/>FB explorer</a> 、 Python&rsquo;s <a href='https://github.com/pythonforfacebook/facebook-sdk'/>faceboook-sdk</a></li></ul>
@@ -30,7 +30,10 @@
 <li>增加其他政治人物資料(eg. 市長) in <a href='/2014--i0ONbY1gXpY'/>市長候選人</a></li>
 <li>streaming.py 的 access exception handle. ( set retry )</li></ul>
 <ul class="task"><li>access_token extend, should rewrite into .ini</li>
-<li>retry time should be slowly</li></ul>
+<li>retry time should be slowly</li><ul class="comment"><li>先改成30s</li></ul>
+</ul>
+<ul class="task"><li>exceed rate call.</li><ul class="comment"><li>error #613 , request 太頻繁的樣子 囧rz...</li></ul>
+</ul>
 </ul>
 <ul><li>Worker</li></ul>
 
