@@ -3,8 +3,19 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="414"/>
+<meta name="version" content="893"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$OoaenzjVDKK</title>
 </head>
-<body><h1>透析貪污判決--揭露與查詢網站</h1><p>The Disclosure of Corruption Judgement,&nbsp; the Web</p><p></p><p>（暫名）</p><p></p><p>目標：</p><p>打造一個查詢貪污與判決結果的查詢網站</p><p>揭露台面上人物的貪污案底</p><p></p><p>第一階段：</p><p>民國100 -102 年 , 地院判決書 （案由：貪污）</p><p>欄位：</p><p>姓名：[被告]</p><p>工作/職位 [事實]&nbsp; （相對難）</p><p>罪名 ： [主文]or[附錄]</p><p>有期徒刑 ：[主文]</p><p>罰金：[主文]</p><p>緩刑：[主文]</p><p>賄額：[主文][事實][附錄]</p><p></p><p>搜尋系統構想：</p><p>1.搜尋人名可以出現上述欄位</p><p>2.</p><p></p><p></p><p>需求：</p><p>自然語言處理</p><p>UI/UX</p><p></p><p>判決書Data package：</p><p>地方法院&amp;高等法院(2000-2014) 7z</p><p><a href="https://drive.google.com/file/d/0B9fzCPAUltsqOElYc1N0TFRaSTg/edit?usp=sharing"></a>https://drive.google.com/file/d/0B9fzCPAUltsqOElYc1N0TFRaSTg/edit?usp=sharing</p><p>最高法院(1996-2014) 7z</p><p><a href="https://drive.google.com/file/d/0B9fzCPAUltsqZVBLNE1zclRFYnM/edit?usp=sharing"></a>https://drive.google.com/file/d/0B9fzCPAUltsqZVBLNE1zclRFYnM/edit?usp=sharing</p><p></p><p>目前成果：</p><p>今天進度：從判決書拿出字號、日期、案由、被告 by&nbsp;</p><p><a href="https://github.com/csferng/AnalyzeVerdict"></a>https://github.com/csferng/AnalyzeVerdict</p><p></p><p>臉書社團：</p><p><a href="https://www.facebook.com/groups/876229695725086/"></a>https://www.facebook.com/groups/876229695725086/</p><p></p><p></p></body>
+<body><h1>透析貪污判決--揭露與查詢網站</h1><p>(暫名,尚缺副標)</p><p>The Disclosure of Corruption Judgement,&nbsp; the Web</p><p>blackmoney.g0v.tw</p><p></p><p></p><p>目標：</p><p>打造一個查詢貪污與判決結果的查詢網站</p><p>揭露台面上人物的貪污案底</p><p></p><p>第一階段：</p><p>民國100 -102 年 , 地院判決書 （案由：貪污）</p><p>100-102年被告不匿名，易做後續處理</p><p>欄位：</p><ul style="list-style: none;"><li>姓名：[被告]</li>
+<li>工作/職位 [事實]&nbsp; （相對難）</li>
+<li>罪名 ： [主文]or[附錄]</li>
+<li>有期徒刑 ：[主文]</li>
+<li>罰金：[主文]</li>
+<li>緩刑：[主文]</li>
+<li>賄額：[主文][事實][附錄]</li></ul>
+
+<p>pattern</p><p>【被告】__犯【罪名】罪。又犯【】罪。應執行【有期徒刑、罰金、緩刑】</p><p>【被告】__對於【罪名】罪</p><p>【被告】__犯如附表__所示之罪</p><p></p><p></p><p>Approach：</p><p>1.regular expression</p><p>2.machine learning</p><p></p><p>搜尋系統構想：</p><p>1.搜尋人名可以出現上述欄位</p><p>2.有待構思</p><p></p><p>判決書Data package . csv：</p><p><a href='https://drive.google.com/file/d/0B9fzCPAUltsqWUZLWGw0OU8tUUU/edit?usp=sharing'/>100-102年地方法院判決包7z</a></p><ul style="list-style: none;"><li>將所有地院判決【判決日期100-102年】丟到同一資料夾的版本</li></ul>
+<p><a href='https://drive.google.com/file/d/0B9fzCPAUltsqOElYc1N0TFRaSTg/edit?usp=sharing'/>地方法院&amp;高等法院(2000-2014) 7z</a></p><ul style="list-style: none;"><li>解壓縮以後共2X個資料夾，H開頭為高等法院；L為地方</li>
+<li>&nbsp;ex HKaohsiung高雄高等分院；LTaipei台北地方法院</li></ul>
+<p><a href='https://drive.google.com/file/d/0B9fzCPAUltsqZVBLNE1zclRFYnM/edit?usp=sharing'/>最高法院(1996-2014) 7z</a></p><p></p><p></p><p>目前成果：</p><p>從判決書拿出字號、日期、案由、被告</p><p><a href="https://github.com/csferng/AnalyzeVerdict"></a>https://github.com/csferng/AnalyzeVerdict</p><p></p><p>需求：</p><p>自然語言處理</p><p>UI/UX</p><p></p><p>臉書社團：</p><p><a href="https://www.facebook.com/groups/876229695725086/"></a>https://www.facebook.com/groups/876229695725086/</p><p></p><p></p></body>
 </html>
