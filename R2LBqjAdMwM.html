@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="858"/>
+<meta name="version" content="1005"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$R2LBqjAdMwM</title>
 </head>
 <body><h1>moedict no pangcah 阿美語萌典</h1><p></p><p><b>進度/雜項</b></p><ul class="taskdone"><li>把字典掃描檔切成一行一行的工具 (CindyLinz)</li>
@@ -11,13 +11,17 @@
 </li>
 <li><s>租 Linnode</s>&nbsp; R<s>onnyWang 出借 Heroku ^^;&nbsp; </s>在 TANET 上直接寫 SQLite3&nbsp;</li>
 <li>寫讓鄉民 OCR 的小程式</li><ul class="task"><li>要不要先用程式 OCR 是另一個議題了...&nbsp;</li></ul>
+<ul class="comment"><li><a href='https://github.com/miaoski/amis-data/pull/1'/>miaoski/amis data#1</a> &lt;-- x4base 送了 PR 來，不過 tesseract OCR 過後其實蠻慘的，所以還是維持手打的局面吧...</li>
+<li><br/></li></ul>
 </ul>
 <ul class="taskdone"><li>開放出去</li></ul>
 <ul class="comment"><li>建議除了數位化之外，提供可以讓網友校對錯字和修正語句的機制介面，但也許要取得原編寫者的同意</li>
 <li><a href="http://www.eastgate.org.tw/f2/index.php?load=read&id=532"></a>http://www.eastgate.org.tw/f2/index.php?load=read&amp;id=532 這本原來這麼多人一起編；方敏英傳教士已經過世了。</li>
-<li>網友一起校對字典，我覺得可以放在第三個階段。第一階段，我們先把原本的字典 key 進去，因為做 diff (校訂過/原本) 的比對，在學術上也是一個好題目。第二階段，我們多談幾本授權，把字典裡的字擴充到族人用起來覺得方便的程度。第三階段再來修正語句、或新增例句。這是我個人的看法啦。如果有人 coding, 三個階段一起做也是可以的 :)</li>
+<li>網友一起校對字典，我覺得可以放在第三個階段。第一階</li>
+<li>段，我們先把原本的字典 key 進去，因為做 diff (校訂過/原本) 的比對，在學術上也是一個好題目。第二階段，我們多談幾本授權，把字典裡的字擴充到族人用起來覺得方便的程度。第三階段再來修正語句、或新增例句。這是我個人的看法啦。如果有人 coding, 三個階段一起做也是可以的 :)</li>
 <li>第一階段最後釋出是哪種形式呢？</li>
-<li>JSON.&nbsp; 然後我會想辦法把它裝進萌典的介面... 唯一會修改的地方應該是 g =&gt; ng 不然現在已經沒人用 minegneg 這種寫法了，都嘛寫 minengneng</li></ul>
+<li>JSON.&nbsp; 然後我會想辦法把它裝進萌典的介面... 唯一會修改的地方應該是 g =&gt; ng 不然現在已經沒人用 minegneg 這種寫法了，都嘛寫 minengneng</li>
+<li><br/></li></ul>
 
 <p></p><p><b>可以爬的網站</b></p><ul><li><a href="http://e-dictionary.apc.gov.tw/Index.htm"></a><a href='http://e-dictionary.apc.gov.tw/Index.htm'/>http://e-dictionary.apc.gov.tw/Index.htm</a>&nbsp; 原民會詞典 (合理使用)</li><ul class="task"><li>詞條列表 (ch0upi)&nbsp;&nbsp; <a href="https://gist.github.com/choupi/32fd095d67c965128bfe"></a><a href='https://gist.github.com/choupi/32fd095d67c965128bfe'/>https://gist.github.com/choupi/32fd095d67c965128bfe</a></li></ul>
 <ul class="taskdone"><li>賽夏語</li><ul class="task"><li>爬完了要開始處理...&nbsp;</li></ul>
@@ -34,15 +38,5 @@
 <p>蘭嶼達悟語線上學習網（詞典）</p><p></p><p><b>可以談的授權</b></p><ul class="task"><li><s>陳金龍老師</s>&nbsp; (陳金龍老師編寫的是教材，不是字典。不過可以去要一些例句也不錯)</li>
 <li><br/></li></ul>
 
-<p></p><h2>問題回報</h2><ul><li>原掃描檔有誤：原文:妞妮作態 正確:忸怩作態 阿不過我送出了 囧 (第 85 頁, 第 17 行)</li></ul>
-<ul class="comment"><li>似乎是古用語(? 見 <a href="http://teacher.whsh.tc.edu.tw/huanyin/mofa/c/mofa_chichun_piano5.htm"></a>http://teacher.whsh.tc.edu.tw/huanyin/mofa/c/mofa_chichun_piano5.htm</li>
-<li>有可能是教育部改正用詞前的寫法</li>
-<li>我也有打到有錯誤的：冰雪「溶」化，應該是「融化」才對，前者是物質在水中分解，後者是固態轉為液態</li>
-<li>打錯別介意，最後還會校正一次 :santa:&nbsp;</li>
-<li>miaoski, 這邊討論的是說原本紙本就錯字了。（但看起來好像有些是80年代用法跟現在有些不同，可能性別意識造成的改變 @@ ）</li>
-<li>OK 的喲，漢語其實不用介意 (咦) (誤)</li></ul>
-<ul><li>第 54 頁, 第 22 行，「煩燥」應為「煩躁」。(紙本)</li>
-<li>第 112 頁, 第 25 行 ，紙本原文「青芋麻」(←沒有這種名稱的植物) 應為「青苧麻」(←常見民俗植物)</li></ul>
-
-<p></p></body>
+<p></p><h2>字典原本有誤之處</h2><p>問題回報請改道：開了獨立一頁<a href='/OCR-pJmvFdqwWE1'/>阿美字典OCR問題回報區</a>，也把該連結放進說明書。</p><p></p></body>
 </html>
