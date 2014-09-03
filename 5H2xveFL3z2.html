@@ -3,23 +3,63 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1011"/>
+<meta name="version" content="1250"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$5H2xveFL3z2</title>
 </head>
 <body><h1>操作流程與UX (使用者體驗)</h1><p><sup>此文件路徑：<a href='http://hackfoldr.org/app4am'/>全民除黴計畫hackfoldr</a> / 系統設計 / 這裡</sup></p><p></p><p>記得盡量考慮所有會操作到的功能及相關反應：</p><ul><li>元素：按鈕、區塊、圖片、硬體功能按鈕</li>
 <li>使用者動作：單點、長按、滑動、停止、硬體感應器*</li>
 <li>元素反應：單點、長按、滑動、位置連動</li></ul>
 
-<h2>功能教學頁</h2><p>連結：下一頁、跳過</p><p>按紐：</p><p></p><h2>主頁</h2><p>主要區塊：焦點議題(大圖)、推薦議題(約3則)、熱門新聞/使用者自訂新聞(Lazyload)</p><ul class="taskdone"><li>NavBar<ul class="taskdone"><li>Logo</li></ul>
-<ul class="task"><li>Title</li>
+<h2>功能教學頁</h2><p>連結：下一頁、跳過</p><p>按紐：</p><p></p><p></p><h2>0.Menu頁</h2><p>按鈕：&nbsp;</p><ul><li>回到首頁</li>
+<li>帳號</li>
+<li>議題列表</li>
+<li>新聞列表</li>
+<li>我的訂閱</li>
+<li>新聞分析(實驗室)</li>
+<li>設定</li>
+<li>快速設定</li></ul>
+
+<h2>1.主頁</h2><p>主要區塊：</p><ol><li><b>焦點議題(大圖)</b>&nbsp; 連結→ 該項議題相關新聞列表</li>
+<li><b>推薦議題(基本3則 or 橫向slide)</b>&nbsp;&nbsp; 連結→ 該項議題相關新聞列表</li>
+<li><b>熱門新聞/使用者自訂新聞(直式，Lazyload)</b>&nbsp; 連結→ 單篇新聞內容</li></ol>
+<ul class="taskdone"><li>NavBar<ul class="taskdone"><li>Logo (顯示此項時盡量只單獨顯示)</li></ul>
+<ul class="task"><li>Title&nbsp;&nbsp;</li>
 <li>View</li>
+<li>Reload (需討論用按鈕或下拉式更新)</li>
 <li>Share</li>
 <li>Setting</li></ul>
 </ul>
-<p>介面按鈕：所有議題列表、所有新聞列表</p><p>硬體按紐：</p><ul><li>上一頁：</li>
-<li>MENU：</li></ul>
+<p>介面按鈕：所有議題列表、所有新聞列表</p><p>硬體按紐：</p><ul><li>上一頁：&lt;連按兩次退出App&gt;</li>
+<li>MENU： 叫出→ 0.功能選單</li></ul>
 
-<p></p><h2>議題列表</h2><p>連結：</p><p>按紐：</p><p></p><h2>新聞列表</h2><p>連結：新聞項目、使用說明、長按項目(追蹤這則新聞、)</p><p>按紐：</p><p></p><h2>追蹤列表</h2><p></p><p></p><p></p><h2>新聞頁-內文</h2><p>連結：</p><p>按紐：</p><p></p><h2>評價分析頁</h2><p>連結：</p><p>按紐：</p><p></p><h2>新聞頁-打臉</h2><p>連結：</p><p>按紐：</p><p></p><h2>新聞頁-長文分析</h2><p>連結：</p><p>按紐：</p><p></p><h2>打臉輸入頁</h2><p>連結：說明頁</p><p>按紐：</p><p>限制：30~150字、實名登錄</p><p></p><h2>長文輸入頁</h2><p>連結：</p><p>按紐：</p><p></p><h2>設定頁面</h2><p>連結：</p><p>按紐：</p><p></p><h2>App可操作功能</h2><p></p><ol><li>瀏覽資訊</li>
+<p></p><h2>2.議題列表</h2><p>主要區塊：</p><ol><li>議題列表 (Lazyload)</li>
+<li>推薦議題(基本3則 or 橫向slide)</li></ol>
+<ul class="taskdone"><li>NavBar</li><ul class="task"><li>Logo</li>
+<li>Title</li></ul>
+<ul class="taskdone"><li>View ( 簡易顯示&nbsp; /&nbsp; 完整顯示 )</li>
+<li>Reload (需討論用按鈕或下拉式更新)</li></ul>
+<ul class="task"><li>Share</li>
+<li>Setting</li></ul>
+</ul>
+<p>介面按鈕：</p><p>硬體按紐：</p><ul><li>上一頁：&lt;連按兩次退出App&gt;</li>
+<li>MENU： 叫出→ 0.功能選單</li>
+<li><br/></li></ul>
+
+<h2>新聞列表</h2><p>連結：新聞項目、使用說明、長按項目(追蹤這則新聞、)</p><p>主要區塊：</p><ol><li>焦點議題(大圖)</li>
+<li>推薦議題(基本3則 or 橫向slide)</li>
+<li>熱門新聞/使用者自訂新聞(直式，Lazyload)</li></ol>
+<ul class="taskdone"><li>NavBar<ul class="taskdone"><li>Logo</li></ul>
+<ul class="task"><li>Title</li>
+<li>View</li>
+<li>Reload (需討論用按鈕或下拉式更新)</li>
+<li>Share</li>
+<li>Setting</li></ul>
+</ul>
+<p>介面按鈕：所有議題列表、所有新聞列表</p><p>硬體按紐：</p><ul><li>上一頁：&lt;連按兩次退出App&gt;</li>
+<li>MENU： 叫出→ 0.功能選單</li>
+<li><br/></li></ul>
+
+<h2>追蹤列表</h2><p></p><p></p><p></p><h2>新聞頁-內文</h2><p>連結：</p><p>按紐：</p><p></p><h2>評價分析頁</h2><p>連結：</p><p>按紐：</p><p></p><h2>新聞頁-打臉</h2><p>連結：</p><p>按紐：</p><p></p><h2>新聞頁-長文分析</h2><p>連結：</p><p>按紐：</p><p></p><h2>打臉輸入頁</h2><p>連結：說明頁</p><p>按紐：</p><p>限制：30~150字、實名登錄</p><p></p><h2>長文輸入頁</h2><p>連結：</p><p>按紐：</p><p></p><h2>設定頁面</h2><p>連結：</p><p>按紐：</p><p></p><h2>App可操作功能</h2><p></p><ol><li>瀏覽資訊</li>
 <li>轉貼分享</li>
 <li>投票評價</li><ul><li>快評</li>
 <li>評價打臉</li>
