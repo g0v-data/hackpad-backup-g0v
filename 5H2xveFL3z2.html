@@ -3,14 +3,19 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1250"/>
+<meta name="version" content="1418"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$5H2xveFL3z2</title>
 </head>
 <body><h1>操作流程與UX (使用者體驗)</h1><p><sup>此文件路徑：<a href='http://hackfoldr.org/app4am'/>全民除黴計畫hackfoldr</a> / 系統設計 / 這裡</sup></p><p></p><p>記得盡量考慮所有會操作到的功能及相關反應：</p><ul><li>元素：按鈕、區塊、圖片、硬體功能按鈕</li>
 <li>使用者動作：單點、長按、滑動、停止、硬體感應器*</li>
 <li>元素反應：單點、長按、滑動、位置連動</li></ul>
 
-<h2>功能教學頁</h2><p>連結：下一頁、跳過</p><p>按紐：</p><p></p><p></p><h2>0.Menu頁</h2><p>按鈕：&nbsp;</p><ul><li>回到首頁</li>
+<h2>怎麼看這頁資訊</h2><ul class="task"><li>[大項目]，定案後勾選</li><ul class="taskdone"><li>子項目1&nbsp; (確定使用)</li></ul>
+<ul class="task"><li><s>子項目2</s> (討論後移除)</li>
+<li>子項目3 (未討論或未定案,後面註明狀態)</li></ul>
+</ul>
+
+<p></p><h2>功能教學頁</h2><p>連結：下一頁、跳過</p><p>按紐：</p><p></p><p></p><h2>0.Menu頁</h2><ul class="task"><li>選項&nbsp;<ul class="task"><li>回到首頁</li>
 <li>帳號</li>
 <li>議題列表</li>
 <li>新聞列表</li>
@@ -18,22 +23,28 @@
 <li>新聞分析(實驗室)</li>
 <li>設定</li>
 <li>快速設定</li></ul>
+</ul>
 
-<h2>1.主頁</h2><p>主要區塊：</p><ol><li><b>焦點議題(大圖)</b>&nbsp; 連結→ 該項議題相關新聞列表</li>
-<li><b>推薦議題(基本3則 or 橫向slide)</b>&nbsp;&nbsp; 連結→ 該項議題相關新聞列表</li>
-<li><b>熱門新聞/使用者自訂新聞(直式，Lazyload)</b>&nbsp; 連結→ 單篇新聞內容</li></ol>
-<ul class="taskdone"><li>NavBar<ul class="taskdone"><li>Logo (顯示此項時盡量只單獨顯示)</li></ul>
+<h2>1.主頁</h2><ul class="task"><li>NavBar</li><ul class="taskdone"><li>Logo (顯示此項時盡量只單獨顯示)</li></ul>
 <ul class="task"><li>Title&nbsp;&nbsp;</li>
 <li>View</li>
 <li>Reload (需討論用按鈕或下拉式更新)</li>
 <li>Share</li>
-<li>Setting</li></ul>
-</ul>
-<p>介面按鈕：所有議題列表、所有新聞列表</p><p>硬體按紐：</p><ul><li>上一頁：&lt;連按兩次退出App&gt;</li>
+<li>Setting</li></ul class="task">
+</li>
+<li>主要區塊：<ul class="task"><li><b>焦點議題(大圖)</b>&nbsp; 連結→ 該項議題相關新聞列表</li>
+<li><b>推薦議題(基本3則 or 橫向slide)</b>&nbsp;&nbsp; 連結→ 該項議題相關新聞列表</li>
+<li><b>熱門新聞/使用者自訂新聞(直式，Lazyload)</b>&nbsp; 連結→ 單篇新聞內容</li></ul class="task">
+</li>
+<li>次要區塊：<ul class="task"><li>所有議題列表</li>
+<li>所有新聞列表</li></ul class="task">
+</li>
+<li>硬體按紐：<ul class="task"><li>上一頁：&lt;連按兩次退出App&gt;</li>
 <li>MENU： 叫出→ 0.功能選單</li></ul>
+</ul>
 
-<p></p><h2>2.議題列表</h2><p>主要區塊：</p><ol><li>議題列表 (Lazyload)</li>
-<li>推薦議題(基本3則 or 橫向slide)</li></ol>
+<p></p><h2>2.議題列表</h2><ul class="task"><li>主要區塊：<ul class="task"><li><b>議題列表 (Lazyload)</b></li></ul>
+</ul>
 <ul class="taskdone"><li>NavBar</li><ul class="task"><li>Logo</li>
 <li>Title</li></ul>
 <ul class="taskdone"><li>View ( 簡易顯示&nbsp; /&nbsp; 完整顯示 )</li>
@@ -104,5 +115,5 @@
 <li>其它使用者：<ul><li>進到單一新聞頁面 → menu → 檢舉 → 點選理由、附加說明 → 同意條款 → 送出</li></ul>
 </ul>
 
-</body>
+<p></p><h2>Template</h2><p></p><p></p></body>
 </html>
