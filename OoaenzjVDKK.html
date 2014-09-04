@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1164"/>
+<meta name="version" content="1173"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$OoaenzjVDKK</title>
 </head>
 <body><h1>透析貪污判決--揭露與查詢網站</h1><p>(暫名,尚缺副標)</p><p>The Disclosure of Corruption Judgement,&nbsp; the Web</p><p>blackmoney.g0v.tw</p><p></p><p></p><p>目標：</p><p>打造一個查詢貪污與判決結果的查詢網站</p><p>揭露台面上人物的貪污案底</p><p>簡單查詢、簡單得知結果</p><p></p><p>第一階段--梳理資料、抽取欄位：</p><p>民國100 -102 年 , 地院判決書 （案由：貪污）</p><p>100-102年被告不匿名，易做後續處理</p><p>欄位：</p><ul style="list-style: none;"><li>姓名：[被告]</li>
@@ -12,7 +12,7 @@
 <li>有期徒刑 ：[主文] 以月計算</li>
 <li>易科罰金：[主文] 徒刑是否能夠換成罰金</li>
 <li>緩刑：[主文] 是否有緩刑</li>
-<li>賄額：[主文][事實][附錄] 以元計算</li></ul>
+<li>涉貪金額：[主文][事實][附錄] 以元計算</li></ul>
 
 <p>工人智慧/範例：</p><p><a href='http://zh.wikisource.org/wiki/%E8%87%BA%E7%81%A3%E8%87%BA%E5%8C%97%E5%9C%B0%E6%96%B9%E6%B3%95%E9%99%A2101%E5%B9%B4%E5%BA%A6%E9%87%91%E8%A8%B4%E5%AD%97%E7%AC%AC47%E8%99%9F%E5%88%91%E4%BA%8B%E5%88%A4%E6%B1%BA'/>林益世貪污案一審</a></p><ul style="list-style: none;"><li>姓名：林益世</li>
 <li>工作/職位/關係：立法委員, 中國國民黨之中央政策委員會執行長</li>
@@ -20,7 +20,7 @@
 <li>有期徒刑：88個月</li>
 <li>易科罰金：FALSE</li>
 <li>緩刑：FALSE</li>
-<li>賄額：63000000&nbsp;</li></ul>
+<li>涉貪金額：63000000&nbsp;</li></ul>
 <ul class="comment"><li>雖然林益世索賄8300萬，不過實際收到是6300萬。以6300萬計算。</li></ul>
 <ul style="list-style: none;"><li>-</li>
 <li>姓名：沈若蘭</li>
@@ -38,7 +38,8 @@
 <li>姓名：沈煥瑶</li>
 <li>工作/職位/關係：沈若蘭之弟</li>
 <li>罪名：無罪</li></ul>
-<p>murmur：一般來說，所有被告應該分別介紹，而不會像此案只介紹林益世；又所謂公務人員財產不明罪是法界批評很凶的法條，原因之一它提供貪污者一個不吐實的動機：我只要什麼都推說不知道，你就只能判我這個。林益世就是這樣。</p><p></p><p>pattern</p><p>【被告】__犯【罪名】罪。又犯【】罪。應執行【有期徒刑、易科罰金、緩刑】</p><p>【被告】__對於【罪名】罪</p><p>【被告】__犯如附表__所示之罪</p><p></p><p></p><p>Approach：</p><p>1.regular expression</p><p>2.machine learning</p><p></p><p>搜尋系統構想：</p><p>1.搜尋人名可以出現上述欄位</p><p>2.有待構思</p><p></p><p>判決書Data package . csv：</p><p><a href='https://drive.google.com/file/d/0B9fzCPAUltsqWUZLWGw0OU8tUUU/edit?usp=sharing'/>100-102年地方法院判決包7z</a></p><ul style="list-style: none;"><li>將所有地院判決【判決日期100-102年】丟到同一資料夾的版本</li></ul>
+
+<p>pattern</p><p>【被告】__犯【罪名】罪。又犯【】罪。應執行【有期徒刑、易科罰金、緩刑】</p><p>【被告】__對於【罪名】罪</p><p>【被告】__犯如附表__所示之罪</p><p></p><p></p><p>Approach：</p><p>1.regular expression</p><p>2.machine learning</p><p></p><p>搜尋系統構想：</p><p>1.搜尋人名可以出現上述欄位</p><p>2.有待構思</p><p></p><p>判決書Data package . csv：</p><p><a href='https://drive.google.com/file/d/0B9fzCPAUltsqWUZLWGw0OU8tUUU/edit?usp=sharing'/>100-102年地方法院判決包7z</a></p><ul style="list-style: none;"><li>將所有地院判決【判決日期100-102年】丟到同一資料夾的版本</li></ul>
 <p><a href='https://drive.google.com/file/d/0B9fzCPAUltsqOElYc1N0TFRaSTg/edit?usp=sharing'/>地方法院&amp;高等法院(2000-2014) 7z</a></p><ul style="list-style: none;"><li>解壓縮以後共2X個資料夾，H開頭為高等法院；L為地方</li>
 <li>&nbsp;ex HKaohsiung高雄高等分院；LTaipei台北地方法院</li></ul>
 <p><a href='https://drive.google.com/file/d/0B9fzCPAUltsqZVBLNE1zclRFYnM/edit?usp=sharing'/>最高法院(1996-2014) 7z</a></p><p></p><p></p><p>目前成果：</p><p>從判決書拿出字號、日期、案由、被告</p><p><a href="https://github.com/csferng/AnalyzeVerdict"></a>https://github.com/csferng/AnalyzeVerdict</p><p></p><p>需求：</p><p>自然語言處理</p><p>UI/UX</p><p></p><p>臉書社團：</p><p><a href="https://www.facebook.com/groups/876229695725086/"></a>https://www.facebook.com/groups/876229695725086/</p><p></p><p></p></body>
