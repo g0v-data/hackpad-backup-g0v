@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2296"/>
+<meta name="version" content="2442"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$5H2xveFL3z2</title>
 </head>
 <body><h1>UI/UX flow</h1><p><sup>此文件路徑：<a href='http://hackfoldr.org/app4am'/>全民除黴計畫hackfoldr</a> / 系統設計 / 這裡</sup></p><p></p><p>記得盡量考慮所有會操作到的功能及相關反應：</p><ul><li>元素：按鈕、區塊、圖片、硬體功能按鈕</li>
@@ -26,16 +26,16 @@
 <li>第一次進到評價畫面</li>
 <li><br/></li></ul>
 <p>連結：下一頁、跳過</p><p>按紐：</p><p></p><p></p><h2>III.Menu</h2><ul class="task"><li>表現形式：螢幕左測滑出</li>
-<li>選項&nbsp;<ul class="task"><li>回到首頁</li>
+<li>選項&nbsp;</li><ul class="taskdone"><li>回到首頁</li>
 <li>議題列表</li>
-<li>新聞列表</li></ul>
-<ul class="taskdone"><li>追蹤新聞</li>
+<li>新聞列表</li>
+<li>追蹤新聞</li>
 <li>新聞分析(實驗室)</li>
-<li>設定</li></ul>
-<ul class="task"><li>快速設定</li></ul>
+<li>設定</li>
+<li>快速設定</li></ul>
 </ul>
 
-<h2>1.主頁</h2><ul class="task"><li><b>NavBar</b></li><ul class="taskdone"><li>Logo (顯示此項時盡量只單獨顯示)</li></ul>
+<h2>1.主頁</h2><ul class="task"><li><b>NavBar / </b><s>Tab</s></li><ul class="taskdone"><li>Logo (顯示此項時盡量只單獨顯示)</li></ul>
 <ul class="task"><li>Title&nbsp;&nbsp;</li>
 <li>Layout</li>
 <li>Filter</li>
@@ -52,42 +52,47 @@
 <li>新聞列表 → 轉換到新聞頁面 or 直接在下面載入&amp;展開？</li></ul>
 </ul>
 <ul class="comment"><li>這項的作用在於讓使用者可以快速進到單一項目列表，除了方便性之外，也是推廣讓使用者習慣用議題來看新聞的柔性行銷。</li></ul>
-<ul class="task"><li><b>系統按紐</b></li><ul class="taskdone"><li>上一頁：按一次 →&nbsp; III.Menu， 連按兩次→ &lt;退出App&gt;</li>
+<ul class="task"><li><b>系統按紐</b></li><ul class="taskdone"><li>BACK：按一次 →&nbsp; III.Menu， 連按兩次→ &lt;退出App&gt;</li>
 <li>MENU： 叫出→ III.Menu</li></ul>
 </ul>
 
 <p></p><h2>2.議題列表</h2><ul class="task"><li>初期如果無法讓程式自動歸類出議題的話，也許就先不做這個頁面，或是變通為：<ul class="task"><li>開放編輯資格到G0V或新聞相關社群，實驗看看成效好不好(當然還是要有app帳號)</li>
 <li>不用全部人工輸入議題名稱，人工做不到的部分就顯示系統自動歸類出來的關鍵字</li></ul class="task">
 </li>
-<li>主要區塊</li><ul class="taskdone"><li><b>議題列表 (Lazyload)</b></li></ul>
-</ul>
-<ul class="task"><li>次要區塊：</li><ul class="taskdone"><li>無</li></ul class="taskdone">
-</li>
-<li>NavBar<ul class="task"><li>Logo</li>
-<li>Title</li></ul>
-<ul class="taskdone"><li>Layout( 簡易顯示&nbsp; /&nbsp; 完整顯示 )</li></ul>
+<li><s>NavBar</s><b> / Tab (議題類別)</b><ul class="task"><li>Logo (顯示此項時盡量只單獨顯示)</li>
+<li>Title&nbsp;&nbsp;</li></ul>
+<ul class="taskdone"><li>Layout (快速切換 簡單/完整 瀏覽</li></ul>
 <ul class="task"><li>Filter</li></ul>
 <ul class="taskdone"><li>Reload (需討論用按鈕或下拉式更新)</li></ul>
 <ul class="task"><li>Share</li>
-<li>Setting</li></ul>
+<li>Setting</li></ul class="task">
+</li>
+<li><b>主要區塊</b></li><ul class="taskdone"><li><b>各類別之議題列表</b>&nbsp; 連結→ 該議題相關新聞列表</li></ul>
 </ul>
-<p>介面按鈕：</p><ul class="task"><li>系統按紐：</li><ul class="taskdone"><li>上一頁：回到首頁</li>
+<ul class="task"><li><b>次要區塊</b></li><ul class="taskdone"><li>無</li></ul>
+</ul>
+<ul class="task"><li><b>系統按紐</b></li><ul class="taskdone"><li>BACK：回上一層</li>
 <li>MENU： 叫出→ 0.功能選單</li></ul>
 </ul>
 
-<h2>新聞列表</h2><p>連結：新聞項目、使用說明、長按項目(追蹤這則新聞、)</p><p>主要區塊：</p><ol><li>焦點議題(大圖)</li>
-<li>推薦議題(基本3則 or 橫向slide)</li>
-<li>熱門新聞/使用者自訂新聞(直式，Lazyload)</li></ol>
-<ul class="taskdone"><li>NavBar<ul class="taskdone"><li>Logo</li></ul>
-<ul class="task"><li>Title</li>
-<li>View</li>
-<li>Reload (需討論用按鈕或下拉式更新)</li>
-<li>Share</li>
-<li>Setting</li></ul>
+<h2>新聞列表</h2><ul class="task"><li>初期如果無法讓程式自動歸類出議題的話，也許就先不做這個頁面，或是變通為：<ul class="task"><li>開放編輯資格到G0V或新聞相關社群，實驗看看成效好不好(當然還是要有app帳號)</li>
+<li>不用全部人工輸入議題名稱，人工做不到的部分就顯示系統自動歸類出來的關鍵字</li></ul class="task">
+</li>
+<li><s>NavBar</s><b> / Tab (議題類別)</b><ul class="task"><li>Logo (顯示此項時盡量只單獨顯示)</li>
+<li>Title&nbsp;&nbsp;</li></ul>
+<ul class="taskdone"><li>Layout (快速切換 簡單/完整 瀏覽</li></ul>
+<ul class="task"><li>Filter</li></ul>
+<ul class="taskdone"><li>Reload (需討論用按鈕或下拉式更新)</li></ul>
+<ul class="task"><li>Share</li>
+<li>Setting</li></ul class="task">
+</li>
+<li><b>主要區塊</b></li><ul class="taskdone"><li><b>各類別之議題列表</b>&nbsp; 連結→ 該議題相關新聞列表</li></ul>
 </ul>
-<p>介面按鈕：所有議題列表、所有新聞列表</p><p>硬體按紐：</p><ul><li>上一頁：&lt;連按兩次退出App&gt;</li>
-<li>MENU： 叫出→ 0.功能選單</li>
-<li><br/></li></ul>
+<ul class="task"><li><b>次要區塊</b></li><ul class="taskdone"><li>無</li></ul>
+</ul>
+<ul class="task"><li><b>系統按紐</b></li><ul class="taskdone"><li>BACK：回上一層</li>
+<li>MENU： 叫出→ 0.功能選單</li></ul>
+</ul>
 
 <h2>追蹤列表</h2><p></p><p></p><p></p><h2>新聞頁-內文</h2><p>連結：</p><p>按紐：</p><p></p><h2>評價分析頁</h2><p>連結：</p><p>按紐：</p><p></p><h2>新聞頁-打臉</h2><p>連結：</p><p>按紐：</p><p></p><h2>新聞頁-長文分析</h2><p>連結：</p><p>按紐：</p><p></p><h2>打臉輸入頁</h2><p>連結：說明頁</p><p>按紐：</p><p>限制：30~150字、實名登錄</p><p></p><h2>長文輸入頁</h2><p>連結：</p><p>按紐：</p><p></p><h2>設定頁面</h2><p>連結：</p><p>按紐：</p><p></p><h2>App可操作功能</h2><p></p><ol><li>瀏覽資訊</li>
 <li>轉貼分享</li>
