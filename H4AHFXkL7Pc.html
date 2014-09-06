@@ -1,0 +1,10 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="48"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$H4AHFXkL7Pc</title>
+</head>
+<body><h1>後臺與DEMO網站啟動方式</h1><p></p><p>後臺</p><p>設置環境變數</p><p>export MONGO_URL=mongodb://localhost:27017/app4am</p><p>export ROOT_URL=<a href="http://ec2-54-92-66-45.ap-northeast-1.compute.amazonaws.com:3000/"></a>http://ec2-54-92-66-45.ap-northeast-1.compute.amazonaws.com:3000/</p><p>export PORT=3000</p><p>啟動指令</p><p>forever start /home/ec2-user/mrbigmouth/server/backend/main.js</p><p>(forever指令位於 /usr/local/bin/forever內)</p><p></p><p>前臺Demo網站</p><p>設置環境變數</p><p>export MONGO_URL=mongodb://localhost:27017/app4am</p><p>export ROOT_URL=<a href="http://ec2-54-92-66-45.ap-northeast-1.compute.amazonaws.com:9090/"></a><a href='http://ec2-54-92-66-45.ap-northeast-1.compute.amazonaws.com:3000/'/>http://ec2-54-92-66-45.ap-northeast-1.compute.amazonaws.com:</a><a href='http://ec2-54-92-66-45.ap-northeast-1.compute.amazonaws.com:0/'/>9</a>09<a href='http://ec2-54-92-66-45.ap-northeast-1.compute.amazonaws.com:3000/'/>0/</a></p><p>export PORT=9090</p><p>啟動指令</p><p>forever start /home/ec2-user/mrbigmouth/server/backend/main.js</p><p>(forever指令位於 /usr/local/bin/forever內)</p><p></p><p></p></body>
+</html>
