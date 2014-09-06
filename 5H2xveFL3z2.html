@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2764"/>
+<meta name="version" content="2869"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$5H2xveFL3z2</title>
 </head>
 <body><h1>UX flow</h1><p><sup>此文件路徑：<a href='http://hackfoldr.org/app4am'/>全民除黴計畫hackfoldr</a> / 系統設計 / 這裡</sup></p><p></p><p>記得盡量考慮所有會操作到的功能及相關反應：</p><ul><li>元素：按鈕、區塊、圖片、硬體功能按鈕</li>
@@ -15,25 +15,25 @@
 <ul class="task"><li><s>子項目2</s> (討論後移除)</li>
 <li>子項目3 (未討論或未定案,後面註明狀態)</li></ul>
 </ul>
-<p>主要區塊：顯示該頁面的主要功能</p><p>次要區塊：方便連結到其他功能或頁面但不刻意強調，甚至稍微隱藏起來的區塊</p><p></p><h2>I.啟動畫面</h2><ul class="task"><li>使用</li><ul class="taskdone"><li>增加品牌印象</li></ul>
-<ul class="task"><li>緩衝讀取時間</li>
-<li><br/></li></ul class="task">
+<p>主要區塊：顯示該頁面的主要功能</p><p>次要區塊：方便連結到其他功能或頁面但不刻意強調，甚至稍微隱藏起來的區塊</p><p></p><h2>I.啟動畫面</h2><ul class="taskdone"><li>使用<ul class="taskdone"><li>增加品牌印象</li>
+<li>緩衝讀取時間</li></ul>
+<ul class="task"><li><br/></li></ul class="task">
 </li>
-<li>不使用<ul class="task"><li>原因：<u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u></li></ul>
+<li>不使用</li><ul class="task"><li>原因：<u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u></li></ul>
 </ul>
 
 <h2>II.功能教學頁</h2><p>相關頁面：</p><ul class="task"><li>第一次開啟App</li>
 <li>第一次進到議題列表</li>
 <li>第一次進到評價畫面</li>
 <li><br/></li></ul>
-<p>連結：下一頁、跳過</p><p>按紐：</p><p></p><p></p><h2>III.Menu</h2><ul class="task"><li>表現形式：螢幕左測滑出</li>
+<p>連結：下一頁、跳過</p><p>按紐：</p><p></p><p>備註：新聞學的教學影片　&lt;--之後看看獨立出來</p><p></p><p></p><h2>III.Menu</h2><ul class="task"><li>表現形式：螢幕左測滑出</li>
 <li>選項&nbsp;</li><ul class="taskdone"><li>回到首頁</li>
-<li>議題列表</li>
-<li>新聞列表</li>
-<li>追蹤列表</li>
-<li>新聞分析(實驗室)</li>
-<li>設定</li>
-<li>快速設定</li></ul>
+<li>議題列表</li></ul>
+<ul class="task"><li><s>新聞列表</s></li></ul>
+<ul class="taskdone"><li>追蹤列表 (名稱待訂)</li>
+<li>啄木鳥定期報告</li>
+<li>設定</li></ul>
+<ul class="task"><li><s>快速設定</s></li></ul>
 </ul>
 
 <h2>1.主頁</h2><ul class="task"><li>相當於App的門面，基本形象及好感度的出發點</li>
@@ -43,13 +43,16 @@
 <li>Filter</li>
 <li>Reload (需討論用按鈕或下拉式更新)</li>
 <li>Share</li>
-<li>Setting</li></ul class="task">
-</li>
-<li><b>主要區塊</b></li><ul class="taskdone"><li><b>焦點議題 (大圖)</b>&nbsp; 連結→ 該議題相關新聞列表</li>
+<li>Setting</li></ul>
+</ul>
+<ul class="taskdone"><li><b>主要區塊</b><ul class="taskdone"><li><b>焦點議題 (大圖)</b>&nbsp; 連結→ 該議題相關新聞列表</li>
 <li><b>精選議題 (</b>&nbsp; 連結→ 該項議題相關新聞列表</li></ul>
-<ul class="task"><li><s>熱門新聞/使用者自訂新聞(直式，Lazyload)&nbsp; 連結→ 單篇新聞內容</s></li></ul>
+<ul style="list-style: none;"><li>人工分類後的議題才可被選為精選議題(顯示在首頁)</li></ul>
+<ul class="taskdone"><li><b>熱門新聞/使用者自訂新聞(直式，Lazyload)&nbsp; 連結→ 單篇新聞內容</b></li></ul>
+<ul style="list-style: none;"><li>新聞列表:今天最新的20篇</li></ul>
 </ul>
 <ul class="comment"><li>原本規劃直接在主頁空間往下拉就可以看到新聞列表，但是可能會使得app初始載入速度較慢影響使用體驗，另外在議題與新聞的排版平橫上也比較難以兩全。</li></ul>
+
 <ul class="task"><li><b>次要區塊</b><ul class="task"><li>所有議題列表</li>
 <li>新聞列表 → 轉換到新聞頁面 or 直接在下面載入&amp;展開？</li></ul>
 </ul>
