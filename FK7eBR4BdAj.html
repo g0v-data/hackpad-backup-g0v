@@ -3,11 +3,25 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1136"/>
+<meta name="version" content="1288"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$FK7eBR4BdAj</title>
 </head>
 <body><h1>在 Fire.app 中使用 Jade 樣板語法（以 Windows 版為例）</h1><ul class="comment"><li>Linux 跟 Mac 請以此類推... XD</li></ul>
-<p><a href='/TvnVBdyagMJ#讓-Fire.app-支援-Jade-的方法---20140118之前舊版'/>讓 Fire.app 支援 Jade 的方法 - 20140118之前舊版</a></p><p></p><p>20140118後新版Fire.app已經內建Jade支援，使用方式：</p><ol><li>取得Fire.app執行檔</li><ul><li>方法一：購買Fire.app</li>
+
+<p>2014/09/06</p><ol><li>download fire.app for windows</li><ul><li><a href="https://app.box.com/s/mb01rj6xuje4k3crz57h"></a>https://app.box.com/s/mb01rj6xuje4k3crz57h</li></ul>
+</ol>
+<ol><li>setup repo: 在你的 repo 根目錄中加入這兩個檔案</li><ul><li><a href="https://github.com/hackfoldr/hackfoldr-2.0/blob/gh-pages/config.rb"></a>https://github.com/hackfoldr/hackfoldr-2.0/blob/gh-pages/config.rb</li>
+<li><a href="https://github.com/hackfoldr/hackfoldr-2.0/blob/gh-pages/tilt_jade.rb"></a>https://github.com/hackfoldr/hackfoldr-2.0/blob/gh-pages/tilt_jade.rb<ul><li><a href="https://github.com/hackfoldr/hackfoldr-2.0/blob/gh-pages/tilt_jade.rb#L20"></a>https://github.com/hackfoldr/hackfoldr-2.0/blob/gh-pages/tilt_jade.rb#L20 修改路徑</li>
+<li><a href="https://github.com/hackfoldr/hackfoldr-2.0/blob/gh-pages/tilt_jade.rb#L21"></a>https://github.com/hackfoldr/hackfoldr-2.0/blob/gh-pages/tilt_jade.rb#L21 修改路徑</li></ul>
+</li>
+<li>mac: try this <a href="https://gist.github.com/tka/5302996#file-http_servlet_handler-rb-for-mac"></a>https://gist.github.com/tka/5302996#file-http_servlet_handler-rb-for-mac 不過……我問一下好了等等 XD</li></ul>
+</ol>
+<ol><li>記得在你的 os 裡安裝 node.js 和 jade</li>
+<li>按正常程序用 fire.app watch folder&nbsp;</li>
+<li>要產生 html 檔案時，用 jade 的 command line 產生</li><ul><li>例： jade . -o .</li></ul>
+</ol>
+
+<p></p><p></p><p><a href='/TvnVBdyagMJ#讓-Fire.app-支援-Jade-的方法---20140118之前舊版'/>讓 Fire.app 支援 Jade 的方法 - 20140118之前舊版</a></p><p></p><p>20140118後新版Fire.app已經內建Jade支援，使用方式：</p><ol><li>取得Fire.app執行檔</li><ul><li>方法一：購買Fire.app</li>
 <li>方法二：從<a href='https://github.com/KKBOX/FireApp/'/>github</a>抓下來自己compile</li>
 <li>方法三：參加 g0v 專案或找認識的人要檔案</li></ul>
 </ol>
