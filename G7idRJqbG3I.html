@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="2"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$G7idRJqbG3I</title>
+</head>
+<body><h1>Hackfoldr 2.0 教學 - 架設自己的 hackfoldr</h1><p>白牌打包</p><p></p><p>只要</p><ul><li>擁有一個頂層網址</li>
+<li>擁有一個 github 帳號</li></ul>
+<p>就可以 fork 屬於自己的 hackfoldr。</p><p></p><p>自架 hackfoldr 的好處：</p><ul><li>可自訂首頁打開的預設 foldr</li>
+<li>可打開隱藏的快捷選單，把常用連結內建到 hackfoldr 導覽列</li>
+<li>可自訂關連的 hackpad 站台</li></ul>
+
+<p><b>步驟</b></p><p></p><undefined><li>fork github repo</li></undefined>
+<ul><li>到 <a href="https://github.com/hackfoldr/hackfoldr-2.0"></a>https://github.com/hackfoldr/hackfoldr-2.0 按右上角 Fork 按鈕</li></ul>
+
+<undefined><li>修改 github repo 的 CNAME 檔案</li></undefined>
+<ul><li>內容改成你想使用的網址，範例：<a href="https://github.com/hackfoldr/hackfoldr-2.0/blob/master/CNAME"></a>https://github.com/hackfoldr/hackfoldr-2.0/blob/master/CNAME</li></ul>
+
+<undefined><li>使用域名管理服務設定網址，例如 amazon 的 router 53</li></undefined>
+<p>設定範例：</p><ul><li>name: hack.etblue.tw.</li>
+<li>type: CNAME</li>
+<li>value: etblue.github.io</li>
+<li>evaluate target: -</li>
+<li>health check id: -</li>
+<li>ttl: 300</li></ul>
+
+<undefined><li>等待域名生效</li></undefined>
+<ul><li>一般來說不會太久，十分鐘之類的，除非 TTL 設定成超長時間</li></ul>
+
+<undefined><li>等待期間，可先自訂你的 hackfoldr</li></undefined>
+<ul><li>打開你的 repo，切換到 gh-pages branch</li>
+<li>打開你的 repo 裡的 index.html 檔案，按鉛筆按鈕編輯 <a href="https://github.com/hackfoldr/hackfoldr-2.0/blob/gh-pages/index.html"></a>https://github.com/hackfoldr/hackfoldr-2.0/blob/gh-pages/index.html</li>
+<li>依樣畫葫蘆做這幾件事情<ul><li><a href="https://github.com/moztw/hackfoldr-moztw/commit/73f712e028f7dd446750dde4aa9e90cda4a48bda"></a>https://github.com/moztw/hackfoldr-moztw/commit/73f712e028f7dd446750dde4aa9e90cda4a48bda</li>
+<li><a href="https://github.com/moztw/hackfoldr-moztw/commit/a08f238e2e32b61273827943b1d3b4f5f21c67ab"></a>https://github.com/moztw/hackfoldr-moztw/commit/a08f238e2e32b61273827943b1d3b4f5f21c67ab</li>
+<li><a href="https://github.com/moztw/hackfoldr-moztw/commit/ccb57c3541c2ba370161bae7a3683a99a861dfe4"></a>https://github.com/moztw/hackfoldr-moztw/commit/ccb57c3541c2ba370161bae7a3683a99a861dfe4</li>
+<li><a href="https://github.com/moztw/hackfoldr-moztw/commit/dba706726b0cb0004e74ad9ff5cf9a816367deb8"></a>https://github.com/moztw/hackfoldr-moztw/commit/dba706726b0cb0004e74ad9ff5cf9a816367deb8</li></ul>
+</ul>
+
+<p><b>使用 master branch 開發</b></p><p></p><p>如果你想要用 jade, sass 以比較有效率的方式編輯源碼，可回 master branch，但就需要另外設定開發環境。有兩種環境同時都可以作用：</p><p></p><undefined><li>fire.app</li></undefined>
+<p>( <a href='/ep/profile/AzI6AT10vbD'/>ET Blue</a> 待補)</p><p></p><undefined><li>gulp.js</li></undefined>
+<p>( <a href='/ep/profile/v6ozRKwVLwr'/>Lee</a> 待補)</p><p></p><p><b>在 master branch 開發時使用自動 deploy</b></p><p></p><p>在 master 開發完後需要 deploy 到 gh-pages 才會生效。deploy 時，可以在 master 產生出 .html .css 後手動下指令 merge 到 gh-pages，也可以讓程式自動幫我們跑指令。其中，自動 deploy 的方式有兩種，目前是採用 travis ci 做全自動 deploy。</p><p></p><undefined><li>半自動 deploy script</li></undefined>
+<p>( <a href='https://g0v.hackpad.com/ep/profile/AzI6AT10vbD'/>ET Blue</a> 待補)</p><p></p><undefined><li>全自動 travis ci</li></undefined>
+<p>想要使用 travis ci 的話，repo 裡的 travis ci 的 key 要改成你自己的才會生效。替你的 repo 設定 travis ci 需要做以下步驟：</p><p>( <a href='https://g0v.hackpad.com/ep/profile/v6ozRKwVLwr'/>Lee</a> 待補)</p><p></p></body>
+</html>
