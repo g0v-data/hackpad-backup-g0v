@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1510"/>
+<meta name="version" content="1617"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$7TMSpXasDWl</title>
 </head>
 <body><h1>Hackfoldr 2.0</h1><p></p><p><b>緣由</b></p><p>想 fork 一個內建 moztw 常用連結的 hackfoldr 用來整理 mozilla 台灣社群的文件，結果一開始動手就忍不住想改介面，又因為看不懂村長的 livescript，只好放棄 fork，開一個新的 repo 全部重寫 www</p><p></p><p><b>可能的用途</b></p><ul><li>整理網路上的資料</li>
@@ -17,11 +17,14 @@
 
 <h2>feedback</h2><p>可寫在這，也可直接上 github 開 issue <a href="https://github.com/hackfoldr/hackfoldr-2.0/issues"></a>https://github.com/hackfoldr/hackfoldr-2.0/issues</p><p></p><ul><li>(mobile) Hackpad 頭上有東西，而螢幕寬度的時候會擠到搜尋框 (好像無解？) <a href="http://i.imgur.com/kns8hJu.png"></a>http://i.imgur.com/kns8hJu.png<ul><li>發現好像是 RWD 沒寫好 XD 設了 viewport 以後似乎有改善</li></ul>
 </li>
-<li>.travis.yml 裡面的 env-&gt;global-&gt;secure 需要改嗎？這邊看不太懂，只知道是加密後的字串。<ul><li>啊，那個應該要改，可上 irc 問 Lee1092，感謝回報，說明文件要補強一下 &gt;&quot;&lt; 那是把 master 自動 deploy 到 gh-pages 用的，如果你沒有要用 master 改東西，也可以直接全部都在 gh-pages 上操作，這樣就不用管 travis 幹嘛了 XD</li></ul>
+<li>.travis.yml 裡面的 env-&gt;global-&gt;secure 需要改嗎？這邊看不太懂，只知道是加密後的字串。<ul><li>啊，那個應該要改，可上 irc 問 Lee1092，感謝回報，說明文件要補強一下 &gt;&quot;&lt; 那是把 master 自動 deploy 到 gh-pages 用的，如果你沒有要用 master 改東西，也可以直接全部都在 gh-pages 上操作，這樣就不用管 travis 幹嘛了 XD</li>
+<li>我需要從 master 自動 deploy 到 gh-pages XD 我上 IRC 問一下好了，有機會的話我再看是否幫忙更新文件。</li>
+<li>請問是在 g0v 的 channel 嗎？</li>
+<li>yes, freenode 的 #g0v.tw，剛改了一下文件結構，架站的部分在這 XD <a href="http://hack.etblue.tw/welcome-to-hackfoldr/G7idRJqbG3I"></a>http://hack.etblue.tw/welcome-to-hackfoldr/G7idRJqbG3I 歡迎補完 lol</li></ul>
 </ul>
 
-<p></p><p></p><h2>to-dos</h2><p></p><p><b>moztw version</b></p><p>repo at <a href="https://github.com/moztw/hackfoldr-moztw"></a>https://github.com/moztw/hackfoldr-moztw</p><ul class="task"><li>CNAME</li>
-<li>shortcuts menu for moztw</li>
+<h2>to-dos</h2><p></p><p><b>moztw version</b></p><p>repo at <a href="https://github.com/moztw/hackfoldr-moztw"></a>https://github.com/moztw/hackfoldr-moztw</p><ul class="taskdone"><li>CNAME</li></ul>
+<ul class="task"><li>shortcuts menu for moztw</li>
 <li>add new pad to mopad or moztw.hackpad.com by default (instead of g0v)</li></ul>
 
 <p></p><p><b>emergent</b></p><p></p><p></p><p><b>bug fix</b></p><ul class="taskdone"><li>hackpad url - problem</li>
@@ -53,10 +56,12 @@
 <li>history jumping feature via html5 local storage</li>
 <li>auto new tab icon while target: _blank</li>
 <li>go back to foldr home url via clicking on foldr title</li>
-<li>customize icons, icons, icons!</li></ul>
+<li>customize icons, icons, icons!</li>
+<li>flickr 網址預設 blank</li></ul>
+<ul class="task"><li>收集：不允許內嵌 iframe 的大站列表</li></ul>
 <undefined><li>content</li></undefined>
 <ul class="taskdone"><li>enable /edit path</li></ul>
-<ul class="task"><li><s>complete nav bar menu</s><ul class="task"><li><s>g0v version</s></li>
+<ul><li><s>complete nav bar menu</s><ul><li><s>g0v version</s></li>
 <li><s>moztw version</s></li></ul>
 </ul>
 <undefined><li>performance</li></undefined>
@@ -65,10 +70,10 @@
 <p><b>advanced (hard to implement) features</b></p><ul class="taskdone"><li>manually create and add new hackpad</li><ul><li><a href="https://hackpad.com/Legacy-API-Documentation-AWDGdlYpQto#:h=Create-a-Pad"></a>https://hackpad.com/Legacy-API-Documentation-AWDGdlYpQto#:h=Create-a-Pad</li>
 <li><a href="https://hackpad.com/Hackpad-API-v1.0-k9bpcEeOo2Q#:h=Create-a-New-Pad"></a>https://hackpad.com/Hackpad-API-v1.0-k9bpcEeOo2Q#:h=Create-a-New-Pad</li></ul>
 <ul class="taskdone"><li>ui design</li>
-<li>js</li></ul>
-</ul>
-<ul class="task"><li><s>drag and drop to reorder</s></li>
-<li><s>easy white label setup for ngo / other communities</s></li></ul>
+<li>js</li></ul class="taskdone">
+</li>
+<li>drag and drop to reorder</li>
+<li>easy white label setup for ngo / other communities</li></ul>
 
 </body>
 </html>
