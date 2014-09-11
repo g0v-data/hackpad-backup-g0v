@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1234"/>
+<meta name="version" content="1442"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$KjfdRZ08FZ3</title>
 </head>
 <body><h1>議員投票指南</h1><p><a href='http://vote.ly.g0v.tw/'/>立委投票指南</a> 議會版</p><h2>各縣市議會專案</h2><p><a href='/uGplqkYholX'/>議員投票指南－架站流程</a></p><ul><li>台北市<ul><li><a href="https://github.com/g0v/councilor-voter-guide"></a><a href='https://github.com/g0v/councilor-voter-guide'/>https://github.com/g0v/councilor-voter-guide</a></li>
@@ -42,9 +42,11 @@
 <li>影音也可以parse下來, 放上youtube, 方便分享</li>
 <li>目前有的source data:<ul><li>議員個人資料(含新聞, 議事參與紀錄):<a href="http://www.kcc.gov.tw/PeriodMembers/Search.aspx"></a>http://www.kcc.gov.tw/PeriodMembers/Search.aspx</li></ul>
 <ul style="list-style: none;"><li><a href='https://github.com/g0v/councilor-voter-guide/blob/master/data/pretty_format/kcc/councilors_terms.json'/>JSON檔</a></li></ul>
-<ul class="comment"><li>好像沒有爬議事參與紀錄的部分 是打算從議案記錄對過來嗎?</li></ul>
-<ul><li>會議記錄(pdf):<a href="http://cissearch.kcc.gov.tw/System/MeetingRecord/Default.aspx"></a>http://cissearch.kcc.gov.tw/System/MeetingRecord/Default.aspx</li></ul>
-<ul class="comment"><li>轉成文字了： <a href="https://github.com/kiang/kcc/tree/master/MeetingRecord"></a>https://github.com/kiang/kcc/tree/master/MeetingRecord</li>
+</ul>
+<ul class="comment"><li><a href="http://220.132.233.59:5984/kaohsiung_city_council/_design/councilor/_view/info"></a><a href='http://220.132.233.59:5984/kaohsiung_city_council/_design/councilor/_view/info'/>http://220.132.233.59:5984/kaohsiung_city_council/_design/councilor/_view/info</a></li>
+<li>可在 URL 後面加上 ?key=&quot;名稱&quot; 進行查尋<ul class="comment"><li>好像沒有爬議事參與紀錄的部分 是打算從議案記錄對過來嗎?</li>
+<li>記錄(pdf):<a href="http://cissearch.kcc.gov.tw/System/MeetingRecord/Default.aspx"></a>http://cissearch.kcc.gov.tw/System/MeetingRecord/Default.aspx</li>
+<li>轉成文字了： <a href="https://github.com/kiang/kcc/tree/master/MeetingRecord"></a>https://github.com/kiang/kcc/tree/master/MeetingRecord</li>
 <li>沒有簽到資料？ 這樣好像無法看出席狀況</li></ul>
 <ul><li>議案： <a href="http://cissearch.kcc.gov.tw/System/Proposal/Default.aspx"></a>http://cissearch.kcc.gov.tw/System/Proposal/Default.aspx</li></ul>
 <ul class="comment"><li>卡關的爬蟲： <a href="https://github.com/kiang/kcc/blob/master/proposal.php"></a>https://github.com/kiang/kcc/blob/master/proposal.php</li>
@@ -52,7 +54,10 @@
 <li>主機好像有擋爬蟲吧，很討厭 XD</li></ul>
 <ul><li>議員通訊錄： <a href="http://cand.moi.gov.tw/of/index.jsp"></a>http://cand.moi.gov.tw/of/index.jsp</li></ul>
 <ul class="comment"><li>可以參考 public function moi() / <a href="https://github.com/kiang/elections/blob/master/Console/Command/CandidateShell.php"></a>https://github.com/kiang/elections/blob/master/Console/Command/CandidateShell.php</li>
-<li><a href='https://github.com/g0v/councilor-voter-guide/blob/master/data/pretty_format/kcc/councilors_terms.json'/>JSON檔</a>已有包含通訊資料，詳見contact_details</li></ul>
+<li><a href='https://github.com/g0v/councilor-voter-guide/blob/master/data/pretty_format/kcc/councilors_terms.json'/>JSON檔</a>已有包含通訊資料，詳見contact_details</li>
+<li><a href="http://220.132.233.59:5984/kaohsiung_city_council/_design/councilor/_view/contact_details"></a><a href='http://220.132.233.59:5984/kaohsiung_city_council/_design/councilor/_view/contact_details'/>http://220.132.233.59:5984/kaohsiung_city_council/_design/councilor/_view/contact_details</a>&nbsp; key = 名稱, value = { /* 通訊資料 */ }</li>
+<li>查詢範例: <a href="http://220.132.233.59:5984/kaohsiung_city_council/_design/councilor/_view/contact_details?key=%22%E5%90%B3%E7%9B%8A%E6%94%BF%22"></a><a href='http://220.132.233.59:5984/kaohsiung_city_council/_design/councilor/_view/contact_details?key=%22%E4%BC%8A%E6%96%AF%E5%9D%A6%E5%A4%A7%E2%80%A7%E8%B2%9D%E9%9B%85%E5%A4%AB%E2%80%A7%E6%AD%A3%E7%A6%8F%22'/>http://220.132.233.59:5984/kaohsiung_city_council/_design/councilor/_view/contact_details?key=%22%E</a><a href='http://220.132.233.59:5984/kaohsiung_city_council/_design/councilor/_view/contact_details?key=%22%E5%90%B3%E7%9B%8A%E6%94%BF%22'/>5%90%B3%E7%9B%8A%E6%94%B</a><a href='http://220.132.233.59:5984/kaohsiung_city_council/_design/councilor/_view/contact_details?key=%22%E4%BC%8A%E6%96%AF%E5%9D%A6%E5%A4%A7%E2%80%A7%E8%B2%9D%E9%9B%85%E5%A4%AB%E2%80%A7%E6%AD%A3%E7%A6%8F%22'/>F%22</a>&nbsp;</li>
+<li>............?key=&quot;名稱&quot;，注意雙引號！</li></ul>
 <ul><li><b>CouchDB</b>: <a href="http://220.132.233.59:5984/_utils/"></a>http://<a href='http://220.132.233.59:5984/_utils/'/>220.132.233.59:5984</a>/_utils/</li></ul>
 <ul class="comment"><li>感謝 Lorex 大德提供此 server，功德無量!!</li>
 <li>admin: KSDG</li>
