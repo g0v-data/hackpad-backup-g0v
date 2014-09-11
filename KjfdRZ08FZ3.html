@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1460"/>
+<meta name="version" content="1605"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$KjfdRZ08FZ3</title>
 </head>
 <body><h1>議員投票指南</h1><p><a href='http://vote.ly.g0v.tw/'/>立委投票指南</a> 議會版</p><h2>各縣市議會專案</h2><p><a href='/uGplqkYholX'/>議員投票指南－架站流程</a></p><ul><li>台北市<ul><li><a href="https://github.com/g0v/councilor-voter-guide"></a><a href='https://github.com/g0v/councilor-voter-guide'/>https://github.com/g0v/councilor-voter-guide</a></li>
@@ -39,15 +39,25 @@
 <ul><li>看起來只有合併後第一屆(沒有的話, 看能不能跟議會要)</li>
 <li>先訂出最後要呈現的內容, 然後再整理出坑<ul><li>可以參考北市: <a href="http://councils.g0v.tw/bills/%E8%87%BA%E5%8C%97%E5%B8%82/normal/"></a>http://councils.g0v.tw/bills/%E8%87%BA%E5%8C%97%E5%B8%82/normal/</li></ul>
 </li>
+<li>目前期望有的最終資料:<ul><li>議員</li><ul class="taskdone"><li>基本資料</li>
+<li>政見</li></ul>
+<ul class="task"><li>議事相關<ul class="task"><li>提案</li>
+<li>參與表決(還沒找到source)</li>
+<li>出席(還沒找到source)</li></ul>
+</ul>
+</ul>
+<ul><li>議案</li></ul>
+</li>
 <li>影音也可以parse下來, 放上youtube, 方便分享</li>
 <li>目前有的source data:<ul><li>議員個人資料(含新聞, 議事參與紀錄):<a href="http://www.kcc.gov.tw/PeriodMembers/Search.aspx"></a>http://www.kcc.gov.tw/PeriodMembers/Search.aspx</li></ul>
 <ul style="list-style: none;"><li><a href='https://github.com/g0v/councilor-voter-guide/blob/master/data/pretty_format/kcc/councilors_terms.json'/>JSON檔</a></li></ul>
 </ul>
 <ul class="comment"><li>好像只有 64 位議員資料</li>
 <li><a href="http://220.132.233.59:5984/kaohsiung_city_council/_design/councilor/_view/info"></a><a href='http://220.132.233.59:5984/kaohsiung_city_council/_design/councilor/_view/info'/>http://220.132.233.59:5984/kaohsiung_city_council/_design/councilor/_view/info</a></li>
-<li>可在 URL 後面加上 ?key=&quot;名稱&quot; 進行查尋<ul class="comment"><li>好像沒有爬議事參與紀錄的部分 是打算從議案記錄對過來嗎?</li>
-<li>記錄(pdf):<a href="http://cissearch.kcc.gov.tw/System/MeetingRecord/Default.aspx"></a>http://cissearch.kcc.gov.tw/System/MeetingRecord/Default.aspx</li>
-<li>轉成文字了： <a href="https://github.com/kiang/kcc/tree/master/MeetingRecord"></a>https://github.com/kiang/kcc/tree/master/MeetingRecord</li>
+<li>可在 URL <s>後面加上 ?key=&quot;名稱&quot; 進行查尋</s><ul class="comment"><li><s>好像沒有爬議事參與紀錄的部分 是打算從議案記錄對過來嗎?</s></li>
+<li>議案紀錄不含投票名單, 只有議員提案</li></ul>
+<ul><li>記錄(pdf):<a href="http://cissearch.kcc.gov.tw/System/MeetingRecord/Default.aspx"></a>http://cissearch.kcc.gov.tw/System/MeetingRecord/Default.aspx</li></ul>
+<ul class="comment"><li>轉成文字了： <a href="https://github.com/kiang/kcc/tree/master/MeetingRecord"></a>https://github.com/kiang/kcc/tree/master/MeetingRecord</li>
 <li>沒有簽到資料？ 這樣好像無法看出席狀況</li>
 <li>會議記錄寫（如簽到簿）....跟新北市一樣</li></ul>
 <ul><li>議案： <a href="http://cissearch.kcc.gov.tw/System/Proposal/Default.aspx"></a>http://cissearch.kcc.gov.tw/System/Proposal/Default.aspx</li></ul>
