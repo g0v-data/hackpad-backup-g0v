@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="9711"/>
+<meta name="version" content="9802"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$6UvvtZqOfN5</title>
 </head>
 <body><h1>天龍特公地－介面設計</h1><p></p><h2>介面設計課題 (20140901)</h2><ol><li>改版時請綜合考量<ol><li>初次造訪者的閱讀順序｜議題內容與訴求→地圖搜尋功能</li>
@@ -190,7 +190,11 @@
 <p><b>NEW! 地圖中的單筆土地資料呈現＋協作功能</b></p><p></p><undefined><li><b>1.既有資料：面積、段小段、地號、管理者、使用分區</b></li></undefined>
 <ul class="comment"><li>長遠來看，既有的資料也可能會變動 XD..........</li></ul>
 <undefined><li><b>2.外部連動資料</b></li></undefined>
-<ul class="taskdone"><li>是否被劃入都市更新單元內，若想了解這批資料裡的土地，是否已被劃入都市更新單元，其實可以用電子查詢，都市更新案件進度（<a href='http://www.gis.udd.taipei.gov.tw/r_progress.aspx'/>查詢頁面</a>）用地號去查，不知道有沒有可能整合進來呢？</li><ul class="comment"><li>你好~這裡我有寫好簡單crawler可以輸入資料查詢結果了，請問是要用成API之類的嗎?</li>
+<ul class="taskdone"><li><i>是否被劃入都市更新單元內</i>，若想了解這批資料裡的土地，是否已被劃入都市更新單元，其實可以用電子查詢，都市更新案件進度（<a href='http://www.gis.udd.taipei.gov.tw/r_progress.aspx'/>查詢頁面</a>）用地號去查，不知道有沒有可能整合進來呢？</li></ul>
+<ul style="list-style: none;"><li>可能呈現方式:&nbsp;</li><ul><li>在modal中增加<i>都更情形</i>欄位 (未加入都更、審查中、已核准)</li>
+<li>增加過濾選項，讓加入都更的土地可單獨</li>
+<li>將加入都更的土地用不同顏色標示</li></ul>
+<ul class="comment"><li>你好~這裡我有寫好簡單crawler可以輸入資料查詢結果了，請問是要用成API之類的嗎?</li>
 <li>水喔！&nbsp; :+1:&nbsp; API 可以容易使用。 感謝你 :heart_eyes:&nbsp;</li>
 <li>:+1:</li>
 <li><a href='http://urban-renew-progress.herokuapp.com/bySec/%E6%B0%B8%E6%98%8C%E6%AE%B5%E4%B8%80%E5%B0%8F%E6%AE%B5/0031/0006'/>API example</a>&nbsp; 目前會將網頁的結果轉成json格式，包含都更案件編號 進度 詳細資料的url 等等</li>
