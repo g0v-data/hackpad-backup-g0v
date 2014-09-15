@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2138"/>
+<meta name="version" content="2214"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$CxE7gsWmErr</title>
 </head>
 <body><h1>超農域---農業藥劑系統</h1><p>因為三個系統(加上延伸的)整個太肥了，所以把三農系統拆解成三個hackpad，整理到<a href='http://hack.g0v.tw/agriculture'/>hackfoldr</a>中，方便作業，不過三個以及後來可能延伸或增加的系統希望未來是可以組合或連動的，並且也應用在智慧型裝置上方便民眾和相關單位使用，藉以促進農業的資訊和管理更便利和開放。</p><ul class="comment"><li>如果我的體重也可以這樣拆解就好了(?)</li></ul>
@@ -30,6 +30,9 @@
 <li>便利輸出</li>
 <li>藥劑使用歷程、選擇管理</li>
 <li>未來與其他系統的連結性</li></ul>
+<h2>橫向連結設計</h2><p>農藥系統未來預計和其他系統有相關性的連結，就目前設計的構思來說有以下幾個橫向連結可能</p><ul><li>IP或使用者標註所在位置X查詢農藥、作物種類，可和官方病蟲害診斷鑑定結果以及疫情警報、氣象資料、地理資訊結合，做出更多元的疫情狀況報導、統計或線上警報</li>
+<li>農藥查詢資料輸出可和疫情系統以及農民自我管理系統連接，農民方便管理用藥，官方方便掌握藥劑使用與發佈</li>
+<li>新功能&quot;藥劑小幫手&quot; 融合 新聞小幫手?????(安全資料庫平台資料X自主運算結果?)</li></ul>
 <h2>上游資料</h2><p></p><p>Farmer portal:</p><p>Index: <a href="http://m.coa.gov.tw/OpenData/PesticideData.aspx"></a>http://m.coa.gov.tw/OpenData/PesticideData.aspx (JSON)</p><p>Detail: <a href="http://pesticide.baphiq.gov.tw/web/Insecticides_MenuItem5_3_UseRange.aspx?id=H169"></a>http://pesticide.baphiq.gov.tw/web/Insecticides_MenuItem5_3_UseRange.aspx?id=H169</p><p>where H169 is &quot;農藥代號&quot; from the index</p><p></p><p>Consumer portal:</p><ul><li>田間 (農委會) - <a href="http://www.afa.gov.tw/organicAgriculture.asp?CatID=290"></a>http://www.afa.gov.tw/organicAgriculture.asp?CatID=290<ul><li>有機 -&gt; 含 ND (未檢出)</li>
 <li>非有機 -&gt; 慣行農法, 目前因為只有檢出有殘留的資訊，而且有個資，而且難以連結到供貨地點，而且格式和有機不同，所以暫時 hold。</li></ul>
 </li>
