@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1668"/>
+<meta name="version" content="1678"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$KjfdRZ08FZ3</title>
 </head>
 <body><h1>議員投票指南</h1><p><a href='http://vote.ly.g0v.tw/'/>立委投票指南</a> 議會版</p><h2>各縣市議會專案</h2><p><a href='/uGplqkYholX'/>議員投票指南－架站流程</a></p><ul><li>台北市<ul><li><a href="https://github.com/g0v/councilor-voter-guide"></a><a href='https://github.com/g0v/councilor-voter-guide'/>https://github.com/g0v/councilor-voter-guide</a></li>
@@ -66,7 +66,8 @@
 <ul><li>議案： <a href="http://cissearch.kcc.gov.tw/System/Proposal/Default.aspx"></a>http://cissearch.kcc.gov.tw/System/Proposal/Default.aspx</li></ul>
 <ul class="comment"><li>卡關的爬蟲： <a href="https://github.com/kiang/kcc/blob/master/proposal.php"></a>https://github.com/kiang/kcc/blob/master/proposal.php</li>
 <li><a href='https://github.com/g0v/councilor-voter-guide/blob/master/crawler/kcc/kcc/spiders/bills.py'/>卡關的爬蟲(scrapy)</a>：有bug，不知為啥少爬很多</li>
-<li>主機好像有擋爬蟲吧，很討厭 XD</li></ul>
+<li>主機好像有擋爬蟲吧，很討厭 XD</li>
+<li>成功了，<a href='https://github.com/g0v/councilor-voter-guide/blob/master/data/pretty_format/kcc/bills.json'/>JSON檔</a>，這是2010~現在的所有議案</li></ul>
 <ul><li>議員通訊錄： <a href="http://cand.moi.gov.tw/of/index.jsp"></a>http://cand.moi.gov.tw/of/index.jsp</li></ul>
 <ul class="comment"><li>可以參考 public function moi() / <a href="https://github.com/kiang/elections/blob/master/Console/Command/CandidateShell.php"></a>https://github.com/kiang/elections/blob/master/Console/Command/CandidateShell.php</li>
 <li><a href='https://github.com/g0v/councilor-voter-guide/blob/master/data/pretty_format/kcc/councilors_terms.json'/>JSON檔</a>已有包含通訊資料，詳見contact_details</li>
