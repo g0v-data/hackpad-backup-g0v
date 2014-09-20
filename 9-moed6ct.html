@@ -3,13 +3,28 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="136"/>
+<meta name="version" content="301"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$9-moed6ct</title>
 </head>
-<body><h1>9 月萌典松: moed6ct (含直播及文字轉播)</h1><p></p><p>時間：9/20 11am-9pm（歡迎遲到早退）</p><p>地點：<a href='http://bookshow.tw/traffic/'/>Bookshow.tw</a>&nbsp; 基隆路一段 141 號 6 樓之 7（捷運市政府站步行三分鐘）</p><p>名額：30 人（<a href='http://g0v-tw.kktix.cc/events/moedict-9-20'/>報名頁面</a>）</p><p>內容：比照<a href='/8-moed5ct'/>前五次萌典松</a> ，採「併松」模式舉行，歡迎 g0v 各大小專案加<b><u>萌</u></b>參加。</p><p><b>費用</b>：採量力而捐、自由贊助方式。如有剩餘，捐給下次黑客松。</p><p>直播：<a href="http://j.mp/livemoed6ct"></a>http://j.mp/livemoed6ct</p><p></p><p><b>萌典相關開發項目</b></p><p></p><p><b>短講</b></p><p></p><ul><li><a href='/9-moed6ct--2BAArXyPOlM'/>萌典考</a> - <a href='/ep/profile/n097KVBPoh0'/>caasi</a></li></ul>
+<body><h1>9 月萌典松: moed6ct (含直播及文字轉播)</h1><p></p><p>時間：9/20 11am-9pm（歡迎遲到早退）</p><p>地點：<a href='http://bookshow.tw/traffic/'/>Bookshow.tw</a>&nbsp; 基隆路一段 141 號 6 樓之 7（捷運市政府站步行三分鐘）</p><p>名額：30 人（<a href='http://g0v-tw.kktix.cc/events/moedict-9-20'/>報名頁面</a>）</p><p>內容：比照<a href='/8-moed5ct'/>前五次萌典松</a> ，採「併松」模式舉行，歡迎 g0v 各大小專案加<b><u>萌</u></b>參加。</p><p><b>費用</b>：採量力而捐、自由贊助方式。如有剩餘，捐給下次黑客松。</p><p>直播：<a href="http://j.mp/livemoed6ct"></a>http://j.mp/livemoed6ct</p><p></p><p><b>萌典相關開發項目</b></p><p></p><ul><li>由使用者切換漢語拼音之外的注音方式，如通用拼音、威妥瑪拼音、注音二式等。<ul><li>這個已經初步完成，但音調標注方式要請教方家。</li>
+<li>臺灣閩南語、客家語的拼音系統（POJ、通拼等）需要對照表。</li></ul>
+</li>
+<li>思源黑體的自訂網頁字型服務（類似 <a href='http://www.justfont.com'/>justfont</a>）。<ul><li>這是第一套開放源碼、符合教育部方體字規範（筆畫結構與楷書相同）的黑體字型，故事可參考葉平（思源黑的命名者，同時也是萌典專案發起人）的<a href='http://audreyt.org/newdict/noto-yalib.pdf'/>科學人專欄</a>。</li>
+<li>雛形：<a href="https://www.moedict.tw/SourceHanSansTW.ttf?subset=認得幾個字"></a>https://www.moedict.tw/SourceHanSansTW.ttf?subset=認得幾個字<ul><li>需要加上快取，以及其他粗細的選項。</li>
+<li>也許整合到萌典字圖？</li></ul>
+</li></ul>
+</li>
+<li>增進楷書的機器辨識率。<ul><li>緣起是 Bullszip PDF driver 會保留 TTF 字型，但字碼會亂掉，需要與標楷體比對。</li>
+<li>公文辨識也很需要這個技術，例如近期的各縣市投開票所名單數位化專案。</li></ul>
+</li>
+<li>徐老師客語典 <a href='https://github.com/audreyt/moedict-data-shaucan'/>EUDC 自造字</a> 的 Unicode 萬國碼對應，這部份也考慮用群眾分散式處理。<ul><li>部件表：<a href="https://github.com/audreyt/moedict-data-shaucan/blob/master/%E9%80%A0%E5%AD%97%E9%83%A8%E4%BB%B6%E8%A1%A8.csv"></a>https://github.com/audreyt/moedict-data-shaucan/blob/master/%E9%80%A0%E5%AD%97%E9%83%A8%E4%BB%B6%E8%A1%A8.csv</li></ul>
+</ul>
+
+<p><b>短講</b></p><p></p><ul><li><a href='/9-moed6ct--2BAArXyPOlM'/>萌典考</a> - <a href='/ep/profile/n097KVBPoh0'/>caasi</a></li></ul>
 <ul style="list-style: none;"><li>列出萌典重要開發時刻，並和所解決的問題連結。</li></ul>
 <ul class="comment"><li>其實我的國文超爛</li></ul>
 
 <h2>併松</h2><ul class="comment"><li>歡迎把想做的專案/計劃列在這裡！</li></ul>
-<p>農域松:</p><p><a href='https://hackfoldr.org/agriculture/'/>超農域</a>啊啊啊啊</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_9-moed6ct_p.81090_1410354897113_000001.jpg'/></p><p></p><p>chewei&gt; 預計討論 <a href='/GuanXi--5gygVb26WId'/>GuanXi 親族關係+公司關係-&gt;政商透明化</a> 的政商 / 陽光松</p><p></p><h2>文播</h2><p></p></body>
+
+<p><b>農域松</b></p><p><a href='https://hackfoldr.org/agriculture/'/>超農域</a>啊啊啊啊</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_9-moed6ct_p.81090_1410354897113_000001.jpg'/></p><p></p><p><b>陽光松</b></p><p>chewei&gt; 預計討論 <a href='/GuanXi--5gygVb26WId'/>GuanXi 親族關係+公司關係-&gt;政商透明化</a></p><p></p><h2>文播</h2><p></p></body>
 </html>
