@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="3817"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$TaigiLex</title>
+</head>
+<body><h1>TaigiLex</h1><p></p><h2>Objectives overview</h2><ol><li>Basic toolbox for online text editing in Taiwanese, to allow (2) (more below)</li>
+<li>an editable version of 萌典, to allow (3)</li>
+<li>The crowd-compilation of a Taiwanese dictionary in Taiwanese, post-reviewed by a small team</li>
+<li>the description of various lexical relations between the entries in the lexicon to allow more intelligent text-processor.&nbsp;</li></ol>
+
+<p></p><h2>Detailed description</h2><p></p><p><b>&nbsp;The Toolbox</b></p><p>&nbsp;</p><p>&nbsp;What should it include:</p><ul><li>&nbsp;Input Method from multiple romanisation systems and 注音符號 that permits output in various romanisations or 漢字 and keeps track of what was inputed for further edition.</li>
+<li>conversion tools between all the different scripts. (allowing for manual correction after the automatic processing)</li>
+<li>possibility to annotate the text using ruby</li></ul>
+
+<p>This shall be done as independent libraries that will be release in Open Source.&nbsp;</p><p></p><p><b>A platform for the crowd compilation of a dictionary.</b></p><p></p><p>Those libraries will be used by an interface to have the dictionary edited by the netizens. (Probably integrated or directly linked with 萌典, to be discussed maybe forking or adding modules to etherpad would be better...)</p><p></p><p><b>Supervision of the compilation process</b></p><p>A small team shall follow the edition of the dictionary (for selection/correction)</p><p>The dictionary will be released under C.C. licence, made available through 萌典 (and downloadable as epub ?)</p><p></p><p><b>Towards a lexical graph</b></p><p>Time should be spent to describe the relations between the entries of the dictionary to build a machine-readable lexicon to help and promote Taiwanese Text Processing</p><p></p><h2> What we need</h2><p>&nbsp;</p><p>good question XD</p><p>a small team of 2 to 4 pple for 6 to 12 month ?</p><p>I think it&rsquo;s reasonable for the coding part&nbsp; (1 person)</p><p>one pb would be that the lexicographic work can only start once the code work.</p><p></p><h2>Discussion</h2><ul><li>data of the Taiwanese dictionary (don&rsquo;t really need online editing tool?)</li></ul>
+<ul class="comment"><li>If we want a small team of people working on the dictionary, that&rsquo;s true, but for crowdsourcing a good plateform working nicely in POJ/TL/hanji with 0-install would help.</li></ul>
+<ul><li>tool to convert the data into 萌典 format</li></ul>
+<ul class="comment"><li>what data ? the tool has to be data-source specific.</li></ul>
+
+<p><b>User scenario</b></p><ul><li>&nbsp;online editing tool to&nbsp;<ul><li>create new content in Taiwanese.</li>
+<li>to better maintain/present/update current Taiwanese related digital archive. For example <a href="http://pojbh.lib.ntnu.edu.tw/script/artical-3956.htm"></a>http://pojbh.lib.ntnu.edu.tw/script/artical-3956.htm has content in dual scrpts, but it is difficult to maintain.</li></ul>
+</ul>
+<ul class="comment"><li>sounds like the next steps. I&rsquo;d love to help on such projects.</li>
+<li><br/></li></ul class="comment">
+<h2>Related resource and problems</h2><p><b>Online dictionary</b></p><undefined><li>教育部</li></undefined>
+<ul><li>台灣閩南語常用詞辭典（有萌典）（中文解釋，有台語例句）</li></ul>
+<p>信望愛</p><ul><li>甘字典：字的台語白話字解釋（及對應漢羅轉寫）</li>
+<li>台日大詞典台語譯本（無日語原文解釋，有精簡？版台語翻譯解釋）</li>
+<li><a href='https://bitbucket.org/pcchen/nan'/>信望愛台語語料庫</a>&nbsp; （使用 <a href='http://wesay.palaso.org/'/>WeSay</a> 編輯，透過 hg 與 bitbucket 同步）</li></ul>
+<undefined><li>中研院</li></undefined>
+<ul><li>廈英大辭典（含增補廈英大辭典）</li>
+<li>英廈辭典</li></ul>
+<undefined><li>楊允言</li></undefined>
+<ul><li>Tw-Ch台文中文辭典（台語羅馬字，台語漢字，中文詞條對照。無解釋）</li>
+<li><a href='http://ip194097.ntcu.edu.tw/memory/TGB/MoWT.asp'/>台語文數位典藏</a>（羅馬字，漢羅）</li>
+<li><a href='http://ip194097.ntcu.edu.tw/Memory/TGB/mowt.asp'/>台語文記憶</a>（圖檔）</li></ul>
+<undefined><li>Wikipedia</li></undefined>
+<ul><li><a href="http://nan.wikipedia.org"></a>http://nan.wikipedia.org （白話字）</li></ul>
+<p>李勤岸</p><ul><li><a href='http://pojbh.lib.ntnu.edu.tw/script/index.htm'/>台語白話字文獻館</a> （白話字，漢羅。CC授權）</li></ul>
+
+<p><b>Imput Methods</b></p><ul><li>信望愛台語客語輸入法（Windows, OSX）</li></ul>
+
+<h2>Goals/Dreams (To be sorted into short/mid/long term goals later)</h2><ul><li>Community based orthography recommendation (to avoid the term link standard or normalization XD)<ul><li>羅馬字（台羅，白話字）</li>
+<li>漢字</li></ul>
+</li>
+<li>Better imput methods (on different OS/devices; web-based)</li>
+<li>Better <b>off-line</b> dictionary (including a Taiwanese-Taiwanese dictionary<ul><li>Taiwanese-Taiwanese</li>
+<li>Taiwanese-Mandarin</li>
+<li>Taiwanese-English</li>
+<li>Taiwanese-Japanese</li>
+<li>Taiwanese-Hakka</li>
+<li>Taiwanese-Other languages/dialects in Min/SouthernMin (Wordnet of the South, long term)</li></ul>
+</li>
+<li>Dual script text processing<ul><li>Semi-automatic tool to perform 羅馬字 to 漢字 and 漢字 to 羅馬字 conversion</li>
+<li>Infrastructure to keep dual script sync (for editor or for web-content)</li>
+<li>Semi-automatic annotation (Ruby) tool</li></ul>
+</ul>
+
+<h2>Current status</h2><p>Case 0: Taiwanes Orthograpy</p><p></p><p>Case 1: From FHL-IME to FHL-DIctioanry</p><p>From pektiong=pcchen: Currently, the <a href='https://bitbucket.org/pcchen/nan'/>信望愛台語料庫</a> uses LIFT as data format, uses WeSay as the client to edit and to sync with the hg server (bitbucket). <a href='https://github.com/lukhnos/lift-convert'/>lift-convert</a> is then used to convert the entry (in the formate of &quot;lomaji hanji&quot;) to csv, then be converted into database for the FHL-IME.</p><p></p><p>In principle multiple people can use WeSay to edit the same data, when WeSay sync with the hg server, it will perform auto-merge. Unfortunately, most of the time I am the only user. On can also edit the LIFT XML directoy, then use WeSay to sync to the hg server.</p><p></p><p>WeSay is slow and has only stable version on windows for now. WeSay also comes to some tools to convert the LIFT into HTML/PDF/Word but they don&rsquo;w work well with large XML (such as 信望愛台語料庫). LIFT is designed for storing lexical information, so in principle it is a good choice for the data format for the Taiwanese dictionary. For a long time I cannot find good dictionary software so I didn&rsquo;t try tro use WeSay/LIFT to build a Taiwanese dictionary. Currently it only has many entries in the formate like &quot;jiû-hî 鰇魚&quot; to be used for IME.&nbsp;</p><p></p><p>With the birth of the 萌典, it becomes more likely that one can build a Taiwanese dictionary by (1) create/aggregate dictionary data (2) convert the data to 萌典 format. This is something I am testing now. The idea is to</p><ul><li>Aggregate data from on-line Taiwanese dictionaries into some dict data (say WeSay/LIFT)</li>
+<li>Create a conversion tool (miaoski has written a prototype)</li>
+<li>Enhance 萌典 （羅馬字搜尋，全文搜尋）etc</li>
+<li>After the inital bootstrap, need some way to 校對 and maintain/update the data</li></ul>
+
+<p><b>Links</b></p><ul><li><a href='http://wesay.palaso.org/'/>WeSay&nbsp;</a></li>
+<li><a href='https://code.google.com/p/lift-standard/'/>LIFT</a> (Lexicon Interchange FormaT) is an XML format for storing lexical information, as used in the creation of dictionaries. It&rsquo;s not necessarily the format for your lexicon. That can be tied to whatever program you&rsquo;re using. But LIFT allows you to move that data between programs (hence the term &rsquo;interchange&rsquo;).</li></ul>
+
+<p>Case 2: Wikipedia and Digital Archive</p><p></p><p></p><p></p><p></p></body>
+</html>
