@@ -3,78 +3,111 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="452"/>
+<meta name="version" content="1398"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$l1W5Cw53OyI</title>
 </head>
-<body><h1>g0v project hub 資料收集處</h1><p></p><p>for <a href="http://g0v.github.io/project-hub-mockup/"></a>http://g0v.github.io/project-hub-mockup/</p><p></p><p></p><h2>填表說明</h2><ul class="code"><li>* id: &quot;<b>project-id</b>&quot;</li></ul>
-<ul class="comment"><li>optional，通常取專案上線網址中的關鍵字，或者 hackfoldr id。如果留空，程式會自動以流水號代替</li></ul>
-<ul class="code"><li>&nbsp; name:</li>
-<li>&nbsp;&nbsp;&nbsp; zh: &quot;<b>專案中文名稱</b>&quot;</li></ul>
-<ul class="comment"><li>&nbsp;&nbsp;&nbsp; 必填</li></ul>
-<ul class="code"><li>&nbsp;&nbsp;&nbsp; en: &quot;<b>project name in englis</b>h&quot;</li></ul>
-<ul class="comment"><li>&nbsp;&nbsp;&nbsp; optional，將來做英文版才會用到，不過如果先填入的話就可以被搜尋</li></ul>
-<ul class="code"><li>&nbsp; logo: &quot;<b>url for project icon</b>&quot;</li></ul>
-<ul class="comment"><li>&nbsp; optional，如果留空，程式會自動以第一個專案成果網址的網頁抓圖代替</li></ul>
-<ul class="code"><li>&nbsp; intro:</li>
+<body><h1>g0v project hub 資料收集處</h1><p></p><p>本文件屬於 g0v 基礎建設的一部份，目的是補完新 project hub <a href="http://g0v.github.io/project-hub-mockup/"></a>http://g0v.github.io/project-hub-mockup/ 所需的資料，方便大眾搜尋專案成果，也方便社群夥伴找坑來跳。</p><p></p><h2>專案資料空白模版</h2><p>請複製這個空白模版，貼到下方的共筆編輯區，然後開始編輯專案資料（修改粗體螢光部分即可）。文件底下附錄有詳細的填表說明。</p><ul class="code"><li>* id: &quot;<b>project-id</b>&quot;&nbsp; <i>optional</i></li>
+<li>&nbsp; name:</li>
+<li>&nbsp;&nbsp;&nbsp; zh: &quot;<b>專案中文名稱</b>&quot;<i>&nbsp; required.</i></li>
+<li>&nbsp;&nbsp;&nbsp; en: &quot;<b>project name in englis</b>h&quot;&nbsp; <i>optional</i></li>
+<li>&nbsp; logo: &quot;<b>url for project icon</b>&quot;&nbsp; <i>optional</i></li>
+<li>&nbsp; intro:</li>
 <li>&nbsp;&nbsp;&nbsp; zh:</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; short: &quot;<b>專案中文簡介</b>&quot;</li></ul>
-<ul class="comment"><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; optional，通常專案共筆或 github readme 裡面可以找到適合的文字來當作專案簡介</li></ul>
-<ul class="code"><li>&nbsp;&nbsp;&nbsp; en:</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; short: &quot;<b>project intro in english</b>&quot;</li></ul>
-<ul class="comment"><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; optional，將來做英文版才會用到，不過如果先填入的話就可以被搜尋</li></ul>
-<ul class="code"><li>&nbsp; category: &lt;[ <b>開放資料 開放政府 社會參與 新媒體 政策共筆 g0v基礎建設 其他</b> ]&gt;</li></ul>
-<ul class="comment"><li>&nbsp; 必要，請在這7種分類裡面選一個</li></ul>
-<ul class="code"><li>&nbsp; tag: &lt;[ <b>關鍵字1 關鍵字2 關鍵字3</b> ]&gt;</li></ul>
-<ul class="comment"><li>&nbsp; optional</li></ul>
-<ul class="code"><li>&nbsp; tool: &lt;[ <b>工具語言框架1 工具語言框架2 工具語言框架3</b> ]&gt;</li></ul>
-<ul class="comment"><li>&nbsp; optional</li></ul>
-<ul class="code"><li>&nbsp; license: &lt;[ <b>CC0 CC-By BSD MIT WTFPL</b> ]&gt;</li></ul>
-<ul class="comment"><li>&nbsp; 必要，請在眾多 OSI / CC 授權裡面選一個</li></ul>
-<ul class="code"><li>&nbsp; homepage: &quot;<b>url for project landing page</b>&quot;</li></ul>
-<ul class="comment"><li>&nbsp; optional，如果留空，程式會自動以第一個專案成果的網址代替</li></ul>
-<ul class="code"><li>&nbsp; achievement:</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; short: &quot;<b>專案中文簡介</b>&quot;&nbsp; <i>optional</i></li>
+<li>&nbsp;&nbsp;&nbsp; en:</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; short: &quot;<b>project intro in english</b>&quot;&nbsp; <i>optional</i></li>
+<li>&nbsp; category: &lt;[ <b>開放資料 開放政府 社會參與 新媒體 政策共筆 g0v基礎建設 其他</b> ]&gt;<i>&nbsp; required.</i></li>
+<li>&nbsp; tag: &lt;[ <b>關鍵字1 關鍵字2 關鍵字3</b> ]&gt;&nbsp; <i>optional</i></li>
+<li>&nbsp; tool: &lt;[ <b>工具語言框架1 工具語言框架2 工具語言框架3</b> ]&gt;&nbsp; <i>optional</i></li>
+<li>&nbsp; license: &lt;[ <b>授權1 授權2 </b>]&gt;<i>&nbsp; required.</i></li>
+<li>&nbsp; homepage: &quot;<b>url for project landing page</b>&quot;&nbsp; <i>optional</i></li>
+<li>&nbsp; achievement:</li>
 <li>&nbsp;&nbsp;&nbsp; [{</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; type: &quot;&quot;</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; phase: &quot;&quot;</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; url: &quot;&quot;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; type: &quot;<b>第一項專案成果以什麼形式呈現</b>&quot;<i>&nbsp; required.</i></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; phase: &quot;<b>第一項專案成果開發到什麼階段</b>&quot;&nbsp; <i>optional</i></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; url: &quot;<b>第一項專案成果的網址</b>&quot;<i>&nbsp; required.</i></li>
+<li>&nbsp;&nbsp;&nbsp; }]</li>
+<li>&nbsp; workspace:</li>
+<li>&nbsp;&nbsp;&nbsp; [{</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; type: &quot;<b>第一項專案工作區的類型</b>&quot;&nbsp; <i>optional</i></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; name: &quot;<b>第一項專案工作區的名稱</b>&quot;&nbsp; <i>optional</i></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; url: &quot;<b>第一項專案工作區的網址</b>&quot;<i>&nbsp; required.</i></li>
+<li>&nbsp;&nbsp;&nbsp; }]</li>
+<li>&nbsp; resource:</li>
+<li>&nbsp;&nbsp;&nbsp; [{</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; type: &quot;<b>第一項資料來源的類型</b>&quot;&nbsp; <i>optional</i></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; name: &quot;<b>第一項資料來源的名稱</b>&quot;&nbsp; <i>optional</i></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; url: &quot;<b>第一項資料來源的網址</b>&quot;&nbsp; <i>optional</i></li>
+<li>&nbsp;&nbsp;&nbsp; }]</li>
+<li>&nbsp; story:</li>
+<li>&nbsp;&nbsp;&nbsp; [{</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; title: &quot;<b>專案介紹文或介紹影片的標題</b>&quot;&nbsp; <i>optional</i></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; url: &quot;<b>專案介紹文或介紹影片的網址</b>&quot;&nbsp; <i>optional</i></li>
+<li>&nbsp;&nbsp;&nbsp; }]</li>
+<li>&nbsp; related: &lt;[ <b>相關專案1 相關專案2 相關專案3</b> ]&gt;&nbsp; <i>optional</i></li></ul>
+
+<h2>專案資料共筆編輯區</h2><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><h2>附錄：填表欄位說明</h2><ul class="code"><li>* id: &quot;<b>project-id</b>&quot;&nbsp; <i>optional，通常取專案上線網址中的關鍵字，或者 hackfoldr id。如果留空，程式會自動以流水號代替</i></li>
+<li>&nbsp; name:</li>
+<li>&nbsp;&nbsp;&nbsp; zh: &quot;<b>專案中文名稱</b>&quot;<i>&nbsp; required.</i></li>
+<li>&nbsp;&nbsp;&nbsp; en: &quot;<b>project name in englis</b>h&quot;<i>&nbsp; optional，將來做英文版才會用到，不過如果先填入的話就可以被搜尋</i></li>
+<li>&nbsp; logo: &quot;<b>url for project icon</b>&quot;<i>&nbsp; optional，用來顯示為專案的縮圖。如果留空，程式會自動以第一個專案成果網址的網頁抓圖代替</i></li>
+<li>&nbsp; intro:</li>
+<li>&nbsp;&nbsp;&nbsp; zh:</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; short: &quot;<b>專案中文簡介</b>&quot;<i>&nbsp; optional，通常專案共筆或 github readme 裡面找到的專案說明文字可以拿來當作專案簡介</i></li>
+<li>&nbsp;&nbsp;&nbsp; en:</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; short: &quot;<b>project intro in english</b>&quot;<i>&nbsp; optional，將來做英文版才會用到，不過如果先填入的話就可以被搜尋</i></li>
+<li>&nbsp; category: &lt;[ <b>開放資料 開放政府 社會參與 新媒體 政策共筆 g0v基礎建設 其他</b> ]&gt;<i>&nbsp; required. 請在這 7 種分類裡面選 1 個填，雖然可以多選，但盡量只選 1 個就好，頂多 2 個，中間以空白隔開。</i></li>
+<li>&nbsp; tag: &lt;[ <b>關鍵字1 關鍵字2 關鍵字3</b> ]&gt;<i>&nbsp; optional，隨意填寫想被搜尋到的關鍵字，中間以空白隔開。</i></li>
+<li>&nbsp; tool: &lt;[ <b>工具語言框架1 工具語言框架2 工具語言框架3</b> ]&gt;<i>&nbsp; optional，解釋想跳坑的人要會使用哪些工具才能接手編輯目前的檔案或程式，如 Illustrator, Photoshop, Sass, Jade, Django, Rails, PHP, Angular JS, React JS... 等，中間以空白隔開。</i></li>
+<li>&nbsp; license: &lt;[ <b>CC0 CC-By BSD MIT WTFPL</b> ]&gt;<i>&nbsp; required. g0v 專案必須是 OSI (程式) 或 CC (一般著作) 授權，如果專案中有多種授權可一起列出，中間以空白隔開。雖然是必填，但如果不幸遇到沒寫授權的專案，跟坑主確認前也只能先留空 XD&nbsp;</i></li>
+<li>&nbsp; homepage: &quot;<b>url for project landing page</b>&quot;<i>&nbsp; optional，按下專案縮圖會打開的網址。如果留空，程式會自動以第一個專案成果的網址代替</i></li>
+<li>&nbsp; achievement:</li>
+<li>&nbsp;&nbsp;&nbsp; [{</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; type: &quot;<b>第一項專案成果以什麼形式呈現</b>&quot;<i>&nbsp; required，這個成果要在什麼地方使用（程式）、或屬於什麼性質（非程式）。應用程式類包括：Web, Android / iOS / Firefox OS / WP, Linux / Mac / Windows, Chrome / Firefox / Safari, 底層程式或資料包括：Code, API, Data, 非程式類的包括：Document, Media, Artwork …等。</i></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; phase: &quot;<b>第一項專案成果開發到什麼階段</b>&quot;<i>&nbsp; optional，程式類包括： Wireframe, Mockup, Demo, Prototype, Alpha, Beta, Production。非程式類包括： Research, Draft, Finished, Published…等，如反黑箱服貿插圖。已經過時不再適用的話則是 Memory，如萌典啄木鳥這種有時效性的網站。</i></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; url: &quot;<b>第一項專案成果的網址</b>&quot;<i>&nbsp; required.&nbsp;</i></li>
 <li>&nbsp;&nbsp;&nbsp; }</li>
 <li>&nbsp;&nbsp;&nbsp; {</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; type: &quot;&quot;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; type: &quot;&quot;&nbsp; <i>optional，</i>如果有多項成果網址，<i>就接著第二、第三個…寫下去。</i></li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; phase: &quot;&quot;</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; url: &quot;&quot;</li>
 <li>&nbsp;&nbsp;&nbsp; }</li>
 <li>]</li>
 <li>&nbsp; workspace:</li>
 <li>&nbsp;&nbsp;&nbsp; [{</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; type: &quot;&quot;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; type: &quot;<b>第一項專案工作區的類型</b>&quot;<i>&nbsp; optional，如果留空，程式會自動抓取網址來判定最常用的幾種工作區，包括 Hackfoldr, Hackpad, Github, Google Drive, Google Groups, Facebook。</i></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; name: &quot;<b>第一項專案工作區的名稱</b>&quot;<i>&nbsp; optional，如果有多個 Github，導致需要特別用命名區分每個工作區是幹嘛的、跟另一個有何不同，則可以填寫這欄，不然就留空。</i></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; url: &quot;<b>第一項專案工作區的網址</b>&quot;<i>&nbsp; required.&nbsp;</i></li>
+<li>&nbsp;&nbsp;&nbsp; }</li>
+<li>&nbsp;&nbsp;&nbsp; {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; type: &quot;&quot;&nbsp; <i>optional，</i>如果有多個工作區，<i>就接著第二、第三個…寫下去。</i></li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; name: &quot;&quot;</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; url: &quot;&quot;</li>
-<li>&nbsp;&nbsp;&nbsp; }]</li>
+<li>&nbsp;&nbsp;&nbsp; }</li>
+<li>]</li>
 <li>&nbsp; resource:</li>
 <li>&nbsp;&nbsp;&nbsp; [{</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; type: &quot;&quot;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; type: &quot;<b>第一項資料來源的類型</b>&quot;<i>&nbsp; optional，如果有多筆相似的資料來源，需要註明分類以便區隔，可以利用這個欄位，不需要的話則留白。</i></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; name: &quot;<b>第一項資料來源的名稱</b>&quot;<i>&nbsp; 這個連結要顯示的名稱。如果這個專案完全沒有資料來源，則此欄位 optional。如果有，則此欄位 required。</i></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; url: &quot;<b>第一項資料來源的網址</b>&quot;<i>&nbsp; 網站、程式碼、繪圖檔案……的網址，目的是讓其他人能夠追溯到上游的檔案或資料。如果這個專案完全沒有資料來源，則此欄位 optional。如果有，則此欄位 required。</i></li>
+<li>&nbsp;&nbsp;&nbsp; }</li>
+<li>&nbsp;&nbsp;&nbsp; {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; type: &quot;&quot;&nbsp; <i>optional，</i>如果有多個資料來源，<i>就接著第二、第三個…寫下去。</i></li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; name: &quot;&quot;</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; url: &quot;&quot;</li>
-<li>&nbsp;&nbsp;&nbsp; }]</li>
+<li>&nbsp;&nbsp;&nbsp; }</li>
+<li>]</li>
 <li>&nbsp; story:</li>
 <li>&nbsp;&nbsp;&nbsp; [{</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; title: &quot;&quot;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; title: &quot;<b>專案介紹文或介紹影片的標題</b>&quot; <i>如果這個專案完全沒有介紹文章或介紹影片，則此欄位 optional。如果有，則此欄位 required。</i></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; url: &quot;<b>專案介紹文或介紹影片的網址</b>&quot; <i>如果這個專案完全沒有介紹文章或介紹影片，則此欄位 optional。如果有，則此欄位 required。</i></li>
+<li>&nbsp;&nbsp;&nbsp; }</li>
+<li>&nbsp;&nbsp;&nbsp; {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; title: &quot;&quot;&nbsp; <i>optional，</i>如果有多則介紹文章或<i>介紹</i>影片，<i>就接著第二、第三個…寫下去。</i></li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; url: &quot;&quot;</li>
-<li>&nbsp;&nbsp;&nbsp; }]</li>
-<li>&nbsp; related: &lt;[]&gt;</li>
-<li><br/></li></ul>
+<li>&nbsp;&nbsp;&nbsp; }</li>
+<li>]</li>
+<li>&nbsp; related: &lt;[ <b>相關專案1 相關專案2 相關專案3</b> ]&gt;&nbsp; <i>optional，相關專案的名稱或 id，填進來以後搜尋這些相關專案時也會被列出，另，將來會使用這個欄位做 project jump 功能。有多個相關專案時，中間以空白隔開。</i></li></ul>
 
-<p></p><p></p><p></p><p>id (identifier): xxxxxx</p><ul><li>名稱 name (hash): (zh) 公民臉書、(en) xxxx</li>
-<li>簡介 intro (hash): (short) blah、(normal) blahblahblah</li>
-<li>類別 class (array): <a href="https://docs.google.com/drawings/d/1LrYPQapN1l8t9zlqr6UoX8SH6Th_h7vBhUEvJ6-gCs8/edit"></a>https://docs.google.com/drawings/d/1LrYPQapN1l8t9zlqr6UoX8SH6Th_h7vBhUEvJ6-gCs8/edit</li>
-<li>主題標籤 tag (array): 新民主</li>
-<li>跳坑 participant (hash): 企畫(user id / needed)、設計(user id / needed)、前端(user id / needed)、後端(user id / needed)</li>
-<li>目前使用工具 tool (array): MOQUPS、SASS、COMPASS、SEMANTIC UI、GULP、ANGULAR JS、FIREBASE、ADOBE、 ILLUSTRATOR</li>
-<li>授權 license (array): MIT、CC BY</li>
-<li>現有成果 achievement (hash): idea (hackpad url)、plan (hackpad url)、wireframe (moqups / google drawing / hackpad url)、mockup、(tag: prototype, pre-alpha, alpha, beta, production) website (url)、android app (google play url)、ios app&nbsp; (app store url)、api、api spec doc</li>
-<li>協作/討論平台 workspace (hash): HACKFOLDR、GITHUB、GOOGLE DRIVE、GOOGLE CALENDAR、GOOGLE GROUPS、GOOGLE+ COMMUNITY、facebook groups</li>
-<li>對此專案感興趣 follower (array): lee, etblue, poga, ddio, ttcat</li>
-<li>相關專案 related (array): 公民臉書後端、動民主</li></ul>
-
-</body>
+<h2>問答、建議與討論</h2><p></p><p></p><p></p><p></p></body>
 </html>
