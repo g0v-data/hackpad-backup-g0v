@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="452"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$l1W5Cw53OyI</title>
+</head>
+<body><h1>g0v project hub 資料收集處</h1><p></p><p>for <a href="http://g0v.github.io/project-hub-mockup/"></a>http://g0v.github.io/project-hub-mockup/</p><p></p><p></p><h2>填表說明</h2><ul class="code"><li>* id: &quot;<b>project-id</b>&quot;</li></ul>
+<ul class="comment"><li>optional，通常取專案上線網址中的關鍵字，或者 hackfoldr id。如果留空，程式會自動以流水號代替</li></ul>
+<ul class="code"><li>&nbsp; name:</li>
+<li>&nbsp;&nbsp;&nbsp; zh: &quot;<b>專案中文名稱</b>&quot;</li></ul>
+<ul class="comment"><li>&nbsp;&nbsp;&nbsp; 必填</li></ul>
+<ul class="code"><li>&nbsp;&nbsp;&nbsp; en: &quot;<b>project name in englis</b>h&quot;</li></ul>
+<ul class="comment"><li>&nbsp;&nbsp;&nbsp; optional，將來做英文版才會用到，不過如果先填入的話就可以被搜尋</li></ul>
+<ul class="code"><li>&nbsp; logo: &quot;<b>url for project icon</b>&quot;</li></ul>
+<ul class="comment"><li>&nbsp; optional，如果留空，程式會自動以第一個專案成果網址的網頁抓圖代替</li></ul>
+<ul class="code"><li>&nbsp; intro:</li>
+<li>&nbsp;&nbsp;&nbsp; zh:</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; short: &quot;<b>專案中文簡介</b>&quot;</li></ul>
+<ul class="comment"><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; optional，通常專案共筆或 github readme 裡面可以找到適合的文字來當作專案簡介</li></ul>
+<ul class="code"><li>&nbsp;&nbsp;&nbsp; en:</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; short: &quot;<b>project intro in english</b>&quot;</li></ul>
+<ul class="comment"><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; optional，將來做英文版才會用到，不過如果先填入的話就可以被搜尋</li></ul>
+<ul class="code"><li>&nbsp; category: &lt;[ <b>開放資料 開放政府 社會參與 新媒體 政策共筆 g0v基礎建設 其他</b> ]&gt;</li></ul>
+<ul class="comment"><li>&nbsp; 必要，請在這7種分類裡面選一個</li></ul>
+<ul class="code"><li>&nbsp; tag: &lt;[ <b>關鍵字1 關鍵字2 關鍵字3</b> ]&gt;</li></ul>
+<ul class="comment"><li>&nbsp; optional</li></ul>
+<ul class="code"><li>&nbsp; tool: &lt;[ <b>工具語言框架1 工具語言框架2 工具語言框架3</b> ]&gt;</li></ul>
+<ul class="comment"><li>&nbsp; optional</li></ul>
+<ul class="code"><li>&nbsp; license: &lt;[ <b>CC0 CC-By BSD MIT WTFPL</b> ]&gt;</li></ul>
+<ul class="comment"><li>&nbsp; 必要，請在眾多 OSI / CC 授權裡面選一個</li></ul>
+<ul class="code"><li>&nbsp; homepage: &quot;<b>url for project landing page</b>&quot;</li></ul>
+<ul class="comment"><li>&nbsp; optional，如果留空，程式會自動以第一個專案成果的網址代替</li></ul>
+<ul class="code"><li>&nbsp; achievement:</li>
+<li>&nbsp;&nbsp;&nbsp; [{</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; type: &quot;&quot;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; phase: &quot;&quot;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; url: &quot;&quot;</li>
+<li>&nbsp;&nbsp;&nbsp; }</li>
+<li>&nbsp;&nbsp;&nbsp; {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; type: &quot;&quot;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; phase: &quot;&quot;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; url: &quot;&quot;</li>
+<li>&nbsp;&nbsp;&nbsp; }</li>
+<li>]</li>
+<li>&nbsp; workspace:</li>
+<li>&nbsp;&nbsp;&nbsp; [{</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; type: &quot;&quot;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; name: &quot;&quot;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; url: &quot;&quot;</li>
+<li>&nbsp;&nbsp;&nbsp; }]</li>
+<li>&nbsp; resource:</li>
+<li>&nbsp;&nbsp;&nbsp; [{</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; type: &quot;&quot;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; name: &quot;&quot;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; url: &quot;&quot;</li>
+<li>&nbsp;&nbsp;&nbsp; }]</li>
+<li>&nbsp; story:</li>
+<li>&nbsp;&nbsp;&nbsp; [{</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; title: &quot;&quot;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; url: &quot;&quot;</li>
+<li>&nbsp;&nbsp;&nbsp; }]</li>
+<li>&nbsp; related: &lt;[]&gt;</li>
+<li><br/></li></ul>
+
+<p></p><p></p><p></p><p>id (identifier): xxxxxx</p><ul><li>名稱 name (hash): (zh) 公民臉書、(en) xxxx</li>
+<li>簡介 intro (hash): (short) blah、(normal) blahblahblah</li>
+<li>類別 class (array): <a href="https://docs.google.com/drawings/d/1LrYPQapN1l8t9zlqr6UoX8SH6Th_h7vBhUEvJ6-gCs8/edit"></a>https://docs.google.com/drawings/d/1LrYPQapN1l8t9zlqr6UoX8SH6Th_h7vBhUEvJ6-gCs8/edit</li>
+<li>主題標籤 tag (array): 新民主</li>
+<li>跳坑 participant (hash): 企畫(user id / needed)、設計(user id / needed)、前端(user id / needed)、後端(user id / needed)</li>
+<li>目前使用工具 tool (array): MOQUPS、SASS、COMPASS、SEMANTIC UI、GULP、ANGULAR JS、FIREBASE、ADOBE、 ILLUSTRATOR</li>
+<li>授權 license (array): MIT、CC BY</li>
+<li>現有成果 achievement (hash): idea (hackpad url)、plan (hackpad url)、wireframe (moqups / google drawing / hackpad url)、mockup、(tag: prototype, pre-alpha, alpha, beta, production) website (url)、android app (google play url)、ios app&nbsp; (app store url)、api、api spec doc</li>
+<li>協作/討論平台 workspace (hash): HACKFOLDR、GITHUB、GOOGLE DRIVE、GOOGLE CALENDAR、GOOGLE GROUPS、GOOGLE+ COMMUNITY、facebook groups</li>
+<li>對此專案感興趣 follower (array): lee, etblue, poga, ddio, ttcat</li>
+<li>相關專案 related (array): 公民臉書後端、動民主</li></ul>
+
+</body>
+</html>
