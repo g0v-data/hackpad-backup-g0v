@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2322"/>
+<meta name="version" content="2327"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$OoaenzjVDKK</title>
 </head>
 <body><h1>透析貪污判決--揭露與查詢網站</h1><p>(暫名,尚缺副標)</p><p>The Disclosure of Corruption Judgement,&nbsp; the Web</p><p>可能網址：blackmoney.g0v.tw 歡迎各種建議</p><p></p><h2>緣起</h2><ul><li>貪污是個表面上看起來沒什麼，實際上會對社會造成侵蝕的嚴重病灶</li>
@@ -83,7 +83,7 @@
 <h2>專案各階段</h2><p><b>第零階段 爬貪污判決書（已完成）</b></p><p>2014-8&nbsp;</p><p>利用iMacros從<a href='http://fyjud.lawbank.com.tw/index.aspx'/>法律法源網</a>爬所有案由為貪污的判決書（csv檔），地方、高等、最高三審級皆以爬完。法律法源網的更新頻率沒有<a href='http://jirs.judicial.gov.tw/FJUD/'/>司法院資料庫</a>高，但是他的搜索系統比較完整好用。</p><p>判決書Data package . csv：</p><p><a href='https://drive.google.com/file/d/0B9fzCPAUltsqOElYc1N0TFRaSTg/edit?usp=sharing'/>地方法院&amp;高等法院(2000-2014) 7z</a></p><ul style="list-style: none;"><li>解壓縮以後共2X個資料夾，H開頭為高等法院；L為地方</li>
 <li>&nbsp;ex HKaohsiung高雄高等分院；LTaipei台北地方法院</li></ul>
 <p><a href='https://drive.google.com/file/d/0B9fzCPAUltsqZVBLNE1zclRFYnM/edit?usp=sharing'/>最高法院(1996-2014) 7z</a></p><p>待解問題：</p><p>民國100年以前絕大部分判決書，被告姓名與公司都被遮蓋起來，無法得知。據說司法院內部帳號可以看沒被遮蓋起來的版本。</p><p></p><p><b>第一階段 資料梳理、填充欄位（進行中）</b></p><p>由於發現到的遮蓋問題，決定先縮小處理範圍當作嘗試。民100-102年的判決書除了少數重審的案件外，其他都沒有匿名；而地院的內容相對單純，於是把他拉出來單獨打包：</p><p><a href='https://drive.google.com/file/d/0B9fzCPAUltsqWUZLWGw0OU8tUUU/edit?usp=sharing'/>100-102年地方法院判決包7z</a></p><ul style="list-style: none;"><li>- 將所有地院判決【判決日期100-102年】丟到同一資料夾的版本</li></ul>
-<p>有個麻煩：</p><p>判決書為了可讀性、整齊等等因素，會斷行。在資料處理上變得麻煩。</p><p></p><p>由於我不是資工相關科系出身，誠徵對判決書有興趣的NLP高手助陣</p><p>各路大神提供的Approach：</p><p>1.regular expression</p><p>2.machine learning</p><p></p><p><b>第二階段 網站上線</b></p><p>部份資料處理好之後，就可以開始想查詢網站的問題。</p><p>相對一般會google的問題，使用者知道問題但不知道答案；貪污查詢很可能面臨使用者「不知道問題也不知道答案」。</p><p>也許可以跟其他專案整合</p><ul style="list-style: none;"><li><br/></li></ul>
+<p>有個麻煩：</p><p>判決書為了可讀性、整齊等等因素，會斷行。在資料處理上變得麻煩。</p><p></p><p>由於我不是資工相關科系出身，誠徵對判決書有興趣的NLP高手助陣</p><p>各路大神提供的Approach：</p><p>1.regular expression</p><p>2.machine learning</p><p></p><p><b>第二階段 網站上線</b></p><p>部份資料處理好之後，就可以開始想查詢網站的問題。</p><p>相對一般會google的問題，使用者知道問題但不知道答案；貪污查詢很可能面臨使用者「不知道問題也不知道答案」。</p><p>可以跟過去的新聞報導作連結</p><p>也可以跟其他專案整合</p><ul style="list-style: none;"><li><br/></li></ul>
 <p><b>第三階段 擴充資料範圍</b></p><p>第一階段東西有刻出來的話，那地院就不是問題。接下來就是高等法院、最高法院的判決書處理，這時候就能夠加上案件從地方法院打到最高法院的歷審呈現。也可以爬其他相關的法律判決。</p><p></p><h2>目前成果</h2><p>判決書Data package . csv：</p><p><a href='https://drive.google.com/file/d/0B9fzCPAUltsqOElYc1N0TFRaSTg/edit?usp=sharing'/>地方法院&amp;高等法院(2000-2014) 7z</a></p><ul style="list-style: none;"><li>解壓縮以後共2X個資料夾，H開頭為高等法院；L為地方</li>
 <li>&nbsp;ex HKaohsiung高雄高等分院；LTaipei台北地方法院</li></ul>
 <p><a href='https://drive.google.com/file/d/0B9fzCPAUltsqZVBLNE1zclRFYnM/edit?usp=sharing'/>最高法院(1996-2014) 7z</a></p><p><a href='https://drive.google.com/file/d/0B9fzCPAUltsqWUZLWGw0OU8tUUU/edit?usp=sharing'/>100-102年地方法院判決包7z</a></p><ul style="list-style: none;"><li>- 將所有地院判決【判決日期100-102年】丟到同一資料夾的版本</li></ul>
