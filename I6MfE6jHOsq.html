@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="348"/>
+<meta name="version" content="498"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$I6MfE6jHOsq</title>
 </head>
 <body><h1>大型社群活動發送通知信注意事項</h1><p></p><p><b>現成發信平台</b></p><ul><li><a href="https://mandrill.com/"></a>https://mandrill.com/<ul><li>ex: COSCUP2014</li></ul>
@@ -27,5 +27,11 @@
 <p><b>Mandrill</b></p><ul><li>會加上 tracking image 追蹤開信與否</li>
 <li>自幹簡單範例 <a href="https://github.com/CrBoy/python-mailer-example"></a>https://github.com/CrBoy/python-mailer-example</li></ul>
 
-</body>
+<p><b>信件範本加 tag</b></p><ul><li>g0v Summit 2014 活動與票種複雜，通知信希望參與者只收到一封，所以加了兩個變數以條件方式嵌入（有Conference, Unconference, 晚宴等組合）<ul><li>範本模組 - &gt; 一般行前通知、晚宴通知、Unconference 通知</li>
+<li>會眾：一般行前通知</li>
+<li>VIP：一般行前通知 + Unconference 通知</li>
+<li>講者：一般行前通知 + 晚宴通知 + Unconference 通知</li></ul>
+</ul>
+
+<p>&nbsp;</p><p></p></body>
 </html>
