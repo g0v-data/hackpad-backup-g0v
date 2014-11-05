@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="273"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$I6MfE6jHOsq</title>
+</head>
+<body><h1>大型社群活動發送通知信注意事項</h1><p></p><p><b>現成發信平台</b></p><ul><li><a href="https://mandrill.com/"></a>https://mandrill.com/<ul><li>ex: COSCUP2014</li></ul>
+</li>
+<li><a href="http://mailchimp.com/"></a>http://mailchimp.com/&nbsp;</li></ul>
+
+<p><b>AWS | Amazon Simple Email Service (SES)</b></p><p>ex: COSCUP 2013, g0v Summit 2014</p><p></p><ol><li>流程</li>
+<li>可能地雷</li><ul><li>encoding<ul><li>mail header should be encoding in base64</li>
+<li>utf-8 content&nbsp;&nbsp;&nbsp;</li></ul>
+</li>
+<li>特殊字元被退信&nbsp; ☞ ⓘ</li>
+<li>重複寄信狀況：<ul><li>google 會把重複內容隱藏</li>
+<li>要改標題，否則會跟前信 group 起來</li></ul>
+</ul>
+</ol>
+<ol><li>可使用 Library</li></ol>
+<ul><li>PHPMailer <a href="https://github.com/PHPMailer/PHPMailer"></a>https://github.com/PHPMailer/PHPMailer</li>
+<li>小工具 <a href="https://github.com/toomore/COSCUP2013Secretary-Toolkit"></a>https://github.com/toomore/COSCUP2013Secretary-Toolkit</li></ul>
+
+</body>
+</html>
