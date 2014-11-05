@@ -3,10 +3,12 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="353"/>
+<meta name="version" content="1049"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$cMxpnj1roqw</title>
 </head>
-<body><h1>選前選舉人口消長計算與地圖化</h1><p></p><h2>資料來源</h2><p><b>政府資料</b></p><p><a href="http://data.moi.gov.tw/MoiOD/Data/DataDetail.aspx?oid=F4478CE5-7A72-4B14-B91A-F4701758328F"></a>http://data.moi.gov.tw/MoiOD/Data/DataDetail.aspx?oid=F4478CE5-7A72-4B14-B91A-F4701758328F</p><p></p><p><b>.csv檔模板</b></p><p><a href='https://www.dropbox.com/s/pre7s09e82gtt05/103%E5%B9%B49%E6%9C%88%E8%87%BA%E5%8C%97%E5%B8%82%E4%BA%BA%E5%8F%A3%E8%B3%87%E6%96%99.csv?dl=0'/>103年9月臺北市人口資料.csv</a></p><p></p><h2>格式</h2><p><b>整體模板架構</b></p><ol><li>資料採男女分列的方式</li>
+<body><h1>選前選舉人口消長計算與地圖化</h1><p></p><h2>資料來源</h2><p><b>政府資料</b></p><p><a href="http://data.moi.gov.tw/MoiOD/Data/DataDetail.aspx?oid=F4478CE5-7A72-4B14-B91A-F4701758328F"></a>http://data.moi.gov.tw/MoiOD/Data/DataDetail.aspx?oid=F4478CE5-7A72-4B14-B91A-F4701758328F</p><p></p><p><b>.csv檔模板</b></p><p><a href='https://www.dropbox.com/s/pre7s09e82gtt05/103%E5%B9%B49%E6%9C%88%E8%87%BA%E5%8C%97%E5%B8%82%E4%BA%BA%E5%8F%A3%E8%B3%87%E6%96%99.csv?dl=0'/>103年9月臺北市人口資料.csv</a></p><p></p><p><b>資料配對模式</b></p><undefined><li><b>五都</b></li></undefined>
+<p>2014/9 &amp; 2010/11</p><p></p><undefined><li><b>桃園市+其他縣市</b></li></undefined>
+<p>2014/9 &amp; 2009/12</p><p></p><h2>完成資料回報區</h2><p><b>2014/9</b></p><p>臺北市 <a href='https://www.dropbox.com/s/pre7s09e82gtt05/103%E5%B9%B49%E6%9C%88%E8%87%BA%E5%8C%97%E5%B8%82%E4%BA%BA%E5%8F%A3%E8%B3%87%E6%96%99.csv?dl=0'/>103年9月臺北市人口資料.csv</a></p><p></p><p></p><p><b>2010/11 &amp; 2009/12</b></p><p></p><p></p><h2>格式</h2><p><b>整體模板架構</b></p><ol><li>資料採男女分列的方式</li>
 <li>列出村里級資料和鄉鎮市區級資料</li>
 <li>製作單一年齡組、五歲年齡組以及選舉人口世代資料，其中選舉人口世代區分如下：<ol><li>青年 (20-34)</li>
 <li>壯年 (35-49)</li>
@@ -81,6 +83,63 @@
 <ul class="comment"><li>製作全國地圖時，偶爾會遇到 (鄉鎮市區名+村里名) 有重複的情況，必須再冠上縣市名以區別</li>
 <li><br/></li></ul>
 <ol><li>鄉鎮市區級資料</li></ol>
+<ul style="list-style: none;"><li><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_cMxpnj1roqw_p.168714_1415194539385_undefined'/></li></ul>
 
-<p></p><p><b>列標示</b></p><p></p><p></p><p></p><p><b>資料作業區</b></p><p></p><p><b>公式連結</b></p><p></p><p></p></body>
+<p></p><p><b>列標示</b></p><ol><li>男性、女性與總和分開列表</li></ol>
+
+<p><b>資料作業撇步</b></p><ol><li>先開啟檔案</li></ol>
+<ul style="list-style: none;"><li><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_cMxpnj1roqw_p.168714_1415196300048_undefined'/></li></ul>
+<ol><li>先開啟新的一頁工作表</li></ol>
+<ul style="list-style: none;"><li><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_cMxpnj1roqw_p.168714_1415195723489_undefined'/></li></ul>
+<ol><li>在新工作表的表頭的第一欄第一列按下=，回頭點原資料頁的第一欄第一列</li></ol>
+<ul class="comment"><li><i>請留意本圖的函式列 =&rsquo;opendata-10309_age-63000!&rsquo;A1</i></li></ul>
+<ul style="list-style: none;"><li><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_cMxpnj1roqw_p.168714_1415195862424_undefined'/></li></ul>
+<ol><li>開始拖曳，拖曳範圍如下：行─往下拉拉到底；列─先拉到性別總和的地方</li></ol>
+<ul class="comment"><li>本圖已啟用行列凍結窗格</li></ul>
+<ul style="list-style: none;"><li><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_cMxpnj1roqw_p.168714_1415196175481_undefined'/></li></ul>
+<ol><li>由於全台灣的人口資料表都是男女合表並列的，這種模板方便瀏覽，但是很不方便做資料處理，因此，我們需要將資料表中的各年齡層的男女欄位分離成各自的表格。技巧如下：<ol><li>先清除女性資料</li></ol>
+</ol>
+<ul style="list-style: none;"><li><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_cMxpnj1roqw_p.168714_1415196516837_undefined'/></li><ol><li>選取男性資料並多選出一排空排</li></ol>
+</ul>
+<ul style="list-style: none;"><li><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_cMxpnj1roqw_p.168714_1415196649067_undefined'/></li><ol><li>開始拖曳</li></ol>
+</ul>
+<ul style="list-style: none;"><li><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_cMxpnj1roqw_p.168714_1415196714420_undefined'/></li><ol><li>注意！如果中間拖曳有休息，休息後重拉的時候，記得要墊一排空排</li></ol>
+</ul>
+<ul style="list-style: none;"><li><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_cMxpnj1roqw_p.168714_1415196830671_undefined'/></li><ol><li>拖曳完之後的長相</li></ol>
+</ul>
+<ul style="list-style: none;"><li><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_cMxpnj1roqw_p.168714_1415196888164_undefined'/></li><ol><li>消除空排的方法：用特殊目標尋找</li></ol>
+</ul>
+<ul style="list-style: none;"><li><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_cMxpnj1roqw_p.168714_1415196945029_undefined'/></li><ol><li>點選尋找空格</li></ol>
+</ul>
+<ul style="list-style: none;"><li><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_cMxpnj1roqw_p.168714_1415197012515_undefined'/></li><ol><li>選取所有的空格</li></ol>
+</ul>
+<ul style="list-style: none;"><li><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_cMxpnj1roqw_p.168714_1415197052420_undefined'/></li><ol><li>刪除空格</li></ol>
+</ul>
+<ul style="list-style: none;"><li><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_cMxpnj1roqw_p.168714_1415197095568_undefined'/></li><ol><li>刪除按下去，勾選右側儲存格左移</li></ol>
+</ul>
+<ul style="list-style: none;"><li><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_cMxpnj1roqw_p.168714_1415197134605_undefined'/></li><ol><li>資料分離完成</li></ol>
+</ul>
+<ul style="list-style: none;"><li><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_cMxpnj1roqw_p.168714_1415197348599_undefined'/></li><ol><li>女性也可以如法炮製，先刪除男性資料後拖曳</li></ol>
+</ul>
+<ul style="list-style: none;"><li><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_cMxpnj1roqw_p.168714_1415197803016_undefined'/></li></ul>
+<ol><li>先將要套入的資料分離出來，用插入列和刪除列的方式將最右上側的單一年齡組資料表的空間調整好，將資料貼入，經過公式連動，可以生成村里層級的三個資料表。</li>
+<li>參考村里層級資料表的區域別名稱，在鄉鎮市區級資料更改區域別名稱，即可將資料連動，並生成鄉鎮市區級的三個資料表。</li></ol>
+
+<p><b>公式連結概念</b></p><ol><li>總和表係由男性表+女性表而得的</li>
+<li>五歲年齡組係由SUM(**,**)函數自單一年齡組將指定年齡組加總而得</li>
+<li>選舉人口世代表係由SUM(**,**)函數自五歲年齡組將指定年齡組加總而得</li>
+<li>鄉鎮市區級資料係由SUMIF(**,**)函數自村里級資料的對應資料表由電腦自行檢測符合條件的資料加總而得。</li></ol>
+<ul class="comment"><li>記得定義域的部分在行和列上都要打上&quot;$&quot;做固定，以便於拖曳時資料不會亂跳</li></ul>
+
+<h2>GIS地圖製作</h2><p><b>現今選舉人口</b></p><ol><li>製作村里級和鄉鎮市區級</li>
+<li>年齡層區分為青年 (20-34)、壯年 (35-49)、中年 (50-64)、老年I (65-79)、老年II (80-)與總和</li>
+<li>一個縣市共製作12張地圖，解析度200dpi即可</li>
+<li>以目前戰況較關鍵的縣市優先 e.g.臺北市和臺中市</li></ol>
+
+<p><b>人口消長差異</b></p><ol><li>製作村里級和鄉鎮市區級</li>
+<li>年齡層區分為青年 (20-34)、壯年 (35-49)、中年 (50-64)、老年I (65-79)、老年II (80-)與總和</li>
+<li>一個縣市共製作12張地圖，解析度200dpi即可</li>
+<li>以目前戰況較關鍵的縣市優先 e.g.臺北市和臺中市</li></ol>
+
+</body>
 </html>
