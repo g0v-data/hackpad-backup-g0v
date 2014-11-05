@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="225"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$cMxpnj1roqw</title>
+</head>
+<body><h1>選前選舉人口消長計算與地圖化</h1><p></p><h2>資料來源</h2><p><b>政府資料</b></p><p><a href="http://data.moi.gov.tw/MoiOD/Data/DataDetail.aspx?oid=F4478CE5-7A72-4B14-B91A-F4701758328F"></a>http://data.moi.gov.tw/MoiOD/Data/DataDetail.aspx?oid=F4478CE5-7A72-4B14-B91A-F4701758328F</p><p></p><p><b>.csv檔模板</b></p><p><a href='https://www.dropbox.com/s/pre7s09e82gtt05/103%E5%B9%B49%E6%9C%88%E8%87%BA%E5%8C%97%E5%B8%82%E4%BA%BA%E5%8F%A3%E8%B3%87%E6%96%99.csv?dl=0'/>103年9月臺北市人口資料.csv</a></p><p></p><h2>格式</h2><ol><li>資料採男女分列的方式</li>
+<li>列出村里級資料和鄉鎮市區級資料</li>
+<li>製作單一年齡組、五歲年齡組以及選舉人口世代資料，其中選舉人口世代區分如下：<ol><li>青年 (20-34)</li>
+<li>壯年 (35-49)</li>
+<li>中年 (50-64)</li>
+<li>老年I (65-79)&nbsp;&nbsp; ※ Young Elderly 年輕老人</li>
+<li>老年II (80-)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ※ Old Elderly 老老人</li></ol>
+</ol>
+
+<table style="font-size:13px;cell-spacing: 0px; border-collapse: collapse;"><tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#36984;&#33289;&#20154;&#21475;&#19990;&#20195;&#36039;&#26009;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#20116;&#27506;&#24180;&#40801;&#32068;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#21934;&#19968;&#24180;&#40801;&#32068;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#26449;&#37324;&#32026;&#36039;&#26009;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#26449;&#37324;&#32026;&#36039;&#26009;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#26449;&#37324;&#32026;&#36039;&#26009;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#30007;&#24615;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#30007;&#24615;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#30007;&#24615;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#22899;&#24615;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#22899;&#24615;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#22899;&#24615;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#32317;&#21644;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#32317;&#21644;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#32317;&#21644;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#37129;&#37806;&#24066;&#21312;&#32026;&#36039;&#26009;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#37129;&#37806;&#24066;&#21312;&#32026;&#36039;&#26009;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#37129;&#37806;&#24066;&#21312;&#32026;&#36039;&#26009;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#30007;&#24615;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#30007;&#24615;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#30007;&#24615;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#22899;&#24615;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#22899;&#24615;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#22899;&#24615;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#32317;&#21644;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#32317;&#21644;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#32317;&#21644;</td>
+</tr>
+</table>
+<p>詳細格式請見<a href='https://www.dropbox.com/s/pre7s09e82gtt05/103%E5%B9%B49%E6%9C%88%E8%87%BA%E5%8C%97%E5%B8%82%E4%BA%BA%E5%8F%A3%E8%B3%87%E6%96%99.csv?dl=0'/>103年9月臺北市人口資料.csv</a></p><p></p><p><b>資料作業區</b></p><p></p><p><b>公式連結</b></p><p></p><p></p></body>
+</html>
