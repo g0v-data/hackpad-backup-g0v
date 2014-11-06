@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1077"/>
+<meta name="version" content="1122"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$cMxpnj1roqw</title>
 </head>
 <body><h1>選前選舉人口消長計算與地圖化</h1><p></p><h2>資料來源</h2><p><b>政府資料</b></p><p><a href="http://data.moi.gov.tw/MoiOD/Data/DataDetail.aspx?oid=F4478CE5-7A72-4B14-B91A-F4701758328F"></a>http://data.moi.gov.tw/MoiOD/Data/DataDetail.aspx?oid=F4478CE5-7A72-4B14-B91A-F4701758328F</p><p></p><p><b>.csv檔模板</b></p><p><a href='https://www.dropbox.com/s/pre7s09e82gtt05/103%E5%B9%B49%E6%9C%88%E8%87%BA%E5%8C%97%E5%B8%82%E4%BA%BA%E5%8F%A3%E8%B3%87%E6%96%99.csv?dl=0'/>103年9月臺北市人口資料.csv</a></p><p></p><p><b>資料配對模式</b></p><undefined><li><b>五都</b></li></undefined>
@@ -133,13 +133,18 @@
 <ul class="comment"><li>記得定義域的部分在行和列上都要打上&quot;$&quot;做固定，以便於拖曳時資料不會亂跳</li></ul>
 
 <h2>GIS地圖製作</h2><p><b>現今選舉人口</b></p><ol><li>製作村里級和鄉鎮市區級</li>
-<li>年齡層區分為青年 (20-34)、壯年 (35-49)、中年 (50-64)、老年I (65-79)、老年II (80-)與總和</li>
-<li>一個縣市共製作12張地圖，解析度200dpi即可</li>
+<li>年齡層區分為青年 (20-34)、壯年 (35-49)、中年 (50-64)、老年I (65-79)、老年II (80-)與總和</li></ol>
+<ul style="list-style: none;"><li>計算指標：</li><ul><li>總和是呈現人數</li>
+<li>各年齡層為[年齡層人口/總和]的百分比</li></ul>
+</ul>
+<ol><li>一個縣市共製作12張地圖，解析度200dpi即可</li>
 <li>以目前戰況較關鍵的縣市優先 e.g.臺北市和臺中市</li></ol>
 
 <p><b>人口消長差異</b></p><ol><li>製作村里級和鄉鎮市區級</li>
-<li>年齡層區分為青年 (20-34)、壯年 (35-49)、中年 (50-64)、老年I (65-79)、老年II (80-)與總和</li>
-<li>一個縣市共製作12張地圖，解析度200dpi即可</li>
+<li>年齡層區分為青年 (20-34)、壯年 (35-49)、中年 (50-64)、老年I (65-79)、老年II (80-)</li></ol>
+<ul style="list-style: none;"><li>計算指標：</li><ul><li>[人口差/2014年人口]的百分比</li></ul>
+</ul>
+<ol><li>一個縣市共製作12張地圖，解析度200dpi即可</li>
 <li>以目前戰況較關鍵的縣市優先 e.g.臺北市和臺中市</li></ol>
 
 </body>
