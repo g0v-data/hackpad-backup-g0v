@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="715"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$hxJBK9v7frt</title>
+</head>
+<body><h1>政商關係圖</h1><p></p><p><b>計畫目標</b></p><p>提供台灣公司、社(財)團法人關係整合查詢界面，供各界查詢法人、自然人網絡連結。</p><p></p><p><b>短期目標</b></p><ul><li>open source</li>
+<li>建立 Resfult API</li>
+<li>整合台灣公司關係圖現有介面</li></ul>
+
+<p><b>中期目標</b></p><ul><li>整合社團、財團法人董監事資料</li>
+<li>美化網站、增加查詢功能<ul><li>查公司（加箭頭、區分核心與非核心企業）</li>
+<li>查人名</li>
+<li>查社團法人、財團法人董監事（如：XX基金會）</li>
+<li>查地址</li></ul>
+</ul>
+
+<p><b>目前進度</b></p><p>Open source:&nbsp;</p><ul style="list-style: none;"><li>已放上 GitHub, 正在修正查詢功能. - Gilbert</li></ul>
+<p>建立 Rest&nbsp; API:</p><ul style="list-style: none;"><li>已有 linode 主機, 資料庫也準備妥當. 預計用 Flask 作 Rest API. - Gilbert</li></ul>
+<p>整合現有台灣公司關係圖界面:</p><ul style="list-style: none;"><li>因皆使用 D3.js 的 Force&nbsp; Layout, 只要略改 tag 名稱就可以接過去原界面 - Gilbert</li><ul class="comment"><li>我記得原本是用別人的library? 要視覺化的話重刻比較好？</li>
+<li>我在想，要不要直接規劃ronny wang網站的介面？目前ronny wang會嘗試吧Gilbert的資料放到他的網站，已經在重新弄php了</li>
+<li><a href="http://company.g0v.ronny.tw/"></a>http://company.g0v.ronny.tw/</li>
+<li><br/></li>
+<li>他應該不會重新弄 php 吧, 他給我看了他的 json 格式, 我只要把我的 json&nbsp; 格式修改一下就能接過去了</li>
+<li>他的網站是死網頁, 只要改資料來源就好, 但我們可以把他作得更漂亮一點, 所以才要美化.</li></ul>
+</ul>
+<ul style="list-style: none;"><li><br/></li></ul>
+<p>網站美化:&nbsp; (小天)</p><ul style="list-style: none;"><li>Search interface</li>
+<li>D3.js&nbsp;</li></ul>
+<p>整合社團法人資料:</p><ul style="list-style: none;"><li>尚未開始，已知Jimmy有爬過資料</li>
+<li><br/></li></ul>
+<p><b>建議&nbsp;</b></p><p>( 歡迎推坑, 不保證完成 XD)</p><p></p><p></p><p></p></body>
+</html>
