@@ -3,10 +3,59 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="139"/>
+<meta name="version" content="1304"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$XmxOuuxLxpo</title>
 </head>
-<body><h1>g0v Summit 2014 檢討共筆</h1><p></p><p></p><p></p><h2>場務組</h2><p><a href='/Zk56XscS31g#:h=檢討'/>g0v summit 2014 : 檢討</a></p><p></p><p></p><h2>口譯組</h2><p></p><p></p><p></p><h2>議程組</h2><ul><li>議程長度：panel 時間太短 (?)</li>
+<body><h1>g0v Summit 2014 檢討共筆</h1><p></p><p></p><p></p><h2>場務組</h2><p><a href='/Zk56XscS31g#:h=檢討'/>g0v summit 2014 : 檢討</a></p><ul class="comment"><li>補一下攤位的狀況：</li>
+<li>Kirby 沒有回信所以不知道他沒有時間擺攤，另有一攤因為家中有事臨時無法前來。</li>
+<li>(但剛好在抽順序的時候是攤位區的正中間 囧&gt; 導致中間非常空 看起來很突兀</li>
+<li>另外 tom 因為較晚有事所以比其他攤更早撤攤 (((於是中間空三桌 Orz</li>
+<li>-</li>
+<li>也許之後可以在確定空桌的時候改配置成野生 hack 區 或是休息區</li>
+<li>(或是讓其他攤擴攤? 但他們可能沒有加用桌子的需求...</li>
+<li><br/></li></ul class="comment">
+<h2>口譯組</h2><p><b>Icecast部分</b></p><ul><li>人手不足<ul><li>server裝機和source client人員最低配置希望可以有三個人</li></ul>
+</li>
+<li>day0<ul><li>&nbsp;5點多才裝機，沒時間進會議室實測</li>
+<li>中研院的public ip需要事先申請，開放的port也要申請，icecast不能使用80,443 port，這次運氣好有組ip可以使用8554(icecast), 8555(ssh)</li>
+<li>&nbsp;沒有實際用線路組的無線網路測試過</li></ul>
+</li>
+<li>day1&nbsp;<ul><li>取得電腦時間比較晚，沒時間測試就直接上（考慮會議室8點才開，口譯人員也很早到，一定要儘早架設並且測試完成）</li>
+<li>R0碰到使用staff wifi會斷線情形(訊號會飄)，可能是口譯天線訊號干擾，後來牽了一台AP進去解決，麥克風採用au支援的指向型48+（但是有雜訊又換成onev2內建）</li>
+<li>R1 缺少耳機一分二的分接器，早上採神速換，下午BP送來支援，使用mac內建麥克風</li>
+<li>R2 au支援分接器和UE9000耳機，使用mac內建麥克風</li>
+<li>R1,R2均須要搬桌子和椅子進去</li>
+<li>碰到不同的中控人員可能需要自備延長線，以免沒有電源</li></ul>
+</li>
+<li>day2<ul><li>沒有中控室，位置決定在最後面小門旁邊的空位</li>
+<li>會收到現場麥克風聲音</li>
+<li>AS_Public也是會掛</li>
+<li>閃電秀需要翻譯給外國講者聽</li><ul class="comment"><li>有非正式的逐步翻給講者，如果人力充足的話可以考慮同步口譯。</li>
+<li>感謝強大的CTBlue</li></ul>
+</ul>
+</ul>
+<ul><li>建議配置及作法<ul><li>人力配置: 3人</li>
+<li>設備配置: 一台server，3台筆電，三支指向麥克風，六隻耳機(3.5接頭)，三個 3.5 mm (公) to 3.5mm X2(母)&nbsp; （若是沒有租口譯設備或者贊助口譯設備），麥克風延長線<b></b>、音源延長線數條 (建立臨時口譯空間用)。</li>
+<li>早點到中研院架設server(最好可以在day0以前完成)，因為conf跟unconf地點不同才有這個需求</li>
+<li>R1,R2需要配置有桌子椅子和延長線的配置</li>
+<li>開始前務必與口譯人員完成測試</li>
+<li>盡量走有線網路，或與會眾使用的網路分離</li>
+<li>可以想個解法支援中英文雙軌進行</li></ul>
+</ul>
+
+<p><b>&nbsp;口譯部分</b></p><ul><li>人手不足<ul><li>這次可用人力只有 9 個人，加上 Day 0 Welcome Party、Day 1 Banquet、Day 2 Unconference 與 Lightning Talk，需要與講者溝通的時間很長，平均下來組員負荷很大</li>
+<li>建議往後人力配置每人以總時數不超過 1 ~ 1.5 hr 為原則，多保留些體力協助講者與會眾間溝通互動</li></ul>
+</li>
+<li>內容部分<ul><li>由於不少議程無法事前準備，建議可以發起開源社群詞彙共筆<i>專案(?)</i>，事先想好很難翻譯的詞彙該如何應對</li>
+<li>收集專有名詞如「攝護線」、「香港學聯」</li>
+<li>或是鄉民梗「加速進行中」、「逆風高飛」、「一直玩」etc.</li>
+<li>e.g. 酸民 --&gt; haters、攝護線 --&gt; Shot for Democracy</li><ul class="comment"><li>糟糕好像挖坑了，這個該怎麼開坑呢？</li>
+<li>部份應該在 <a href='/g0v--MI7fGNIdygb'/>黑話</a> 這裡有, 已開了坑 → <a href="https://g0v.hackpad.com/2fsvJFyCOr5"></a>https://g0v.hackpad.com/2fsvJFyCOr5</li></ul>
+</ul>
+</ul>
+<ul><li><br/></li></ul>
+
+<h2>議程組</h2><ul><li>議程長度：panel 時間太短 (?)</li>
 <li>可增加社福議題</li>
 <li>Conf &amp; Unconf 地點人數報名方式皆不同，導致報名非常複雜</li></ul>
 
