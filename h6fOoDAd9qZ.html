@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2432"/>
+<meta name="version" content="2444"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$h6fOoDAd9qZ</title>
 </head>
 <body><h1>義務律師陪偵平台</h1><p></p><p>Hackath9n 簡報：<a href="http://goo.gl/2o3Ywx"></a>http://goo.gl/2o3Ywx　文稿：<a href="http://goo.gl/v2CHQ2"></a><a href='http://goo.gl/v2CHQ2'/>http://goo.gl/v2CHQ2</a></p><p></p><ul><li>舊 hackpad： <a href="https://hackpad.com/--ltsoiiHdSbX"></a>https://hackpad.com/--ltsoiiHdSbX</li>
@@ -11,25 +11,28 @@
 <ul class="comment"><li>accompany/defend 會不會比 follow 合適？或乾脆用 attorney xD</li>
 <li>可以XDD</li>
 <li>xD 用 attorney 感覺有潛力包括其他可能的服務 xD</li>
-<li>android的bundle id也用這個嗎？＠＠，是的話我就把整個換掉</li></ul class="comment">
+<li>android的bundle id也用這個嗎？＠＠，是的話我就把整個換掉</li></ul>
+
 <h2>什麼是陪偵？ </h2><ul><li>一般抗議活動時往往會有抗議民眾被警方帶走偵訊，為維護這些抗議民眾的權益，司改會協調義務律師前往現場協助民眾面對偵查。往往是事件驅動，並隨著各種事件的大小而有不同程度的驅動量。</li>
 <li>本平台目的是確保每位當事人皆有律師陪同偵訊，並降低NGOs（目前平台為司改會）與當事人、律師間反覆確認的聯繫行政工作。</li></ul>
-<h2>為什麼發起？</h2><ul><li>因為 TonyQ 去參與民間司改會 323 聯合訴訟時，跟執秘梅慧聊到他是資訊人，所以意外跌坑。主要是他們現在並沒有一個可以讓律師認養陪偵案件的有效系統，在聯繫律師的過程往往需要透過大量電話簡訊往返與確認，而且如果沒有辦法馬上接到回音的話，容易有多個律師去協助一個陪偵當事人的資源浪費的狀況。（除非案子很特殊，不然通常不需要多個律師到場）</li></li>
-<li>請問這是不是代表某些時候的確需要不只一個律師？如果是這樣的話，資料欄位或許可以加數量？&nbsp;</li></li>
-<li>之前跟梅慧確認時提到這種時候通常非常特殊（ex.魏揚），可以作為特例處理。</li></li>
-<li>了解。雖然我覺得以資料庫和寫程式的角度來說，加上數量其實不難 xD</li></li>
-<li>我覺得可以保留擴充空間 就初期來講先以簡化介面為主 XD&nbsp; （用最小單位推進） (ps.我想用 mongo XDD)</li></li>
-<li>喔如果只是介面的話就先當作 n = 1 顯示第一個律師之類的 (mongo 會讓這件事情比較困難嗎？）</li></li>
-<li>不會 可能比較簡單 因為他可以巢狀存資料。只要多 push 一個律師進去就好 XD</li></li>
-<li>我的個人意見是一開始就要用 list, 但是 UI 先顯示第一個（如果非空）</li></li>
-<li>Sure :)</li></li>
-<li>或者是說，因為司改會及律師之間也不容易掌握現場有多少律師，所以許多熱心的律師就乾脆直接到現場，但有時候其實現場的律師已足夠</li>
-<li>加上民間司改會目前沒有太多行政人力可以做這件事情，如 318 學運期間曾有上百次的陪偵需求，聯繫相當浪費資源，若未來面對可能更大的抗爭規模，能否即時做出準備讓義務律師團能夠盡最大心力幫忙，是此一平台很重要的事情。</li></li>
-<li>且其實目前我們較難協助中南部的陪偵（中南部是有義務律師的），希望未來此平台也可以協助中南部的陪偵</li></li>
-<li>我有一點想法想確認一下：請問這個平台提供公民需求尋找義務律師，那麼律師是否僅透過司改會聯繫？</li></li>
-<li>之所以提出這問題的想法是：如果該平台僅提供公民聯繫司改會，那麼由司改會單向聯繫各律師，縱使避免「公民有需求卻無法及時有義務律師」以及「無須過多律師確有太多義務律師到場」等兩種情況，聯繫過程也仍是資源消耗。</li></li>
-<li>假若公民和律師「雙方」都透過該平台聯繫呢？也就是說，作為一個及時為公民服務的平台，公民有「及時找到律師」的需求，而義務律師也希望「及時到現場且避免『過多律師造成不必要』」，所以對於律師來說，律師也要能在平台上確認及時資訊，而非被動聯繫。不知司改會覺得這樣的建置方式如何？</li>
-<li>功能需求：（以下是以需求暨規劃書的方式列出，如得有現成套件可以取代可以討論、但請注意功能是否符合）</li></ul>
+
+<h2>為什麼發起？</h2><ul><li>因為 TonyQ 去參與民間司改會 323 聯合訴訟時，跟執秘梅慧聊到他是資訊人，所以意外跌坑。主要是他們現在並沒有一個可以讓律師認養陪偵案件的有效系統，在聯繫律師的過程往往需要透過大量電話簡訊往返與確認，而且如果沒有辦法馬上接到回音的話，容易有多個律師去協助一個陪偵當事人的資源浪費的狀況。（除非案子很特殊，不然通常不需要多個律師到場）</li><ul class="comment"><li>請問這是不是代表某些時候的確需要不只一個律師？如果是這樣的話，資料欄位或許可以加數量？&nbsp;</li>
+<li>之前跟梅慧確認時提到這種時候通常非常特殊（ex.魏揚），可以作為特例處理。</li>
+<li>了解。雖然我覺得以資料庫和寫程式的角度來說，加上數量其實不難 xD</li>
+<li>我覺得可以保留擴充空間 就初期來講先以簡化介面為主 XD&nbsp; （用最小單位推進） (ps.我想用 mongo XDD)</li>
+<li>喔如果只是介面的話就先當作 n = 1 顯示第一個律師之類的 (mongo 會讓這件事情比較困難嗎？）</li>
+<li>不會 可能比較簡單 因為他可以巢狀存資料。只要多 push 一個律師進去就好 XD</li>
+<li>我的個人意見是一開始就要用 list, 但是 UI 先顯示第一個（如果非空）</li>
+<li>Sure :)</li>
+<li>或者是說，因為司改會及律師之間也不容易掌握現場有多少律師，所以許多熱心的律師就乾脆直接到現場，但有時候其實現場的律師已足夠</li></ul>
+</ul>
+<ul><li>加上民間司改會目前沒有太多行政人力可以做這件事情，如 318 學運期間曾有上百次的陪偵需求，聯繫相當浪費資源，若未來面對可能更大的抗爭規模，能否即時做出準備讓義務律師團能夠盡最大心力幫忙，是此一平台很重要的事情。</li><ul class="comment"><li>且其實目前我們較難協助中南部的陪偵（中南部是有義務律師的），希望未來此平台也可以協助中南部的陪偵</li>
+<li>我有一點想法想確認一下：請問這個平台提供公民需求尋找義務律師，那麼律師是否僅透過司改會聯繫？</li>
+<li>之所以提出這問題的想法是：如果該平台僅提供公民聯繫司改會，那麼由司改會單向聯繫各律師，縱使避免「公民有需求卻無法及時有義務律師」以及「無須過多律師確有太多義務律師到場」等兩種情況，聯繫過程也仍是資源消耗。</li>
+<li>假若公民和律師「雙方」都透過該平台聯繫呢？也就是說，作為一個及時為公民服務的平台，公民有「及時找到律師」的需求，而義務律師也希望「及時到現場且避免『過多律師造成不必要』」，所以對於律師來說，律師也要能在平台上確認及時資訊，而非被動聯繫。不知司改會覺得這樣的建置方式如何？</li></ul>
+</ul>
+<ul><li>功能需求：（以下是以需求暨規劃書的方式列出，如得有現成套件可以取代可以討論、但請注意功能是否符合）</li></ul>
+
 <h2>Wireframe</h2><p><a href='https://www.dropbox.com/s/vh5q4dencfqixtz/64995_-_suferer%20%282%29.png'/>Link1: NGO</a>&nbsp;</p><p><a href='https://www.dropbox.com/s/vzsi6hc8j48knpv/Untitled_Page_%281%29%20%283%29.png'/>Link2: Lawyer</a></p><ul><li>Web NGO使用 <a href="https://moqups.com/miffy.dandelion@gmail.com/o1gI6Iyb/"></a>https://moqups.com/miffy.dandelion@gmail.com/o1gI6Iyb/</li>
 <li>App 律師登入使用的 mockup <a href="https://moqups.com/pbear6150/0BBskG71/p:afa876067"></a>https://moqups.com/pbear6150/0BBskG71/p:afa876067</li><ul class="taskdone"><li>帳號設定（所有欄位皆可以修改）&nbsp;</li></ul>
 <ul><li>案件清單</li><ul class="taskdone"><li>只顯示未處理的案件</li>
@@ -247,7 +250,8 @@
 </ul>
 <ul class="comment"><li>讓律師願意主動回報目前所在地點或是被動選擇案件區域如何？假設大家都同樣有空、意願相似的話，是不是比較近的人去移動成本最小？（這跟司改會通知要發給誰是兩回事）</li>
 <li>我沒有寫清楚，目前其實計畫會是 pool ，就是傳送給該區的所有人，看誰先回應這樣。（是有談到一個可以讓律師設定在線上或不在線上，但我覺得這個有點太複雜） （另外這個系統也應該要可以允許非原本的義務律師來加入）</li>
-<li>對我的意思就是這樣。至少讓律師被動的選擇願意接受的範圍。</li></ul class="comment">
+<li>對我的意思就是這樣。至少讓律師被動的選擇願意接受的範圍。</li></ul>
+
 <h2>進展</h2><ul><li><s><a href='https://hackpad.com/ep/profile/HUoUqaJnV2n'/>Tonyq Wang</a> 認養 Web</s><ul><li><a href="https://github.com/JRF-attorney/jrf-attorney-web"></a><s>https://github.com/JRF-attorney/jrf-attorney-web</s></li><ul class="task"><li>移進 g0v<ul class="task"><li>跟司改會確認過 open 的問題</li></ul class="task">
 </li>
 <li>建立正式測試站</li><ul class="taskdone"><li>api 的註冊(register method) 並可回傳 sid&nbsp;</li>
