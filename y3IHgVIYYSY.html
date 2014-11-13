@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="568"/>
+<meta name="version" content="662"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$y3IHgVIYYSY</title>
 </head>
 <body><h1>選舉黃頁 API (alpha)</h1><p></p><p>選舉黃頁基本上是由兩棵 <a href='http://www.sitepoint.com/hierarchical-data-database-2/'/>MPTT</a> 樹狀結構所組成， areas 為行政區、 elections 為選舉區，這樣子切割的原因是部份選舉區跟行政區需要額外對應，像是個別議員選區經常會對應到一個以上的行政區，因此切開來處理。 透過 api 取得的資料都會有 rght 與 lft 用在 MPTT 索引的欄位，只要 rght - lft = 1 就表示該節點為樹葉 (leaf node) ，它不會有下一層。</p><p></p><ul><li><a href="http://k.olc.tw/elections/api/areas/index/53c01bce-df94-4939-a456-5460acb5b862"></a>http://k.olc.tw/elections/api/areas/index<a href='http://k.olc.tw/elections/api/areas/index/53c01bce-df94-4939-a456-5460acb5b862'/>/53c01bce-df94-4939-a456-5460acb5b862</a><ul><li>取得單層行政區資料， index/ 後面可以接個別行政區 id 來取得下一層資料</li>
@@ -53,7 +53,36 @@
 <li>platform: 政見</li></ul>
 </ul>
 
-<p></p><p><b>許願清單Wishlist</b></p><p></p><p></p><ul class="task"><li>和真度計的資料匯合，成為csv或json，可以用http request撈到</li><ul class="comment"><li>真度計<a href="http://disa.csie.org:5566/"></a>http://disa.csie.org:5566/</li></ul class="comment">
+<p><b>非動態資料</b></p><ul><li>所有選區資料 - <a href="https://github.com/kiang/elections/tree/master/Console/Command/data/2014_areas"></a>https://github.com/kiang/elections/tree/master/Console/Command/data/2014_areas</li><ul class="code"><li>id - 選舉黃頁uuid</li>
+<li>url - 選舉黃頁網址</li>
+<li>election - 選區</li>
+<li>quota - 應選人數</li>
+<li>quota_woman - 婦女保障名額</li>
+<li>population - 人口</li>
+<li>population_electors - 選舉人數量（滿 20 歲）</li>
+<li>areas - 行政區 (</li>
+<li>id - 選舉黃頁uuid</li>
+<li>name - 名稱</li>
+<li>ivid - <a href="https://github.com/g0v/twgeojson"></a>https://github.com/g0v/twgeojson 的行政區編號</li>
+<li>code - 主計處的行政區編號</li>
+<li>population - 人口</li>
+<li>population_electors - 選舉人數量（滿 20 歲）</li>
+<li>url - 選舉黃頁網址</li>
+<li>)</li></ul>
+</ul>
+<ul><li>候選人名單 <a href="https://github.com/kiang/elections/tree/master/Console/Command/data/2014_candidates"></a>https://github.com/kiang/elections/tree/master/Console/Command/data/2014_candidates<ul><li>pdf 格式是從中選會下載的備份</li>
+<li>csv 格式是透過程式初步處理結果</li></ul>
+</li>
+<li>應選名額 <a href="https://github.com/kiang/elections/tree/master/Console/Command/data/2014_quota"></a>https://github.com/kiang/elections/tree/master/Console/Command/data/2014_quota<ul><li>上面選區資料的子集合，主要針對應選名額匯出</li></ul>
+</li>
+<li>候選人名單 <a href="https://github.com/kiang/elections/blob/master/Console/Command/data/db_dump.csv"></a>https://github.com/kiang/elections/blob/master/Console/Command/data/db_dump.csv<ul><li>選舉黃頁裡面的候選人名單，只有選區、名字跟網址</li></ul>
+</li>
+<li>候選人 FB 資料 <a href="https://github.com/kiang/elections/blob/master/Console/Command/data/facebook_candidates.csv"></a>https://github.com/kiang/elections/blob/master/Console/Command/data/facebook_candidates.csv<ul><li>把個人資料裡有 FB 連結的匯出</li></ul>
+</li>
+<li>fb / google result <a href="https://github.com/kiang/elections/blob/master/Console/Command/data/google_fb.csv"></a>https://github.com/kiang/elections/blob/master/Console/Command/data/google_fb.csv<ul><li>從 <a href="https://github.com/chhsiao1981/candidate_google_data"></a>https://github.com/chhsiao1981/candidate_google_data 取得的資料進行一些比對工作，但資料正確性不夠高</li></ul>
+</ul>
+
+<p><b>許願清單Wishlist</b></p><p></p><p></p><ul class="task"><li>和真度計的資料匯合，成為csv或json，可以用http request撈到</li><ul class="comment"><li>真度計<a href="http://disa.csie.org:5566/"></a>http://disa.csie.org:5566/</li></ul class="comment">
 </li>
 <li><a href="https://github.com/averangeall/nose-meter/tree/master"></a>https://github.com/averangeall/nose-meter/tree/master</li></ul>
 <ul class="comment"><li><br/></li></ul>
