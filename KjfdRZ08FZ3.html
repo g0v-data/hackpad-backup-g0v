@@ -3,10 +3,10 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="3256"/>
+<meta name="version" content="3319"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$KjfdRZ08FZ3</title>
 </head>
-<body><h1>議員投票指南</h1><p><a href='http://vote.ly.g0v.tw/'/>立委投票指南</a> 議會版</p><h2>各縣市議會專案</h2><p><a href='/uGplqkYholX'/>議員投票指南－架站流程</a></p><ul><li>台北市<ul><li><a href="https://github.com/g0v/councilor-voter-guide"></a><a href='https://github.com/g0v/councilor-voter-guide'/>https://github.com/g0v/councilor-voter-guide</a></li>
+<body><h1>議員投票指南</h1><p><a href='http://vote.ly.g0v.tw/'/>立委投票指南</a> 議會版</p><h2>各縣市議會專案</h2><p><a href='/uGplqkYholX'/>議員投票指南－架站流程</a></p><p><b>台北市</b></p><ul><li><a href="https://github.com/g0v/councilor-voter-guide"></a><a href='https://github.com/g0v/councilor-voter-guide'/>https://github.com/g0v/councilor-voter-guide</a></li>
 <li>6/16 <a href='https://github.com/thewayiam/councilor-voter-guide/tree/master/meeting_minutes/taipei'/>會議記錄</a> <a href='https://github.com/g0v/councilor-voter-guide/blob/master/crawler/taipei/spiders/meeting_minutes_spider.py'/>crawler</a> done</li>
 <li>6/18 <a href='https://github.com/thewayiam/councilor-voter-guide/blob/master/data/pretty_format/taipei_councilor-11.json'/>議員資料</a> <a href='https://github.com/g0v/councilor-voter-guide/blob/master/crawler/taipei/spiders/councilor_spider.py'/>crawler</a> done</li>
 <li>6/19 議員資料 <a href='https://github.com/g0v/councilor-voter-guide/blob/master/parser/councilors/councilors.py'/>parser</a> done(json to db)</li>
@@ -22,60 +22,50 @@
 <li>˙7/9 表決parser</li>
 <li>7/10 表決資料呈現：<a href='http://councils.g0v.tw/councilors/conscience_vote/%E8%87%BA%E5%8C%97%E5%B8%82/11/'/>脫黨投票</a>、<a href='http://councils.g0v.tw/councilors/not_voting/%E8%87%BA%E5%8C%97%E5%B8%82/11/'/>投票缺席</a>、<a href='http://councils.g0v.tw/councilors/not_voting/%E8%87%BA%E5%8C%97%E5%B8%82/11/'/>表決總覽</a>、<a href='http://councils.g0v.tw/councilors/voter/%E9%8D%BE%E5%B0%8F%E5%B9%B3_1962-08-27/11/'/>個人表決紀錄</a></li>
 <li>9/10 <a href='http://councils.g0v.tw/candidates/2014/%E8%87%BA%E5%8C%97%E5%B8%82/'/>候選人專頁</a></li></ul>
-</li>
-<li>新北市<ul><li>會議記錄未公布出缺席紀錄，只寫詳見簽到簿，WTF，<a href='http://www.ntp.gov.tw/UpFile/ProceedingsFile/%E6%96%B0%E5%8C%97%E5%B8%82%E8%AD%B0%E6%9C%83%E7%AC%AC1%E5%B1%86%E7%AC%AC1%E6%AC%A1%E8%87%A8%E6%99%82%E6%9C%83%E3%80%81%E7%AC%AC1%E6%AC%A1%E5%AE%9A%E6%9C%9F%E6%9C%83%E3%80%81%E7%AC%AC2%E6%AC%A1%E8%87%A8%E6%99%82%E6%9C%83.pdf'/>範例</a></li></ul>
-<ul style="list-style: none;"><li>新北市議會的簽到資料放在摘要紀錄裡面而不是會議記錄喔</li></ul>
-<ul class="comment"><li>哦哦！感謝，在<a href='http://www.ntp.gov.tw/content/Proceedings/P2013_1/Schedule_1.htm'/>議事錄日程表</a>的摘要紀錄中。<a href='http://www.ntp.gov.tw/content/information/information04.aspx'/>PDF呈現的會議</a>大部分都還是寫詳見簽到簿，例：新北市議會第1屆成立大會 (PDF檔)、新北市議會第1屆第1次臨時會、第1次定期會、第2次臨時會 (PDF檔)、新北市議會第1屆第3次臨時會、第2次定期會、第4、5次臨時會 (PDF檔)，不知有沒有其他資料來源可參考？</li></ul>
-<ul style="list-style: none;"><li>看來簽到簿是沒有掃描放上網路，只有html那邊有整理上去</li></ul>
-<ul class="comment"><li>了解，另外請問，html部分發現有 &quot;議次&quot; 的摘要才有出席名單，其他議次空白的還是寫詳見簽到簿，<a href='http://www.ntp.gov.tw/content/Proceedings/P2014_2/Schedule_4.htm'/>例</a>，請問這是某種議事規則嗎？還是可以說有議次的才算是全體議會，議次空白的是分組委員會會議？</li>
-<li>我個人覺得....那是不同人紀錄的緣故 似乎是只有一個記錄的情況下就會用詳見簽到簿帶過</li>
+
+<p><b>新北市</b></p><ul><li>會議記錄未公布出缺席紀錄，只寫詳見簽到簿，WTF，<a href='http://www.ntp.gov.tw/UpFile/ProceedingsFile/%E6%96%B0%E5%8C%97%E5%B8%82%E8%AD%B0%E6%9C%83%E7%AC%AC1%E5%B1%86%E7%AC%AC1%E6%AC%A1%E8%87%A8%E6%99%82%E6%9C%83%E3%80%81%E7%AC%AC1%E6%AC%A1%E5%AE%9A%E6%9C%9F%E6%9C%83%E3%80%81%E7%AC%AC2%E6%AC%A1%E8%87%A8%E6%99%82%E6%9C%83.pdf'/>範例</a></li></li>
+<li>新北市議會的簽到資料放在摘要紀錄裡面而不是會議記錄喔</li></li>
+<li>哦哦！感謝，在<a href='http://www.ntp.gov.tw/content/Proceedings/P2013_1/Schedule_1.htm'/>議事錄日程表</a>的摘要紀錄中。<a href='http://www.ntp.gov.tw/content/information/information04.aspx'/>PDF呈現的會議</a>大部分都還是寫詳見簽到簿，例：新北市議會第1屆成立大會 (PDF檔)、新北市議會第1屆第1次臨時會、第1次定期會、第2次臨時會 (PDF檔)、新北市議會第1屆第3次臨時會、第2次定期會、第4、5次臨時會 (PDF檔)，不知有沒有其他資料來源可參考？</li></li>
+<li>看來簽到簿是沒有掃描放上網路，只有html那邊有整理上去</li></li>
+<li>了解，另外請問，html部分發現有 &quot;議次&quot; 的摘要才有出席名單，其他議次空白的還是寫詳見簽到簿，<a href='http://www.ntp.gov.tw/content/Proceedings/P2014_2/Schedule_4.htm'/>例</a>，請問這是某種議事規則嗎？還是可以說有議次的才算是全體議會，議次空白的是分組委員會會議？</li></li>
+<li>我個人覺得....那是不同人紀錄的緣故 似乎是只有一個記錄的情況下就會用詳見簽到簿帶過</li></li>
 <li>上線囉！<a href='http://councils.g0v.tw/candidates/2014/%E6%96%B0%E5%8C%97%E5%B8%82/'/>新北市</a>，有特別標註來源資料不完整</li></ul>
-</ul>
 <ul style="list-style: none;"><li><br/></li></ul>
-<ul><li>桃園市</li><ul style="list-style: none;"><li><s>想幫忙做桃園市這個區塊的整哩，不知道該如何開始，跪求老鳥帶領。</s></li>
+<p><b>桃園市</b></p><ul style="list-style: none;"><li><s>想幫忙做桃園市這個區塊的整哩，不知道該如何開始，跪求老鳥帶領。</s></li>
 <li><s>所以桃園縣的已完成了嗎？我也願意幫忙做桃園縣市的。</s></li>
-<li>已經上線囉 <a href="http://councils.g0v.tw/candidates/2014/%E6%A1%83%E5%9C%92%E5%B8%82/"></a>http://councils.g0v.tw/candidates/2014/%E6%A1%83%E5%9C%92%E5%B8%82/</li></ul>
-<ul class="comment"><li>抱歉晚回覆了，桃園目前已有桃園縣現任議員的基本資訊（<a href='https://github.com/g0v/councilor-voter-guide/blob/master/crawler/tycc/tycc/spiders/councilors.py'/>爬蟲</a>），看您要仿造桃園縣做桃園市，或是抓<a href='http://www.tycc.gov.tw/page.aspx?wtp=1&amp;wnd=319'/>桃園縣歷屆議員</a>資料，都是抓資料不錯的起頭。如果對工程建議款有興趣，可看看桃園縣是有沒有<a href='/jjNta3y2alH#:h=資料'/>類似的資料</a>。有時間的話還是<a href='http://hack.g0v.tw/irc'/>上來 irc</a>找大家聊天討論吧 :)</li>
-<li>大家好，感謝桃園市已經有人在弄了，小弟想幫忙補齊桃園市的資料，不知道該從何處開幫忙。</li>
-<li>Tim大大的話，挑戰出缺席吧！大致流程：下載<a href='http://www.tycc.gov.tw/page.aspx?wtp=1&amp;wnd=217'/>各會議的議事錄</a> （pdf檔）-&gt; 轉txt&nbsp; -&gt;&nbsp; 抓取 &quot;出席：&quot;、&quot;請假：&quot; 缺席：&quot;裡的議員，建出缺席紀錄，<a href='https://github.com/g0v/councilor-voter-guide/blob/master/parser/votes/ntcc/votes.py'/>新北市範例</a>。會議記錄也可找裡面有沒有記名表決，可能的關鍵字：贊成、反對、棄權、記明表決、表決名單...等等，可先手動搜尋看看脈絡，在寫程式抓取，<a href='https://github.com/g0v/councilor-voter-guide/blob/master/parser/votes/tcc/votes.py#L39-L52'/>台北市範例</a>，個人覺得很笨很麻煩的方法，但目前也不知怎麼改進。</li>
-<li>感謝，但桃園市好像連連議事紀錄都找不到的樣子</li>
+<li>已經上線囉 <a href="http://councils.g0v.tw/candidates/2014/%E6%A1%83%E5%9C%92%E5%B8%82/"></a>http://councils.g0v.tw/candidates/2014/%E6%A1%83%E5%9C%92%E5%B8%82/</li></li>
+<li>抱歉晚回覆了，桃園目前已有桃園縣現任議員的基本資訊（<a href='https://github.com/g0v/councilor-voter-guide/blob/master/crawler/tycc/tycc/spiders/councilors.py'/>爬蟲</a>），看您要仿造桃園縣做桃園市，或是抓<a href='http://www.tycc.gov.tw/page.aspx?wtp=1&amp;wnd=319'/>桃園縣歷屆議員</a>資料，都是抓資料不錯的起頭。如果對工程建議款有興趣，可看看桃園縣是有沒有<a href='/jjNta3y2alH#:h=資料'/>類似的資料</a>。有時間的話還是<a href='http://hack.g0v.tw/irc'/>上來 irc</a>找大家聊天討論吧 :)</li></li>
+<li>大家好，感謝桃園市已經有人在弄了，小弟想幫忙補齊桃園市的資料，不知道該從何處開幫忙。</li></li>
+<li>Tim大大的話，挑戰出缺席吧！大致流程：下載<a href='http://www.tycc.gov.tw/page.aspx?wtp=1&amp;wnd=217'/>各會議的議事錄</a> （pdf檔）-&gt; 轉txt&nbsp; -&gt;&nbsp; 抓取 &quot;出席：&quot;、&quot;請假：&quot; 缺席：&quot;裡的議員，建出缺席紀錄，<a href='https://github.com/g0v/councilor-voter-guide/blob/master/parser/votes/ntcc/votes.py'/>新北市範例</a>。會議記錄也可找裡面有沒有記名表決，可能的關鍵字：贊成、反對、棄權、記明表決、表決名單...等等，可先手動搜尋看看脈絡，在寫程式抓取，<a href='https://github.com/g0v/councilor-voter-guide/blob/master/parser/votes/tcc/votes.py#L39-L52'/>台北市範例</a>，個人覺得很笨很麻煩的方法，但目前也不知怎麼改進。</li></li>
+<li>感謝，但桃園市好像連連議事紀錄都找不到的樣子</li></li>
 <li><a href='http://www.tycc.gov.tw/page.aspx?wtp=1&amp;wnd=217'/>各會議的議事錄</a></li></ul>
-</ul>
-<ul><li>新竹市</li><ul style="list-style: none;"><li>議程表內容都在doc檔裡面，不知道該怎麼辦，所以現在bills傳回的item都還沒有欄位<a href='http://www.hsinchu-cc.gov.tw/Agenda/Agenda.htm'/> </a><a href="http://www.hsinchu-cc.gov.tw/Agenda/Agenda.htm"></a>http://www.hsinchu-cc.gov.tw/Agenda/Agenda.htm</li></ul>
-<ul class="comment"><li>新竹有點悲劇，看起來沒什麼可以做的</li></ul>
-</ul>
-<ul><li>新竹縣</li><ul class="comment"><li>新竹縣空空der，有人要來跳坑嗎？<a href='http://hack.g0v.tw/irc'/>上來 irc</a>&nbsp;</li>
+<p><b>新竹市</b></p><ul style="list-style: none;"><li>議程表內容都在doc檔裡面，不知道該怎麼辦，所以現在bills傳回的item都還沒有欄位<a href='http://www.hsinchu-cc.gov.tw/Agenda/Agenda.htm'/> </a><a href="http://www.hsinchu-cc.gov.tw/Agenda/Agenda.htm"></a>http://www.hsinchu-cc.gov.tw/Agenda/Agenda.htm</li></li>
+<li>新竹有點悲劇，看起來沒什麼可以做的</li></ul>
+<p><b>新竹縣</b></p><ul class="comment"><li>新竹縣空空der，有人要來跳坑嗎？<a href='http://hack.g0v.tw/irc'/>上來 irc</a>&nbsp;</li>
 <li>新竹現有議員基本資料了，<a href='https://github.com/g0v/councilor-voter-guide/blob/master/crawler/hcc/hcc/spiders/councilors.py'/>爬蟲</a>，還沒檢查，還找找看議案、出缺席、表決</li></ul>
-</ul>
-<ul><li>台中市<ul><li>找不到有表決過的紀錄，有沒有人有認識的可以確認看看。<a href='https://www.dropbox.com/s/l6a6i9cmpc8nzmo/meeting-2010.pdf?dl=0'/>會議紀錄</a></li>
+<p><b>台中市</b></p><ul><li>找不到有表決過的紀錄，有沒有人有認識的可以確認看看。<a href='https://www.dropbox.com/s/l6a6i9cmpc8nzmo/meeting-2010.pdf?dl=0'/>會議紀錄</a></li>
 <li>9/16 初版上線（包含候選人）<a href="http://councils.g0v.tw/"></a>http://councils.g0v.tw/</li></ul>
-</li>
-<li>南投市<ul><li>議員基本資料 done</li></ul>
-<ul class="comment"><li>_感謝micheal, <a href='https://docs.google.com/spreadsheets/d/1akk-svh7rVGC7m2OVrqCwikPzFuVwzKgpYo_FETAmK8/edit?pli=1#gid=0'/>已手動key完本屆ＸＤ</a>比寫程式快（誤）_ 但再找時間轉JSON (11/13)&nbsp;</li></ul>
-<ul><li>議事提案爬蟲製作中...擷取網址DONE 內容整理中 <a href="http://www.ntcc.gov.tw/14.html"></a>http://www.ntcc.gov.tw/14.html (11/13)</li>
+<p><b>南投市</b></p><ul><li>議員基本資料 done</li></li>
+<li>_感謝micheal, <a href='https://docs.google.com/spreadsheets/d/1akk-svh7rVGC7m2OVrqCwikPzFuVwzKgpYo_FETAmK8/edit?pli=1#gid=0'/>已手動key完本屆ＸＤ</a>比寫程式快（誤）_ 但再找時間轉JSON (11/13)&nbsp;</li>
+<li>議事提案爬蟲製作中...擷取網址DONE 內容整理中 <a href="http://www.ntcc.gov.tw/14.html"></a>http://www.ntcc.gov.tw/14.html (11/13)</li>
 <li>11/13初版上線</li></ul>
-</li>
-<li>彰化縣<ul><li>議員基本資料 done: 缺黨籍</li></ul>
-</li>
-<li>嘉義縣<ul><li>議員基本資料 done<s>: 缺黨籍和照片</s></li>
+<p><b>彰化縣</b></p><ul><li>議員基本資料 done: 缺黨籍</li></ul>
+<p><b>嘉義縣</b></p><ul><li>議員基本資料 done<s>: 缺黨籍和照片</s></li>
 <li>黨籍與照片 done</li></ul>
-</li>
-<li>雲林縣<ul><li>議員基本資料 done: web format 不是很統一. 有些議員資料缺乏</li></ul>
-</li>
-<li>嘉義市<ul><li>議員基本資料進行中: 沒什麼規則..苦惱ing</li></ul>
-</li>
-<li>台東縣<ul><li>議員資本資料進行中</li></ul>
-</li>
-<li>台南市<ul><li><a href="https://github.com/kiang/tncc"></a><a href='https://github.com/kiang/tncc'/>https://github.com/kiang/tncc</a></li>
+<p><b>雲林縣</b></p><ul><li>議員基本資料 done: web format 不是很統一. 有些議員資料缺乏</li></ul>
+<p><b>嘉義市</b></p><ul><li>議員基本資料進行中: 沒什麼規則..苦惱ing</li>
+<li>台東縣</li>
+<li>議員資本資料進行中</li></li>
+<li>請問一下你進行到那，因為我已先進行了XD</li></li>
+<li><br/></li></ul>
+<p><b>台南市</b></p><ul><li><a href="https://github.com/kiang/tncc"></a><a href='https://github.com/kiang/tncc'/>https://github.com/kiang/tncc</a></li>
 <li>6/7 <a href='https://github.com/kiang/tncc/blob/master/tnccp.json'/>議員基本資料</a> done</li>
 <li>6/17 <a href='https://github.com/kiang/tncc/tree/master/motions'/>議會議案記錄</a> crawler/parser done</li>
 <li>6/21 <a href='https://github.com/kiang/parliamentary'/>以 cakephp 實做一個議員資訊網站</a></li>
 <li>6/22 <a href='http://k.olc.tw/tncc/'/>初步成果對外開放了</a></li>
 <li>會議記錄有公布出缺席紀錄，但是被塞在 pdf 中，並且<a href='http://k.olc.tw/2014/07/%E5%8F%B0%E5%8D%97%E5%B8%82%E8%AD%B0%E6%9C%83%E5%87%BA%E5%B8%AD%E7%8B%80%E6%B3%81%E7%B5%B1%E8%A8%88/'/>用相對難處理的格式</a></li>
 <li>沒有個別議案的表決記錄</li></ul>
-</li>
-<li>高雄市</li></ul>
-<ul style="list-style: none;"><li>高雄上線了 <a href="http://councils.g0v.tw/"></a>http://councils.g0v.tw/</li><ul class="comment"><li>已有大神爬出JSON，檔案我就刪掉了。　ＸＤ</li>
+<p><b>高雄市</b></p><ul style="list-style: none;"><li>高雄上線了 <a href="http://councils.g0v.tw/"></a>http://councils.g0v.tw/</li><ul class="comment"><li>已有大神爬出JSON，檔案我就刪掉了。　ＸＤ</li>
 <li><s>不會爬網頁資料，不過看看html的原始碼＋取代整理了一份倒是有辦法。但是不知道為什麼在google driver上看都是亂碼，下載後的.csv應該是正常的。看有沒有爬網頁資料的高手或者等我慢慢練到會的那一天。（遠目）</s></li>
 <li>已爬高雄議會官網 =&gt; <a href='https://github.com/g0v/councilor-voter-guide/blob/master/data/pretty_format/kcc/councilors_terms.json'/>JSON檔</a>，<a href='https://github.com/g0v/councilor-voter-guide/blob/master/crawler/kcc/kcc/spiders/councilors_terms.py'/>爬蟲</a></li></ul>
 <ul><li>看起來只有合併後第一屆(沒有的話, 看能不能跟議會要)</li>
@@ -125,8 +115,7 @@
 </ul>
 </ul>
 
-<ul><li>花蓮縣&nbsp;</li></ul>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 不曉得有沒有人做了@@? ，也不知道來不來的及XD 反正就試試看口貝!</p><ul class="comment"><li>看起來是沒有ＸＤ 做吧！！ 南投製作ing... <a href='https://github.com/g0v/councilor-voter-guide/tree/master/crawler'/>參考一下這邊吧</a></li>
+<p><b>花蓮縣</b>&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 不曉得有沒有人做了@@? ，也不知道來不來的及XD 反正就試試看口貝!</p><ul class="comment"><li>看起來是沒有ＸＤ 做吧！！ 南投製作ing... <a href='https://github.com/g0v/councilor-voter-guide/tree/master/crawler'/>參考一下這邊吧</a></li>
 <li>s:嗚嗚，我覺得我好像進入叢林惹orz&nbsp; ...趕快跟英文裝熟先www</li>
 <li>還是霧煞煞= =...&nbsp;</li>
 <li>我先去整理資料好了，再看看有沒有會程式的來支援再說~&quot;~</li>
@@ -134,15 +123,13 @@
 <li>現任議員基本資料的 crawler done</li>
 <li>議會資料 crawler done</li>
 <li>但是目前找不到會議記錄，無法計算出缺席</li></ul>
-<ul><li>金門縣</li></ul>
-<ul style="list-style: none;"><li>金門縣有人做嗎？我先試著整理一下資料~</li></ul>
+<p><b>金門縣</b></p><ul style="list-style: none;"><li>金門縣有人做嗎？我先試著整理一下資料~</li></ul>
 
-<ul><li>台東縣</li></ul>
-<ul style="list-style: none;"><li>目前應該沒有人做台東縣吧？！我就先來整理</li>
+<p><b>台東縣</b></p><ul style="list-style: none;"><li>目前應該沒有人做台東縣吧？！我就先來整理</li>
+<li><br/></li>
 <li><a href="http://www.taitungcc.gov.tw/ourteam/01ourteam.html"></a>http://www.taitungcc.gov.tw/ourteam/01ourteam.html (台東縣議會)</li></ul>
 
-<ul><li>基隆市</li></ul>
-<ul style="list-style: none;"><li>好像目前還沒有做基隆的，目前製作爬蟲中...github 還不會用，還有很多東西要學QQ，11/15要來大進補了</li><ul><li>議員資料爬蟲初步完成</li></ul>
+<p><b>基隆市</b></p><ul style="list-style: none;"><li>好像目前還沒有做基隆的，目前製作爬蟲中...github 還不會用，還有很多東西要學QQ，11/15要來大進補了</li><ul><li>現行議員基本資料爬蟲初步完成</li></ul>
 </ul>
 
 <h2>參考資料：</h2><ul><li>議員公開資料<ul><li><a href='http://data.gov.tw/node/7054'/>縣市議員</a></li>
