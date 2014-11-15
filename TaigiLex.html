@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="4225"/>
+<meta name="version" content="4454"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$TaigiLex</title>
 </head>
 <body><h1>TaigiLex</h1><p></p><h2>Objectives overview</h2><ol><li>Basic toolbox for online text editing in Taiwanese, to allow (2) (more below)</li>
@@ -11,11 +11,16 @@
 <li>The crowd-compilation of a Taiwanese dictionary in Taiwanese, post-reviewed by a small team</li>
 <li>the description of various lexical relations between the entries in the lexicon to allow more intelligent text-processor.&nbsp;</li></ol>
 
-<p></p><h2>Detailed description</h2><p></p><p><b>&nbsp;The Toolbox</b></p><p>&nbsp;</p><p>&nbsp;What should it include:</p><ul><li>&nbsp;Input Method from multiple romanisation systems and 注音符號 that permits output in various romanisations or 漢字 and keeps track of what was inputed for further edition.</li>
+<p>(English version and Mandarin version may not totally in sync.)</p><p></p><p>（目前英文及華文版說明尚未同步）</p><h2>目標簡介</h2><ol><li>發展可在線上編輯多重書寫系統台語文的書寫工具。</li>
+<li>發展可以協同編輯的萌典。</li>
+<li>發展群眾編輯、專家審議的開放台語詞典。</li>
+<li>增修台語詞典詞條與詞條之間關係的描述，以幫助開發更智慧的台語文書寫工具。</li></ol>
+
+<h2>Detailed description</h2><p></p><p><b>&nbsp;The Toolbox</b></p><p>&nbsp;</p><p>&nbsp;What should it include:</p><ul><li>&nbsp;Input Method from multiple romanisation systems and 注音符號 that permits output in various romanisations or 漢字 and keeps track of what was inputed for further edition.</li>
 <li>conversion tools between all the different scripts. (allowing for manual correction after the automatic processing)</li>
 <li>possibility to annotate the text using ruby</li></ul>
 
-<p>This shall be done as independent libraries that will be release in Open Source.&nbsp;</p><p></p><p><b>A platform for the crowd compilation of a dictionary.</b></p><p></p><p>Those libraries will be used by an interface to have the dictionary edited by the netizens. (Probably integrated or directly linked with 萌典, to be discussed maybe forking or adding modules to etherpad would be better...)</p><p></p><p><b>Supervision of the compilation process</b></p><p>A small team shall follow the edition of the dictionary (for selection/correction)</p><p>The dictionary will be released under C.C. licence, made available through 萌典 (and downloadable as epub ?)</p><p></p><p><b>Towards a lexical graph</b></p><p>Time should be spent to describe the relations between the entries of the dictionary (synonyms, antonyms, metonyms,... ) to build a machine-readable lexicon to help and promote Taiwanese Text Processing</p><p></p><h2> What we need</h2><p>&nbsp;</p><p>a small team of 2 to 4 pple for 6 to 12 month ?</p><p>I think it&rsquo;s reasonable for the coding part&nbsp; (1 person)</p><p>one pb would be that the lexicographic work can only start once the code is working.</p><p></p><p>More precisely:&nbsp;</p><ul><li>3~4 month for the toolbox</li>
+<p>This shall be done as independent libraries that will be release in Open Source.&nbsp;</p><p></p><p><b>A platform for the crowd compilation of a dictionary.</b></p><p></p><p>Those libraries will be used by an interface to have the dictionary edited by the netizens. (Probably integrated or directly linked with 萌典, to be discussed maybe forking or adding modules to etherpad would be better...)</p><p></p><p><b>Supervision of the compilation process</b></p><p>A small team shall follow the edition of the dictionary (for selection/correction)</p><p>The dictionary will be released under C.C. licence, made available through 萌典 (and downloadable as epub ?)</p><p></p><p><b>Towards a lexical graph</b></p><p>Time should be spent to describe the relations between the entries of the dictionary (synonyms, antonyms, metonyms,... ) to build a machine-readable lexicon to help and promote Taiwanese Text Processing</p><p></p><h2>詳細說明</h2><p><b>台語文書寫工具</b></p><p></p><p><b>協同編輯詞典的平台</b></p><p></p><p><b>語意網（？）</b></p><p></p><p></p><h2> What we need</h2><p>&nbsp;</p><p>a small team of 2 to 4 pple for 6 to 12 month ?</p><p>I think it&rsquo;s reasonable for the coding part&nbsp; (1 person)</p><p>one pb would be that the lexicographic work can only start once the code is working.</p><p></p><p>More precisely:&nbsp;</p><ul><li>3~4 month for the toolbox</li>
 <li>+1 month for to define the dataformat and agregate some existing sources (in parallel of developping the toolbox, with help of pektiong and miaoski)</li>
 <li>+2month on hacking 萌典 / setting up the crowdsourcing platform</li>
 <li>+forever to crowdsource definitions&nbsp;</li></ul>
