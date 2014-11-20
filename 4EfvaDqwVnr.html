@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="322"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$4EfvaDqwVnr</title>
+</head>
+<body><h1>選舉黃頁與公報連結整理</h1><p></p><p>公報專案： <a href="https://github.com/kiang/bulletin.cec.gov.tw"></a><a href='https://github.com/kiang/bulletin.cec.gov.tw'/>https://github.com/kiang/bulletin.cec.gov.tw</a></p><p></p><p>中選會選舉公報的資料有備份到公報專案，針對 103 年的部份中選會有一個尚未對外正式宣傳的網站 <a href="http://103bulletin.cec.gov.tw/103/"></a>http://103bulletin.cec.gov.tw/103/ ，這個網站有各地選委會上傳的資料，所以額外處理，目前公報專案的資料集中在 <a href="https://github.com/kiang/bulletin.cec.gov.tw/tree/master/Console/Command/data"></a>https://github.com/kiang/bulletin.cec.gov.tw/tree/master/Console/Command/data<a href='https://github.com/kiang/bulletin.cec.gov.tw/tree/master/Console/Command/data說明如下'/> </a>，說明如下：</p><p></p><ul><li>bulletin.csv - <a href="http://db.cec.gov.tw/"></a>http://db.cec.gov.tw/ 取得的公報資料清單<ul><li>連結目錄</li>
+<li>連結名稱</li>
+<li>檔案網址</li>
+<li>隨機產生的 uuid</li></ul>
+</li>
+<li>bulletin_103.csv - <a href="http://103bulletin.cec.gov.tw/103/"></a><a href='http://103bulletin.cec.gov.tw/103/'/>http://103bulletin.cec.gov.tw/103/</a> 取得的公報資料清單<ul><li>連結名稱</li>
+<li>檔案網址</li>
+<li>隨機產生的 uuid</li></ul>
+</ul>
+
+<p>透過清單中的 uuid 可以分別在 pdf ( bulletin.csv uuid ) &amp; pdf_103 ( bulletin_103.csv uuid ) 目錄下找到對應的 pdf 檔案，這些 PDF 檔案進一步透過 <a href='https://github.com/coolwanglu/pdf2htmlEX'/>pdf2htmlEX</a> 產出了文字座標檔案放在 txt 與 txt_103 目錄下對應的 uuid 中。</p><p></p><p>現在進一步的試著要將這些公報資料與選舉黃頁進行連結，所以透過程式產出了對應表</p><p>&nbsp;<a href="https://github.com/kiang/elections/blob/master/Console/Command/data/bulletin_map.csv"></a>https://github.com/kiang/elections/blob/master/Console/Command/data/bulletin_map.csv</p><p>&nbsp;</p><p>檔案中三個欄位說明如下：</p><ul><li>bulletin_name - bulletin_103.csv 取得的連結名稱</li>
+<li>bulletin_key - bulletin_103.csv 取得的 uuid</li>
+<li>election_id - 對應到選舉黃頁選區的 uuid ，多個選區之間以 | 符號區隔</li></ul>
+
+<p>因為命名並未統一，所以這個自動產生的對應表有諸多錯誤，所以另外產生了一個修正表</p><p><a href="https://github.com/kiang/elections/blob/master/Console/Command/data/bulletin_map_prefix.csv"></a>https://github.com/kiang/elections/blob/master/Console/Command/data/bulletin_map_prefix.csv</p><p></p><p>修正表格式與原本的表一致，只是程式會以修正表的資料為主，每次執行後會合併程式自動過濾的結果，所以錯誤的資料列可以複製到修正表進行人工的修正，然後由程式處理最後的合併與連結。</p><p></p><p>election_id 可以透過<a href='http://k.olc.tw/elections/'/>選舉黃頁</a>的選舉區查詢功能，點選結果後網址的參數就是 election_id ，像是</p><p><a href="http://k.olc.tw/elections/candidates/index/53c0207b-32e8-4ba0-a87c-5c5aacb5b862#/discussion/embed"></a>http://k.olc.tw/elections/candidates/index/53c0207b-32e8-4ba0-a87c-5c5aacb5b862#/discussion/embed</p><p></p><p>53c0207b-32e8-4ba0-a87c-5c5aacb5b862 就是希望取得的 election_id</p><p></p><p>而 bulletin_key 可以透過網址預覽，像是 546e068c-43f4-4e44-b9f7-1a32cf91e152 就可以在下面網址看到</p><p><a href="http://k.olc.tw/bulletin/546e068c-43f4-4e44-b9f7-1a32cf91e152/546e068c-43f4-4e44-b9f7-1a32cf91e152.html"></a>http://k.olc.tw/bulletin/546e068c-43f4-4e44-b9f7-1a32cf91e152/546e068c-43f4-4e44-b9f7-1a32cf91e152.html</p><p></p><p>這是透過 <a href='https://github.com/coolwanglu/pdf2htmlEX'/>pdf2htmlEX</a> 產出的結果</p><p></p></body>
+</html>
