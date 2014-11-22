@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="4534"/>
+<meta name="version" content="4606"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$KjfdRZ08FZ3</title>
 </head>
 <body><h1>議員投票指南</h1><p><a href='http://vote.ly.g0v.tw/'/>立委投票指南</a> 議會版</p><h2>各縣市議會專案</h2><p><a href='/uGplqkYholX'/>議員投票指南－架站流程</a></p><p><b>台北市</b></p><ul><li><a href="https://github.com/g0v/councilor-voter-guide"></a><a href='https://github.com/g0v/councilor-voter-guide'/>https://github.com/g0v/councilor-voter-guide</a></li>
@@ -170,7 +170,10 @@
 
 <p><b>苗栗縣</b></p><ul style="list-style: none;"><li>來做點基本資料給可憐的苗栗</li></ul>
 <ul class="taskdone"><li>現任議員基本資料</li></ul>
-<ul class="comment"><li>嗨，我有意願ㄧ起來做苗栗。</li></ul>
+<ul class="task"><li>議事錄</li></ul>
+<ul class="comment"><li>2014/11/21 嗨，我有意願ㄧ起來做苗栗。</li>
+<li>201411/22 發現「<a href='http://mcc.digital.tpa.gov.tw'/>地方議會議事錄檢索系統</a>」，有 open-data ，但沒有最新資料，只有次晚近資料（2013年底），可以做做看。</li></ul>
+
 <p><b>金門縣</b></p><ul style="list-style: none;"><li><a href='http://www.kmcc.gov.tw/men/'/>門打開，阮顧厝</a></li>
 <li><br/></li></ul style="list-style: none;">
 <h2>參考資料：</h2><ul><li>議員公開資料<ul><li><a href='http://data.gov.tw/node/7054'/>縣市議員</a></li>
@@ -196,7 +199,9 @@
 <li>這個好，已開 <a href='https://github.com/g0v/councilor-voter-guide/issues/23'/>issue</a></li></ul>
 </ul>
 
-<p>網站本身可以先把 Open Data 這條主線維護好，也就是將 crawling-parsing 產生的原始檔（JSON檔案）用 API 端點放出來，這樣子將來別處要做什麼應用都比較好做，因為你已經先辛苦找過資料而且 parse 過一次了。而且也可以把一些 overall 的數字算好，放給 API 提供。在呈現方面，網站也可以使用自己的 open-data API 。</p><p></p><h2>疑問</h2><ul><li>為何一個議案收文和發文差距長達七年？<a href="http://tccmis.tcc.gov.tw/OM/OM_SearchDetail.asp?sys_no=27261"></a>http://tccmis.tcc.gov.tw/OM/OM_SearchDetail.asp?sys_no=27261</li></ul>
+<p>網站本身可以先把 Open Data 這條主線維護好，也就是將 crawling-parsing 產生的原始檔（JSON檔案）用 API 端點放出來，這樣子將來別處要做什麼應用都比較好做，因為你已經先辛苦找過資料而且 parse 過一次了。而且也可以把一些 overall 的數字算好，放給 API 提供。在呈現方面，網站也可以使用自己的 open-data API 。</p><ul class="comment"><li>目前已有<a href='http://councils.g0v.tw/api/'/>API</a>，是瀏覽式的</li></ul>
+
+<h2>疑問</h2><ul><li>為何一個議案收文和發文差距長達七年？<a href="http://tccmis.tcc.gov.tw/OM/OM_SearchDetail.asp?sys_no=27261"></a>http://tccmis.tcc.gov.tw/OM/OM_SearchDetail.asp?sys_no=27261</li></ul>
 <ul class="comment"><li>前議員助理回答：要馬是寫錯，要馬就真的是拖很久&nbsp; 我想...應該是這個案子拖很久...因為台北市的市場用地是一個大問題...我猜想而已，因為市議會議事系統爛，這種事情都無法追蹤的～</li></ul>
 <ul><li>立院聽過很多助理說過第一提案人的概念，請問議會也有嗎?例如<a href='http://tccmis.tcc.gov.tw/OM/OM_SearchDetail.asp?sys_no=29804'/>這個議案</a></li></ul>
 <ul class="comment"><li>前議員助理回答：應該也是有，不過都沒人在管法規的 哈哈哈 而且也沒人在審法規～～～平常議會真得很少在審議案 排完質詢就差不多要散會了</li></ul>
