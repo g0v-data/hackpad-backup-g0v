@@ -3,8 +3,64 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="81"/>
+<meta name="version" content="1013"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$BoKu2ClFSE3</title>
 </head>
-<body><h1>打臉高手 brainstorm</h1><p>input source: 新聞小幫手(Computer)，User input.</p><p>brainstorm: tag、comment(解釋轉貼文章的原因、主要論點)、url、</p><p>參考model:<a href='http://newshelper.g0v.tw/'/>新聞小幫手</a>(原文新聞連結+打臉文連結)</p><p></p></body>
+<body><h1>打臉高手 brainstorm</h1><ol><li>轉貼 Input source: 新聞小幫手(Computer)，User input.<ol><li>link (URL)</li>
+<li>文摘(ex, FB)</li></ol>
+</li>
+<li>Post Comment (FB pattern)&nbsp;<ol><li>理由</li>
+<li>論點</li></ol>
+</li>
+<li>Tag (不能太自由); 打臉理由是一種Tag (例如：證據不足, 詐騙)</li>
+<li>Categorize<ol><li>Keyword (Grouping)</li>
+<li>Auto assign</li></ol>
+</li>
+<li>市場機制(好文會浮上)<ol><li>like</li>
+<li>unlike</li>
+<li>time (最後回應)</li></ol>
+</li>
+<li>回文<ol><li>Support 有建設性地浮上(多數決)</li>
+<li>打臉</li></ol>
+</li>
+<li>用FB確認身份, po文(map to a nickname)</li></ol>
+<ul style="list-style: none;"><li>公開FB account(optional, but default set to yes)</li></ul>
+
+<p><i>System Component:</i></p><ol><li>User Database</li>
+<li>Post Database</li>
+<li>Web page</li>
+<li>Android (EXT)</li>
+<li>IOS (EXT)</li></ol>
+
+<p><i>Use Cases:</i></p><ol><li>User login<ol><li>Core-7</li></ol>
+</li>
+<li>User posting (問卦) 有發文限制(5mins 1篇)&nbsp; (rating: subscribe/views)<ol><li>Core-1</li>
+<li>Core-2</li>
+<li>Core-3</li></ol>
+</li>
+<li>User response(戰)<ol><li>Core-6</li></ol>
+</li>
+<li>User rating(補刀/聖光術)<ol><li>Post rating<ol><li>Core-5.a</li>
+<li>Core-5.b</li></ol>
+</li>
+<li>Response rating</li></ol>
+</li>
+<li>Backend<ol><li>Core-4</li>
+<li>Core-5</li></ol>
+</li>
+<li>Browsing<ol><li>sorting (post time, reply time, rate, views, # of replies, trending)</li>
+<li>filter (unanswered, tag, keyword, )</li></ol>
+</li>
+<li>新聞小幫手Auto generate API&nbsp; (EXT)</li></ol>
+
+<p><i>Some Templates:</i></p><ol><li><a href="http://support.lampcms.com/questions/"></a>http://support.lampcms.com/questions/</li>
+<li><a href="https://github.com/ialbert/biostar-central"></a>https://github.com/ialbert/biostar-central</li>
+<li>參考model:<a href='http://newshelper.g0v.tw/'/>新聞小幫手</a>(原文新聞連結+打臉文連結)</li>
+<li><a href="http://www.factcheck.org/"></a>http://www.factcheck.org/</li>
+<li><a href="http://taipei.wethepeople.tw/#"></a>http://taipei.wethepeople.tw/#!/&nbsp;&nbsp; (市長給問嗎？)</li></ol>
+
+<p><i>Tool:</i></p><ol><li><a href='https://github.com/g0v?query=normalizer'/>url normalizer</a> (under g0v)</li>
+<li><br/></li></ol>
+
+<p></p><p></p></body>
 </html>
