@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="576"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$s3bij8M6Ypx</title>
+</head>
+<body><h1>公民連署平台</h1><p></p><p><b>簽到</b></p><ul class="comment"><li>負責網頁相關</li></ul>
+
+<p></p><p></p><h2>需求種類：</h2><ol><li>發起公投用</li>
+<li>罷免用</li>
+<li>一般連署書/個人陳情書</li></ol>
+
+<p></p><p><b>一、民間版公投連署</b></p><p><i>範例：核四公投發起連署</i></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_s3bij8M6Ypx_p.145171_1416686883553_Image 001.png'/></p><undefined><li><b>需要個資：</b></li></undefined>
+<p>（1～4必須線上填）</p><ol><li>姓名</li>
+<li>詳細戶籍地址（含鄰里）</li>
+<li>出生年月日</li>
+<li>身份證</li>
+<li>**親筆簽名或蓋章**</li></ol>
+
+<undefined><li><b>系統欄位：</b></li></undefined>
+<ul><li>編號：自動產生，前五碼為3+2郵遞區號，後面才接序號，方便公民團體整理（法規規定一定得照縣/市+鄉/鎮/市/區裝訂成冊，very labor intense!）</li>
+<li>發起團體</li>
+<li>連署單位是啥？</li></ul>
+
+<p></p><p><b>二、罷免用</b></p><p><i>範例：割闌尾--吳育昇 By 憲法133實踐聯盟</i></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_s3bij8M6Ypx_p.145171_1416688490213_Image 003.png'/></p><p>↗這東西真的不能再更醜了…</p><p></p><undefined><li><b>需要個資：</b></li></undefined>
+<p>（除了1 2 4 6 哪幾個還需要驗證？）</p><ol><li>姓名</li>
+<li>身份證</li>
+<li>性別</li>
+<li>出生年月日</li>
+<li>職業</li>
+<li>戶籍地址</li>
+<li>**親筆簽名或蓋章**</li>
+<li>備註是幹嘛用的？</li></ol>
+
+<p><b>三、陳情書產生器</b></p><p><i>範例：318學運期間PTT鄉民寫好的陳情書範本</i></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_s3bij8M6Ypx_p.145171_1416688160686_Image 002.png'/></p><undefined><li><b>需要個資：</b></li></undefined>
+<p>（因為是個人用，不一定要線上填，但可以填了地址自動產生民代名字跟聯絡方式！）</p><ol><li>選區立委/議員</li>
+<li>姓名</li>
+<li>身份證</li>
+<li>詳細戶籍地址（含鄰里）</li>
+<li>簽署日期</li>
+<li>**親筆簽名或蓋章**</li></ol>
+
+<p></p><h2>TODO:</h2><p><b>User Facing Site:</b></p><ul><li>議題列表</li></li>
+<li>這個我來試試 包括輸入下面個人資料的 之後再來perfect</li>
+<li>輸入個人資料</li>
+<li>送出連署書</li></ul>
+
+<p><b>Admin Facing Site:</b></p><ul class="comment"><li>這個我目前不知不知道能作到怎樣地步</li><ul><li>Create Issue:<ul><li>選擇下載意見書模式，連署書模式，或直接用傳真API，或email到市長信箱</li>
+<li>輸入訴求內容/陳情書內容</li></ul>
+</li>
+<li>Download/Print/Fax/Send 連署書</li></ul>
+</ul>
+
+<p><b>網頁部份</b></p><ul><li>目前我打算用Meteor</li></ul>
+
+<p></p><p></p></body>
+</html>
