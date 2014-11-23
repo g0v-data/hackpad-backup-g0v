@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1068"/>
+<meta name="version" content="1538"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$BoKu2ClFSE3</title>
 </head>
 <body><h1>打臉高手 brainstorm</h1><ol><li>轉貼 Input source: 新聞小幫手(Computer)，User input.<ol><li>link (URL)</li>
@@ -62,5 +62,9 @@
 <p><i>Tool:</i></p><ol><li><a href='https://github.com/g0v?query=normalizer'/>url normalizer</a> (under g0v)</li>
 <li><a href='https://docs.djangoproject.com/en/1.7/intro/install/'/>django</a> tutorial</li>
 <li><a href="http://nthn.me/posts/2012/facebook-registration.html"></a>http://nthn.me/posts/2012/facebook-registration.html</li></ol>
-<p>FACEBOOK_APP_ID = &rsquo;1529719137268268&rsquo;</p><p>FACEBOOK_SECRET_KEY = &rsquo;a766cd5d2fb5cc2d1a744d816b242ab6&rsquo;</p><p><a href="https://developers.facebook.com/apps"></a>https://developers.facebook.com/apps</p><p></p><p>Github</p><p><a href="https://github.com/dwhuang/slap"></a>https://github.com/dwhuang/slap</p><p>我會再把這個 repo 的內容 merge 進 <a href="https://github.com/g0v/slap"></a>https://github.com/g0v/slap</p><p></p></body>
+<p>FACEBOOK_APP_ID = &rsquo;1529719137268268&rsquo;</p><p>FACEBOOK_SECRET_KEY = &rsquo;a766cd5d2fb5cc2d1a744d816b242ab6&rsquo;</p><p><a href="https://developers.facebook.com/apps"></a>https://developers.facebook.com/apps</p><p></p><p><i>Github</i></p><p><a href="https://github.com/dwhuang/slap"></a>https://github.com/dwhuang/slap</p><p>我會再把這個 repo 的內容 merge 進 <a href="https://github.com/g0v/slap"></a>https://github.com/g0v/slap</p><p></p><p><b>Database schema:</b></p><p></p><p><i>Post </i>-- id: pk; news_url: url; reason: String; vote: Int; views: Int; timestamp: Ts;&nbsp;</p><ul style="list-style: none;"><li>tag: Tag; user: Profile; keyword: Keyword;</li></ul>
+
+<p><i>Response </i>-- id: pk; original_post: Post; response_text: Text; upvote: Int;&nbsp;</p><ul style="list-style: none;"><li>downvote: Int; user: Profile; timestamp: Ts;&nbsp;</li></ul>
+
+<p><i>Profile </i>-- id: pk; fb-id: String; nickname: String; reputation: Int;&nbsp;</p><p></p><p><i>Subscribe Table</i> -- user: Profile; post: Post;</p><p></p><p><i>Tag </i>-- id: pk; tag: String;</p><p></p><p><i>Keyword </i>-- id: pk; keyword: String;</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></body>
 </html>
