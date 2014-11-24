@@ -3,10 +3,23 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1623"/>
+<meta name="version" content="2206"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$BoKu2ClFSE3</title>
 </head>
-<body><h1>打臉高手 brainstorm</h1><ol><li>轉貼 Input source: 新聞小幫手(Computer)，User input.<ol><li>link (URL)</li>
+<body><h1>打臉高手 brainstorm</h1><h2>Overview</h2><p>提供低瀏覽門檻，不容易歪樓謾罵的網路八卦版+新聞版yelp</p><ul><li>利用群眾智慧</li>
+<li>發現問題新聞</li>
+<li>正確打臉資料</li>
+<li>吸引大家圍觀</li></ul>
+<p>打臉原則：附出處</p><p>compact summary:</p><ul><li>非PTT族群不好access, 歪樓情況-&gt;低瀏覽門檻</li>
+<li>搜尋功能</li>
+<li>log-in default name: facebook</li>
+<li>category: 為何要打臉的原因</li>
+<li>keyword: offline grouping功能</li>
+<li>講話要附reference</li>
+<li>欠打指數--被打臉/觀看次數</li>
+<li>回應: 正反雙方 取前三名計算血條 like量決定權重</li></ul>
+
+<h2>Core Features</h2><ol><li>轉貼 Input source: 新聞小幫手(Computer)，User input.<ol><li>link (URL)</li>
 <li>文摘(ex, FB)</li></ol>
 </li>
 <li>Post Comment (FB pattern)&nbsp;<ol><li>理由</li>
@@ -26,13 +39,9 @@
 <li>用FB確認身份, po文(map to a nickname)</li></ol>
 <ul style="list-style: none;"><li>公開FB account(optional, but default set to yes)</li></ul>
 
-<p><i>System Component:</i></p><ol><li>User Database</li>
-<li>Post Database</li>
-<li>Web page</li>
-<li>Android (EXT)</li>
-<li>IOS (EXT)</li></ol>
-
-<p><i>Use Cases:</i></p><ol><li>User login<ol><li>Core-7</li></ol>
+<h2>System Architecture</h2><p><b>Database</b></p><p><i>Post </i>-- id: pk; news_url: url; reason: String; vote: Int; views: Int; time: Ts;&nbsp;</p><ul style="list-style: none;"><li>tag: Tag; user: Profile; keyword: Keyword;</li></ul>
+<p><i>Response </i>-- id: pk; original_post: Post; response_text: Text; upvote: Int;&nbsp;</p><ul style="list-style: none;"><li>downvote: Int; user: Profile; timestamp: Ts;&nbsp;</li></ul>
+<p><i>Profile </i>-- id: pk; fb-id: String; nickname: String; reputation: Int;&nbsp;</p><p><i>Subscribe Table</i> -- user: Profile; post: Post;</p><p><i>Tag </i>-- id: pk; tag: String;</p><p><i>Keyword </i>-- id: pk; keyword: String;</p><p><b>Web page</b></p><p><b>Android (EXT)</b></p><p><b>IOS (EXT)</b></p><p></p><h2>Use Cases</h2><ol><li>User login<ol><li>Core-7</li></ol>
 </li>
 <li>User posting (問卦) 有發文限制(5mins 1篇)&nbsp; (rating: subscribe/views)<ol><li>Core-1</li>
 <li>Core-2</li>
@@ -41,9 +50,11 @@
 <li>User response(戰)<ol><li>Core-6</li></ol>
 </li>
 <li>User rating(補刀/聖光術)<ol><li>Post rating<ol><li>Core-5.a</li>
-<li>Core-5.b</li></ol>
+<li>Core-5.c</li></ol>
 </li>
-<li>Response rating</li></ol>
+<li>Response rating<ol><li>Core-5.a</li>
+<li>Core-5.b</li></ol>
+</li></ol>
 </li>
 <li>Backend<ol><li>Core-4</li>
 <li>Core-5</li></ol>
@@ -51,20 +62,31 @@
 <li>Browsing<ol><li>sorting (post time, reply time, rate, views, # of replies, trending)</li>
 <li>filter (unanswered, tag, keyword, )</li></ol>
 </li>
-<li>新聞小幫手Auto generate API&nbsp; (EXT)</li></ol>
+<li>新聞小幫手Auto generate API&nbsp; (EXT)</li><ul class="comment"><li>忽然發現這個好像滿重要的，不然我們沒有 data, 有沒有人要跳坑的 XD</li></ul>
+</ol>
 
-<p><i>Some Templates:&nbsp;</i></p><ol><li><a href="http://support.lampcms.com/questions/"></a>http://support.lampcms.com/questions/</li>
+<h2>Reference</h2><p><b>Some Templates</b></p><ol><li><a href="http://support.lampcms.com/questions/"></a>http://support.lampcms.com/questions/</li>
 <li><a href="https://github.com/ialbert/biostar-central"></a>https://github.com/ialbert/biostar-central</li>
 <li>參考model:<a href='http://newshelper.g0v.tw/'/>新聞小幫手</a>(原文新聞連結+打臉文連結)</li>
 <li><a href="http://www.factcheck.org/"></a>http://www.factcheck.org/</li>
 <li><a href="http://taipei.wethepeople.tw/#"></a>http://taipei.wethepeople.tw/#!/&nbsp;&nbsp; (市長給問嗎？)</li></ol>
 
-<p><i>Tool:</i></p><ol><li><a href='https://github.com/g0v?query=normalizer'/>url normalizer</a> (under g0v)</li>
+<p><b>Tools</b></p><ol><li><a href='https://github.com/g0v?query=normalizer'/>url normalizer</a> (under g0v)</li>
 <li><a href='https://docs.djangoproject.com/en/1.7/intro/install/'/>django</a> tutorial</li>
 <li><a href="http://nthn.me/posts/2012/facebook-registration.html"></a>http://nthn.me/posts/2012/facebook-registration.html</li></ol>
-<p>DW version:</p><p>FACEBOOK_APP_ID = &rsquo;1529719137268268&rsquo;</p><p>FACEBOOK_SECRET_KEY = &rsquo;a766cd5d2fb5cc2d1a744d816b242ab6&rsquo;</p><p>GINA version: (test.html use only; )</p><p>FACEBOOK_APP_ID = &rsquo;1507946739477315&rsquo;</p><p>FACEBOOK_SECRET_KEY = &rsquo;2ae7ab56208209dce836dea7386ac3a9&rsquo;</p><p><a href="https://developers.facebook.com/apps"></a>https://developers.facebook.com/apps</p><p></p><p><i>Github</i></p><p><a href="https://github.com/dwhuang/slap"></a>https://github.com/dwhuang/slap</p><p>我會再把這個 repo 的內容 merge 進 <a href="https://github.com/g0v/slap"></a>https://github.com/g0v/slap</p><p></p><p><b>Database schema:</b></p><p></p><p><i>Post </i>-- id: pk; news_url: url; reason: String; vote: Int; views: Int; time: Ts;&nbsp;</p><ul style="list-style: none;"><li>tag: Tag; user: Profile; keyword: Keyword;</li></ul>
+<p>GINA version: (test.html use only; )</p><p>FACEBOOK_APP_ID = &rsquo;1507946739477315&rsquo;</p><p>FACEBOOK_SECRET_KEY = &rsquo;2ae7ab56208209dce836dea7386ac3a9&rsquo;</p><p><a href="https://developers.facebook.com/apps"></a>https://developers.facebook.com/apps</p><p>偷用駒的網路空間 <a href="http://ece.umd.edu/~chou7337/login_page.html"></a><a href='http://ece.umd.edu/~chou7337/login_page.html'/>http://ece.umd.edu/~chou7337/login_page.html</a></p><ul class="comment"><li>Gina, 靠你了 XD</li></ul>
 
-<p><i>Response </i>-- id: pk; original_post: Post; response_text: Text; upvote: Int;&nbsp;</p><ul style="list-style: none;"><li>downvote: Int; user: Profile; timestamp: Ts;&nbsp;</li></ul>
+<h2>Code</h2><p><a href="https://github.com/dwhuang/slap"></a>https://github.com/dwhuang/slap</p><ul class="comment"><li>等初步成果出來以後 merge 到 g0v 的 github <a href="https://github.com/g0v/slap"></a>https://github.com/g0v/slap</li></ul>
 
-<p><i>Profile </i>-- id: pk; fb-id: String; nickname: String; reputation: Int;&nbsp;</p><p></p><p><i>Subscribe Table</i> -- user: Profile; post: Post;</p><p></p><p><i>Tag </i>-- id: pk; tag: String;</p><p></p><p><i>Keyword </i>-- id: pk; keyword: String;</p><p></p><p><b>現有成果</b></p><p>偷用駒的網路空間 <a href="http://ece.umd.edu/~chou7337/login_page.html"></a>http://ece.umd.edu/~chou7337/login_page.html</p><p>mockup (成果報告影片裡看到的)?</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></body>
+<ul class="comment"><li>剛剛把基本的 add post, add response, list posts 大致弄出鶵形，我把怎麼跑起來的步驟寫在 readme 裡 (github 上可以看到)，歡迎超展開</li>
+<li><br/></li></ul class="comment">
+<h2>Mockup</h2><ul class="comment"><li>呼叫策群把投影片的圖放上來~</li>
+<li>需要截圖~~拜託拜託...</li></ul>
+
+<h2>Feedback</h2><ul><li>如果有明顯邏輯錯誤的新聞，打臉文可能無法引用證據</li>
+<li>如果新聞內容沒問題，只是下標題故意誤導(或純粹爛標題)怎麼辦?&nbsp;</li><ul class="comment"><li>這好像無法打臉... 我們是不是應該要界定一下我們要管多寬? 錯誤的新聞跟只是爛標題好像不太一樣..</li></ul class="comment">
+</li>
+<li>我好像有偏文章想要你們來打臉... XDDDDDD&nbsp; 怎麼submit?</li></ul>
+
+<p></p></body>
 </html>
