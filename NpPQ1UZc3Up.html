@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1248"/>
+<meta name="version" content="1344"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$NpPQ1UZc3Up</title>
 </head>
 <body><h1>高雄氣爆和登革熱爆發地圖視覺化</h1><p></p><h2>Method (proposal)</h2><p>原始資料： <a href="http://khd.kcg.gov.tw/Attachment/000001_000401_000001/files/1031112-%E7%99%BB%E9%9D%A9%E7%86%B1%E7%96%AB%E6%83%85%E5%BF%AB%E8%A8%8A.pdf"></a><a href='http://khd.kcg.gov.tw/Attachment/000001_000401_000001/files/1031112-%E7%99%BB%E9%9D%A9%E7%86%B1%E7%96%AB%E6%83%85%E5%BF%AB%E8%A8%8A.pdf'/>http://khd.kcg.gov.tw/Attachment/000001_000401_000001/files/1031112-%E7%99%BB%E9%9D%A9%E7%86%B1%E7%96%AB%E6%83%85%E5%BF%AB%E8%A8%8A.pdf</a></p><ul style="list-style: none;"><li>還有1031111....pdf&nbsp; diff 兩個檔可以找到 日變化 :p&nbsp;</li>
@@ -55,7 +55,10 @@
 <li>不知道有了里的圖, 是否可以畫更細的圖 , 慕約在excel 上有按cases 多寡把顏色分深淺; 如果也是用streep map 細分然後著色(深淺 =&gt; 多寡) 也許也可以;&nbsp;</li>
 <li>可以考慮用 leaflet 畫圖，以 OpenStreetMap 作為底圖 (不過這裡底圖用什麼其實都可以)，另一個方案是用 QGIS 產生點陣圖</li>
 <li><a href="https://github.com/yurenju/mlymap/tree/master/json/twVillage1982"></a>https://github.com/yurenju/mlymap/tree/master/json/twVillage1982 縣市合併後的 geojson</li>
-<li>要怎麼定義顏色，例如說 綠-&gt;黃-&gt;紅-&gt;紫 代表疫情由輕到重，但是threshold要怎麼定？有沒有標準可以follow</li></ul>
+<li>要怎麼定義顏色，例如說 綠-&gt;黃-&gt;紅-&gt;紫 代表疫情由輕到重，但是threshold要怎麼定？有沒有標準可以follow</li>
+<li>做了一個概念頁面，不知道大家覺得如何？</li>
+<li>還想到了一些問題，如前面提的著色問題、或是要不要除以人口數or區域面積、如果要導入里的資料或是每日的資料，是否會因為單位資料量太小反而無法呈現效果</li>
+<li><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_NpPQ1UZc3Up_p.276641_1417010747935_DengueMap.png'/></li></ul>
 <ul><li>民眾可以 &quot;很方便&quot; 追蹤後續發展 (疾管局網站不好查)&nbsp;</li>
 <li>需要更明確的氣爆地圖標示&nbsp;</li>
 <li>民眾為什麼要追蹤 ?&nbsp;</li>
