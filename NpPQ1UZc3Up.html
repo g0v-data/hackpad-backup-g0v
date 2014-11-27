@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1800"/>
+<meta name="version" content="1949"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$NpPQ1UZc3Up</title>
 </head>
 <body><h1>高雄氣爆和登革熱爆發地圖視覺化</h1><p></p><h2>Method (proposal)</h2><p>原始資料： <a href="http://khd.kcg.gov.tw/Attachment/000001_000401_000001/files/1031112-%E7%99%BB%E9%9D%A9%E7%86%B1%E7%96%AB%E6%83%85%E5%BF%AB%E8%A8%8A.pdf"></a><a href='http://khd.kcg.gov.tw/Attachment/000001_000401_000001/files/1031112-%E7%99%BB%E9%9D%A9%E7%86%B1%E7%96%AB%E6%83%85%E5%BF%AB%E8%A8%8A.pdf'/>http://khd.kcg.gov.tw/Attachment/000001_000401_000001/files/1031112-%E7%99%BB%E9%9D%A9%E7%86%B1%E7%96%AB%E6%83%85%E5%BF%AB%E8%A8%8A.pdf</a></p><ul style="list-style: none;"><li>還有1031111....pdf&nbsp; diff 兩個檔可以找到 日變化 :p&nbsp;</li>
@@ -70,8 +70,12 @@
 <li>不知道有了里的圖, 是否可以畫更細的圖 , 慕約在excel 上有按cases 多寡把顏色分深淺; 如果也是用streep map 細分然後著色(深淺 =&gt; 多寡) 也許也可以;&nbsp;</li>
 <li>可以考慮用 leaflet 畫圖，以 OpenStreetMap 作為底圖 (不過這裡底圖用什麼其實都可以)，另一個方案是用 QGIS 產生點陣圖</li>
 <li><a href="https://github.com/yurenju/mlymap/tree/master/json/twVillage1982"></a>https://github.com/yurenju/mlymap/tree/master/json/twVillage1982 縣市合併後的 geojson</li>
-<li>要怎麼定義顏色，例如說 綠-&gt;黃-&gt;紅-&gt;紫 代表疫情由輕到重，但是threshold要怎麼定？有沒有標準可以follow<ul class="comment"><li>&nbsp;顏色如果按照疾管局 (<a href="http://nidss.cdc.gov.tw/NIDSS_DiseaseMap.aspx?Pt=s&dc=1&dt=2&disease=061&d=3&i=all&s=determined_cnt&a=07)"></a>http://nidss.cdc.gov.tw/NIDSS_DiseaseMap.aspx?Pt=s&amp;dc=1&amp;dt=2&amp;disease=061&amp;d=3&amp;i=all&amp;s=determined_cnt&amp;a=07) 是有建議<ul class="comment"><li>0, 1-5, 6-50, 51-150, &gt;151</li>
-<li><br/></li></ul class="comment">
+<li>要怎麼定義顏色，例如說 綠-&gt;黃-&gt;紅-&gt;紫 代表疫情由輕到重，但是threshold要怎麼定？有沒有標準可以follow<ul class="comment"><li>&nbsp;顏色如果按照疾管局 (<a href="http://nidss.cdc.gov.tw/NIDSS_DiseaseMap.aspx?Pt=s&dc=1&dt=2&disease=061&d=3&i=all&s=determined_cnt&a=07)"></a>http://nidss.cdc.gov.tw/NIDSS_DiseaseMap.aspx?Pt=s&amp;dc=1&amp;dt=2&amp;disease=061&amp;d=3&amp;i=all&amp;s=determined_cnt&amp;a=07) 是有建議<ul class="comment"><li>0, 1-5, 6-50, 51-150, &gt;151</li></ul class="comment">
+</li>
+<li>仔細看過疾管局的網頁，發現他會依照地理區域or時間區間的不同而改變，推測它的顏色只是依照資料範圍內最高值&amp;最低值做一個比例的轉換，例如把畫面轉到北區，即使人數不多也是紅色的。</li>
+<li><br/></li>
+<li>我剛剛看到有2個名詞&quot;預警值&quot;&amp;&quot;流行閥值&quot;，這比較符合我所想的，例如說黃色=預警，紅色=流行</li>
+<li>是否能找到這2個值各是多少？此外未來也可以套用到其他疾病<ul class="comment"><li><br/></li></ul class="comment">
 </li></ul class="comment">
 </li>
 <li>做了一個概念頁面，不知道大家覺得如何？</li>
@@ -80,6 +84,9 @@
 <li><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_NpPQ1UZc3Up_p.276641_1417010747935_DengueMap.png'/></li>
 <li>超棒!, 如果點選地圖區域(區or里), 下方histogram 圖跟著變(那一區的統計), 也許可以更方便比較, 那一區的趨勢!&nbsp; 官網的都不會有趨勢圖(時間)</li>
 <li>如果可以縮到 &quot;里&quot; , 那應該就可以結案了 !!!&nbsp;&nbsp;</li>
+<li>目前是可以點選每個長條來選擇時間點，也就是由histogram 區域控制map區域</li>
+<li>如果map可以反過來控制histogram ，那麼要如何回到上一個層級(由&rsquo;里&rsquo;回到&rsquo;區&rsquo;)？</li>
+<li>學立委選票地圖新增一個回到上一層的按鈕是一種解法，但是我不太喜歡就是了</li>
 <li><br/></li></ul>
 <ul><li>民眾可以 &quot;很方便&quot; 追蹤後續發展 (疾管局網站不好查)&nbsp;</li>
 <li>需要更明確的氣爆地圖標示&nbsp;</li>
