@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2125"/>
+<meta name="version" content="2347"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$NpPQ1UZc3Up</title>
 </head>
 <body><h1>高雄氣爆和登革熱爆發地圖視覺化</h1><p></p><h2>Method (proposal)</h2><p>原始資料： <a href="http://khd.kcg.gov.tw/Attachment/000001_000401_000001/files/1031112-%E7%99%BB%E9%9D%A9%E7%86%B1%E7%96%AB%E6%83%85%E5%BF%AB%E8%A8%8A.pdf"></a><a href='http://khd.kcg.gov.tw/Attachment/000001_000401_000001/files/1031112-%E7%99%BB%E9%9D%A9%E7%86%B1%E7%96%AB%E6%83%85%E5%BF%AB%E8%A8%8A.pdf'/>http://khd.kcg.gov.tw/Attachment/000001_000401_000001/files/1031112-%E7%99%BB%E9%9D%A9%E7%86%B1%E7%96%AB%E6%83%85%E5%BF%AB%E8%A8%8A.pdf</a></p><ul style="list-style: none;"><li>還有1031111....pdf&nbsp; diff 兩個檔可以找到 日變化 :p&nbsp;</li>
@@ -26,7 +26,13 @@
 <p>Issue:</p><ul><li>data update?</li>
 <li>人口資料 <a href="http://cabu.kcg.gov.tw/cabu2/statis61B3.aspx"></a><a href='http://cabu.kcg.gov.tw/cabu2/statis61B3.aspx'/>http://cabu.kcg.gov.tw/cabu2/statis61B3.aspx</a></li></ul>
 
-<p></p><h2>預期產出 : 作成以下 timeline 地圖</h2><p>範例 : <a href='http://healthmap.org/ebola/#timeline'/>healthmap.org/ebola/</a><a href='https://g0v.hackpad.com/ep/search/?q=%23timeline&amp;via=NpPQ1UZc3Up'/>#timeline</a></p><p>每週定期抓資料, 含各種不同法定傳染病</p><p></p><p>有沒有辦法找到 高雄水溝蓋的map ?&nbsp; 如果能做水溝蓋的map 再對比 病例發生 , 不知道會不會有相關 ?</p><p>&nbsp;&nbsp; 例: 高雄地下管線圖 <a href="http://zbryikt.github.io/visualize/kh-pipe/"></a><a href='http://zbryikt.github.io/visualize/kh-pipe/'/>http://zbryikt.github.io/visualize/kh-pipe/</a></p><p></p><undefined><li><b>20141109 unconf lighting talks</b></li></undefined>
+<p>名詞 (待完善):</p><ul><li>預警值: 由過去一段時間的病例數的平均值(3年、5年......)。視疾病特性可能需排除流行期的資料。超過此數值代表疫情進入流行期。</li>
+<li>流行閥值:由平均值(預警值)加上一定比例的標準差。超過此值代表疫情進入高峰期。</li>
+<li>範例: <a href='https://www.cdc.gov.tw/list.aspx?treeid=1F07E8862BA550CF&amp;nowtreeid=42B3FB03A6172EF0'/>腸病毒疫情週報</a></li></ul>
+<ul class="comment"><li>現階段希望有疾管局針對疫情的所訂定的門檻值資料，如果能有計算方式更好。資料範圍需特別注意，例如是全國/縣市/區/鄉里，還有時間範圍。</li>
+<li>或用相似的方式自定門檻值，會與官方不同，但至少也是種依據。</li></ul>
+
+<h2>預期產出 : 作成以下 timeline 地圖</h2><p>範例 : <a href='http://healthmap.org/ebola/#timeline'/>healthmap.org/ebola/</a><a href='https://g0v.hackpad.com/ep/search/?q=%23timeline&amp;via=NpPQ1UZc3Up'/>#timeline</a></p><p>每週定期抓資料, 含各種不同法定傳染病</p><p></p><p>有沒有辦法找到 高雄水溝蓋的map ?&nbsp; 如果能做水溝蓋的map 再對比 病例發生 , 不知道會不會有相關 ?</p><p>&nbsp;&nbsp; 例: 高雄地下管線圖 <a href="http://zbryikt.github.io/visualize/kh-pipe/"></a><a href='http://zbryikt.github.io/visualize/kh-pipe/'/>http://zbryikt.github.io/visualize/kh-pipe/</a></p><p></p><undefined><li><b>20141109 unconf lighting talks</b></li></undefined>
 <ul><li>簡報投影片: <a href="https://www.dropbox.com/s/she63s86jv79hi5/1%E9%AB%98%E9%9B%84%E6%B0%A3%E7%88%86%E7%99%BB%E9%9D%A9%E7%86%B1.pdf?dl=0"></a><a href='https://www.dropbox.com/s/she63s86jv79hi5/1%E9%AB%98%E9%9B%84%E6%B0%A3%E7%88%86%E7%99%BB%E9%9D%A9%E7%86%B1.pdf?dl=0'/>https://www.dropbox.com/s/she63s86jv79hi5/1%E9%AB%98%E9%9B%84%E6%B0%A3%E7%88%86%E7%99%BB%E9%9D%A9%E7%86%B1.pdf?dl=0</a></li>
 <li>video: <a href="https://www.youtube.com/watch?v=gdANo3LrWyk&feature=youtube_gdata_player"></a><a href='https://www.youtube.com/watch?v=gdANo3LrWyk&amp;feature=youtube_gdata_player'/>https://www.youtube.com/watch?v=gdANo3LrWyk&amp;feature=youtube_gdata_player</a></li></ul>
 
