@@ -3,12 +3,14 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2344"/>
+<meta name="version" content="3467"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$6oAR9BlZDoH</title>
 </head>
 <body><h1>&lt;progress&gt;市長承諾&lt;/progress&gt;</h1><ul class="comment"><li>命名：市長按摩站 對市長施壓(?)</li>
 <li>市長馬殺雞 (?)</li>
-<li>any alternatives / naming candidates?</li></ul>
+<li>any alternatives / naming candidates?</li>
+<li>市政，給力嗎(?) // 剛好和「市長，給問嗎？」呼應。也是要看想不想和沃草名稱這麼像</li>
+<li>另外，此專案可以成為長期獨立小松「市政松」？「承諾松」？「新政松」？</li></ul>
 
 <h2>專案簡介</h2><p>All g0v unconference 2014 sessions in lounge area: <a href="http://beta.hackfoldr.org/g0v-summit-2014-unconf/4psifYRIWBJ"></a>http://beta.hackfoldr.org/g0v-summit-2014-unconf/<a href='http://beta.hackfoldr.org/g0v-summit-2014-unconf/'/>4psifYRIWBJ</a></p><p></p><p>政治人物會以已達成的政見，來說明自己的執行力；但沒有當初競選時的所有承諾作為「分母」，我們很難公允地去評價一個政治人物的執行能力。以臺北市長選舉為例，在選舉前我們已經透過協作方式，列出了候選人的選舉承諾；在選後，個別的壓力團體與利益團體，也會緊盯他們所關注的支票是否有兌現。市長發言會強調他做到的部分，壓力團體開記者會責成市長政見跳票的部分，但到底這個市長整體的執行力如何呢？我們認為可以將當初的各項承諾，加上進度條（政見研擬 &gt; 議會排案 &gt; 議會通過 &gt; 實際實行 v.s. 跳票 + 跳票理由）來追蹤。對個別議題有興趣者，可以在這裏連結到相對的壓力團體；一般的選民則可以透過全面的承諾進度來評定這個市長的執行力。</p><p></p><ul><li>監督當選人的施政</li>
 <li>給市議員以及市民的 checklist，施壓也能施對地方</li></ul>
@@ -45,10 +47,16 @@
 <ul class="taskdone"><li>NeedsTalkingToRealPerson: 需要有人幫忙和其他機關聯絡</li></ul>
 <ul class="comment"><li>設定成 project registry 中的 tags，需要幫忙的會自動 promote 到 g0v project hub</li></ul>
 
-<h2>實作細節（非技術背景可跳填）</h2><p>ReactJS</p><p></p><h2>Future work</h2><p>這樣的系統其實可以套用在任何需要修法的承諾。</p><p>中央執政團隊「承諾推動」到「實際立法」到「法案上路」是條漫長的過程，而且可能會橫跨很多不同的法律，例如說自經區條例之外，也修改了農產與教育相關的條例等等。</p><p>這樣的系統提供一個完整的 list of checkpoints，讓大家看看從「整體政策」的角度來看個別相關法修法的進度到哪裡。</p><p></p><p>以 <a href="http://mag.stormmediagroup.com/transgender/16/"></a><a href='http://mag.stormmediagroup.com/transgender/16/'/>http://mag.stormmediagroup.com/transgender/16/</a> 為例，文中的「消除⋯⋯公約」是由<a href='http://www.gec.ey.gov.tw/News_Content.aspx?n=9AC8D0E0C33FF2BF&amp;sms=8D9E42E64BBA4FB6&amp;s=3FA23562B533982A'/>行政院性別平等會</a>負責，最新消息裡面有寫：</p><ul class="code"><li>本院於101年6月21日函頒「性別平等大步走－落實消除對婦女一切形式歧視公約計畫」，建置法規檢視系統，由各級政府機關進行法規檢視，並於法規檢視系統中填報檢視案件數計3萬2千餘件法規、命令及行政措施，召開11次CEDAW法規檢視專案審查小組會議，經檢視不符合之法規及行政措施計74件，已完成修法8件，送立法機關審議中7件，餘在行政機關修訂程序中。預訂於103年底全面完成法規之制（訂）定、修正或廢止及行政措施之改進。</li></ul>
-<p>這裡就有修法進度可以參考。</p><p></p><h2>提議</h2><ul><li>是否可以先採用一般的 issue tracker 如 <a href='https://guides.github.com/features/issues/'/>github issue tracker</a> 或是 <a href='https://trello.com/'/>trello</a> 來管理政見的實施進度，再來反思泛用的 issue tracker 面對這種特殊用途（市長承諾）來說有什麼不足的地方？</li></ul>
+<h2>實作細節（非技術背景可跳填）</h2><p>ReactJS + flux</p><p>Storage: pgrest, firebase.io, parse.com</p><p></p><h2>Future work</h2><p>這樣的系統其實可以套用在任何需要修法的承諾。</p><p>中央執政團隊「承諾推動」到「實際立法」到「法案上路」是條漫長的過程，而且可能會橫跨很多不同的法律，例如說自經區條例之外，也修改了農產與教育相關的條例等等。</p><p>這樣的系統提供一個完整的 list of checkpoints，讓大家看看從「整體政策」的角度來看個別相關法修法的進度到哪裡。</p><p></p><p>以 <a href="http://mag.stormmediagroup.com/transgender/16/"></a><a href='http://mag.stormmediagroup.com/transgender/16/'/>http://mag.stormmediagroup.com/transgender/16/</a> 為例，文中的「消除⋯⋯公約」是由<a href='http://www.gec.ey.gov.tw/News_Content.aspx?n=9AC8D0E0C33FF2BF&amp;sms=8D9E42E64BBA4FB6&amp;s=3FA23562B533982A'/>行政院性別平等會</a>負責，最新消息裡面有寫：</p><ul class="code"><li>本院於101年6月21日函頒「性別平等大步走－落實消除對婦女一切形式歧視公約計畫」，建置法規檢視系統，由各級政府機關進行法規檢視，並於法規檢視系統中填報檢視案件數計3萬2千餘件法規、命令及行政措施，召開11次CEDAW法規檢視專案審查小組會議，經檢視不符合之法規及行政措施計74件，已完成修法8件，送立法機關審議中7件，餘在行政機關修訂程序中。預訂於103年底全面完成法規之制（訂）定、修正或廢止及行政措施之改進。</li></ul>
+<p>這裡就有修法進度可以參考。</p><p></p><h2>提議</h2><ul><li>是否可以先採用一般的 issue tracker 如 <a href='https://guides.github.com/features/issues/'/>github issue tracker</a> 或是 <a href='https://trello.com/'/>trello</a> 來管理政見的實施進度，再來反思泛用的 issue tracker 面對這種特殊用途（市長承諾）來說有什麼不足的地方？</li><ul class="comment"><li>這是很酷的出發點！我之前一直從 Wikipedia 的角度在思考 promise tracker，覺得 promise tracker 只要貼連結、更新進度，應該比起其他群眾協作的 Wikipedia 或 <a href='http://hacktabl.org/taipei-mayoral-election-2014'/>市長承諾表</a> 還要平易近人一些。</li>
+<li>TODO list 應用如 Trello，是一個我之前從來沒有想到過的切入點。我認為可以先把過去市長的政見放進 Trello（像是下面的 2010 胡自強政見），然後從 2 種使用者的角度，來觀察這個 issue tracker 是否合用：</li>
+<li>1) 剛看到一則相關新聞，想要來更新某特定政見進度的「公民編輯」，能不能輕鬆地找到相關政見，進行更新？</li>
+<li>2) 連任選舉將至，想要來看看這位行政首長的整體施政能力的「選民」，能不能從這個介面找到他最想要的資訊？</li>
+<li>至於 github issue tracker，他的優點是<a href='https://help.github.com/articles/viewing-your-milestone-s-progress/'/>milestone</a> 會用 progress bar 呈現。我們可以用一個 github repo 代表一個候選人、一個 milestone 代表一個種類的政見（如「教育」）、 一個 issue 代表個別承諾（如「選擇一所公立國中與國小進行教育實驗，提高實驗教育至 3%~5%，使公立/私立/實驗教育三軌併行 」），或甚至是全台灣的市長通通放進一個 github repo，然後每個 milestone 是一個市長 XD&nbsp; 然而，github 的 issue 只有兩個 state (open/close)，而且整體設計比較重在 issue 的討論過程，並非讓進度的更新與表列更加容易，因此「公民編輯」與「選民」這兩種目標使用者角色，似乎滿難在 github issue tracker 上面有所發揮。</li></ul>
+</ul>
 
-<p></p><h2>Unconference 工作區</h2><p>問題：有些政見無法 progress 化。馬英九有計算他的政見達成率，是怎麼算的？</p><p></p><p><b>參考連結</b></p><p><a href="http://www.hi-on.org.tw/bulletins.jsp?b_ID=135443"></a>http://www.hi-on.org.tw/bulletins.jsp?b_ID=135443 # 馬總統九成七政見達成率是怎麼算的</p><ul class="code"><li>即將併入國發會的行政院研考會日前提出一分報告，指馬總統二○○八年提出的大選政見，至去年上半年為止，在四百十四項政見中，「已完成」及「具階段性成果」者共計四百零一項，完成比率高達九十六點九％。研考會能將政見的追蹤考核「量化」到這種出神入化的地步，真不愧是形式主義的大師。</li>
+<p></p><h2>Unconference 工作區</h2><ul class="comment"><li>以下待整理</li></ul>
+<p>問題：有些政見無法 progress 化。馬英九有計算他的政見達成率，是怎麼算的？</p><p></p><p><b>參考連結</b></p><p><a href="http://www.hi-on.org.tw/bulletins.jsp?b_ID=135443"></a>http://www.hi-on.org.tw/bulletins.jsp?b_ID=135443 # 馬總統九成七政見達成率是怎麼算的</p><ul class="code"><li>即將併入國發會的行政院研考會日前提出一分報告，指馬總統二○○八年提出的大選政見，至去年上半年為止，在四百十四項政見中，「已完成」及「具階段性成果」者共計四百零一項，完成比率高達九十六點九％。研考會能將政見的追蹤考核「量化」到這種出神入化的地步，真不愧是形式主義的大師。</li>
 <li><a href="https://github.com/ronnywang/50d50v/blob/master/20141103/result.csv"></a>https://github.com/ronnywang/50d50v/blob/master/20141103/result.csv</li>
 <li>2014年與六都市長相關新聞列表</li>
 <li><a href="http://penghu-chien-885739.middle2.me/?keyword=胡志強+承諾"></a>http://penghu-chien-885739.middle2.me/?keyword=胡志強+承諾</li>
@@ -56,7 +64,18 @@
 
 <p></p><p></p><p></p><p><b>討論紀錄</b></p><p></p><p>郝明義發起「希望地圖」</p><p>每年由專家學者評估，因為客觀的 progress 可能不等於實際的 progress。</p><p></p><p>陳水扁：</p><p>當選後，要求局處研擬具體方案，分四年（不可能）。會在每年預算與市政報告時，呈報給議員。</p><p></p><p>nchild: 透過關係（？），把不明確的政策講清楚。</p><p></p><p>雨蒼：「民眾觀感/主觀達成率」：可以讓大家有個 switch，留下說「你覺得這個東西達成了沒」，但 assume 每個人都會來 actively 更新是否達成。</p><p></p><p>淑芳：一年後去追蹤就消失</p><p></p><p>雨蒼：以朱立倫先動土才發包，</p><p>發包 &gt; 動土 &gt; ⋯⋯ 的 progress bar 就會失靈。</p><p></p><p>Yuren: 對於一則新聞，vote 還沒做 / 開始做 / 有達成，用這個去算「達成率」</p><p></p><p>個別承諾變成三種 stage，換成燈號，但每個大項目可能可以是 progress bar</p><ul class="comment"><li>首頁可以撈出網友最新回報的新聞，問 visitor 說「你覺得這個新聞 (還沒做 開始做 有達成 沒達成 ）ＸＸＸＸＸ承諾？」</li>
 <li><br/></li>
-<li>為什麼要上來回答？大多是不滿</li></ul>
+<li>為什麼要上來回答？大多是不滿</li>
+<li>像是 create issue -&gt; create branch -&gt; code review -&gt; merge 的概念</li>
+<li>milestone 是 柯P 新政的大項，下面的 issues 應該還沒具體決定，或等待市府團隊/市民決定</li>
+<li>milestone has many issues</li>
+<li>create branch 開始做</li>
+<li>code review 過市民接受門檻才 merge</li>
+<li>progress bar: merged issues / issues belongs to a milestone</li>
+<li>柯P 新政三十項，就三十條 progress bars</li>
+<li><br/></li>
+<li>補你的想法，看你要貼哪或補充都可</li>
+<li>github 概念套過來，但是是附加在你的 progress bar 上面的</li>
+<li>也就是說，有個獨立的 progress bar 介面</li></ul>
 
 <ul class="comment"><li>吸引人進網站（回答更多問題）：可以特別地去針對某些重要新聞證件，找過去的資料做成比較華麗（？）的燈號問題，然後讓人進來</li>
 <li><br/></li></ul>
