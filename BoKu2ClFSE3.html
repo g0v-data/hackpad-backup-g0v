@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2300"/>
+<meta name="version" content="2332"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$BoKu2ClFSE3</title>
 </head>
 <body><h1>打臉高手 brainstorm</h1><h2>Overview</h2><p>提供低瀏覽門檻，不容易歪樓謾罵的網路八卦版+新聞版yelp</p><ul><li>利用群眾智慧</li>
@@ -39,9 +39,9 @@
 <li>用FB確認身份, po文(map to a nickname)</li></ol>
 <ul style="list-style: none;"><li>公開FB account(optional, but default set to yes)</li></ul>
 
-<h2>System Architecture</h2><p><b>Database</b></p><p><i>Post </i>-- id: pk; news_url: url; reason: String; vote: Int; views: Int; time: Ts;&nbsp;</p><ul style="list-style: none;"><li>tag: Tag; user: Profile; keyword: Keyword;</li></ul>
-<p><i>Response </i>-- id: pk; original_post: Post; response_text: Text; upvote: Int;&nbsp;</p><ul style="list-style: none;"><li>downvote: Int; user: Profile; timestamp: Ts;&nbsp;</li></ul>
-<p><i>Profile </i>-- id: pk; fb-id: String; nickname: String; reputation: Int;&nbsp;</p><p><i>Subscribe Table</i> -- user: Profile; post: Post;</p><p><i>Tag </i>-- id: pk; tag: String;</p><p><i>Keyword </i>-- id: pk; keyword: String;</p><p><b>Web page</b></p><p><b>Android (EXT)</b></p><p><b>IOS (EXT)</b></p><p></p><h2>Use Cases</h2><ol><li>User login<ol><li>Core-7</li></ol>
+<h2>System Architecture</h2><p><b>Database</b></p><p><i>Post </i>-- id: pk; news_url: url; reason: String; vote: Int; views: Int; time: Ts;&nbsp;</p><ul style="list-style: none;"><li>tag: Tag; author: User; keyword: Keyword;</li></ul>
+<p><i>Response </i>-- id: pk; original_post: Post; response_text: Text; upvote: Int;&nbsp;</p><ul style="list-style: none;"><li>downvote: Int; author: User; timestamp: Ts;&nbsp;</li></ul>
+<p><i>User </i>-- id: pk; fb-id: String; nickname: String; reputation: Int; fb_link: boolean</p><p><i>Subscribe Table</i> -- user: User; post: Post;</p><p><i>Tag </i>-- id: pk; tag: String;</p><p><i>Keyword </i>-- id: pk; keyword: String;</p><p><b>Web page</b></p><p><b>Android (EXT)</b></p><p><b>IOS (EXT)</b></p><p></p><h2>Use Cases</h2><ol><li>User login<ol><li>Core-7</li></ol>
 </li>
 <li>User posting (問卦) 有發文限制(5mins 1篇)&nbsp; (rating: subscribe/views)<ol><li>Core-1</li>
 <li>Core-2</li>
