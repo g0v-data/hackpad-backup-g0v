@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2699"/>
+<meta name="version" content="3038"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$4a31UkdBItq</title>
 </head>
 <body><h1>政治承諾追蹤網 Political Promise Tracker</h1><p></p><ul class="comment"><li>此 pad 由原 g0v unconference 2014 之提案 <a href='/progressprogress-g0v-unconference-2014-6oAR9BlZDoH'/>&lt;progress&gt;市長承諾&lt;/progress&gt;</a> 整理而來，接續其討論。</li></ul>
@@ -26,7 +26,12 @@
 <li>個別政見與整體執行率計算百分比，以 progress bar 呈現</li>
 <li>Source code: <a href="https://github.com/ciudadanointeligente/check-it"></a><a href='https://github.com/ciudadanointeligente/check-it'/>https://github.com/ciudadanointeligente/check-it</a> (django app,)</li></ul>
 
-<p>智利的這個專案相當成熟，他們的公開報告（<a href='https://docs.google.com/document/d/1nQuNV0y0eyZRRStK-B744OHkM12ixrof7EZWiOOXAkY/edit'/>西班牙原文</a> / <a href='https://docs.google.com/document/d/1-w6h4p3FQzCtDwK239UdhJ71FctvrW1MRfssllgYud4/edit'/>Google 翻譯成英文</a> [建議閱讀此版] / <a href='https://docs.google.com/document/d/1Yf9RHNeYZiRZ069VymUIwYX1S-FdbeuJoiRqdHKSftk/edit'/>Google 翻譯成中文</a> [x_x]）將這個專案交代得非常完整。</p><p></p><p>他們計算完成度的公式是： (C*0.5 + V*0.5) * 100</p><p>其中 C 是 consistency variable，V 是 verification variable</p><ul class="comment"><li>求助 QQ 我看不懂 3.1 Consistency 與 3.2 Verification 的意思是什麼 QQ</li></ul>
+<p>智利的這個專案相當成熟，他們的公開報告（<a href='https://docs.google.com/document/d/1nQuNV0y0eyZRRStK-B744OHkM12ixrof7EZWiOOXAkY/edit'/>西班牙原文</a> / <a href='https://docs.google.com/document/d/1-w6h4p3FQzCtDwK239UdhJ71FctvrW1MRfssllgYud4/edit'/>Google 翻譯成英文</a> [建議閱讀此版] / <a href='https://docs.google.com/document/d/1Yf9RHNeYZiRZ069VymUIwYX1S-FdbeuJoiRqdHKSftk/edit'/>Google 翻譯成中文</a> [x_x]）將這個專案交代得非常完整。</p><p></p><p>他們計算完成度的公式是： (C*0.5 + V*0.5) * 100</p><p>其中 C 是 consistency variable，V 是 verification variable</p><ul class="comment"><li>求助 QQ 我看不懂 3.1 Consistency 與 3.2 Verification 的意思是什麼 QQ</li>
+<li>3.1ㄧ致性：政見與履行政策手段的ㄧ致性&nbsp; 如果ㄧ個工作可以達成政見就評分為1, 如果只能達成其中ㄧ部份就0.5, 如果政見只有在方法裡看到ㄧ點邊就給0.1, 如果不能驗證的就不給分。每個政見會有一個評分方法，給分方式經討論修正。</li>
+<li><br/></li>
+<li>3.2 可驗證：政見能否有標準可勾稽，如果檢查的欄位完整就給1分，不完整0.5,沒有檢查給0分。(這邊的標準就是3.1所說的評分方法)</li>
+<li>「可以勾稽」這裡，好像是看是否有證明文件 (supporting document) 這樣嗎？ 如果未釋出政見實現的證明就 0 分；若有釋出文件但文件僅能證成部分的政見實現，就是 0.5 分；若釋出的文件們可以完整驗證此政見已經完全兌現，就是1分。</li>
+<li><br/></li></ul>
 
 <p></p><p><b>歐巴馬 ＆ 共和黨 Promise Tracker</b></p><p></p><p><a href="http://www.politifact.com/truth-o-meter/promises/obameter/"></a>http://www.politifact.com/truth-o-meter/promises/obameter/</p><ul><li>資料來源與更新：不開放眾人編輯，由媒體 Tampa Bay Times 更新</li>
 <li>追蹤對象：<a href='http://www.politifact.com/truth-o-meter/promises/obameter/'/>歐巴馬</a>，<a href='http://www.politifact.com/truth-o-meter/promises/gop-pledge-o-meter/'/>共和黨</a></li>
@@ -55,12 +60,12 @@
 <li>沒有其他擴充性（增加評論功能、任期倒數、所有觀眾投票決定進度等等）</li></ul>
 
 <undefined><li><b>B 案：使用 Trello</b></li></undefined>
-<p>（待補）</p><p></p><p><b>C 案：初版 Prototype</b></p><p>（待補，將整理自 <a href='/progressprogress-g0v-unconference-2014-6oAR9BlZDoH'/>&lt;progress&gt;市長承諾&lt;/progress&gt;</a> 裡的海報）</p><p></p><h2>徵求協作者</h2><p></p><p>發起人/拋磚人： <a href='https://g0v.hackpad.com/ep/profile/z4JarLrJBea'/>Johnson Liang</a></p><p>分工與成員</p><ul class="taskdone"><li>NeedsWriter: 需要文案幫手（撰寫基本資訊、報導專案etc）</li></ul>
-<ul class="task"><li>NeedsDesigner: 需要介面設計</li>
-<li>NeedsData: 需要資料（擷取、清理）</li>
-<li>NeedsTech: 需要技術支援（程式、架站 etc)</li>
-<li>NeedsProcess: 需要幫忙設計作業流程</li></ul>
-<ul class="taskdone"><li>NeedsTalkingToRealPerson: 需要有人幫忙和其他機關聯絡</li></ul>
+<p>（待補）</p><p></p><p><b>C 案：初版 Prototype</b></p><p>（待補，將整理自 <a href='/progressprogress-g0v-unconference-2014-6oAR9BlZDoH'/>&lt;progress&gt;市長承諾&lt;/progress&gt;</a> 裡的海報）</p><p></p><h2>徵求協作者</h2><p></p><p>發起人/拋磚人： <a href='https://g0v.hackpad.com/ep/profile/z4JarLrJBea'/>Johnson Liang</a></p><p>分工與成員</p><ul class="taskdone"><li>NeedsWriter: 需要文案幫手（撰寫基本資訊、報導專案etc）</li>
+<li>NeedsDesigner: 需要介面設計</li></ul>
+<ul class="task"><li>NeedsData: 需要資料（擷取、清理）</li>
+<li>NeedsTech: 需要技術支援（程式、架站 etc)</li></ul>
+<ul class="taskdone"><li>NeedsProcess: 需要幫忙設計作業流程</li>
+<li>NeedsTalkingToRealPerson: 需要有人幫忙和其他機關聯絡</li></ul>
 <ul class="comment"><li>設定成 project registry 中的 tags，需要幫忙的會自動 promote 到 g0v project hub</li></ul>
 
 <p></p><p></p></body>
