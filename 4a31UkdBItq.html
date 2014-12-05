@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="4253"/>
+<meta name="version" content="4787"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$4a31UkdBItq</title>
 </head>
 <body><h1>政治承諾追蹤網 Political Promise Tracker</h1><p></p><ul class="comment"><li>此 pad 由原 g0v unconference 2014 之提案 <a href='/progressprogress-g0v-unconference-2014-6oAR9BlZDoH'/>&lt;progress&gt;市長承諾&lt;/progress&gt;</a> 整理而來，接續其討論。</li></ul>
@@ -64,7 +64,7 @@
 <p></p><p><b>預定目標</b></p><p></p><ul><li>提供足夠資訊（進度視覺化、資訊鏈結），協助 Audience 下價值判斷（當前執政者執行力好壞）</li>
 <li>降低 editor 編輯更新施政進度的門檻</li></ul>
 
-<p><b>預定功能</b></p><p></p><p>[WIP] 請見「目前進展」，提出自己的看法！&nbsp;</p><p></p><p><b>額外功能（Idea Pool！）</b></p><p></p><undefined><li><b>鼓勵編輯系列</b></li></undefined>
+<p><b>預定功能</b></p><p></p><p>[WIP] 請見「目前進展」，提出自己的看法！&nbsp;</p><p></p><p></p><p><b>額外功能（Idea Pool！）</b></p><p></p><undefined><li><b>鼓勵編輯系列</b></li></undefined>
 <p>此專案的本質類似 Wikipedia，主要價值來自於 editor 自發性回報之進度。</p><p>有什麼方法可以鼓勵 editor 作出貢獻，或是讓受益者 audience 也能著手開始編輯呢？</p><p></p><ul><li>除 editor 手動新增新聞外，網站也可以主動爬取可能與政策相關的新聞，在適當時機將新聞呈現給 audience，並要求 audience 作出「和承諾無關」「未開始」「進行中」「已完成」的 tagging。</li>
 <li>Gamification 遊戲化：建立操作型制約的 token system（經驗值，等級，頭銜等）</li></ul>
 
@@ -94,7 +94,18 @@
 <li>沒有其他擴充性（增加評論功能、任期倒數、所有觀眾投票決定進度等等）</li></ul>
 
 <undefined><li><b>B 案：使用 Trello</b></li></undefined>
-<p>（待補）</p><p></p><p><b>C 案：初版 Prototype</b></p><p>（待補，將整理自 <a href='/progressprogress-g0v-unconference-2014-6oAR9BlZDoH'/>&lt;progress&gt;市長承諾&lt;/progress&gt;</a> 裡的海報）</p><p></p><undefined><li>權重</li></undefined>
+<p>（待補）</p><p></p><p><b>C 案：初版 Prototype</b></p><p></p><p>Clickable Prototype 網址:<b> </b><a href="http://invis.io/9Z1TFRTFT"></a><b>http://invis.io/9Z1TFRTFT</b></p><ul class="comment"><li>這個專案是 RWD 的「網頁」，只是先做 mobile 版的 prototype 比較能專注在呈現核心功能。</li></ul>
+
+<undefined><li><b>使用情境</b></li></undefined>
+<p><b>Editor</b>：在看到了某則新聞之後，覺得這篇新聞好像可以來更新進度，所以就複製了網址，一進站之後就按右上角的「+」，在「出處」貼上新聞網址，選好這是誰的哪一個承諾之後，就可以來為這個承諾評達成率。</p><p></p><p><b>Audience</b>：進站之後，可以直接從左邊的 menu 裏面選擇要看的執政者的目前進度。首頁則有全站的最新更新。</p><p></p><undefined><li><b>Design choice</b></li></undefined>
+<ul><li>3 個大流程：1. 看承諾、2. 新增出處網址、3. 新增完成度評比。3 個流程彼此獨立，沒有說一定要誰先誰後。</li>
+<li>達成率的評斷方式還可以再討論，prototype 裡面的「還沒做」「還在做」「已完成」是之前 unconference 討論的一個評分方式。</li>
+<li>「使用者登入」這個步驟，被往後延遲到使用者的評分存進網站之前。這裡設計成「新增出處網址不用登入，但評比完成度與留言卻需要登入」的原因是，我認為「評比完成度」的門檻太低，需要記名發言與評完成度；然而，新增出處網址的門檻比較高，為了鼓勵大家提供出處，因此省去登入流程。</li><ul class="comment"><li>這個設計是參考 <a href='http://www-users.cs.umn.edu/~echi/papers/2007-CHI/2007-Wikipedia-coordination-PARC-CHI2007.pdf'/>CHI2007 的一篇研究 Wikipedia 衝突調解的 Paper</a>。該研究將兩個作者在一個 wiki entry 裡不斷 revert 彼此變更的狀況定義為「衝突」。作者發現，Wikipedia 上面的文章，匿名編輯者越多，越不會有衝突；但如果有越多人匿名討論（在討論頁面），那麼文章的衝突就會越多。</li>
+<li>套用到 promise tracker 裡，「提供承諾更新的出處網址」的人就像是編輯 wiki 文章的人，但「幫承諾評進度」的人比較像是討論者。後者或許比較需要記名來減少 valdalism。</li></ul>
+<ul style="list-style: none;"><li><br/></li></ul>
+</ul>
+
+<p></p><p><b>其他討論</b></p><p></p><undefined><li>權重</li></undefined>
 <p>權重可以由全部的閱覽者提供。以瀏覽器為人次單位，每當閱覽人初次造訪時，可以隨機詢問他對於這一位政治代理人所關心的面向。提供給閱覽人一組神奇拉桿，可以調出一組權重向量。全部閱覽者的權重向量加總起來，總和的權重向量就是面向A、面向B等等的比值。而政治代理人的每一項政見，可各自歸類為哪一個面向，或者哪幾個面向，這個歸類是由站方預設的。</p><p></p><h2>徵求協作者</h2><p></p><p>發起人/拋磚人： <a href='https://g0v.hackpad.com/ep/profile/z4JarLrJBea'/>Johnson Liang</a></p><p>分工與成員</p><ul class="taskdone"><li>NeedsWriter: 需要文案幫手（撰寫基本資訊、報導專案etc）</li>
 <li>NeedsDesigner: 需要介面設計</li></ul>
 <ul class="task"><li>NeedsData: 需要資料（擷取、清理）</li>
