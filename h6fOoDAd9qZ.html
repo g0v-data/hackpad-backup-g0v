@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="4666"/>
+<meta name="version" content="4687"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$h6fOoDAd9qZ</title>
 </head>
 <body><h1>義務律師陪偵平台</h1><p></p><p>Hackath9n 簡報：<a href="http://goo.gl/2o3Ywx"></a>http://goo.gl/2o3Ywx　文稿：<a href="http://goo.gl/v2CHQ2"></a><a href='http://goo.gl/v2CHQ2'/>http://goo.gl/v2CHQ2</a></p><p></p><ul><li>舊 hackpad： <a href="https://hackpad.com/--ltsoiiHdSbX"></a>https://hackpad.com/--ltsoiiHdSbX</li>
@@ -290,24 +290,8 @@
 <li>@return Array.&lt;id: &rsquo;id&rsquo;, AttorneyInfo: {id: &rsquo;id&rsquo;, name:&rsquo;attorneyName&rsquo;, locations: 陪偵縣市, numCases: 案件量, cell: &rsquo;0912345678&rsquo;}&gt;</li>
 <li><br/></li>
 <li>AttorneyStatus = {PENDING: 0, OFFLINE: 1, ONCALL: 2}</li></ul>
+<p>　</p><ul class="code"><li>{&quot;isSuccess&quot;:true,&quot;errorCode&quot;:0,&quot;data&quot;:[{&quot;time&quot;:&quot;&quot;,&quot;name&quot;:&quot;&#92;u738b&#92;u666f&#92;u5f18&quot;,&quot;cellphone&quot;:&quot;0975772843&quot;,&quot;location&quot;:&quot;&#92;u53f0&#92;u5317&#92;u5e02&quot;,&quot;status&quot;:0,&quot;attorney&quot;:{&quot;name&quot;:&quot;test&quot;,&quot;status&quot;:0,&quot;id&quot;:&quot;5482a25a9d8d3f7017000029&quot;},&quot;0&quot;:&quot;createDate&quot;,&quot;createDate&quot;:1417856419000,&quot;id&quot;:&quot;5482c5a39d8d3f141300002c&quot;}],&quot;errorMessage&quot;:null}</li></ul>
 
-<ul style="list-style: none;"><li>Result(Mock)</li></ul>
-<ul class="code"><li>{&quot;isSuccess&quot;:true,&quot;errorCode&quot;:0,&quot;data&quot;:[{&quot;name&quot;:&quot;test&quot;,&quot;cellphone&quot;:&quot;0975772843&quot;,&quot;locations&quot;:[&quot;&#92;u57fa&#92;u9686&#92;u5e02&quot;,&quot;&#92;u53f0&#92;u5317&#92;u5e02&quot;],&quot;associations&quot;:[&quot;&#92;u57fa&#92;u9686&#92;u5f8b&#92;u5e2b&#92;u516c&#92;u6703&quot;,&quot;&#92;u53f0&#92;u5317&#92;u5f8b&#92;u5e2b&#92;u516c&#92;u6703&quot;],&quot;email&quot;:&quot;tonylovejava@gmail.com&quot;,&quot;auth&quot;:{&quot;type&quot;:&quot;FB&quot;,&quot;UID&quot;:123456},&quot;numCases&quot;:0,&quot;license&quot;:&quot;&#92;u6e2c&#92;u8a66&#92;u7528&#92;u5f8b&#92;u5e2b&#92;u8b49&#92;u865f&quot;,&quot;status&quot;:0,&quot;createDate&quot;:1417847386000,&quot;id&quot;:&quot;5482a25a9d8d3f7017000029&quot;}],&quot;errorMessage&quot;:null}</li>
-<li><a href="http://jrf.tonyq.org/api/lawyer/getAttorneyInfos"></a>http://jrf.tonyq.org/api/lawyer/getAttorney<a href='http://jrf.tonyq.org/api/lawyer/getAttorney/5482b8e2ffb11da97e7b23e8'/>I</a>nfos</li>
-<li><br/></li></ul>
-<p>/getAttorney/&lt;id&gt;/</p><ul style="list-style: none;"><li>@return Attorney: {id: &rsquo;id&rsquo;, name:&rsquo;attorneyName&rsquo;, license: &rsquo;律師證號&rsquo;, locations: 陪偵縣市, cell: &rsquo;0912345678 numCases: 案件數量, associations: 登錄工會, email: &rsquo;mailAddress&rsquo;, status: &rsquo;status&rsquo;}</li>
-<li><br/></li>
-<li>Sample ( <a href="http://jrf.tonyq.org/api/lawyer/getAttorney/5482b8e2ffb11da97e7b23e8"></a>http://jrf.tonyq.org/api/lawyer/getAttorney/5482b8e2ffb11da97e7b23e8 )</li></ul>
-<ul class="code"><li>{&quot;isSuccess&quot;:true,&quot;errorCode&quot;:0,&quot;data&quot;:{&quot;name&quot;:&quot;test&quot;,&quot;cellphone&quot;:&quot;0975772843&quot;,&quot;locations&quot;:[&quot;&#92;u57fa&#92;u9686&#92;u5e02&quot;,&quot;&#92;u53f0&#92;u5317&#92;u5e02&quot;],&quot;associations&quot;:[&quot;&#92;u57fa&#92;u9686&#92;u5f8b&#92;u5e2b&#92;u516c&#92;u6703&quot;,&quot;&#92;u53f0&#92;u5317&#92;u5f8b&#92;u5e2b&#92;u516c&#92;u6703&quot;],&quot;email&quot;:&quot;tonylovejava@gmail.com&quot;,&quot;auth&quot;:{&quot;type&quot;:&quot;FB&quot;,&quot;UID&quot;:123456},&quot;numCases&quot;:0,&quot;license&quot;:&quot;&#92;u6e2c&#92;u8a66&#92;u7528&#92;u5f8b&#92;u5e2b&#92;u8b49&#92;u865f&quot;,&quot;status&quot;:0,&quot;createDate&quot;:1417847386000,&quot;id&quot;:&quot;5482a25a9d8d3f7017000029&quot;},&quot;errorMessage&quot;:null}</li></ul>
-<ul style="list-style: none;"><li><br/></li></ul>
-<p>/saveAttorney/</p><ul style="list-style: none;"><li>@ param Attorney: {id: &rsquo;id&rsquo;, name:&rsquo;attorneyName&rsquo;, license: &rsquo;律師證號&rsquo;, locations: 陪偵縣市, cell: &rsquo;0912345678, associations: 登錄工會, email: &rsquo;mailAddress&rsquo;}</li></ul>
-
-<p>/getCaseInfos/&lt;PENDING | MATCHED | IN_PROGRESS | CLOSED&gt;</p><ul style="list-style: none;"><li>@param {number=} opt_limit</li>
-<li>@param {number=} opt_offset</li>
-<li>@return Array.&lt;CaseInfo: {caseID: &rsquo;id&rsquo;, eventTime: &rsquo;time&rsquo;, name: &rsquo;name&rsquo;, cell: &rsquo;0912345678&rsquo;, location: &rsquo;縣市&rsquo;,&nbsp; status: PENDING | MATCHED | IN_PROGRESS | CLOSED, attorney: &rsquo;接案律師&rsquo;}&gt;</li></ul>
-<p>CaseStatus = {PENDING: 0, MATCHED: 1, IN_PROGRESS:2, CLOSED:3}</p><ul style="list-style: none;"><li><br/></li></ul>
-<p>/getCase/&lt;id&gt;/</p><ul style="list-style: none;"><li>@return CaseInfo: {caseID: &rsquo;id&rsquo;, eventTime: &rsquo;time&rsquo;, name: &rsquo;name&rsquo;, cell: &rsquo;0912345678&rsquo;, location: &rsquo;縣市&rsquo;, address: &rsquo;地址&rsquo;, description: &rsquo;案由&rsquo;, status: PENDING | MATCHED | IN_PROGRESS | CLOSED, note: 備註, attorney: &rsquo;接案律師&rsquo;}</li>
-<li><br/></li></ul>
 <p>/saveCase/</p><ul style="list-style: none;"><li>@param CaseInfo: {caseID: &rsquo;id&rsquo;, eventTime: &rsquo;time&rsquo;, name: &rsquo;name&rsquo;, cell: &rsquo;0912345678&rsquo;, location: &rsquo;縣市&rsquo;, address: &rsquo;地址&rsquo;, description: &rsquo;案由&rsquo;, status: PENDING | MATCHED | IN_PROGRESS | CLOSED, note: 備註, attorney: &rsquo;接案律師&rsquo;}</li></ul>
 
 <h2>APP 功能列表</h2><ul><li>登入 By Facebook, Google mail&nbsp;<ul><li>Android 同時進行</li></ul>
