@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2752"/>
+<meta name="version" content="4666"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$h6fOoDAd9qZ</title>
 </head>
 <body><h1>義務律師陪偵平台</h1><p></p><p>Hackath9n 簡報：<a href="http://goo.gl/2o3Ywx"></a>http://goo.gl/2o3Ywx　文稿：<a href="http://goo.gl/v2CHQ2"></a><a href='http://goo.gl/v2CHQ2'/>http://goo.gl/v2CHQ2</a></p><p></p><ul><li>舊 hackpad： <a href="https://hackpad.com/--ltsoiiHdSbX"></a>https://hackpad.com/--ltsoiiHdSbX</li>
@@ -41,7 +41,15 @@
 </ul>
 <ul><li>先做NGO的Web及律師的APP，所以NGO的APP介面先緩緩～</li></ul>
 </ul>
-<ul class="comment"><li>另外在「帳號設定」的icon旁邊，需不需要加入一個user自己接案清單的icon？還是律師一般接案就有自己的記錄了？</li></ul class="comment">
+<ul class="comment"><li>另外在「帳號設定」的icon旁邊，需不需要加入一個user自己接案清單的icon？還是律師一般接案就有自己的記錄了？</li></ul>
+<ul><li>圖D 問題：&nbsp;<ul><li>如果案子很多，是否下拉即自動載入下一頁？</li></ul>
+<ul style="list-style: none;"><li>M: 或者是否就不分頁,讓他直接全部顯示,往下捲就可以往下讀(不確定APP的介面是否可以這樣呈現?)</li></ul>
+<ul><li>增加「關鍵字搜尋」功能？&nbsp;</li></ul>
+<ul style="list-style: none;"><li>M: 個人覺得初版APP不一定要包涵此功能~大家可以討論一下~</li></ul>
+<ul><li>是否允許 user 可以看見丁小勝的基本聯絡資料？（加入超連結）</li></ul>
+<ul style="list-style: none;"><li>M: 可以顯示律師的姓名,手機號碼,其他的不顯示~</li>
+<li><br/></li></ul style="list-style: none;">
+</li></ul>
 <h2>FLOW</h2><p><b>Client</b></p><ul style="list-style: none;"><li><b>request - (A)</b></li><ul><li>求救窗口</li>
 <li>律師還未到場的注意事項（搜集現場證據）</li></ul>
 </ul>
@@ -59,13 +67,7 @@
 </ul>
 <ul style="list-style: none;"><li><b>connect with lawyer - (E)</b></li><ul><li>On-call 的律師清單<ul><li>姓名</li>
 <li>可陪偵地點</li>
-<li>聯繫電話<ul><li>白天<ul><li>市話（選填）</li>
 <li>手機</li></ul>
-</li>
-<li>夜間<ul><li>市話（選填）</li>
-<li>手機</li></ul>
-</li></ul>
-</li></ul>
 </li>
 <li>E-mail</li></ul>
 </ul>
@@ -252,7 +254,69 @@
 <li>我沒有寫清楚，目前其實計畫會是 pool ，就是傳送給該區的所有人，看誰先回應這樣。（是有談到一個可以讓律師設定在線上或不在線上，但我覺得這個有點太複雜） （另外這個系統也應該要可以允許非原本的義務律師來加入）</li>
 <li>對我的意思就是這樣。至少讓律師被動的選擇願意接受的範圍。</li></ul>
 
-<h2>網頁用的 API</h2><p>getNGOInfos(opt_limit, opt_offset)</p><p>getNGO(id)</p><p>saveNGO(ngo)</p><p></p><p>getUserInfos(opt_limit, opt_offset)</p><p>getUser(id)</p><p>saveUser(user)</p><p></p><p>getAttorneyInfos(opt_limit, opt_offset)</p><p>getAttorney(id)</p><p>saveAttorney(attorney)</p><p></p><p>getCaseInfos(state, opt_limit, opt_offset)</p><p>getCase(id)</p><p>saveCase(case)</p><p></p><p></p><h2>進展</h2><ul><li><s><a href='https://hackpad.com/ep/profile/HUoUqaJnV2n'/>Tonyq Wang</a> 認養 Web</s><ul><li><a href="https://github.com/JRF-attorney/jrf-attorney-web"></a><s>https://github.com/JRF-attorney/jrf-attorney-web</s></li><ul class="task"><li>移進 g0v<ul class="task"><li>跟司改會確認過 open 的問題</li></ul class="task">
+<p></p><p></p><h2>APIs</h2><p></p><p><b>App</b></p><p>url: /app_login (POST)</p><p>input:&nbsp;</p><ul><li>name (String/ 律師名字（本名） ) ,</li>
+<li>cellphone(String/律師電話)</li>
+<li>locations (Array[String], 可陪偵區域(json array),ex. [&rsquo;基隆律師公會&rsquo;,&rsquo;台北律師公會&rsquo;]&nbsp; )</li>
+<li>Email (String/Email)</li>
+<li>authType (enum(&quot;FB&quot;,&quot;Google&quot;),登入類別（目前接受 &rsquo;FB&rsquo; 跟 &rsquo;Google&rsquo; 兩個值 ） )</li>
+<li>authToken (登入資料中 Google or Facebook 的 access token (由 android/iOS 預先認證好丟上來) )</li></ul>
+<p>output:</p><p></p><p>url:/getAttorneyInfos/&lt;PENDING | OFFLINE | ONCALL&gt;</p><p>input:&nbsp;</p><ul><li>limit (int)&nbsp;</li>
+<li>offset(int)</li></ul>
+<p>output:</p><ul><li>layerID</li>
+<li>name&nbsp;&nbsp;&nbsp;</li>
+<li>license</li>
+<li>cellphone&nbsp;</li>
+<li>email</li>
+<li>createDate</li>
+<li>status ( 0 : 未確認, 1:offline,2:online)</li>
+<li>locations</li>
+<li>last_modify</li></ul>
+
+<p></p><p><b>Web</b></p><p></p><p>/getNGOList/</p><ul style="list-style: none;"><li>@param {number=} opt_limit</li>
+<li>@param {number=} opt_offset</li>
+<li><br/></li></ul>
+<p>/saveNGO/</p><ul style="list-style: none;"><li>@param NGO: {name: &rsquo;ngoName&rsquo;}</li></ul>
+
+<p>// User: 可以登進網頁系統填單者</p><p>/getUserInfos/</p><ul style="list-style: none;"><li>@param {number=} opt_limit</li>
+<li>@param {number=} opt_offset</li>
+<li>@return UserInfo: {userId: &rsquo;id&rsquo;, name: &rsquo;userName&rsquo;, cellphone: &rsquo;0912345678&rsquo;, orgName: &rsquo;orgName&rsquo;}</li>
+<li><br/></li></ul>
+<p>/getUser/id/</p><ul style="list-style: none;"><li>@return User: {userId: &rsquo;id&rsquo;, name: &rsquo;userName&rsquo;, cell: &rsquo;0912345678&rsquo;, landline: &rsquo;(04)8765-4321&rsquo;, org: {name: &rsquo;ngoName&rsquo;}}</li>
+<li><br/></li></ul>
+<p>/saveUser/</p><ul style="list-style: none;"><li>@param User: {userId: &rsquo;id&rsquo;, name: &rsquo;userName&rsquo;, cell: &rsquo;0912345678&rsquo;, landline: &rsquo;(04)8765-4321&rsquo;, org: {name: &rsquo;ngoName&rsquo;}}</li></ul>
+
+<p>/getAttorneyInfos/&lt;PENDING | OFFLINE | ONCALL&gt;/</p><ul style="list-style: none;"><li>@param {number} opt_limit</li>
+<li>@param {number} opt_offset</li>
+<li>@return Array.&lt;id: &rsquo;id&rsquo;, AttorneyInfo: {id: &rsquo;id&rsquo;, name:&rsquo;attorneyName&rsquo;, locations: 陪偵縣市, numCases: 案件量, cell: &rsquo;0912345678&rsquo;}&gt;</li>
+<li><br/></li>
+<li>AttorneyStatus = {PENDING: 0, OFFLINE: 1, ONCALL: 2}</li></ul>
+
+<ul style="list-style: none;"><li>Result(Mock)</li></ul>
+<ul class="code"><li>{&quot;isSuccess&quot;:true,&quot;errorCode&quot;:0,&quot;data&quot;:[{&quot;name&quot;:&quot;test&quot;,&quot;cellphone&quot;:&quot;0975772843&quot;,&quot;locations&quot;:[&quot;&#92;u57fa&#92;u9686&#92;u5e02&quot;,&quot;&#92;u53f0&#92;u5317&#92;u5e02&quot;],&quot;associations&quot;:[&quot;&#92;u57fa&#92;u9686&#92;u5f8b&#92;u5e2b&#92;u516c&#92;u6703&quot;,&quot;&#92;u53f0&#92;u5317&#92;u5f8b&#92;u5e2b&#92;u516c&#92;u6703&quot;],&quot;email&quot;:&quot;tonylovejava@gmail.com&quot;,&quot;auth&quot;:{&quot;type&quot;:&quot;FB&quot;,&quot;UID&quot;:123456},&quot;numCases&quot;:0,&quot;license&quot;:&quot;&#92;u6e2c&#92;u8a66&#92;u7528&#92;u5f8b&#92;u5e2b&#92;u8b49&#92;u865f&quot;,&quot;status&quot;:0,&quot;createDate&quot;:1417847386000,&quot;id&quot;:&quot;5482a25a9d8d3f7017000029&quot;}],&quot;errorMessage&quot;:null}</li>
+<li><a href="http://jrf.tonyq.org/api/lawyer/getAttorneyInfos"></a>http://jrf.tonyq.org/api/lawyer/getAttorney<a href='http://jrf.tonyq.org/api/lawyer/getAttorney/5482b8e2ffb11da97e7b23e8'/>I</a>nfos</li>
+<li><br/></li></ul>
+<p>/getAttorney/&lt;id&gt;/</p><ul style="list-style: none;"><li>@return Attorney: {id: &rsquo;id&rsquo;, name:&rsquo;attorneyName&rsquo;, license: &rsquo;律師證號&rsquo;, locations: 陪偵縣市, cell: &rsquo;0912345678 numCases: 案件數量, associations: 登錄工會, email: &rsquo;mailAddress&rsquo;, status: &rsquo;status&rsquo;}</li>
+<li><br/></li>
+<li>Sample ( <a href="http://jrf.tonyq.org/api/lawyer/getAttorney/5482b8e2ffb11da97e7b23e8"></a>http://jrf.tonyq.org/api/lawyer/getAttorney/5482b8e2ffb11da97e7b23e8 )</li></ul>
+<ul class="code"><li>{&quot;isSuccess&quot;:true,&quot;errorCode&quot;:0,&quot;data&quot;:{&quot;name&quot;:&quot;test&quot;,&quot;cellphone&quot;:&quot;0975772843&quot;,&quot;locations&quot;:[&quot;&#92;u57fa&#92;u9686&#92;u5e02&quot;,&quot;&#92;u53f0&#92;u5317&#92;u5e02&quot;],&quot;associations&quot;:[&quot;&#92;u57fa&#92;u9686&#92;u5f8b&#92;u5e2b&#92;u516c&#92;u6703&quot;,&quot;&#92;u53f0&#92;u5317&#92;u5f8b&#92;u5e2b&#92;u516c&#92;u6703&quot;],&quot;email&quot;:&quot;tonylovejava@gmail.com&quot;,&quot;auth&quot;:{&quot;type&quot;:&quot;FB&quot;,&quot;UID&quot;:123456},&quot;numCases&quot;:0,&quot;license&quot;:&quot;&#92;u6e2c&#92;u8a66&#92;u7528&#92;u5f8b&#92;u5e2b&#92;u8b49&#92;u865f&quot;,&quot;status&quot;:0,&quot;createDate&quot;:1417847386000,&quot;id&quot;:&quot;5482a25a9d8d3f7017000029&quot;},&quot;errorMessage&quot;:null}</li></ul>
+<ul style="list-style: none;"><li><br/></li></ul>
+<p>/saveAttorney/</p><ul style="list-style: none;"><li>@ param Attorney: {id: &rsquo;id&rsquo;, name:&rsquo;attorneyName&rsquo;, license: &rsquo;律師證號&rsquo;, locations: 陪偵縣市, cell: &rsquo;0912345678, associations: 登錄工會, email: &rsquo;mailAddress&rsquo;}</li></ul>
+
+<p>/getCaseInfos/&lt;PENDING | MATCHED | IN_PROGRESS | CLOSED&gt;</p><ul style="list-style: none;"><li>@param {number=} opt_limit</li>
+<li>@param {number=} opt_offset</li>
+<li>@return Array.&lt;CaseInfo: {caseID: &rsquo;id&rsquo;, eventTime: &rsquo;time&rsquo;, name: &rsquo;name&rsquo;, cell: &rsquo;0912345678&rsquo;, location: &rsquo;縣市&rsquo;,&nbsp; status: PENDING | MATCHED | IN_PROGRESS | CLOSED, attorney: &rsquo;接案律師&rsquo;}&gt;</li></ul>
+<p>CaseStatus = {PENDING: 0, MATCHED: 1, IN_PROGRESS:2, CLOSED:3}</p><ul style="list-style: none;"><li><br/></li></ul>
+<p>/getCase/&lt;id&gt;/</p><ul style="list-style: none;"><li>@return CaseInfo: {caseID: &rsquo;id&rsquo;, eventTime: &rsquo;time&rsquo;, name: &rsquo;name&rsquo;, cell: &rsquo;0912345678&rsquo;, location: &rsquo;縣市&rsquo;, address: &rsquo;地址&rsquo;, description: &rsquo;案由&rsquo;, status: PENDING | MATCHED | IN_PROGRESS | CLOSED, note: 備註, attorney: &rsquo;接案律師&rsquo;}</li>
+<li><br/></li></ul>
+<p>/saveCase/</p><ul style="list-style: none;"><li>@param CaseInfo: {caseID: &rsquo;id&rsquo;, eventTime: &rsquo;time&rsquo;, name: &rsquo;name&rsquo;, cell: &rsquo;0912345678&rsquo;, location: &rsquo;縣市&rsquo;, address: &rsquo;地址&rsquo;, description: &rsquo;案由&rsquo;, status: PENDING | MATCHED | IN_PROGRESS | CLOSED, note: 備註, attorney: &rsquo;接案律師&rsquo;}</li></ul>
+
+<h2>APP 功能列表</h2><ul><li>登入 By Facebook, Google mail&nbsp;<ul><li>Android 同時進行</li></ul>
+</li>
+<li>律師列表：<ul><li>Android順序1</li></ul>
+</li>
+<li>案件清單</li></ul>
+
+<h2>進展</h2><ul><li><s><a href='https://hackpad.com/ep/profile/HUoUqaJnV2n'/>Tonyq Wang</a> 認養 Web</s><ul><li><a href="https://github.com/JRF-attorney/jrf-attorney-web"></a><s>https://github.com/JRF-attorney/jrf-attorney-web</s></li><ul class="task"><li>移進 g0v<ul class="task"><li>跟司改會確認過 open 的問題</li></ul class="task">
 </li>
 <li>建立正式測試站</li><ul class="taskdone"><li>api 的註冊(register method) 並可回傳 sid&nbsp;</li>
 <li>後台權限認證</li></li>
