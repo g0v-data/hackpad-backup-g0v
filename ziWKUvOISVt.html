@@ -3,16 +3,21 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="629"/>
+<meta name="version" content="722"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$ziWKUvOISVt</title>
 </head>
 <body><h1>黑板(goban)協作</h1><p></p><ul style="list-style: none;"><li>主頁:<a href='https://goban.tw'/>goban.tw</a></li>
 <li>使用說明:<a href="https://autolearn.hackpad.com/l1OAS7HV3t2"></a>https://autolearn.hackpad.com/l1OAS7HV3t2</li></ul>
 
-<p><b>許願清單</b></p><p></p><ul class="taskdone"><li>編輯後台時，直接開在頁框內</li></ul>
-<ul class="task"><li>iframe的背景易讀化(如直接用hackfoldr的淺格背景)</li></ul>
+<p><b>許願清單(非開發者使用)</b></p><p></p><ul class="taskdone"><li>編輯後台時，直接開在頁框內</li>
+<li>iframe的背景易讀化(如直接用hackfoldr的淺格背景)</li></ul>
 
-<p><b>錯誤回報</b></p><p></p><ul class="taskdone"><li>有時顯示不出聯想<ul class="taskdone"><li>原因: webConfig有時讀不到</li></ul>
+<p></p><p><b>TODO LIST(開發者使用)</b></p><ul style="list-style: none;"><li>因為目前的工作並不太多，</li>
+<li>暫時先集中放在github上的「123TODO」這檔案中<ul style="list-style: none;"><li><a href="https://github.com/g0v/goban/blob/gh-pages/123TODO"></a>https://github.com/g0v/goban/blob/gh-pages/123TODO</li></ul style="list-style: none;">
+</li>
+<li>歡迎直接hack做掉其中一部份</li></ul>
+
+<p></p><p></p><p></p><p><b>錯誤回報</b></p><p></p><ul class="taskdone"><li>有時顯示不出聯想<ul class="taskdone"><li>原因: webConfig有時讀不到</li></ul>
 <ul class="task"><li>正規方案:&nbsp;</li><ol><li>讀不到時用angular廣播，自動重讀</li>
 <li>用$timeout做確認</li>
 <li>聯絡ethercalc的設計維護者，請求確認同時兩次ajax get請求時能否順利回應</li><ul class="comment"><li>請改用 <a href="https://ethercalc.org/goban_introConfig.csv.json"></a>https://ethercalc.org/goban_introConfig.csv.json，不用自行解析 CSV，也會稍微穩一些</li>
