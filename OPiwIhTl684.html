@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="872"/>
+<meta name="version" content="914"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$OPiwIhTl684</title>
 </head>
 <body><h1><b><a href='https://github.com/kiang/data.fda.gov.tw'/>data.fda.gov.tw</a> 應用</b></h1><h2>Datahub</h2><p><a href="https://github.com/kiang/data.fda.gov.tw"></a>https://github.com/kiang/data.fda.gov.tw</p><p>目前資料集 lists <a href="https://github.com/kiang/data.fda.gov.tw/blob/master/list.csv"></a>https://github.com/kiang/data.fda.gov.tw/blob/master/list.csv</p><p></p><h2>應用</h2><ul><li>根據每週更新資訊, 查看藥品價格異動情形 ; 可做成time-serieus&nbsp;<ul><li>[藥品健保藥價資料集] <a href="https://github.com/kiang/data.fda.gov.tw/blob/master/dataset/74.csv"></a>https://github.com/kiang/data.fda.gov.tw/blob/master/dataset/74.csv</li></ul>
@@ -17,14 +17,34 @@
 <li>columns:</li></ul>
 <ul class="comment"><li>粗體表示該欄位一定有資料（目前）</li>
 <li>許可證字號 有可能重複，也許是到期後重新申請，所以需要注意</li><ul><li><b>許可證字號</b></li>
-<li>註銷狀態、註銷日期、註銷理由</li>
-<li><b>有效日期</b>、發證日期</li>
-<li><b>許可證種類</b>、舊證字號、通關簽審文件編號</li>
-<li>中文品名、英文品名、適應症、劑型、包裝</li>
-<li>藥品類別、管制藥品分類級別、主成分略述</li>
-<li>申請商名稱、申請商地址、申請商統一編號</li>
-<li>製造商名稱、製造廠廠址、製造廠公司地址、製造廠國別</li>
-<li>製程、<b>異動日期</b>、用法用量、包裝、國際條碼</li></ul>
+<li>註銷狀態(空白、已註銷、已廢止)</li>
+<li>註銷日期</li>
+<li>註銷理由</li>
+<li><b>有效日期</b></li>
+<li>發證日期</li>
+<li><b>許可證種類 </b>(製　劑, 原料藥, 試劑體外用, 衛生材料, 硬空膠囊, 菌　疫, 體外試劑)</li>
+<li>舊證字號</li>
+<li>通關簽審文件編號</li>
+<li>中文品名</li>
+<li>英文品名</li>
+<li>適應症</li>
+<li>劑型</li>
+<li>包裝</li>
+<li>藥品類別 ( 須由醫師處方使用, 製劑原料, 醫師藥師藥劑生指示藥, 限由醫師使用, 自用製劑原料, 指示用藥, 須經醫師指示使用, 由醫師或檢驗師使用, 醫師藥師藥劑生指示藥品, 調劑專用, 牙醫師指示使用, 本藥限神經專科醫師使用, 限由牙醫師使用, 限由醫師及牙醫師使用, 限由眼科醫師處方使用, 成藥, 乙類成藥, 本藥須由醫師處方使用, 限由婦產科醫師使用, , 原料藥, 限麻醉醫師使用, 甲類成藥, 原料藥(製劑中間體), 限由中醫師處方使用, 空膠囊, 調劑專用製劑 )</li>
+<li>管制藥品分類級別 (第四級管制藥品, 取消管制藥品註記, 第三級管制藥品, 第二級管制藥品, 第一級管制藥品)</li>
+<li>主成分略述</li>
+<li>申請商名稱</li>
+<li>申請商地址</li>
+<li>申請商統一編號</li>
+<li>製造商名稱</li>
+<li>製造廠廠址</li>
+<li>製造廠公司地址</li>
+<li>製造廠國別 (JAPAN, POLAND, MEXICO, UNITED KINGDOM, SWITZERLAND, UNITED STATES, ITALY, GREECE, FRANCE, KOREA, GERMANY, SPAIN, DENMARK, NETHERLANDS, CANADA, INDONESIA, AUSTRALIA, BRAZIL, SWEDEN, HUNGARY, CYPRUS, AUSTRIA, NEW ZEALAND, IRELAND, PUERTO RICO, FINLAND, BELGIUM, SINGAPORE, ISRAEL, BULGARIA, YUGOSLAVIA, TAIWAN, ARGENTINA, PHILIPPINES, INDIA, NORWAY, TURKEY, BAHAMAS, SLOVENIA, PORTUGAL, CZECH REPUBLIC, PANAMA, ICELAND, SOUTH AFRICA, LUXEMBURG, HONG KONG, IRAN, THAILAND, MALAYSIA, ROMANIA, VIET NAM, , PERU, EGYPTI, SLOVAKIA, CHINA, MAURITUS, COLOMBIA, LATVIA, BERMUDA, COSTA RICA)</li>
+<li>製程</li>
+<li><b>異動日期</b></li>
+<li>用法用量</li>
+<li>包裝</li>
+<li>國際條碼</li></ul>
 </ul>
 <p><b>未註銷藥品許可證資料集( id=37)</b></p><ul><li>frequency: weekly</li>
 <li>columns: 同 id=36 ，是子資料集。</li></ul>
