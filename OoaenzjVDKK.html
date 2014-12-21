@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="3252"/>
+<meta name="version" content="3441"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$OoaenzjVDKK</title>
 </head>
 <body><h1>透析貪污判決--揭露與查詢網站</h1><p>(暫名,尚缺副標)</p><p>The Disclosure of Corruption Judgement,&nbsp; the Web</p><p>可能網址：blackmoney.g0v.tw 歡迎各種建議</p><p>POREN：uncover.g0v.tw 之類的，感覺很有特務風XD</p><p></p><h2>緣起</h2><ul><li>貪污是個表面上看起來沒什麼，實際上會對社會造成侵蝕的嚴重病灶</li>
@@ -104,7 +104,7 @@
 <li>&nbsp;ex HKaohsiung高雄高等分院；LTaipei台北地方法院</li></ul>
 <p><a href='https://drive.google.com/file/d/0B9fzCPAUltsqZVBLNE1zclRFYnM/edit?usp=sharing'/>最高法院(1996-2014) 7z</a></p><p>待解問題：</p><p>民國100年以前絕大部分判決書，被告姓名與公司都被遮蓋起來，無法得知。據說司法院內部帳號可以看沒被遮蓋起來的版本。</p><p>11-28有寄信過去，<s>不過還沒有回應</s>：1208回應了，除了國家級研究案（如中研院申請），其他不予開放</p><p></p><p><b>第一階段 資料梳理、填充欄位（進行中）</b></p><p>由於發現到的遮蓋問題，決定先縮小處理範圍當作嘗試。民100-102年的判決書除了少數重審的案件外，其他都沒有匿名；而地院的內容相對單純，於是把他拉出來單獨打包：</p><p><a href='https://drive.google.com/file/d/0B9fzCPAUltsqWUZLWGw0OU8tUUU/edit?usp=sharing'/>100-102年地方法院判決包7z</a></p><ul style="list-style: none;"><li>- 將所有地院判決【判決日期100-102年】丟到同一資料夾的版本</li></ul>
 
-<p><s>判決書為了可讀性、整齊等等因素，會斷行。在資料處理上變得麻煩。</s></p><p>嘗試作了脫斷行符號的處理，另外判決書內含表格，決定先不動他：</p><p><a href='https://drive.google.com/file/d/0B9fzCPAUltsqc3YxSzRQcFNHNjQ/view'/>100-102年地方法院判決包（脫符）7z</a></p><p></p><p>目前正在處理抽取判決書欄位（第一段）的部份，欄位為（檔名/字號/時間/法院/檢察官起訴案由/被告名單），還有一些地方需要修。</p><p><s>處理中</s>輸出的CSV</p><p>11-11 怒修，應該沒什麼大問題了（有四個案件沒抓到被告，但那四件都是很神奇的案子，判決結果都不受理，暫時放著）：</p><p>欄位由左至右（檔名/字號/日期/法院/檢察官起訴案由/被告數/被告名單）</p><p><a href='https://docs.google.com/spreadsheets/d/19wSWyJ2pYObcu4H40chbCH_NO7VxICJ_xd7PSJQbuRE/edit#gid=1793425348'/>google試算表</a></p><p>11-28 抓了絕大部分被告的主罪，手動將判決書格式正規化，有些被告公司與代理人的部份沒處理好，有些代理人非被告，故主文不會將之列入（但有些會，判決書在這塊寫得很凌亂，還要想一下如何抽取）</p><p>12-08抓了有罪被告的宣告刑，欄位（檔名/被告/罪名/徒刑/是否易科罰金/罰金/緩刑）-&gt;（<a href='https://drive.google.com/open?id=1T3d2yLHVfFcFBiRrGIKKN9ZcAOq2nQ03WMzppAmkTys&amp;authuser=0'/>連結</a>）</p><p></p><p><b>Big Issue</b></p><p>遇上一個大麻煩，有一部份主文在寫被告罪刑時，用附表呈現的方式（也就是在書尾的地方寫一個表格列出），舉例：</p><p></p><ul style="list-style: none;"><li>郭美瑩,犯如附表三編號至編號所示之罪，主文及宣告刑各如附表三編號至編號所載。</li>
+<p><s>判決書為了可讀性、整齊等等因素，會斷行。在資料處理上變得麻煩。</s></p><p>嘗試作了脫斷行符號的處理，另外判決書內含表格，決定先不動他：</p><p><a href='https://drive.google.com/file/d/0B9fzCPAUltsqc3YxSzRQcFNHNjQ/view'/>100-102年地方法院判決包（脫符）7z</a></p><p></p><p>判決書欄位（第一段）的部份，欄位為（檔名/字號/時間/法院/檢察官起訴案由/被告名單），還有一些地方需要修。11-11 怒修，應該沒什麼大問題了（有四個案件沒抓到被告，但那四件都是很神奇的案子，判決結果都不受理，暫時放著）：</p><p>欄位由左至右（檔名/字號/日期/法院/檢察官起訴案由/被告數/被告名單）</p><p><a href='https://docs.google.com/spreadsheets/d/19wSWyJ2pYObcu4H40chbCH_NO7VxICJ_xd7PSJQbuRE/edit#gid=1793425348'/>google試算表</a></p><p></p><p>判決書欄位（第二段）的部份，11-28 抓了絕大部分被告的主罪，手動將判決書格式正規化，有些被告公司與代理人的部份沒處理好，有些代理人非被告，故主文不會將之列入（但有些會，判決書在這塊寫得很凌亂，還要想一下如何抽取）</p><p>12-08抓了有罪被告的宣告刑，欄位（檔名/被告/罪名/徒刑/是否易科罰金/罰金/緩刑）-&gt;（<a href='https://drive.google.com/open?id=1T3d2yLHVfFcFBiRrGIKKN9ZcAOq2nQ03WMzppAmkTys&amp;authuser=0'/>連結</a>）</p><p></p><p>查詢g0v資料中心，發現有歷屆公職選舉資料（包含政黨屬性）：</p><p><a href="http://data.g0v.tw/dataset/92/resource/f52cb013-1a1c-467b-8a8c-0bef20d55936"></a>http://data.g0v.tw/dataset/92/resource/f52cb013-1a1c-467b-8a8c-0bef20d55936</p><p>也許這是查詢政黨屬性的起步</p><p></p><p><b>Big Issue</b></p><p>遇上一個大麻煩，有一部份主文在寫被告罪刑時，用附表呈現的方式（也就是在書尾的地方寫一個表格列出），舉例：</p><p></p><ul style="list-style: none;"><li>郭美瑩,犯如附表三編號至編號所示之罪，主文及宣告刑各如附表三編號至編號所載。</li>
 <li><br/></li>
 <li>（節錄列表）</li>
 <li>┌─┬────┬─────────────────────────────┐</li>
@@ -117,7 +117,24 @@
 <li>├─┼────┼─────────────────────────────┤</li></ul>
 
 <p>有沒有大大有好想法處理這段？</p><p></p><p>由於在下不是資工相關科系出身，誠徵對判決書有興趣的高手助陣</p><p>各路大神提供的Approach：</p><p>1.regular expression &amp; pattern（目前作法）</p><p>2.<s>machine learning</s></p><p></p><p><b>第二階段 網站上線</b></p><p>部份資料處理好之後，就可以開始想查詢網站的問題。</p><p>相對一般會google的問題，使用者知道問題但不知道答案；貪污查詢很可能面臨使用者「不知道問題也不知道答案」。</p><p>可以跟過去的新聞報導作連結</p><p>也可以跟其他專案整合</p><ul style="list-style: none;"><li><br/></li></ul>
-<p><b>第三階段 擴充資料範圍</b></p><p>第一階段東西有刻出來的話，那地院就不是問題。接下來就是高等法院、最高法院的判決書處理，這時候就能夠加上案件從地方法院打到最高法院的歷審呈現。也可以爬其他相關的法律判決。</p><p></p><h2>目前成果</h2><p></p><p>判決書Data package . csv：</p><p><a href='https://drive.google.com/file/d/0B9fzCPAUltsqOElYc1N0TFRaSTg/edit?usp=sharing'/>地方法院&amp;高等法院(2000-2014) 7z</a></p><ul style="list-style: none;"><li>解壓縮以後共2X個資料夾，H開頭為高等法院；L為地方</li>
+<p><b>第三階段 擴充資料範圍</b></p><p>第一階段東西有刻出來的話，那地院就不是問題。接下來就是高等法院、最高法院的判決書處理，這時候就能夠加上案件從地方法院打到最高法院的歷審呈現。也可以爬其他相關的法律判決。</p><p></p><h2>TO-DO list</h2><undefined><li><b>資料擷取部份</b></li></undefined>
+<ul class="task"><li>抓取被告 工作/職位/關係 欄位</li>
+<li>抓取表格內容補足 宣告刑 欄位</li>
+<li>抓取法官欄位</li>
+<li>查詢被告政黨屬性</li></ul>
+<p>------</p><ul class="task"><li>處理高院/最高法院判決書</li>
+<li>製作與線上判決書同步更新的程式</li>
+<li>增加判決書涵蓋範圍（詐欺/圖利/財產不明/登載不實/背信）</li></ul>
+<undefined><li><b>網站製作部份</b></li></undefined>
+<ul class="task"><li>介面/內容規劃</li>
+<li>前端</li>
+<li>後端</li></ul>
+<undefined><li><b>資料開放部份</b></li></undefined>
+<ul class="task"><li>將100年後少數匿名判決書開放</li>
+<li>將99年前匿名判決書開放</li>
+<li>將起訴書開放</li></ul>
+
+<h2>目前成果</h2><p></p><p>判決書Data package . csv：</p><p><a href='https://drive.google.com/file/d/0B9fzCPAUltsqOElYc1N0TFRaSTg/edit?usp=sharing'/>地方法院&amp;高等法院(2000-2014) 7z</a></p><ul style="list-style: none;"><li>解壓縮以後共2X個資料夾，H開頭為高等法院；L為地方</li>
 <li>&nbsp;ex HKaohsiung高雄高等分院；LTaipei台北地方法院</li></ul>
 <p><a href='https://drive.google.com/file/d/0B9fzCPAUltsqZVBLNE1zclRFYnM/edit?usp=sharing'/>最高法院(1996-2014) 7z</a></p><p></p><p><a href='https://drive.google.com/file/d/0B9fzCPAUltsqWUZLWGw0OU8tUUU/edit?usp=sharing'/>100-102年地方法院判決包7z</a> （1109：把一些當初抓跑掉的判決書補齊）</p><p><a href='https://drive.google.com/file/d/0B9fzCPAUltsqc3YxSzRQcFNHNjQ/view'/>100-102年地方法院判決包（脫符）7z</a> （ver1129:手動修正跑掉的格式，1216發現做得不太好，很多地方沒脫到...）</p><ul style="list-style: none;"><li>- 將所有地院判決【判決日期100-102年】丟到同一資料夾的版本</li></ul>
 
