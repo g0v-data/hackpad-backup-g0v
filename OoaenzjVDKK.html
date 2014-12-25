@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="3668"/>
+<meta name="version" content="3882"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$OoaenzjVDKK</title>
 </head>
 <body><h1>透析貪污判決--揭露與查詢網站</h1><p>(暫名,尚缺副標)</p><p>The Disclosure of Corruption Judgement,&nbsp; the Web</p><p>可能網址：blackmoney.g0v.tw 歡迎各種建議</p><p>POREN：uncover.g0v.tw 之類的，感覺很有特務風XD</p><p></p><h2>緣起</h2><ul><li>貪污是個表面上看起來沒什麼，實際上會對社會造成侵蝕的嚴重病灶</li>
@@ -118,13 +118,17 @@
 
 <p>有沒有大大有好想法處理這段？</p><ul class="comment"><li>可以先觀察判決書這類表格的形式是否一致，比如說每個欄位都是由 &quot;|(...)|&quot;&nbsp; 這樣子的格式分隔開，表頭的各個欄位header亦同，但不同的地方是表頭是從 &quot;┌(...)&quot; 這樣子的 pattern 的下一列開始，而每一列內容則是從 &quot;├(...)&quot; 的下一列開始，按照這樣的規則應該可以把表格內容整併入指定的資料結構中供取用。 (不好意思，先把12/20那天的<s>嘴砲</s>討論先記錄一下，我還是優先會處理好職位身分的偵測，有需要再回來支援這邊的parsing)</li></ul>
 
-<p>由於在下不是資工相關科系出身，誠徵對判決書有興趣的高手助陣</p><p>各路大神提供的Approach：</p><p>1.regular expression &amp; pattern（目前作法）</p><p>2.<s>machine learning</s></p><p></p><p><b>第二階段 網站上線</b></p><p>部份資料處理好之後，就可以開始想查詢網站的問題。</p><p>相對一般會google的問題，使用者知道問題但不知道答案；貪污查詢很可能面臨使用者「不知道問題也不知道答案」。</p><p>可以跟過去的新聞報導作連結</p><p>也可以跟其他專案整合</p><ul style="list-style: none;"><li><br/></li></ul>
+<p>表格結構化?</p><ul class="comment"><li>我對於這些表格做了些觀察，沒有統一的格式，甚至有表格內還有表格的情況，就像word一樣可畫任意表格，表格內容也不一定遵守column的schema。這個evernote有我的一些觀察和一些畸形表格”樣本” : <a href="https://www.evernote.com/l/AMe-3Qfov0xE4Yb63yOrvh7In82dIWOYGYI"></a>https://www.evernote.com/l/AMe-3Qfov0xE4Yb63yOrvh7In82dIWOYGYI 。</li>
+<li>本來想把這些表格都結構化，但我想不出一個好方法。不然就退一步只結構化非常正規的表格。再者從目前task來說結構化表格似乎不是絕對必要的，例如罪名似乎可以從非結構化表格抽取，我先就直接從純文本下手試著改善罪名抽取率看看。</li></ul>
+
+<p>如果有人對結構化表格有好方法的歡迎跳坑，畢竟結構化表格後可以更方便抽取到更多資訊。</p><p></p><p>由於在下不是資工相關科系出身，誠徵對判決書有興趣的高手助陣</p><p>各路大神提供的Approach：</p><p>1.regular expression &amp; pattern（目前作法）</p><p>2.<s>machine learning</s></p><p></p><p><b>第二階段 網站上線</b></p><p>部份資料處理好之後，就可以開始想查詢網站的問題。</p><p>相對一般會google的問題，使用者知道問題但不知道答案；貪污查詢很可能面臨使用者「不知道問題也不知道答案」。</p><p>可以跟過去的新聞報導作連結</p><p>也可以跟其他專案整合</p><ul style="list-style: none;"><li><br/></li></ul>
 <p><b>第三階段 擴充資料範圍</b></p><p>第一階段東西有刻出來的話，那地院就不是問題。接下來就是高等法院、最高法院的判決書處理，這時候就能夠加上案件從地方法院打到最高法院的歷審呈現。也可以爬其他相關的法律判決。</p><p></p><h2>TO-DO list</h2><undefined><li><b>資料擷取部份</b></li></undefined>
 <ul class="task"><li>抓取被告 工作/職位/關係 欄位--&gt; <i>Keith Ning</i>&nbsp;</li></ul>
 <ul class="comment"><li>有的判決書一篇竟然就長達20~50萬字，造成原本現成的詞彙解析程式運作不能 XD 因此使用divide-n-conquer重新修改處理流程中~</li>
 <li>超酷XD (Y)</li>
 <li>對於一樓經驗表示完全可以理解XD</li></ul>
-<ul class="task"><li>抓取表格內容補足 宣告刑 欄位 --&gt;<i>花生</i></li>
+<ul class="task"><li>罪名(包含從表格內的) --&gt; 煒清</li>
+<li>抓取表格內容補足 宣告刑 欄位&nbsp;</li>
 <li>抓取法官欄位</li>
 <li>查詢被告政黨屬性</li></ul>
 <p>------</p><ul class="task"><li>處理高院/最高法院判決書</li>
