@@ -3,75 +3,8 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1045"/>
+<meta name="version" content="1480"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$7qSSDcfa4gv</title>
 </head>
-<body><h1>Agricultural-trading-market</h1><p>專案Git ： <a href="https://github.com/justin761002/Agricultural-trading-market"></a><a href='https://github.com/justin761002/Agricultural-trading-market'/>https://github.com/justin761002/Agricultural-trading-market</a></p><p></p><p><b>目標</b></p><p>將「<a href='http://amis.afa.gov.tw/default.asp'/>農產品交易行情站</a>」的資訊以更加直覺的方式呈現給民眾。</p><ul class="comment"><li>&nbsp;關於「直覺的方式呈現」的部份，</li>
-<li>我目前的想法是以「折線圖」、「圓餅圖」、「直方圖」之類的方式呈現，</li>
-<li>例如：<a href="http://www.highcharts.com/"></a>http://www.highcharts.com/&nbsp;&nbsp;</li>
-<li>或者，Google 的一套數據圖形化的套件&nbsp;</li>
-<li>Google Charts： <a href="https://developers.google.com/chart/"></a>https://developers.google.com/chart/</li></ul>
-
-<p><b>Todo List</b></p><ol><li>爬資料的機器人（爬民國102年到現在的資料）</li></ol>
-<ul class="comment"><li>農產品代號已抓取完畢(單一產品部份)</li>
-<li>至於要不要抓細項分類，再討論。<ul class="comment"><li>寫了一個很陽春的crawler爬102年的蔬菜類</li>
-<li><a href="https://github.com/chikei/g0v-atm-parser"></a>https://github.com/chikei/g0v-atm-parser</li>
-<li>爬出來的資料在 <a href="https://db.tt/WfLxlJeR"></a>https://db.tt/WfLxlJeR 歡迎取用</li>
-<li>網路上找到這個</li>
-<li>資料爬蟲 <a href="https://github.com/yhunglee/agri_data_crawler"></a>https://github.com/yhunglee/agri_data_crawler</li>
-<li>視覺化&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://muyueh.com/30/veggieprice/ggplot2/"></a>http://muyueh.com/30/veggieprice/ggplot2/</li></ul>
-</ul>
-<ol><li>規劃 Data-Schema</li></ol>
-<ul class="comment"><li>目前抓出來資料我是以json資料方式先存，未來要轉換成其他的可再討論。</li>
-<li>{catalog:農產品類別, maincode:農產品主代號, code:農產品子代號, name:農產品名稱, (type:農產品種類, process: 處理別)}</li>
-<li>例：{catalog:&quot;Fruit&quot;, maincode:&quot;3&quot;, code&quot;:&quot;32&quot;, &quot;name&quot;:&quot;釋迦&quot;, &quot;type&quot;:&quot;鳳梨釋迦&quot;}</li>
-<li>資料部份個人的理想,這部份是全部通用，只要做一個資料表即可，</li>
-<li>不過也要分開資料表倒再討論。</li>
-<li>{product:&nbsp;</li>
-<li>{catalog:農產品類別, maincode:農產品主代號, code:農產品子代號, name:農產品名稱, (type:農產品種類, process: 處理別)}</li>
-<li>, upper: 上價, middle: 中價, lower: 下價, averege: 平均價, averegeChange: 平均價變動, volume: 交易量, volumeChange: 交易量變動, <b>area:交易地點, date:交易日期</b>}</li>
-<li><br/></li>
-<li>蔬菜類的html我目前轉成json格式為：</li>
-<li>檔名:民國年-月-日-市場碼.json</li>
-<li>內容:[{product: {name: 產品名稱, type: 品種名稱, process: 處理別}, upper: 上價, middle: 中價, lower: 下價, averege: 平均價, averegeChange: 平均價變動, volume: 交易量, volumeChange: 交易量變動}]</li>
-<li>資料在 <a href="https://db.tt/nqW5X4g1"></a>https://db.tt/nqW5X4g1</li>
-<li><br/></li></ul>
-
-<ul class="code"><li>第一點：目前不知道他的價格資料增/減及交易量增減是怎麼認定的，</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 統計方面所長的人可以出來說明一下XD</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 沒意外的話，應該是上一個交易日*(100 + 增減)% = 當日</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 不過可能要跑程式驗證一下</li>
-<li>第二點：天氣部份是不是會影響交易量(採收/搶收)，也需計入？</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 水果的回傳值有&quot;天氣&quot;欄位</li></ul>
-
-<ol><li>給有意願的人幫忙Key年報資料的網頁</li>
-<li>提供查詢、呈現資料的網頁（含圖表）</li></ol>
-
-<p><b>&nbsp;目前需要的幫助</b></p><p>&nbsp;1. 工程師（前、後端都缺）</p><ul class="comment"><li>&nbsp;前端我可以協助</li>
-<li>歡迎歡迎，你可以看一下 <a href='/ep/profile/xJCIXy29K8P'/>Bin Tiger</a> 目前規劃的 Data-Schema，</li>
-<li>還有<a href='http://amis.afa.gov.tw/default.asp'/>農產品交易行情站</a>，它目前輸出的圖片非常的小，</li>
-<li>基本上很難去觀察，而且查詢的步驟很繁瑣，非常不親人。</li>
-<li>如果是以民生為導向的話，那其實花卉和盆花的資料是不是先暫時不要？</li>
-<li>我想幫忙前端，不過會的東西不多，不知道有沒有需要呢？</li>
-<li>需要喔，已經被撈出來的資料任你處置，看你喜歡用什麼方式去處理它。</li>
-<li>我也可以幫忙前端 後端我只會用PHP,python(django)</li>
-<li>我可以幫忙後端，現在後端有打算使用哪個 solution ? 我較擅長 node.js , python</li>
-<li>你好!不知道還需要甚麼幫助?</li>
-<li>你好，目前有什麼可以幫忙的嗎 ? 我比較擅長 python。</li></ul>
-<p>&nbsp;2. 網站、資料庫、網域，的空間提供。</p><p></p><p><b>資料報錯隨手筆記</b></p><p>【蔬菜部份】</p><ul class="code"><li>1.主資料，代碼：FU，名稱為：準人瓜；</li>
-<li>&nbsp; 子資料，代碼：FU1、FU2，名稱為：隼人瓜。<b>主資料更正為：隼人瓜</b></li>
-<li>2.主資料，代碼：LR，名稱為：塌棵塔；</li>
-<li>&nbsp; 子資料，代碼：LR1，名稱為：塌棵菜。<b>主資料更正為：塌棵菜</b></li>
-<li>3.主資料，代碼：MC，名稱為：木耳；</li>
-<li>&nbsp; 子資料，代碼：MC0、MC1、MC2，名稱為：濕木耳。<b>子資料更正為：木耳</b>&nbsp;</li>
-<li>4.主資料，代碼：MD，名稱為：香菇；</li>
-<li>&nbsp; 子資料，代碼：MD0、MD1，名稱為：濕香菇。<b>子資料更正為：香菇</b></li>
-<li>5.主資料，代碼：MG，名稱為：白菇；</li>
-<li>&nbsp; 子資料，代碼：MG0、MG1、MG2，名稱為：巴西蘑菇。<b>主資料更正為：巴西蘑菇</b></li>
-<li>6.主資料，代碼：FP，名稱為：萊豆；</li>
-<li>&nbsp; 子資料，代碼：FP3，名稱為：鵲豆。<b>子資料更正為：萊豆</b></li>
-<li>7.主資料，代碼：LZ，名稱為：薺菜；</li>
-<li>&nbsp; 子資料，代碼：LZ2，名稱為：藤川七。<b>子資料更正為：薺菜</b></li></ul>
-
-<p><b>其他</b></p><p><a href='https://docs.google.com/spreadsheets/d/1JGcil7t38c5TNgiYxDhneJJh1d5N505a6GcI71YT6d0/pubhtml'/>農產品交易行情站網站地圖（Viewer）</a></p><p></p></body>
+<body><h1>Agricultural-trading-market</h1><p>專案GitHub ： <a href="https://github.com/justin761002/Agricultural-trading-market"></a><a href='https://github.com/justin761002/Agricultural-trading-market'/>https://github.com/justin761002/Agricultural-trading-market</a></p><p>Demo Site GitHub：<a href="https://github.com/justin761002/fivePeopleHackathon"></a><a href='https://github.com/justin761002/fivePeopleHackathon'/>https://github.com/justin761002/fivePeopleHackathon</a></p><p></p><p>目前有開放資料可以撈取，不需要自己寫蜘蛛爬了</p><p>行政院農業委員會資料開放平台：</p><p><a href="http://data.coa.gov.tw/Query/ServiceDetail.aspx?id=037"></a><a href='http://data.coa.gov.tw/Query/ServiceDetail.aspx?id=037'/>http://data.coa.gov.tw/Query/ServiceDetail.aspx?id=037</a></p><p>試做了一個Demo站（感謝黑客松的夥伴們）</p><p><a href="http://justin761002.github.io/fivePeopleHackathon/"></a><a href='http://justin761002.github.io/fivePeopleHackathon/'/>http://justin761002.github.io/fivePeopleHackathon/</a></p><p>最後更新時間：2014.12.27</p><p></p><p><b>目標</b></p><p>將「<a href='http://amis.afa.gov.tw/default.asp'/>農產品交易行情站</a>」的資訊以更加直覺的方式呈現給民眾。</p><p></p><p><b>Todo List</b></p><p>Demo站：<a href="http://justin761002.github.io/fivePeopleHackathon/"></a><a href='http://justin761002.github.io/fivePeopleHackathon/'/>http://justin761002.github.io/fivePeopleHackathon/</a></p><p>Demo的資料是死的，目前只有做2014年的「大蒜-蒜頭」這個項目的資料</p><p></p><p>需要補的內容如下：</p><p>1.表單（包含交易日期區間、作物的選單、市場的選單）</p><p>2.儲存資料或者轉資料的空間或Server：雖然開放資料平台可以查詢資料，但是因為<a href='http://en.wikipedia.org/wiki/Cross-origin_resource_sharing'/>CORS</a>的緣故無法直接將資料轉到網頁上，需要先將資料儲存起來，再讀取檔案出來。</p><p></p><p><b>目前需要的幫助</b></p><p>請先將<a href='https://github.com/justin761002/fivePeopleHackathon'/>Demo的專案</a>Fork到您的Github，並且參考 Todo List 的需求進行開發，謝謝。</p><p></p><p><b>其他</b></p><p><a href='http://data.coa.gov.tw/Query/ServiceDetail.aspx?id=037'/>行政院農業委員會資料開放平台-農產品交易行情</a></p><p><a href='https://github.com/justin761002/Agricultural-trading-market'/>專案GitHub</a> （目前空空如也）</p><p><a href='https://github.com/justin761002/fivePeopleHackathon'/>Demo網站</a> （上次Hackathon做的）</p><p></p></body>
 </html>
