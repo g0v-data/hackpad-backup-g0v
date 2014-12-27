@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="898"/>
+<meta name="version" content="906"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$ziWKUvOISVt</title>
 </head>
 <body><h1>零時黑板(goban)協作</h1><p></p><ul style="list-style: none;"><li>主頁:<a href='https://goban.tw'/>goban.tw</a></li>
@@ -15,12 +15,12 @@
 <ul style="list-style: none;"><li>(建議使用ionic framework + goban.js開發會比較輕鬆)</li></ul>
 
 <p></p><h2>部件</h2><p></p><ul class="comment"><li><br/></li></ul>
-<p><b>源碼協作-模組部份</b></p><p><a href="https://github.com/bestian/goban"></a>https://github.com/bestian/goban</p><p></p><p></p><p><b>源碼協作-UI部份</b></p><p><a href="https://github.com/g0v/goban"></a>https://github.com/g0v/goban</p><p></p><p><b>文作協作-說明部份</b></p><ul><li>for g0v社群<a href="https://g0v.hackpad.com/ziWKUvOISVt"></a>https://g0v.hackpad.com/ziWKUvOISVt</li>
+<p><b>源碼協作-模組部份</b></p><p><a href="https://github.com/bestian/goban"></a>https://github.com/bestian/goban</p><p></p><p></p><p><b>源碼協作-UI部份</b></p><p><a href="https://github.com/g0v/goban"></a>https://github.com/g0v/goban</p><p></p><p></p><p><b>文作協作-說明部份</b></p><ul><li>for g0v社群<a href="https://g0v.hackpad.com/ziWKUvOISVt"></a>https://g0v.hackpad.com/ziWKUvOISVt</li>
 <li>for模組開發與使者<a href="https://github.com/bestian/goban/blob/master/README.md"></a>https://github.com/bestian/goban/blob/master/README.md</li>
 <li>for非程式員<a href="https://autolearn.hackpad.com/l1OAS7HV3t2"></a>https://autolearn.hackpad.com/l1OAS7HV3t2</li></ul>
 
-<p></p><p></p><p></p><h2>用goban.js開發</h2><p></p><p>(待說明)</p><p></p><p></p><p></p><h2>錯誤回報</h2><p></p><ul class="taskdone"><li>有時顯示不出聯想<ul class="taskdone"><li>原因: webConfig有時讀不到</li></ul>
-<ul class="task"><li>正規方案:&nbsp;</li><ol><li>讀不到時用angular廣播，自動重讀</li>
+<p></p><p></p><h2>錯誤回報</h2><p></p><p><a href="https://github.com/g0v/goban/issues"></a>https://github.com/g0v/goban/issues</p><p></p><p></p><p></p><p></p><p></p><p></p><ul class="taskdone"><li>有時顯示不出聯想<ul class="taskdone"><li>原因: webConfig有時讀不到</li>
+<li>正規方案:&nbsp;</li><ol><li>讀不到時用angular廣播，自動重讀</li>
 <li>用$timeout做確認</li>
 <li>聯絡ethercalc的設計維護者，請求確認同時兩次ajax get請求時能否順利回應</li><ul class="comment"><li>請改用 <a href="https://ethercalc.org/goban_introConfig.csv.json"></a><a href='https://ethercalc.org/goban_introConfig.csv.json'/>https://ethercalc.org/goban_introConfig.csv.json</a>，不用自行解析 CSV，也會稍微穩一些</li>
 <li>ok, thanks a lot</li>
