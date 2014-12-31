@@ -3,20 +3,24 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="308"/>
+<meta name="version" content="536"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$SAG54HPVKK5</title>
 </head>
 <body><h1>vTaiwan.tw 前端架構</h1><p>上層：<a href='https://g0v.hackpad.com/oWRxOF4ilfx'/>vTaiwan.tw 行政院法規線上諮詢系統</a></p><ul class="comment"><li>2014/12/16 au&amp;clkao first draft, to be reviewed by frontend team (ly/pm5/soidid)</li>
+<li>2014/12/30 reviewed, prototype to be verified 2015/1/6 morning by ey users</li>
 <li><br/></li></ul>
-<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_SAG54HPVKK5_p.41199_1419579375832_20141226_153347.jpg'/></p><p></p><p><b>Social Object Mapping (Step 1)</b></p><ul><li>GitBook Chapter = Discourse Category</li>
-<li>GitBook Sub-Chapter = Discourse Sub-Category</li>
-<li>GitBook H2 = Discourse Topic (pre-populated)</li>
-<li>GitBook H1 (before the first H2) = Discourse new topics (user-initiated)</li></ul>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_SAG54HPVKK5_p.41199_1419579375832_20141226_153347.jpg'/></p><p></p><p><b>Social Object Mapping (Step 1)</b></p><p></p><p>GitBook &lt;-&gt; Discourse</p><ul><li>SUMMARY.md H1 = Discourse Category (e.g. &quot;群眾募資&quot;)<ul><li>Maybe: Turn README.md into pinned topic?</li></ul>
+</li>
+<li>Section.md H1 = Discourse Sub-Category (e.g. 發展需求)<ul><li>Section.md H1+p(before first H2) = Discourse Topic (pinned 置頂文)</li></ul>
+</li>
+<li>Section.md H2 = Discourse Topic<ul><li>(pre-populated with last paragraph?)</li></ul>
+</ul>
 
-<p><b>UX Ideas</b></p><ul><li>The left-side navigation panel collapses when user engages in the right-side comment discussions.</li>
-<li>User-selected annotation text becomes metadata of topical anchor for new posts within a topic.</li></ul>
-
-<p><b>Notes</b></p><ul><li>Step 2 (react-ask) needs its own social object mapping, TBD.</li></ul>
+<p>e.g. with <a href="http://audreyt.gitbooks.io/vtaiwan-crowdfunding/content/1.html"></a>http://audreyt.gitbooks.io/vtaiwan-crowdfunding/content/1.html :</p><p>群眾募資 是 category，發展需求 是 sub-，股權模式或債權模式 是 topic，發言是回覆 topic</p><p></p><p>「未分類」討論的話，目前傾向於作為置頂文的回文，例如 <a href="https://talk.vtaiwan.tw/t/topic/15"></a><a href='https://talk.vtaiwan.tw/t/topic/15'/>https://talk.vtaiwan.tw/t/topic/15</a> — 然後把權限設成這樣：</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_SAG54HPVKK5_p.41199_1420011473056_螢幕快照 2014-12-31 下午3.36.16.png'/></p><p></p><p><b>UX Ideas</b></p><ul><li>The left-side navigation panel collapses when user engages in the right-side comment discussions.</li>
+<li>User-selected annotation text becomes metadata of topical anchor for new posts within a topic.</li>
+<li><br/></li></ul>
+<p><b>Notes</b></p><ul><li>Step 2 (react-ask) needs its own social object mapping, TBD.</li>
+<li>Step 3 (billlab) also needs its own social object mapping, TBD.</li></ul>
 
 </body>
 </html>
