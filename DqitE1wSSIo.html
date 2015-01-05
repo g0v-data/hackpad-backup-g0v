@@ -3,10 +3,12 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="851"/>
+<meta name="version" content="1002"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$DqitE1wSSIo</title>
 </head>
-<body><h1>臺灣言語語料平臺</h1><p></p><h2>相關專案</h2><ul><li>新台語運動<ul><li><a href="https://g0v.hackpad.com/moed7ct-taigi-neologism"></a>https://g0v.hackpad.com/moed7ct-taigi-neologism</li>
+<body><h1>臺灣言語平臺</h1><p></p><h2>計劃目錄</h2><ul><li><a href="http://hackfoldr.org/tai5-uan5_gian5-gi2_phing5-thai5/"></a>http://hackfoldr.org/<a href='http://hackfoldr.org/gian5-gi2_gi2-liau7_phing5-thai5/'/>tai5-uan5_gian5-gi2</a>_phing5-thai5/</li></ul>
+
+<h2>相關專案</h2><ul><li>新台語運動<ul><li><a href="https://g0v.hackpad.com/moed7ct-taigi-neologism"></a>https://g0v.hackpad.com/moed7ct-taigi-neologism</li>
 <li><a href='/TaigiLex'/>TaigiLex</a></li></ul>
 </li>
 <li>萌典<ul><li><a href='/jBwY0uGjPfB'/>MoeDict&nbsp;</a></li></ul>
@@ -17,7 +19,11 @@
 <li>做研究時不能公開，做完又沒地方公開</li></ul>
 </ul>
 
-<h2>目的</h2><ol><li>收集臺灣母語的文字、聲音語料</li><ul><li>以語句為單位，和辭典不同</li></ul>
+<h2>目的</h2><ol><li>收集臺灣母語的文字、聲音語料</li><ul><li>主要收集語句</li>
+<li>另外收集詞條，做簡單的辭典<ul><li>辭典用途<ul><li>漢語斷詞</li>
+<li>南島語平行語料無夠時的翻譯輔助</li></ul>
+</ul>
+</ul>
 </ol>
 <ol><li>提供母語工作者一個編輯平臺</li><ul><li>全部線上處理</li>
 <li>自由選擇是否公開</li></ul>
@@ -37,27 +43,28 @@
 </ul>
 
 <h2>收集資料形式</h2><ol><li>母語文字檔</li>
-<li>母語語音轉寫文字檔<ol><li>變調後的文字檔，同化異化等等作用後文字檔</li></ol>
-</li>
-<li>母語聲音檔</li></ol>
-<ul><li>1~3項和華語語料兩兩對應</li></ul>
-<ol><li>母語聲音和母語文字對照</li>
+<li>母語語音轉寫文字檔</li><ul><li>變調後的文字檔，同化異化等等作用後文字檔</li>
+<li>待討論<ul><li>母語語音轉寫文字檔有很多形式<ul><li>只有變調</li>
+<li>有變調+同化作用</li></ul>
+</ul>
+</ul>
+</ol>
+<ol><li>母語聲音檔</li></ol>
+<ul><li><br/></li></ul>
+<h2>資料庫內對應</h2><ul><li>收集資料形式1~3項和華語語料兩兩對應</li><ol><li>母語聲音和母語文字對照</li>
 <li>母語語音轉寫文字檔和母語文字對照</li>
 <li>母語語音轉寫文字檔和母語聲音對照</li>
 <li>華語文字和母語文字對照</li>
 <li>華語文字和母語聲音對照</li><ul><li>例如一般電視、廣播字幕和聲音對照</li></ul>
+</li></ul>
 </li>
-<li>第1~3項混外來語</li>
-<li>混外來語(華語、英語)的文字檔</li><ul><li>像是ＴＧＢ通訊、ＦＢ資訊</li></ul>
+<li>收集資料形式第1~3項混外來語</li><ol><li>混外來語(華語、英語)的文字檔</li><ul><li>像是ＴＧＢ通訊、ＦＢ資訊</li></ul>
 </ol>
 <ol><li>混外來語(華語、英語)的語音轉寫文字檔</li><ul><li>像是民視連續劇(華語閩南語混雜)</li></ul>
 </ol>
 <ol><li>混外來語(華語、英語)的聲音檔</li><ul><li>像是民視連續劇(華語閩南語混雜)</li></ul>
-</li>
-<li>待討論</li><ul><li>母語語音轉寫文字檔有很多形式<ul><li>只有變調</li>
-<li>有變調+同化作用</li></ul>
-</ul>
 </ol>
+</ul>
 
 <h2>語料收集做法</h2><ul><li>讓使用者新增語料</li>
 <li>允許網站收集使用者ＦＢ語料</li></ul>
@@ -93,62 +100,11 @@
 </ul>
 </ul>
 
-<h2>實作</h2><ul><li>django</li>
-<li>臺語言語工具</li>
-<li>綁ＦＢ帳號的函式庫</li></ul>
-
-<p></p><h2>資料來源</h2><ul><li>閩南語<ul><li>母語文字檔</li>
-<li>母語語音轉寫文字檔</li>
-<li>母語聲音檔</li>
-<li>華語文字檔</li>
-<li>母語聲音和母語文字對照</li><ol><li>教育部辭典諺語</li></ol>
-</ul>
-<ul><li>母語語音轉寫文字檔和母語文字對照</li>
-<li>母語語音轉寫文字檔和母語聲音對照</li>
-<li>華語文字和母語文字對照</li><ol><li>教育部辭典例句</li>
-<li>icorpus</li>
-<li><a href="https://sites.google.com/site/2014shoatai/home"></a><a href='https://sites.google.com/site/2014shoatai/home'/>https://sites.google.com/site/2014shoatai/home</a><ol><li>有2012~2014</li></ol>
-</ol>
-</ul>
-<ul><li>華語文字和母語聲音對照</li>
-<li>混外來語(華語、英語)的文字檔<ul><li>ＴＧＢ通訊、ＦＢ</li></ul>
+<h2>實作</h2><ul><li>框架/函式庫<ul><li>django</li>
+<li>綁ＦＢ帳號</li></ul>
 </li>
-<li>混外來語(華語、英語)的聲音檔</li></ul>
-</li>
-<li>客語<ul><li>母語文字檔</li>
-<li>母語語音轉寫文字檔</li>
-<li>母語聲音檔</li>
-<li>華語文字檔</li>
-<li>母語聲音和母語文字對照</li>
-<li>母語語音轉寫文字檔和母語文字對照</li>
-<li>母語語音轉寫文字檔和母語聲音對照</li>
-<li>華語文字和母語文字對照</li>
-<li>華語文字和母語聲音對照</li>
-<li>混外來語(華語、英語)的文字檔</li>
-<li>混外來語(華語、英語)的聲音檔</li></ul>
-</li>
-<li>族語<ul><li>母語文字檔<ul><li>klokah</li></ul>
-</li>
-<li>母語語音轉寫文字檔</li>
-<li>母語聲音檔</li>
-<li>華語文字檔</li>
-<li>母語聲音和母語文字對照</li>
-<li>母語語音轉寫文字檔和母語文字對照</li>
-<li>母語語音轉寫文字檔和母語聲音對照</li>
-<li>華語文字和母語文字對照<ul><li>klokah</li></ul>
-</li>
-<li>華語文字和母語聲音對照</li>
-<li>混外來語(華語、英語)的文字檔</li>
-<li>混外來語(華語、英語)的聲音檔</li></ul>
-</li>
-<li>範本<ul><li>母語文字檔</li>
-<li>母語聲音檔</li>
-<li>華語文字檔</li>
-<li>母語聲音和母語文字對照</li>
-<li>華語文字和母語文字對照</li>
-<li>華語文字和母語聲音對照</li>
-<li>混外來語(華語、英語)的文字檔</li>
-<li>混外來語(華語、英語)的聲音檔</li></ul>
+<li>子計劃<ul><li>臺語言語工具</li>
+<li>臺語言語資料庫</li></ul>
 </ul>
 
 <h2>版權處理</h2><ul><li>無開放的資料<ul><li>文字檔<ul><li>語句打散，沒有上下文即沒有版權</li></ul>
@@ -157,7 +113,5 @@
 </ul>
 </ul>
 
-<p>歌仔冊</p><ul style="list-style: none;"><li>wget</li></ul>
-<p>白話字典藏</p><ul style="list-style: none;"><li>ssh</li></ul>
-<p>甘字典</p><p>華臺對譯</p><p></p></body>
+</body>
 </html>
