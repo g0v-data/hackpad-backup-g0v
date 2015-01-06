@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2638"/>
+<meta name="version" content="2704"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$ZlxnPcG1xLm</title>
 </head>
 <body><h1>動民主 x 公民憲政會議 = 動憲法</h1><p>衍生自 <a href='/-lab-2--nat0u94dlZh'/>動民主 lab 人體試驗 #2</a></p><p>上層：<a href='http://beta.hackfoldr.org/cckitchen'/>憲餅廚房</a></p><p></p><p><b>背景</b></p><p></p><ul><li>動民主 2.0 規劃卡關後，經一番研究發現，網路公民參與的關鍵並不在於資訊系統，而在於建立審議的 SOP 以及培養多位能夠梳理議題的主持人，資訊系統必須依附在這個基礎上才能發揮作用。<a href='https://plus.google.com/u/0/+ETBlue/posts/fZZ5odBdckn'/>詳見這篇 google+ post</a>。</li>
@@ -173,9 +173,10 @@
 <li>meta data 可以直接在同一個檔案內另開一個 sheet 供憲動盟編輯</li>
 <li>潛在風險：<ul><li>紀錄本身就要去識別化，不能記發言人真名 -&gt; 可能要有雙紀錄機制，搭配名牌</li>
 <li>因為 gsheet 資料會即時更新到網頁上，紀錄上線後表單編輯權限要鎖起來，以免誤改</li>
-<li>頁面全部都在瀏覽器內即時 render，舊 device 可能會跑得慢，另可能會對 SEO 不利，要測試過才知道</li></ul>
-</li>
-<li>潛在 todo：</li><ul class="task"><li>憲動盟自己開 github org</li></ul class="task">
+<li>頁面全部都在瀏覽器內即時 render，舊 device 可能會跑得慢，另可能會對 SEO 不利，要測試過才知道</li><ul class="comment"><li>vTaiwan 的<a href='https://github.com/g0v/crowdfunding-gitbook/blob/master/package.json#L14'/>做法</a>是每分鐘從後端跑 <a href='https://www.npmjs.com/package/google-spreadsheets'/>google-spreadsheet-download</a> 再 commit 到 gh-pages 裡（與之前 g0v.today 定期讀取 ethercalc 的做法相同），或可參考。</li></ul>
+</ul>
+</ul>
+<ul><li>潛在 todo：</li><ul class="task"><li>憲動盟自己開 github org</li></ul class="task">
 </li></ul class="task">
 </li>
 <li>論點可以連到白板照片，白板照片也可以回到論點</li><ul><li>實作方式可以加一個隱藏標籤（其實應該是資料表欄位 XD）標註連到哪張照片</li>
