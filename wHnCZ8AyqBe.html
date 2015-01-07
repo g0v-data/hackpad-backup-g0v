@@ -3,16 +3,16 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="756"/>
+<meta name="version" content="901"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$wHnCZ8AyqBe</title>
 </head>
-<body><h1>步驟 - 如何使用 gitbook 寫書</h1><p></p><p><b>什麼是 gitbook</b></p><p></p><p>gitbook 是好用的線上 + 線下寫書工具，可以拿來解釋規模較大、無法在單一頁面解釋完畢的主題，寫完後就自動有一個可以線上閱讀的網址可以分享給別人了，像是：</p><ul><li><a href='https://fepztw.github.io/'/>自經區手冊</a></li>
-<li>vTaiwan 也有兩本：<a href='https://crowdfunding.vtaiwan.tw/'/>群募</a>、<a href='https://closelyheld.vtaiwan.tw/'/>公司法</a>，之後會還有 8~9 本</li>
+<body><h1>步驟 - 如何使用 gitbook 寫書</h1><p></p><p><b>什麼是 gitbook</b></p><p></p><p>gitbook 是好用的線上 + 線下寫書工具，可以拿來解釋有點複雜、沒辦法一頁說完的事情。書才剛開始寫，就已經自動有一個線上閱讀的網址，可以把最新進度貼給別人看，你寫到哪，他們就可以看到哪。像是：</p><ul><li><a href='https://fepztw.github.io/'/>自經區手冊</a></li>
+<li><a href='https://crowdfunding.vtaiwan.tw/'/>群</a><a href='https://crowdfunding.vtaiwan.tw/'/>眾募資</a>、<a href='https://closelyheld.vtaiwan.tw/'/>公司法</a>（vTaiwan之後還會有 8~9 本）</li>
 <li><a href='http://ipa.gitbooks.io/constitution100/content/'/>憲餅食譜100道</a></li></ul>
 
 <p><b>跟 gitbook 有關的宅宅名詞們</b></p><p></p><ul><li>git 是幫你管理文件版本的工具，它管的文件通常是程式碼，但也可以是一般純文字文件</li>
 <li>github 是幫你管理 git 的工具，原本在用的人比較多是工程師，但網頁介面變得越來越和藹可親、推出可愛的 app 以後，越來越多正常人使用了</li>
-<li>gitbook 是幫你利用 github 的版本管理功能來寫書的工具，為了讓正常人使用所以有可愛的 web editor，如果需要離線寫書的話也有 app 可以用</li></ul>
+<li>gitbook 是幫你利用 github 的版本管理功能來寫書的工具，為了讓正常人使用所以有 web editor，如果需要離線寫書的話也有可愛的 app 可以用</li></ul>
 
 <h2>步驟</h2><p></p><p><b>申請 github 與 gitbook 帳號</b></p><p></p><ol><li><b>申請 github 帳號</b></li><ul><li>帳號申請：<a href="https://github.com/"></a>https://github.com/<img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_wHnCZ8AyqBe_p.52366_1420615751302_github-sign-up.PNG'/></li>
 <li>（optional）如果需要離線寫書的話，要另外：下載與安裝 github app<ul><li>mac 版下載：<a href='https://mac.github.com/'/>github for mac</a></li>
@@ -27,7 +27,8 @@
 <ul class="comment"><li>離線版停止維護了 XD 如果可以用 Chrome/Firefox 的話，推薦使用線上編輯界面</li>
 <li>線上編輯界面目前實測，IE10 無法使用。</li></ul>
 
-<p><b>在 gitbook 開一本新的書</b></p><p></p><ol><li><br/></li></ol>
+<p><b>在 gitbook 開一本新的書</b></p><p></p><p>很簡單，在一登入的 dashboard 畫面，按下 create a new book，輸入書名跟想要的網址就可以了。</p><ol><li>瞧瞧這好精美的 dashboard<img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_wHnCZ8AyqBe_p.52366_1420663978649_gitbook-dashboard.PNG'/></li>
+<li>瞧瞧這好精美的 new book<img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_wHnCZ8AyqBe_p.52366_1420664043343_gitbook-new-book.PNG'/></li></ol>
 
-<p><b>接受別人的 gitbook 邀請</b></p><p></p><p></p><h2>gitbook架構</h2><p>gitbook主要分為四個部分。</p><p></p><p><b>SUMMARY.md</b></p><p>這是書籍的目錄結構，裡面是內容的部份。結構請參考此：</p><p><a href="http://help.gitbook.io/book/chapters.html"></a>http://help.gitbook.io/book/chapters.html</p><p></p><p><b>README.md</b></p><p>這是書籍的前言，不用把它加在目錄結構裡面。</p><p></p><p><b>1-0.md 1-1.md 1-2.md.....</b></p><p>這些是章節內容，如1-2代表第一章第二節。不過命名方式沒有強制，只要SUMMARY中有定義就可以。</p><p></p><p><b>cover.jpg cover_small.jpg</b></p><p>這是封面</p><p>尺寸如下：</p><p>cover.jpg 1800x2360&nbsp;</p><p>cover_small.jpg 200x262</p><p></p><p></p><p><b>參考書本內容</b></p><p><a href="https://github.com/billy3321/TaiwanFEPZS"></a>https://github.com/billy3321/TaiwanFEPZS</p><p><b>相關文件</b></p><p><a href="http://gitbookio.gitbooks.io/documentation/"></a>http://gitbookio.gitbooks.io/documentation/</p><p></p></body>
+<p><b>開始寫書</b></p><p></p><p></p><p></p><p><b>接受別人的 gitbook 邀請</b></p><p></p><p></p><h2>gitbook架構</h2><p>gitbook主要分為四個部分。</p><p></p><p><b>SUMMARY.md</b></p><p>這是書籍的目錄結構，裡面是內容的部份。結構請參考此：</p><p><a href="http://help.gitbook.io/book/chapters.html"></a>http://help.gitbook.io/book/chapters.html</p><p></p><p><b>README.md</b></p><p>這是書籍的前言，不用把它加在目錄結構裡面。</p><p></p><p><b>1-0.md 1-1.md 1-2.md.....</b></p><p>這些是章節內容，如1-2代表第一章第二節。不過命名方式沒有強制，只要SUMMARY中有定義就可以。</p><p></p><p><b>cover.jpg cover_small.jpg</b></p><p>這是封面</p><p>尺寸如下：</p><p>cover.jpg 1800x2360&nbsp;</p><p>cover_small.jpg 200x262</p><p></p><p></p><p><b>參考書本內容</b></p><p><a href="https://github.com/billy3321/TaiwanFEPZS"></a>https://github.com/billy3321/TaiwanFEPZS</p><p><b>相關文件</b></p><p><a href="http://gitbookio.gitbooks.io/documentation/"></a>http://gitbookio.gitbooks.io/documentation/</p><p></p></body>
 </html>
