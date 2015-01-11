@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="5254"/>
+<meta name="version" content="5499"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$h6fOoDAd9qZ</title>
 </head>
 <body><h1>義務律師陪偵平台</h1><p></p><h2>近日活動</h2><p>1/25(日) 10:00 - 18:00 <a href='https://g0v.hackpad.com/--jS8mZtWlSWo'/>第零次法律松</a>@民間司改會</p><p></p><p></p><p></p><h2>什麼是陪偵？ </h2><ul><li>一般抗議活動時往往會有抗議民眾被警方帶走偵訊，為維護這些抗議民眾的權益，司改會協調義務律師前往現場協助民眾面對偵查。往往是事件驅動，並隨著各種事件的大小而有不同程度的驅動量。</li>
@@ -326,6 +326,17 @@
 <p>8/2 司改會辦公室討論項目:</p><ul><li>架在 instance-based service 上</li>
 <li>Android Repository：<a href="https://github.com/TakumaMochizuki/LawyerDetector"></a>https://github.com/TakumaMochizuki/LawyerDetector</li>
 <li>Admin Repo: <a href="https://github.com/ychi/lawer995-admin"></a>https://github.com/ychi/lawer995-admin</li></ul>
+
+<p>2014/1/12 網頁端更新:</p><ul><li>Admin Repo: <a href="https://github.com/ychi/lawer995-admin"></a><a href='https://github.com/ychi/lawer995-admin'/>https://github.com/ychi/lawer995-admin</a></li>
+<li>sync下來後把 js/conf.js裡的 apiURL 指定成 <a href="http://jrf.tonyq.org/api/"></a>http://jrf.tonyq.org/api/</li>
+<li>放上 web server; 如果要直接從本機檔案系統打開的話，chrome 會因為<a href='https://developer.chrome.com/extensions/xhr'/>安全考量</a>不給開</li>
+<li>目前律師頁面是比較可以參考的，會從 Tony mock 好的 API 真的拿一筆資料回來</li>
+<li>接下來要做的 :&nbsp;<ul><li>feature: 把 angular modules 換成用 bower install</li>
+<li>feature: 讓使用者頁面和案件頁面也都用API拿資料</li>
+<li>bug: 在案件或律師tab 按 f5, tab 顯示會有問題</li>
+<li>feature: 在律師資料列上點擊後打開一個modal, 顯示律師完整資料 並且可編輯儲存。案件、使用者亦同</li>
+<li>epic: 身分認證和權限</li></ul>
+</ul>
 
 </body>
 </html>
