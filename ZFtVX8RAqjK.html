@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="954"/>
+<meta name="version" content="995"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$ZFtVX8RAqjK</title>
 </head>
 <body><h1>「國家教育研究院雙語詞彙、學術名詞暨辭書資訊網」資料庫下載規劃</h1><p></p><p></p><h2>Meeting minutes: #date-2014-12-09</h2><p>Location: 國家教育研究院編譯發展中心台北院區</p><ul class="comment"><li>以下為會議時的初步共識，細節需等待辦法訂立後才知道。</li></ul>
@@ -21,9 +21,11 @@
 <li>當有開發者申請時，編譯發展中心聯絡外包廠商，請廠商設定允許下載的 IP. (或自動化)</li>
 <li>如果上述步驟，廠商不便協助修改。中心打算提供 ssh login 權限給 g0v 特定人員，由 g0v 人員協助設定 daily db dump。（isacl 建議：限制在台北院區現場操作，操作時有中心的人員在場擔保。）</li></ol>
 
-<p></p><p><b>詞彙 Feedback</b></p><p>現有的詞彙 feedback 機制為 <a href='http://terms.naer.edu.tw/forum/'/>forum</a> 。使用者在網站上登入後，直接留言給予建議。使用率非常低。</p><p></p><p>當 g0v 下載了 db dump 後, 也可自行製作 feedback 介面來蒐集 feedback. 再把資料彙整給中心。</p><p>（中心需經由一定的程序後才正式發佈更新）</p><p></p><p></p><p><b>API 化後，可能的發展</b></p><ul><li>製作 browser extension, 在瀏覽網站時，自動翻譯學術名詞</li>
-<li>結合萌典</li>
-<li>改善 feedback 流程</li></ul>
+<p></p><p><b>詞彙 Feedback</b></p><p>現有的詞彙 feedback 機制為 <a href='http://terms.naer.edu.tw/forum/'/>forum</a> 。使用者在網站上登入後，直接留言給予建議。使用率非常低。</p><p></p><p>當 g0v 下載了 db dump 後, 也可自行製作 feedback 介面來蒐集 feedback. 再把資料彙整給中心。</p><p>（中心需經由一定的程序後才正式發佈更新）</p><p></p><p></p><p><b>API 化後，可能的發展</b></p><ul><li>製作 browser extension, 在瀏覽網站時，自動翻譯學術名詞</li></ul>
+<ul class="comment"><li>有些醫學名詞的翻譯，跟衛服部所開發的<a href='http://mrc.hatw.org.tw/'/>中文化病例字彙查詢</a>蠻相關的。有興趣也把這些內容拿來對照嗎？可以牽到裡頭認識負責人的一位醫學院畢業的替代役學生來說明狀況XD</li></ul>
+<ul><li>結合萌典</li></ul>
+<ul class="comment"><li>有機會也一併dump到另外一個開放資料庫上嗎？我對資料庫不熟，但我知道最近wikidata跟歐盟打算要合作，應該可以接</li></ul>
+<ul><li>改善 feedback 流程</li></ul>
 
 <p><b>Others</b></p><p>網站上的幾個名詞解釋：</p><ul><li>學術名詞</li>
 <li>雙語詞彙<ul><li>機關建議詞彙 - 由各機關建議，但未經完整的審核校對程序</li>
