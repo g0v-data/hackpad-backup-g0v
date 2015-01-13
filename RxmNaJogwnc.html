@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="78"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$RxmNaJogwnc</title>
+</head>
+<body><h1>vTaiwan.tw 後端架構</h1><p>上層：<a href='https://g0v.hackpad.com/oWRxOF4ilfx'/>vTaiwan.tw 行政院法規線上諮詢系統</a></p><ul class="comment"><li>2015/1/13 au first draft, to be reviewed by iii team; API index to be reviewed with vtw.link team</li></ul>
+
+<p>vTaiwan.tw 由兩部份組成，也就是 GitBook 和 Discourse。</p><p></p><p><b>GitBook 方面</b></p><p></p><p><a href="http://crowdfunding.vtaiwan.tw/"></a>http://crowdfunding.vtaiwan.tw/ 的目錄就是該網址。</p><p>小字典是 <a href="http://crowdfunding.vtaiwan.tw/GLOSSARY.html"></a>http://crowdfunding.vtaiwan.tw/GLOSSARY.html</p><p></p><p>各頁的內容全部在 <a href="http://crowdfunding.vtaiwan.tw/content.json"></a>http://crowdfunding.vtaiwan.tw/content.json</p><p>所有的 Markdown 在 <a href="https://github.com/g0v/crowdfunding-gitbook"></a>https://github.com/g0v/crowdfunding-gitbook</p><p></p><p>技術文件見 <a href="http://help.gitbook.io/book/format.html"></a>http://help.gitbook.io/book/format.html</p><p></p><p><b>Discourse 方面</b></p><p></p><p>可以到討論區任一頁，如 <a href="https://talk.vtaiwan.tw/t/topic/21"></a>https://talk.vtaiwan.tw/t/topic/21</p><p>後面加 .json 就好了 &#92;o/ <a href="https://talk.vtaiwan.tw/t/topic/21.json"></a>https://talk.vtaiwan.tw/t/topic/21.json</p><p></p><p>Ruby API 及技術說明: <a href="https://meta.discourse.org/t/using-discourse-api/17587"></a>https://meta.discourse.org/t/using-discourse-api/17587</p><p>Node.js API: <a href="https://github.com/dhyasama/discourse-api"></a>https://github.com/dhyasama/discourse-api</p><p>Java API: <a href="https://github.com/wareninja/discourse-api-client"></a>https://github.com/wareninja/discourse-api-client</p><p></p><p><b>主索引</b></p><p></p><p>請用這個 JSON 結構試作：</p><p></p><ul class="code"><li>[</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { &quot;title_cht&quot; : &quot;群眾募資&quot;, &quot;title_eng&quot; : &quot;crowdfunding&quot;, &quot;category_num&quot; : 6},</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { &quot;title_cht&quot; : &quot;閉鎖型公司&quot;, &quot;title_eng&quot; : &quot;closelyheld&quot;, &quot;category_num&quot; : 5}</li>
+<li>]</li></ul>
+
+<p>其中 title_eng 對應到 GitBook domain，category_rum 對應到 Discourse domain. 對應邏輯如下：</p><p></p><ul class="code"><li>title_eng = crowdfunding</li>
+<li>HTML: <a href="https://crowdfunding.vtaiwan.tw"></a>http<a href='http://crowdfunding.vtaiwan.tw'/>s</a>://crowdfunding.vtaiwan.tw</li>
+<li>JSON: <a href="https://crowdfunding.vtaiwan.tw/content.json"></a>http<a href='http://crowdfunding.vtaiwan.tw/content.json'/>s</a>://crowdfunding.vtaiwan.tw/content.json</li>
+<li><br/></li>
+<li>category_num = 6</li>
+<li>HTML: <a href="https://talk.vtaiwan.tw/6/5-category"></a>https://talk.vtaiwan.tw/6/5-category</li>
+<li>JSON: <a href="https://talk.vtaiwan.tw/6/5-category.json"></a>https://talk.vtaiwan.tw/6/5-category.json</li></ul>
+
+</body>
+</html>
