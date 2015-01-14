@@ -3,10 +3,10 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="796"/>
+<meta name="version" content="799"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$y3IHgVIYYSY</title>
 </head>
-<body><h1>選舉黃頁 API (alpha)</h1><p></p><p>選舉黃頁基本上是由兩棵 <a href='http://www.sitepoint.com/hierarchical-data-database-2/'/>MPTT</a> 樹狀結構所組成， areas 為行政區、 elections 為選舉區，這樣子切割的原因是部份選舉區跟行政區需要額外對應，像是個別議員選區經常會對應到一個以上的行政區，因此切開來處理。 透過 api 取得的資料都會有 rght 與 lft 用在 MPTT 索引的欄位，只要 rght - lft = 1 就表示該節點為樹葉 (leaf node) ，它不會有下一層。</p><p></p><ul><li><a href="http://k.olc.tw/elections/api/areas/index/53c01bce-df94-4939-a456-5460acb5b862"></a>http://k.olc.tw/elections/api/areas/index<a href='http://k.olc.tw/elections/api/areas/index/53c01bce-df94-4939-a456-5460acb5b862'/>/53c01bce-df94-4939-a456-5460acb5b862</a><ul><li>取得單層行政區資料， index/ 後面可以接個別行政區 id 來取得下一層資料</li>
+<body><h1>選舉黃頁 API (alpha)</h1><p></p><p>選舉黃頁基本上是由兩棵 <a href='http://www.sitepoint.com/hierarchical-data-database-2/'/>MPTT</a> 樹狀結構所組成， areas 為行政區、 elections 為選舉區，這樣子切割的原因是部份選舉區跟行政區需要額外對應，像是個別議員選區經常會對應到一個以上的行政區，因此切開來處理。 透過 api 取得的資料都會有 rght 與 lft 用在 MPTT 索引的欄位，只要 rght - lft = 1 就表示該節點為樹葉 (leaf node) ，它不會有下一層。</p><p></p><p>** 如果需要大量存取，麻煩<a href='http://k.olc.tw/%E8%81%AF%E7%B5%A1%E6%98%8E%E5%AE%97/'/>直接跟我聯絡</a> ，我可以隨時把資料庫匯出給你，機器超弱的...</p><p></p><ul><li><a href="http://k.olc.tw/elections/api/areas/index/53c01bce-df94-4939-a456-5460acb5b862"></a>http://k.olc.tw/elections/api/areas/index<a href='http://k.olc.tw/elections/api/areas/index/53c01bce-df94-4939-a456-5460acb5b862'/>/53c01bce-df94-4939-a456-5460acb5b862</a><ul><li>取得單層行政區資料， index/ 後面可以接個別行政區 id 來取得下一層資料</li>
 <li>index/ 後面沒有參數會顯示最上層（目前是縣市）</li></ul>
 </li>
 <li><a href="http://k.olc.tw/elections/api/elections/index/53c0202e-ed38-44bb-8e78-5460acb5b862"></a>http://k.olc.tw/elections/api/elections/index<a href='http://k.olc.tw/elections/api/elections/index/53c0202e-ed38-44bb-8e78-5460acb5b862'/>/53c0202e-ed38-44bb-8e78-5460acb5b862</a><ul><li>取得單層選舉區資料，index/ 後面可以接個別選舉區 id 來取得下一層資料</li>
