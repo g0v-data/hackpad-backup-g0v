@@ -3,13 +3,13 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="661"/>
+<meta name="version" content="1047"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$xqnTZmdXJW5</title>
 </head>
 <body><h1>台灣人口統計資料整理</h1><p>kirby 提議的坑</p><p></p><p>目標：人口是常用資料，希望蒐集歷史 / 即時人口統計數據，行政區愈細愈好</p><ol><li>放上 data.g0v.tw 作為其他專案的基礎建設或參考資料</li>
 <li>希望做成台灣人口時空變化的視覺化圖表</li></ol>
 
-<p>todos</p><ol><li>先清點目前政府已提供資料</li>
+<p>todos</p><ol><li>先清點目前政府已提供資料，找出質量較好的來源或合併既有資料</li>
 <li>詢問 data.gov.tw 或要求地方政府提供資料</li></ol>
 
 <h2>政府已提供</h2><ul class="comment"><li>註明：最小區劃 - 資料統計頻率 - 檔案格式 - 歷史區間</li></ul>
@@ -19,18 +19,36 @@
 <li>縣市 - 年度 - xls - since 1974：01 縣市人口按性別及五齡組(63)</li>
 <li>區市鄉鎮 - 單月 - xls - 近一年：03 鄉鎮戶數及人口數&nbsp;</li></ul>
 
+<p>內政部統計查詢網 <a href="http://statis.moi.gov.tw/micst/stmain.jsp?sys=100"></a>http://statis.moi.gov.tw/micst/stmain.jsp?sys=100</p><ul><li>縣市 - 單月 - web / xls - since 1990（<a href='https://drive.google.com/open?id=0B4W4blozmO71SktrOWRKVkZ3cHM&amp;authuser=0'/>google drive 備份</a>）</li></ul>
+
 <p>內政資料開放平台 <a href="http://data.moi.gov.tw/MoiOD/Data/DataDetail.aspx?oid=F4478CE5-7A72-4B14-B91A-F4701758328F"></a>http://data.moi.gov.tw/MoiOD/Data/DataDetail.aspx?oid=F4478CE5-7A72-4B14-B91A-F4701758328F</p><ul><li>村里 - 單月 - xls - 近一年</li></ul>
 
 <p>行政院主計處 - PC-Axis 總體統計資料庫 - 人口統計資料夾</p><p><a href="http://ebas1.ebas.gov.tw/pxweb/Dialog/statfile9L.asp"></a>http://ebas1.ebas.gov.tw/pxweb/Dialog/statfile9L.asp</p><ul><li>全國 - 年月 - web 表格 - since 2001</li></ul>
 
-<p><b>地方</b></p><p>行政院主計處 - 縣市政府統計資料庫 -&gt; 點選各縣市</p><p><a href="http://ebas1.ebas.gov.tw/pxweb/Dialog/statfile9.asp"></a>http://ebas1.ebas.gov.tw/pxweb/Dialog/statfile9.asp</p><ul><li>縣市 -&nbsp; 年度 - web 表格 / xls / PC-Axis - since 1968（缺竹縣、苗栗、屏東、花蓮、澎湖）<ul><li><a href='http://163.29.37.101/pxweb2007-tp/Dialog/varval.asp?ma=PP00016YA&amp;ti=%A4H%A4f%A1B%B1K%AB%D7%A4%CE%A9%CA%A4%F1%A8%D2&amp;path=/PXfile/CountyStatistics&amp;lang=9&amp;strList=L'/>台北市</a>（since 1968）<a href='http://ebas1.ebas.gov.tw/pxweb2007P/Dialog/varval.asp?ma=Po0201A1A&amp;ti=%B2{%A6%ED%A4%E1%BC%C6%A1B%A4H%A4f%B1K%AB%D7%A4%CE%A9%CA%A4%F1%A8%D2-%A6~&amp;path=../PXfile01/County01&amp;lang=9&amp;strList=L&amp;strCC=01'/>新北市</a>（1998）<a href='http://ebas1.ebas.gov.tw/pxweb2007P/Dialog/varval.asp?ma=Po0201A1A&amp;ti=%B0%F2%B6%A9%A5%AB%B2%CE%ADp%A6~%B3%F8(%A6~)&amp;path=../PXfile17/County17&amp;lang=9&amp;strList=L&amp;strCC=17'/>基隆市</a>（2003）</li>
+<p><b>地方</b></p><undefined><li><b>行政院主計處 - 縣市政府統計資料庫 -&gt; 點選各縣市</b></li></undefined>
+<p><a href="http://ebas1.ebas.gov.tw/pxweb/Dialog/statfile9.asp"></a>http://ebas1.ebas.gov.tw/pxweb/Dialog/statfile9.asp</p><ul><li>縣市 -&nbsp; 年度 - web 表格 / xls / PC-Axis - 起始年如後附（缺竹縣、苗、屏、花、澎）<ul><li><a href='http://163.29.37.101/pxweb2007-tp/Dialog/varval.asp?ma=PP00016YA&amp;ti=%A4H%A4f%A1B%B1K%AB%D7%A4%CE%A9%CA%A4%F1%A8%D2&amp;path=/PXfile/CountyStatistics&amp;lang=9&amp;strList=L'/>台北市</a>（since 1968）<a href='http://ebas1.ebas.gov.tw/pxweb2007P/Dialog/varval.asp?ma=Po0201A1A&amp;ti=%B2{%A6%ED%A4%E1%BC%C6%A1B%A4H%A4f%B1K%AB%D7%A4%CE%A9%CA%A4%F1%A8%D2-%A6~&amp;path=../PXfile01/County01&amp;lang=9&amp;strList=L&amp;strCC=01'/>新北市</a>（1998）<a href='http://ebas1.ebas.gov.tw/pxweb2007P/Dialog/varval.asp?ma=Po0201A1A&amp;ti=%B0%F2%B6%A9%A5%AB%B2%CE%ADp%A6~%B3%F8(%A6~)&amp;path=../PXfile17/County17&amp;lang=9&amp;strList=L&amp;strCC=17'/>基隆市</a>（2003）</li>
+<li><a href='http://ebas1.ebas.gov.tw/pxweb2007P/Dialog/varval.asp?ma=Po0201A1A&amp;ti=%B2{%A6%ED%A4%E1%BC%C6%A1B%A4H%A4f%B1K%AB%D7%A4%CE%A9%CA%A4%F1%A8%D2&amp;path=../PXfile03/County03/&amp;lang=9&amp;strList=L&amp;strCC=03'/>桃園市</a>（前桃園縣，2002）新竹縣（缺）<a href='http://ebas1.ebas.gov.tw/pxweb2007P/Dialog/varval.asp?ma=Po0201A1A&amp;ti=%B7s%A6%CB%A5%AB%B2%CE%ADp%B8%EA%AE%C6%AEw(%A6~)&amp;path=../PXfile18/County18&amp;lang=9&amp;strList=L&amp;strCC=18http://ebas1.ebas.gov.tw/pxweb2007P/Dialog/varval.asp?ma=Po0201A1A&amp;ti=%B7s%A6%CB%A5%AB%B2%CE%ADp%B8%EA%AE%C6%AEw(%A6~)&amp;path=../PXfile18/County18&amp;lang=9&amp;strList=L&amp;strCC=18'/>新竹市</a>（2000）</li>
 <li><a href='http://sta.nantou.gov.tw/pxweb/Dialog/varval.asp?ma=Po0101A1A&amp;ti=%B2{%A6%ED%A4%E1%BC%C6%A1B%A4H%A4f%B1K%AB%D7%A4%CE%A9%CA%A4%F1%A8%D2&amp;path=../PXfile/Nantou/Abstract/&amp;lang=9&amp;strList=L'/>南投縣</a>（1999）</li></ul>
 </li>
-<li>縣市 - 單月 - web 表格 / xls / PC-Axis<ul><li><a href='http://163.29.37.101/pxweb2007-tp/Dialog/varval.asp?ma=PP00002M&amp;ti=%A4g%A6a%A4H%A4f%B7%A7%AAp&amp;path=/PXfile/CountyStatistics&amp;lang=9&amp;strList=L'/>台北市</a>（since 1998）</li></ul>
+<li>縣市 - 單月 - web 表格 / xls / PC-Axis - 起始年如後附<ul><li><a href='http://163.29.37.101/pxweb2007-tp/Dialog/varval.asp?ma=PP00002M&amp;ti=%A4g%A6a%A4H%A4f%B7%A7%AAp&amp;path=/PXfile/CountyStatistics&amp;lang=9&amp;strList=L'/>台北市</a>（1998）</li>
+<li><a href='http://townweb.cyhg.gov.tw/pxweb/Dialog/varval.asp?ma=Po0301A1M&amp;ti=%B9%C5%B8q%BF%A4%AD%AB%ADn%B2%CE%ADp%B8%EA%AE%C6%AEw%ACd%B8%DF%A8t%B2%CE&amp;path=../PXfile/CountyStatistics&amp;lang=9&amp;Flag=Q'/>嘉義縣</a>（2012/7）</li>
+<li>其他縣市從缺，但可參考內政部統計查詢網資料</li></ul>
 </li>
-<li>區市鄉鎮 - 年度 - web 表格 / xls / PC-Axis&nbsp;<ul><li><a href='http://163.29.37.101/pxweb2007-tp/Dialog/varval.asp?ma=PP00016DA&amp;ti=%A4H%A4f%A1B%B1K%AB%D7%A4%CE%A9%CA%A4%F1%A8%D2&amp;path=/PXfile/CountyStatistics&amp;lang=9&amp;strList=L'/>台北市</a>（since 1990）<a href='http://ebas1.ebas.gov.tw/pxweb2007P/Dialog/varval.asp?ma=Po0201A1A&amp;ti=%B2{%A6%ED%A4%E1%BC%C6%A1B%A4H%A4f%B1K%AB%D7%A4%CE%A9%CA%A4%F1%A8%D2-%A6~&amp;path=../PXfile01/County01&amp;lang=9&amp;strList=L&amp;strCC=01'/>新北市</a>（1998）<a href='http://ebas1.ebas.gov.tw/pxweb2007P/Dialog/varval.asp?ma=Po0201A1A&amp;ti=%B0%F2%B6%A9%A5%AB%B2%CE%ADp%A6~%B3%F8(%A6~)&amp;path=../PXfile17/County17&amp;lang=9&amp;strList=L&amp;strCC=17'/>基隆市</a>（2003）</li>
-<li><a href='http://sta.nantou.gov.tw/pxweb/Dialog/varval.asp?ma=Po0101A1A&amp;ti=%B2{%A6%ED%A4%E1%BC%C6%A1B%A4H%A4f%B1K%AB%D7%A4%CE%A9%CA%A4%F1%A8%D2&amp;path=../PXfile/Nantou/Abstract/&amp;lang=9&amp;strList=L'/>南投縣</a>（1999）</li></ul>
+<li>區鄉鎮市 - 年度 - web 表格 / xls / PC-Axis&nbsp;<ul><li><a href='http://163.29.37.101/pxweb2007-tp/Dialog/varval.asp?ma=PP00016DA&amp;ti=%A4H%A4f%A1B%B1K%AB%D7%A4%CE%A9%CA%A4%F1%A8%D2&amp;path=/PXfile/CountyStatistics&amp;lang=9&amp;strList=L'/>台北市</a>（since 1990）<a href='http://ebas1.ebas.gov.tw/pxweb2007P/Dialog/varval.asp?ma=Po0201A1A&amp;ti=%B2{%A6%ED%A4%E1%BC%C6%A1B%A4H%A4f%B1K%AB%D7%A4%CE%A9%CA%A4%F1%A8%D2-%A6~&amp;path=../PXfile01/County01&amp;lang=9&amp;strList=L&amp;strCC=01'/>新北市</a>（1998）<a href='http://ebas1.ebas.gov.tw/pxweb2007P/Dialog/varval.asp?ma=Po0201A1A&amp;ti=%B0%F2%B6%A9%A5%AB%B2%CE%ADp%A6~%B3%F8(%A6~)&amp;path=../PXfile17/County17&amp;lang=9&amp;strList=L&amp;strCC=17'/>基隆市</a>（2003）</li>
+<li><a href='http://ebas1.ebas.gov.tw/pxweb2007P/Dialog/varval.asp?ma=Po0201A1A&amp;ti=%B2{%A6%ED%A4%E1%BC%C6%A1B%A4H%A4f%B1K%AB%D7%A4%CE%A9%CA%A4%F1%A8%D2&amp;path=../PXfile03/County03/&amp;lang=9&amp;strList=L&amp;strCC=03'/>桃園市</a>（前桃園縣，2002）新竹縣（缺）<a href='http://ebas1.ebas.gov.tw/pxweb2007P/Dialog/varval.asp?ma=Po0201A1A&amp;ti=%B7s%A6%CB%A5%AB%B2%CE%ADp%B8%EA%AE%C6%AEw(%A6~)&amp;path=../PXfile18/County18&amp;lang=9&amp;strList=L&amp;strCC=18http://ebas1.ebas.gov.tw/pxweb2007P/Dialog/varval.asp?ma=Po0201A1A&amp;ti=%B7s%A6%CB%A5%AB%B2%CE%ADp%B8%EA%AE%C6%AEw(%A6~)&amp;path=../PXfile18/County18&amp;lang=9&amp;strList=L&amp;strCC=18'/>新竹市</a>（2000）苗栗縣（缺）</li>
+<li><a href='http://pxweb.taichung.gov.tw/taichung/dialog/varval.asp?ma=DPO001A&amp;ti=%BBO%A4%A4%A5%AB%A4H%A4f%A1B%B1K%AB%D7%A4%CE%A9%CA%A4%F1%A8%D2%2D%A6%7E&amp;path=../PXfile/D/&amp;search=%A4H%A4f&amp;lang=9'/>大台中市</a>（2013）<a href='http://pxweb.taichung.gov.tw/city/dialog/varval.asp?ma=Po0201A1A&amp;ti=%B2%7B%A6%ED%A4%E1%BC%C6%A1B%A4H%A4f%B1K%AB%D7%A4%CE%A9%CA%A4%F1%A8%D2%28%B6m%C2%ED%29%2D%A6%7E&amp;path=../PXfile/CountyStatistics/&amp;search=%A4H%A4f&amp;lang=9'/>前台中市</a>（1993-2010）<a href='http://pxweb.taichung.gov.tw/county/dialog/varval.asp?ma=Po0201A1A&amp;ti=%B2%7B%A6%ED%A4%E1%BC%C6%A1B%A4H%A4f%B1K%AB%D7%A4%CE%A9%CA%A4%F1%A8%D2%28%B6m%C2%ED%29%2D%A6%7E&amp;path=../PXfile/CountyStatistics_old/&amp;search=%A4H%A4f&amp;lang=9'/>前台中縣</a>（1996-2008）<a href='http://gas.chcg.gov.tw/pxweb2007p/dialog/statfile9l.asp'/>彰化縣</a>（缺） <a href='http://sta.nantou.gov.tw/pxweb/Dialog/varval.asp?ma=Po0101A1A&amp;ti=%B2{%A6%ED%A4%E1%BC%C6%A1B%A4H%A4f%B1K%AB%D7%A4%CE%A9%CA%A4%F1%A8%D2&amp;path=../PXfile/Nantou/Abstract/&amp;lang=9&amp;strList=L'/>南投縣</a>（1999）</li><ul class="comment"><li>彰化縣完全沒有連結？參考以下彰化縣各鄉鎮市村里鄰戶口數</li></ul>
+</ul>
+<ul><li><a href='http://pxweb.yunlin.gov.tw/Pxweb2007/Dialog/varval.asp?ma=Po0201A1A&amp;ti=%B2%7B%A6%ED%A4%E1%BC%C6%A1B%A4H%A4f%B1K%AB%D7%A4%CE%A9%CA%A4%F1%A8%D2%2D%A6%7E&amp;path=../PXfile/CountyStatistics/&amp;search=%A4H%A4f&amp;lang=9'/>雲林縣</a>（2002）<a href='http://townweb.cyhg.gov.tw/pxweb/Dialog/varval.asp?ma=Po0201A1A&amp;ti=%B9%C5%B8q%BF%A4%AD%AB%ADn%B2%CE%ADp%B8%EA%AE%C6%AEw%ACd%B8%DF%A8t%B2%CE&amp;path=../PXfile/CountyStatistics&amp;lang=9&amp;Flag=Q'/>嘉義縣</a>（2000）<a href='http://www.chiayi.gov.tw/pxweb2007P/Dialog/varval.asp?ma=Po0201A1A&amp;ti=%B2%7B%A6%ED%A4%E1%BC%C6%A1B%A4H%A4f%B1K%AB%D7%A4%CE%A9%CA%A4%F1%A8%D2%2D%A6%7E&amp;path=../PXfile/CountyStatistics/&amp;search=%A4H%A4f&amp;lang=9'/>嘉義市</a>（2000）<a href='http://database.tainan.gov.tw/pxweb2007/dialog/varval.asp?ma=Po0203A2A&amp;ti=%B2%7B%A6%ED%A4H%A4f%A4%A7%A6%7E%C4%D6%A4%C0%B0t%2D%A6%7E&amp;path=../PXfile/CountyStatistics/Po%A4H%A4f/&amp;search=%A4H%A4f&amp;lang=9'/>大台南市</a>（2011）<a href='http://pxweb.tainan.gov.tw/Dialog/varval.asp?ma=Po0201A1A&amp;ti=%B2%7B%A6%ED%A4%E1%BC%C6%A1B%A4H%A4f%B1K%AB%D7%A4%CE%A9%CA%A4%F1%A8%D2%2D%A6%7E&amp;path=../PXfile/CountyStatistics/&amp;search=%A4H%A4f&amp;lang=9'/>前台南縣</a>（1999-2010）<a href='http://ebas1.ebas.gov.tw/pxweb2007P/Dialog/varval.asp?ma=Po0204A1A&amp;ti=%B2%7B%A6%ED%A4H%A4f%A4%A7%A6%7E%C4%D6%A4%C0%B0t%2D%A6%7E&amp;path=../PXfile21/County21/&amp;search=%A4H%A4f&amp;lang=9'/>前台南市</a>（1999-2010）</li><ul class="comment"><li>大台南市及前台南市連結資料為「<b>現住人口之年齡分配</b>」，多了性別與年齡維度</li></ul>
+</ul>
+<ul><li><a href='http://kcgdg1.kcg.gov.tw/pxweb2007p/Dialog/varval.asp?ma=Po010402A&amp;ti=%B0%AA%B6%AF%A5%AB%A4%E1%C4y%B5n%B0O%A4H%A4f%A4%A7%A4%E1%B6q&amp;path=../PXfile/CountyStatistics/%B0%AA%B6%AF%A5%AB/%A8%CC%A6~%A7O%ACd%B8%DF/%A8%CC%A6%E6%ACF%B0%CF%A7O%ACd%B8%DF/%A4H%A4f%A6%A8%AA%F8/&amp;lang=9&amp;strList=L'/>大高雄市</a>（2011）、前高雄市（缺）前高雄縣（缺）屏東縣</li><ul class="comment"><li>高雄市不像台南、台中有改制前後，直接跳到</li></ul>
+</ul>
+<ul><li>花東</li>
+<li>離島</li></ul>
 </ul>
 
-<p>縣市主管機關：民政局 or 民政處</p><p></p></body>
+<undefined><li>縣市主管機關：民政局 or 民政處 -&gt; 主計處</li></undefined>
+
+<p>彰化縣主計處</p><ul><li><a href='http://www.chcg.gov.tw/accounting/07static/static01.asp?cate_id=26'/>各鄉鎮市村里鄰戶口數</a>：鄉鎮市 - 月 - xls - 2001&nbsp;</li></ul>
+
+<p></p></body>
 </html>
