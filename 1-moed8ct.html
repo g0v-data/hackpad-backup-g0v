@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1361"/>
+<meta name="version" content="1638"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$1-moed8ct</title>
 </head>
 <body><h1>1 月萌典松: moed8ct</h1><p></p><p>時間：1/18 11am-9pm（歡迎遲到早退）</p><p>地點：<a href='http://bookshow.tw/traffic/'/>Bookshow.tw</a> 基隆路一段 141 號 6 樓之 7（捷運市政府站步行三分鐘）</p><p>名額：35 人（<a href='http://g0v-tw.kktix.cc/events/moedict-1-18'/>報名頁面</a>）</p><p>內容：比照<a href='https://g0v.hackpad.com/8-moed5ct'/>前七次萌典松</a> ，採「併松」模式舉行，歡迎 g0v 各大小專案加<b><u>萌</u></b>參加。</p><p>費用：採量力而捐、自由贊助方式。如有剩餘，捐給下次黑客松。</p><p>直播：<a href="https://www.youtube.com/watch?v=IZrsVQSL0ds"></a>https://www.youtube.com/watch?v=IZrsVQSL0ds</p><p>活動守則：<a href="https://g0v.io/coc"></a><a href='https://g0v.io/coc'/>https://g0v.io/coc</a></p><p></p><p>流程：</p><ul><li>11:30 專案、想法簡報介紹</li>
@@ -14,13 +14,19 @@
 <li>17:30 hack, eat, hack</li>
 <li>19:30 第二次成果報告</li></ul>
 
-<p><b>萌典相關開發項目</b></p><ul><li>環境建置：加速 make offline 的時間<ul><li>做了</li></ul>
+<p><b>萌典相關開發項目</b></p><ul><li>環境建置：加速 make offline 的時間<ul><li>接著 ly 的進度做好了 (572479f0)</li></ul>
 </li>
-<li>環境建置：以阿美語 moedict-app 為例<ul><li>miaoski + au 做了初步，在 docker hub miaoski/moedict_amis 繼續努力</li></ul>
+<li>環境建置：以阿美語 moedict-app 為例<ul><li>miaoski + au 做了初步，在 docker hub miaoski/moedict_amis 繼續努力</li>
+<li>目前的 apk (with new icon) 在 <a href="http://audreyt.org/newdict/amis-20150118.apk"></a>http://audreyt.org/newdict/amis-20150118.apk</li></ul>
 </li>
-<li>合併 webpack branch，加上新的筆順動畫系統<ul><li>由 ly 遠端完成!</li></ul>
-</li>
-<li><a href='/moed7ct-taigi-neologism'/>新台語運動</a>雛形開發（也許先做靜態的 <a href='https://moqups.com/liz462/IMYHBVi5'/>mockup</a>，再整合到萌典界面中）<ul><li>pm5 接坑畫坑形中</li></ul>
+<li>合併 webpack branch，加上新的筆順動畫系統<ul><li>由 ly 遠端完成!<ul><li>react-zh-stroker 已加入 deps （尚未進入 view.ls/main.ls）</li></ul>
+<ul class="comment"><li>working on it XD</li></ul>
+</ul>
+</ul>
+<ul><li><a href='/moed7ct-taigi-neologism'/>新台語</a></li>
+<li><br/></li>
+<li><a href='/moed7ct-taigi-neologism'/>運動</a>雛形開發（也許先做靜態的 <a href='https://moqups.com/liz462/IMYHBVi5'/>mockup</a>，再整合到萌典界面中）<ul><li>pm5 接坑，畫坑形中</li>
+<li>相關的：查不到詞時，跳入「建立新詞」界面</li></ul>
 </ul>
 
 <p><b>短講</b></p><ul><li>談談「·」間隔號（董福興）<a href='http://lists.w3.org/Archives/Public/public-zhreq/2014Dec/'/>zh-req上的討論</a></li></ul>
@@ -58,7 +64,9 @@
 <li>新的講法可以寫「我要提供講法」，可以錄音把聲音放上去，再轉寫成台羅</li>
 <li>需要：UI、UX、Mockup</li></ul>
 
-<p>13:37 短講時間</p><p>bobbytung &gt; 談談「·」間隔號（董福興）<a href='http://lists.w3.org/Archives/Public/public-zhreq/2014Dec/'/>zh-req上的討論</a></p><p></p><p>17:05 成果報告</p><p>tkirby&gt; 空難事件整理進度到達 30%，視覺化成果良好，其他打算下次大松繼續集氣</p><p>au&gt; 阿美族萌典 Android Build 成功，但是 App 圖示不知道要放什麼... 之前用的單字圖示，「阿」好像是阿拉伯語，「美」好像是美語... 徵求設計想法</p><p>&nbsp;How about the first picture on wikipedia?&nbsp;</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_1-moed8ct_p.66041_1421575906423_undefined'/></p><p>&nbsp;<a href="http://zh.m.wikipedia.org/wiki/File:Amis_Alofo_Pattern.svg"></a>http://zh.m.wikipedia.org/wiki/File:Amis_Alofo_Pattern.svg</p><ul class="comment"><li>小圖 (32x32) 好像會有點糊... 或是取中間的八卦部份？</li></ul>
+<p>13:37 短講時間</p><p>bobbytung &gt; 談談「·」間隔號（董福興）<a href='http://lists.w3.org/Archives/Public/public-zhreq/2014Dec/'/>zh-req上的討論</a></p><p></p><p>17:05 成果報告</p><p>tkirby&gt; 空難事件整理進度到達 30%，視覺化成果良好，其他打算下次大松繼續集氣</p><p>au&gt; 阿美族萌典 Android Build 成功，但是 App 圖示不知道要放什麼... 之前用的單字圖示，「阿」好像是阿拉伯語，「美」好像是美語... 徵求設計想法</p><p>&nbsp;How about the first picture on wikipedia?&nbsp;</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_1-moed8ct_p.66041_1421575906423_undefined'/></p><p>&nbsp;<a href="http://zh.m.wikipedia.org/wiki/File:Amis_Alofo_Pattern.svg"></a>http://zh.m.wikipedia.org/wiki/File:Amis_Alofo_Pattern.svg</p><ul class="comment"><li>小圖 (32x32) 好像會有點糊... 或是取中間的八卦部份？ Demo:</li></ul>
 
-<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_1-moed8ct_p.41199_1421576343652_螢幕快照 2015-01-18 下午6.18.50.png'/></p><p></p></body>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_1-moed8ct_p.41199_1421579308153_螢幕快照 2015-01-18 下午7.07.59.png'/></p><p></p><p>19:35 成果報告 #2</p><p>au&gt; gugod 新寫的拼音輸入在 mobile app context 的 demo（iOS/Android 即將更新）、阿美語 app 的新 icon，以及新 merge 的 webpack hot module replacement。</p><p>mrorz&gt; <a href='https://github.com/g0v/PPT'/>PPT 政治承諾追蹤網</a> 從靜態 mockup 變成 isomorphic loopback flux react app 了（而且也有 webpack hot module replacement!）</p><ul class="comment"><li>收播+晚餐，感謝大家~</li></ul>
+
+</body>
 </html>
