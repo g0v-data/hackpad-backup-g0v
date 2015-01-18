@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="661"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$xqnTZmdXJW5</title>
+</head>
+<body><h1>台灣人口統計資料整理</h1><p>kirby 提議的坑</p><p></p><p>目標：人口是常用資料，希望蒐集歷史 / 即時人口統計數據，行政區愈細愈好</p><ol><li>放上 data.g0v.tw 作為其他專案的基礎建設或參考資料</li>
+<li>希望做成台灣人口時空變化的視覺化圖表</li></ol>
+
+<p>todos</p><ol><li>先清點目前政府已提供資料</li>
+<li>詢問 data.gov.tw 或要求地方政府提供資料</li></ol>
+
+<h2>政府已提供</h2><ul class="comment"><li>註明：最小區劃 - 資料統計頻率 - 檔案格式 - 歷史區間</li></ul>
+<p><b>中央</b></p><p>內政部人口資料庫 <a href="http://www.ris.gov.tw/zh_TW/346"></a>http://www.ris.gov.tw/zh_TW/346</p><ul><li>全國 - 年度 - xls - since 1946：01 村里鄰戶數及人口數(35)</li></ul>
+<ul class="comment"><li>人口數是 ** <b>全國 **</b></li></ul>
+<ul><li>全國 - 單月 - xls - 近三年：01 戶籍人口統計速報&nbsp;</li>
+<li>縣市 - 年度 - xls - since 1974：01 縣市人口按性別及五齡組(63)</li>
+<li>區市鄉鎮 - 單月 - xls - 近一年：03 鄉鎮戶數及人口數&nbsp;</li></ul>
+
+<p>內政資料開放平台 <a href="http://data.moi.gov.tw/MoiOD/Data/DataDetail.aspx?oid=F4478CE5-7A72-4B14-B91A-F4701758328F"></a>http://data.moi.gov.tw/MoiOD/Data/DataDetail.aspx?oid=F4478CE5-7A72-4B14-B91A-F4701758328F</p><ul><li>村里 - 單月 - xls - 近一年</li></ul>
+
+<p>行政院主計處 - PC-Axis 總體統計資料庫 - 人口統計資料夾</p><p><a href="http://ebas1.ebas.gov.tw/pxweb/Dialog/statfile9L.asp"></a>http://ebas1.ebas.gov.tw/pxweb/Dialog/statfile9L.asp</p><ul><li>全國 - 年月 - web 表格 - since 2001</li></ul>
+
+<p><b>地方</b></p><p>行政院主計處 - 縣市政府統計資料庫 -&gt; 點選各縣市</p><p><a href="http://ebas1.ebas.gov.tw/pxweb/Dialog/statfile9.asp"></a>http://ebas1.ebas.gov.tw/pxweb/Dialog/statfile9.asp</p><ul><li>縣市 -&nbsp; 年度 - web 表格 / xls / PC-Axis - since 1968（缺竹縣、苗栗、屏東、花蓮、澎湖）<ul><li><a href='http://163.29.37.101/pxweb2007-tp/Dialog/varval.asp?ma=PP00016YA&amp;ti=%A4H%A4f%A1B%B1K%AB%D7%A4%CE%A9%CA%A4%F1%A8%D2&amp;path=/PXfile/CountyStatistics&amp;lang=9&amp;strList=L'/>台北市</a>（since 1968）<a href='http://ebas1.ebas.gov.tw/pxweb2007P/Dialog/varval.asp?ma=Po0201A1A&amp;ti=%B2{%A6%ED%A4%E1%BC%C6%A1B%A4H%A4f%B1K%AB%D7%A4%CE%A9%CA%A4%F1%A8%D2-%A6~&amp;path=../PXfile01/County01&amp;lang=9&amp;strList=L&amp;strCC=01'/>新北市</a>（1998）<a href='http://ebas1.ebas.gov.tw/pxweb2007P/Dialog/varval.asp?ma=Po0201A1A&amp;ti=%B0%F2%B6%A9%A5%AB%B2%CE%ADp%A6~%B3%F8(%A6~)&amp;path=../PXfile17/County17&amp;lang=9&amp;strList=L&amp;strCC=17'/>基隆市</a>（2003）</li>
+<li><a href='http://sta.nantou.gov.tw/pxweb/Dialog/varval.asp?ma=Po0101A1A&amp;ti=%B2{%A6%ED%A4%E1%BC%C6%A1B%A4H%A4f%B1K%AB%D7%A4%CE%A9%CA%A4%F1%A8%D2&amp;path=../PXfile/Nantou/Abstract/&amp;lang=9&amp;strList=L'/>南投縣</a>（1999）</li></ul>
+</li>
+<li>縣市 - 單月 - web 表格 / xls / PC-Axis<ul><li><a href='http://163.29.37.101/pxweb2007-tp/Dialog/varval.asp?ma=PP00002M&amp;ti=%A4g%A6a%A4H%A4f%B7%A7%AAp&amp;path=/PXfile/CountyStatistics&amp;lang=9&amp;strList=L'/>台北市</a>（since 1998）</li></ul>
+</li>
+<li>區市鄉鎮 - 年度 - web 表格 / xls / PC-Axis&nbsp;<ul><li><a href='http://163.29.37.101/pxweb2007-tp/Dialog/varval.asp?ma=PP00016DA&amp;ti=%A4H%A4f%A1B%B1K%AB%D7%A4%CE%A9%CA%A4%F1%A8%D2&amp;path=/PXfile/CountyStatistics&amp;lang=9&amp;strList=L'/>台北市</a>（since 1990）<a href='http://ebas1.ebas.gov.tw/pxweb2007P/Dialog/varval.asp?ma=Po0201A1A&amp;ti=%B2{%A6%ED%A4%E1%BC%C6%A1B%A4H%A4f%B1K%AB%D7%A4%CE%A9%CA%A4%F1%A8%D2-%A6~&amp;path=../PXfile01/County01&amp;lang=9&amp;strList=L&amp;strCC=01'/>新北市</a>（1998）<a href='http://ebas1.ebas.gov.tw/pxweb2007P/Dialog/varval.asp?ma=Po0201A1A&amp;ti=%B0%F2%B6%A9%A5%AB%B2%CE%ADp%A6~%B3%F8(%A6~)&amp;path=../PXfile17/County17&amp;lang=9&amp;strList=L&amp;strCC=17'/>基隆市</a>（2003）</li>
+<li><a href='http://sta.nantou.gov.tw/pxweb/Dialog/varval.asp?ma=Po0101A1A&amp;ti=%B2{%A6%ED%A4%E1%BC%C6%A1B%A4H%A4f%B1K%AB%D7%A4%CE%A9%CA%A4%F1%A8%D2&amp;path=../PXfile/Nantou/Abstract/&amp;lang=9&amp;strList=L'/>南投縣</a>（1999）</li></ul>
+</ul>
+
+<p>縣市主管機關：民政局 or 民政處</p><p></p></body>
+</html>
