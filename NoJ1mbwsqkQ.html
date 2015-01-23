@@ -3,57 +3,110 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="351"/>
+<meta name="version" content="1943"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$NoJ1mbwsqkQ</title>
 </head>
-<body><h1>Data-Centric Government 的二十大類資料</h1><p></p><p>狀態: DRAFT</p><p>授權: CC BY clkao &amp; g0v contributors (並授權與 TCA 以 CC BY-ND 發佈)，編輯前請簽名：</p><p>(這是 local.data 的後續報告，見<a href='/eDY68cTC3Hv#:h=前情提要'/>利益揭露</a>)</p><p></p><p>概略想法：Tier 0-2 偏政府本身及其運作，Tier 3-5 為偏民生相關，底層資料為政府運作基礎，越完整則上層的品質越容易好，因為有共通的語意定義。</p><p></p><p>希望每一大類找出三類關鍵資料，每類資料有三種細度</p><p></p><h2>政府與治理</h2><p></p><p><b>Tier 0: Rule of Law and Organization</b></p><p></p><ol><li>立法及法律 / Legislature<ol><li>現行法規</li>
-<li>修訂紀錄</li>
-<li>修法提案、進度</li></ol>
-</li>
-<li>政府架構 / Organization<ol><li>機關架構：機關基礎資訊、階層關係、法律依據與編制員額</li>
-<li>行政區劃分：基礎圖資、連續邊界、歷史圖資</li>
-<li>機關提供之服務（線上或實體）：服務內容及對象、</li></ol>
-</li>
-<li><br/></li></ol>
+<body><h1>Data-Centric Government 的二十大類資料</h1><p></p><p>狀態: DRAFT</p><p>授權: CC BY clkao &amp; g0v contributors (並授權與 TCA 以 CC BY-ND 發佈)</p><p><b>編輯前請同意及簽名</b>：clkao, yhsiang, Lucas</p><p></p><p>(這是 local.data 專案的後續報告，見<a href='/eDY68cTC3Hv#:h=前情提要'/>利益揭露</a>)</p><p></p><p><b>這是什麼？</b></p><p></p><p>Open Government 與 Smart City/Nation 的交集與基礎其實還是 Data，如果我們先忘掉現有政府架構，重新想像與打造一個 Data-Centric 的政府，然後讓這些 Data 都是 Open 的，每個環節都有 api 可以 read/write 或送 pull requests，那會是什麼樣貌？</p><p></p><p>先分為六個 Tier，Tier 0~2 較偏政府本身及其運作基礎，Tier 3~5 為偏民生相關。底層越完整，則上層資料的品質越容易提升與相互連結，因為有共通的語意定義。</p><p></p><p>希望每一大類找出<b>三類關鍵資料</b>，每類資料有<b>三種細度</b>，供檢視「是否有資料」及「是否為開放」等。每類資料可有簡單的 use case 供想像。</p><p></p><p>之後也可作為比 open data index 與 open data barometer 更細緻的普查項目。</p><p></p><p><b>討論</b></p><ul class="comment"><li>可直接在此討論，或上 irc: <a href="http://hack.g0v.tw/irc"></a>http://hack.g0v.tw/irc</li>
+<li>或用 <a href="http://join.g0v.today"></a>http://join.g0v.today</li></ul>
 
-<p><b>Tier 1: Accountability</b></p><p></p><ol><li>選舉及罷免 / Election and Reacll</li>
-<li>政治獻金與財產申報</li>
-<li>司法及判決<ol><li>檢查機關：</li>
-<li>法院：</li></ol>
-</li>
-<li>預決算與財政收支<ol><li>預算案、法定預算、決算</li>
-<li>實際支出明細</li>
-<li>收入統計</li></ol>
-</ol>
+<ul class="comment"><li>想問個問題，二十大類是隨便抓的嗎？還是怎麼算的</li>
+<li>就列一列差不多二十個，若變成質數可能更好 :P</li></ul>
 
-<p><b>Tier 2: Operations</b></p><p></p><ol><li>區域劃分及各項統計<ol><li>警、消、國教責任區域範圍</li>
-<li>土地區分與所有人：區分明細、變更紀錄、所有人紀錄</li>
-<li><br/></li></ol>
+<ul class="comment"><li>what&rsquo;s not covered?</li>
+<li>defense?</li>
+<li>各領域的研究單位數據與成果應該要算哪一類???</li>
+<li>教育與研究</li>
+<li>Tier 4: services 下的</li></ul>
+
+<ul class="comment"><li>政府不加密公文算哪一種類???</li>
+<li>應該可以算是公開資料要求 (FOI Request)</li></ul>
+
+<ul class="comment"><li>政府還有詳細的人口資料，要放在哪塊比較適合呢?</li></ul>
+
+<p></p><h2>政府與治理</h2><p></p><p><b>Tier 0: Rule of Law and Organization</b></p><p></p><ol><li><b>立法及法律 / Legislature</b><ol><li>現行法規：條文、結構化條文、引用依據之連結</li>
+<li>修訂紀錄：版本明細、修訂相關文書或會議影音、</li>
+<li>修法提案及進度：提案內容與目前狀態、歷史狀態、相關會議影音</li></ol>
 </li>
-<li>法人基本資訊<ol><li>工商登記</li>
-<li>非營利事業與人民團體</li>
-<li>政府捐助法人</li></ol>
+<li><b>政府架構 / Organization</b><ol><li>機關架構：機關基礎資訊與階層關係、服務內容及對象、法律依據與編制員額</li>
+<li>行政區劃分：基礎編號與圖資、連續邊界圖資、歷史圖資</li>
+<li>人事：機關別年資及年齡、約聘僱（派遣人員、替代役男）比率、公務人員人事異動資料</li></ol>
 </li>
-<li>採購資訊與委外營運服務明細<ol><li>招標及開標</li>
-<li>委外營運服務：機關、營運單位、服務內容</li>
+<li><b>司法及判決 / Judicial and Verdicts</b><ol><li>檢查機關：偵查統計、起訴統計、起訴書</li>
+<li>法院：判決書、判刑與執行統計、結構化判決書</li>
 <li><br/></li></ol>
 </ol>
 
-<h2>服務與民生</h2><p></p><p><b>Tier 3: Safety</b></p><p></p><ol><li>各類公共檢查及違法事項公告</li>
-<li>犯罪與交通事故</li>
-<li>環境<ol><li>監測</li>
-<li>警示</li></ol>
+<p><b>Tier 1: Accountability</b></p><p></p><ol><li><b>選舉及罷免 / Election and Recall</b><ol><li>選舉概況：</li>
+<li>候選人：</li>
+<li>得票：</li></ol>
+</li>
+<li><b>預決算與財政收支 / Budget, Revenue and Spending</b><ol><li>預算案、法定預算、決算：依機關別項科目最細項別、依類別列、依專案計畫列</li>
+<li>實際支出明細：</li>
+<li>收入統計：各類罰金及規費統計（依地區、項目、金額）、各類稅收二十等分級距統計、各類稅收 1 % 及 0.1% 級距統計</li></ol>
+</li>
+<li><b>政風與課責 / Ethics and Accountability</b><ol><li>政治獻金 /&nbsp; Political Contributions: 單戶依類別統計、違法公告、單戶收支明細</li>
+<li>財產申報 / Asset Disclosures</li>
+<li>公務資料調閱紀錄與政府資訊公開要求 /</li></ol>
+<ul class="comment"><li>請問有範例嗎？這是哪種東西？</li>
+<li>希望是一種制度，民意代表或者是政府本身，可以明確知道有誰調閱過資料</li></ul>
 </ol>
 
-<p><b>Tier 4: Services</b></p><p></p><ol><li>醫療</li>
-<li>教育</li>
-<li>交通及大眾運輸</li>
-<li>1999</li></ol>
-
-<p><b>Tier 5: Economic Activities</b></p><p></p><ol><li>商業及各類執照<ol><li>需要執照或許可的行業及明細</li></ol>
+<p><b>Tier 2: Operations</b></p><p></p><ol><li><b>區域劃分及各項統計 / Zoning and Statistics</b><ol><li>基礎統計：人口結構、人口遷移（含移民與歸化）、</li>
+<li>警、消、國教責任區域範圍：人力員額及人口統計、人力員額及人口歷史變化、</li>
+<li>土地區分與所有人：區分明細、變更紀錄、所有人紀錄</li></ol>
 </li>
-<li>不動產資訊</li>
-<li>國際貿易</li></ol>
+<li><b>法人基本資訊 / Legal Entities</b><ol><li>工商登記 / Business and Factories：基本資料、董監事資料、基本資料及董監事歷史變動</li>
+<li>非營利事業與人民團體 / NPO and Associations：（除上外）財務報告、</li>
+<li>政府捐助法人或投資 / Government-sponsored entities or investments：（除上外）獨立董事歷史變動、</li></ol>
+</li>
+<li><b>採購資訊與委外營運服務明細 / Procurement&nbsp;</b><ol><li>政府採購：招標及開標結果資訊、</li>
+<li>委外營運服務（含 BOT）：機關及營運單位、服務內容、合約</li>
+<li><br/></li></ol>
+</ol>
+
+<p></p><h2>服務與民生</h2><p></p><p><b>Tier 3: Safety</b></p><p></p><ol><li><b>各類公共檢查及違法事項公告 / Inspections and Violations</b><ol><li>營業單位之各項檢查：統計、明細、結構化明細</li>
+<li>營業單位受行政處分公告：統計、明細、結構化明細</li>
+<li><br/></li></ol>
+</li>
+<li><b>犯罪與交通事故 / Crimes and Traffic Accidents</b><ol><li><br/></li></ol>
+</li>
+<li><b>環境 / Environment</b><ol><li>監測 / Sensing</li>
+<li>警示 / Alert</li>
+<li>災害現況</li></ol>
+</ol>
+
+<p><b>Tier 4: Services</b></p><p></p><ol><li><b>健康與醫療 / Health and Medical Care</b><ol><li>食品成分：添加物</li>
+<li>食品條碼：公司 (統編)、產地、內容物、熱量、添加物</li>
+<li>藥品成分：</li>
+<li>醫療資源：醫院門/急診資訊、</li></ol>
+</li>
+<li><b>教育與研究 / Education and Research</b><ol><li>十二年國教課綱：領域、年級、出版社、單元、內容文字、週次、教學活動、能力指標</li>
+<li>辭典/字典：</li>
+<li>國民教育：</li>
+<li>高等教育與研究：</li>
+<li>技職教育：</li>
+<li>產學合作：</li></ol>
+</li>
+<li><b>基礎建設 / Infrastructures</b><ol><li>網路 / Internet：carrier coverage, pricing.. .</li>
+<li>交通及大眾運輸 / Transportation</li>
+<li>水、能源 / Water and Energy</li>
+<li>地下管線 /(管線不一定在地下)</li>
+<li>公共工程(通常會涵蓋前述所有項目資料)/如大巨蛋/轉運站總量體/河濱公園/水利設施</li></ol>
+</li>
+<li><b>服務要求與陳情 / Service Requests and Petitions</b><ol><li>1999 / 311 回報統計：依區域及類別、處理時間、</li>
+<li><br/></li></ol>
+</ol>
+<p><b>Tier 5: Economic Activities</b></p><p></p><ol><li><b>生產、商業及各類執照 / Producing、Licenses</b><ol><li>需要執照或許可的行業及明細</li>
+<li>商標及所有者</li>
+<li>農業：統計、明細、結構化明細，包括銷售、拍賣金額、補助及農損補助金、歷年各類作物栽培面積、作物疫情的數據(主動、被動等各種監測、診斷鑑定資料)、農產品進出口歷年各品項詳細數據、農地各項統計(包含應用、歷年變更)、農業資材、藥劑各項資訊、科技研究可公開的各項研究成果、農業金融資料</li>
+<li><br/></li></ol>
+</li>
+<li><b>不動產與金融 / Real-estate and Finance</b><ol><li><br/></li></ol>
+</li>
+<li><b>國際貿易 / International Trades</b><ol><li>關務：統計、</li>
+<li>入出國：</li>
+<li>外國投資：</li></ol>
+</ol>
 
 </body>
 </html>
