@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="6167"/>
+<meta name="version" content="6196"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$h6fOoDAd9qZ</title>
 </head>
 <body><h1>義務律師陪偵平台</h1><p></p><h2>近日活動</h2><p>1/25(日) 10:00 - 18:00 <a href='http://g0vlawthon.kktix.cc/events/2abadbd7'/>第零次法律松</a>@民間司改會　<a href='https://drive.google.com/open?id=1koIls6ubIReXBGkO0l5-xzbdd9bKJe1WEEDEPb29thg&amp;authuser=0'/>簡報</a></p><p></p><p></p><h2>什麼是陪偵？ </h2><ul><li>一般抗議活動時往往會有抗議民眾被警方帶走偵訊，為維護這些抗議民眾的權益，司改會協調義務律師前往現場協助民眾面對偵查。往往是事件驅動，並隨著各種事件的大小而有不同程度的驅動量。</li>
@@ -49,12 +49,14 @@
 <ul style="list-style: none;"><li>M: 可以顯示律師的姓名,手機號碼,其他的不顯示~</li>
 <li><br/></li></ul style="list-style: none;">
 </li></ul>
-<h2>FLOW</h2><p><b>Client</b></p><ul style="list-style: none;"><li><b>request - (A)</b></li><ul><li>求救窗口</li>
+<h2>FLOW</h2><undefined><li><b>Client</b></li>
+<li><b>request - (A)</b></li><ul><li>求救窗口</li>
 <li>律師還未到場的注意事項（搜集現場證據）</li></ul>
-</ul>
-<ul style="list-style: none;"><li><b>have state - (N)</b></li><ul><li>簡訊回覆：XXX律師約於OO時間到達。若有問題，請致電（律師電話，及NGO號碼）。</li></ul>
-</ul>
-<p><b>Middleman</b></p><ul style="list-style: none;"><li><b>have(A) - (B)</b></li>
+</undefined>
+<undefined><li><b>have state - (N)</b></li><ul><li>簡訊回覆：XXX律師約於OO時間到達。若有問題，請致電（律師電話，及NGO號碼）。</li></ul>
+</undefined>
+<undefined><li><b>Middleman</b></li>
+<li><b>have(A) - (B)</b></li>
 <li><b>make sure (A) is ture - (C)</b></li>
 <li><b>register this event - (D)</b></li><ul><li>填表格-案主資料<ul><li>接案的NGO單位（下拉式選單-可以新增 NGO 單位）</li>
 <li>姓名</li>
@@ -63,20 +65,21 @@
 <li>案主地點：自由選填+縣市（下拉式選單）</li>
 <li>陪偵律師</li></ul>
 </ul>
-</ul>
-<ul style="list-style: none;"><li><b>connect with lawyer - (E)</b></li><ul><li>On-call 的律師清單<ul><li>姓名</li>
+</undefined>
+<undefined><li><b>connect with lawyer - (E)</b></li><ul><li>On-call 的律師清單<ul><li>姓名</li>
 <li>可陪偵地點</li>
 <li>手機</li>
 <li>是否是法扶律師</li></ul>
 </li>
 <li>E-mail</li></ul>
-</ul>
-<ul style="list-style: none;"><li><b>have(G) - (H)</b></li>
-<li><b>have candidate - (I)</b></li><ul><li>從陪偵清單上，得知案件處理狀況</li></ul>
-</ul>
-<ul style="list-style: none;"><li><b>sent Detail &amp; change state - (K)</b></li>
-<li><b>notify client - (M)</b></li></ul>
-<p><b>Laywer</b></p><ul style="list-style: none;"><li><b>get the request - (F)</b></li><ul><li>陪偵清單：<ul><li>timestap</li>
+</undefined>
+<undefined><li><b>have(G) - (H)</b></li>
+<li><b>have candidate - (I)</b></li><ul><li>從陪偵清單上，得知案件處理狀況</li><undefined><li><b>sent Detail &amp; change state - (K)</b><undefined><li><b>notify client - (M)</b></li></undefined>
+</li></undefined>
+</li></undefined>
+</li>
+<li><b>Laywer</b></li>
+<li><b>get the request - (F)</b></li><ul><li>陪偵清單：<ul><li>timestap</li>
 <li>接案的NGO單位（下拉式選單-可以新增 NGO 單位）</li>
 <li>案主資料<ul><li>姓名</li>
 <li>電話</li>
@@ -90,12 +93,12 @@
 </li>
 <li>認領案件（按鈕）</li></ul>
 </ul>
-</ul>
-<ul style="list-style: none;"><li><b>answer variable - (G)</b></li><ul><li>陪偵清單：回覆之後，顯示律師的名稱（或帳號）連結，內有聯繫資訊</li></ul>
-</ul>
-<ul style="list-style: none;"><li><b>get feedback - (J)</b></li>
-<li><b>get detail - (L)</b></li>
-<li><br/></li></ul style="list-style: none;">
+</undefined>
+<undefined><li><b>answer variable - (G)</b></li><ul><li>陪偵清單：回覆之後，顯示律師的名稱（或帳號）連結，內有聯繫資訊</li></ul>
+</undefined>
+<undefined><li><b>get feedback - (J)</b><undefined><li><b>get detail - (L)</b></li></undefined>
+</undefined>
+<ul style="list-style: none;"><li><br/></li></ul style="list-style: none;">
 <h2>Web 欄位資料-主要 user</h2><p><b>NGO</b></p><p>（目前暫以司改會為主，將來希望能有更多NGOs加入）</p><ul><li>接到電話，確認訊息正確性</li>
 <li>登入帳號密碼</li>
 <li>填表格-案主資料<ul><li>接案的NGO單位（下拉式選單-可以新增 NGO 單位）</li>
@@ -344,7 +347,7 @@
 <li>epic: 身分認證和權限</li></ul>
 </ul>
 
-<h2>法扶檢警中心（初討論）</h2><p><b>現況及未來可能發展</b></p><ol><li>律師駐點（警局排班）<ol><li>一警局（或地檢署）一律師值班</li>
+<h2>法扶檢警中心（初討論）：第零次法律松</h2><p><b>現況及未來可能發展</b></p><ol><li>律師駐點（警局排班）<ol><li>一警局（或地檢署）一律師值班</li>
 <li>討論中</li>
 <li>會先找試辦警局</li>
 <li>可能狀況：當有多位當事人時，律師仍不足</li></ol>
@@ -354,7 +357,7 @@
 <li>多分會的整合<ol><li>警局會依轄區找到相應的法扶</li></ol>
 </ol>
 
-<p><b>陪偵平台</b></p><ol><li>警局或當事人自行上網登檔<ol><li>申請人<ol><li>重罪（下拉式選單）</li>
+<p><b>法扶陪偵平台</b></p><ol><li>警局或當事人自行上網登檔<ol><li>申請人<ol><li>重罪（下拉式選單）</li>
 <li>原住民<ol><li>警員有時會刻意誤導當事人：「法扶不用錢但律師要錢」，使當事人簽放棄委任律師</li>
 <li>也許可要求切結書有固定內容或格式，否則該切結書無效（修刑訴）</li></ol>
 </li>
