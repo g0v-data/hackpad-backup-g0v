@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="5706"/>
+<meta name="version" content="5982"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$h6fOoDAd9qZ</title>
 </head>
 <body><h1>義務律師陪偵平台</h1><p></p><h2>近日活動</h2><p>1/25(日) 10:00 - 18:00 <a href='http://g0vlawthon.kktix.cc/events/2abadbd7'/>第零次法律松</a>@民間司改會　<a href='https://drive.google.com/open?id=1koIls6ubIReXBGkO0l5-xzbdd9bKJe1WEEDEPb29thg&amp;authuser=0'/>簡報</a></p><p></p><p></p><h2>什麼是陪偵？ </h2><ul><li>一般抗議活動時往往會有抗議民眾被警方帶走偵訊，為維護這些抗議民眾的權益，司改會協調義務律師前往現場協助民眾面對偵查。往往是事件驅動，並隨著各種事件的大小而有不同程度的驅動量。</li>
@@ -85,7 +85,7 @@
 </li>
 <li>案件處理的狀況<ul><li>未認領</li>
 <li>已認領</li>
-<li>已到場</li>
+<li>已到場（系統自掀到場時間）</li>
 <li>已結束</li></ul>
 </li>
 <li>認領案件（按鈕）</li></ul>
@@ -128,11 +128,16 @@
 <li>個人設定<ul><li>可以控制自己線上／線下的狀況</li>
 <li>修改資料</li></ul>
 </li>
-<li>被推播通知新案件成立（最好可以是所在地的案件）</li>
+<li>被推播通知新案件成立（最好可以是所在地的案件）<ul><li>on call才通知？</li>
+<li>全部都通知（建議皆通知，就先前經驗主動的律師較少眾）</li></ul>
+</li>
 <li>陪偵清單：案主資料+案件處理的狀況+認領案件（按鈕）</li>
 <li>On-call 的律師清單</li></ul>
 <p><b>案主</b></p><ul><li>求救電話的清單</li>
-<li>律師還未到場的注意事項（搜集現場證據）</li></ul>
+<li>律師還未到場的注意事項（搜集現場證據）</li>
+<li>公民不服從手冊</li>
+<li>小市民權益99招</li>
+<li>可自行key檔（組織者確認後訊息post上平台）</li></ul>
 
 <h2>User Story</h2><p>王小明是一個關心社會議題的年輕人，今天他為了反自由貿易經濟區，再次走上街頭。在捷運上，他先點開最近安裝的 App 「律師陪偵平台」，閱讀「若被逮捕」的注意事項。</p><p></p><p>到達目的地後，沒想到警察忽然強制驅離，王小明在混亂中被壓制在地逮捕，並被帶到中正一分局，過程中他的手機摔壞了。一旁的朋友陳大福看到，馬上拿出手機也點開「律師陪偵平台」App，點進「通報案件」，從提供法律協助的 NGO 清單中，隨便挑一個打電話。</p><p></p><p>Miffy：「喂，司改會，您好」</p><p>陳大福：「你好，我的朋友王小明被逮捕了，請問有律師可以協助嗎？」</p><p>Miffy：「好的，請先提供一下你朋友的資料。請問他的姓名？手機？目前所在的派出所？被逮捕的案由？您的電話？接下來我們會聯繫律師，大約需要 XX 分鐘，結束後會以簡訊傳送處理結果，你也可以再打電話過來確認。」</p><p></p><p>Miffy 打開「律師陪偵平台」網頁版，登入之後，把剛剛的通報資料key-in。接著，打開陪偵清單，確認一下剛剛通報的案件內容。接著，等待大約 10 分鐘，看看陪偵清單上的案件狀態，是否有律師認領；或是主動聯繫on call的律師。</p><p></p><p>正在永康街家中的律師曾小凱，手機螢幕顯示了有中正一分局的案件通報，他馬上打開 App，看見有人因為違反社會秩序而被拘留于中正一分局，於是按下「認領案件」按鈕，並且馬上打電話到中正一分局，與王小明聯絡。</p><p></p><h2>USE CASES</h2><ul><li>操作<a href='https://moqups.com/miffy.dandelion@gmail.com/o1gI6Iyb/'/>網頁版介面</a>可以做的事情：<ul><li>關於 NGO:<ul><li>新增NGO</li>
 <li>新增使用者到某一NGO下 (初期可能使用者和NGO是一對一關係)</li></ul>
@@ -345,5 +350,32 @@
 <li>epic: 身分認證和權限</li></ul>
 </ul>
 
-<h2>法扶陪偵狀況</h2><p></p><p></p><p></p><p></p><p></p></body>
+<h2>法扶陪偵問題</h2><p><b>法扶檢警中心（初討論）</b></p><ol><li>一個地院一個分會</li>
+<li>多分會的整合<ol><li>警局會依轄區找到相應的法扶</li></ol>
+</li>
+<li>警局或當事人自行上網登檔<ol><li>申請人<ol><li>重罪（下拉式選單）</li>
+<li>原住民</li>
+<li>身心障礙者（無法陳述者）<ol><li>可備註特殊需求</li></ol>
+</li></ol>
+</li></ol>
+</li>
+<li>律師自行上網排班<ol><li>工作人員可修改</li></ol>
+</li>
+<li>推播律師分優先次序<ol><li>輪值律師</li>
+<li>備班律師</li>
+<li>相近時間排班律師<ol><li>當班±1天的輪值及備班律師</li></ol>
+</li></ol>
+</li>
+<li>系統抓律師出發時間回家時間<ol><li>未來可發展自動計算律師預計到達時間（Uber）</li></ol>
+</li>
+<li>45分鐘內律師必須到（原住民等距離較遠者4小時）</li>
+<li>律師回報<ol><li>已出發</li>
+<li>已到達</li>
+<li>陪偵結束</li>
+<li>已回家</li></ol>
+</li>
+<li>與法扶內部資訊系統連接</li>
+<li>付費問題</li></ol>
+
+<p></p><p></p><p></p></body>
 </html>
