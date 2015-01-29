@@ -3,10 +3,10 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="4414"/>
+<meta name="version" content="4445"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$OoaenzjVDKK</title>
 </head>
-<body><h1>透析貪污判決--揭露與查詢網站</h1><p>(暫名,尚缺副標)</p><p>The Disclosure of Corruption Judgement,&nbsp; the Web</p><p>可能網址：blackmoney.g0v.tw 歡迎各種建議</p><p>POREN：uncover.g0v.tw 之類的，感覺很有特務風XD</p><p></p><p><b>近日活動</b></p><p>1/25(日) 10:00 - 18:00 <a href='/--jS8mZtWlSWo'/>第零次法律松</a></p><p>歡迎對專案有興趣者一同參與！！</p><p>小摘要:</p><p></p><p>淵智繼續資料爬梳 , 孟勳 製作網站</p><p>司改會: 中豪大哥提議了資料分析的建議 ;</p><p>宜珊律師 &amp; 執秘 林瑋婷給了實務上關於貪汙案件的實況、</p><p>以及法官量刑尺度的不同 , 是未來司改會關心的爭點之一。</p><p>技術端:</p><p>甯格致 ( <a href='https://www.facebook.com/keith.ning.16'/>Keith Ning</a> ) 關於社會網路分析可以提供協助 ;</p><p><a href='https://www.facebook.com/ntuaha'/>林鉦育</a> 提供資料分析建議 ;</p><p>郭俊儀 : 後台協助</p><p>姜柏任 ( <a href='https://www.facebook.com/RenRenChiang'/>Poren Chiang</a> ) 寫完轉換器</p><p></p><h2>緣起</h2><ul><li>貪污是個表面上看起來沒什麼，實際上會對社會造成侵蝕的嚴重病灶</li>
+<body><h1>透析貪污判決--揭露與查詢網站</h1><p>(暫名,尚缺副標)</p><p>The Disclosure of Corruption Judgement,&nbsp; the Web</p><p>可能網址：blackmoney.g0v.tw 歡迎各種建議</p><p>POREN：uncover.g0v.tw 之類的，感覺很有特務風XD</p><p></p><p></p><p></p><h2>緣起</h2><ul><li>貪污是個表面上看起來沒什麼，實際上會對社會造成侵蝕的嚴重病灶</li>
 <li>有些人會講「水至清則無魚」、「無能比貪污更要不得」，但通常例子是官員收錢所以開始選擇性做事，有益人民的事情不作為，變成「無能」</li>
 <li>但是貪污不好查，接著想到有貪污法案，法院有判決書，也許可以從判決書切入</li>
 <li>然後發現判決書落落長，動輒數百頁，如果可以用簡單方式呈現那不就太好了嗎！</li></ul>
@@ -134,8 +134,9 @@
 <ul class="comment"><li><a href='https://github.com/superChing/extract_declared_sentence'/>code</a>&nbsp; Brief:做的事是把表格cell抽出來再用regular expression找宣告刑。table九成可以抽取cell內容。但宣告刑recall我猜不高，這需要sample評估多少沒抓出來。</li>
 <li>稍微回應一下，「&rsquo;禠&rsquo;!=&rsquo;褫&rsquo;」如果仔細看的話，一個是一點，一個是兩點。判決書有不少像這種差一點的（機歪）錯別字</li></ul>
 <ul class="task"><li>抓取法官欄位</li>
-<li>抓取金額 / 國字轉數字</li>
-<li>查詢被告政黨屬性</li></ul>
+<li>抓取涉貪金額&nbsp;</li></ul>
+<ul class="taskdone"><li>國字轉數字</li></ul>
+<ul class="task"><li>查詢被告政黨屬性</li></ul>
 <p>------</p><ul class="task"><li>處理高院/最高法院判決書</li>
 <li>製作與線上判決書同步更新的程式</li>
 <li>增加判決書涵蓋範圍（詐欺/圖利/財產不明/登載不實/背信）</li></ul>
@@ -155,7 +156,17 @@
 <p>判決書欄位（第一段），欄位（檔名/字號/時間/法院/檢察官起訴案由/被告數/被告名單）：<a href='https://docs.google.com/spreadsheets/d/1vufl16kKVJIMNLO-WMA-U_8GbuX-JjuGuoRkHwGBjbw/edit?usp=sharing'/>google試算表</a></p><p>判決書欄位（第二段部份），欄位（檔名/被告/罪名/是否易科罰金/罰金/緩刑）：<a href='https://drive.google.com/open?id=1T3d2yLHVfFcFBiRrGIKKN9ZcAOq2nQ03WMzppAmkTys&amp;authuser=0'/>google試算表</a></p><p>註1：covered指主文中被告匿名，無法確認哪位是哪位</p><p>註2：need check目前剩下未列入主文的代理人或公司，還有名字英文三種</p><p><a href='https://github.com/nt90561/get_attribute'/>原始碼</a> by 淵智（python2）</p><p></p><p>讀取判決書內的表格（python3） by 煒清</p><p><a href="https://github.com/superChing/extract_declared_sentence"></a>https://github.com/superChing/extract_declared_sentence</p><p></p><p>從判決書拿出字號、日期、案由、被告 by csferng（過期）</p><p><a href="https://github.com/csferng/AnalyzeVerdict"></a><a href='https://github.com/csferng/AnalyzeVerdict'/>https://github.com/csferng/AnalyzeVerdict</a></p><p></p><p>中文字大寫轉換（Python 3）</p><p><a href="https://github.com/rschiang/py-conv-digit"></a>https://github.com/rschiang/py-conv-digit</p><p></p><h2>需求&其他相關</h2><undefined><li><b>如果要顯示判決書稀少字</b></li></undefined>
 <p>司法院對於非big5編碼的字會用造字的方式處理，並提供下載：</p><p><a href="http://www.judicial.gov.tw/download/download01.asp#D01"></a><a href='http://www.judicial.gov.tw/download/download01.asp#D01'/>http://www.judicial.gov.tw/download/download01.asp#D01</a></p><p>我自己使用的經驗，確實有些字因此顯示，但還是不全</p><p></p><undefined><li><b>相關連結</b></li></undefined>
 <p><a href='https://www.facebook.com/peng.jodie/posts/745066935582339'/>FB貼文：中國國民黨政權涉及回扣貪汙一覽表(一)~(四)</a></p><p><a href='http://www.appledaily.com.tw/appledaily/article/headline/20141119/36216158/%E5%8F%B8%E9%A6%AC%E8%A7%80%E9%BB%9E%EF%BC%9A%E5%BD%B0%E5%8C%96%E9%80%99%E4%B8%80%E6%88%B0%E5%BE%88%E9%97%9C%E9%8D%B5%EF%BC%88%E6%B1%9F%E6%98%A5%E7%94%B7%EF%BC%89'/>蘋論：彰化這一戰很關鍵</a></p><p>FB貼文：<a href='https://www.facebook.com/foreign.currency.trade/posts/10204589903174787?fref=nf'/>國民黨未來對台灣危害最大的將是朱立倫，他是馬英九加強版。</a></p><p>八卦版文章：<a href='http://disp.cc/b/163-7SjF'/>中國黨貪污一覽表</a></p><p>研究文獻：中研院政治所吳重禮：Chung-li Wu. Charge Me if You Can: Assessing Political Biases in Votebuying Verdicts in Democratic Taiwan (2000–2010). The China Quarterly, Available on CJO 2012 doi:10.1017/S0305741012000847&nbsp; 中文版：<a href="http://newsletter.sinica.edu.tw/file/file/77/7792.pdf"></a>http://newsletter.sinica.edu.tw/file/file/77/7792.pdf&nbsp;</p><p></p><p></p><undefined><li><b>相關專案</b></li></undefined>
-<p><a href='/aco0Hxp4IEz'/>中文處理工具簡介</a></p><p><a href='/ucTpAApiE7G'/>議員判刑資料</a></p><p><a href='/GuanXi--5gygVb26WId'/>政商透明化</a></p><p></p><p></p><p>我們歡迎下列各種夥伴：</p><ol><li>對判決書閱讀熟悉敏銳</li>
+<p><a href='/aco0Hxp4IEz'/>中文處理工具簡介</a></p><p><a href='/ucTpAApiE7G'/>議員判刑資料</a></p><p><a href='/GuanXi--5gygVb26WId'/>政商透明化</a></p><p></p><undefined><li><b>參與活動</b></li></undefined>
+<p>1/25(日) 10:00 - 18:00 <a href='https://g0v.hackpad.com/--jS8mZtWlSWo'/>第零次法律松</a></p><p>當天活動摘要：</p><ul><li>淵智繼續資料爬梳 , 孟勳 製作網站</li>
+<li>司改會: 中豪大哥提議了資料分析的建議 ;</li>
+<li>宜珊律師 &amp; 執秘 林瑋婷給了實務上關於貪汙案件的實況、</li>
+<li>以及法官量刑尺度的不同 , 是未來司改會關心的爭點之一。</li></ul>
+<p>&nbsp;&nbsp;&nbsp; 技術端:</p><ul><li>甯格致 ( <a href='https://www.facebook.com/keith.ning.16'/>Keith Ning</a> ) 關於社會網路分析可以提供協助 ;</li>
+<li><a href='https://www.facebook.com/ntuaha'/>林鉦育</a> 提供資料分析建議 ;</li>
+<li>郭俊儀 : 後台協助</li>
+<li>姜柏任 ( <a href='https://www.facebook.com/RenRenChiang'/>Poren Chiang</a> ) 寫完轉換器</li></ul>
+
+<p></p><p>我們歡迎下列各種夥伴：</p><ol><li>對判決書閱讀熟悉敏銳</li>
 <li>自然語言處理高手</li>
 <li>對網站提供內容有想法</li>
 <li>對貪腐、貪污、官商勾結等相關議題有興趣</li></ol>
