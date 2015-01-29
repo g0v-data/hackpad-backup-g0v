@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="4595"/>
+<meta name="version" content="4618"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$moed7ct-taigi-neologism</title>
 </head>
 <body><h1>新台語·運動</h1><p>( <a href='/11-moed7ct'/>11 moed7ct </a>)</p><p>Liz報告：<a href="https://speakerdeck.com/audreyt/liz-lin-xin-tai-yu-yun-dong"></a>https://speakerdeck.com/audreyt/liz-lin-xin-tai-yu-yun-dong</p><p></p><p></p><h2>專案目的</h2><p>大家一起說台語</p><ul><li>年輕人失去說台語的動力與能力</li>
@@ -32,7 +32,7 @@
 <li>放進去的測試資料只有「要 XX」所以請查這些詞就好 XD</li>
 <li>然後我想先做一個首頁 <a href='https://github.com/g0v/taigi/issues/1'/>g0v/taigi#1</a></li>
 <li>還有弄得好看一點</li></ul>
-<p>測試版的 mockup 目前放在<a href='http://g0v.github.io/taigi/#/'/> </a><a href="http://g0v.github.io/taigi/#/"></a>http://g0v.github.io/taigi/#/</p><p></p><p><b>查詢→求詞</b></p><ul class="comment"><li>這個其實是我們TMUSE的 好use-case</li></ul>
+<p>測試版的 mockup 目前放在<a href='http://g0v.github.io/taigi/#/'/> </a><a href="http://g0v.github.io/taigi/#/"></a>http://g0v.github.io/taigi/#/</p><p></p><p></p><p><b>查詢→求詞</b></p><ul class="comment"><li>這個其實是我們TMUSE的 好use-case</li></ul>
 <ul><li>輸入華語，可查詢到對應的台語講法，包括漢字、音標、音檔</li>
 <li>不限詞彙，也可一定限度容納熟語甚至短句</li></ul>
 <ul class="task"><li>同意（反正沒有人知道「詞」是什麼，跟我論文我關的問題XD）</li></ul>
@@ -103,8 +103,11 @@
 <p>有關資料庫形式</p><ul class="comment"><li>後端的資料會長怎樣？兩個詞彙之間不會完美對應，可能會有多對多的情況？</li>
 <li>今天給的資料庫形式：<a href="https://drive.google.com/open?id=0B_erUWNn_L9WbW5WTTJ6bzJiT00&authuser=0"></a>https://drive.google.com/open?id=0B_erUWNn_L9WbW5WTTJ6bzJiT00&amp;authuser=0</li>
 <li>資料庫會全部做成一對一，所以在華語那一欄，會有多筆重複的。我會先把手邊的兩個資料庫做成以上這個資料庫的形式，如果我搞不定再請大家幫忙</li></ul>
+<p>資料庫要做的：</p><ul><li>整併</li>
+<li>抓錯</li>
+<li>臺羅調號轉調符</li></ul>
 
-<h2>Users Stories</h2><ul class="comment"><li>我的瞭解：</li>
+<p>輸入的關鍵詞，部分符合的結果太多，會太不精確。（要再想）</p><p></p><p></p><h2>Users Stories</h2><ul class="comment"><li>我的瞭解：</li>
 <li><br/></li></ul>
 <ol><li>XXX 用臺語怎麼說？</li>
 <li>不知者A上平臺收訊。找不到可以加「請教條」<ol><li>先看詞典，翻譯，近義詞</li>
