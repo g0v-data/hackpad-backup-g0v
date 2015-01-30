@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2464"/>
+<meta name="version" content="2596"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$NoJ1mbwsqkQ</title>
 </head>
 <body><h1>Data-Centric Government 的二十大類資料</h1><p></p><p>狀態: DRAFT</p><p>授權: CC BY clkao &amp; g0v contributors (並授權與 TCA 以 CC BY-ND 發佈)</p><p><b>編輯前請同意及簽名</b>：clkao, yhsiang, Lucas, chewei, pm5 . a0kman</p><p></p><p>(這是 local.data 專案的後續報告，見<a href='/eDY68cTC3Hv#:h=前情提要'/>利益揭露</a>)</p><p></p><p><b>這是什麼？</b></p><p></p><p>Open Government 與 Smart City/Nation 的交集與基礎其實還是 Data，如果我們先忘掉現有政府架構，重新想像與打造一個 Data-Centric 的政府，然後讓這些 Data 都是 Open 的，每個環節都有 api 可以 read/write 或送 pull requests，那會是什麼樣貌？</p><p></p><p>先分為六個 Tier，Tier 0~2 較偏政府本身及其運作基礎，Tier 3~5 為偏民生相關。底層越完整，則上層資料的品質越容易提升與相互連結，因為有共通的語意定義。</p><p></p><p>希望每一大類找出<b>三類關鍵資料</b>，每類資料有<b>三種細度</b>，供檢視「是否有資料」及「是否為開放」等。每類資料可有簡單的 use case 供想像。</p><p></p><p>之後也可作為比 open data index 與 open data barometer 更細緻的普查項目。</p><p></p><p><b>討論</b></p><ul class="comment"><li>可直接在此討論，或上 irc: <a href="http://hack.g0v.tw/irc"></a>http://hack.g0v.tw/irc 或用 <a href="http://join.g0v.today"></a>http://join.g0v.today</li>
@@ -26,11 +26,13 @@
 <li>國際輿情資料？</li></ul>
 
 <ul class="comment"><li>體育相關呢？也列入教育那塊嗎？or infra？</li>
-<li>體育政策很需要大改造，不管是建設面或是養成面。</li></ul>
+<li>體育政策很需要大改造，不管是建設面或是養成面。</li>
+<li>有範例資料嗎？一時想像不到</li></ul>
 
-<ul class="comment"><li>一些環境相關的：生態、（人為活動的）環境影響、永續發展、區域計劃，放在 Tier 2~3 如何？晚點來寫</li></ul>
+<ul class="comment"><li>一些環境相關的：生態、（人為活動的）環境影響、永續發展、區域計劃，放在 Tier 2~3 如何？晚點來寫</li>
+<li>區域在 2.1 有 環境先放在 3.3</li></ul>
 
-<p></p><h2>政府與治理</h2><p></p><p><b>Tier 0: Rule of Law and Organization</b></p><p></p><ol><li><b>立法及法律 / Legislature</b><ol><li>現行法規：條文、結構化條文、引用條文連結註記</li>
+<p></p><h2>政府與治理</h2><p></p><p><b>Tier 0: Rule of Law and Organization</b></p><p></p><ol><li><b>立法及法律 / Legislature</b><ol><li>現行法規（含行政規則、行政命令）及行政函釋，：全文、結構化全文、引用條文連結註記</li>
 <li>修訂紀錄：版本明細、修訂相關文書或會議影音、</li>
 <li>修法提案及進度：提案內容與目前狀態、歷史狀態、相關會議影音</li></ol>
 </li>
@@ -38,14 +40,14 @@
 <li>行政區劃分（含原住民自治區）：基礎編號與圖資、連續邊界圖資、歷史圖資</li>
 <li>人事：機關別年資及年齡、約聘僱（派遣人員、替代役男）比率、公務人員人事異動資料</li></ol>
 </li>
-<li><b>司法及判決 / Judicial and Verdicts</b><ol><li>檢查機關：偵查統計、起訴統計、起訴書</li>
+<li><b>司法及判決 / Judicial and Verdicts</b><ol><li>檢察機關：偵查統計、起訴統計、起訴書</li>
 <li>法院：判決書、判刑與執行統計、結構化判決書</li>
-<li><br/></li></ol>
+<li>行政機關法律適用：行政罰相關統計數據、訴願相關統計數據</li></ol>
 </ol>
 
-<p><b>Tier 1: Accountability</b></p><p></p><ol><li><b>選舉及罷免 / Election and Recall</b><ol><li>選舉概況：</li>
-<li>候選人：</li>
-<li>得票：</li></ol>
+<p><b>Tier 1: Accountability</b></p><p></p><ol><li><b>選舉及罷免 / Election and Recall</b><ol><li>選舉概況：選區劃分、選舉人統計、投票概況</li>
+<li>候選人：候選人基本資料及政見、公辦政見會時程與內容、</li>
+<li>得票：當選得票明細、</li></ol>
 </li>
 <li><b>預決算與財政收支 / Budget, Revenue and Spending</b><ol><li>預算案、法定預算、決算：依機關別項科目最細項別、依類別列、依專案計畫列</li>
 <li>實際支出明細：</li>
@@ -75,7 +77,7 @@
 <li>各類政府補助（研究計畫、執行計畫、租稅及各種補貼）：</li></ol>
 </ol>
 
-<p></p><h2>服務與民生</h2><p></p><p><b>Tier 3: Safety</b></p><p></p><ol><li><b>公共檢查及違法事項 / Inspections and Violations</b><ol><li>事業單位之各項檢查：統計、明細、結構化明細</li>
+<p></p><h2>服務與民生</h2><p></p><p><b>Tier 3: Public Safety</b></p><p></p><ol><li><b>公共檢查及違法事項 / Inspections and Violations</b><ol><li>事業單位之各項檢查：統計、明細、結構化明細</li>
 <li>事業單位受行政處分公告：統計、明細、結構化明細</li>
 <li><br/></li></ol>
 </li>
