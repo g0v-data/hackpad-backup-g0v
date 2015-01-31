@@ -3,24 +3,37 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="195"/>
+<meta name="version" content="441"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$Py1KXzq8kMb</title>
 </head>
 <body><ul><li>立委投票指南（<a href="http://vote.ly.g0v.tw/"></a><a href='http://vote.ly.g0v.tw/'/>http://vote.ly.g0v.tw/</a>）<ul><li>首頁目前是選擇各個選區，想說如果能分為兩類，一個是從選區進入，一個是從議題進入（例如列出熱門搜尋關鍵字和一個輸入框），搜尋後可列出跟關鍵字有關的表決、法案，或是其他更好的呈現方式</li>
-<li>選區進入的頁面目前呈現的<a href='https://g0v.hackpad.com/vTaiwan.tw--yIoh6OFRR8o'/>文字描述</a>是選後才會有的資料（得票數、當選註記...），2014議員選前的介面<a href='http://councils.g0v.tw/candidates/2014/%E8%87%BA%E5%8C%97%E5%B8%82/1/'/>長這樣</a>，目前想法是應該有機會在2016立委選舉提供上次選舉的得票狀況和出缺席、政治獻金等基本統計，但資料很多可能需要更好的呈現方式</li></ul>
+<li>選區進入的頁面目前呈現的是選後才會有的資料（得票數、當選註記...），2014議員選前的介面<a href='http://councils.g0v.tw/candidates/2014/%E8%87%BA%E5%8C%97%E5%B8%82/1/'/>長這樣</a>，目前想法是應該有機會在2016立委選舉提供上次選舉的得票狀況和出缺席、政治獻金等基本統計，但資料很多可能需要更好的呈現方式</li></ul>
 </ul>
 
 <p></p><ul><li><b>首頁：</b>顏色好怪XD~~~每個縣市的logo...可以拿掉QQ</li></ul>
 
-<ul><li>選區進入的方式，可以用地圖呈現XDDDD</li></ul>
-<p>類似這樣：</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_Py1KXzq8kMb_p.285752_1422681119572_螢幕快照 2015-01-31 下午1.11.35.png'/></p><p></p><ul><li>直接輸入地址，出現立委姓名</li></ul>
+<ul><li>選區進入的方式，可以用地圖呈現XDDDD</li></li>
+<li>我不會做圖案加連結Orz，只好跪求了。另外還有全國不分區、山地原住民、平地原住民也要想一下該怎麼放進地圖呈現裡，對了桃園縣改為桃園市了</li></ul>
+<p>類似這樣：</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_Py1KXzq8kMb_p.285752_1422681119572_螢幕快照 2015-01-31 下午1.11.35.png'/></p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_Py1KXzq8kMb_p.236459_1422688589413_movies【開眼電影】全台戲院查詢 臺灣戲院查詢　電影院時刻表  movies http   www.atmovies.com.tw.png'/></p><ul class="comment"><li>FYI: <a href="http://g0v.github.io/twgeojson/map.html"></a>http://g0v.github.io/twgeojson/map.html</li>
+<li>p.s. 剛剛 postgreSQL 裝不起來的 issue 還有嗎？could try this</li>
+<li><a href="http://www.gotealeaf.com/blog/how-to-install-postgresql-on-a-mac"></a>http://www.gotealeaf.com/blog/how-to-install-postgresql-on-a-mac</li>
+<li>可以動了XD 超級感謝！QQ</li>
+<li><br/></li></ul>
+
+<ul><li>直接輸入地址，出現立委姓名</li></ul>
 
 <ul><li>人名用顏色代表黨~有沒有更好的方式</li></ul>
-
-<ul><li>你要不要投給他指南?(看哪些內容可以幫助你下決定!)<ul><li>缺席次數</li>
+<ul class="comment"><li>之前有人提過可用黨徽加姓名，但黨徽感覺也不是很多人知道</li>
+<li>嘿阿0.0...阿可以在名字前面加個不同顏色的圈圈</li>
+<li>這個好ㄟ！下面的例子，中國國民黨是移到圈圈上的時候顯示嗎？</li>
+<li>嗯嗯對，我們想說這樣比較簡潔一點XD //然後圓圈顏色就抓各政黨的LOGO主色</li>
+<li>對了，這個方法除了用找立委裡面那幾頁，<a href='http://vote.ly.g0v.tw/candidates/8/%E8%87%BA%E5%8C%97%E5%B8%82/5/'/>候選人</a>那頁如果也要這樣做就稍微多一點工，因為候選人的政黨更多了，候選人也需要這樣嗎？（暫離）</li>
+<li>討論：感覺這頁的資料比較詳細就可以全列黨名，在多候選人同時出現頁面時才用此呈現方式</li>
+<li>然後可能上屆政黨票 &lt;= x% 的小黨只能說抱歉，和無黨籍一起統一用深灰色QQ</li></ul>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_Py1KXzq8kMb_p.273806_1422688307101_test.png'/></p><p></p><ul><li>你要不要投給他指南?(看哪些內容可以幫助你下決定!)<ul><li>缺席次數</li>
 <li>他的政見</li>
 <li>實績...</li></ul>
 </ul>
 
-<p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></body>
+<p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></body>
 </html>
