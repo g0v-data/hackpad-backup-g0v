@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="5111"/>
+<meta name="version" content="5198"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$moed7ct-taigi-neologism</title>
 </head>
 <body><h1>新台語·運動</h1><p>( <a href='/11-moed7ct'/>11 moed7ct </a>)</p><p>Liz報告：<a href="https://speakerdeck.com/audreyt/liz-lin-xin-tai-yu-yun-dong"></a>https://speakerdeck.com/audreyt/liz-lin-xin-tai-yu-yun-dong</p><p></p><p></p><h2>專案目的</h2><p>大家一起說台語</p><ul><li>年輕人失去說台語的動力與能力</li>
@@ -21,7 +21,8 @@
 <li>古詞新用:懶孵、(電)烘爐</li>
 <li>不轉譯使用:百香果、mai-kuh、server</li></ol>
 <ul class="comment"><li>若華語「百香果」無轉譯使用，咱的語料愛按怎註明？</li>
-<li>漢字寫「我愛食百香果」，全羅寫「gua2 ai3 tsiah8 百香果」?</li></ul>
+<li>漢字寫「我愛食百香果」，全羅寫「gua2 ai3 tsiah8 百香果」?</li>
+<li>我曾在全國語文競賽的朗讀文章創一個體例，凡台語文章中出現以華語直接發音者，以『』標示，所以會是：我愛食『百香果』。不過這個體例目前僅流通於中小學教師，還可以有其他表現方式自然競爭</li></ul>
 
 <ul class="task"><li>不同的譯法各有優劣，具有活力的語言能很快產生各種譯法，透過傳播約定俗成，最後會有一種成為語言社群的共識。因此，這個平台不能違反語言的自然發展，但而是提供一個便利的平台，加速創造及約定俗成過程。</li></ul>
 
@@ -80,7 +81,8 @@
 <li>有沒有可能讓使用者點一個鍵就可以錄音呢？直接用講的，讓專業維護團隊轉寫</li>
 <li>欸，其實有！這樣也可以crowdsource the transcription 讚！</li>
 <li>同意liz的做法，或者也可以讓使用者打字，我們再另外的人轉寫（翻譯）成正規臺語文</li>
-<li>打注音播聲音會有變調的問題，詞的變調較簡單，語句變調我最近會研究看看</li></ul>
+<li>打注音播聲音會有變調的問題，詞的變調較簡單，語句變調我最近會研究看看</li>
+<li>我原先的預設是打字和錄音都要，維護團隊根據文字和聲音進行正規化的轉寫。</li></ul>
 
 <p><b>如何吸引群眾使用</b></p><ul class="comment"><li>connect新詞平臺和FB ？</li>
 <li>也可以找gaming的方式來做（好玩的平臺+有rewards的感覺)</li>
@@ -147,7 +149,8 @@
 <h2>Data format</h2><p></p><p><b>&nbsp;請教條</b></p><ul><li>&nbsp;外語詞性</li>
 <li>什麼外語？</li>
 <li>詞性</li></ul>
-<ul class="comment"><li>詞性每個人標的規則不同，而且詞性有許多規則，這要怎麼分類？</li></ul>
+<ul class="comment"><li>詞性每個人標的規則不同，而且詞性有許多規則，這要怎麼分類？</li>
+<li>我不建議放詞性，這個太麻煩了，而且以本系統的目的來說應該不需要</li></ul>
 <ul><li>例子</li>
 <li>comments</li></ul>
 
@@ -161,7 +164,10 @@
 <p>資料庫</p><ul><li>我現在拆開成三個檔案，放在「XX模型.py」裡面<ul><li><a href="https://github.com/sih4sing5hong5/tai5-uan5_gian5-gi2_phing5-thai5/blob/master/%E8%87%BA%E7%81%A3%E8%A8%80%E8%AA%9E%E5%B9%B3%E8%87%BA/%E6%A8%A1%E5%9E%8B.py"></a>https://github.com/sih4sing5hong5/tai5-uan5_gian5-gi2_phing5-thai5/blob/master/%E8%87%BA%E7%81%A3%E8%A8%80%E8%AA%9E%E5%B9%B3%E8%87%BA/%E6%A8%A1%E5%9E%8B.py</li>
 <li><a href="https://github.com/sih4sing5hong5/tai5_uan5_gian5_gi2_tsu1_liau7_khoo3/tree/master/%E8%87%BA%E7%81%A3%E8%A8%80%E8%AA%9E%E8%B3%87%E6%96%99%E5%BA%AB"></a>https://github.com/sih4sing5hong5/tai5_uan5_gian5_gi2_tsu1_liau7_khoo3/tree/master/%E8%87%BA%E7%81%A3%E8%A8%80%E8%AA%9E%E8%B3%87%E6%96%99%E5%BA%AB</li></ul>
 </ul>
-<ul class="comment"><li>要入營了，來不及寫解釋QQ</li></ul>
+<ul class="comment"><li>要入營了，來不及寫解釋QQ</li>
+<li>丞宏，抱歉我是個非資訊人，用語不精確，我前面說的「資料庫」，指的是語詞基礎資料的整理，那個檔案裡面有些錯誤，需要整理一下，才能進到後端這一步。</li>
+<li>你目前的寫是用台文，但目前協作的人當中，似乎只有你我和柏中老師看得懂台文，我不知道這樣會不會導致其他伙伴很難進入，要是只有你一人在坑裡，那就不妙了喔！</li>
+<li>此外，A-TSIOH好像也開始動了，還有PominWu原本的進度，是不是有什麼方法可以讓各位更順暢地一起工作呢？實在抱歉，我不會寫code，所以也不知道怎麼規劃協調，需要協助！</li></ul>
 <ul style="list-style: none;"><li><br/></li></ul>
 
 <h2>API needed (back-end)</h2><p></p><p></p><ul><li>User Registration : FB API ?&nbsp;</li></ul>
