@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2659"/>
+<meta name="version" content="2802"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$NoJ1mbwsqkQ</title>
 </head>
 <body><h1>Data-Centric Government 的二十大類資料</h1><p></p><p>狀態: DRAFT</p><p>授權: CC BY clkao &amp; g0v contributors (並授權與 TCA 以 CC BY-ND 發佈)</p><p><b>編輯前請同意及簽名</b>：clkao, yhsiang, Lucas, chewei, pm5 . a0kman, Summit</p><p></p><p>(這是 local.data 專案的後續報告，見<a href='/eDY68cTC3Hv#:h=前情提要'/>利益揭露</a>)</p><p></p><p><b>這是什麼？</b></p><p></p><p>Open Government 與 Smart City/Nation 的交集與基礎其實還是 Data，如果我們先忘掉現有政府架構，重新想像與打造一個 Data-Centric 的政府，然後讓這些 Data 都是 Open 的，每個環節都有 api 可以 read/write 或送 pull requests，那會是什麼樣貌？</p><p></p><p>先分為六個 Tier，Tier 0~2 較偏政府本身及其運作基礎，Tier 3~5 為偏民生相關。底層越完整，則上層資料的品質越容易提升與相互連結，因為有共通的語意定義。</p><p></p><p>希望每一大類找出<b>三類關鍵資料</b>，每類資料有<b>三種細度</b>，供檢視「是否有資料」及「是否為開放」等。每類資料可有簡單的 use case 供想像。</p><p></p><p>之後也可作為比 open data index 與 open data barometer 更細緻的普查項目。</p><p></p><p><b>討論</b></p><ul class="comment"><li>可直接在此討論，或上 irc: <a href="http://hack.g0v.tw/irc"></a>http://hack.g0v.tw/irc 或用 <a href="http://join.g0v.today"></a>http://join.g0v.today</li>
@@ -34,7 +34,7 @@
 <ul class="comment"><li>一些環境相關的：生態、（人為活動的）環境影響、永續發展、區域計劃，放在 Tier 2~3 如何？晚點來寫</li>
 <li>區域在 2.1 有 環境先放在 3.3</li></ul>
 
-<p></p><h2>政府與治理</h2><p></p><p><b>Tier 0: Rule of Law and Organization</b></p><p></p><ol><li><b>立法及法律 / Legislature</b><ol><li>現行法規（含行政規則、行政命令）及行政函釋，：全文、結構化全文、引用條文連結註記</li>
+<p></p><h2>政府與治理</h2><p></p><p><b>Tier 0: Rule of Law and Organization</b></p><p></p><ol><li><b>立法及法律 / Legislature</b><ol><li>現行法規（含行政規則、行政命令）：全文、結構化全文、引用條文連結註記</li>
 <li>修訂紀錄：版本明細、修訂相關文書或會議影音、</li>
 <li>修法提案及進度：提案內容與目前狀態、歷史狀態、相關會議影音</li></ol>
 </li>
@@ -44,7 +44,7 @@
 </li>
 <li><b>司法及判決 / Judicial and Verdicts</b><ol><li>檢察機關：偵查統計、起訴統計、起訴書</li>
 <li>法院：判決書、判刑與執行統計、結構化判決書</li>
-<li>行政機關法律適用：行政罰相關統計數據、訴願相關統計數據</li></ol>
+<li>行政機關法律適用：行政函釋、行政罰相關統計數據、訴願相關統計數據</li></ol>
 </ol>
 
 <p><b>Tier 1: Accountability</b></p><p></p><ol><li><b>選舉及罷免 / Election and Recall</b><ol><li>選舉概況：選區劃分、選舉人統計、投票概況</li>
@@ -56,17 +56,20 @@
 <li>收入統計：各類罰金及規費統計（依地區、項目、金額）、各類稅收二十等分級距統計、各類稅收 1 % 及 0.1% 級距統計</li></ol>
 </li>
 <li><b>政風與課責 / Ethics and Accountability</b><ol><li>政治獻金 /&nbsp; Political Contributions: 單戶依類別統計、違法公告、單戶收支明細</li>
-<li>財產申報 / Asset Disclosures</li>
-<li>公務資料調閱紀錄與政府資訊公開要求 /</li></ol>
+<li>財產申報 / Asset Disclosures: 應申報人明細、申報統計、申報明細</li>
+<li>公務資料調閱紀錄與政府資訊公開要求 / FOI Requests: 機關收受公開資訊要求：統計、明細</li></ol>
 <ul class="comment"><li>請問有範例嗎？這是哪種東西？</li>
 <li>希望是一種制度，民意代表或者是政府本身，可以明確知道有誰調閱過資料</li></ul>
 </ol>
 
-<p><b>Tier 2: Operations</b></p><p></p><ol><li><b>區域劃分與統計 / Zoning and Statistics</b><ol><li>基礎統計：人口結構、人口遷移（含移民與歸化）、不在籍與移動人口、外籍人口、</li>
-<li>警、消、國教責任區域範圍：人力員額及人口統計、人力員額及人口歷史變化、</li>
-<li>土地區分與所有人：區分明細、變更紀錄、所有人紀錄</li>
-<li>「土地空間與資源如何使用？」結構化的空間計畫書圖與規範：各縣市的區域計畫、都市計畫、都市更新計畫、土地使用分區、建築技術規則、森林資料</li></ol>
-<ul class="comment"><li>原住民自治區與相應的土地運用制度 (例如蘭嶼的土地繼承制度與國民政府的地籍制度有所不同)</li>
+<p><b>Tier 2: Operations</b></p><p></p><ol><li><b>區域劃分與統計 / Zoning and Statistics</b><ol><li>基礎統計：各單位應統計及發布事項、人口統計（結構、遷移、不在籍與外籍人口）、工商統計</li>
+<li>警、消、國教責任區域範圍：單位基本資訊與範圍劃分、人力員額及人口統計、人力員額及人口歷史變化</li>
+<li>土地劃分與所有人：區域/都市/都市更新計畫、土地使用分區明細及變更紀錄、所有人紀錄</li></ol>
+<ul class="comment"><li>建築技術規則</li>
+<li>這應該在法規已經有了</li>
+<li>森林資料</li>
+<li>什麼樣的森林資料呢？</li>
+<li>原住民自治區與相應的土地運用制度 (例如蘭嶼的土地繼承制度與國民政府的地籍制度有所不同)</li>
 <li>搬到上面行政區那邊？其實加上法律 reference 到特定行政區 applicable 的就可以表達特有制度了？</li>
 <li>嗯嗯</li></ul>
 </ol>
@@ -93,22 +96,22 @@
 </ol>
 </ol>
 
-<p><b>Tier 4: Services</b></p><p></p><ol><li><b>健康與醫療 / Health and Medical Care</b><ol><li>食品成分：添加物</li>
-<li>食品條碼：公司 (統編)、產地、內容物、熱量、添加物</li>
+<p><b>Tier 4: Services</b></p><p></p><ol><li><b>健康與醫療 / Health and Medical Care</b><ol><li>食品條碼：公司 (統編)、產地、內容物、熱量、添加物</li>
 <li>藥品成分：交互作用</li>
-<li>醫療照護資源：醫院門/急診/病床資訊、安養護機構清單（參考「5.1 需要執照或許可的行業及明細」）、健保各類給付統計</li>
-<li>醫院評鑑指標</li></ol>
+<li>醫療照護資源：醫院門/急診/病床資訊、健保各類給付統計、醫院評鑑指標</li></ol>
+<ul class="comment"><li>安養護機構清單</li>
+<li>（參考「5.1 需要執照或許可的行業及明細」）</li></ul>
 </ol>
-
 <ol><li><b>教育與研究 / Education and Research</b><ol><li>國民教育：<ol><li>十二年國教課綱（領域、年級、出版社、單元、內容文字、週次、教學活動、能力指標）</li></ol>
 </li>
 <li>辭典/字典：</li>
 <li>高等教育與研究：</li>
 <li>技職教育：</li>
-<li>產學合作：</li>
-<li>科研補助與檢討：</li></ol>
-</li>
-<li><b>基礎建設 / Infrastructures</b><ol><li>網路 / Internet：carrier coverage, pricing.. .</li>
+<li>產學合作：</li></ol>
+<ul class="comment"><li>科研補助與檢討：</li>
+<li>參考 2.3</li></ul>
+</ol>
+<ol><li><b>基礎建設 / Infrastructures</b><ol><li>網路 / Internet：carrier coverage, pricing.. .</li>
 <li>交通及大眾運輸 / Transportation：</li>
 <li>水、能源 / Water and Energy：價格、公共設施使用量、地區別使用量</li>
 <li>公共設施(通常會涵蓋前述所有項目資料)/如大巨蛋/轉運站總量體/河濱公園/水利設施<ol><li>管線</li>
@@ -121,8 +124,21 @@
 
 <p><b>Tier 5: Economic Activities</b></p><p></p><ol><li><b>生產及各類執照 / Producing and Licenses</b><ol><li>需要執照或許可的行業：行業表、合法單位明細、</li>
 <li>專利、商標及所有者：</li>
-<li>農業：統計、明細、結構化明細，包括銷售、拍賣金額、補助及農損補助金、歷年各類作物栽培面積、作物疫情的數據(主動、被動等各種監測、診斷鑑定資料)、農產品進出口歷年各品項詳細數據、農地各項統計(包含應用、歷年變更)、農業資材、藥劑各項資訊、科技研究可公開的各項研究成果、農業金融資料</li>
-<li><br/></li></ol>
+<li>農業：統計、明細、結構化明細<ol><li>產銷統計（包括銷售、拍賣金額、歷年各類作物栽培面積）</li>
+<li>農業資材、藥劑各項資訊</li>
+<li>作物疫情的數據(主動、被動等各種監測、診斷鑑定資料)</li></ol>
+<ul class="comment"><li>補助及農損補助金</li>
+<li>見 2.3 「各類補貼」</li>
+<li>農產品進出口歷年各品項詳細數據</li>
+<li>見 5.3 國際貿易部分</li>
+<li>農地各項統計(包含應用、歷年變更)</li>
+<li>見 2.1 土地劃分部分</li>
+<li>科技研究可公開的各項研究成果</li>
+<li>見 2.3 「補助的研究計畫」</li>
+<li>農業金融資料</li>
+<li>這個有什麼範例嗎？</li></ul>
+</ol>
+<ol><li><br/></li></ol>
 </li>
 <li><b>不動產與金融 / Real-estate and Finance</b><ol><li><br/></li></ol>
 </li>
