@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2802"/>
+<meta name="version" content="3538"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$NoJ1mbwsqkQ</title>
 </head>
 <body><h1>Data-Centric Government 的二十大類資料</h1><p></p><p>狀態: DRAFT</p><p>授權: CC BY clkao &amp; g0v contributors (並授權與 TCA 以 CC BY-ND 發佈)</p><p><b>編輯前請同意及簽名</b>：clkao, yhsiang, Lucas, chewei, pm5 . a0kman, Summit</p><p></p><p>(這是 local.data 專案的後續報告，見<a href='/eDY68cTC3Hv#:h=前情提要'/>利益揭露</a>)</p><p></p><p><b>這是什麼？</b></p><p></p><p>Open Government 與 Smart City/Nation 的交集與基礎其實還是 Data，如果我們先忘掉現有政府架構，重新想像與打造一個 Data-Centric 的政府，然後讓這些 Data 都是 Open 的，每個環節都有 api 可以 read/write 或送 pull requests，那會是什麼樣貌？</p><p></p><p>先分為六個 Tier，Tier 0~2 較偏政府本身及其運作基礎，Tier 3~5 為偏民生相關。底層越完整，則上層資料的品質越容易提升與相互連結，因為有共通的語意定義。</p><p></p><p>希望每一大類找出<b>三類關鍵資料</b>，每類資料有<b>三種細度</b>，供檢視「是否有資料」及「是否為開放」等。每類資料可有簡單的 use case 供想像。</p><p></p><p>之後也可作為比 open data index 與 open data barometer 更細緻的普查項目。</p><p></p><p><b>討論</b></p><ul class="comment"><li>可直接在此討論，或上 irc: <a href="http://hack.g0v.tw/irc"></a>http://hack.g0v.tw/irc 或用 <a href="http://join.g0v.today"></a>http://join.g0v.today</li>
@@ -22,8 +22,7 @@
 <ul class="comment"><li>政府還有詳細的人口資料，要放在哪塊比較適合呢?</li>
 <li>Tier 2: Operations 區域劃分及各項統計 / Zoning and Statistics ?</li></ul>
 
-<ul class="comment"><li>寫著寫著，就會想到「除了既有的資料種類，會不會還有什麼樣內容的資料，更需要被定義起來，讓公眾事務運作的更好？」例如：＿＿＿。另外，好像在寫模擬城市所需要的資料喔XD...</li>
-<li>國際輿情資料？</li></ul>
+<ul class="comment"><li>寫著寫著，就會想到「除了既有的資料種類，會不會還有什麼樣內容的資料，更需要被定義起來，讓公眾事務運作的更好？」、「資料如何驅動公眾事務？」、「對於某個資料項目的期待，暗示著需要當前的部會局處手上的資料有所整合？」</li></ul>
 
 <ul class="comment"><li>體育相關呢？也列入教育那塊嗎？or infra？</li>
 <li>體育政策很需要大改造，不管是建設面或是養成面。</li>
@@ -34,7 +33,19 @@
 <ul class="comment"><li>一些環境相關的：生態、（人為活動的）環境影響、永續發展、區域計劃，放在 Tier 2~3 如何？晚點來寫</li>
 <li>區域在 2.1 有 環境先放在 3.3</li></ul>
 
-<p></p><h2>政府與治理</h2><p></p><p><b>Tier 0: Rule of Law and Organization</b></p><p></p><ol><li><b>立法及法律 / Legislature</b><ol><li>現行法規（含行政規則、行政命令）：全文、結構化全文、引用條文連結註記</li>
+<ul class="comment"><li>國防軍事資料需要納入嗎？（這會有什麼內容？）</li>
+<li>外交事務的資料？國際輿情資料？</li>
+<li>yeah, 國防外交好像可以一類</li>
+<li>政府資產資料，例如「臺北市大同分局目前有多少部車輛..」，屬於「政府架構與人事 / Organization and People」？或「預決算與財政收支 / Budget, Revenue and Spending」？</li>
+<li>+1 應該和財政放在一起，單位列管財產之類的，還是有特定名字？</li>
+<li>（我猜是）國有財產（<a href='http://www.fnp.gov.tw/Edict.php?page=LawInfo&amp;TRE_ID=6&amp;act=ArtAll'/>國有財產法</a>裡面有條文說明細項名詞定義）</li></ul>
+
+<ul class="comment"><li>建議新增檢視項目：「資料是否已有彙整機制」</li>
+<li>例如館藏資料，現況來看屬於各機構自定資料的管理方式 → 無</li>
+<li>例如防救災資料，雖未開放但至少行政院內部已經進行整合 → 有</li>
+<li>yeah, 這個在每項調查可以註記</li></ul>
+
+<h2>政府與治理</h2><p></p><p><b>Tier 0: Rule of Law and Organization</b></p><p></p><ol><li><b>立法及法律 / Legislature</b><ol><li>現行法規（含行政規則、行政命令）：全文、結構化全文、引用條文連結註記</li>
 <li>修訂紀錄：版本明細、修訂相關文書或會議影音、</li>
 <li>修法提案及進度：提案內容與目前狀態、歷史狀態、相關會議影音</li></ol>
 </li>
@@ -52,7 +63,8 @@
 <li>得票：當選得票明細、</li></ol>
 </li>
 <li><b>預決算與財政收支 / Budget, Revenue and Spending</b><ol><li>預算案、法定預算、決算：依機關別項科目最細項別、依類別列、依專案計畫列</li>
-<li>實際支出明細：</li>
+<li>實際支出明細</li>
+<li>單位財產統計</li>
 <li>收入統計：各類罰金及規費統計（依地區、項目、金額）、各類稅收二十等分級距統計、各類稅收 1 % 及 0.1% 級距統計</li></ol>
 </li>
 <li><b>政風與課責 / Ethics and Accountability</b><ol><li>政治獻金 /&nbsp; Political Contributions: 單戶依類別統計、違法公告、單戶收支明細</li>
@@ -69,6 +81,7 @@
 <li>這應該在法規已經有了</li>
 <li>森林資料</li>
 <li>什麼樣的森林資料呢？</li>
+<li>直覺想到的是從日治時期開始的全台森林資源調查，以及農委會目前內部規劃的「林地分級」制度。主要的想法是「自然資源調查資料」，這樣看起來應該屬於「環境資料」分類，其他如溼地分佈、動植物分佈、再生能源調查資料（地熱）、地調所地質敏感區分佈資料...等</li>
 <li>原住民自治區與相應的土地運用制度 (例如蘭嶼的土地繼承制度與國民政府的地籍制度有所不同)</li>
 <li>搬到上面行政區那邊？其實加上法律 reference 到特定行政區 applicable 的就可以表達特有制度了？</li>
 <li>嗯嗯</li></ul>
@@ -80,23 +93,36 @@
 <li><b>採購資訊與委外營運服務明細 / Procurement&nbsp;</b><ol><li>政府採購：招標及開標結果資訊、</li>
 <li>委外營運服務（含 BOT）：機關及營運單位、服務內容、合約</li>
 <li>各類政府補助（研究計畫、執行計畫、租稅及各種補貼）：</li></ol>
+</li>
+<li><b>國防與外交 / Defense and Foreign Affairs</b><ol><li>外交：國際組織與公約或國際條約參與現況、</li>
+<li>國防：軍事統計</li></ol>
 </ol>
 
-<p></p><h2>服務與民生</h2><p></p><p><b>Tier 3: Public Safety</b></p><p></p><ol><li><b>公共檢查及違法事項 / Inspections and Violations</b><ol><li>事業單位之各項檢查：統計、明細、結構化明細</li>
-<li>事業單位受行政處分公告：統計、明細、結構化明細</li>
-<li><br/></li></ol>
+<p></p><h2>服務與民生</h2><p></p><p><b>Tier 3: Public Safety</b></p><p></p><ol><li><b>公共檢查及違法事項 / Inspections and Violations</b><ol><li>事業單位之各項檢查：應受檢行業及項目、統計、明細、結構化明細</li>
+<li>事業單位受行政處分公告：統計、明細、結構化明細</li></ol>
+</ol>
+<ul class="comment"><li>「公共檢查」，就會包含 公害資料（例如 桃園 RCA 廠址地下水污染源、全國工廠污染檢舉資料、）食品衛生安全抽查、勞動檢查資料..囉？「公共檢查」一詞，為了「公共與公眾而啟動的檢查」之意，覺得可以成為一種統籌式的用詞，甚至民間組織發起的檢查、公民科學家針對某污染源的監測..，或許也可以涵蓋進來</li>
+<li>這邊先針對政府依法應該主動檢查的事項，有共通格式就可以和民間的用同樣方式接取</li></ul>
+<ol><li><b>犯罪與事故 / Crimes and Accidents</b><ol><li>犯罪統計：縣市、轄區、路段</li>
+<li>事故統計：縣市、轄區、路段</li></ol>
 </li>
-<li><b>犯罪與事故 / Crimes and Accidents</b><ol><li><br/></li></ol>
-</li>
-<li><b>環境與災害 / Environment and Disasters</b><ol><li>監測 / Sensing<ol><li>衛星空照圖</li></ol>
-</li>
-<li>警示 / Alert</li>
-<li>災害：<ol><li>發生當下的現況</li>
+<li><b>環境與災害 / Environment and Disasters</b><ol><li>監測 / Sensing：大氣監測、水資源監測、衛星空照圖</li>
+<li>自然資源</li><ul class="comment"><li>例如「水資源管理資料」這種自然資源調查資料，是否也是屬於此分類項目？</li></ul>
+</ol>
+<ol><li>災害與警示：<ol><li>發生當下的現況：例如通報資料、</li>
 <li>致災潛勢分析與預測：例如斷層在哪裡、淹水模擬的資料、高齡者與行動不便的人的居住集中區域、化學氣體產業園區位置...等</li></ol>
 </ol>
 </ol>
+<ul class="comment"><li>WHO所蒐集的各國資料與疾管局資料、OIE與農委會禽流感疫情資料 ...是否也屬於 “Tier 3: Public Safety”？</li></ul>
 
-<p><b>Tier 4: Services</b></p><p></p><ol><li><b>健康與醫療 / Health and Medical Care</b><ol><li>食品條碼：公司 (統編)、產地、內容物、熱量、添加物</li>
+<p><b>Tier 4: Services</b></p><p></p><ol><li><b>基礎建設 / Infrastructures</b><ol><li>網路 / Internet：carrier coverage, pricing.. .</li>
+<li>交通及大眾運輸 / Transportation：</li>
+<li>水、能源 / Water and Energy：價格、公共設施使用量、地區別使用量</li>
+<li>公共設施(通常會涵蓋前述所有項目資料)/如大巨蛋/轉運站總量體/河濱公園/水利設施<ol><li>管線</li>
+<li><br/></li></ol>
+</li></ol>
+</li>
+<li><b>健康與醫療 / Health and Medical Care</b><ol><li>食品條碼：公司 (統編)、產地、內容物、熱量、添加物</li>
 <li>藥品成分：交互作用</li>
 <li>醫療照護資源：醫院門/急診/病床資訊、健保各類給付統計、醫院評鑑指標</li></ol>
 <ul class="comment"><li>安養護機構清單</li>
@@ -107,18 +133,12 @@
 <li>辭典/字典：</li>
 <li>高等教育與研究：</li>
 <li>技職教育：</li>
-<li>產學合作：</li></ol>
+<li>產學合作：</li>
+<li>館藏與文物、數位典藏資料：</li></ol>
 <ul class="comment"><li>科研補助與檢討：</li>
 <li>參考 2.3</li></ul>
 </ol>
-<ol><li><b>基礎建設 / Infrastructures</b><ol><li>網路 / Internet：carrier coverage, pricing.. .</li>
-<li>交通及大眾運輸 / Transportation：</li>
-<li>水、能源 / Water and Energy：價格、公共設施使用量、地區別使用量</li>
-<li>公共設施(通常會涵蓋前述所有項目資料)/如大巨蛋/轉運站總量體/河濱公園/水利設施<ol><li>管線</li>
-<li><br/></li></ol>
-</li></ol>
-</li>
-<li><b>服務要求與陳情 / Service Requests and Petitions</b><ol><li>1999 / 311 回報統計：依區域/類別/單位、處理時間、</li>
+<ol><li><b>服務要求與陳情 / Service Requests and Petitions</b><ol><li>1999 / 311 回報統計：依區域/類別/單位、處理時間、</li>
 <li>法規建言、</li></ol>
 </ol>
 
@@ -136,13 +156,17 @@
 <li>科技研究可公開的各項研究成果</li>
 <li>見 2.3 「補助的研究計畫」</li>
 <li>農業金融資料</li>
-<li>這個有什麼範例嗎？</li></ul>
+<li>這個有什麼範例嗎？</li>
+<li>農業金融資料，指的是例如農會、水利會的借貸放款與財產資料、農企業的金融資料嗎？</li>
+<li>基本資料應該已經在政府組織或法人了；有什麼哪些和 5.2 不同的資料嗎？</li></ul>
 </ol>
 <ol><li><br/></li></ol>
 </li>
-<li><b>不動產與金融 / Real-estate and Finance</b><ol><li><br/></li></ol>
+<li><b>不動產與金融 / Real-estate and Finance</b><ol><li>不動產交易資訊</li>
+<li>金融機構存放款統計</li>
+<li>消費性金融商品：商品利率範圍與額外收費明細</li></ol>
 </li>
-<li><b>國際貿易 / International Trades</b><ol><li>關務：統計、</li>
+<li><b>國際貿易 / International Trades</b><ol><li>關務：月進出口項目統計、進出口廠商及貨品明細</li>
 <li>入出國：</li>
 <li>外國投資：</li></ol>
 </ol>
