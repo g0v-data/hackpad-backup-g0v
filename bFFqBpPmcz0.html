@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1008"/>
+<meta name="version" content="1040"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$bFFqBpPmcz0</title>
 </head>
 <body><h1>注音標音OpenType Font計畫</h1><ul><li>提案人：董福興</li>
@@ -28,10 +28,11 @@
 <li>OpenType GPOS registered feature: &quot;<a href='https://www.microsoft.com/typography/otspec/features_ko.htm'/>mark</a>&quot;&nbsp;</li></ul>
 <ul class="comment"><li>Gecko Ruby的實作者Xidorn<a href='https://lists.w3.org/Archives/Public/public-i18n-cjk/2015JanMar/0028.html'/>認為</a>&quot;mark&quot;較適合。</li></ul>
 
-<h2>人力需求</h2><p>熟OpenType規格與製作的Font Designer &amp; Font Engineer。</p><ul class="comment"><li>萌典的 font engineer 是 魏藥 (medicalwei)，另外 kcwu 也有參與思源黑的製作</li>
+<h2>人力需求</h2><p>熟OpenType規格與製作的Font Designer &amp; Font Engineer。</p><ul class="comment"><li>萌典的 font engineer 是 魏藥 (medicalwei)，另外 kcwu 也參與思源黑的製作</li>
 <li>另外 BiaoDian Pro 注音字型是 ethantw 製作的，以上是萌典字體三人組~</li>
-<li>Twitter上已經推坑，kcwu怎麼聯絡好呢？</li></ul>
-
+<li>Twitter上已經推坑，kcwu怎麼聯絡好呢？</li>
+<li>@kcwu 也在 Twitter 上~</li>
+<li><br/></li></ul class="comment">
 <h2>技術實作需求</h2><ol><li>首先，從開源字型中取出U+3105-U+3129（即ㄅ到ㄩ）、以及二聲U+02CA、三聲U+02C7、四聲U+02CB、輕聲U+02D9的Subset。</li>
 <li>套用GPOS Feature &quot;<a href='https://www.microsoft.com/typography/otspec/features_ko.htm'/>mark</a>&quot;。</li>
 <li>當文字直排，且U+02CA、U+02C7、U+02CB三個調號前接U+3113（ㄓ）-U+3129（ㄩ）時，將調號放到符合《<a href='https://www.dropbox.com/s/09yk4int5t1b5m8/mandarin_zhuyinfuhou_handbook.pdf?dl=0'/>國語注音符號手冊</a>》的右上角位置。</li></ol>
@@ -39,9 +40,11 @@
 <li>有用 fontforge 做過 0 寬度的字體，可以試著做出 0 高度的字體並且將調號移動到負字元高度…（我試著做看看）</li>
 <li>↑受小弟一拜。</li>
 <li><a href="http://code.newtypography.co.uk/creating-contextual-ligatures-in-fontforge/"></a>http://code.newtypography.co.uk/creating-contextual-ligatures-in-fontforge/</li>
-<li>（我還在載思源黑體的原始 ps 檔……）</li></ul>
+<li>（我還在載思源黑體的原始 ps 檔……）</li>
+<li>思源黑體的字符很容易搬來搬去的，我找別套改看看 orz</li></ul>
 <ol><li>（可能功能）U+02D9輕聲（˙）的位置在直排中偏高，可能在U+02D9後接U+3105-U+3129時，改變Glyph成扁一點的點，以接近標準位置？</li></ol>
-<ul class="comment"><li>但目前輕聲是否要標成&lt;ruby&gt;呀&lt;rt&gt;˙ㄧㄚ&lt;/rt&gt;&lt;/ruby&gt;，即在注音符號前，還沒有定論。</li></ul>
+<ul class="comment"><li>但目前輕聲是否要標成&lt;ruby&gt;呀&lt;rt&gt;˙ㄧㄚ&lt;/rt&gt;&lt;/ruby&gt;，即在注音符號前，還沒有定論。</li>
+<li>當然，但無論 &lt;rt&gt; 怎麼標，字型照著顯示即可，標在後方的不要移到前方。</li></ul>
 
 <h2>測試</h2><p></p><p></p><h2>發行與普及</h2><p>做出來再說(；´Д｀)。</p><p></p><p></p><p></p></body>
 </html>
