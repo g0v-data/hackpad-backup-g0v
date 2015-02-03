@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="994"/>
+<meta name="version" content="1020"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$wE1lPGzD9s4</title>
 </head>
 <body><h1>判決書心證分析</h1><h2>目標</h2><p>司改會在申訴不適任法官與檢察官的過程中發現，許多判決的<b><u>案情事實、背景近似</u></b>，適用的法規也雷同，<b><u>但不同的法官卻做出迥然不同的判決結果</u></b>，在<b><u>法定刑與法官自由心證</u></b>之間是否有法官恣意的問題，因此希望透過資訊工具進行分析量化。</p><p></p><h2>相關專案</h2><p><a href='/--OoaenzjVDKK'/>貪汙判決分析</a></p><p><a href='/AoHSTKneEw7'/>裁判書小幫手</a></p><p><a href='/Data-Centric-Government--NoJ1mbwsqkQ'/>Data-Centric Government 的二十大類資料</a></p><p></p><h2>工作內容</h2><p><b>可能方法</b></p><ol><li><a href='http://zh.wikipedia.org/wiki/%E5%86%B3%E7%AD%96%E6%A0%91'/>決策樹</a></li>
@@ -54,7 +54,8 @@
 <li>另一個是Wiki : <a href='http://en.wikipedia.org/wiki/Decision_tree_learning'/>Dicision Tree</a> 上的圖例, 是根據已沉沒的鐵達尼號乘客的資料以及罹難與否, 反過來看罹難與乘客資訊的關係 : <a href='http://en.wikipedia.org/wiki/Decision_tree_learning#mediaviewer/File:CART_tree_titanic_survivors.png'/>Survival of passengers on the Titanic</a> (當然這例子是有點古怪);</li>
 <li>因此應用在判決書的心證分析上, 我們就需要先針對單一法官的判決書內容進行關鍵因素分析及提取(專家人工), 然後建立出類似像 1999 或是鐵達尼號乘客資訊那樣子能將重點資訊羅列的資料表, 資料量夠的話就可以熵基礎的資訊理論(Entropy-based <a href='http://en.wikipedia.org/wiki/Information_theory'/>Information Theory)</a>, 用現成的決策樹工具(CART, C4.5, ID3..etc)為基礎建立出上面例子所顯示的決策樹, 也就等於是萃取出了該法官的&quot;心證地圖&quot;. 然後接著才能夠進行單一法官或是多個法官的心證分析或預測.&nbsp;</li>
 <li>我們去訪談一位法官吧XD，在法官的訓練過程中應該是有這方面的訓練，也許可依此建立判決的標準決策樹，然後再試著丟案件進去，看看這個決策樹的判決結果。</li>
-<li>Oh yeah~ 吃吃喝喝! (誤)</li></ul>
+<li>Oh yeah~ 吃吃喝喝! (誤)</li>
+<li>感謝Keith 的加入~&nbsp; 資訊人和法律人需要進一步溝通，才會知道我們要如何來解析&quot;法官心證&lt;--&gt;判決&quot;這個玩意兒。因此有拜訪法官的想法。</li></ul>
 
 <p></p><p><b>普遍性的抓取項目</b></p><ol><li>法院別：例台北地院、高雄地院。可看城鄉、地域差距。</li>
 <li>案號：例102年度訴字第254號。基本的判決要素，方便回查。</li>
