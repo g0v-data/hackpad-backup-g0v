@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="1008"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$bFFqBpPmcz0</title>
+</head>
+<body><h1>注音標音OpenType Font計畫</h1><ul><li>提案人：董福興</li>
+<li>執掌單位：教育部終身教育司第四科「<a href='http://www.edu.tw/pages/detail.aspx?Node=3932&amp;Page=21619&amp;Index=1&amp;WID=c5ad5187-55ef-4811-8219-e946fe04f725'/>閱讀與語文教育科</a>」</li></ul>
+
+<h2>說明</h2><p>　　注音符號在Web上的顯示，除了使用<a href='http://css.hanzi.co'/>Polyfill</a>處理以外，還是希望能夠過標準化的方式在各瀏覽器上得到<a href='https://hackpad.com/Ruby-LEe9MlhFMGl'/>實作</a>。尤其是<a href='https://vimeo.com/106509250'/>ruby-position: inter-character的實作</a>，幾乎讓注音在Web上的顯示只差一步，而那一步就是調號（tone mark, e.g. ˊˇˋ）該怎麼被放到注音的右側。</p><p></p><p>　　最近在W3C i18-CJK的討論群組上開始<a href='https://lists.w3.org/Archives/Public/public-i18n-cjk/2015JanMar/'/>討論這個議題</a>，而有了比較清楚的輪廓。可以確定的是調號不屬於Layout Engine的處理範圍，而交由OpenType來實作會較佳，而最好是能做出一套僅有注音符號與調號的開源OpenType字體，具備對應的GPOS功能，能將調號放到右側去。不管是透過安裝、內嵌或者網路字型（Webfont）的方式提供，都能讓調號得以放到對的位置。</p><ul class="comment"><li>來自Ishi Koji的<a href='https://lists.w3.org/Archives/Public/public-i18n-cjk/2015JanMar/0033.html'/>推坑信</a>。</li></ul>
+
+<ul><li>注音符號Ruby標注範例：</li></ul>
+
+<ul class="code"><li>&lt;ruby&gt;我&lt;rt&gt;ㄨㄛˇ&lt;/rt&gt;&lt;/ruby&gt;</li></ul>
+
+<ul><li>調號僅會與以下符號一併出現：ㄓㄔㄕㄖㄗㄘㄙㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦㄧㄨㄩ，即U+3113—U+3129。</li>
+<li>調號位置請參考《<a href='https://www.dropbox.com/s/09yk4int5t1b5m8/mandarin_zhuyinfuhou_handbook.pdf?dl=0'/>國語注音符號手冊</a>》。</li>
+<li>調號Unicode<ul><li>二聲U+02CA MODIFIER LETTER ACUTE ACCENT</li>
+<li>三聲U+02C7 CARON</li>
+<li>四聲U+02CB MODIFIER LETTER GRAVE ACCENT</li>
+<li>輕聲U+02D9 DOT ABOVE</li></ul>
+</li>
+<li>注音符號Unicode<ul><li>U+3105-U+3129（即ㄅ到ㄩ）</li>
+<li>應該不用包括U+312A-U+312D</li></ul>
+</li>
+<li>OpenType GPOS registered feature: &quot;<a href='https://www.microsoft.com/typography/otspec/features_ko.htm'/>mark</a>&quot;&nbsp;</li></ul>
+<ul class="comment"><li>Gecko Ruby的實作者Xidorn<a href='https://lists.w3.org/Archives/Public/public-i18n-cjk/2015JanMar/0028.html'/>認為</a>&quot;mark&quot;較適合。</li></ul>
+
+<h2>人力需求</h2><p>熟OpenType規格與製作的Font Designer &amp; Font Engineer。</p><ul class="comment"><li>萌典的 font engineer 是 魏藥 (medicalwei)，另外 kcwu 也有參與思源黑的製作</li>
+<li>另外 BiaoDian Pro 注音字型是 ethantw 製作的，以上是萌典字體三人組~</li>
+<li>Twitter上已經推坑，kcwu怎麼聯絡好呢？</li></ul>
+
+<h2>技術實作需求</h2><ol><li>首先，從開源字型中取出U+3105-U+3129（即ㄅ到ㄩ）、以及二聲U+02CA、三聲U+02C7、四聲U+02CB、輕聲U+02D9的Subset。</li>
+<li>套用GPOS Feature &quot;<a href='https://www.microsoft.com/typography/otspec/features_ko.htm'/>mark</a>&quot;。</li>
+<li>當文字直排，且U+02CA、U+02C7、U+02CB三個調號前接U+3113（ㄓ）-U+3129（ㄩ）時，將調號放到符合《<a href='https://www.dropbox.com/s/09yk4int5t1b5m8/mandarin_zhuyinfuhou_handbook.pdf?dl=0'/>國語注音符號手冊</a>》的右上角位置。</li></ol>
+<ul class="comment"><li>僅需近似，不需完全符合。</li>
+<li>有用 fontforge 做過 0 寬度的字體，可以試著做出 0 高度的字體並且將調號移動到負字元高度…（我試著做看看）</li>
+<li>↑受小弟一拜。</li>
+<li><a href="http://code.newtypography.co.uk/creating-contextual-ligatures-in-fontforge/"></a>http://code.newtypography.co.uk/creating-contextual-ligatures-in-fontforge/</li>
+<li>（我還在載思源黑體的原始 ps 檔……）</li></ul>
+<ol><li>（可能功能）U+02D9輕聲（˙）的位置在直排中偏高，可能在U+02D9後接U+3105-U+3129時，改變Glyph成扁一點的點，以接近標準位置？</li></ol>
+<ul class="comment"><li>但目前輕聲是否要標成&lt;ruby&gt;呀&lt;rt&gt;˙ㄧㄚ&lt;/rt&gt;&lt;/ruby&gt;，即在注音符號前，還沒有定論。</li></ul>
+
+<h2>測試</h2><p></p><p></p><h2>發行與普及</h2><p>做出來再說(；´Д｀)。</p><p></p><p></p><p></p></body>
+</html>
