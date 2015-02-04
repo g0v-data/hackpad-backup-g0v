@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1040"/>
+<meta name="version" content="1142"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$bFFqBpPmcz0</title>
 </head>
 <body><h1>注音標音OpenType Font計畫</h1><ul><li>提案人：董福興</li>
@@ -26,7 +26,8 @@
 <li>應該不用包括U+312A-U+312D</li></ul>
 </li>
 <li>OpenType GPOS registered feature: &quot;<a href='https://www.microsoft.com/typography/otspec/features_ko.htm'/>mark</a>&quot;&nbsp;</li></ul>
-<ul class="comment"><li>Gecko Ruby的實作者Xidorn<a href='https://lists.w3.org/Archives/Public/public-i18n-cjk/2015JanMar/0028.html'/>認為</a>&quot;mark&quot;較適合。</li></ul>
+<ul class="comment"><li>Description: <a href="https://www.microsoft.com/typography/otfntdev/standot/features.aspx"></a><a href='https://www.microsoft.com/typography/otfntdev/standot/features.aspx'/>https://www.microsoft.com/typography/otfntdev/standot/features.aspx</a></li>
+<li>Gecko Ruby的實作者Xidorn<a href='https://lists.w3.org/Archives/Public/public-i18n-cjk/2015JanMar/0028.html'/>認為</a>&quot;mark&quot;較適合。</li></ul>
 
 <h2>人力需求</h2><p>熟OpenType規格與製作的Font Designer &amp; Font Engineer。</p><ul class="comment"><li>萌典的 font engineer 是 魏藥 (medicalwei)，另外 kcwu 也參與思源黑的製作</li>
 <li>另外 BiaoDian Pro 注音字型是 ethantw 製作的，以上是萌典字體三人組~</li>
@@ -46,5 +47,12 @@
 <ul class="comment"><li>但目前輕聲是否要標成&lt;ruby&gt;呀&lt;rt&gt;˙ㄧㄚ&lt;/rt&gt;&lt;/ruby&gt;，即在注音符號前，還沒有定論。</li>
 <li>當然，但無論 &lt;rt&gt; 怎麼標，字型照著顯示即可，標在後方的不要移到前方。</li></ul>
 
-<h2>測試</h2><p></p><p></p><h2>發行與普及</h2><p>做出來再說(；´Д｀)。</p><p></p><p></p><p></p></body>
+<h2>測試</h2><ul class="comment"><li>請問哪一個軟體可以支援 mark 的？我現在想要測試從 Droid Sans Fallback 跟 Roboto 弄出來的字體不知道該怎麼測試。</li>
+<li><a href="https://dl.dropboxusercontent.com/u/4582065/Bopomofo3DU.otf"></a><a href='https://dl.dropboxusercontent.com/u/4582065/Bopomofo3DU.otf'/>https://dl.dropboxusercontent.com/u/4582065/Bopomofo3DU.otf</a></li>
+<li>我改了注音測試html範本，輕聲有套用，但二到四聲似乎沒出來，我問問Unicoder目前狀況如何：</li>
+<li><a href="https://www.dropbox.com/s/ld2ert8tr5hprzb/bopomofo_vert_gpos.xhtml"></a>https://www.dropbox.com/s/ld2ert8tr5hprzb/bopomofo_vert_gpos.xhtml</li>
+<li>然後Mark應該各瀏覽器都通用：</li>
+<li><a href="https://www.typotheque.com/articles/opentype_features_in_web_browsers_-_tests"></a>https://www.typotheque.com/articles/opentype_features_in_web_browsers_-_tests</li></ul>
+
+<h2>發行與普及</h2><p>做出來再說(；´Д｀)。</p><p></p><p></p><p></p></body>
 </html>
