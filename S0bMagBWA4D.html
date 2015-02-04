@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="36"/>
+<meta name="version" content="45"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$S0bMagBWA4D</title>
 </head>
 <body><h1>網站開發資安原則</h1><p>轉錄自TonyQ FB</p><p></p><p>網站開發基本資安原則：</p><p></p><ol><li>系統套件安全性問題：若網站有使用第三方平台或外掛，應注意瞭解這些產品、外掛是否已知有漏洞並更新到最新版。風險可能小從網站程式注入跟資料庫隱碼攻擊，大到系統遭侵入都有可能。</li>
@@ -11,5 +11,5 @@
 <li>網頁程式碼注入(Cross-site Scripting,XSS)：因為頁面呈現使用者輸入的內容（如留言等等等），並且未過濾網頁語法，而讓使用者有機會透過網頁語法控制、修改頁面內容、進行一些非網站原先預期的操作。如替換聯結等等。風險小從替換聯結、置換頁面內容等無傷大雅情況，大到誘導使用者刷卡、誘使使用者重新輸入密碼以盜取帳號等等等都有可能。</li>
 <li>關閉錯誤訊息與系統資訊頁：錯誤訊息常常意外的吐露出許多不必要的資料，如資料庫語法等等等。所以盡可能在正式網站關閉錯誤訊息顯示（但內部仍要做錯誤訊息紀錄與警報，以利即時處理，只是不對一般使用者顯示）。網站系統預設可能會有系統資訊頁，會呈現各種伺服器版本與套件版本等等等，建議關閉以免讓攻擊者能夠透過特定版本的漏洞來進行攻擊。</li></ol>
 
-<p>以上基本的防範原則是瞭解自己所使用、開發的系統，並且明確對於所有來自網路的資料，在輸入時用安全性工具進行資料過濾(filter)，並且在呈現資料時也確實的做好內容管理(escape)。</p><p></p><p></p></body>
+<p>以上基本的防範原則是瞭解自己所使用、開發的系統，並且明確對於所有來自網路的資料，在輸入時用安全性工具進行資料過濾(filter)，並且在呈現資料時也確實的做好內容管理(escape)。</p><p></p><p></p><p></p><p></p><p></p><p>給　工程部　這裡有份簡報　提到　MongoDB缺點</p><p>NoSQL 大腸花　by yunglin</p><p><a href="https://speakerdeck.com/yunglin/nosql-da-chang-hua"></a>https://speakerdeck.com/yunglin/nosql-da-chang-hua</p><p></p><p></p><p></p><p></p><p></p></body>
 </html>
