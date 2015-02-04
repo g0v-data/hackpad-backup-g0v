@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1315"/>
+<meta name="version" content="1489"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$bFFqBpPmcz0</title>
 </head>
 <body><h1>注音標音OpenType Font計畫</h1><ul><li>提案人：董福興</li>
@@ -59,7 +59,11 @@
 <li>我改了注音測試html範本，輕聲有套用，但二到四聲似乎沒出來，我問問Unicoder目前狀況如何：</li>
 <li><a href="https://www.dropbox.com/s/ld2ert8tr5hprzb/bopomofo_vert_gpos.xhtml"></a>https://www.dropbox.com/s/ld2ert8tr5hprzb/bopomofo_vert_gpos.xhtml</li>
 <li>然後Mark應該各瀏覽器都通用：</li>
-<li><a href="https://www.typotheque.com/articles/opentype_features_in_web_browsers_-_tests"></a>https://www.typotheque.com/articles/opentype_features_in_web_browsers_-_tests</li></ul>
+<li><a href="https://www.typotheque.com/articles/opentype_features_in_web_browsers_-_tests"></a>https://www.typotheque.com/articles/opentype_features_in_web_browsers_-_tests</li>
+<li>回報一下目前進度，這是在 Chrome Canary 上面測試的結果：<a href="https://www.dropbox.com/s/9eb5m63xzwlle59/Screenshot%202015-02-05%2003.21.45.png?dl=0"></a>https://www.dropbox.com/s/9eb5m63xzwlle59/Screenshot%202015-02-05%2003.21.45.png?dl=0</li>
+<li>目前發現 fontforge 在垂直文字「不等高」的部分處理有問題，關掉之後雖然顯示看起來比較正常，但是所有文字（包含被 mark GPOS 指令移動的調號）都會留下空白。若啟用該選項，整體的文字會被往下 shift 約一個 x-height，且 shift 的高度不等高。</li>
+<li>fontforge sfd: <a href="https://www.dropbox.com/s/a5e2xltia6kik8j/threedu-bopomofo.sfd?dl=0"></a>https://www.dropbox.com/s/a5e2xltia6kik8j/threedu-bopomofo.sfd?dl=0</li>
+<li>OpenType (CFF): <a href="https://www.dropbox.com/s/q9n72yycrw2tnxl/Bopomofo3DU.otf?dl=0"></a>https://www.dropbox.com/s/q9n72yycrw2tnxl/Bopomofo3DU.otf?dl=0</li></ul>
 
 <h2>發行與普及</h2><p>做出來再說(；´Д｀)。</p><p></p><p></p><p></p></body>
 </html>
