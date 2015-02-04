@@ -3,10 +3,18 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2"/>
+<meta name="version" content="81"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$jfLiSxnllO6</title>
 </head>
-<body><h1>Hackfoldr 2.0 儲存格語法</h1><p>附錄：編輯試算表時，可以在儲存格內使用的語法</p><p></p><p><b>#，註解 (任一行裡的任一格)</b></p><p>一行裡面，有任一格子的開頭是 # 號，整行當會被標記成註解，標記成註解以後，就可以亂寫，不會影響到左邊的選單 XD 註解通常是用來留言，告訴其他人哪一格不要動之類的。</p><p></p><p><b>google spreadsheet id (A1)</b></p><p>A1 格子的內容如果不是註解，而且又 &gt;= 40 字元，會被當作是 google spreadsheed id 解讀，此時資料來源轉由 google spreadsheet 提供，ethercalc 本身只扮演提供好看網址的跳板。</p><p></p><p><b>網址 (A coulmn)</b></p><p>就是網址…</p><p></p><p><b>&lt;，選單層級 (A coulmn)</b></p><p>&lt; 代表接下來的連結是 top level，不會被收在 subfoldr 裡面</p><p></p><p><b>標題 (B column)</b></p><p>從上面數來第一個有資料的 B column 格子，就是 foldr 標題。在這之後：</p><ul><li>當網址 A column 沒有資料時，B column 就是 subfoldr 標題</li>
+<body><h1>Hackfoldr 2.0 儲存格語法</h1><p>附錄：編輯試算表時，可以在儲存格內使用的語法</p><p></p><p><b>#，註解 (任一行裡的任一格)</b></p><p>一行裡面，有任一格子的開頭是 # 號，整行當會被標記成註解，標記成註解以後，就可以亂寫，不會影響到左邊的選單 XD 註解通常是用來留言，告訴其他人哪一格不要動之類的。</p><p></p><p><b>google spreadsheet id (A1)</b></p><p>A1 格子的內容如果不是註解，而且又 &gt;= 40 字元，會被當作是 google spreadsheed id 解讀，此時資料來源轉由 google spreadsheet 提供，ethercalc 本身只扮演提供好看網址的跳板。</p><undefined><li><b>使用時機：</b></li></undefined>
+<ul style="list-style: none;"><li>在某些特殊情況，ethercalc 管理後台「無須登入、人人可編輯」的協作特色，會影響協作進度（例如資料遭到惡意清除、需從備份回復），此時可考慮在初期「發散式」的連結收集後，轉向「收歛式」，改用 Google Spreadsheet 後端，來限定某些具編輯權限的人。</li><undefined><li><b>使用方式:</b></li></undefined>
+<ol><li>開一個 Google 試算表，選「File（檔案）」&gt;「Publish to the web...（發布到網頁上）」再按「Start publishing（開始發佈）」、「OK（確定）」。</li>
+<li>取得發佈網址，如 <a href="https://docs.google.com/spreadsheets/d/1Wbk0HiD4yRVus3qXzA2d8a7LmZ3wYWCSWWdGD39sWsU/pubhtml"></a><a href='https://docs.google.com/spreadsheets/d/1Wbk0HiD4yRVus3qXzA2d8a7LmZ3wYWCSWWdGD39sWsU/pubhtml'/>https://docs.google.com/spreadsheets/d/1Wbk0HiD4yRVus3qXzA2d8a7LmZ3wYWCSWWdGD39sWsU/pubhtml</a></li>
+<li>在 /d/ 後面，直到下個斜線為止的文數字就是試算表的 ID，放到 hackfoldr.org/ 後面即為網址，例如 <a href="http://hackfoldr.org/1Wbk0HiD4yRVus3qXzA2d8a7LmZ3wYWCSWWdGD39sWsU"></a><a href='http://hackfoldr.org/1Wbk0HiD4yRVus3qXzA2d8a7LmZ3wYWCSWWdGD39sWsU'/>http://hackfoldr.org/1Wbk0HiD4yRVus3qXzA2d8a7LmZ3wYWCSWWdGD39sWsU</a></li>
+<li>運用以上方法時，如有需要，可運用 bit.ly 等短網址服務自訂網址。</li>
+<li>或於 ethercalc 的 A1 欄位填入 Google Spreadsheet ID ，即可在維持原本「hackfoldr.org/（你的專案的英文網址名稱）」的狀況下使用 Google Spreadsheet 作為後端，來限定只有某些具編輯權限的人才能修改。(ref <a href='http://logbot.g0v.tw/channel/g0v.tw/2014-08-05#108'/>IRC Log</a>)</li></ol>
+</ul>
+<p>試算表內的格式和 ethercalc 相同，但<b><u>目前不支援空白行</u></b>，第一個空白行以下的資料將被忽略。</p><p></p><p><b>網址 (A coulmn)</b></p><p>就是網址…</p><p></p><p><b>&lt;，選單層級 (A coulmn)</b></p><p>&lt; 代表接下來的連結是 top level，不會被收在 subfoldr 裡面</p><p></p><p><b>標題 (B column)</b></p><p>從上面數來第一個有資料的 B column 格子，就是 foldr 標題。在這之後：</p><ul><li>當網址 A column 沒有資料時，B column 就是 subfoldr 標題</li>
 <li>當網址 A column 有資料，且不是 &lt; 或 &gt; 時，B column 就是連結標題</li></ul>
 
 <p><b>選項 (C column)</b></p><p>foldr 標題的選項：</p><ul><li>hide - 隱藏後台，按鉛筆按鈕時試算表不會出現。但內行的人在網址輸入 /edit 還是可以看到試算表</li>
