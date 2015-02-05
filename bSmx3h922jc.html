@@ -3,8 +3,418 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="20"/>
+<meta name="version" content="649"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$bSmx3h922jc</title>
 </head>
-<body><h1>國會調查兵團開放API</h1><p><a href="https://cic.tw/legislators.json"></a>https://cic.tw/legislators.json</p><p></p><p></p><p></p></body>
+<body><h1>國會調查兵團開放API</h1><p></p><h2>介紹</h2><p></p><p>這邊是<a href='https://cic.tw'/>國會調查兵團網站</a>的開放API，歡迎介接。</p><p>內容以CC-BY-ND 3.0 TW釋出。</p><p></p><p>網站code以MIT釋出。</p><p></p><p><a href="https://github.com/billy3321/cic-website"></a>https://github.com/billy3321/cic-website</p><p></p><p></p><h2>API內容</h2><p></p><p><b>立委列表</b></p><p><a href="https://cic.tw/legislators.json"></a>https://cic.tw/legislators.json</p><p></p><undefined><li><b>GET參數</b></li></undefined>
+<p>limit：限制筆數</p><p>offset：從第幾筆開始</p><p>query：查詢立委姓名</p><p>callback：JSONP用的callback參數</p><p></p><undefined><li><b>回應</b></li></undefined>
+<p>---</p><ul><li>&nbsp; status: &quot;success&quot;</li>
+<li>&nbsp; legislators:&nbsp;<ul><li>id: 立委id</li>
+<li>name: 立委名字</li>
+<li>image: 圖片</li>
+<li>in_office:&nbsp; 是否在職<ul><li>party:&nbsp;</li>
+<li>id: 黨id</li>
+<li>name: 黨名</li>
+<li>image: 黨圖片</li>
+<li>abbreviation: 黨縮寫</li></ul>
+</li></ul>
+</li>
+<li>count: 筆數</li></ul>
+
+<p></p><p></p><p><b>有記錄的立委</b></p><p><a href="https://cic.tw/legislators/has_records.json"></a>https://cic.tw/legislators/has_record<a href='https://cic.tw/legislators/has_record.json'/>s</a>.json</p><p></p><undefined><li><b>GET參數</b></li></undefined>
+<p>limit：限制筆數</p><p>offset：從第幾筆開始</p><p>query：查詢立委姓名</p><p>callback：JSONP用的callback參數</p><p></p><undefined><li><b>回應</b></li></undefined>
+<p>---</p><ul><li>&nbsp; status: &quot;success&quot;</li>
+<li>&nbsp; legislators:&nbsp;<ul><li>id: 立委id</li>
+<li>name: 立委名字</li>
+<li>image: 圖片</li>
+<li>in_office:&nbsp; 是否在職<ul><li>party:&nbsp;</li>
+<li>id: 黨id</li>
+<li>name: 黨名</li>
+<li>image: 黨圖片</li>
+<li>abbreviation: 黨縮寫</li></ul>
+</li></ul>
+</li>
+<li>count: 筆數</li></ul>
+
+<p></p><p></p><p><b>無記錄的立委</b></p><p><a href="https://cic.tw/legislators/no_record.json"></a><a href='https://cic.tw/legislators/has_records.json'/>https://cic.tw/legislators/</a><a href='https://cic.tw/legislators/_record.json'/>n</a>o<a href='https://cic.tw/legislators/has_records.json'/>_record.json</a></p><p></p><undefined><li><b>GET參數</b></li></undefined>
+<p>limit：限制筆數</p><p>offset：從第幾筆開始</p><p>query：查詢立委姓名</p><p>callback：JSONP用的callback參數</p><p></p><undefined><li><b>回應</b></li></undefined>
+<p>---</p><ul><li>&nbsp; status: &quot;success&quot;</li>
+<li>&nbsp; legislators:&nbsp;<ul><li>id: 立委id</li>
+<li>name: 立委名字</li>
+<li>image: 圖片</li>
+<li>in_office:&nbsp; 是否在職<ul><li>party:&nbsp;</li>
+<li>id: 黨id</li>
+<li>name: 黨名</li>
+<li>image: 黨圖片</li>
+<li>abbreviation: 黨縮寫</li></ul>
+</li></ul>
+</li>
+<li>count: 筆數</li></ul>
+
+<p></p><p><b>單一立委</b></p><p><a href="https://cic.tw/legislators/:id.json"></a>https://cic.tw/legislators<a href='https://cic.tw/legislators.json'/>/</a>:<a href='https://cic.tw/legislators/:.json'/>i</a>d.json</p><p>ex:</p><p><a href="https://cic.tw/legislators/1738.json"></a><a href='https://cic.tw/legislators/1738.json'/>https://cic.tw/legislators/1738.json</a></p><p></p><p>立委使用g0v的資料，id相同。</p><p></p><undefined><li><b>GET參數</b></li></undefined>
+<p>callback：JSONP用的callback參數</p><p></p><undefined><li><b>回應</b></li></undefined>
+<p>---</p><ul><li>&nbsp; status: &quot;success&quot;</li>
+<li>&nbsp; legislator:&nbsp;<ul><li>id: 立委id</li>
+<li>name: 立委名字</li>
+<li>image: 圖片</li>
+<li>in_office:&nbsp; 是否在職</li>
+<li>party:&nbsp;<ul><li>id: 黨id</li>
+<li>name: 黨名</li>
+<li>image: 黨圖片</li>
+<li>abbreviation: 黨縮寫</li></ul>
+</li>
+<li>elections<ul><li>legislator_id: 立委id</li>
+<li>id: 選舉id</li>
+<li>ad_id: 屆次id</li>
+<li>party_id: 黨id</li>
+<li>constituency: 參選區域</li>
+<li>ad:&nbsp;<ul><li>id: 屆次id</li>
+<li>name: 屆次名</li>
+<li>vote_date:投票日期</li>
+<li>term_start: 任期開始</li>
+<li>term_end: 任期結束</li></ul>
+</li></ul>
+</li></ul>
+</li>
+<li>questions: 質詢列表，內容請參見下面</li>
+<li>entries: 新聞列表，內容請參見下面</li>
+<li>videos: 影片列表，內容請參見下面</li></ul>
+
+<p></p><p><b>單一立委的新聞記錄</b></p><p><a href="https://cic.tw/legislators/:id/entries.json"></a><a href='https://cic.tw/legislators/1738.json'/>https://cic.tw/legislators/</a>:<a href='https://cic.tw/legislators/:/entries.json'/>i</a>d/entries<a href='https://cic.tw/legislators/1738.json'/>.json</a></p><p>ex:</p><p><a href="https://cic.tw/legislators/1738/entries.json"></a><a href='https://cic.tw/legislators/1738/entries.json'/>https://cic.tw/legislators/1738/entries.json</a></p><p></p><undefined><li><b>GET參數</b></li></undefined>
+<p>limit：限制筆數</p><p>offset：從第幾筆開始</p><p>query：查詢新聞標題、內容</p><p>callback：JSONP用的callback參數</p><p></p><undefined><li><b>回應</b></li></undefined>
+<ul><li>&nbsp; status: &quot;success&quot;</li>
+<li>&nbsp; entries:&nbsp;<ul><li>id: 新聞id</li>
+<li>title: 新聞標題</li>
+<li>content: 新聞內容</li>
+<li>source_url: 新聞來源網址</li>
+<li>source_name: 新聞來源名稱</li>
+<li>date: 新聞日期</li>
+<li>created_at: 建立時間</li>
+<li>updated_at: 更新時間</li></ul>
+</li>
+<li>&nbsp; count: 新聞筆數</li></ul>
+
+<p></p><p><b>單一立委的影片記錄</b></p><p><a href="https://cic.tw/legislators/:id/videos.json"></a><a href='https://cic.tw/legislators/1738.json'/>h</a><a href='https://cic.tw/legislators/1738.json'/>ttps://cic.tw/legislators/</a><a href='https://cic.tw/legislators//videos.json'/>:</a>id<a href='https://cic.tw/legislators/1738.json'/>/</a><a href='https://cic.tw/legislators/1738/.json'/>v</a>ideos<a href='https://cic.tw/legislators/1738.json'/>.json</a></p><p>ex:</p><p><a href="https://cic.tw/legislators/1738/videos.json"></a><a href='https://cic.tw/legislators/1738/videos.json'/>https://cic.tw/legislators/1738/videos.json</a></p><p></p><undefined><li><b>GET參數</b></li></undefined>
+<p>limit：限制筆數</p><p>offset：從第幾筆開始</p><p>query：查詢影片標題、內容</p><p>callback：JSONP用的callback參數</p><p></p><undefined><li><b>回應</b></li></undefined>
+<p>---</p><ul><li>&nbsp; status: &quot;success&quot;</li>
+<li>&nbsp; videos:&nbsp;<ul><li>id: 影片id</li>
+<li>title: 影片標題</li>
+<li>content: 影片內容</li>
+<li>video_type: 影片種類：&quot;ivod&quot; or &quot;news&quot;</li>
+<li>committee_id: 委員會id</li>
+<li>ad_session_id: 會期id</li>
+<li>meeting_description: 會議內容</li>
+<li>youtube_url: youtube網址</li>
+<li>youtube_id: youtube id</li>
+<li>image: 影片縮圖</li>
+<li>ivod_url: ivod網址</li>
+<li>source_url: 來源網址</li>
+<li>source_name: 來源名稱</li>
+<li>time_start: 開始時間</li>
+<li>time_end: 結束時間</li>
+<li>date: 影片發生時間</li>
+<li>created_at: 建立時間</li>
+<li>updated_at: 更新時間</li>
+<li>target: 質詢對象</li>
+<li>ad_session:&nbsp;<ul><li>id: 會期id</li>
+<li>name: 會期名稱</li>
+<li>ad_id: 屆次id</li>
+<li>date_start: 會期開始時間</li>
+<li>date_end: 會期結束時間</li></ul>
+</li>
+<li>committee:&nbsp;<ul><li>id: 委員會id</li>
+<li>name: 委員會名稱</li></ul>
+</li>
+<li>ad:&nbsp;<ul><li>id: 屆次id</li>
+<li>name: 屆次名</li>
+<li>vote_date:投票日期</li>
+<li>term_start: 任期開始</li>
+<li>term_end: 任期結束</li></ul>
+</li></ul>
+</li>
+<li>&nbsp; count: 影片筆數</li></ul>
+
+<p></p><p></p><p><b>單一立委的質詢記錄</b></p><p><a href="https://cic.tw/legislators/:id/questions.json"></a><a href='https://cic.tw/legislators/1738.json'/>https://cic.tw/legislators/</a><a href='https://cic.tw/legislators//questions.json'/>:</a>id<a href='https://cic.tw/legislators/1738.json'/>/</a><a href='https://cic.tw/legislators/1738/.json'/>q</a>uestions<a href='https://cic.tw/legislators/1738.json'/>.json</a></p><p>ex:</p><p><a href="https://cic.tw/legislators/1738/questions.json"></a><a href='https://cic.tw/legislators/1738/questions.json'/>https://cic.tw/legislators/1738/questions.json</a></p><p></p><undefined><li><b>GET參數</b></li></undefined>
+<p>limit：限制筆數</p><p>offset：從第幾筆開始</p><p>query：查詢質詢標題、內容</p><p>callback：JSONP用的callback參數</p><p></p><undefined><li><b>回應</b></li></undefined>
+<p>---</p><ul><li>&nbsp; status: &quot;success&quot;</li>
+<li>&nbsp; questions:&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp; -&nbsp;<ul><li>id: 質詢id</li>
+<li>title: 質詢標題</li>
+<li>content: 質詢內容</li>
+<li>committee_id: 所屬委員會id</li>
+<li>ad_session_id: 會期id</li>
+<li>meeting_description: 會議內容</li>
+<li>ivod_url: ivod網址</li>
+<li>time_start: 開始時間</li>
+<li>time_end: 結束時間</li>
+<li>target: 質詢對象</li>
+<li>date: 質詢發生時間</li>
+<li>comment: 意見</li>
+<li>created_at: 建立時間</li>
+<li>updated_at: 更新時間</li>
+<li>ad_session:&nbsp;<ul><li>id: 會期id</li>
+<li>name: 會期名</li>
+<li>ad_id: 會期所屬屆次id</li>
+<li>date_start: 會期開始</li>
+<li>date_end: 會期結束</li></ul>
+</li>
+<li>committee:&nbsp;<ul><li>id: 委員會id</li>
+<li>name: 委員會名字</li></ul>
+</li>
+<li>ad:&nbsp;<ul><li>id: 屆次id</li>
+<li>name: 屆次名</li>
+<li>vote_date:投票日期</li>
+<li>term_start: 任期開始</li>
+<li>term_end: 任期結束</li></ul>
+</li></ul>
+</li>
+<li>&nbsp; count: 質詢筆數</li></ul>
+
+<p></p><p></p><p><b>所有的新聞記錄</b></p><p><a href="https://cic.tw/entries.json"></a><a href='https://cic.tw/legislators/1738/questions.json'/>https://cic.tw/</a><a href='https://cic.tw/.json'/>e</a>ntries<a href='https://cic.tw/legislators/1738/questions.json'/>.json</a></p><p></p><undefined><li><b>GET參數</b></li></undefined>
+<p>limit：限制筆數</p><p>offset：從第幾筆開始</p><p>query：查詢新聞標題、內容</p><p>callback：JSONP用的callback參數</p><p></p><undefined><li><b>回應</b></li></undefined>
+<ul><li>&nbsp; status: &quot;success&quot;</li>
+<li>&nbsp; entries:&nbsp;<ul><li>id: 新聞id</li>
+<li>title: 新聞標題</li>
+<li>content: 新聞內容</li>
+<li>source_url: 新聞來源網址</li>
+<li>source_name: 新聞來源名稱</li>
+<li>date: 新聞日期</li>
+<li>created_at: 建立時間</li>
+<li>updated_at: 更新時間</li>
+<li>legislators<ul><li>id: 立委id</li>
+<li>name: 立委名字</li>
+<li>image: 圖片</li>
+<li>in_office:&nbsp; 是否在職<ul><li>party:&nbsp;</li>
+<li>id: 黨id</li>
+<li>name: 黨名</li>
+<li>image: 黨圖片</li>
+<li>abbreviation: 黨縮寫</li></ul>
+</li></ul>
+</li></ul>
+</li>
+<li>&nbsp; count: 新聞筆數</li></ul>
+
+<p></p><p><b>單一新聞記錄</b></p><p><a href="https://cic.tw/entries/:id.json"></a><a href='https://cic.tw/entries.json'/>https://cic.tw/entries/</a><a href='https://cic.tw/entries/.json'/>:</a>id<a href='https://cic.tw/entries.json'/>.json</a></p><p>ex:</p><p><a href="https://cic.tw/entries/1.json"></a><a href='https://cic.tw/entries/1.json'/>https://cic.tw/entries/1.json</a></p><p></p><undefined><li><b>GET參數</b></li></undefined>
+<p>callback：JSONP用的callback參數</p><p></p><undefined><li><b>回應</b></li></undefined>
+<ul><li>&nbsp; status: &quot;success&quot;</li>
+<li>&nbsp; entry:&nbsp;<ul><li>id: 新聞id</li>
+<li>title: 新聞標題</li>
+<li>content: 新聞內容</li>
+<li>source_url: 新聞來源網址</li>
+<li>source_name: 新聞來源名稱</li>
+<li>date: 新聞日期</li>
+<li>created_at: 建立時間</li>
+<li>updated_at: 更新時間</li>
+<li>legislators<ul><li>id: 立委id</li>
+<li>name: 立委名字</li>
+<li>image: 圖片</li>
+<li>in_office:&nbsp; 是否在職<ul><li>party:&nbsp;</li>
+<li>id: 黨id</li>
+<li>name: 黨名</li>
+<li>image: 黨圖片</li>
+<li>abbreviation: 黨縮寫</li></ul>
+</ul>
+</ul>
+</ul>
+
+<p></p><p><b>所有的質詢記錄</b></p><p><a href="https://cic.tw/questions.json"></a><a href='https://cic.tw/entries.json'/>https://cic.tw/</a><a href='https://cic.tw/.json'/>q</a>uestions<a href='https://cic.tw/entries.json'/>.json</a></p><p></p><undefined><li><b>GET參數</b></li></undefined>
+<p>limit：限制筆數</p><p>offset：從第幾筆開始</p><p>query：查詢質詢標題、內容</p><p>callback：JSONP用的callback參數</p><p></p><undefined><li><b>回應</b></li></undefined>
+<p>---</p><ul><li>&nbsp; status: &quot;success&quot;</li>
+<li>&nbsp; questions:&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp; -&nbsp;<ul><li>id: 質詢id</li>
+<li>title: 質詢標題</li>
+<li>content: 質詢內容</li>
+<li>committee_id: 所屬委員會id</li>
+<li>ad_session_id: 會期id</li>
+<li>meeting_description: 會議內容</li>
+<li>ivod_url: ivod網址</li>
+<li>time_start: 開始時間</li>
+<li>time_end: 結束時間</li>
+<li>target: 質詢對象</li>
+<li>date: 質詢發生時間</li>
+<li>comment: 意見</li>
+<li>created_at: 建立時間</li>
+<li>updated_at: 更新時間</li>
+<li>ad_session:&nbsp;<ul><li>id: 會期id</li>
+<li>name: 會期名</li>
+<li>ad_id: 會期所屬屆次id</li>
+<li>date_start: 會期開始</li>
+<li>date_end: 會期結束</li></ul>
+</li>
+<li>committee:&nbsp;<ul><li>id: 委員會id</li>
+<li>name: 委員會名字</li></ul>
+</li>
+<li>legislators<ul><li>id: 立委id</li>
+<li>name: 立委名字</li>
+<li>image: 圖片</li>
+<li>in_office:&nbsp; 是否在職<ul><li>party:&nbsp;</li>
+<li>id: 黨id</li>
+<li>name: 黨名</li>
+<li>image: 黨圖片</li>
+<li>abbreviation: 黨縮寫</li></ul>
+</li></ul>
+</li>
+<li>ad:&nbsp;<ul><li>id: 屆次id</li>
+<li>name: 屆次名</li>
+<li>vote_date:投票日期</li>
+<li>term_start: 任期開始</li>
+<li>term_end: 任期結束</li></ul>
+</li></ul>
+</li>
+<li>&nbsp; count: 質詢筆數</li></ul>
+
+<p><b>單一質詢記錄</b></p><p><a href="https://cic.tw/questions/:id.json"></a><a href='https://cic.tw/questions.json'/>https://cic.tw/questions/</a><a href='https://cic.tw/questions/.json'/>:</a>id<a href='https://cic.tw/questions.json'/>.json</a></p><p>ex:</p><p><a href="https://cic.tw/questions/1.json"></a><a href='https://cic.tw/questions/1.json'/>https://cic.tw/questions/1.json</a></p><p></p><undefined><li><b>GET參數</b></li></undefined>
+<p>callback：JSONP用的callback參數</p><p></p><undefined><li><b>回應</b></li></undefined>
+<p>---</p><ul><li>&nbsp; status: &quot;success&quot;</li>
+<li>&nbsp; question:&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp; -&nbsp;<ul><li>id: 質詢id</li>
+<li>title: 質詢標題</li>
+<li>content: 質詢內容</li>
+<li>committee_id: 所屬委員會id</li>
+<li>ad_session_id: 會期id</li>
+<li>meeting_description: 會議內容</li>
+<li>ivod_url: ivod網址</li>
+<li>time_start: 開始時間</li>
+<li>time_end: 結束時間</li>
+<li>target: 質詢對象</li>
+<li>date: 質詢發生時間</li>
+<li>comment: 意見</li>
+<li>created_at: 建立時間</li>
+<li>updated_at: 更新時間</li>
+<li>ad_session:&nbsp;<ul><li>id: 會期id</li>
+<li>name: 會期名</li>
+<li>ad_id: 會期所屬屆次id</li>
+<li>date_start: 會期開始</li>
+<li>date_end: 會期結束</li></ul>
+</li>
+<li>committee:&nbsp;<ul><li>id: 委員會id</li>
+<li>name: 委員會名字</li></ul>
+</li>
+<li>legislators<ul><li>id: 立委id</li>
+<li>name: 立委名字</li>
+<li>image: 圖片</li>
+<li>in_office:&nbsp; 是否在職<ul><li>party:&nbsp;</li>
+<li>id: 黨id</li>
+<li>name: 黨名</li>
+<li>image: 黨圖片</li>
+<li>abbreviation: 黨縮寫</li></ul>
+</li></ul>
+</li>
+<li>ad:&nbsp;<ul><li>id: 屆次id</li>
+<li>name: 屆次名</li>
+<li>vote_date:投票日期</li>
+<li>term_start: 任期開始</li>
+<li>term_end: 任期結束</li></ul>
+</ul>
+</ul>
+
+<p><b>所有的影片記錄</b></p><p><a href="https://cic.tw/videos.json"></a><a href='https://cic.tw/questions.json'/>https://cic.tw/</a><a href='https://cic.tw/.json'/>v</a>ideos<a href='https://cic.tw/questions.json'/>.json</a></p><p></p><undefined><li><b>GET參數</b></li></undefined>
+<p>limit：限制筆數</p><p>offset：從第幾筆開始</p><p>query：查詢影片標題、內容</p><p>callback：JSONP用的callback參數</p><p></p><undefined><li><b>回應</b></li></undefined>
+<p>---</p><ul><li>&nbsp; status: &quot;success&quot;</li>
+<li>&nbsp; videos:&nbsp;<ul><li>id: 影片id</li>
+<li>title: 影片標題</li>
+<li>content: 影片內容</li>
+<li>video_type: 影片種類：&quot;ivod&quot; or &quot;news&quot;</li>
+<li>committee_id: 委員會id</li>
+<li>ad_session_id: 會期id</li>
+<li>meeting_description: 會議內容</li>
+<li>youtube_url: youtube網址</li>
+<li>youtube_id: youtube id</li>
+<li>image: 影片縮圖</li>
+<li>ivod_url: ivod網址</li>
+<li>source_url: 來源網址</li>
+<li>source_name: 來源名稱</li>
+<li>time_start: 開始時間</li>
+<li>time_end: 結束時間</li>
+<li>date: 影片發生時間</li>
+<li>created_at: 建立時間</li>
+<li>updated_at: 更新時間</li>
+<li>target: 質詢對象</li>
+<li>ad_session:&nbsp;<ul><li>id: 會期id</li>
+<li>name: 會期名稱</li>
+<li>ad_id: 屆次id</li>
+<li>date_start: 會期開始時間</li>
+<li>date_end: 會期結束時間</li></ul>
+</li>
+<li>committee:&nbsp;<ul><li>id: 委員會id</li>
+<li>name: 委員會名稱</li></ul>
+</li>
+<li>legislators<ul><li>id: 立委id</li>
+<li>name: 立委名字</li>
+<li>image: 圖片</li>
+<li>in_office:&nbsp; 是否在職<ul><li>party:&nbsp;</li>
+<li>id: 黨id</li>
+<li>name: 黨名</li>
+<li>image: 黨圖片</li>
+<li>abbreviation: 黨縮寫</li></ul>
+</li></ul>
+</li>
+<li>ad:&nbsp;<ul><li>id: 屆次id</li>
+<li>name: 屆次名</li>
+<li>vote_date:投票日期</li>
+<li>term_start: 任期開始</li>
+<li>term_end: 任期結束</li></ul>
+</li></ul>
+</li>
+<li>&nbsp; count: 影片筆數</li></ul>
+
+<p></p><p><b>單一影片記錄</b></p><p><a href="https://cic.tw/videos/:id.json"></a><a href='https://cic.tw/videos/1.json'/>https://cic.tw/videos/</a><a href='https://cic.tw/videos/.json'/>:</a>id<a href='https://cic.tw/videos/1.json'/>.json</a></p><p>ex:</p><p><a href="https://cic.tw/videos/1.json"></a><a href='https://cic.tw/videos.json'/>https://cic.tw/videos/</a><a href='https://cic.tw/videos/.json'/>1</a><a href='https://cic.tw/videos.json'/>.json</a></p><p></p><undefined><li><b>GET參數</b></li></undefined>
+<p>callback：JSONP用的callback參數</p><p></p><undefined><li><b>回應</b></li></undefined>
+<p>---</p><ul><li>&nbsp; status: &quot;success&quot;</li>
+<li>&nbsp; video:&nbsp;<ul><li>id: 影片id</li>
+<li>title: 影片標題</li>
+<li>content: 影片內容</li>
+<li>video_type: 影片種類：&quot;ivod&quot; or &quot;news&quot;</li>
+<li>committee_id: 委員會id</li>
+<li>ad_session_id: 會期id</li>
+<li>meeting_description: 會議內容</li>
+<li>youtube_url: youtube網址</li>
+<li>youtube_id: youtube id</li>
+<li>image: 影片縮圖</li>
+<li>ivod_url: ivod網址</li>
+<li>source_url: 來源網址</li>
+<li>source_name: 來源名稱</li>
+<li>time_start: 開始時間</li>
+<li>time_end: 結束時間</li>
+<li>date: 影片發生時間</li>
+<li>created_at: 建立時間</li>
+<li>updated_at: 更新時間</li>
+<li>target: 質詢對象</li>
+<li>ad_session:&nbsp;<ul><li>id: 會期id</li>
+<li>name: 會期名稱</li>
+<li>ad_id: 屆次id</li>
+<li>date_start: 會期開始時間</li>
+<li>date_end: 會期結束時間</li></ul>
+</li>
+<li>committee:&nbsp;<ul><li>id: 委員會id</li>
+<li>name: 委員會名稱</li></ul>
+</li>
+<li>legislators<ul><li>id: 立委id</li>
+<li>name: 立委名字</li>
+<li>image: 圖片</li>
+<li>in_office:&nbsp; 是否在職<ul><li>party:&nbsp;</li>
+<li>id: 黨id</li>
+<li>name: 黨名</li>
+<li>image: 黨圖片</li>
+<li>abbreviation: 黨縮寫legislators</li></ul>
+</li>
+<li>id: 立委id</li>
+<li>name: 立委名字</li>
+<li>image: 圖片</li>
+<li>in_office:&nbsp; 是否在職<ul><li>party:&nbsp;</li>
+<li>id: 黨id</li>
+<li>name: 黨名</li>
+<li>image: 黨圖片</li>
+<li>abbreviation: 黨縮寫</li></ul>
+</li></ul>
+</li>
+<li>ad:&nbsp;<ul><li>id: 屆次id</li>
+<li>name: 屆次名</li>
+<li>vote_date:投票日期</li>
+<li>term_start: 任期開始</li>
+<li>term_end: 任期結束</li></ul>
+</ul>
+</ul>
+
+<p></p><p></p><p></p></body>
 </html>
