@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="5349"/>
+<meta name="version" content="5676"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$moed7ct-taigi-neologism</title>
 </head>
 <body><h1>新台語·運動</h1><p>( <a href='/11-moed7ct'/>11 moed7ct </a>)</p><p>Liz報告：<a href="https://speakerdeck.com/audreyt/liz-lin-xin-tai-yu-yun-dong"></a>https://speakerdeck.com/audreyt/liz-lin-xin-tai-yu-yun-dong</p><p></p><p></p><h2>專案目的</h2><p>大家一起說台語</p><ul><li>年輕人失去說台語的動力與能力</li>
@@ -170,8 +170,11 @@
 <li>此外，A-TSIOH好像也開始動了，還有PominWu原本的進度，是不是有什麼方法可以讓各位更順暢地一起工作呢？實在抱歉，我不會寫code，所以也不知道怎麼規劃協調，需要協助！</li>
 <li>說的沒錯，而且跟pm5談過server side本來打算用Flask,我有把Pomin的mockup 的 PhraseStore connect to一個 flask + SQLAlchemy的backend.其實跟 Django的models很像你可以試試看</li>
 <li><a href="https://github.com/a-tsioh/taigi"></a>https://github.com/a-tsioh/taigi</li>
-<li>（已經有admin的列子)</li></ul>
-<ul style="list-style: none;"><li><br/></li></ul>
+<li>（已經有admin的列子)</li>
+<li>我目前的想法是我負責設計資料庫，然後我只負責提供API，讓前端可以用get/post來撈資料/增加語料，我會用json回傳。我這邊就不負責html/js/css。我預計用test-driven試驗開發，確定好API給大家看，這樣工作效率應該會比較好一點。</li>
+<li>django雖然比較大隻，不過相對他東西也拆比較細。我覺得我們的網站日後應該比較好維護</li>
+<li>資料庫格式我有另外考慮文字轉寫和變調文本）的需求，所以我的表拆比較細</li>
+<li>而且我手邊有一些初使語料可以用，我再</li></ul>
 
 <h2>API needed (back-end)</h2><p></p><p></p><ul><li>User Registration : FB API ?&nbsp;</li></ul>
 <ul class="comment"><li>FB+Google?</li>
