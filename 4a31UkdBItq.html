@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="6850"/>
+<meta name="version" content="6989"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$4a31UkdBItq</title>
 </head>
 <body><h1>政治承諾追蹤網 Political Promise Tracker</h1><ul><li>Github: <a href="https://github.com/g0v/ppt"></a>https://github.com/g0v/ppt</li></ul>
@@ -157,7 +157,27 @@
 <ul class="comment"><li>設定成 project registry 中的 tags，需要幫忙的會自動 promote 到 g0v project hub<ul class="comment"><li>需要界面流程設計的部分我可以幫忙</li></ul>
 </ul>
 
-<h2>實作細節（非技術背景可跳填）</h2><p>Solution stack: NodeJS + ReactJS <a href='http://www.htmlxprs.com/post/20/creating-isomorphic-apps-with-react-and-nodejs'/>isomorphic web app</a>.</p><p>API server with <a href='https://speakerdeck.com/coodoo/why-loopback-rocks'/>loopback</a>, which also takes care of database connection, ORM-like abstractions, etc.</p><p></p><p></p><p>協作工具</p><ul><li>github repo：<a href="https://github.com/g0v/ppt"></a>https://github.com/<a href='https://github.com/g0v/ppt'/>g0v/ppt</a></li>
+<p><b>六都資料來源整理（2015/2/14）</b></p><p></p><undefined><li><b>選舉承諾</b></li></undefined>
+<ul><li>中選會選舉公報&nbsp; <a href="http://103bulletin.cec.gov.tw/103/"></a>http://103bulletin.cec.gov.tw/103/<ul><li>台北市：禁止存取？</li>
+<li>新北市：<a href="http://goo.gl/3Yr4aM"></a>http://goo.gl/3Yr4aM</li>
+<li>桃園市：<a href="http://goo.gl/ETgvrF"></a>http://goo.gl/ETgvrF</li>
+<li>台中市：<a href="http://goo.gl/3o05Ud"></a>http://goo.gl/3o05Ud</li>
+<li>台南市：<a href="http://goo.gl/i8nRBQ"></a>http://goo.gl/i8nRBQ</li>
+<li>高雄市：<a href="http://goo.gl/258q6a"></a>http://goo.gl/258q6a</li></ul>
+</li>
+<li>六都施政白皮書<ul><li>台北市：</li>
+<li>新北市：</li>
+<li>桃園市：</li>
+<li>台中市：</li>
+<li>台南市：</li>
+<li>高雄市：</li></ul>
+</ul>
+
+<undefined><li><b>追蹤報導</b></li></undefined>
+<ul><li>新聞資料庫</li>
+<li>各局處公告 (?)</li></ul>
+
+<p></p><h2>實作細節（非技術背景可跳填）</h2><p>Solution stack: NodeJS + ReactJS <a href='http://www.htmlxprs.com/post/20/creating-isomorphic-apps-with-react-and-nodejs'/>isomorphic web app</a>.</p><p>API server with <a href='https://speakerdeck.com/coodoo/why-loopback-rocks'/>loopback</a>, which also takes care of database connection, ORM-like abstractions, etc.</p><p></p><p></p><p>協作工具</p><ul><li>github repo：<a href="https://github.com/g0v/ppt"></a>https://github.com/<a href='https://github.com/g0v/ppt'/>g0v/ppt</a></li>
 <li>hackfoldr 工作資料夾網址：</li>
 <li>google drive 共用資料夾網址：</li></ul>
 
@@ -168,5 +188,5 @@
 <li>Move mock data into in-memory database, serve from API.</li></li>
 <li>外觀重新調整：決定是否要留著 semantic-ui 還是改用 <a href='http://material-ui.com/'/>material-ui</a>、<a href='http://paletton.com/#uid=33i0u0kw0oUmHvDtLuRBPkmKtf3'/>調顏色</a> （或<a href='http://paletton.com/#uid=33i0u0kCfw8lTF2r+CiEdpnIzjN'/>亮一點的版本</a></li></ul>
 
-<p><b>API Server</b></p><p><a href="https://promisetw.herokuapp.com/"></a>https://promisetw.herokuapp.com/</p><p>API explorer: <a href="https://promisetw.herokuapp.com/explorer"></a><a href='https://promisetw.herokuapp.com/explorer'/>https://promisetw.herokuapp.com/explorer</a></p><p></p><p><b>DB structure</b></p><p>參考<a href='https://drive.google.com/drawings/d/1EGtlENxrRaW0bpdZnxlqV516nmoz8VtOhoIZpqnrG1Y/edit?ddrp=1#'/>真度計的 ER Diagram</a>，將上述 prototype 所需 database table 與關聯，繪製成下面的 ER Diagram：</p><p><a href="https://docs.google.com/drawings/d/1KLyjlC6B2ylx0X-OVLjifSrPmoZDiwdHZUhEbiYnQs4/edit?usp=sharing"></a>https://docs.google.com/drawings/d/1KLyjlC6B2ylx0X-OVLjifSrPmoZDiwdHZUhEbiYnQs4/edit?usp=sharing</p><p>（縮網址 <a href="http://goo.gl/eDt7TZ"></a>http://goo.gl/eDt7TZ ）</p><p></p><h2></h2><p></p><p><b>&#92; PPT = PowerPuff Trolls /</b></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_4a31UkdBItq_p.77325_1419075435708_Powerpuff_644f21_915672.jpg'/></p><p></p></body>
+<p><b>API Server</b></p><p><a href="https://promisetw.herokuapp.com/"></a>https://promisetw.herokuapp.com/</p><p>API explorer: <a href="https://promisetw.herokuapp.com/explorer"></a><a href='https://promisetw.herokuapp.com/explorer'/>https://promisetw.herokuapp.com/explorer</a></p><p></p><p><b>DB structure</b></p><p>參考<a href='https://drive.google.com/drawings/d/1EGtlENxrRaW0bpdZnxlqV516nmoz8VtOhoIZpqnrG1Y/edit?ddrp=1#'/>真度計的 ER Diagram</a>，將上述 prototype 所需 database table 與關聯，繪製成下面的 ER Diagram：</p><p><a href="https://docs.google.com/drawings/d/1KLyjlC6B2ylx0X-OVLjifSrPmoZDiwdHZUhEbiYnQs4/edit?usp=sharing"></a>https://docs.google.com/drawings/d/1KLyjlC6B2ylx0X-OVLjifSrPmoZDiwdHZUhEbiYnQs4/edit?usp=sharing</p><p>（縮網址 <a href="http://goo.gl/eDt7TZ"></a>http://goo.gl/eDt7TZ ）</p><p></p><p></p><p></p></body>
 </html>
