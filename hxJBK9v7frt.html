@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1554"/>
+<meta name="version" content="1770"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$hxJBK9v7frt</title>
 </head>
 <body><h1>政商關係圖</h1><p></p><p><b>計畫目標</b></p><p>提供台灣公司、社(財)團法人關係整合查詢界面，供各界查詢法人、自然人網絡連結。</p><p></p><p><b>短期目標</b></p><ul><li>open source</li>
@@ -73,5 +73,26 @@
 <ul><li>網路結構上的資訊探勘可用的SNA模型有好幾種，可以從數種中心性(centrality)及子網路群集探勘(clique)的現成方法中先行計算看看，再去解釋其中的實質意義是甚麼 (或是反過來)</li></ul>
 <ul class="comment"><li>這個部份先記錄一下構想, 歡迎討論~ 我會自行填坑... XD</li></ul>
 
-<p></p><p></p></body>
+<h2>圍標檢測</h2><p></p><p><b>計劃目標</b></p><p></p><p>利用公司關係圖，建立圍標檢測系統：</p><p></p><undefined><li>輸入公司關係</li></undefined>
+
+<ul><li>輸入：</li><ol><li>文字檔（graph edge list）</li></ol>
+</ul>
+<ul><li>輸出：</li><ol><li>圍標嫌疑標案清單</li>
+<li>公司關係圖id</li></ol>
+</ul>
+
+<undefined><li>使用者查詢1. 列出圍標嫌疑標案清單</li></undefined>
+<ul><li>輸入：</li><ol><li>公司關係圖id</li></ol>
+</ul>
+<ul><li>輸出：</li><ol><li>圍標嫌疑標案清單</li></ol>
+</ul>
+
+<undefined><li>使用者查詢2. 查詢圍標可能性</li></undefined>
+<ul><li>輸入：</li><ol><li>公司關係圖id</li>
+<li>統編清單</li></ol>
+</ul>
+<ul><li>輸出：</li><ol><li>圍標嫌疑指數</li></ol>
+</ul>
+
+</body>
 </html>
