@@ -3,21 +3,21 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="930"/>
+<meta name="version" content="961"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$uhB6qAwYXe5</title>
 </head>
 <body><h1>地號轉地圖 Land No. Mapper</h1><ul class="comment"><li>構想來自<a href='http://www.aypwip.org/webnote/poponfire'/>土地許願松</a></li></ul>
 
-<h2>專案發想：地號資料處理大幫手</h2><p>一個【輸入段小段地號，產出地圖與圖形】的工具</p><ul><li>完成一個 非程式專長 也可以用的介面/編輯器</li>
+<h2>專案發想：地號資料處理大幫手</h2><p>一個【輸入代碼段小段地號，產出地圖與圖形】的工具</p><ul><li>完成一個 非程式專長 也可以用的介面/編輯器</li>
 <li>結合地圖（ex OSM、GoogleMap）</li>
 <li>地圖成果能有網址連結</li>
 <li>類似 <a href='http://timemapper.okfnlabs.org/'/>TimeMapper</a>：免安裝軟體...</li>
 <li>並且有圖層管理的功能</li>
 <li>是否與 QGIS 重複功能 ?</li></ul>
 
-<h2>技術環節說明與討論</h2><p>ronny 地號查詢界面與知識說明：<a href="https://hackpad.com/eK9ZPnn8Qcs"></a>https://hackpad.com/eK9ZPnn8Qcs</p><p></p><undefined><li><b>關於地籍資料的取得</b></li></undefined>
-<ul><li><b>NEW </b>目前可以運用的資料來源：國土測繪中心<ul><li>已經有專案囉！posland：<a href="https://github.com/g0v/posland"></a><a href='https://github.com/g0v/posland'/>https://github.com/g0v/posland</a>；暫無抓下地塊的圖型檔</li>
-<li>需要再抓下圖形檔！</li>
+<h2>技術環節說明與討論</h2><p>友善地號資訊查詢界面 by ronny：<a href="https://g0v.hackpad.com/ZrNxaKVn8jt"></a>https://g0v.hackpad.com/ZrNxaKVn8jt</p><p></p><undefined><li><b>關於地籍資料的取得</b></li></undefined>
+<ul><li><b>NEW </b>目前可以運用的資料來源：國土測繪中心<ul><li>已經有專案囉！posland：<a href="https://github.com/g0v/posland"></a><a href='https://github.com/g0v/posland'/>https://github.com/g0v/posland</a></li>
+<li>暫無抓下地塊的圖型檔，需要再抓下圖形檔！</li>
 <li>將圖形去背、定位等課題</li></ul>
 </ul>
 
@@ -41,10 +41,10 @@
 <ul><li>所需功能：疊圖、調整圖層透明度</li>
 <li>每一種介面狀態，擁有一個連結</li></ul>
 
-<p></p><h2>Mockup</h2><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_uhB6qAwYXe5_p.172171_1415223740534_DSC05955.JPG'/></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><h2>應用設想</h2><p>這樣的工具，可以讓關注土地議題的人去使用，例如：</p><ul><li>例如碧潭吊橋都更案的地號，與古蹟指定範圍的地號，兩者畫成地圖來對照（完整請見：<a href='https://github.com/ronnywang/sandbox/tree/master/20130805'/>碧潭吊橋都更範圍和劃定古蹟範圍 by ronny</a>）。以下擷取 <a href='https://github.com/ronnywang'/>ronnywang</a> 繪製的地號範圍作並置，上方為古蹟地號範圍，下方為都市更新案地號範圍：</li></ul>
+<p></p><h2>Mockup</h2><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_uhB6qAwYXe5_p.172171_1415223740534_DSC05955.JPG'/></p><p></p><p></p><h2>程式碼：</h2><p>我之前寫的黨產地圖可以給大家參考。</p><p><a href="https://github.com/billy3321/billy3321.github.io/tree/master/kmt"></a><a href='https://github.com/billy3321/billy3321.github.io/tree/master/kmt'/>https://github.com/billy3321/billy3321.github.io/tree/master/kmt</a></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><h2>應用設想與案例蒐集</h2><p>這樣的工具，可以讓關注土地議題的人去使用，例如：</p><ul><li>例如碧潭吊橋都更案的地號，與古蹟指定範圍的地號，兩者畫成地圖來對照（完整請見：<a href='https://github.com/ronnywang/sandbox/tree/master/20130805'/>碧潭吊橋都更範圍和劃定古蹟範圍 by ronny</a>）。以下擷取 <a href='https://github.com/ronnywang'/>ronnywang</a> 繪製的地號範圍作並置，上方為古蹟地號範圍，下方為都市更新案地號範圍：</li></ul>
 <p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_uhB6qAwYXe5_p.172171_1414860067164_12345.png'/></p><p></p><p>Zen Zentree&gt; 程式跑出來的圖超厲害, 不過有一丁點誤差.(ex.146地號沒含進去. 141,563,149,150地界超出國校路)</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_uhB6qAwYXe5_p.172171_1414860372186_123456.png'/></p><p></p><ul><li>國民黨黨產地號清冊，需要進一步地圖化（完整請見：<a href='https://g0v.hackpad.com/87CNswL2g7U'/>KMT Property</a>）</li>
 <li>協助友善小農，進行歷年田區範圍的記錄地圖 by tingyu</li>
 <li>土地開發案，相關新聞應用</li></ul>
 
-<p></p><h2>其他</h2><p>chewei&gt; 突然很好奇世界各國的土地管理系統 (台灣是段小段&amp;地號) ，甚至是否有國際通用的可能。</p><p></p><p>(from Dongpo <a href='https://www.dropbox.com/s/vpwi7vtotlyv7sp/20140819_OpenGeoMeeting.pdf'/>簡報</a>)</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_sGw1sEwbfHP_p.172171_1416254856274_%E5%9C%96%E7%89%87%203.png'/></p><p></p><p></p><h2>程式碼：</h2><p>我之前寫的黨產地圖可以給大家參考。</p><p><a href="https://github.com/billy3321/billy3321.github.io/tree/master/kmt"></a>https://github.com/billy3321/billy3321.github.io/tree/master/kmt</p><p></p></body>
+<p></p><h2>其他</h2><p>chewei&gt; 突然很好奇世界各國的土地管理系統 (台灣是段小段&amp;地號) ，甚至是否有國際通用的可能。</p><p></p><p>(from Dongpo <a href='https://www.dropbox.com/s/vpwi7vtotlyv7sp/20140819_OpenGeoMeeting.pdf'/>簡報</a>)</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_sGw1sEwbfHP_p.172171_1416254856274_%E5%9C%96%E7%89%87%203.png'/></p><p></p><p></p></body>
 </html>
