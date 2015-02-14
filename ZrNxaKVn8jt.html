@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="17"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$ZrNxaKVn8jt</title>
+</head>
+<body><h1>友善地號資訊查詢界面</h1><p>地號是台灣政府處理地理時很重要的地理單位，台灣有兩千多萬塊地，不是每個地都有地址，很多地的描述都是用地號，例如「環評書地點」、「國有地資訊」、「土地買賣」等，因此這 HackPad 想要整理一下，讓大家更容易了解地號是什麼，以及如果要查詢的話有什麼方法。</p><p></p><p><b>關於地號</b></p><ul><li>地號: 臺北市中正區城中段三小段21-2號 (這是最高法院的位置)<ul><li>臺北市: 縣市名稱</li>
+<li>中正區: 行政區名稱<ul><li>行政區資訊很重要，因為同一縣市可能會在不同行政區會有同樣的段名，Ex: 臺南市中西區正義段 和 臺南市南區正義段 兩個是不同的路段</li></ul>
+</li>
+<li>城中段: 大段名</li>
+<li>三小段: 小段名</li>
+<li>21: 母號</li>
+<li>-2號: 子號<ul><li>號碼的呈現可能有 21-2, 00210002 兩種</li>
+<li>有可能沒有子號，那就直接寫成 21 號就可以了</li></ul>
+</li></ul>
+</li>
+<li>地籍相關資訊<ul><li>地籍的管理是由各縣市的地政事務所所管理，因此要查詢地號的變動，必需要先知道你要查的地是哪一個地政事務所</li>
+<li>地籍是日治時代延用至今的，所以可以從現在的地號推回日治時代的地名，Ex: 龍山國中 地號是 臺北市萬華區萬華段一小段626號 ， 透過 <a href='http://w2.land.taipei.gov.tw/Sub/B/NewOld/abalidb.asp'/>台北市建成地政事務所網頁</a> 可以查詢到在過去是 八甲段1小段21地號 ，再透過<a href='http://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E8%88%8A%E7%94%BA%E5%90%8D%E5%88%97%E8%A1%A8'/>維基百科上面整理的日治時代舊町名列表</a>，可以查到八甲段之前是八甲町，因此日治時代是 八甲町一丁目21號</li></ul>
+</li>
+<li>代碼相關<ul><li>縣市代碼: 臺北市 A, 臺中市 B ... (與身份證字號第一碼相同)<ul><li><a href="https://sheethub.com/ronnywang/中華民國縣市"></a><a href='https://sheethub.com/ronnywang/%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B%E7%B8%A3%E5%B8%82'/>https://sheethub.com/ronnywang/中華民國縣市</a></li>
+<li>L臺中縣 R臺南縣 S高雄縣 已於 2010 年升格成直轄市，身份證已經不再發，合併入 B臺中市 D臺南市 E高雄市</li></ul>
+</li>
+<li>事務所代碼: 臺北市中山事務所 AC, 臺中市中興事務所 BC, 彰化縣北斗事務所 NF, 臺中市豐原事務所 LA<ul><li><a href="http://data.gov.tw/node/5967"></a><a href='http://data.gov.tw/node/5967'/>http://data.gov.tw/node/5967</a> (資料很舊...)</li>
+<li><a href="https://sheethub.com/ronnywang/地政事務所轄區圖"></a><a href='https://sheethub.com/ronnywang/%E5%9C%B0%E6%94%BF%E4%BA%8B%E5%8B%99%E6%89%80%E8%BD%84%E5%8D%80%E5%9C%96'/>https://sheethub.com/ronnywang/地政事務所轄區圖</a> (上面那個資料的 SheetHub 呈現)</li>
+<li>但是舊的 L臺中縣, R臺南縣, S高雄縣 的地政事務所仍是用 L, R, S ，沒有跟著變動為 B, D, E，所以現在的臺中市裡面會同時有 L 和 B 開頭的事務所。</li>
+<li>2014/11/1 成立 LI臺中市龍井事務所，並且將LC臺中清水事務所許多路段轉移過去。</li></ul>
+</li>
+<li>段名代碼:&nbsp; 臺北市萬華段一小段(建成所) AB0043, 臺中市復興段(豐原所) LA0181, 臺中市中華段七小段(中山所)&nbsp; BA0064<ul><li><a href="http://www.land.moi.gov.tw/ngis/chhtml/query3.asp?dnformat=3"></a><a href='http://www.land.moi.gov.tw/ngis/chhtml/query3.asp?dnformat=3'/>http://www.land.moi.gov.tw/ngis/chhtml/query3.asp?dnformat=3</a></li>
+<li><a href="https://sheethub.com/ronnywang/土地段名代碼表/"></a><a href='https://sheethub.com/ronnywang/%E5%9C%9F%E5%9C%B0%E6%AE%B5%E5%90%8D%E4%BB%A3%E7%A2%BC%E8%A1%A8/'/>https://sheethub.com/ronnywang/土地段名代碼表/</a></li>
+<li>同一縣市同一段名有可能會是不同段，例如 臺南市中西區正義段(DA0169 臺南所), 臺南市南區正義段(DC0404 東南所), 臺南市仁德區正義段(RF0991 歸仁所)&nbsp; ，甚至同一事務所也有可能會有同段名是不同段，例如 新北市蘆洲區正義段 FG1762 , 新北市三重區正義段 FG1739 兩個都是 FG 三重事務所的。</li></ul>
+</ul>
+</ul>
+<p><b>相關連結</b></p><ul><li><a href="http://easymap.land.moi.gov.tw/"></a><a href='http://easymap.land.moi.gov.tw/'/>http://easymap.land.moi.gov.tw/</a> 內政部地政司 地籍圖資網路便民服務系統</li>
+<li><a href="http://maps.nlsc.gov.tw/O09/mapshow.action"></a><a href='http://maps.nlsc.gov.tw/O09/mapshow.action'/>http://maps.nlsc.gov.tw/O09/mapshow.action</a> 內政部國土測繪中心 國土測繪中心圖資</li></ul>
+
+<p></p></body>
+</html>
