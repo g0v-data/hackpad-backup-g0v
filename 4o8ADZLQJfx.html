@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="319"/>
+<meta name="version" content="564"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$4o8ADZLQJfx</title>
 </head>
 <body><h1>全球空難事件視覺化</h1><p></p><p>目的</p><p>新聞模版的實驗</p><p></p><p>授權</p><p>協作文件以 CC-BY 授權</p><p></p><p>工具</p><p>地理事件規模模版: <a href="http://0media.tw/t/geoevent/"></a>http://0media.tw/t/geoevent/</p><p></p><p>空難列表協作文件</p><p><a href="https://docs.google.com/spreadsheets/d/1weTyy3X52QginfNbrSmxjR8WpsAEgJSRjzzqBJ8RaXk/edit#gid=615981805"></a>https://docs.google.com/spreadsheets/d/1weTyy3X52QginfNbrSmxjR8WpsAEgJSRjzzqBJ8RaXk/edit#gid=615981805</p><p></p><p>資料來源</p><p><a href="http://en.wikipedia.org/wiki/List_of_accidents_and_incidents_involving_commercial_aircraft"></a>http://en.wikipedia.org/wiki/List_of_accidents_and_incidents_involving_commercial_aircraft</p><p></p><p>製作方式</p><ol><li>在協作文件中最上面右方填入你的名字 (列入 contributor)</li>
@@ -13,9 +13,14 @@
 <li>填進協作文件中</li>
 <li>回到 2.</li></ol>
 
-<p>欄位說明</p><ul><li>shortname: 為了友善的顯示在樣版中，一個夠短又可理解的名稱</li>
+<p>欄位說明</p><ul><li>shortname: 為了友善的顯示在樣版中，一個夠短又可理解的名稱<ul><li>若省略的話, 會改用 name 欄位</li></ul>
+</li>
 <li>death: 死亡人數</li>
 <li>wounded: 受傷人數</li></ul>
 
-<p>有建議直接開 issue</p><p><a href="http://github.com/zbryikt/geoevent/issues"></a>http://github.com/zbryikt/geoevent/issues</p><p></p></body>
+<p>注意:&nbsp; 死傷人數在 listing 裡面有時會忽略, 需要點到詳細資料頁面去看比較準確</p><p></p><p><b>有建議直接開 issue</b></p><p><a href="http://github.com/zbryikt/geoevent/issues"></a>http://github.com/zbryikt/geoevent/issues</p><p></p><p><b>討論</b></p><p>目前我針對death &amp; wounded爬了wiki的資料，但會有一些值像是30 (including 7 on the ground)，這樣的情況是只需取int即可？（以下連結為爬完結果）</p><ul class="comment"><li>這樣的話就是取 30&nbsp;</li>
+<li>ok</li>
+<li>順道一提, 失蹤的寫法是先算在死亡人數中, 然後在備註裡寫含多少人失蹤</li></ul>
+<p>然後shortname的話現在看起來是用「名字@地點」的命名方式，還是說有其他規則呢？</p><ul class="comment"><li>目前是航空公司 航班@地點, 但有些比較著名的可以直接寫名字, 比方說 911</li></ul>
+<p><a href="https://docs.google.com/spreadsheets/d/1n_TSV0tdxXjhHfroiaMzEzUDLNT06yq94j1oM1rcV6g/edit?usp=sharing"></a>https://docs.google.com/spreadsheets/d/1n_TSV0tdxXjhHfroiaMzEzUDLNT06yq94j1oM1rcV6g/edit?usp=sharing</p><p></p><p></p></body>
 </html>
