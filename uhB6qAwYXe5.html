@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="898"/>
+<meta name="version" content="930"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$uhB6qAwYXe5</title>
 </head>
 <body><h1>地號轉地圖 Land No. Mapper</h1><ul class="comment"><li>構想來自<a href='http://www.aypwip.org/webnote/poponfire'/>土地許願松</a></li></ul>
@@ -15,9 +15,7 @@
 <li>並且有圖層管理的功能</li>
 <li>是否與 QGIS 重複功能 ?</li></ul>
 
-<h2>技術環節說明與討論</h2><ul class="comment"><li>我非資料專業，以下內容請不吝修改XD !!</li></ul>
-
-<undefined><li><b>關於地籍資料的取得</b></li></undefined>
+<h2>技術環節說明與討論</h2><p>ronny 地號查詢界面與知識說明：<a href="https://hackpad.com/eK9ZPnn8Qcs"></a>https://hackpad.com/eK9ZPnn8Qcs</p><p></p><undefined><li><b>關於地籍資料的取得</b></li></undefined>
 <ul><li><b>NEW </b>目前可以運用的資料來源：國土測繪中心<ul><li>已經有專案囉！posland：<a href="https://github.com/g0v/posland"></a><a href='https://github.com/g0v/posland'/>https://github.com/g0v/posland</a>；暫無抓下地塊的圖型檔</li>
 <li>需要再抓下圖形檔！</li>
 <li>將圖形去背、定位等課題</li></ul>
@@ -30,7 +28,7 @@
 <li>ronny 正在研究，從 WMS 轉出 GeoJSON 資料，<a href='http://youtu.be/1dga12J26Tw?t=19m33s'/>參考演講</a>&nbsp;</li>
 <li>ronny 表示，成功率不太高</li><ul><li><a href='http://gis.rchss.sinica.edu.tw/index.php?option=com_content&amp;view=article&amp;id=413:plugin-for-qgis&amp;catid=89:2009-07-22-06-28-27&amp;Itemid=132'/>地籍圖查詢套繪系統Plugin For QGIS</a>&nbsp; 中研院之前就有開發過類似的模組，可以用地號查位地籍圖的位置等資訊，現在政府很多圖台也有類似的功能，不過重點在於這些權限目前都還是限縮在政府手上，如果能開放API等使用應該就能解決問題。</li></ul>
 </ul>
-<ul class="comment"><li><i>開放地籍資料的 [API 的技術] 與 [法律疑慮檢討]&nbsp; (疑 我是在幫公部門做研究案嗎)</i></li></ul>
+<ul class="comment"><li><i>開放地籍資料的 [API 的技術] 與 [法律疑慮檢討]&nbsp;</i></li></ul>
 <ul><li><a href='https://docs.google.com/document/d/1BgTJjLV4glQzbn-NQcWbjOd3KtSbgy5EDTG-Nna8bAc/edit?pli=1'/>地籍圖KML資料取得步驟</a><ul><li>地籍圖資網路便民服務系統提供KML的功能已經被取消了 囧</li></li>
 <li><i>系統說明:「地籍圖資網路便民服務系統」介接使用Google圖資，因授權與收費(使用者付費)問題，彈出式Google地圖與衛星影像及街景無法繼續提供服務，必須改為背景套疊網路地圖方式提供服務。本系統更版後除了提供TGOS與NLSC及OSM網路地圖背景套疊服務外，也新增了點選查詢同地段之宗地，並提供點選宗地顯示地號及經緯度坐標等功能，您可運用該坐標於任何網路地圖進行定位服務，歡迎多加利用。</i></li></li>
 <li>&lt;囧&gt;</li></ul>
@@ -48,5 +46,5 @@
 <li>協助友善小農，進行歷年田區範圍的記錄地圖 by tingyu</li>
 <li>土地開發案，相關新聞應用</li></ul>
 
-<p></p><h2>其他</h2><p>chewei&gt; 突然很好奇世界各國的土地管理系統 (台灣是段小段&amp;地號) ，甚至是否有國際通用的可能。</p><p></p><p>(from Dongpo <a href='https://www.dropbox.com/s/vpwi7vtotlyv7sp/20140819_OpenGeoMeeting.pdf'/>簡報</a>)</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_sGw1sEwbfHP_p.172171_1416254856274_%E5%9C%96%E7%89%87%203.png'/></p><p></p><p></p><h2>程式碼：</h2><p></p><p>我之前寫的黨產地圖可以給大家參考。</p><p></p><p><a href="https://github.com/billy3321/billy3321.github.io/tree/master/kmt"></a>https://github.com/billy3321/billy3321.github.io/tree/master/kmt</p><p></p></body>
+<p></p><h2>其他</h2><p>chewei&gt; 突然很好奇世界各國的土地管理系統 (台灣是段小段&amp;地號) ，甚至是否有國際通用的可能。</p><p></p><p>(from Dongpo <a href='https://www.dropbox.com/s/vpwi7vtotlyv7sp/20140819_OpenGeoMeeting.pdf'/>簡報</a>)</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_sGw1sEwbfHP_p.172171_1416254856274_%E5%9C%96%E7%89%87%203.png'/></p><p></p><p></p><h2>程式碼：</h2><p>我之前寫的黨產地圖可以給大家參考。</p><p><a href="https://github.com/billy3321/billy3321.github.io/tree/master/kmt"></a>https://github.com/billy3321/billy3321.github.io/tree/master/kmt</p><p></p></body>
 </html>
