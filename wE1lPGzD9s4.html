@@ -3,13 +3,18 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1020"/>
+<meta name="version" content="1109"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$wE1lPGzD9s4</title>
 </head>
-<body><h1>判決書心證分析</h1><h2>目標</h2><p>司改會在申訴不適任法官與檢察官的過程中發現，許多判決的<b><u>案情事實、背景近似</u></b>，適用的法規也雷同，<b><u>但不同的法官卻做出迥然不同的判決結果</u></b>，在<b><u>法定刑與法官自由心證</u></b>之間是否有法官恣意的問題，因此希望透過資訊工具進行分析量化。</p><p></p><h2>相關專案</h2><p><a href='/--OoaenzjVDKK'/>貪汙判決分析</a></p><p><a href='/AoHSTKneEw7'/>裁判書小幫手</a></p><p><a href='/Data-Centric-Government--NoJ1mbwsqkQ'/>Data-Centric Government 的二十大類資料</a></p><p></p><h2>工作內容</h2><p><b>可能方法</b></p><ol><li><a href='http://zh.wikipedia.org/wiki/%E5%86%B3%E7%AD%96%E6%A0%91'/>決策樹</a></li>
-<li>文本關連分析</li></ol>
+<body><h1>判決書心證分析</h1><h2>目標</h2><p>司改會在申訴不適任法官與檢察官的過程中發現，許多判決的<b><u>案情事實、背景近似</u></b>，適用的法規也雷同，<b><u>但不同的法官卻做出迥然不同的判決結果</u></b>，在<b><u>法定刑與法官自由心證</u></b>之間是否有法官恣意的問題，因此希望透過資訊工具進行分析量化。</p><p></p><h2>相關專案</h2><p><a href='/--OoaenzjVDKK'/>貪汙判決分析</a></p><p><a href='/AoHSTKneEw7'/>裁判書小幫手</a></p><p><a href='/Data-Centric-Government--NoJ1mbwsqkQ'/>Data-Centric Government 的二十大類資料</a></p><p><a href='http://www.judicial.gov.tw/revolution/%A7%AB%AE%60%A9%CA%A6%DB%A5D%B6q%A6D%A4%C0%AAR%AC%E3%A8s%A4p%B2%D5%B4%C1%A4%A4%B3%F8%A7i-%A5H%A6D%AAk%B2%C4221%B1%F8%B2%C41%B6%B5%B1j%A8%EE%A9%CA%A5%E6%B8o%AC%B0%A8%D2.doc'/>妨害性自主量刑分析研究小組期中報告-以刑法第221條第1項強制性交罪為例</a></p><p></p><h2>工作內容</h2><p><b>可能方法</b></p><ol><li><a href='http://zh.wikipedia.org/wiki/%E5%86%B3%E7%AD%96%E6%A0%91'/>決策樹</a></li>
+<li>文本關連分析</li>
+<li>從實際案例回推<ol><li>去掉部分資訊，ex被告</li></ol>
+</ol>
 
-<p><b>目標選定</b></p><ol><li>初步可先從個別罪名單純的項目開始<ol><li>殺人罪</li>
+<p><b>呈現</b></p><ol><li>判決產生器</li>
+<li>心理測驗</li></ol>
+
+<p><b>目標選定</b></p><ol><li>初步可先從一位法官單一罪名開始<ol><li>殺人罪</li>
 <li>妨害性自主<ol><li>強姦罪</li>
 <li>猥褻</li></ol>
 </li></ol>
@@ -23,6 +28,7 @@
 <ul class="comment"><li>我倒覺得應該從一審抓，因為三審判決常常寫得很簡略。二審是會針對一審的結果決定改判或維持原判，所以結論就是一審無論如何都避不掉。</li>
 <li>會由三審往回爬資料，是因為必須是已三審定讞的案件，所以先由三審的判決書做判決書的範圍的圈定。</li>
 <li>法律法源網的判決查詢，會附歷審判決，可能有幫助</li></ul>
+
 <p><b>資料欄位</b></p><ol><li>法官姓名</li>
 <li>罪名</li>
 <li>案情事實<ol><li>使用斷詞系統去比對案情結構的相似度→詞句組成及詞頻分析→量化</li>
@@ -42,7 +48,7 @@
 <li>好噢！謝謝你 :D</li>
 <li>＋＋</li></ul>
 
-<h2>所需技術</h2><ul class="task"><li>爬資料</li>
+<p>「猶不知悔改」前是前科</p><p>「等語云云」前是法官不採的</p><p>「惟」是法官的想法</p><p></p><p>最末段為量刑</p><p></p><h2>所需技術</h2><ul class="task"><li>爬資料</li>
 <li>斷詞</li></ul>
 <ul class="taskdone"><li><a href='http://zh.wikipedia.org/wiki/%E5%86%B3%E7%AD%96%E6%A0%91'/>機器學習（決策樹）</a>：格致</li></ul>
 <ul class="comment"><li>先來認領一下... 大家好我是格致, 語言基礎的機器分類及學習方法這邊我或許可以幫得上忙 :D</li></ul>
