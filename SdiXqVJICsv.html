@@ -3,18 +3,37 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="302"/>
+<meta name="version" content="727"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$SdiXqVJICsv</title>
 </head>
-<body><h1>地理數據視覺化</h1><p></p><p>討論資訊呈現在地圖上的樣版需求及設計</p><p></p><p><b>發想</b></p><ul><li>地理區塊呈現，使用熱圖</li>
-<li>利用有提供結構化資料 API 的線上協作工具做資料來源</li>
+<body><h1>地理數據視覺化</h1><p></p><p>討論資訊呈現在地圖上的樣版需求及設計</p><p></p><p><b>需求</b></p><ul><li>疾病管制 / 災害控管</li>
+<li>環境汙染 ( similar to <a href="http://env.g0v.tw"></a>http://env.g0v.tw pm 2.5 ? )</li>
+<li>基本地理相關資訊呈現 (人口,犯罪率,得票率)</li></ul>
+
+<p><b>發想</b></p><ul><li>視覺化手法<ul><li>地理區塊呈現，熱圖或泡泡圖的概念<ul><li>多層次顯示, 從村里 / 鄉鎮到縣市</li>
+<li>視 zoom level 或資料集顯示適當的解析度？&nbsp;</li></ul>
+</li>
+<li>顯示時序資料的方式？</li></ul>
+</li>
+<li>資料手法<ul><li>利用有提供結構化資料 API 的線上協作工具做資料來源<ul><li>比方說 google spreadsheet</li></ul>
+</li>
 <li>自動比對地名，並修正歷史變化或編碼問題</li></ul>
+</li>
+<li>利用手法<ul><li>javascript library</li>
+<li>embedded widget</li></ul>
+</ul>
 
-<p>犯罪 / 統計資訊視覺化</p><p><a href="https://gist.github.com/zbryikt/4696905"></a>https://gist.github.com/zbryikt/4696905</p><p></p><p>2014年九合一選舉六都視覺化</p><p><a href="http://jizz5566.github.io/2014_6cities/2014ver5.html"></a>http://jizz5566.github.io/2014_6cities/2014ver5.html</p><p></p><ul class="comment"><li>請問關於視覺化，是否必須利用OOP程式？</li>
-<li>又，可否建議用哪種OOP較容易上手？ 目前搜尋資訊似乎是Ruby?</li></ul>
+<p><b>參考</b></p><ul><li>犯罪 / 統計資訊視覺化 / <a href="https://gist.github.com/zbryikt/4696905"></a>https://gist.github.com/zbryikt/4696905</li>
+<li>2014年九合一選舉六都視覺化 / <a href="http://jizz5566.github.io/2014_6cities/2014ver5.html"></a>http://jizz5566.github.io/2014_6cities/2014ver5.html</li></ul>
 
-<ul class="comment"><li>其他還有Java、python、C++等程式，懇請大家提供意見，謝！</li>
-<li><br/></li></ul>
+<p><b>其它</b></p><ul class="comment"><li>請問關於視覺化，是否必須利用OOP程式？</li>
+<li>又，可否建議用哪種OOP較容易上手？ 目前搜尋資訊似乎是Ruby?</li>
+<li>其他還有Java、python、C++等程式，懇請大家提供意見，謝！</li>
+<li>這感覺可以再開一個專 pad 來討論「我要怎麼入門視覺化」之類的</li>
+<li>視覺化從紙筆開始就可以, 很多線上工具可以用 (plot.ly etc)</li>
+<li>適合做視覺化的程式也有不少 (processing, R, javascript)</li>
+<li>比較會是想要做到什麼效果的問題</li>
+<li>不過要從頭學是比較困難一點, 比較建議還是先找人 cover</li></ul>
 
 </body>
 </html>
