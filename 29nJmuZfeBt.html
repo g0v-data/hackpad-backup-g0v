@@ -3,11 +3,63 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="240"/>
+<meta name="version" content="1207"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$29nJmuZfeBt</title>
 </head>
-<body><h1>Food Time 好食市集</h1><p></p><p><b>緣由</b></p><p>去好食機尾牙大會做即時文播而聽到農夫、菜市長、菜咖們的精彩討論，大家一致認為在農產共購模式的未來發展中，資訊系統扮演非常重要的角色。剛好因為做紀錄的關係把使用者情境聽完一輪，覺得手很癢，不如就<s>拋下其他該做但想逃避的事情</s>趁年假來做個 mockup 好了。</p><p>詳：<a href='https://hackpad.com/2015.02.16--EKS4IWt96aG'/>好食機尾牙大會 hackpad</a></p><p></p><p><b>要解決的問題</b></p><p>友善環境的耕作，所使用的技術與慣行不同，只有小農能做到。但小農在面對傳統大盤中盤的批發模式時，會遇到極高的門檻。經過幾年摸索，發現社群共購是小農生存的唯一出路。目前好食機社會企業執行社群共購時，使用試算表與臉書處理訂單，花費許多人力，形成發展瓶頸。市面上現有的團購或 C2C 平台，則無法滿足農產品銷售的特殊需求。能同時服務小農、菜市長、菜咖的農產品團購資訊系統，是台灣友善耕作發展的關鍵。</p><p></p><p><b>解決方式</b></p><ul><li>web based mobile apps，做好網站後包成 app</li>
-<li><br/></li></ul>
+<body><h1>HowsFood 好食市集</h1><p></p><p><b>緣由</b></p><p>去好食機尾牙大會做即時文播而聽到農夫、菜市長、菜咖們的精彩討論，大家一致認為在農產共購模式的未來發展中，資訊系統扮演非常重要的角色。剛好因為做紀錄的關係把使用者情境聽完一輪，覺得手很癢，不如就<s>拋下其他該做但想逃避的事情</s>趁年假來做個 mockup 好了。</p><p>詳：<a href='https://hackpad.com/2015.02.16--EKS4IWt96aG'/>好食機尾牙大會 hackpad</a></p><p></p><p><b>要解決的問題</b></p><p>友善環境的耕作，所使用的技術與慣行不同，只有小農能做到。但小農在面對傳統大盤中盤的批發模式時，會遇到極高的門檻。經過幾年摸索，發現社群共購是小農生存的唯一出路。目前好食機社會企業執行社群共購時，使用試算表與臉書處理訂單，花費許多人力，形成發展瓶頸。市面上現有的團購或 C2C 平台，則無法滿足農產品銷售的特殊需求。能同時服務小農、菜市長、菜咖的農產品團購資訊系統，是台灣友善耕作發展的關鍵。</p><p></p><p><b>相關專案</b></p><p><a href='http://g0v.github.io/farmers/public/index.html'/>小農故事</a></p><p>其他一堆農業相關 g0v 專案（還沒細看）</p><p></p><p><b>授權</b></p><p>MIT、CC BY</p><p></p><p><b>協作區</b></p><p>google drive：</p><p>github：<a href="https://github.com/g0v/howsfood-mockup"></a>https://github.com/g0v/howsfood-mockup</p><p></p><p><b>工作事項</b></p><ul class="task"><li>企畫 + mockup：ETBlue，預計過年期間完成</li>
+<li>評估流程：預計過年後約家華、仲庭、好食機謝老闆、好食機小君討論提案</li>
+<li>評估程式：評估完流程後，視情況找愛樂活跟 wiki 討論技術實做細節</li></ul>
+<p>顧門口：clkao, kiang</p><p></p><p><b>現有成果</b></p><p>mockup (WIP): <a href="http://g0v.github.io/howsfood-mockup/public/"></a>http://g0v.github.io/howsfood-mockup/public/</p><p></p><p><b>利益揭露</b></p><p>專案企畫以好食機社會企業為 use case，將來可能的發展：</p><ul><li>由愛樂活之類的資訊系統廠商接手實做，變成專供好食機使用的平台</li>
+<li>也可能演變成農產品來源不限定為好食機的友善農產品共購平台</li></ul>
+<p>已知商業利益或金錢物質報償：無</p><p></p><h2>規劃</h2><p></p><p><b>設計流程與資料結構</b></p><ul><li>重整訂單資訊流，讓農夫、菜市長、菜咖間不需花時間做重複溝通<ul><li>農夫種下作物或開始養殖時，即可開啟該批農產品的生產日記，生產日記會自動加入農夫的 profile 頁面</li>
+<li>生產日記建立時，農夫需要：<ul><li>選擇播種下苗日期，預設值為今天</li>
+<li>選擇農產品種類，讓系統自動從該農產品的 meta data 中推估收成時間</li>
+<li>選擇耕地<ul><li>可以從農夫預先輸入的耕地中選擇</li>
+<li>可即時編輯耕地列表</li>
+<li>系統可依耕地面積和產品種類自動推估可能收穫量，農夫可手動編輯</li></ul>
+</li></ul>
+</li>
+<li>農夫可設定生產日記狀態為：<ul><li>尚未開放預購</li>
+<li>預購中：設定為這個狀態，生產日記就會依預估收穫量上架到好食市集的「預購」列表</li>
+<li>即將收穫：設定為這個狀態一段時間（反悔緩衝期）後，系統會自動通知已預購的菜咖</li>
+<li>販售中：設定為這個狀態，系統會：<ul><li>農夫可依實際收成更改販售數量，若因此不足預購量，採先滿足送貨條件成立訂單者先得</li>
+<li>通知已預購的菜咖跟菜市長，菜市長可以直接將滿足送貨條件的預購單自動轉為訂單</li>
+<li>沒有被預購完的部分，生產日記自動上架到好食市集的「馬上買」列表</li></ul>
+</li>
+<li>已售完：生產日記下架</li></ul>
+</li></ul>
+</li>
+<li>每個農夫有單獨頁面，列出<ul><li>姓名以及其他本人願意透露的資訊</li>
+<li>耕地列表，含位置、面積、友善種類（有機或安全）</li>
+<li>加入好食機 / 好食光日期</li>
+<li>生產日記列表</li>
+<li>友善耕作經驗</li>
+<li>臉書、部落格連結</li></ul>
+</li>
+<li>每種農產品有單獨頁面，列出<ul><li>目前生產與訂購狀態</li>
+<li>所需的養殖或耕作時間（range）</li>
+<li>收成季節 (optional)</li>
+<li>食譜、料理方式分享</li>
+<li>相關文章、耕作技巧分享</li></ul>
+</li>
+<li>每個生產日記（每批農穫）有單獨頁面，列出<ul><li>農產品種類</li>
+<li>負責的小農與耕地</li>
+<li>播種下苗日期與照片</li>
+<li>期間每次農夫想紀錄的時候的日期與照片</li>
+<li>預估收成時間與份數</li>
+<li>訂購狀態</li></ul>
+</li>
+<li>每個菜市有單獨頁面，列出<ul><li>名稱：縣市 - 地區 - 村里 / 社區</li>
+<li>菜市長與菜咖名單</li>
+<li>常用農夫列表</li>
+<li>訂單紀錄</li></ul>
+</li>
+<li>菜市長 / 菜咖個人頁面，列出<ul><li>個人訂單紀錄（對帳用）</li></ul>
+</li>
+<li>以一人一餐為一份，算出每份佔裝箱的百分之幾空間，制訂跨農產品的通用訂購單位</li></ul>
 
-<p></p><p><b>相關專案</b></p><p><a href='http://g0v.github.io/farmers/public/index.html'/>小農故事</a></p><p>其他一堆農業相關 g0v 專案（還沒細看）</p><p></p><p><b>授權</b></p><p>MIT</p><p></p><p></p><p></p></body>
+<p><b>開發網站與跨平台 app</b></p><ul><li>HowsFood 好食市集（菜市長與菜咖端）</li>
+<li>HowsFarm 好食小農（農夫端）</li></ul>
+
+<p></p><h2>開發手札</h2><p></p><p><b>2015/2/16 好食機尾牙大會</b></p><p>打逐字稿時不小心聽完使用者訪談</p><p></p><p><b>2015/2/17 企畫與 UI</b></p><p></p><p></p></body>
 </html>
