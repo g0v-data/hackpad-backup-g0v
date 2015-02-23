@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="7610"/>
+<meta name="version" content="7733"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$moed7ct-taigi-neologism</title>
 </head>
 <body><h1>新台語·運動</h1><p>( <a href='/11-moed7ct'/>11 moed7ct </a>)</p><p>Liz報告：<a href="https://speakerdeck.com/audreyt/liz-lin-xin-tai-yu-yun-dong"></a>https://speakerdeck.com/audreyt/liz-lin-xin-tai-yu-yun-dong</p><p>( 不得罷免黑客松 )</p><p>pm5 報告：<a href="https://www.youtube.com/watch?v=vMCguTVUA_Y&index=10&list=PLdwQWxpS513Aq2NNFlBwuWLKaoRrmx1DT"></a>https://www.youtube.com/watch?v=vMCguTVUA_Y&amp;index=10&amp;list=PLdwQWxpS513Aq2NNFlBwuWLKaoRrmx1DT</p><p></p><p></p><h2>專案目的</h2><p>大家一起說台語</p><ul><li>年輕人失去說台語的動力與能力</li>
@@ -101,7 +101,8 @@
 <ul class="comment"><li>後面這兩個是我今天新產生的想法，對多數人來說，很難一下子要大家接受台語漢字和羅馬字，還是要給音檔，若每天都有新東西，應該比較能吸引大家常來玩。但這需要固定團隊經營，我想我可以組織一個團隊固定提供。</li>
 <li>會很棒！</li>
 <li>我覺得可以將歌詞改成教育部的推薦用字</li>
-<li>歌詞的建議非常棒，因為是大家已經熟悉的內容，很容易理解和對照！</li></ul>
+<li>歌詞的建議非常棒，因為是大家已經熟悉的內容，很容易理解和對照！</li>
+<li>我本來想作的就是從歌詞開始修改文件！讚</li></ul>
 
 <h2>網站經營及問題點</h2><p><b>音標用字怎麼解決</b></p><p>&nbsp;</p><ul class="comment"><li>&nbsp;是不是應該靠跟萌典同一個API ？（自己跳坑？）</li>
 <li>我的意思是說，一般人不會用台語漢字和羅馬字，他要怎麼提供他的翻譯？我覺得還是要經過標準化的改寫。</li>
@@ -159,14 +160,15 @@
 <ul class="comment"><li>FB 會報道「每日一句」</li></ul>
 
 <p><b>版權、著作權</b></p><ul><li>使用者提供的語料</li></ul>
-<ul class="comment"><li>使用者提供的聲音/文字檔需不需要註明什麼拋棄權利，免得日後要把資料拿去應用有其他衍生問題？</li></ul>
+<ul class="comment"><li>使用者提供的聲音/文字檔需不需要註明什麼拋棄權利，免得日後要把資料拿去應用有其他衍生問題？</li>
+<li>可能要註明一下</li></ul>
 
 <h2>Data format（server-side這裡討論）</h2><p></p><p><b>&nbsp;資料庫</b></p><ul class="comment"><li>要入營了，來不及寫解釋QQ</li>
 <li>丞宏，抱歉我是個非資訊人，用語不精確，我前面說的「資料庫」，指的是語詞基礎資料的整理，那個檔案裡面有些錯誤，需要整理一下，才能進到後端這一步。</li>
 <li>你目前的寫是用台文，但目前協作的人當中，似乎只有你我和柏中老師看得懂台文，我不知道這樣會不會導致其他伙伴很難進入，要是只有你一人在坑裡，那就不妙了喔！</li>
 <li>此外，A-TSIOH好像也開始動了，還有PominWu原本的進度，是不是有什麼方法可以讓各位更順暢地一起工作呢？實在抱歉，我不會寫code，所以也不知道怎麼規劃協調，需要協助！</li>
 <li>說的沒錯，而且跟pm5談過server side本來打算用Flask,我有把Pomin的mockup 的 PhraseStore connect to一個 flask + SQLAlchemy的backend.其實跟 Django的models很像你可以試試看</li>
-<li><a href="https://github.com/a-tsioh/taigi"></a>https://github.com/a-tsioh/taigi</li>
+<li><a href="https://github.com/g0v/taigi-neologism"></a>https://github.com/g0v/taigi-neologism</li>
 <li>（已經有admin的列子)</li>
 <li>我目前的想法是我負責設計資料庫，然後我只負責提供API，讓前端可以用get/post來撈資料/增加語料，我會用json回傳。我這邊就不負責html/js/css。我預計用test-driven試驗開發，確定好API給大家看，這樣工作效率應該會比較好一點。</li>
 <li>django雖然比較大隻，不過相對他東西也拆比較細。我覺得我們的網站日後應該比較好維護</li>
@@ -243,9 +245,11 @@
 <p></p><h2>API needed (back-end)</h2><ul><li>User Registration : FB API ?&nbsp;</li></ul>
 <ul class="comment"><li>FB+Google?</li>
 <li>ideally: any social platform + email</li></ul>
-<ul><li>add/search 請教條<ul><li>情境<ul><li>「XXX詞是不是已經有？」 -&gt; TMuse on 國語&lt;-&gt;臺語詞典 + 英文？<ul><li>input : 國語或英文 output: list of twblg 詞條</li></ul>
+<ul><li>add/search 請教條<ul><li>情境<ul><li>「XXX詞是不是已經有？」 -&gt; TMuse on 國語&lt;-&gt;臺語詞典 + 英文？<ul><li>input : 國語或英文</li>
+<li>output: list of twblg 詞條</li></ul>
 </li>
-<li>「YYY請教條有沒有被問過？」 -&gt; elasticsearch ?<ul><li>input : 請教條, output : list of 請教條</li></ul>
+<li>「YYY請教條有沒有被問過？」 -&gt; elasticsearch ?<ul><li>input : 請教條</li>
+<li>output : list of 請教條</li></ul>
 </li></ul>
 </li></ul>
 </li>
@@ -253,12 +257,15 @@
 </li></ul>
 </li>
 <li>add 新詞建議<ul><li>由專業團隊把無書寫規範的「鄉民台語」，轉化為「推薦寫法」。</li></ul>
-<ul class="comment"><li>專業團隊好重要!!!!還要製作每日一句和每週一短篇!!!</li></ul>
+<ul class="comment"><li>專業團隊好重要!!!!還要製作每日一句和每週一短篇!!!</li>
+<li>除了推薦寫法(推薦用字)，可以再附上異用寫法(異用字)</li></ul>
 </ul>
 <ul><li>users ranking</li>
 <li>add comments</li>
 <li><s>votes</s></li></ul>
-<ul class="comment"><li>votes是指投什麼票呢？</li></ul>
+<ul class="comment"><li>votes是指投什麼票呢？</li>
+<li>就是投「新詞建議」的票</li>
+<li>為什麼劃掉了?</li></ul>
 
 <p></p><h2>Front end 呢 :p </h2><p>functions</p><ul><li>romanisation 和表音 rendering (han.css, 輸入法API)</li></ul>
 
