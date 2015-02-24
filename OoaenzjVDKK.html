@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="4483"/>
+<meta name="version" content="4485"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$OoaenzjVDKK</title>
 </head>
 <body><h1>透析貪污判決--揭露與查詢網站</h1><p>(暫名,尚缺副標)</p><p>The Disclosure of Corruption Judgement,&nbsp; the Web</p><p>可能網址：blackmoney.g0v.tw 歡迎各種建議</p><p>POREN：uncover.g0v.tw 之類的，感覺很有特務風XD</p><p></p><p></p><p></p><h2>緣起</h2><ul><li>貪污是個表面上看起來沒什麼，實際上會對社會造成侵蝕的嚴重病灶</li>
@@ -126,11 +126,11 @@
 
 <p>由於在下不是資工相關科系出身，誠徵對判決書有興趣的高手助陣</p><p>各路大神提供的Approach：</p><p>1.regular expression &amp; pattern（目前作法）</p><p>2.<s>machine learning</s></p><p></p><p><b>第二階段 網站上線</b></p><p>部份資料處理好之後，就可以開始想查詢網站的問題。</p><p>相對一般會google的問題，使用者知道問題但不知道答案；貪污查詢很可能面臨使用者「不知道問題也不知道答案」。</p><p>可以跟過去的新聞報導作連結</p><p>也可以跟其他專案整合</p><ul style="list-style: none;"><li><br/></li></ul>
 <p><b>第三階段 擴充資料範圍</b></p><p>第一階段東西有刻出來的話，那地院就不是問題。接下來就是高等法院、最高法院的判決書處理，這時候就能夠加上案件從地方法院打到最高法院的歷審呈現。也可以爬其他相關的法律判決。</p><p></p><h2>TO-DO list</h2><undefined><li><b>資料擷取部份</b></li></undefined>
-<ul class="task"><li>抓取被告 工作/職位/關係 欄位--&gt; <i>Keith Ning</i>&nbsp;</li></ul>
+<ul class="taskdone"><li>抓取被告 工作/職位/關係 欄位--&gt; <i>Keith Ning</i>&nbsp;</li></ul>
 <ul class="comment"><li>有的判決書一篇竟然就長達20~50萬字，造成原本現成的詞彙解析程式運作不能 XD 因此使用divide-n-conquer重新修改處理流程中~</li>
 <li>超酷XD (Y)</li>
 <li>對於一樓經驗表示完全可以理解XD</li></ul>
-<ul class="task"><li>抓取表格內容補足 宣告刑 欄位&nbsp;</li></ul>
+<ul class="taskdone"><li>抓取表格內容補足 宣告刑 欄位&nbsp;</li></ul>
 <ul class="comment"><li><a href='https://github.com/superChing/extract_declared_sentence'/>code</a>&nbsp; Brief:做的事是把表格cell抽出來再用regular expression找宣告刑。table九成可以抽取cell內容。但宣告刑recall我猜不高，這需要sample評估多少沒抓出來。</li>
 <li>稍微回應一下，「&rsquo;禠&rsquo;!=&rsquo;褫&rsquo;」如果仔細看的話，一個是一點，一個是兩點。判決書有不少像這種差一點的（機歪）錯別字</li></ul>
 <ul class="task"><li>抓取法官欄位</li>
