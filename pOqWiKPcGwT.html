@@ -3,10 +3,19 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2831"/>
+<meta name="version" content="2951"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$pOqWiKPcGwT</title>
 </head>
-<body><h1>超農域：開發日誌(藥劑)</h1><p></p><p>規格與資訊放在原本的 pad，開這篇專門紀錄進度、事件、現況、列舉下次聚會議程。 (如果有漏掉人請幫我 invite XD)</p><p></p><p><b>綜盒許願池</b></p><p><a href="https://github.com/g0v/agriculture/issues"></a><a href='https://github.com/g0v/agriculture/issues'/>https://github.com/g0v/agriculture/issues</a></p><p></p><h2>Next</h2><p><b>吃飯松</b></p><p></p><h2>Past</h2><p><b>2015/01/25</b></p><ul><li>感謝卡西、LY；讚嘆卡西、LY跳坑(?)</li>
+<body><h1>超農域：開發日誌(藥劑)</h1><p></p><p>規格與資訊放在原本的 pad，開這篇專門紀錄進度、事件、現況、列舉下次聚會議程。 (如果有漏掉人請幫我 invite XD)</p><p></p><p><b>綜盒許願池</b></p><p><a href="https://github.com/g0v/agriculture/issues"></a><a href='https://github.com/g0v/agriculture/issues'/>https://github.com/g0v/agriculture/issues</a></p><p></p><h2>Next</h2><p><b>吃飯松</b></p><p></p><h2>Past</h2><p><b>2015/02/25</b></p><ul><li>子姓網友表示會大改版(?&nbsp;</li>
+<li>simon完成左右選單拖曳以及大小排序功能</li>
+<li>農藥作用機制卡西已大多數接上，發現有部分藥劑(如可濕性硫磺)，以及所有混和劑沒有作用機制出現(原文件沒有資料)</li>
+<li>作用機制發現還有另外一個<a href='http://pesticide.tactri.gov.tw/'/>政府平台</a>有登錄其他藥劑以及混和劑的作用機制(需要爬下來)，整組爬下來好了，因為上面還有藥劑對應作物的安全容許量(ppm)剛好可以補上去</li></ul>
+<ul class="comment"><li><b>例如&nbsp; 三氟得克利 （殺菌劑）---混和劑</b></li>
+<li><b>是三氟敏加上 得克利，所以農藥作用機制代碼是：[FRAC] 11, C3&nbsp; 和&nbsp; [FRAC] 3, G1</b></li></ul>
+<ul><li>作用機制完成之後，進行爬農藥作用模式的內容，因為使用的文件有很多敘述句，所以必須要進行模組化的文字定義</li>
+<li>複製搜尋結果時目前是非表格的純文字狀態，似乎需要討論複製結果時的呈現模式(?</li></ul>
+
+<p><b>2015/01/25</b></p><ul><li>感謝卡西、LY；讚嘆卡西、LY跳坑(?)</li>
 <li>衛福部針對作物上農藥的殘留容許量，和農委會上農藥的推薦使用對應需要再做工人調整</li></ul>
 
 <p><b>2015/01/11</b></p><ul><li>更新農藥作用機制資料(2014年版本)，轉成文字模式進行調整，其中同時發現部分藥劑沒有相關的登記推薦資料(例如巴拉刈二氯鹽)</li></ul>
