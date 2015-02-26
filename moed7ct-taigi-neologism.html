@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="8135"/>
+<meta name="version" content="8513"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$moed7ct-taigi-neologism</title>
 </head>
 <body><h1>新台語·運動</h1><p>( <a href='/11-moed7ct'/>11 moed7ct </a>)</p><p>Liz報告：<a href="https://speakerdeck.com/audreyt/liz-lin-xin-tai-yu-yun-dong"></a>https://speakerdeck.com/audreyt/liz-lin-xin-tai-yu-yun-dong</p><p>( 不得罷免黑客松 )</p><p>pm5 報告：<a href="https://www.youtube.com/watch?v=vMCguTVUA_Y&index=10&list=PLdwQWxpS513Aq2NNFlBwuWLKaoRrmx1DT"></a>https://www.youtube.com/watch?v=vMCguTVUA_Y&amp;index=10&amp;list=PLdwQWxpS513Aq2NNFlBwuWLKaoRrmx1DT</p><p></p><p></p><h2>專案目的</h2><p>大家一起說台語</p><ul><li>年輕人失去說台語的動力與能力</li>
@@ -226,7 +226,9 @@
 <li>臺羅調號轉調符</li></ul>
 <ul class="comment"><li>上線前匯入初使資料時，整併和轉調符我可以一併處理（不過抓錯也可以直接在系統上抓？）</li></ul>
 
-<p>輸入的關鍵詞，部分符合的結果太多，會太不精確。（要再想）</p><p></p><p></p><p><b>&nbsp;請教條</b></p><ul><li>外語詞性</li>
+<p>輸入的關鍵詞，部分符合的結果太多，會太不精確。（要再想）</p><ul class="task"><li><br/></li></ul>
+
+<p><b>&nbsp;請教條</b></p><ul><li>外語詞性</li>
 <li>什麼外語？</li>
 <li><s>詞性</s></li></ul>
 <ul class="comment"><li>詞性每個人標的規則不同，而且詞性有許多規則，這要怎麼分類？</li>
@@ -244,28 +246,62 @@
 <ul><li>例子</li>
 <li>comments</li></ul>
 
-<p></p><h2>API needed (back-end)</h2><ul><li>User Registration : FB API ?&nbsp;</li></ul>
+<p></p><h2>API needed (back-end)</h2><ul><li>User Registration使用者管理</li></ul>
 <ul class="comment"><li>FB+Google?</li>
-<li>ideally: any social platform + email</li></ul>
-<ul><li>add/search 請教條<ul><li>情境<ul><li>「XXX詞是不是已經有？」 -&gt; TMuse on 國語&lt;-&gt;臺語詞典 + 英文？<ul><li>input : 國語或英文</li>
-<li>output: list of twblg 詞條</li></ul>
+<li>ideally: any social platform + email</li><ul><li>情境<ul><li>加訊息（請教條/新詞影音/新詞文字/評分/意見/標註推薦用字）的時候需要登入帳號</li></ul>
 </li>
-<li>「YYY請教條有沒有被問過？」 -&gt; elasticsearch ?<ul><li>input : 請教條</li>
-<li>output : list of 請教條</li></ul>
-</li></ul>
-</li></ul>
-</li>
-<li>view 請教條<ul><li>功能<ul><li>顯示「請教條」、「新詞建議」、「ranking」、「comments」</li></ul>
-</li></ul>
-</li>
-<li>add 新詞建議<ul><li>由專業團隊把無書寫規範的「鄉民台語」，轉化為「推薦寫法」。</li></ul>
-<ul class="comment"><li>專業團隊好重要!!!!還要製作每日一句和每週一短篇!!!</li>
-<li>除了推薦寫法(推薦用字)，可以再附上異用寫法(異用字)</li></ul>
+<li>進度</li><ul class="task"><li>API介面（含後端試驗）</li>
+<li>前端網頁套版</li>
+<li>後端程式實作</li></ul>
 </ul>
-<ul><li>users ranking<ul><li>大家投票給「請教條」、「新詞建議」看哪個好哪個壞</li></ul>
+</ul>
+<ul><li>add 請教條<ul><li>情境<ul><li>當使用者搜尋不到請教條，可以發問</li></ul>
 </li>
-<li>add comments</li>
-<li>votes</li></ul>
+<li>進度</li><ul class="task"><li>API介面（含後端試驗）</li>
+<li>前端網頁套版</li>
+<li>後端程式實作</li></ul>
+</ul>
+</ul>
+<ul><li>add 新詞影音<ul><li>情境<ul><li>針對請教條，使用者以錄音的方式，提供新詞</li></ul>
+</li>
+<li>進度</li><ul class="task"><li>API介面（含後端試驗）</li>
+<li>前端網頁套版</li>
+<li>後端程式實作</li></ul>
+</ul>
+</ul>
+<ul><li>add 新詞文字<ul><li>情境<ul><li>針對新詞影音，使用者可以提供母語的寫法</li></ul>
+</li>
+<li>進度</li><ul class="task"><li>API介面（含後端試驗）</li>
+<li>前端網頁套版</li>
+<li>後端程式實作</li></ul>
+</ul>
+</ul>
+<ul><li>add users ranking評分<ul><li>情境<ul><li>大家投票給 請教條/新詞影音/新詞文字 看哪個好哪個壞</li>
+<li>分數好的可以在網頁上註明，讓大家參考</li></ul>
+</li>
+<li>進度</li><ul class="task"><li>API介面（含後端試驗）</li>
+<li>前端網頁套版</li>
+<li>後端程式實作</li></ul>
+</ul>
+</ul>
+<ul><li>add comments意見<ul><li>情境<ul><li>讓大家對 請教條/新詞影音/新詞文字 提供自己的意見</li></ul>
+</li>
+<li>進度</li><ul class="task"><li>API介面（含後端試驗）</li>
+<li>前端網頁套版</li>
+<li>後端程式實作</li></ul>
+</ul>
+</ul>
+<ul><li>標註推薦用字<ul><li>情境<ul><li>由專業團隊把無書寫規範的「鄉民台語」，轉化為「推薦寫法」。</li></ul>
+</ul>
+<ul class="comment"><li>專業團隊好重要!!!!還要製作每日一句和每週一短篇!!!</li>
+<li>除了推薦寫法(推薦用字)，可以再附上異用寫法(異用字)</li><ul><li>被標註的可以在網頁上註明，讓大家參考</li></ul>
+</li>
+<li>進度</li><ul class="task"><li>API介面（含後端試驗）</li>
+<li>前端網頁套版</li>
+<li>後端程式實作</li></ul>
+</ul>
+</ul>
+<ul><li>votes</li></ul>
 <ul class="comment"><li>votes是指投什麼票呢？</li>
 <li>就是投「新詞建議」的票</li>
 <li>為什麼劃掉了?</li>
@@ -273,8 +309,24 @@
 <li>users ranking是指哪個user比較用功，哪個user的意見比較文雅等等 (是吧)</li>
 <li>那用大家針對請教條或新詞建議投票，每個詞條獨立記分，就當作該使用者的分數？類似stackoverflow那樣有reputation</li>
 <li>恩（不過還可以分不同的ratings)</li>
-<li>除了針對詞條評分外，還有什麼可以投票？如果針對人投票感覺不合理，盡量讓大家有爭論時對事不對人，所以我才想說對詞條本身投票會比較好</li>
-<li><br/></li></ul>
+<li>除了針對詞條評分外，還有什麼可以投票？如果針對人投票感覺不合理，盡量讓大家有爭論時對事不對人，所以我才想說對詞條本身投票會比較好</li></ul>
+<ul><li>search 請教條<ul><li>情境<ul><li>「XXX詞是不是已經有？」 -&gt; TMuse on 國語&lt;-&gt;臺語詞典 + 英文？<ul><li>input : 國語或英文</li>
+<li>output: list of twblg 詞條</li></ul>
+</li>
+<li>「YYY請教條有沒有被問過？」 -&gt; elasticsearch ?<ul><li>input : 請教條</li>
+<li>output : list of 請教條</li></ul>
+</li></ul>
+</li>
+<li>進度</li><ul class="task"><li>API介面（含後端試驗）</li>
+<li>前端網頁套版</li>
+<li>後端程式實作</li></ul>
+</ul>
+</ul>
+<ul><li>view 請教條<ul><li>功能<ul><li>顯示 請教條/新詞影音/新詞文字/評分/意見</li>
+<li>新詞影音可以照大家評分排順序</li>
+<li>新詞文字可以強調推薦用字和評分佳的</li></ul>
+</ul>
+</ul>
 
 <p></p><h2>Front end 呢 :p </h2><p>functions</p><ul><li>romanisation 和表音 rendering (han.css, 輸入法API)</li></ul>
 
