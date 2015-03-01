@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1945"/>
+<meta name="version" content="1958"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$hxJBK9v7frt</title>
 </head>
 <body><h1>政商關係圖</h1><p></p><p><b>計畫目標</b></p><p>提供台灣公司、社(財)團法人關係整合查詢界面，供各界查詢法人、自然人網絡連結。</p><p></p><p><b>短期目標</b></p><ul><li>open source</li>
@@ -65,7 +65,7 @@
 <li>但有些資料缺失值還沒處理、法院公告也沒有機構改名的相關資訊（未提供原名與新名對照），</li>
 <li>所以有些改過名稱的社團法人可能會出現兩次以上（例如仁濟院），資料不算乾淨。</li>
 <li>另外正在改寫部份程式以整合公司董監事資料，董監事網路結構的儲存方式也會作調整，以配合未來新增不同來源資料需求。</li>
-<li>總而言之，目前正在修 bug 中。</li>
+<li><br/></li>
 <li><br/></li></ul>
 <p><b>建議&nbsp;</b></p><p>( 歡迎推坑, 不保證完成 XD)</p><p></p><ul style="list-style: none;"><li>有幾個比較基本方向上的議題有機會想跟大家聊聊看 :&nbsp;</li></ul>
 <ul><li>若是已知了政商關係網路，那我們是否可以從整體網路計算得到像是政商關係最複雜的公司排名、最腳踏N條船的人物排名、避債避稅兼洗錢用空頭公司排名等等之類的視覺化結果，讓使用者的目光比較能優先聚焦在一些顯著的政商關係結構上。</li></ul>
@@ -73,7 +73,8 @@
 <li>這邊比較像是一個排行榜的概念，可以先從個人與公司的 degree 這種簡單的排行榜開始做做看。</li></ul>
 <ul><li>目前的查詢好像有一個比較麻煩的地方，像是如果我不曉得公司的完整名稱的話，查詢出來部分符合的結果數量有時候相當多，但一直要到挑選了一個點進去了才會發現裡面的資訊量有多少... (比如搜尋&quot;欣欣&quot;, 結果會出來一堆, 但很多都是小公司, 關聯資訊蘊含量很少)，如果可以依據節點與連結數量先將結果排序或顯示資訊含量的話或許會比較方便。</li></ul>
 <ul class="comment"><li>這邊我可以先作，好了再通知各位。</li>
-<li>Oh yeah~</li></ul>
+<li>Oh yeah~</li>
+<li>排行榜寫到資料庫，也做成 API 了，待做出視覺化的部份</li></ul>
 <ul><li>網路結構上的資訊探勘可用的SNA模型有好幾種，可以從數種中心性(centrality)及子網路群集探勘(clique)的現成方法中先行計算看看，再去解釋其中的實質意義是甚麼 (或是反過來)</li></ul>
 <ul class="comment"><li>這個部份先記錄一下構想, 歡迎討論~ 我會自行填坑... XD</li></ul>
 
