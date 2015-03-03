@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="365"/>
+<meta name="version" content="534"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$lejAGhPK0Jm</title>
 </head>
 <body><h1>vTaiwan架站指南</h1><p></p><p><b>A機器：</b></p><p><a href="https://github.com/discourse/discourse_docker"></a>https://github.com/discourse/discourse_docker</p><p>discourse，以docker安裝discourse，預設就有提供json API</p><ul><li>containers/app.yml</li></ul>
@@ -16,7 +16,20 @@
 <ul><li>在管理員-&gt;API-&gt;產生金鑰</li>
 <li>開一個總帳號（如 sdparty），授予板主、管理員、信任等級四</li>
 <li>首頁按「新分類」，安全設定如下：</li></ul>
-<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_lejAGhPK0Jm_p.41199_1425369429012_螢幕快照 2015-03-03 下午3.56.49.png'/></p><p>基本設定裡，將子分類設為固定順序：</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_lejAGhPK0Jm_p.41199_1425369589008_螢幕快照 2015-03-03 下午3.59.21.png'/></p><p>取得分類的 ID:</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_lejAGhPK0Jm_p.41199_1425369721941_螢幕快照 2015-03-03 下午4.01.45.png'/></p><p></p><p><b>B機器：</b></p><p>靜態網站機器，以angular串起gitbook及discourse</p><p><a href="https://github.com/g0v/vtaiwan.tw"></a>https://github.com/g0v/vtaiwan.tw</p><p></p><p><b>GitBook 建置（本機端）：</b></p><p></p><ul class="code"><li>env API_KEY=&quot;discourse API key&quot; gitbook build</li></ul>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_lejAGhPK0Jm_p.41199_1425369429012_螢幕快照 2015-03-03 下午3.56.49.png'/></p><p>基本設定裡，將子分類設為固定順序：</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_lejAGhPK0Jm_p.41199_1425369589008_螢幕快照 2015-03-03 下午3.59.21.png'/></p><p>取得分類的 ID:</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_lejAGhPK0Jm_p.41199_1425369721941_螢幕快照 2015-03-03 下午4.01.45.png'/></p><p></p><p><b>B機器：</b></p><p>靜態網站機器，以angular串起gitbook及discourse</p><p><a href="https://github.com/g0v/vtaiwan.tw"></a>https://github.com/g0v/vtaiwan.tw</p><p></p><p><b>小字典：</b></p><p>在 Google Spreadsheet 裡，複製 <a href='https://docs.google.com/spreadsheets/d/1CGni6oPLXliLGWleBSCHYd3zQfsiIc5-SSOfS3F9TTg'/>vTaiwan 小字典</a>（File -&gt; Make a Copy -&gt; Move to Drive），將頁籤名稱改成與討論議題同名，再按 Publish：&nbsp;</p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_lejAGhPK0Jm_p.41199_1425374093780_螢幕快照 2015-03-03 下午5.09.08.png'/></p><p></p><p><b>GitBook 建置（本機端）：</b></p><p></p><p>在 package.json 裡，spreadsheet ID 從 published sheet 處取得，再加上頁籤序號到「republish:lexicon」即可。</p><p></p><ul class="code"><li>sudo npm i -g gitbook</li>
+<li>npm i</li>
+<li>npm run republish:lexicon</li>
+<li>gitbook install</li>
+<li>env API_KEY=&quot;discourse API key&quot; gitbook build</li>
+<li>npm run republish:lexicon</li></ul>
 
-<p>在 book.json&nbsp;</p><p></p></body>
+<p>在 book.json 裡，parent_category_id 由上述「分類 ID」取得：</p><ul class="code"><li>&nbsp;&nbsp;&nbsp; &quot;discourse&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;url&quot;: &quot;<a href="https://talk.sdparty.tw/"></a>https://talk.sdparty.tw/&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;api_key&quot;: &quot;&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;api_username&quot;: &quot;sdparty&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;parent_category_id&quot;: 5,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;parent_category_name&quot;: &quot;問題討論：新經濟&quot;</li>
+<li>&nbsp;&nbsp;&nbsp; }</li></ul>
+
+</body>
 </html>
