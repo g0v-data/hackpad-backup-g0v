@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="776"/>
+<meta name="version" content="872"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$lejAGhPK0Jm</title>
 </head>
 <body><h1>vTaiwan架站指南</h1><p></p><p><b>A機器：</b></p><p><a href="https://github.com/discourse/discourse_docker"></a>https://github.com/discourse/discourse_docker</p><p>discourse，以docker安裝discourse，預設就有提供json API</p><ul><li>containers/app.yml</li></ul>
@@ -33,5 +33,19 @@
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;parent_category_name&quot;: &quot;問題討論：新經濟&quot;</li>
 <li>&nbsp;&nbsp;&nbsp; }</li></ul>
 
-<p></p><p></p><p></p><p></p><p></p><p><b>patch onebox gem 以支援FB貼文</b></p><p></p><p>在discourse機器上，進入app內</p><p></p><p>修改 /var/www/discourse/Gemfile</p><p></p><p>把</p><p></p><p>gem &rsquo;onebox&rsquo;</p><p></p><p>修改為</p><p></p><p>gem &rsquo;onebox&rsquo;, &rsquo;git&rsquo; -&gt; &rsquo;<a href="https://github.com/billy3321/onebox.git"></a>https://github.com/billy3321/onebox.git&rsquo;</p><p></p><p>在/var/www/discourse內執行</p><p></p><p>bundle update onebox --no-deployment</p><p></p><p>修改 /var/www/discourse/config/unicorn_launcher</p><p></p><p>在檔案上方加入：</p><p></p><p>export FACEBOOK_APP_ID=&quot;&quot;</p><p>export FACEBOOK_APP_SECRET=&quot;&quot;</p><p></p><p>最後，重開機器即可！</p><p></p></body>
+<p></p><p><b>patch pg 以支援中文全文檢索</b></p><p></p><p>在discourse機器上，進入app內</p><ul class="code"><li>su postgres</li>
+<li>psql</li>
+<li>update pg_database set encoding = pg_char_to_encoding(&rsquo;UTF8&rsquo;) where datname = &rsquo;discourse&rsquo; AND encoding = pg_char_to_encoding(&rsquo;SQL_ASCII&rsquo;);</li></ul>
+
+<p>再回到外層，launcher rebuild app 即可。（<a href='https://github.com/discourse/discourse_docker/pull/130'/>pull request</a> 已送回上游）</p><p></p><p><b>patch onebox gem 以支援 FB、PTT 貼文</b></p><p></p><p>在discourse機器上，進入app內</p><p></p><p>修改 /var/www/discourse/Gemfile</p><p></p><p>把</p><p></p><ul class="code"><li>gem &rsquo;onebox&rsquo;</li></ul>
+
+<p>修改為</p><p></p><ul class="code"><li>gem &rsquo;onebox&rsquo;, git: &rsquo;<a href="https://github.com/billy3321/onebox.git"></a>https://github.com/billy3321/onebox.git&rsquo;</li></ul>
+
+<p>在/var/www/discourse內執行</p><p></p><ul class="code"><li>bundle install --no-deployment</li>
+<li>bundle update onebox</li></ul>
+
+<p>修改 /var/www/discourse/config/unicorn_launcher</p><p></p><p>在檔案上方加入：</p><p></p><ul class="code"><li>export FACEBOOK_APP_ID=&quot;&quot;</li>
+<li>export FACEBOOK_APP_SECRET=&quot;&quot;</li></ul>
+
+<p>最後，重開機器即可！</p><p></p></body>
 </html>
