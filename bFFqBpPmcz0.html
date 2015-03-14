@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2085"/>
+<meta name="version" content="2129"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$bFFqBpPmcz0</title>
 </head>
 <body><h1>注音標音OpenType Font計畫</h1><ul><li>提案人：董福興</li>
@@ -74,9 +74,13 @@
 <li>Richard Ishida開了個W3C i18n testing case: <a href="http://www.w3.org/International/tests/test-incubator/bopomofo/"></a><a href='http://www.w3.org/International/tests/test-incubator/bopomofo/'/>http://www.w3.org/International/tests/test-incubator/bopomofo/</a></li></ul>
 
 <ul class="comment"><li>做了一個測試版本（Adobe-CNS1-x規格，沒有增加新字元）</li>
-<li>Chrome - 橫排正常，直排˙不正常 (Chrome 疑似在直排時無法演算GPOS的mark anchor)</li>
-<li>Safari 7.1.2 - 橫排、直排位置移動正常，但其實直排數值是亂湊的，Safari解釋直排GPOS mark anchor 的方式很詭異，目前的數值雖疑似能顯示，但意義不明。 (另外，Safari會有符號仍占用一個字寬的問題，無法克服˙)</li>
-<li>Firefox - 似乎不支援ruby與直排....</li>
+<li>Chrome - 橫排正常，直排˙不正常 (Chrome 疑似在直排時無法演算GPOS的mark anchor)</li><ul style="list-style: none;"><li>補上不正常的圖片（Chrome Mac 41&amp;43）</li>
+<li><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_bFFqBpPmcz0_p.347247_1426332847346_螢幕快照 2015-03-14 下午7.32.16.png'/></li></ul>
+</ul>
+<ul class="comment"><li>Safari 7.1.2 - 橫排、直排位置移動正常，但其實直排數值是亂湊的，Safari解釋直排GPOS mark anchor 的方式很詭異，目前的數值雖疑似能顯示，但意義不明。 (另外，Safari會有符號仍占用一個字寬的問題，無法克服˙)</li><ul style="list-style: none;"><li>Safari 8.0.5</li>
+<li><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_bFFqBpPmcz0_p.347247_1426332927071_螢幕快照 2015-03-14 下午7.35.02.png'/></li></ul>
+</ul>
+<ul class="comment"><li>Firefox - 似乎不支援ruby與直排....</li>
 <li><a href="https://www.dropbox.com/sh/oxumuuxx5blinc7/AABGJKRWDpAYHcfgQXtOpVbaa?dl=0"></a>https://www.dropbox.com/sh/oxumuuxx5blinc7/AABGJKRWDpAYHcfgQXtOpVbaa?dl=0</li>
 <li>另外，放棄使用mark feature tag。改用 kern （橫排）與 vkrn（直排）。</li>
 <li>因為橫排時與直排時，聲調的相對位置並不同，必須分開處理。技術上的問題，我不太可能在 mark&nbsp; 同一個feature裡，寫入直排、橫排兩種不同GPOS條件。</li>
