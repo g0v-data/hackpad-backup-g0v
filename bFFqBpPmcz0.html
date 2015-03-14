@@ -3,13 +3,13 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2129"/>
+<meta name="version" content="2597"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$bFFqBpPmcz0</title>
 </head>
 <body><h1>注音標音OpenType Font計畫</h1><ul><li>提案人：董福興</li>
 <li>執掌單位：教育部終身教育司第四科「<a href='http://www.edu.tw/pages/detail.aspx?Node=3932&amp;Page=21619&amp;Index=1&amp;WID=c5ad5187-55ef-4811-8219-e946fe04f725'/>閱讀與語文教育科</a>」</li></ul>
 
-<h2>說明</h2><p>　　注音符號在Web上的顯示，除了使用<a href='http://css.hanzi.co'/>Polyfill</a>處理以外，還是希望能夠過標準化的方式在各瀏覽器上得到<a href='https://hackpad.com/Ruby-LEe9MlhFMGl'/>實作</a>。尤其是<a href='https://vimeo.com/106509250'/>ruby-position: inter-character的實作</a>，幾乎讓注音在Web上的顯示只差一步，而那一步就是調號（tone mark, e.g. ˊˇˋ）該怎麼被放到注音的右側。</p><p></p><p>　　最近在W3C i18-CJK的討論群組上開始<a href='https://lists.w3.org/Archives/Public/public-i18n-cjk/2015JanMar/'/>討論這個議題</a>，而有了比較清楚的輪廓。可以確定的是調號不屬於Layout Engine的處理範圍，而交由OpenType來實作會較佳，而最好是能做出一套僅有注音符號與調號的開源OpenType字體，具備對應的GPOS功能，能將調號放到右側去。不管是透過安裝、內嵌或者網路字型（Webfont）的方式提供，都能讓調號得以放到對的位置。</p><ul class="comment"><li>來自Ishi Koji的<a href='https://lists.w3.org/Archives/Public/public-i18n-cjk/2015JanMar/0033.html'/>推坑信</a>。</li>
+<h2>說明</h2><p>　　注音符號在Web上的顯示，除了使用<a href='http://css.hanzi.co'/>Polyfill</a>處理以外，還是希望能夠通過標準化的方式在各瀏覽器上得到<a href='https://hackpad.com/Ruby-LEe9MlhFMGl'/>實作</a>。尤其是<a href='https://vimeo.com/106509250'/>ruby-position: inter-character的實作</a>，幾乎讓注音在Web上的顯示只差一步，而那一步就是調號（tone mark, e.g. ˊˇˋ）該怎麼被放到注音的右側。</p><p></p><p>　　最近在W3C i18-CJK的討論群組上開始<a href='https://lists.w3.org/Archives/Public/public-i18n-cjk/2015JanMar/'/>討論這個議題</a>，而有了比較清楚的輪廓。可以確定的是調號不屬於Layout Engine的處理範圍，而交由OpenType來實作會較佳，而最好是能做出一套僅有注音符號與調號的開源OpenType字體，具備對應的GPOS功能，能將調號放到右側去。不管是透過安裝、內嵌或者網路字型（Webfont）的方式提供，都能讓調號得以放到對的位置。</p><ul class="comment"><li>來自Ishi Koji的<a href='https://lists.w3.org/Archives/Public/public-i18n-cjk/2015JanMar/0033.html'/>推坑信</a>。</li>
 <li>@But 的注音符號字體感覺可以直接用了<a href="http://but.tw/font/bpmfpy.html"></a>http://but.tw/font/bpmfpy.html</li>
 <li>这个好强大，连竖排支持都不需要了，直接用字体解决全部问题。</li>
 <li>這我知道，但真不能什麼都用Font做掉w</li></ul>
@@ -38,7 +38,8 @@
 <li>另外 BiaoDian Pro 注音字型是 ethantw 製作的，以上是萌典字體三人組~</li>
 <li>Twitter上已經推坑，kcwu怎麼聯絡好呢？</li>
 <li>@kcwu 也在 Twitter 上~</li>
-<li><br/></li></ul class="comment">
+<li>也找到@But K</li></ul>
+
 <h2>技術實作需求</h2><ol><li>首先，從開源字型中取出U+3105-U+3129（即ㄅ到ㄩ）、以及二聲U+02CA、三聲U+02C7、四聲U+02CB、輕聲U+02D9的Subset。</li>
 <li>套用GPOS Feature &quot;<a href='https://www.microsoft.com/typography/otspec/features_ko.htm'/>mark</a>&quot;。</li>
 <li>當文字直排，且U+02CA、U+02C7、U+02CB三個調號前接U+3113（ㄓ）-U+3129（ㄩ）時，將調號放到符合《<a href='https://www.dropbox.com/s/09yk4int5t1b5m8/mandarin_zhuyinfuhou_handbook.pdf?dl=0'/>國語注音符號手冊</a>》的右上角位置。</li></ol>
@@ -60,6 +61,7 @@
 <li>允許增加新glyphs，能得到比較多彈性：例如可準備兩組注音符號（實務上是ㄓ～ㄦ共23個），在vert/vrt2時GSUB處理，即可能用同一套GPOS敘述同時支援橫排與直排。另外可增加一個寬/高度較小的輕聲符號。</li></ul>
 </li>
 <li>原始碼中輕聲必須置於前方（˙ㄉㄜ），因為置於後方難以推算要回推幾個字元。</li></ul>
+<ul class="comment"><li>這一點在www-style的討論上，有提到需不需要reorder，我認為就讓輕聲放在前方，這應該沒問題。</li></ul>
 
 <h2>測試</h2><ul class="comment"><li>請問哪一個軟體可以支援 mark 的？我現在想要測試從 Droid Sans Fallback 跟 Roboto 弄出來的字體不知道該怎麼測試。</li>
 <li><a href="https://dl.dropboxusercontent.com/u/4582065/Bopomofo3DU.otf"></a><a href='https://dl.dropboxusercontent.com/u/4582065/Bopomofo3DU.otf'/>https://dl.dropboxusercontent.com/u/4582065/Bopomofo3DU.otf</a></li>
@@ -80,12 +82,22 @@
 <ul class="comment"><li>Safari 7.1.2 - 橫排、直排位置移動正常，但其實直排數值是亂湊的，Safari解釋直排GPOS mark anchor 的方式很詭異，目前的數值雖疑似能顯示，但意義不明。 (另外，Safari會有符號仍占用一個字寬的問題，無法克服˙)</li><ul style="list-style: none;"><li>Safari 8.0.5</li>
 <li><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_bFFqBpPmcz0_p.347247_1426332927071_螢幕快照 2015-03-14 下午7.35.02.png'/></li></ul>
 </ul>
-<ul class="comment"><li>Firefox - 似乎不支援ruby與直排....</li>
-<li><a href="https://www.dropbox.com/sh/oxumuuxx5blinc7/AABGJKRWDpAYHcfgQXtOpVbaa?dl=0"></a>https://www.dropbox.com/sh/oxumuuxx5blinc7/AABGJKRWDpAYHcfgQXtOpVbaa?dl=0</li>
+<ul class="comment"><li>Firefox - 似乎不支援ruby與直排....</li><ul style="list-style: none;"><li>Firefox nightly 39</li>
+<li><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_bFFqBpPmcz0_p.347247_1426335121209_螢幕快照 2015-03-14 下午8.11.16.png'/></li></ul>
+</ul>
+<ul class="comment"><li><a href="https://www.dropbox.com/sh/oxumuuxx5blinc7/AABGJKRWDpAYHcfgQXtOpVbaa?dl=0"></a>https://www.dropbox.com/sh/oxumuuxx5blinc7/AABGJKRWDpAYHcfgQXtOpVbaa?dl=0</li>
 <li>另外，放棄使用mark feature tag。改用 kern （橫排）與 vkrn（直排）。</li>
 <li>因為橫排時與直排時，聲調的相對位置並不同，必須分開處理。技術上的問題，我不太可能在 mark&nbsp; 同一個feature裡，寫入直排、橫排兩種不同GPOS條件。</li>
 <li>總之目前問題在，各瀏覽器解釋GPOS的方法還不是很正常，尤其˙在直排的情況，一團亂。</li>
-<li><br/></li></ul>
+<li>Firefox 的话，可以试用最新的 Firefox Developer Edition 38，ruby 已经默认启用，直排也已大体可用，但需要到 about:config 里面启用 layout.css.vertical-text.enabled。预计将于 39 或 40 时默认开始启用直排。</li>
+<li>現在主要問題是各瀏覽器對GPOS的定位方式，我試試Firefox Nightly（？）。</li>
+<li>好，Nightly 里面直排似乎好像也已经默认启用了，我昨天好像看到了签入代码，不很确定最终进去没有。不过无论如何都可以启用那个选项来启用。</li>
+<li>GPOS 除了浏览器以外，其他排版软件应该也有支持的？是否可以依据一个比较有意义的写法，然后让其他某个排版软件可以正常渲染出来？如果 Firefox 里面显示有异常的话可以去提 bug。主要是有参考的话大概也许会比较好，我不是很熟悉字体这块。</li>
+<li>我也是，所以只能請 @But K 來協助。</li>
+<li>另外我想如果兼容性很差的话，或许可以考虑改用 GSUB 而不是 GPOS 来处理？</li></ul>
+<ul class="task"><li><i>或许可以考虑改用 GSUB 而不是 GPOS 来处理？</i></li></ul>
+<ul class="comment"><li>這要呼叫But來看看了。也看看Richard怎麼想，我在新發的信裡把Ken Lunde加了進來，聽聽他們的意見。畢竟注音的調號只確定不在ruby-position: inter-character的範圍內，我們只是在試如何處理。</li></ul>
+<ul class="task"><li>除了用在Ruby標音外，也包含行內的呈現？見R.I.的<a href='http://www.w3.org/International/tests/test-incubator/bopomofo/'/>Test Case</a></li></ul>
 
 <h2>發行與普及</h2><p>做出來再說(；´Д｀)。</p><p></p><p></p><p></p><p></p></body>
 </html>
