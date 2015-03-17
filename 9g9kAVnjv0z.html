@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="35"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$9g9kAVnjv0z</title>
+</head>
+<body><h1></h1><p></p><p>Dear all,</p><p>Update CITS#602</p><p>Refer to the follow analysis, it’s necessary to wait for SPREADTRUM’s analysis on issue#1 and issue#2.</p><table style="font-size:13px;cell-spacing: 0px; border-collapse: collapse;"><tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">602</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">[CHT3G/CHT2G][MTMOcall][WFT] Slot1 MT call met 8 times Miss call(2 continuous miss call for 2 times).[V01A:A51DTUL= 8/46: 1/49]</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"> &nbsp;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">1.Fatal</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Open</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">SPR.raymond.miao </td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">SAMANTHA_CHIU</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">N/A </td>
+</tr>
+</table>
+<p>&nbsp;</p><p><b>Issue#1:14:52/15:12/15:17/15:18/15:34/15:41</b></p><p>=&gt;&nbsp; UE was directed to URA_PCH state to receive page. In logs, we can find UE can receive page type1 successfully.</p><p>But, the received paging message were not expected to MT UE. I found the strange point is that there is nothing in paging type1 message.</p><p>Thus, it’s better to let SPREADTRUM&nbsp; engineer to look into this symptom and double check it.</p><p>&nbsp;</p><p>// UE in URA_PCH state</p><p>&nbsp;&nbsp;&nbsp;&nbsp;<img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_9g9kAVnjv0z_p.347925_1426583610504_undefined'/></p><p>// UE can decode Paging messages but no content in this messages.</p><p>&nbsp;&nbsp;&nbsp;<img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_9g9kAVnjv0z_p.347925_1426583635309_undefined'/></p><p>&nbsp;</p><p><b>Issue#2: 15/37</b></p><p>=&gt;&nbsp; MT side has received paging message, and it tried to established signaling channel but finally fail.</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_9g9kAVnjv0z_p.347925_1426583664037_undefined'/></p><p>&nbsp;<img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_9g9kAVnjv0z_p.347925_1426583683876_undefined'/></p><p>&nbsp;</p><p><b>NW issue: 15:34</b></p><p>=&gt;&nbsp; MT side performed LU so that UE can’t receive paging message temporarily.</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_9g9kAVnjv0z_p.347925_1426583711179_undefined'/></p><p>&nbsp;</p><p>Regards,</p><p>Jeric</p><p></p></body>
+</html>
