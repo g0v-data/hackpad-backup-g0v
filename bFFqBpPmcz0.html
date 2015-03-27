@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2701"/>
+<meta name="version" content="2847"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$bFFqBpPmcz0</title>
 </head>
 <body><h1>注音標音OpenType Font計畫</h1><ul><li>提案人：董福興</li>
@@ -105,5 +105,19 @@
 <li>效果：透過OpenType GPOS（本案例為&rsquo;kern&rsquo;）調整調號位置</li>
 <li>說明：這一點在呈現上，幾乎在各瀏覽器都沒有問題，也是比較確切的成果。</li></ul>
 
-<h2>發行與普及</h2><p>做出來再說(；´Д｀)。</p><p></p><p></p><p></p><p></p></body>
+<p><b>Test Case 2: </b><a href="http://binb.tw/bopomofo/case02/"></a>http://binb.tw/bopomofo/case02/</p><p></p><ul><li>文字：直排</li>
+<li>注音：直排</li>
+<li>嵌入字型：bpmfgpos.otf by <a href='https://g0v.hackpad.com/ep/profile/EExJhZAws6k'/>But Ko</a></li>
+<li>效果：透過OpenType GPOS（本案例為&rsquo;vkrn&rsquo;）調整調號位置</li>
+<li>說明：<ul><li>Firefox請使用Nightly build並且將layout.css.vertical-text.enabled設定為True，但似乎不支援GPOS位置調整。</li>
+<li>Google Chrome請使用Chrome Canary，但會發生調號原位置出現空白的狀況。</li></ul>
+</ul>
+
+<p><b>Test Case 3: </b><a href="http://binb.tw/bopomofo/case03/"></a>http://binb.tw/bopomofo/case03/</p><p></p><ul><li>文字：橫排</li>
+<li>注音：直排</li>
+<li>嵌入字型：bpmfgpos.otf by <a href='https://g0v.hackpad.com/ep/profile/EExJhZAws6k'/>But Ko</a></li>
+<li>效果：透過OpenType GPOS（本案例為&rsquo;vkrn&rsquo;）調整調號位置</li>
+<li>說明：除Webkit Nightly外，不支援ruby-position:inter-character。</li></ul>
+
+<p></p><h2>發行與普及</h2><p>做出來再說(；´Д｀)。</p><p></p><p></p><p></p><p></p></body>
 </html>
