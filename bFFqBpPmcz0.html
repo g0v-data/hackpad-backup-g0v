@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2597"/>
+<meta name="version" content="2701"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$bFFqBpPmcz0</title>
 </head>
 <body><h1>注音標音OpenType Font計畫</h1><ul><li>提案人：董福興</li>
@@ -63,7 +63,7 @@
 <li>原始碼中輕聲必須置於前方（˙ㄉㄜ），因為置於後方難以推算要回推幾個字元。</li></ul>
 <ul class="comment"><li>這一點在www-style的討論上，有提到需不需要reorder，我認為就讓輕聲放在前方，這應該沒問題。</li></ul>
 
-<h2>測試</h2><ul class="comment"><li>請問哪一個軟體可以支援 mark 的？我現在想要測試從 Droid Sans Fallback 跟 Roboto 弄出來的字體不知道該怎麼測試。</li>
+<h2>實作回饋</h2><ul class="comment"><li>請問哪一個軟體可以支援 mark 的？我現在想要測試從 Droid Sans Fallback 跟 Roboto 弄出來的字體不知道該怎麼測試。</li>
 <li><a href="https://dl.dropboxusercontent.com/u/4582065/Bopomofo3DU.otf"></a><a href='https://dl.dropboxusercontent.com/u/4582065/Bopomofo3DU.otf'/>https://dl.dropboxusercontent.com/u/4582065/Bopomofo3DU.otf</a></li>
 <li>我改了注音測試html範本，輕聲有套用，但二到四聲似乎沒出來，我問問Unicoder目前狀況如何：</li>
 <li><a href="https://www.dropbox.com/s/ld2ert8tr5hprzb/bopomofo_vert_gpos.xhtml"></a>https://www.dropbox.com/s/ld2ert8tr5hprzb/bopomofo_vert_gpos.xhtml</li>
@@ -98,6 +98,12 @@
 <ul class="task"><li><i>或许可以考虑改用 GSUB 而不是 GPOS 来处理？</i></li></ul>
 <ul class="comment"><li>這要呼叫But來看看了。也看看Richard怎麼想，我在新發的信裡把Ken Lunde加了進來，聽聽他們的意見。畢竟注音的調號只確定不在ruby-position: inter-character的範圍內，我們只是在試如何處理。</li></ul>
 <ul class="task"><li>除了用在Ruby標音外，也包含行內的呈現？見R.I.的<a href='http://www.w3.org/International/tests/test-incubator/bopomofo/'/>Test Case</a></li></ul>
+
+<h2>Test Case</h2><p></p><p><b>Test Case 1: </b><a href="http://binb.tw/bopomofo/case01/"></a>http://binb.tw/bopomofo/case01/</p><p></p><ul><li>文字：橫排</li>
+<li>注音：橫排</li>
+<li>嵌入字型：bpmfgpos.otf by <a href='/ep/profile/EExJhZAws6k'/>But Ko</a></li>
+<li>效果：透過OpenType GPOS（本案例為&rsquo;kern&rsquo;）調整調號位置</li>
+<li>說明：這一點在呈現上，幾乎在各瀏覽器都沒有問題，也是比較確切的成果。</li></ul>
 
 <h2>發行與普及</h2><p>做出來再說(；´Д｀)。</p><p></p><p></p><p></p><p></p></body>
 </html>
