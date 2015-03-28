@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2242"/>
+<meta name="version" content="2473"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$3-moed9ct</title>
 </head>
 <body><h1>3 月萌典松: moed9ct</h1><p></p><p>時間：3/28 11am-9pm（歡迎遲到早退）</p><p>地點：<a href='http://bookshow.tw/traffic/'/>Bookshow.tw</a> 基隆路一段 141 號 6 樓之 7（捷運市政府站步行三分鐘）</p><p>名額：35 人（<a href='http://g0v-tw.kktix.cc/events/moedict-3-28'/>報名頁面</a>）</p><p>內容：比照<a href='https://g0v.hackpad.com/8-moed5ct'/>前八次萌典松</a> ，採「併松」模式舉行，歡迎 g0v 各大小專案加<b><u>萌</u></b>參加。</p><p>費用：採量力而捐、自由贊助方式。如有剩餘，捐給下次黑客松。</p><p>活動守則：<a href="https://g0v.io/coc"></a><a href='https://g0v.io/coc'/>https://g0v.io/coc</a></p><p>直播網址：<a href="https://www.youtube.com/watch?v=_YLKZFLuBfs"></a>https://www.youtube.com/watch?v=_YLKZFLuBfs</p><ul class="comment"><li>影片敘述中有各提案、短講的時間碼目錄，歡迎點閱</li></ul>
@@ -82,7 +82,23 @@
 <li>ePub3 on Android: GitDen reader<ul><li>Tested with: <a href="http://goo.gl/TdLZ8J"></a>http://goo.gl/TdLZ8J</li>
 <li>ePub3 Export test: <a href="https://isp.moe.edu.tw/resources/resources_festival_list.jsp"></a>https://isp.moe.edu.tw/resources/resources_festival_list.jsp<ul><li>目前似乎無法生成 ePub3</li>
 <li>由 NAER 與維護者連絡，看是否能把 react-odp 接上去</li></ul>
-</ul>
+</li></ul>
+</li>
+<li>部件拆分原則:<ul><li>以不重疊的部件為準</li>
+<li>拆出來的單部件都要是國字（難字如「舛」是 OK 的）</li>
+<li>筆順以整字為主，拆出來之後不需要筆順</li></ul>
+</li>
+<li>同義字<ul><li>放在 notes 裡</li>
+<li>句型用 CKIP 的樹（不顯示給使用者），Nhaa Nab 可置換，其他 particle 保留<ul><li>這就是照樣造句的 template</li></ul>
+</li></ul>
+</li>
+<li>仿作<ul><li>數位教科書可以做 parse tree</li>
+<li>學生自己寫時，給出 parse tree 裡不同的部份<ul><li>如果都一樣則視為照樣造句成功</li>
+<li>不然，以紅色標示不同處，但不判定為錯誤與否</li></ul>
+</li></ul>
+</li>
+<li>自動出題，由老師篩選 false negatives<ul><li>因果題</li>
+<li><br/></li></ul>
 </ul>
 
 <p><b>MOEDICT 引用書目分析</b></p><p>該書被引用次數越多，泡泡越大。</p><p><a href='http://ahsyuyu.github.io/moequotebubble/'/>Online Demo</a>(d3.js) <a href='https://github.com/ahsyuyu/quotefreq-moedict'/>Github</a></p><ul><li>萌典如果包含常用引用書目的內容，從義項點引文，可跳到原文。<ul><li>只要有了以下的書，超過50%的引文可變成超連結：文選,紅樓夢,三國演義,儒林外史,初刻拍案驚奇,漢書,史記,後漢書,文明小史,西遊記,詩經,水滸傳,左傳,晉書,禮記,三國志,說文解字,金瓶梅,書經,新唐書,老殘遊記,孟子,兒女英雄傳,宋史,聊齋志異,莊子,論語,楚辭,醒世恆言,喻世明言,淮南子&nbsp;</li>
@@ -92,7 +108,9 @@
 </ul>
 </ul>
 
-<p><b>部件拼字遊戲 (中文scrabble)</b></p><ul><li>延伸<a href='https://www.moedict.tw/moetris/#p'/>萌典部件方塊</a>的想法，但不是即時的</li>
+<p><b>部件拼字遊戲 (中文scrabble)</b></p><ul><li>延伸<a href='https://www.moedict.tw/moetris/#p'/>萌典部件方塊</a>的想法，但不是即時的<ul><li>實驗：只拆第一層，不遞迴拆進部件裡<ul><li>Or even whole-words only</li></ul>
+</li></ul>
+</li>
 <li>多人線上遊戲。</li>
 <li>系統隨機給出5~8個部件，高頻部件分數低，罕用部件分數高。</li>
 <li>玩家試圖用這些部件，組出最多的字，部件可重覆使用。</li>
