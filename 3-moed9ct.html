@@ -3,11 +3,11 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2473"/>
+<meta name="version" content="2809"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$3-moed9ct</title>
 </head>
 <body><h1>3 月萌典松: moed9ct</h1><p></p><p>時間：3/28 11am-9pm（歡迎遲到早退）</p><p>地點：<a href='http://bookshow.tw/traffic/'/>Bookshow.tw</a> 基隆路一段 141 號 6 樓之 7（捷運市政府站步行三分鐘）</p><p>名額：35 人（<a href='http://g0v-tw.kktix.cc/events/moedict-3-28'/>報名頁面</a>）</p><p>內容：比照<a href='https://g0v.hackpad.com/8-moed5ct'/>前八次萌典松</a> ，採「併松」模式舉行，歡迎 g0v 各大小專案加<b><u>萌</u></b>參加。</p><p>費用：採量力而捐、自由贊助方式。如有剩餘，捐給下次黑客松。</p><p>活動守則：<a href="https://g0v.io/coc"></a><a href='https://g0v.io/coc'/>https://g0v.io/coc</a></p><p>直播網址：<a href="https://www.youtube.com/watch?v=_YLKZFLuBfs"></a>https://www.youtube.com/watch?v=_YLKZFLuBfs</p><ul class="comment"><li>影片敘述中有各提案、短講的時間碼目錄，歡迎點閱</li></ul>
-<p>　　　　今天聯合黑客松的新聞松實況轉播網址／<a href="https://www.youtube.com/watch?v=vQd0gicscKM"></a>https://www.youtube.com/watch?v=vQd0gicscKM</p><p></p><p>流程：</p><ul><li>11:30 專案、想法簡報介紹</li>
+<p>註：今天聯合黑客松的　<a href='/2015-03-28-XAooOila83L'/>第二次新聞松</a>　實況轉播網址／<a href="https://www.youtube.com/watch?v=vQd0gicscKM"></a>https://www.youtube.com/watch?v=vQd0gicscKM</p><p></p><p>流程：</p><ul><li>11:30 專案、想法簡報介紹</li>
 <li>12:00 自介、午餐、分組意見交流</li>
 <li>13:30 十五分鐘短講</li>
 <li>14:30 hack, eat, hack</li>
@@ -49,9 +49,10 @@
 <li>Kage Font Generator</li>
 <li>IDS 直接生成 SVG 的 React Component 部件</li>
 <li><a href="https://github.com/ksanaforge/kzy"></a>https://github.com/ksanaforge/kzy Font Generator 使用 <a href="http://fonts.jp/kage/"></a>http://fonts.jp/kage/ ，但目前只能喂 Glyphwiki 格式( 部件代碼及字框)。</li></li>
-<li>TODO 1: 從IDS算出適當的字框，即可完全取代醜醜的剎那單線體。<ul><li>Prior art: 丞宏的 <a href='https://github.com/sih4sing5hong5/han3_ji7_tsoo1_kian3'/>han3_ji7_tsoo1_kian3</a> （漢字組建專案）</li></ul>
+<li>TODO 1: 從IDS算出適當的字框，即可完全取代醜醜的剎那單線體。<ul><li>Prior art: 丞宏的 <a href='https://github.com/sih4sing5hong5/han3_ji7_tsoo1_kian3'/>han3_ji7_tsoo1_kian3</a> （漢字組建專案）</li>
+<li><a href="https://github.com/g0v/idskage"></a>https://github.com/g0v/idskage&nbsp; <a href='http://rawgit.com/g0v/idskage/master/index.html'/>demo</a> 從IDS產生kage 的輸入格式</li></ul>
 </li>
-<li>TODO 2: Web 版、中文介面的字框調整程式。自由上傳缺字的IDS及微調。server side 儲存IDS及比例參數，缺字以IDS交換及搜尋，client side 如果 render之前找不到字框參數，則自動產生。</li></li>
+<li>TODO 2: Web 版、中文介面的字框調整程式。自由上傳缺字的IDS及字框參數。server side 儲存IDS及比例參數，缺字以IDS交換及搜尋，client side 如果 render之前找不到字框參數，則自動以idskage產生。</li></li>
 <li>kage online demo <a href="http://fonts.jp/kage/demo.html"></a>http://fonts.jp/kage/demo.html</li></li>
 <li><a href="https://github.com/ksanaforge/kzy/blob/master/components/kzy-glyphwiki/gen.js"></a>https://github.com/ksanaforge/kzy/blob/master/components/kzy-glyphwiki/gen.js 這段程式抓glyphwiki 的dump，轉換成 json。</li></li>
 <li>dump 裡面一個字大概長這樣：</li></ul>
@@ -65,7 +66,9 @@
 <li>1:0:0:30:114:170:114</li>
 <li>1:0:0:18:137:182:137</li>
 <li>7:32:7:100ː63:100ː110:100ː175:14:185</li>
-<li>2:7:0:104:137:126:170:175:179</li><ul style="list-style: none;"><li>99 開頭表示這是個字框，用到別的字。client side 可以從這個資料找到可以讓使用者微調的部件。</li></ul>
+<li>2:7:0:104:137:126:170:175:179</li><ul style="list-style: none;"><li>99 開頭表示引用別的字，以「99:0:0:0:3:200:162:u8279-03」為例，格式：開頭兩個0,0用途未知，0,3,200,162為左上角x,y座標，200,162為右下角x,y座標。最後u8279-03為部件id (艹的第03號異體)。</li>
+<li>client side 可以從這個資料找到可以讓使用者微調的部件。&nbsp;</li>
+<li>非99開頭是筆劃類型及參數點，直接送給kage就好。</li></ul>
 </ul>
 <ul class="comment"><li>[冒號]100[冒號] 在 hackpad 變成一百分，不知道該怎麼解</li>
 <li>U+002D0 ː Triangular colon</li>
@@ -85,7 +88,8 @@
 </li></ul>
 </li>
 <li>部件拆分原則:<ul><li>以不重疊的部件為準</li>
-<li>拆出來的單部件都要是國字（難字如「舛」是 OK 的）</li>
+<li>拆出來的單部件都要是國字（難字如「舛」是 OK 的）<ul><li>定義以簡編本裡有的為主</li></ul>
+</li>
 <li>筆順以整字為主，拆出來之後不需要筆順</li></ul>
 </li>
 <li>同義字<ul><li>放在 notes 裡</li>
@@ -97,11 +101,19 @@
 <li>不然，以紅色標示不同處，但不判定為錯誤與否</li></ul>
 </li></ul>
 </li>
-<li>自動出題，由老師篩選 false negatives<ul><li>因果題</li>
-<li><br/></li></ul>
+<li>量詞<ul><li>用 <a href="http://120.127.233.228/Concordancer/"></a>http://120.127.233.228/Concordancer/ 選 Nf，找最近的名詞（Nab），做成文字雲<ul><li>Family resemblance, 不再取 ontological abstraction</li></ul>
+</li></ul>
+</li>
+<li>疊詞<ul><li>萌典 regex 搜尋：<ul><li>(.)&#92;1(.)&#92;2</li>
+<li>(.)(.)&#92;1&#92;2</li></ul>
+</li></ul>
+</li>
+<li>狀聲詞<ul><li>用 <a href="https://www.moedict.tw/?q="></a>https://www.moedict.tw/?q=&quot;的聲音&quot; 來找。</li></ul>
+</li>
+<li>自動出題，由老師篩選 false negatives<ul><li>因果題</li></ul>
 </ul>
 
-<p><b>MOEDICT 引用書目分析</b></p><p>該書被引用次數越多，泡泡越大。</p><p><a href='http://ahsyuyu.github.io/moequotebubble/'/>Online Demo</a>(d3.js) <a href='https://github.com/ahsyuyu/quotefreq-moedict'/>Github</a></p><ul><li>萌典如果包含常用引用書目的內容，從義項點引文，可跳到原文。<ul><li>只要有了以下的書，超過50%的引文可變成超連結：文選,紅樓夢,三國演義,儒林外史,初刻拍案驚奇,漢書,史記,後漢書,文明小史,西遊記,詩經,水滸傳,左傳,晉書,禮記,三國志,說文解字,金瓶梅,書經,新唐書,老殘遊記,孟子,兒女英雄傳,宋史,聊齋志異,莊子,論語,楚辭,醒世恆言,喻世明言,淮南子&nbsp;</li>
+<p></p><p><b>MOEDICT 引用書目分析</b></p><p>該書被引用次數越多，泡泡越大。</p><p><a href='http://ahsyuyu.github.io/moequotebubble/'/>Online Demo</a>(d3.js) <a href='https://github.com/ahsyuyu/quotefreq-moedict'/>Github</a></p><ul><li>萌典如果包含常用引用書目的內容，從義項點引文，可跳到原文。<ul><li>只要有了以下的書，超過50%的引文可快速點看原文的上下文：文選,紅樓夢,三國演義,儒林外史,初刻拍案驚奇,漢書,史記,後漢書,文明小史,西遊記,詩經,水滸傳,左傳,晉書,禮記,三國志,說文解字,金瓶梅,書經,新唐書,老殘遊記,孟子,兒女英雄傳,宋史,聊齋志異,莊子,論語,楚辭,醒世恆言,喻世明言,淮南子&nbsp;</li>
 <li>考慮超連結/引入：<ul><li><a href='http://ctext.org/text.pl?node=12274&amp;if=gb&amp;show=parallel'/>ctext.org</a></li>
 <li><a href="https://github.com/ksanaforge/openlit"></a>https://github.com/ksanaforge/openlit&nbsp; (開放文學)</li>
 <li>wikisource, of course</li></ul>
@@ -115,10 +127,14 @@
 <li>系統隨機給出5~8個部件，高頻部件分數低，罕用部件分數高。</li>
 <li>玩家試圖用這些部件，組出最多的字，部件可重覆使用。</li>
 <li>組成部件的分數加總即為該字分數。</li>
+<li>即時顯示每位玩家目前成功組出的字數，以增加刺激感。</li>
 <li>在限定時間內，總分最高者勝利。</li>
 <li>可限定字集，如小國生常用字，中日韓 800共用漢字等。</li>
+<li>為防止使用者用亂猜的方法，系統用某些方式(詢問字音或字義)來確認，答錯者扣秒數。</li>
 <li>FB 登入，記錄成績，頒發漢字能力檢定證書。</li></ul>
-<p>例：以「木」「口」，可組出「㕲㗊吅吕呆品啉喿噪杏林森楍榀槑橾」。</p><p>從部件產生可能的字，<a href='http://www.ksana.tw/decompose/'/>程式碼及講解</a>。</p><p></p><h2>場務</h2><p>午餐統計：素食 x3 葷食 x29</p><ul class="comment"><li>已訂餐</li></ul>
+<p>例：以「木」「口」，可組出「㕲㗊吅吕呆品啉喿噪杏林森楍榀槑橾」。</p><p>從部件產生可能的字，<a href='http://www.ksana.tw/decompose/'/>程式碼及講解</a>。</p><p></p><p><b>授權小幫手</b></p><p>&nbsp;g0v開放社群授權小幫手，現有的方案不夠直覺，希望能做成更簡單的精靈</p><p>目標使用者 : 幫助設計師快速找到適合的授權方式！</p><ul><li>已完成樹狀圖繪製</li>
+<li>Mockup製作中</li></ul>
+<p><a href="https://g0v.hackpad.com/Cp3CFHqbLcx"></a>https://g0v.hackpad.com/Cp3CFHqbLcx</p><p></p><h2>場務</h2><p>午餐統計：素食 x3 葷食 x29</p><ul class="comment"><li>已訂餐</li></ul>
 
 <h2>漂書 / DVD</h2><p>《這不是太陽花學運》</p><ul><li>作者之一羅慧雯因參考、引用 g0v 社群產出（ hackpad 媒體採訪共筆、g0v.tw/about、零時政府的第一年、向日葵體驗營⋯⋯等），贈書給社群致謝，托 venev 轉交，歡迎自由取閱</li></ul>
 <ul class="comment"><li>本書Lilian 先借走了</li></ul>
