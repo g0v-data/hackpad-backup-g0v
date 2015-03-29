@@ -3,11 +3,11 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1271"/>
+<meta name="version" content="1294"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$yRRVlfb5oJg</title>
 </head>
-<body><h1>水</h1><p></p><h2>專案構想</h2><ul><li>台灣地區的水文資料動態彙整與視覺化，形成水現況循環圖，讓一般民眾了解水環境與洪旱災議題</li>
-<li>資料包括<ul><li>中央氣象局 (預報、氣溫、雨量、蒸發散)</li>
+<body><h1>水</h1><p></p><h2>專案構想</h2><ul><li>台灣地區的水文資料動態彙整與視覺化，形成水現況/即時循環圖，讓一般民眾了解水環境與洪旱災議題</li>
+<li>資料包括（歡迎列舉）<ul><li>中央氣象局 (預報、氣溫、雨量、蒸發散)</li>
 <li>林務局 (林地區位的相關資料)</li>
 <li>地調所 (地質與水文)</li>
 <li>水利署 (集水區、流域、水庫、流量、地下水 、伏流水、水權)</li>
@@ -19,10 +19,11 @@
 <li>縣市的區排、下水道、河川資料</li>
 <li>汙水資料</li>
 <li>濕地</li>
-<li>漁業署的水文&nbsp; OpenData 漁塭</li></ul>
+<li>漁業署的水文&nbsp; OpenData 漁塭</li>
+<li>土地開發行為的地下水鑽探資料</li></ul>
 </ul>
 
-<h2>TODO</h2><ul><li>依照水循環邏輯，盤點國內既有的水量資料集、資料負責單位、資料說明、資料格式、資料集網址...<ul><li>整理成表格</li>
+<p></p><h2>TODO</h2><ul><li>依照水循環邏輯，盤點國內既有的水量資料集、資料負責單位、資料說明、資料格式、資料集網址...<ul><li>整理成表格</li>
 <li>參考：<a href='https://docs.google.com/spreadsheets/d/tA2Vu_ajWywAx3fjsaM9Rug/htmlview'/>OSM 整理的 NGIS 圖資清單</a></li></ul>
 </ul>
 
@@ -43,7 +44,8 @@
 <li><a href='http://fhy.wra.gov.tw/ReservoirPage_2011/StorageCapacity.aspx'/>各水庫每日狀況</a><ul><li><a href="http://webb-lu.github.io/chuikhoTW/"></a>http://webb-lu.github.io/chuikhoTW/</li><ul class="comment"><li>作了視覺化之後發現已經有人在討論這部分了 ⊙⊙ (沒資料的話ctr+r refresh一下會有圖)</li></ul>
 </ul>
 </ul>
-<ul><li><a href='http://news.pchome.com.tw/magazine/report/po/taiwan_panorama/10523/140414400003107019001.htm'/>跨界結盟：台南社大環境監測網發威</a></li>
+<ul><li><a href='http://wuss.wra.gov.tw/annualreports/20140017%E7%AC%AC%E4%BA%94%E9%83%A8%E5%88%86%20%E5%8F%B0%E7%81%A3%E5%9C%B0%E5%8D%80%E6%B0%91%E5%9C%8B101%E5%B9%B4%E8%93%84%E6%B0%B4%E8%A8%AD%E6%96%BD%E6%B0%B4%E9%87%8F%E7%87%9F%E9%81%8B%E7%B5%B1%E8%A8%88%E5%A0%B1%E5%91%8A.pdf'/>台灣地區民國101年蓄水設施水量營運統計報告.pdf</a></li>
+<li><a href='http://news.pchome.com.tw/magazine/report/po/taiwan_panorama/10523/140414400003107019001.htm'/>跨界結盟：台南社大環境監測網發威</a></li>
 <li>水循環示意圖，可以再加入人類使用的環節</li></ul>
 <p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_yRRVlfb5oJg_p.172171_1410541700761_Water_cycle_zh.png'/></p><p><img src='http://mewarnai.us/images/446516-water-cycle-diagram.jpg'/></p><p><a href="http://mewarnai.us/images/446516-water-cycle-diagram.jpg"></a>http://mewarnai.us/images/446516-water-cycle-diagram.jpg</p><p></p><ul><li>台灣水庫近期蓄水量圖：當下及近三個月的水庫蓄水率走勢。剩餘週數取最近七天用水量之平均除當前蓄水量做預估，若近期波動大會失準，因此僅供參考。 資料來源：<a href='http://fhy.wra.gov.tw/ReservoirPage_2011/StorageCapacity.aspx'/>經濟部水利署</a> / <a href='http://github.com/infographicstw/reservoir-history-crawler'/>資料截取程式</a>（<a href="http://data.infographics.tw/viz/reservoir/"></a>http://data.infographics.tw/viz/reservoir/）</li></ul>
 
@@ -60,7 +62,6 @@
 <li>哦哦@@，所以這部分，應該要看各個水庫洩水的量，並且考量該水庫附近的是否有農業區域與灌溉設施，評估該農業區使用多少的水庫洩水量?</li>
 <li>既有的「農業用水」計算中不曉得是否有此項目，或是概念相近的項目？</li>
 <li><br/></li></ul>
-
 <p>法規是否調整與調適</p><ul><li><a href='http://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=J0110001'/>水利法</a></li>
 <li><a href='http://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=D0070030'/>區域計畫法</a></li>
 <li><a href='http://zh.wikipedia.org/wiki/%E8%81%AF%E5%90%88%E5%9C%8B%E6%B5%B7%E6%B4%8B%E6%B3%95%E5%85%AC%E7%B4%84'/>聯合國海洋法公約</a></li>
