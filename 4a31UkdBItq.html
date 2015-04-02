@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="7497"/>
+<meta name="version" content="7612"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$4a31UkdBItq</title>
 </head>
 <body><h1>政治承諾追蹤網 Political Promise Tracker</h1><ul><li>Github: <a href="https://github.com/g0v/ppt"></a>https://github.com/g0v/ppt</li></ul>
@@ -184,7 +184,10 @@
 <ul><li>新聞資料庫</li>
 <li>各局處公告 (?)</li></ul>
 
-<p></p><h2>實作細節（非技術背景可跳填）</h2><p>Solution stack: NodeJS + ReactJS <a href='http://www.htmlxprs.com/post/20/creating-isomorphic-apps-with-react-and-nodejs'/>isomorphic web app</a>.</p><p>API server with <a href='https://speakerdeck.com/coodoo/why-loopback-rocks'/>loopback</a>, which also takes care of database connection, ORM-like abstractions, etc.</p><ul class="comment"><li>請問，這個loopback, 是<a href='https://strongloop.com/'/>strongloop</a> 的產品嗎? 看起來好像是付費的工具，還是您是用<a href='https://github.com/strongloop/loopback/'/>loopback</a> , 這個有教學嗎?看到洋洋灑灑的的api清單(指API explorer:)，是用快速產生的指令列工具嗎? 我看到了，<a href='http://loopback.io/getting-started/'/>快速啟動</a>，真的是一個欄位一個欄位設定名稱和型別，有別招嗎?</li></ul>
+<p></p><h2>實作細節（非技術背景可跳填）</h2><p>Solution stack: NodeJS + ReactJS <a href='http://www.htmlxprs.com/post/20/creating-isomorphic-apps-with-react-and-nodejs'/>isomorphic web app</a>.</p><p>API server with <a href='https://speakerdeck.com/coodoo/why-loopback-rocks'/>loopback</a>, which also takes care of database connection, ORM-like abstractions, etc.</p><ul class="comment"><li>請問，這個loopback, 是<a href='https://strongloop.com/'/>strongloop</a> 的產品嗎? 看起來好像是付費的工具，還是您是用<a href='https://github.com/strongloop/loopback/'/>loopback</a> , 這個有教學嗎?看到洋洋灑灑的的api清單(指API explorer:)，是用快速產生的指令列工具嗎? 我看到了，<a href='http://loopback.io/getting-started/'/>快速啟動</a>，真的是一個欄位一個欄位設定名稱和型別，有別招嗎?</li>
+<li>loopback 是免費的開源專案～ <a href='http://docs.strongloop.com/display/public/LB/LoopBack'/>官方文件與教學在這裏</a>。</li>
+<li>slc loopback:model 指令背後做的事情其實就是修改 server/model-config.json 以及在 common/models 裡面生成設定的 json 這樣，所以也可以直接改檔案喲～！</li>
+<li>其實和 rails generate model 一樣，如果不用工具生，也可以自己蓋檔案。</li></ul>
 
 <p>協作工具</p><ul><li>github repo：<a href="https://github.com/g0v/ppt"></a>https://github.com/<a href='https://github.com/g0v/ppt'/>g0v/ppt</a></li>
 <li>hackfoldr 工作資料夾網址：</li>
@@ -200,6 +203,7 @@
 
 <p><b>API Server</b></p><p><a href="https://promisetw.herokuapp.com/"></a>https://promisetw.herokuapp.com/</p><p>API explorer: <a href="https://promisetw.herokuapp.com/explorer"></a><a href='https://promisetw.herokuapp.com/explorer'/>https://promisetw.herokuapp.com/explorer</a></p><p></p><p><b>DB structure</b></p><p>參考<a href='https://docs.google.com/drawings/d/1EGtlENxrRaW0bpdZnxlqV516nmoz8VtOhoIZpqnrG1Y/edit'/>真度計的 ER Diagram</a> ，將上述 prototype 所需 database table 與關聯，繪製成下面的 ER Diagram：</p><ul class="comment"><li>上面連結已經 Not Found</li>
 <li>真的耶 QQ 請問原作者 <a href='/ep/profile/xJOH0LkUNIk'/>John Lin</a> 有沒有留存呢 ?</li>
-<li>我把連結補好了!</li></ul>
+<li>我把連結補好了!</li>
+<li>John Lin ++</li></ul>
 <p><a href="https://docs.google.com/drawings/d/1KLyjlC6B2ylx0X-OVLjifSrPmoZDiwdHZUhEbiYnQs4/edit?usp=sharing"></a>https://docs.google.com/drawings/d/1KLyjlC6B2ylx0X-OVLjifSrPmoZDiwdHZUhEbiYnQs4/edit?usp=sharing</p><p>（縮網址 <a href="http://goo.gl/eDt7TZ"></a>http://goo.gl/eDt7TZ ）</p><p></p><p></p><p></p></body>
 </html>
