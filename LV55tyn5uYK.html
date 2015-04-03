@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="42"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$LV55tyn5uYK</title>
+</head>
+<body><h1>開放標案</h1><p></p><p><b>專案網址</b></p><p><a href="http://pcc.mlwmlw.org"></a><a href='https://pcc.mlwmlw.org'/>http://</a><a href='http://cc.mlwmlw.org'/>p</a><a href='https://pcc.mlwmlw.org'/>cc.mlwmlw.org</a></p><p></p><p><b>關於此專案</b></p><p>　　一開始因為一位朋友的發想，想要做訂閱標案的通知，後來發現有很多此類的 app 存在了，最後就變成我的一個 side project，因為之前注意了一陣 g0v 的專案，但是都不曉得如何開始，只好自己開一個房間囉 -_-。</p><p>　　前陣子九合一選舉，看見新聞上報導台南的市政經費不停被縮減，但是還是能在各方面發展沒有太大影響。所以這系統應該能用來幫助大家分辨這種情況，是否會因為執政黨或多數黨，使資源集中在少數的縣市，這也是在評斷一個縣市發展的面向。或者有哪些單位執行上發生許多障礙，其實是沒有得到足夠的經費挹注造成的，就能瞭解有哪些單位需要大家更多的關注。</p><p></p><p>紀錄此專案的一些想法跟目標，也歡迎意見交流喔～。</p><p>此網站的資訊來源是 <a href="http://web.pcc.gov.tw/"></a><a href='http://web.pcc.gov.tw/'/>http://web.pcc.gov.tw/</a> 的公開招標的標案資訊。</p><p></p><p><b>Links</b></p><ul><li><a href='https://github.com/mlwmlw/pcc'/>Github Source code</a></li>
+<li><a href='https://hackpad.com/ep/pad/static/0M0HW9tSVNQ'/>g0v-pcc 標案</a>：g0v 關於政府標案的討論，跟此專案非直接相關</li></ul>
+
+<p><b>Todo</b></p><ul><li>蒐集結案資料<ul><li>廠商資料（代碼、廠商名稱）</li>
+<li>連結原始標案</li></ul>
+</li>
+<li>統計<ul><li>得標廠商排名</li></ul>
+</li>
+<li>功能<ul><li>每月標案排行榜（標案金額）</li></ul>
+</ul>
+
+<p><b>開發注意事項（地雷區）</b></p><ul><li>mongo 的時間沒有時區…</li>
+<li>web 用 koa 寫 node 要加 --harmony 才能跑，api 用 LiveScript 配 express 寫</li>
+<li>目前 server.ls 跟 web/index.js 分兩個 port 要自己用 proxy 串起來才會動（囧）<ul><li>建一個 domain</li>
+<li>web 介面要接到 domain/</li>
+<li>api 要 proxy 到 domain/api&nbsp;</li></ul>
+</ul>
+
+<p></p></body>
+</html>
