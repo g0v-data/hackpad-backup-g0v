@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="3144"/>
+<meta name="version" content="3180"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$3-moed9ct</title>
 </head>
 <body><h1>3 月萌典松: moed9ct</h1><p></p><p>時間：3/28 11am-9pm（歡迎遲到早退）</p><p>地點：<a href='http://bookshow.tw/traffic/'/>Bookshow.tw</a> 基隆路一段 141 號 6 樓之 7（捷運市政府站步行三分鐘）</p><p>名額：35 人（<a href='http://g0v-tw.kktix.cc/events/moedict-3-28'/>報名頁面</a>）</p><p>內容：比照<a href='https://g0v.hackpad.com/8-moed5ct'/>前八次萌典松</a> ，採「併松」模式舉行，歡迎 g0v 各大小專案加<b><u>萌</u></b>參加。</p><p>費用：採量力而捐、自由贊助方式。如有剩餘，捐給下次黑客松。</p><p>活動守則：<a href="https://g0v.io/coc"></a><a href='https://g0v.io/coc'/>https://g0v.io/coc</a></p><p>直播網址：<a href="https://www.youtube.com/watch?v=_YLKZFLuBfs"></a>https://www.youtube.com/watch?v=_YLKZFLuBfs</p><ul class="comment"><li>影片敘述中有各提案、短講的時間碼目錄，歡迎點閱</li></ul>
@@ -81,7 +81,140 @@
 <ul style="list-style: none;"><li>投影片第七頁解釋了筆畫格式，第九頁解釋了組件格式。</li></ul>
 <ul><li><a href='http://www.atypi.org/type-typography/glyphwiki-a-wiki-based-glyph-design-and-font-production-system.-taichi-kawabata-and-kamichi-koichi'/>GlyphWiki and OpenType: A Collaborative Glyph Development Environment and its Font Exporting System</a></li></ul>
 <ul style="list-style: none;"><li>第四頁解釋了 name rules 。</li></ul>
-<ul><li><a href='https://github.com/kawabata/glyphwiki-afdko'/>GlyphWiki AFDKO Font Generator</a></li></ul>
+<ul><li>stroke types<ul><li>straight line 2pts, 1<ul><li>free, 0<ul><li>free 1:0:0</li>
+<li>connect(h) 1:0:2</li>
+<li>connect(v) 1:0:32</li>
+<li>L-btm corner 1:0:13</li>
+<li>R-btm corner 1:0:23</li>
+<li>slash left 1:0:4</li>
+<li>L-btm(G/T) 1:0:313</li></ul>
+</li>
+<li>connect(h), 2<ul><li>free 1:2:0</li>
+<li>connect(h) 1:2:2</li>
+<li>connect(v) 1:2:32 illegal</li>
+<li>L-btm corner 1:2:13 illegal</li>
+<li>R-btm corner 1:2:32 illegal</li>
+<li>slash left 1:2:4 illegal</li>
+<li>L-btm(G/T) 1:2:313 illegal</li></ul>
+</li>
+<li>connect(v)<ul><li>free 1:32:0</li>
+<li>connect(h) 1:32:2 illegal</li>
+<li>connect(v) 1:32:32</li>
+<li>L-btm corner 1:32:13</li>
+<li>R-btm corner 1:32:23</li>
+<li>slash left 1:32:4</li>
+<li>L-btm(G/T) 1:32:313</li></ul>
+</li>
+<li>L-top corner, 12<ul><li>free 1:12:0</li>
+<li>connect(h) 1:12:2 illegal</li>
+<li>connect(v) 1:12:32</li>
+<li>L-btm corner 1:12:13</li>
+<li>R-btm corner 1:12:23</li>
+<li>slash left 1:12:4 illegal</li>
+<li>L-btm(G/T) 1:12:313</li></ul>
+</li>
+<li>R-top corner<ul><li>free 1:22:0</li>
+<li>connect(h) 1:22:2 illegal</li>
+<li>connect(v) 1:22:32</li>
+<li>L-btm corner 1:22:13</li>
+<li>R-btm corner 1:22:23</li>
+<li>slash left 1:22:4</li>
+<li>L-btm(G/T) 1:22:313</li></ul>
+</li></ul>
+</li>
+<li>curve 3pts, 2<ul><li>free<ul><li>slash left 2:0:7</li>
+<li>slash right 2:0:0 illegal</li>
+<li>stop for dot 2:0:8 illegal</li>
+<li>hook left 2:0:4 illegal</li>
+<li>hook right 2:0:5</li></ul>
+</li>
+<li>connect, 32<ul><li>slash left 2:32:7</li>
+<li>slash right 2:32:0 illegal</li>
+<li>stop for dot 2:32:8 illegal</li>
+<li>hook left 2:32:4</li>
+<li>hook right 2:32:5</li></ul>
+</li>
+<li>L-top corner, 12<ul><li>slash left 2:12:7</li>
+<li>slash right 2:12:0 illegal</li>
+<li>stop for dot 2:12:8 illegal</li>
+<li>hook left 2:12:4 illegal</li>
+<li>hook right 2:12:5 illegal</li></ul>
+</li>
+<li>R-top corner, 22<ul><li>slash left 2:22:7</li>
+<li>slash right 2:22:0 illegal</li>
+<li>stop for dot 2:22:8 illegal</li>
+<li>hook left 2:22:4</li>
+<li>hook right 2:22:5</li></ul>
+</li>
+<li>narrow for dot, 7<ul><li>slash left 2:7:7 illegal</li>
+<li>slash right 2:7:0</li>
+<li>stop for dot 2:7:8</li>
+<li>hook left 2:7:4</li>
+<li>hook right 2:7:5 illegal</li></ul>
+</li></ul>
+</li>
+<li>bend line 3pts, 3<ul><li>free, 0<ul><li>free 3:0:0</li>
+<li>hook up 3:0:5</li></ul>
+</li>
+<li>connect(v), 32<ul><li>free 3:32:0</li>
+<li>hook up 3:32:5</li></ul>
+</li>
+<li>L-top corner, 12<ul><li>free 3:12:0</li>
+<li>hook up 3:12:5</li></ul>
+</li>
+<li>R-top corner, 22<ul><li>free 3:22:0 illegal</li>
+<li>hook up 3:22:5</li></ul>
+</li></ul>
+</li>
+<li>OTSU curve 3pts<ul><li>free, 0<ul><li>free 4:0:0</li>
+<li>hook up 4:0:5</li></ul>
+</li>
+<li>R-top corner, 22<ul><li>free 4:22:0</li>
+<li>hook up 4:22:5</li></ul>
+</li></ul>
+</li>
+<li>complex curve 4pts, 6<ul><li>free, 0<ul><li>slash left 6:0:7 illegal</li>
+<li>slash right 6:0:0 illegal</li>
+<li>stop for dot 6:0:8 illegal</li>
+<li>hook left 6:0:4 illegal</li>
+<li>hook right 6:0:5</li></ul>
+</li>
+<li>connect, 32<ul><li>slash left 6:32:7</li>
+<li>slash right 6:32:0 illegal</li>
+<li>stop for dot 6:32:8 illegal</li>
+<li>hook left 6:32:4</li>
+<li>hook right 6:32:5</li></ul>
+</li>
+<li>L-top corner, 12<ul><li>slash left 6:12:7</li>
+<li>slash right 6:12:0 illegal</li>
+<li>stop for dot 6:12:8 illegal</li>
+<li>hook left 6:12:4 illegal</li>
+<li>hook right 6:12:5 illegal</li></ul>
+</li>
+<li>R-top corner, 22<ul><li>slash left 6:22:7</li>
+<li>slash right 6:22:0 illegal</li>
+<li>stop for dot 6:22:8 illegal</li>
+<li>hook left 6:22:4</li>
+<li>hook right 6:22:5</li></ul>
+</li>
+<li>narrow for dot, 7<ul><li>slash left 6:7:7 illegal</li>
+<li>slash right 6:7:0</li>
+<li>stop for dot 6:7:8</li>
+<li>hook left 6:7:4</li>
+<li>hook right 6:7:5 illegal</li></ul>
+</li></ul>
+</li>
+<li>vert slash 4pts, 7<ul><li>free, 0<ul><li>slash left 7:0:7</li></ul>
+</li>
+<li>connect, 32<ul><li>slash left 7:32:7</li></ul>
+</li>
+<li>L-top corner, 12<ul><li>slash left 7:12:7</li></ul>
+</li>
+<li>R-top corner, 22<ul><li>slash left 7:22:7 illegal</li></ul>
+</li></ul>
+</li></ul>
+</li>
+<li><a href='https://github.com/kawabata/glyphwiki-afdko'/>GlyphWiki AFDKO Font Generator</a></li></ul>
 </ul>
 
 <p></p><ul class="comment"><li>請自由新增相關連結</li></ul>
