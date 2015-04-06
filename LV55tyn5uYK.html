@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="779"/>
+<meta name="version" content="877"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$LV55tyn5uYK</title>
 </head>
 <body><h1>開放標案</h1><h2>專案簡介</h2><p><b>專案說明</b></p><p>　　標案資訊來源是 <a href="http://web.pcc.gov.tw/"></a><a href='http://web.pcc.gov.tw/'/>http://web.pcc.gov.tw/</a> 的<b>公開招標</b>的標案資訊。</p><ul class="comment"><li>招標方式還有限制性招標、公開取得等等…</li>
@@ -15,13 +15,18 @@
 <h2>目標與功能</h2><p>　　前陣子九合一選舉，看見新聞上報導台南的市政經費不停被縮減，但是還是能在各方面發展沒有太大影響。所以這系統應該能用來幫助大家分辨這種情況，是否會因為執政黨或多數黨，使資源集中在少數的縣市，這也是在評斷一個縣市發展的面向。或者有哪些單位執行上發生許多障礙，其實是沒有得到足夠的經費挹注造成的，就能瞭解有哪些單位需要大家更多的關注。</p><p></p><p>　　招標資料裡面主要有分成招標、決標、機構、廠商的資料，除了可以更簡單的不需要知道太多知識，就能查詢檢索，也想依照特定目的提供一些統計的功能，讓民眾可以更了解政府的預算，大致都怎麼花，花在什麼項目上，是否有圖利特定廠商的問題存在。</p><p></p><p>　　成為社會議題討論時的輔助工具。</p><p></p><h2>要解決的問題</h2><p>原本的標案系統是給廠商用的，需要一個系統讓一般民眾也想要用的。</p><p></p><p>讓公民都能知道我們繳納的稅金都實際花在什麼上面</p><p></p><p><b>相關專案</b></p><p><a href='https://hackpad.com/ep/pad/static/0M0HW9tSVNQ'/>g0v-pcc 標案</a>：g0v 關於政府標案的討論，延續原本 g0v 的標案專案的討論，透過已經有系統的雛型，來進一步想像實際應該要實現的功能。</p><ul><li><a href="https://github.com/jeffhung/g0v-pcc"></a><a href='https://github.com/jeffhung/g0v-pcc'/>https://github.com/jeffhung/g0v-pcc</a></li>
 <li><a href="https://github.com/tka/g0v-pcc/tree/master/ruby-pcc-parser"></a><a href='https://github.com/tka/g0v-pcc/tree/master/ruby-pcc-parser'/>https://github.com/tka/g0v-pcc/tree/master/ruby-pcc-parser</a></li>
 <li><a href="https://github.com/tka/pcc-web"></a><a href='https://github.com/tka/pcc-web'/>https://github.com/tka/pcc-web</a></li></ul>
+
 <p><b>授權方式</b></p><p>MIT</p><p></p><p><b>專案目前狀態</b></p><p>？</p><p></p><h2>徵求協作者</h2><p>發起人/拋磚人：</p><p>分工與成員</p><ul class="task"><li>NeedsWriter: 需要文案幫手（撰寫基本資訊、報導專案etc）</li>
 <li>NeedsDesigner: 需要介面設計</li>
 <li>檢查資料正確性</li>
 <li>實作新功能</li>
 <li>設計與規劃需求</li></ul>
 
-<p><b>ideal Pool</b></p><p><b>實作細節</b></p><ul><li>backend：node.js(koa、express、LiveScript)</li>
+<p><b>ideal Pool</b></p><ul><li>標案履歷，每個標案都應該有個人頁，包含他無法決標的次數，該廠商相關的標案，或名字類似得標案，得標的廠商，使用者的留言與討論，被使用者關注的次數與評比<ul><li>讓使用者用人肉分析標案是否有特殊性，在自動分析完成前可以使用</li>
+<li>隨選標案讓人來觀察跟評論（奇怪、沒什麼特別的、可疑）之類的評分。</li></ul>
+</ul>
+
+<p></p><p><b>實作細節</b></p><ul><li>backend：node.js(koa、express、LiveScript)</li>
 <li>frontend：bootstrap、angularjs、c3js</li>
 <li>database：mongodb</li>
 <li>cache：redis</li></ul>
