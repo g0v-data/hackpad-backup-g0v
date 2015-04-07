@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="658"/>
+<meta name="version" content="676"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$bSmx3h922jc</title>
 </head>
 <body><h1>國會調查兵團開放API</h1><p></p><h2>介紹</h2><p></p><p>這邊是<a href='https://cic.tw'/>國會調查兵團網站</a>的開放API，歡迎介接。</p><p>內容以CC-BY 4.0釋出。</p><p></p><p>國會調查兵團網站介紹：</p><p></p><p><a href="https://cic.tw/about"></a>https://cic.tw/about</p><p></p><p>網站code以MIT釋出。</p><p></p><p><a href="https://github.com/billy3321/cic-website"></a>https://github.com/billy3321/cic-website</p><p></p><p></p><h2>API內容</h2><p></p><p><b>立委列表</b></p><p><a href="https://cic.tw/legislators.json"></a>https://cic.tw/legislators.json</p><p></p><undefined><li><b>GET參數</b></li></undefined>
@@ -76,7 +76,7 @@
 </li></ul>
 </li></ul>
 </li>
-<li>questions: 質詢列表，內容請參見下面</li>
+<li>interpellations: 質詢列表，內容請參見下面</li>
 <li>entries: 新聞列表，內容請參見下面</li>
 <li>videos: 影片列表，內容請參見下面</li></ul>
 
@@ -134,10 +134,10 @@
 </li>
 <li>&nbsp; count: 影片筆數</li></ul>
 
-<p></p><p></p><p><b>單一立委的質詢記錄</b></p><p><a href="https://cic.tw/legislators/:id/questions.json"></a><a href='https://cic.tw/legislators/1738.json'/>https://cic.tw/legislators/</a><a href='https://cic.tw/legislators//questions.json'/>:</a>id<a href='https://cic.tw/legislators/1738.json'/>/</a><a href='https://cic.tw/legislators/1738/.json'/>q</a>uestions<a href='https://cic.tw/legislators/1738.json'/>.json</a></p><p>ex:</p><p><a href="https://cic.tw/legislators/1738/questions.json"></a><a href='https://cic.tw/legislators/1738/questions.json'/>https://cic.tw/legislators/1738/questions.json</a></p><p></p><undefined><li><b>GET參數</b></li></undefined>
+<p></p><p></p><p><b>單一立委的質詢記錄</b></p><p><a href="https://cic.tw/legislators/:id/interpellations.json"></a><a href='https://cic.tw/legislators/1738.json'/>https://cic.tw/legislators/</a><a href='https://cic.tw/legislators//questions.json'/>:</a>id<a href='https://cic.tw/legislators/1738.json'/>/</a><u>interpellation</u>s<a href='https://cic.tw/legislators/1738.json'/>.json</a></p><p>ex:</p><p><a href="https://cic.tw/legislators/1738/interpellations.json"></a><a href='https://cic.tw/legislators/1738/questions.json'/>https://cic.tw/legislators/1738/</a><a href='https://cic.tw/legislators/1738/s.json'/>interpellation</a><a href='https://cic.tw/legislators/1738/questions.json'/>s.json</a></p><p></p><undefined><li><b>GET參數</b></li></undefined>
 <p>limit：限制筆數</p><p>offset：從第幾筆開始</p><p>query：查詢質詢標題、內容</p><p>callback：JSONP用的callback參數</p><p></p><undefined><li><b>回應</b></li></undefined>
 <p>---</p><ul><li>&nbsp; status: &quot;success&quot;</li>
-<li>&nbsp; questions:&nbsp;</li>
+<li>&nbsp; interpellations:&nbsp;</li>
 <li>&nbsp;&nbsp;&nbsp; -&nbsp;<ul><li>id: 質詢id</li>
 <li>title: 質詢標題</li>
 <li>content: 質詢內容</li>
@@ -217,10 +217,10 @@
 </ul>
 </ul>
 
-<p></p><p><b>所有的質詢記錄</b></p><p><a href="https://cic.tw/questions.json"></a><a href='https://cic.tw/entries.json'/>https://cic.tw/</a><a href='https://cic.tw/.json'/>q</a>uestions<a href='https://cic.tw/entries.json'/>.json</a></p><p></p><undefined><li><b>GET參數</b></li></undefined>
+<p></p><p><b>所有的質詢記錄</b></p><p><a href="https://cic.tw/interpellations.json"></a><a href='https://cic.tw/entries.json'/>https://cic.tw/</a><a href='https://cic.tw/s.json'/>interpellation</a>s<a href='https://cic.tw/entries.json'/>.json</a></p><p></p><undefined><li><b>GET參數</b></li></undefined>
 <p>limit：限制筆數</p><p>offset：從第幾筆開始</p><p>query：查詢質詢標題、內容</p><p>callback：JSONP用的callback參數</p><p></p><undefined><li><b>回應</b></li></undefined>
 <p>---</p><ul><li>&nbsp; status: &quot;success&quot;</li>
-<li>&nbsp; questions:&nbsp;</li>
+<li>&nbsp; interpellations:&nbsp;</li>
 <li>&nbsp;&nbsp;&nbsp; -&nbsp;<ul><li>id: 質詢id</li>
 <li>title: 質詢標題</li>
 <li>content: 質詢內容</li>
@@ -263,10 +263,10 @@
 </li>
 <li>&nbsp; count: 質詢筆數</li></ul>
 
-<p><b>單一質詢記錄</b></p><p><a href="https://cic.tw/questions/:id.json"></a><a href='https://cic.tw/questions.json'/>https://cic.tw/questions/</a><a href='https://cic.tw/questions/.json'/>:</a>id<a href='https://cic.tw/questions.json'/>.json</a></p><p>ex:</p><p><a href="https://cic.tw/questions/1.json"></a><a href='https://cic.tw/questions/1.json'/>https://cic.tw/questions/1.json</a></p><p></p><undefined><li><b>GET參數</b></li></undefined>
+<p><b>單一質詢記錄</b></p><p><a href="https://cic.tw/interpellations/:id.json"></a><a href='https://cic.tw/questions.json'/>https://cic.tw/</a><a href='https://cic.tw/s/:id.json'/>interpellation</a><a href='https://cic.tw/questions.json'/>s/</a><a href='https://cic.tw/questions/.json'/>:</a>id<a href='https://cic.tw/questions.json'/>.json</a></p><p>ex:</p><p><a href="https://cic.tw/interpellations/1.json"></a><a href='https://cic.tw/questions/1.json'/>https://cic.tw/</a><a href='https://cic.tw/s/1.json'/>interpellation</a><a href='https://cic.tw/questions/1.json'/>s/1.json</a></p><p></p><undefined><li><b>GET參數</b></li></undefined>
 <p>callback：JSONP用的callback參數</p><p></p><undefined><li><b>回應</b></li></undefined>
 <p>---</p><ul><li>&nbsp; status: &quot;success&quot;</li>
-<li>&nbsp; question:&nbsp;</li>
+<li>&nbsp; interpellation:&nbsp;</li>
 <li>&nbsp;&nbsp;&nbsp; -&nbsp;<ul><li>id: 質詢id</li>
 <li>title: 質詢標題</li>
 <li>content: 質詢內容</li>
