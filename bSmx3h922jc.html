@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="676"/>
+<meta name="version" content="1072"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$bSmx3h922jc</title>
 </head>
 <body><h1>國會調查兵團開放API</h1><p></p><h2>介紹</h2><p></p><p>這邊是<a href='https://cic.tw'/>國會調查兵團網站</a>的開放API，歡迎介接。</p><p>內容以CC-BY 4.0釋出。</p><p></p><p>國會調查兵團網站介紹：</p><p></p><p><a href="https://cic.tw/about"></a>https://cic.tw/about</p><p></p><p>網站code以MIT釋出。</p><p></p><p><a href="https://github.com/billy3321/cic-website"></a>https://github.com/billy3321/cic-website</p><p></p><p></p><h2>API內容</h2><p></p><p><b>立委列表</b></p><p><a href="https://cic.tw/legislators.json"></a>https://cic.tw/legislators.json</p><p></p><undefined><li><b>GET參數</b></li></undefined>
@@ -413,6 +413,69 @@
 <li>vote_date:投票日期</li>
 <li>term_start: 任期開始</li>
 <li>term_end: 任期結束</li></ul>
+</ul>
+</ul>
+
+<p></p><p><b>整體公督盟記錄</b></p><p><a href="https://cic.tw/ccws/:id.json"></a><a href='https://cic.tw/videos/:id.json'/>https://cic.tw/</a><a href='https://cic.tw//:id.json'/>c</a>cws<a href='https://cic.tw/videos/:id.json'/>/:id.json</a></p><p>ex:</p><p><a href="https://cic.tw/videos/1.json"></a><a href='https://cic.tw/videos/1.json'/>https://cic.tw/videos/1.json</a></p><p></p><undefined><li><b>GET參數</b></li></undefined>
+<p>callback：JSONP用的callback參數</p><p></p><undefined><li><b>回應</b></li></undefined>
+<p>---</p><p></p><ul><li>status：&quot;success&quot;</li>
+<li>ad_session 會期資料<ul><li>id： 會期id</li>
+<li>name：會期名稱</li>
+<li>ad_id：會期所屬的屆次id</li>
+<li>date_start：會期開始時間</li>
+<li>date_end：會期結束時間</li>
+<li>session：會期所屬的次數（第四會期）</li>
+<li>regular：是否為正式會期</li></ul>
+</li>
+<li>ccw<ul><li>citizen_score：公民評鑑分數<ul><li>ad_session_id</li>
+<li>id</li>
+<li>total：該會期公民評鑑滿分</li>
+<li>average：該會期公民評鑑平均得分</li>
+<li>ccw_link：公民評鑑相關連結</li></ul>
+</li>
+<li>committees 各委員會數據<ul><li>ad_session_id</li>
+<li>id</li>
+<li>committee_id</li>
+<li>should_attend_count：應出席數</li>
+<li>actually_average_attend_count：平均出席數</li>
+<li>avaliable_interpellation_count：可質詢數</li>
+<li>actually_average_interpellation_count：質詢平均次數</li>
+<li>committee：委員會資料<ul><li>id</li>
+<li>name：委員會名稱</li>
+<li>kind：委員會種類，yc院會，sc普通委員會，ac特種委員會</li></ul>
+</li></ul>
+</li>
+<li>legislators：立委個人數據<ul><li>ys_attend_count：院會實際出席數</li>
+<li>sc_attend_count：委員會實際出席數</li>
+<li>sc_interpellation_count：委員會實際質詢數</li>
+<li>first_proposal_count：主提案第一人案數</li>
+<li>not_first_proposal_count：非主提案第一人案數</li>
+<li>budgetary_count：預算案提案數</li>
+<li>auditing_count：決算審查提案數</li>
+<li>citizen_score：公民評鑑得分數</li>
+<li>new_sunshine_bills：陽光公益法案-新立</li>
+<li>modify_sunshine_bills：陽光公益法案-修正</li>
+<li>budgetary_deletion_passed：預算刪減案-三讀通過</li>
+<li>budgetary_deletion_impact：預算刪減案-重大公益</li>
+<li>budgetary_deletion_special：預算刪減案-特殊事蹟</li>
+<li>special：特殊事蹟</li>
+<li>conflict_expose：利益衝突接露</li>
+<li>allow_visitor：開放旁聽</li>
+<li>human_rights_infringing_bill：侵害人權法案提案</li>
+<li>human_rights_infringing_budgetary：侵害人權預算案</li>
+<li>judicial_case：司法案件</li>
+<li>disorder：脫序表現</li>
+<li>legislator：立委資訊<ul><li>id</li>
+<li>name：立委姓名</li>
+<li>description：描述</li>
+<li>image：立委圖片</li>
+<li>in_office：立委是否在職</li>
+<li>fb_link：立委FB連結</li>
+<li>wiki_link：立委wiki連結</li>
+<li>musou_link：立委國會無雙連節</li>
+<li>ccw_link：立委公督盟連結</li>
+<li>ivod_link：立委ivod連結</li></ul>
+</ul>
 </ul>
 </ul>
 
