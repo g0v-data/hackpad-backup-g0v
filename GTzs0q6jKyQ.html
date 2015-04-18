@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2101"/>
+<meta name="version" content="2112"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$GTzs0q6jKyQ</title>
 </head>
 <body><h1>千影(chikage) - HTML5 GlyphWiki Editor</h1><p></p><h2>專案簡介</h2><p></p><p><b>緣由</b></p><ul style="list-style: none;"><li>GlyphWiki.org 目前39萬個中文字型，是花園字型(Hanazono Font) 的底層資料庫，唯其字型是採用日本規範。</li>
@@ -102,7 +102,8 @@
 </li>
 <li>目前有兩個可能的方向，一是在 server 展開所有的 link （99 開頭的部件），成末級部件，編輯器只要 request 一次就好。或者在編輯器 pipeline request ，減少 request 次數，例如 `<a href="https://server/glyph/?json"></a><a href='https://server/glyph/?json'/>https://server/glyph/?json</a>[]=u8279-03&amp;json[]=u660e` 。</li>
 <li><br/></li>
-<li>database engine: 未決定。(Redis ? LY 則建議 <a href="http://www.rethinkdb.com/"></a>http://www.rethinkdb.com/ )</li></ul>
+<li>database engine: 未決定。(Redis ? LY 則建議 <a href="http://www.rethinkdb.com/"></a>http://www.rethinkdb.com/ )</li>
+<li>目前已經用 redis 先弄了一個</li></ul>
 
 <p><b>線條種類與頭尾形狀</b></p><ul><li>stroke types<ul><li>straight line 2pts, 1<ul><li>free, 0<ul><li>free 1:0:0</li>
 <li>connect(h) 1:0:2</li>
