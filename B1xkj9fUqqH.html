@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="119"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$B1xkj9fUqqH</title>
+</head>
+<body><h1>IoT 空污偵測 DIY</h1><p></p><p>the begin: <a href="http://logbot.g0v.tw/channel/g0v.tw/2015-04-19/61"></a>http://logbot.g0v.tw/channel/g0v.tw/2015-04-19/61</p><p></p><p><b>偵測設備</b></p><ul><li><a href="http://aircasting.org/"></a>http://aircasting.org/ - USD$200<ul><li>(open hardware + open source, 元件列表在 <a href="http://www.habitatmap.org/habitatmap_docs/HowToBuildAnAirCastingAirMonitor.pdf"></a>http://www.habitatmap.org/habitatmap_docs/HowToBuildAnAirCastingAirMonitor.pdf page 8&nbsp; )&nbsp;</li>
+<li>NO2 Aircasting 用的是&nbsp; MiCS 2710&nbsp;</li>
+<li>ref: <a href="http://www.takingspace.org/"></a>http://www.takingspace.org/</li>
+<li>Aircasting 看來有測 PM2.5, 溫度, 濕度, CO, NO2, 然後配合其它零件，測噪音、心跳、活動率、活動率、核心溫度</li>
+<li>他們用的不是夏普，是日本神榮 ppd42ns 人民幣報價 50 左右 , 他們拿只要 US$5.53 其實好便宜</li></ul>
+</li>
+<li>DIY<ul><li>如果只要 PM2.5 的話，這顆應該算不錯的 <a href="https://www.sparkfun.com/datasheets/Sensors/gp2y1010au_e.pdf"></a><a href='https://www.sparkfun.com/datasheets/Sensors/gp2y1010au_e.pdf'/>https://www.sparkfun.com/datasheets/Sensors/gp2y1010au_e.pdf</a> 網路上查到的報價 US$12</li>
+<li>然後手動配一顆 Arduino... &lt;<a href="http://lafudo.blogspot.tw/2013/12/arduino-gp2y1010au0fpm25.html"></a><a href='http://lafudo.blogspot.tw/2013/12/arduino-gp2y1010au0fpm25.html'/>http://lafudo.blogspot.tw/2013/12/arduino-gp2y1010au0fpm25.html</a>&gt;</li>
+<li>氣體的話，可以看這個 &lt;<a href="http://www.seeedstudio.com/depot/grove-gas-sensormq9-p-1419.html?cPath=25_27"></a><a href='http://www.seeedstudio.com/depot/grove-gas-sensormq9-p-1419.html?cPath=25_27'/>http://www.seeedstudio.com/depot/grove-gas-sensormq9-p-1419.html?cPath=25_27</a>&gt;<ul><li>MQ9 一氧化碳、煤氣、液化瓦斯 / MQ5 液化石油氣、天然瓦斯 / MQ3 酒精蒸氣</li></ul>
+</li>
+<li><a href='http://www.digikey.tw/product-detail/zh/DN7C3CA006/425-2896-ND/5114242'/>夏普 PM2.5傳感器 Dust Sensor第三代 DN7C3CA006</a>&nbsp;&nbsp;<ul><li><a href="http://media.digikey.com/pdf/Data%20Sheets/Sharp%20PDFs/DN7C3CA006_Spec.pdf"></a>http://media.digikey.com/pdf/Data%20Sheets/Sharp%20PDFs/DN7C3CA006_Spec.pdf</li></ul>
+</li>
+<li>CO 感測器 <a href="http://goods.ruten.com.tw/item/show?21404014964757"></a>http://goods.ruten.com.tw/item/show?21404014964757&nbsp; 元件報價會更低&nbsp;</li>
+<li>但專業的 NO2 感測器一顆報價 5 千...&nbsp;</li>
+<li>WSP1110 <a href="http://goods.ruten.com.tw/item/show?21312239079267"></a>http://goods.ruten.com.tw/item/show?21312239079267 一千多</li>
+<li>WiFi 模組 NT$275 (TI C3300 大概還會有更便宜的) 不過要考慮設定密碼的問題。一般是透過 RS232 或接一顆 RS232-USB</li>
+<li>溫濕度用 DHT-11 覺得想更準的話改用 DHT-22</li>
+<li>3G 找到最便宜的要 47 歐元</li>
+<li><a href="http://www.arduino.cc/en/Main.ArduinoGSMShield"></a>http://www.arduino.cc/en/Main.ArduinoGSMShield</li></ul>
+</ul>
+
+<p><b>相關專案</b></p><ul><li><a href='/91ZImrFjGvx'/>輻射地圖</a>&nbsp;</li></ul>
+
+</body>
+</html>
