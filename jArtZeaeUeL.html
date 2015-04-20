@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="822"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$jArtZeaeUeL</title>
+</head>
+<body><h1>OpenFood project</h1><p></p><p><b>&nbsp;Objective</b></p><p></p><ul style="list-style: none;"><li>Provide an open platform to anlaysis, upload, search the ingridient of food to let users know the details of carcinogen in foods. openfood will also connect the food information with companies, consortiums and their reputation.</li></ul>
+
+<p><b>Architecture</b></p><p></p><undefined><li>Client Side Software</li></undefined>
+
+<ul style="list-style: none;"><li>Provide a software for users to upload the information, photos, ingredient of food. Or <b>by scanning the bar code on the package of food to search / view the details</b> on iOS or Android.</li>
+<li><br/></li>
+<li>iOS: <a href="https://github.com/c9s/ToxinScanner"></a>https://github.com/c9s/ToxinScanner</li>
+<li><br/></li>
+<li>UI Improvements</li><ul><li>Use an camera view overlay to display the search result without opening another view controller to break the user flow.</li>
+<li>Hide the details (2nd important information)&nbsp; in the second view controller.</li></ul>
+</ul>
+
+<undefined><li>Server Side Software</li></undefined>
+
+<ul style="list-style: none;"><li>Server: <a href="https://github.com/c9s/openfood"></a>https://github.com/c9s/openfood</li>
+<li>License: GPL</li>
+<li>Used major components:<ul style="list-style: none;"><li>Framework: <a href="http://github.com/c9s/Phifty"></a>http://github.com/c9s/Phifty</li>
+<li>ORM: <a href="https://github.com/c9s/LazyRecord"></a>https://github.com/c9s/LazyRecord</li>
+<li>SQLBuilder: <a href="https://github.com/c9s/SQLBuilder"></a>https://github.com/c9s/SQLBuilder</li>
+<li>CLIFramework: <a href="https://github.com/c9s/CLIFramework"></a>https://github.com/c9s/CLIFramework</li></ul>
+</ul>
+
+<p><b>&nbsp;Schema</b></p><p></p><ul><li>Consortiums<ul><li>Companies<ul><li>Locality</li>
+<li>Foods (with revisions)<ul><li>name</li>
+<li>EAN13 barcode</li>
+<li>has-many Ingredients</li></ul>
+</li>
+<li>RelatedNews (Low priority)</li></ul>
+</li></ul>
+</li>
+<li>Carcinogens</li>
+<li>Ingredients</li>
+<li>Symptoms<ul><li>has-many ingredients</li></ul>
+</ul>
+
+<p><b>Some references</b></p><ul><li>Open receipt&nbsp; data from gov - <a href="https://hackpad.com/4FMSg4Fduxk"></a>https://hackpad.com/4FMSg4Fduxk</li>
+<li>Related open data - <a href="https://sites.google.com/site/cfttestty/project-bookmarks"></a>https://sites.google.com/site/cfttestty/project-bookmarks</li>
+<li><a href='/uRTlfG5CeIt'/>開放食庫</a> , 在 CFT 的<a href='https://c4t.hackpad.com/Food-Open-Data-VdT2vesI7s7'/>開放食庫資料</a>&nbsp;</li></ul>
+
+</body>
+</html>
