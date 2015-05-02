@@ -3,38 +3,44 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="513"/>
+<meta name="version" content="709"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$I6MfE6jHOsq</title>
 </head>
-<body><h1>大型社群活動發送通知信注意事項</h1><p></p><p><b>現成發信平台</b></p><ul><li><a href="https://mandrill.com/"></a>https://mandrill.com/<ul><li>ex: COSCUP2014</li></ul>
+<body><h1>大型社群活動發送通知信注意事項</h1><p></p><p></p><p><b>流程</b></p><ul><li>確認信件範本內容</li>
+<li>使用現成發信平台 or 自幹發信程式 + API<ul><li>確認是否符合「地雷區」提出問題，並解決</li></ul>
 </li>
-<li><a href="http://mailchimp.com/"></a>http://mailchimp.com/&nbsp;<ul><li>ex</li></ul>
-</ul>
-<p><b>AWS | Amazon Simple Email Service (SES)</b></p><p>ex: COSCUP 2013, g0v Summit 2014</p><p></p><ol><li>流程</li>
-<li>可能地雷</li><ul><li>encoding<ul><li>mail header should be encoding in base64</li>
+<li>試發 mail</li>
+<li>dump KKTIX 報名資訊</li>
+<li>寄發</li></ul>
+
+<p><b>地雷區</b></p><ul><li>編碼問題<ul><li>mail header should be encoding in base64</li>
 <li>utf-8 content&nbsp;&nbsp;&nbsp;</li></ul>
 </li>
-<li>特殊字元被退信&nbsp; ☞ ⓘ</li>
+<li>特殊字元被退信或標為 spam&nbsp; ☞ ⓘ</li>
 <li>重複寄信狀況：<ul><li>google 會把重複內容隱藏</li>
 <li>要改標題，否則會跟前信 group 起來</li></ul>
 </ul>
-</ol>
-<ol><li>可使用 Library</li></ol>
-<ul><li>PHPMailer <a href="https://github.com/PHPMailer/PHPMailer"></a>https://github.com/PHPMailer/PHPMailer</li><ul class="comment"><li>PHPMailer 會加上他自己的 header，會在意的人要去改他 code 拿掉</li></ul>
-</ul>
-<ul><li>小工具 <a href="https://github.com/toomore/COSCUP2013Secretary-Toolkit"></a>https://github.com/toomore/COSCUP2013Secretary-Toolkit</li>
-<li><a href="https://www.phplist.com/"></a>https://www.phplist.com/<ul><li>許多正式上線的電子報系統都用這個，有許多進階功能，就是程式碼髒了些 ;)</li>
-<li>ex: <a href="http://epaper.ntu.edu.tw/"></a>http://epaper.ntu.edu.tw/</li></ul>
+
+<p><b>現成發信平台</b></p><ul><li>mandrill <a href="https://mandrill.com/"></a><a href='https://mandrill.com/'/>https://mandrill.com/</a><ul><li>ex: COSCUP2014<ul><li>會加上 tracking image 追蹤開信與否</li>
+<li>自幹簡單範例 <a href="https://github.com/CrBoy/python-mailer-example"></a><a href='https://github.com/CrBoy/python-mailer-example'/>https://github.com/CrBoy/python-mailer-example</a></li></ul>
+</li></ul>
+</li>
+<li>mailchimp <a href="http://mailchimp.com/"></a><a href='http://mailchimp.com/'/>http://mailchimp.com/</a>&nbsp;</li>
+<li><b>AWS | Amazon Simple Email Service (SES) </b><a href="http://aws.amazon.com/tw/ses/"></a><b>http://aws.amazon.com/tw/ses/</b><ul><li>ex: COSCUP 2013, g0v Summit 2014</li></ul>
 </ul>
 
-<p><b>Mandrill</b></p><ul><li>會加上 tracking image 追蹤開信與否</li>
-<li>自幹簡單範例 <a href="https://github.com/CrBoy/python-mailer-example"></a>https://github.com/CrBoy/python-mailer-example</li></ul>
-
-<p><b>信件範本加 tag</b></p><ul><li>g0v Summit 2014 活動與票種複雜，通知信希望參與者只收到一封，所以加了兩個變數以條件方式嵌入（有Conference, Unconference, 晚宴等組合）<ul><li>範本模組 - &gt; 一般行前通知、晚宴通知、Unconference 通知</li>
+<p><b>g0v 信件範本加 tag</b></p><ul><li>g0v Summit 2014 活動與票種複雜，通知信希望參與者只收到一封，所以加了兩個變數以條件方式嵌入（有Conference, Unconference, 晚宴等組合）<ul><li>範本模組 - &gt; 一般行前通知、晚宴通知、Unconference 通知</li>
 <li>會眾：一般行前通知</li>
 <li>VIP：一般行前通知 + Unconference 通知</li>
 <li>講者：一般行前通知 + 晚宴通知 + Unconference 通知</li></ul>
 </ul>
+
+<p><b>[註] Library / 小工具</b></p><ul><li>PHPMailer <a href="https://github.com/PHPMailer/PHPMailer"></a><a href='https://github.com/PHPMailer/PHPMailer'/>https://github.com/PHPMailer/PHPMailer</a></li></li>
+<li>PHPMailer 會加上他自己的 header，會在意的人要去改他 code 拿掉</li>
+<li>小工具 <a href="https://github.com/toomore/COSCUP2013Secretary-Toolkit"></a><a href='https://github.com/toomore/COSCUP2013Secretary-Toolkit'/>https://github.com/toomore/COSCUP2013Secretary-Toolkit</a></li>
+<li><a href="https://www.phplist.com/"></a><a href='https://www.phplist.com/'/>https://www.phplist.com/</a></li>
+<li>許多正式上線的電子報系統都用這個，有許多進階功能，就是程式碼髒了些 ;)</li>
+<li>ex: <a href="http://epaper.ntu.edu.tw/"></a><a href='http://epaper.ntu.edu.tw/'/>http://epaper.ntu.edu.tw/</a></li></ul>
 
 <p>&nbsp;</p><p></p></body>
 </html>
