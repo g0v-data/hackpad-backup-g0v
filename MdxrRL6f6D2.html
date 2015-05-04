@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="160"/>
+<meta name="version" content="215"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$MdxrRL6f6D2</title>
 </head>
 <body><h1>PM2.5 空污視覺化時間軸功能</h1><p></p><p><b>專案原始碼：</b></p><p><a href="https://github.com/g0v/env.g0v.tw"></a><a href='https://github.com/g0v/env.g0v.tw'/>https://github.com/g0v/env.g0v.tw</a></p><p><b>原 fb g0v 後勤中心討論串：</b></p><p><a href="https://www.facebook.com/groups/g0v.general/permalink/794389260637482/"></a><a href='https://www.facebook.com/groups/g0v.general/permalink/794389260637482/'/>https://www.facebook.com/groups/g0v.general/permalink/794389260637482/</a></p><p></p><p><b>需求：</b></p><ol><li>可查詢 <a href="http://env.g0v.tw/air/"></a>http://env.g0v.tw/air/ 的舊資料，利用過往圖資產生空污動畫。</li>
@@ -42,5 +42,9 @@
 <li>另外做出時間軸介面後就可以省去腦補 t 值的功夫，但在除那之外，另外尚在設定</li>
 <li>空污資料集的自動更新。目前我只手動做了一次，所以停在五月二日。</li></ul>
 
-<p></p></body>
+<p><b>UI 發想</b></p><ul><li>類似 <a href='https://developers.google.com/chart/interactive/docs/gallery/calendar'/>calendar chart</a> （每天一小點，可顯示當日最糟數值的顏色），點選後跳至當日</li></ul>
+
+<p></p><p><b>其他</b></p><ul><li>使用 DTM 資料模擬山區屏蔽（比測站高 100 公尺就減少 x%)</li></ul>
+
+</body>
 </html>
