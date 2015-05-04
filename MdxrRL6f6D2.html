@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="160"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$MdxrRL6f6D2</title>
+</head>
+<body><h1>PM2.5 空污視覺化時間軸功能</h1><p></p><p><b>專案原始碼：</b></p><p><a href="https://github.com/g0v/env.g0v.tw"></a><a href='https://github.com/g0v/env.g0v.tw'/>https://github.com/g0v/env.g0v.tw</a></p><p><b>原 fb g0v 後勤中心討論串：</b></p><p><a href="https://www.facebook.com/groups/g0v.general/permalink/794389260637482/"></a><a href='https://www.facebook.com/groups/g0v.general/permalink/794389260637482/'/>https://www.facebook.com/groups/g0v.general/permalink/794389260637482/</a></p><p></p><p><b>需求：</b></p><ol><li>可查詢 <a href="http://env.g0v.tw/air/"></a>http://env.g0v.tw/air/ 的舊資料，利用過往圖資產生空污動畫。</li>
+<li>改為每30分鐘甚至10分鐘更新一次。</li></ol>
+
+<p></p><p><b>問題</b></p><ul><li>時間精度是依賴氣象局資料他們的實際更新頻率來決定。</li>
+<li>&nbsp;graphite 資料停在四月一日，需更新。</li></ul>
+
+<p><b>處理說明（gugod++）：</b></p><p><a href='https://www.facebook.com/groups/g0v.general/permalink/794389260637482/?comment_id=799606703449071&amp;offset=0&amp;total_comments=35&amp;comment_tracking=%7B%22tn%22%3A%22R4%22%7D'/>gugod</a>: 「還沒全部做完，但先來中途說明一下... 」</p><ul style="list-style: none;"><li><br/></li>
+<li>目前已經加上「時間參數」，可以手動在空污圖網址後加上 `?t=&lt;數字&gt;` 來看歷史記錄。例：</li>
+<li><a href="http://env.g0v.tw/air/?t=201505020105"></a><a href='http://env.g0v.tw/air/?t=201505020105'/>http://env.g0v.tw/air/?t=201505020105</a></li>
+<li><br/></li>
+<li>這數字個格式為「年月日時分」，但對應到的時間是是 GMT 時區，而非台灣的 CST 時區。</li>
+<li>在參數 &quot;t&quot; 有值時，會去從以下的網址抓取舊的空污資料集：</li>
+<li><a href="https://github.com/g0v-data/mirror-2015/tree/master/epa/aqx"></a><a href='https://github.com/g0v-data/mirror-2015/tree/master/epa/aqx'/>https://github.com/g0v-data/mirror-2015/tree/master/epa/aqx</a></li>
+<li>以 &quot;t=201505020105&quot; 為例，對應到的資料集網址為</li>
+<li><a href="https://github.com/....../epa/aqx/2015-05-02/01-05.csv"></a><a href='https://github.com/g0v-data/mirror-2015/tree/master/epa/aqx/2015-05-02/01-05.csv'/>https://github.com/....../epa/aqx/2015-05-02/01-05.csv</a></li>
+<li>只要在 g0v-data/mirror-2015 中有 CSV 檔案，就可以推算出 &quot;t&quot; 的值，畫出空污圖。</li>
+<li>例如，此頁中有一月一日的空污資料集：</li>
+<li><a href="https://github.com/....../tree/master/epa/aqx/2015-01-01/"></a><a href='https://github.com/g0v-data/mirror-2015/tree/master/epa/aqx/2015-01-01/'/>https://github.com/....../tree/master/epa/aqx/2015-01-01/</a></li>
+<li><br/></li>
+<li>00-05.csv</li>
+<li>01-05.csv</li>
+<li>02-05.csv</li>
+<li>03-05.csv</li>
+<li>...</li>
+<li><br/></li>
+<li>t 值就是把檔名中的 &quot;-&quot; 字符去掉，並在前方補上日期，</li>
+<li><br/></li>
+<li>201501010005</li>
+<li>201501010105</li>
+<li>201501010205</li>
+<li>201501010305</li>
+<li>...</li>
+<li><br/></li>
+<li>另外做出時間軸介面後就可以省去腦補 t 值的功夫，但在除那之外，另外尚在設定</li>
+<li>空污資料集的自動更新。目前我只手動做了一次，所以停在五月二日。</li></ul>
+
+<p></p></body>
+</html>
