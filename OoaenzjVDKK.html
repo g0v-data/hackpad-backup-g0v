@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="4707"/>
+<meta name="version" content="4723"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$OoaenzjVDKK</title>
 </head>
 <body><h1>透析貪污判決--揭露與查詢網站</h1><p>(暫名,尚缺副標)</p><p>The Disclosure of Corruption Judgement,&nbsp; the Web</p><p>可能網址：blackmoney.g0v.tw 歡迎各種建議</p><p>POREN：uncover.g0v.tw 之類的，感覺很有特務風XD</p><p></p><p></p><p></p><h2>緣起</h2><ul><li>貪污是個表面上看起來沒什麼，實際上會對社會造成侵蝕的嚴重病灶</li>
@@ -119,7 +119,8 @@
 <li>│ │5 所示 │及扣案之手機壹支（含電池壹個、SIM 卡壹張），均沒收。 │</li>
 <li>├─┼────┼─────────────────────────────┤</li></ul>
 
-<p>有沒有大大有好想法處理這段？</p><ul class="comment"><li>可以先觀察判決書這類表格的形式是否一致，比如說每個欄位都是由 &quot;|(...)|&quot;&nbsp; 這樣子的格式分隔開，表頭的各個欄位header亦同，但不同的地方是表頭是從 &quot;┌(...)&quot; 這樣子的 pattern 的下一列開始，而每一列內容則是從 &quot;├(...)&quot; 的下一列開始，按照這樣的規則應該可以把表格內容整併入指定的資料結構中供取用。 (不好意思，先把12/20那天的<s>嘴砲</s>討論先記錄一下，我還是優先會處理好職位身分的偵測，有需要再回來支援這邊的parsing)</li></ul>
+<p>有沒有大大有好想法處理這段？</p><ul class="comment"><li>可以先觀察判決書這類表格的形式是否一致，比如說每個欄位都是由 &quot;|(...)|&quot;&nbsp; 這樣子的格式分隔開，表頭的各個欄位header亦同，但不同的地方是表頭是從 &quot;┌(...)&quot; 這樣子的 pattern 的下一列開始，而每一列內容則是從 &quot;├(...)&quot; 的下一列開始，按照這樣的規則應該可以把表格內容整併入指定的資料結構中供取用。 (不好意思，先把12/20那天的<s>嘴砲</s>討論先記錄一下，我還是優先會處理好職位身分的偵測，有需要再回來支援這邊的parsing)</li>
+<li><a href="http://test.ronny.tw/table.html"></a>http://test.ronny.tw/table.html 做了一個陽春的可以抓表格的 API</li></ul>
 
 <p>表格結構化?</p><ul class="comment"><li>我對於這些表格做了些觀察，沒有統一的格式，甚至有表格內還有表格的情況，就像word一樣可畫任意表格，表格內容也不一定遵守column的schema。這個<a href='https://www.evernote.com/l/AMe-3Qfov0xE4Yb63yOrvh7In82dIWOYGYI '/>evernote</a> 有我的一些觀察和一些畸形表格”樣本” 。</li>
 <li><a href='https://github.com/superChing/extract_declared_sentence'/>code</a>可以抽取cell，雖然不算完全結構化。</li></ul>
