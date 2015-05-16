@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="838"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$imlFqCxzU1f</title>
+</head>
+<body><h1>五星等開放資料標準</h1><p>授權：CC 4.0 BY SA</p><p></p><p></p><p>五星等開放資料標準衡量資料品質的方法，可作為政府機關、民間開放資料的衡量標準。星等是累進式的，比方：沒有一星等「開放授權」的資料，就算是機器可讀，也不會算是二星等。</p><p></p><p></p><p><b>一星等：開放授權</b></p><ul class="comment"><li>從原作來看，一星核心是資料上線，開放授權只是伴隨的條件。</li></ul>
+
+<p>開放授權是有國際公認標準，自己平台上的授權，必須與國際公認的授權相容，不然不能稱之為開放授權，國際公認開放授權：</p><ul><li><a href='http://www.opendatacommons.org/licenses/pddl/'/>PDDL</a></li>
+<li><a href='http://www.opendatacommons.org/licenses/by/'/>ODC-by</a></li>
+<li><a href='http://creativecommons.org/publicdomain/zero/1.0/'/>CC0</a></li>
+<li>符合：</li>
+<li>要求使用者標記資料來源</li>
+<li>不建議：</li>
+<li>以一次性收費方式要求使用者付費</li>
+<li>不符合：</li>
+<li>需要事前申請</li>
+<li>以 Revenue Sharing 的方式要求使用者付費</li>
+<li>只針對特定對象（例如：學術單位）</li>
+<li>不準改作（例如：<a href="http://www.npm.gov.tw/opendata/datarule.html"></a><a href='http://www.npm.gov.tw/opendata/datarule.html'/>http://www.npm.gov.tw/opendata/datarule.html</a>）</li></ul>
+
+<p></p><p><b>二星等：機器可讀的結構化資料</b></p><ul><li>原始檔，而非輸出品：諸如圖片、影片、照片等製作物。這些東西通常都是外包廠商進行製作，只有最終成果獲得保存。這一個問題是，這些素材通常解析度很低，而且不能被修改。<ul><li>給印刷廠的是原始檔，印出來的東西是輸出品</li>
+<li>doc、docx 是原始檔，pdf 是輸出品</li>
+<li>地理資訊是原始檔，圖磚是輸出品</li>
+<li>照片是原始檔，在簡報裡面的照片是輸出品</li></ul>
+</li>
+<li>可以重複被使用：假如使用者要重複使用的話，就需要人一個字一個字 key-in，無法被機器閱讀。這也包含諸如地理資訊以圖磚方式釋出。</li>
+<li>機器可讀：會出現這樣的問題，絕大部份是因為政府想要發布這些資訊，只有兼顧「給人看」，但在開放資料中，除了人看，還要「機器看」。</li>
+<li><a href='https://speakerdeck.com/clkao/lao-dong-bu-yan-xi?slide=70&amp;hc_location=ufi'/>看起來最簡單就是對的</a><ul><li>一個資料集若有多個報表，每一個<a href='https://speakerdeck.com/clkao/lao-dong-bu-yan-xi?slide=66&amp;hc_location=ufi'/>報表應該獨立抽出</a></li>
+<li>不要額外標頭</li>
+<li>不要小計</li>
+<li>不要合併儲存格、不要標頭拆欄</li></ul>
+</ul>
+
+<ul><li>符合：<ul><li><br/></li></ul>
+</li>
+<li>不建議：<ul><li>文字儲存的 .pdf</li>
+<li>過於特別的方式儲存資料</li>
+<li>骯髒的資料</li>
+<li>pdf</li>
+<li>.ai</li>
+<li>.xls, .xlsx (Microsoft)</li>
+<li>.doc, .docx (Microsoft)</li></ul>
+</li>
+<li>不符合：<ul><li>以圖片儲存的 .pdf</li>
+<li>.png</li>
+<li>.jpg, .jpeg</li></ul>
+</ul>
+
+<p><b>三星等：開放格式</b></p><ul><li>符合：<ul><li>.tsv, .csv, .dsv</li>
+<li>.json, .geojson, .topojson</li>
+<li>.xml</li>
+<li>.shp</li></ul>
+</li>
+<li>不符合：<ul><li>.xls, .xlsx (Microsoft)</li>
+<li>.doc, .docx (Microsoft)</li></ul>
+</ul>
+
+<p><b>四星等：每行資料都有唯一超連結</b></p><ul><li>符合<ul><li><br/></li></ul>
+</li>
+<li>不符合：<ul><li><br/></li></ul>
+</ul>
+
+<p><b>五星等：資料連結</b></p><ul><li>符合：<ul><li><a href='http://schema.org/'/>schema.org</a></li>
+<li><a href='http://dbpedia.org/'/>dbpedia.org</a></li></ul>
+</li>
+<li>不符合：</li></ul>
+
+<p></p><p><b>其他：</b></p><p></p><p></p><p></p><p>相關網站：<a href="http://5stardata.info/"></a><a href='http://5stardata.info/'/>http://5stardata.info/</a></p><p></p></body>
+</html>
