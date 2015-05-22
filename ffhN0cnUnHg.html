@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="773"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$ffhN0cnUnHg</title>
+</head>
+<body><ul style="list-style: none;"><li>vNext 實作計畫</li></ul>
+
+<p>之前就有在設想如何能採用時下技術，讓傳統BBS系統能夠脫離硬體、頻寬、政治上的束縛，達成無上站人數限制的架構；原本想用NextBBS或是P2PBBS的名子，到這裡找了一下之後發現vNext的討論有相似訴求，所以借用vNext這個名子進行社群開發。</p><p></p><p>概念</p><p>Full utilize new toys like p2p filesystem, data structure change streaming to dramaticly reduce server&rsquo;s loading. the main server(cluster) mainly handle write operation and feeding newest changes to clients.</p><p></p><ol><li>使用p2p傳播上站主要架構(Main entry and long-term data, e.g.&nbsp;<ol><li>Main menu</li>
+<li>Board category structure</li>
+<li>board archived data</li>
+<li>chat history</li></ol>
+</li>
+<li>使用p2p streaming live changes for each board, one sync streaming for one discussion&nbsp; board.</li>
+<li>The board&rsquo;s live data get archive info&nbsp;</li></ol>
+<p>可用技術清單</p><ol><li><a href='https://github.com/tristanls'/>tristanls</a>/<b><a href='https://github.com/tristanls/gossipmonger'/>gossipmonger</a>&nbsp;</b><ol><li>Gossip protocol endpoint for real-time peer-to-peer replication</li></ol>
+</li>
+<li><a href='https://github.com/automenta'/>automenta</a>/<b><a href='https://github.com/automenta/telepathine'/>telepathine</a>&nbsp;</b><ol><li>p2p gossip protocol w/ incremental diffs &amp; failure detection for a fault-tolerant, self-managing cluster or mesh (for node.js)</li></ol>
+</li>
+<li><a href="http://ipfs.io/"></a>http://ipfs.io/&nbsp;<ol><li>IPFS is a new hypermedia distribution protocol, addressed by content and identities. IPFS enables the creation of completely distributed applications. It aims to make the web faster, safer, and more open.</li>
+<li><a href="https://www.youtube.com/watch?v=8CMxDNuuAiQ"></a><a href='https://www.youtube.com/watch?v=8CMxDNuuAiQ'/>https://www.youtube.com/watch?v=8CMxDNuuAiQ</a></li></ol>
+</ol>
+
+<p></p></body>
+</html>
