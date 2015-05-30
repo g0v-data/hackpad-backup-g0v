@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="59"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$VUz4BYQTrOh</title>
+</head>
+<body><h1>國民小學國語數位教科書提案</h1><p>資料和圖像授權為 CC0 公領域（國教院教科書）</p><p></p><p><b>五月萌典松</b></p><ul><li>先從「讀學悠遊_Unit_1_動物昆蟲篇」測試</li></ul>
+
+<p><b>三月萌典松（討論紀錄）</b></p><ul><li>Google Drive: <a href="http://goo.gl/jcrO6Z"></a><a href='http://goo.gl/jcrO6Z'/>http://goo.gl/jcrO6Z</a></li>
+<li>ePub3 on Android: GitDen reader、on iOS/OS X: iBooks、on PC: Readium@Chrome<ul><li>Tested with: <a href="http://goo.gl/TdLZ8J"></a><a href='http://goo.gl/TdLZ8J'/>http://goo.gl/TdLZ8J</a></li>
+<li>ePub3 Export test: <a href="https://isp.moe.edu.tw/resources/resources_festival_list.jsp"></a><a href='https://isp.moe.edu.tw/resources/resources_festival_list.jsp'/>https://isp.moe.edu.tw/resources/resources_festival_list.jsp</a><ul><li>目前似乎無法生成 ePub3</li>
+<li>由 NAER 與維護者連絡，看是否能把 react-odp 接上去</li></ul>
+</li></ul>
+</li>
+<li>部件拆分原則:<ul><li>以不重疊的部件為準</li>
+<li>拆出來的單部件都要是國字（難字如「舛」是 OK 的）<ul><li>定義以簡編本裡有的為主</li></ul>
+</li>
+<li>筆順以整字為主，拆出來之後不需要筆順</li></ul>
+</li>
+<li>同義字<ul><li>放在 notes 裡</li>
+<li>句型用 CKIP 的樹（不顯示給使用者），Nhaa Nab 可置換，其他 particle 保留<ul><li>這就是照樣造句的 template</li></ul>
+</li></ul>
+</li>
+<li>仿作<ul><li>數位教科書可以做 parse tree</li>
+<li>學生自己寫時，給出 parse tree 裡不同的部份<ul><li>如果都一樣則視為照樣造句成功</li>
+<li>不然，以紅色標示不同處，但不判定為錯誤與否</li></ul>
+</li></ul>
+</li>
+<li>量詞<ul><li>用 <a href="http://120.127.233.228/Concordancer/"></a><a href='http://120.127.233.228/Concordancer/'/>http://120.127.233.228/Concordancer/</a> 選 Nf，找最近的名詞（Nab），做成文字雲<ul><li>Family resemblance, 不再取 ontological abstraction</li></ul>
+</li></ul>
+</li>
+<li>疊詞<ul><li>萌典 regex 搜尋：<ul><li>(.)&#92;1(.)&#92;2</li>
+<li>(.)(.)&#92;1&#92;2</li></ul>
+</li></ul>
+</li>
+<li>狀聲詞<ul><li>用 <a href="https://www.moedict.tw/?q="></a><a href='https://www.moedict.tw/?q='/>https://www.moedict.tw/?q=</a>&quot;的聲音&quot; 來找。</li></ul>
+</li>
+<li>自動出題，由老師篩選 false negatives<ul><li>因果題</li></ul>
+</li>
+<li>詢問「教育部數位教學資源入口網」(isp.moe.edu.tw/)有關「將勾選項目轉製成電子書」的功能。網站管理員回應：目前教育ISP僅提供資源轉製為電子書目錄，並無提供將各別資源內容轉成互動式瀏覽電子書服務。</li>
+<li>規劃將完成的電子書公開於教育部的「教育雲」(cloud.edu.tw)及國家教育研究院網站。</li>
+<li>標準上需要注意，IDPF與W3C以及IMS正在製作EDUPUB規範。製作教科書時，盡量希望能與國際標準接軌。這裏提供一些資料：<ul><li>What is EDUPUB（<a href='https://www.google.com.tw/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=3&amp;ved=0CDAQFjAC&amp;url=http%3A%2F%2Fwww.daisy.org%2Fprojects%2Ftransitiontoepub3%2Fdocuments%2Fmeeting-documents%2FTIES-PP-FaceToFace-EDUPUB-Introduction_2.pptx&amp;ei=AF8xVbaQBoXX8gX42ICgDA&amp;usg=AFQjCNHXfjJfCuVh0cP07m2cvRag8A_1wg'/>PPTX</a> by Markus Gylling, IDPF CTO）</li>
+<li><a href='http://www.idpf.org/epub/profiles/edu/spec/'/>EPUB 3 EDUPUB Profile</a></li>
+<li><a href='http://www.idpf.org/epub/widgets/'/>EPUB Scriptable Components Packaging and Integration 1.0</a></li></ul>
+</li>
+<li>另外注音符號在Web上的呈現最近有些擱淺，是否能給予協助？（<a href='http://binb.tw/bopomofo/case01/'/>Test Cases</a>）</li>
+<li>暫時完成「讀學悠遊第1單元_動物昆蟲篇12課」Libre Office Impress ODP格式檔(2015.05.23)，在Google Drive:&nbsp; <a href="https://goo.gl/Xrdr0o"></a><a href='https://goo.gl/Xrdr0o'/>https://goo.gl/Xrdr0o</a></li></ul>
+
+</body>
+</html>
