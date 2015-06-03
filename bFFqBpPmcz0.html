@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="3031"/>
+<meta name="version" content="3055"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$bFFqBpPmcz0</title>
 </head>
 <body><h1>注音標音OpenType Font計畫</h1><ul><li>提案人：董福興</li>
@@ -110,7 +110,8 @@
 <li>嵌入字型：bpmfgpos.otf by <a href='https://g0v.hackpad.com/ep/profile/EExJhZAws6k'/>But Ko</a></li>
 <li>效果：透過OpenType GPOS（本案例為&rsquo;vkrn&rsquo;）調整調號位置</li>
 <li>說明：<ul><li>Firefox請使用Nightly build並且將layout.css.vertical-text.enabled設定為True，但似乎不支援GPOS位置調整。</li><ul class="comment"><li>关于这一点，我询问了相关开发者，其表示由于调号字符在Unicode中的方向属性为R，根据Writing Modes标准，当text-orientation为默认的mixed时，这些字符会以sideways的方式显示，与前面注音符号的upright不同，导致textrun断开从而使GPOS失效，类似于字体fallback的情况。此处将text-orientation手动设置为upright应可解决。</li>
-<li>這倒是一語點醒夢中人。注音調號當時unification到這幾個歐文調號的位置上，常常顯示成奇怪的歐文˙造型不說，現在連直排都造成影響.....</li></ul>
+<li>這倒是一語點醒夢中人。注音調號當時unification到這幾個歐文調號的位置上，常常顯示成奇怪的歐文˙造型不說，現在連直排都造成影響.....</li>
+<li>Firefox Nightly里直排的GPOS支持应该已经修复了，可以再测试一下</li></ul>
 </ul>
 <ul><li>Google Chrome請使用Chrome Canary，但會發生調號原位置出現空白的狀況。</li></ul>
 </ul>
