@@ -3,10 +3,29 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="436"/>
+<meta name="version" content="885"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$5Rpzv7bxLlw</title>
 </head>
-<body><h1>vTaiwan 介面 2.0</h1><p>demo：<a href="https://react.vtaiwan.tw/"></a><a href='https://react.vtaiwan.tw/'/>https://react.vtaiwan.tw/</a>&nbsp;</p><p>repo：<a href="https://github.com/g0v/react.vtaiwan.tw"></a>https://github.com/g0v/react.vtaiwan.tw</p><p>ref：<a href='/vTaiwan.tw-mockup-v1-cJSDzZRro6W'/>廣宣組意見彙整</a></p><p></p><p>5/30 線上設計松 + 6/2 au clkao 討論筆記</p><ul><li>桌面模式時，左上角的 toggle 取消<ul><li>「回首頁」和「回上層」用圖示表示</li>
+<body><h1>vTaiwan 介面 2.0</h1><p>demo：<a href="https://react.vtaiwan.tw/"></a><a href='https://react.vtaiwan.tw/'/>https://react.vtaiwan.tw/</a>&nbsp;</p><p>repo：<a href="https://github.com/g0v/react.vtaiwan.tw"></a>https://github.com/g0v/react.vtaiwan.tw</p><p>ref：<a href='/vTaiwan.tw-mockup-v1-cJSDzZRro6W'/>廣宣組意見彙整</a></p><p></p><p>6/5 小松</p><ul class="taskdone"><li>左上 toggle 在桌面應該變得比較不明顯 [soidid]</li>
+<li>最底下的 menu item 會被吃掉</li>
+<li>「各階段」在 Category 層，加上 &lt;，暗示可以回上層。首頁連結也要加 Home 符號 [soidid]</li>
+<li>Post paging 無法多頁 [soidid]</li>
+<li>Discuss paging 應顯示最舊、最新，而不是最舊的兩個 [soidid]</li>
+<li>首頁會出橫向捲軸 [pm5]</li>
+<li>手機版的 Nav 顯示時，樣式調整 [soidid]</li>
+<li>手機版預設不顯示 Nav&nbsp;</li></li>
+<li>首頁各階段加上介紹文字 [soidid]</li>
+<li>Zombie 應該要不使用 paths.js 而是用 scraping (follow href) [au]</li>
+<li>靜態頁面：/how 、 /tutorial 、 /about [au]</li>
+<li>locationHandler 在 dev mode 換回 Router.HistoryLocation，把 server.js 做成可以處理 /path/ [ly]</li><ul><li><a href='https://github.com/rackt/react-router/issues/676'/>rackt/react router#676</a></li></ul>
+</li>
+<li>Transmit 的後端加上 cache（如 superagent-cache or caching-fetch） [ly]</li><ul><li>immutable-request</li></ul>
+</li>
+<li>整個畫面多了一個 scrollbar [pm5]</li></li>
+<li>NavList 符合 router.getCurrentPath() 的項目要 highlight，另外 hover 時也要 high/light</li>
+<li>post item 裡原本 talk.vtaiwan.tw 的連結會壞掉 [pm5]</li></ul>
+
+<p>5/30 線上設計松 + 6/2 au clkao 討論筆記</p><ul><li>桌面模式時，左上角的 toggle 取消<ul><li>「回首頁」和「回上層」用圖示表示</li>
 <li>「各階段」在 Category 層可以用 menu 裡的 sub-tab icon 切換，而不是回上層再下來</li></ul>
 </li>
 <li>議題形成區<ul><li>用時事作為 motivating example，不預設正反方<ul><li>例如「施明德以網路收集總統選舉連署正本」</li>
