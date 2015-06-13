@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2312"/>
+<meta name="version" content="2359"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$GTzs0q6jKyQ</title>
 </head>
 <body><h1>千影(chikage) - HTML5 GlyphWiki Editor</h1><p></p><h2>專案簡介</h2><p></p><p><b>緣由</b></p><ul style="list-style: none;"><li>GlyphWiki.org 目前39萬個中文字型，是花園字型(Hanazono Font) 的底層資料庫，唯其字型是採用日本規範。</li>
@@ -95,6 +95,8 @@
 <p><b>技術規劃</b></p><p>前端：</p><p></p><ul style="list-style: none;"><li><a href='http://fonts.jp/engine/'/>KAGE/engine</a> 已經實作了輸出 SVG 的工具， 剎那工坊的<a href='https://github.com/ksanaforge/kzy'/> kzy 專案</a>藉此完成了字型繪製。</li></ul>
 
 <ul style="list-style: none;"><li>以React撰寫，筆劃新增刪除、類型選取、移動控制點、字框調整、鄰近字選取等介面。將編輯中的字形，交由Kage 產生，繪製到 一個透明底的overlay SVG layer。SVG layer 純顯示編輯結果，不處理事件。</li></ul>
+
+<ul style="list-style: none;"><li>目前已經可以從server讀取json資料，繪製出單線體。前端已改用ES6撰寫，不用學LiveScript。</li></ul>
 
 <ul style="list-style: none;"><li>此編輯器必須很容易嵌入，在任何網頁或Web base App看到不夠漂亮的組字時，點一下即可開始編修，結果送回伺服器。</li></ul>
 
