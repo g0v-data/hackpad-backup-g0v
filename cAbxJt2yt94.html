@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="136"/>
+<meta name="version" content="542"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$cAbxJt2yt94</title>
 </head>
 <body><h1>兩岸環境監督</h1><p>by 綠色公民行動聯盟</p><p></p><p><b>資料欄位</b></p><p><a href="https://docs.google.com/spreadsheets/d/1XaU4R6EtzCMZmKN6CdHurvMINdOYQkkbgbLJT5SQgQ8/edit#gid=0"></a>https://docs.google.com/spreadsheets/d/1XaU4R6EtzCMZmKN6CdHurvMINdOYQkkbgbLJT5SQgQ8/edit#gid=0</p><p></p><p></p><p><b>參考資料</b></p><p></p><p>中國環境團體的資料：</p><ul><li><a href='http://www.ipe.org.cn/pollution/corporation.aspx'/>公众环境研究中心（IPE）</a></li>
@@ -16,5 +16,15 @@
 
 <p>污染情況與即時監測：</p><ul><li><a href='https://www.dropbox.com/s/ro2kbh6q0cxra4e/%E9%9C%80%E6%B1%82%E7%9B%B8%E9%97%9C%E5%B7%B2%E5%85%AC%E9%96%8B%E8%B3%87%E6%96%99.docx?dl=0'/>需求相關已公開資料.docx</a></li></ul>
 
-<p><b>Tools:</b></p><p><a href="http://docs.casperjs.org/en/latest/quickstart.html#now-let-s-scrape-google"></a>http://docs.casperjs.org/en/latest/quickstart.html#now-let-s-scrape-google</p><p></p></body>
+<p><b>Tools:</b></p><p><a href="http://docs.casperjs.org/en/latest/quickstart.html#now-let-s-scrape-google"></a>http://docs.casperjs.org/en/latest/quickstart.html#now-let-s-scrape-google</p><p></p><p></p><p>GIT Repo:</p><p><a href="https://github.com/swilsonian/pollutionscraper"></a>https://github.com/swilsonian/pollutionscraper</p><p></p><p></p><p><b>Questions</b>:</p><ul><li>How to get keywords to search for to our script - pass in a textfile with one keyword per line?</li>
+<li>How to prevent duplicate data - for example, one keyword in the keywords textfile is &quot;日月光&quot; and another is &quot;新日月光&quot;?<ul><li>This will cause duplicate rows in our csv</li>
+<li>We could keep track of Entity IDs for factories in a hash table - each factory has an Entity ID</li>
+<li>Before opening a factory page, check if that factory&rsquo;s entity ID is in our list -- If it is, don&rsquo;t open the factory page again</li></ul>
+</li>
+<li>Besides the one table, What other data needs to be retrieved from each factory page?</li>
+<li>Should we add a CSV row for a factory that doesn&rsquo;t have any table data?</li>
+<li>How many CSV files do we want to create? One per keyword, or one per search?</li>
+<li>How do the CSV(s) we create get uploaded to the final storage repo?</li></ul>
+
+<p></p><p></p></body>
 </html>
