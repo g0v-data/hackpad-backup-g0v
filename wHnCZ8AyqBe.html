@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="949"/>
+<meta name="version" content="1272"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$wHnCZ8AyqBe</title>
 </head>
 <body><h1>步驟 - 如何使用 gitbook 寫書</h1><p></p><p><b>什麼是 gitbook</b></p><p></p><p>gitbook 是好用的寫書工具，可以用來解釋有點複雜、沒辦法一頁說完的事情。當你開始寫書，它就馬上自動生出一個線上閱讀的網址，讓你可以把最新進度貼給別人看，你寫到哪，別人就可以看到哪。像是：</p><ul><li><a href='https://fepztw.github.io/'/>自經區手冊</a></li>
@@ -25,10 +25,27 @@
 </ul>
 </ol>
 <ul class="comment"><li>離線版停止維護了 XD 如果可以用 Chrome/Firefox 的話，推薦使用線上編輯界面</li>
-<li>線上編輯界面目前實測，IE10 無法使用。</li></ul>
+<li>線上編輯界面目前實測，IE10 無法使用。</li><ul><li>（optional）加入 g0v 零時政府的 GitBook 團體：<a href="https://www.gitbook.com/@g0v"></a><a href='https://www.gitbook.com/@g0v'/>https://www.gitbook.com/@g0v</a></li></ul>
+</ul>
 
 <p><b>在 gitbook 開一本新的書</b></p><p></p><p>很簡單，在一登入的 dashboard 畫面，按下 create a new book 綠色按鈕，輸入書名跟想要的網址就可以了。</p><ol><li>瞧瞧這好精美的 dashboard<img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_wHnCZ8AyqBe_p.52366_1420663978649_gitbook-dashboard.PNG'/></li>
 <li>瞧瞧這好精美的 new book<img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_wHnCZ8AyqBe_p.52366_1420664043343_gitbook-new-book.PNG'/></li></ol>
 
-<p><b>開始寫書</b></p><p></p><p></p><p><b>寫到一個段落，存檔發佈</b></p><p></p><p></p><p><b>請別人來幫忙寫書</b></p><p></p><p></p><p><b>寫別人的書</b></p><p></p><p></p><p><b>在沒有網路的地方寫書</b></p><p></p><p></p><p></p><h2>gitbook 架構</h2><p>gitbook主要分為四個部分。</p><p></p><p><b>SUMMARY.md</b></p><p>這是書籍的目錄結構，裡面是內容的部份。結構請參考此：</p><p><a href="http://help.gitbook.io/book/chapters.html"></a>http://help.gitbook.io/book/chapters.html</p><p></p><p><b>README.md</b></p><p>這是書籍的前言，不用把它加在目錄結構裡面。</p><p></p><p><b>1-0.md 1-1.md 1-2.md.....</b></p><p>這些是章節內容，如1-2代表第一章第二節。不過命名方式沒有強制，只要SUMMARY中有定義就可以。</p><p></p><p><b>cover.jpg cover_small.jpg</b></p><p>這是封面</p><p>尺寸如下：</p><p>cover.jpg 1800x2360&nbsp;</p><p>cover_small.jpg 200x262</p><p></p><p></p><p><b>參考書本內容</b></p><p><a href="https://github.com/billy3321/TaiwanFEPZS"></a>https://github.com/billy3321/TaiwanFEPZS</p><p><b>相關文件</b></p><p><a href="http://gitbookio.gitbooks.io/documentation/"></a>http://gitbookio.gitbooks.io/documentation/</p><p></p></body>
+<p><b>開始寫書</b></p><p>打開 Editor 之後，從左上角的 Table of Contents 選擇要編輯的檔案</p><p></p><p><b>寫到一個段落，存檔發佈</b></p><p>按 Save 按鈕儲存（上方工具列最左邊那個）</p><p></p><p><b>請別人來幫忙寫書</b></p><ol><li>個人帳號底下的書<ol><li>在書的設定頁（Settings）邀請協作者（ Collaborators）</li></ol>
+</li>
+<li>團體（organization）底下的書<ol><li>將別人加入團體，並給予編輯權限</li>
+<li>在書的設定頁（Settings）邀請協作者（ Collaborators）</li></ol>
+</ol>
+<ul style="list-style: none;"><li>以上兩種方式可設定標示作者的方式不同。</li></ul>
+
+<p><b>寫別人的書</b></p><p>需被加入擁有該書的團體，或是被加為協作者。</p><p></p><p><b>在沒有網路的地方寫書</b></p><p>可能得透過 Git 在本地端編輯了。</p><p></p><h2>gitbook 架構</h2><p>gitbook主要分為四個部分。</p><p></p><p><b>SUMMARY.md</b></p><p>這是書籍的目錄結構，裡面是內容的部份。結構請參考此：</p><p><a href="http://help.gitbook.io/book/chapters.html"></a>http://help.gitbook.io/book/chapters.html</p><ul class="comment"><li>如果要指定子目錄的檔案，子目錄開頭不能是底線</li></ul>
+
+<p><b>README.md</b></p><p>這是書籍的前言，不用把它加在目錄結構裡面。</p><p></p><p><b>1-0.md 1-1.md 1-2.md.....</b></p><p>這些是章節內容，如1-2代表第一章第二節。不過命名方式沒有強制，只要SUMMARY中有定義就可以。</p><p></p><p><b>cover.jpg cover_small.jpg</b></p><p>這是封面</p><p>尺寸如下：</p><p>cover.jpg 1800x2360&nbsp;</p><p>cover_small.jpg 200x262</p><p></p><p><b>book.json</b></p><p>參數設定用，說明請見：<a href="http://help.gitbook.com/format/configuration.html"></a>http://help.gitbook.com/format/configuration.html</p><ul class="comment"><li>使用 structure 為 readme 重新指向時，目標檔案要在根目錄。</li></ul>
+
+<h2>Working with GitHub</h2><p>如果要用 GitBook 連結一個現有的 GitHub repo.，則必須有該 repo. 的權限。</p><p>以 g0v dev team 的 repo. 為例，需要：</p><ul><li>找一個已經在 <a href='https://github.com/orgs/g0v/people'/>g0v GitHub</a> 團體裡面的人，然後請他將你的帳號加入 <a href='https://github.com/orgs/g0v/teams/dev'/>dev team</a>&nbsp;&nbsp;</li>
+<li>請至您 GitHub 的帳號 email 收信，並同意邀請加入 g0v</li>
+<li>在 GitBook 帳號設定（Account Settings）裡面連結你的 GitHub 帳號（Connect to GitHub）</li>
+<li>找一個已經在 <a href='https://www.gitbook.com/@g0v'/>g0v Gitbook</a> 團體裡面的人，然後請他加入你的帳號</li></ul>
+
+<p><b>參考書本內容</b></p><p><a href="https://github.com/billy3321/TaiwanFEPZS"></a>https://github.com/billy3321/TaiwanFEPZS</p><p><b>相關文件</b></p><p><a href="http://gitbookio.gitbooks.io/documentation/"></a>http://gitbookio.gitbooks.io/documentation/</p><p></p></body>
 </html>
