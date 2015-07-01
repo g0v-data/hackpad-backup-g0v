@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="174"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$yRBt8WsGdvt</title>
+</head>
+<body><h1>捐血動員系統</h1><ul class="comment"><li>歡迎大家集思廣益！</li></ul>
+
+<h2>動機</h2><p>幾次重大災難總能激起熱心熱血民眾前往捐血，但捐出來的血液有其保存期限(全血約35天)問題，且一個人兩次捐血中間需間隔一個月以上。若短時間大量集中進入捐血中心，可能造成存血在時間與空間上調配不均衡以致浪費的狀況發生。</p><p></p><h2>目的</h2><p>若有一系統可根據即時血庫存量，動態調配、選擇性 (地點、血型、人數) 動員(通知)熱心熱血民眾，在需要的時間點前往捐血。當參與民眾數量能達總捐血人數一定比例以上，應可減少血液浪費。達到平時儲血於民，有需要時，可正確呼喚出需求的血液。</p><p></p><h2>捐血->檢驗->保存->使用流程</h2><p>待補...</p><p></p><h2>需求</h2><p><b>&nbsp;App Client</b></p><ul><li>靜態資訊提供<ul><li>提供捐血地點相關資訊(地圖、導航)</li>
+<li>提供各地血庫即時血量資訊</li></ul>
+</li>
+<li>登錄使用者個人資訊<ul><li>活動區域(地點)</li>
+<li>血型</li>
+<li>我每次捐多少血 (250/500/不一定)</li>
+<li>是否願意接受即時動員？</li>
+<li>可直接看到個人捐血報告</li>
+<li>判斷能否捐血<ul><li>上一次捐血時間 / cc 數</li>
+<li>今年已捐血多少 cc</li>
+<li>性別</li>
+<li>體重</li>
+<li>最近使用藥物/手術情況（捐血中心有各情況捐血間隔參考表）</li></ul>
+</ul>
+</ul>
+<p><b>Server端</b></p><ul><li>根據動員情況與效度 分析調整動員方式</li>
+<li>可以捐 250 / 500 不同 cc 的類型</li></ul>
+
+<h2>動員流程</h2><p>某地某血型血庫存量低於警示值 -&gt; 呼叫n名符合資格(地點、血型、可捐血)民眾 -&gt; 民眾回覆：我最近可以去捐血(1d/3d/5d) -&gt; 根據回覆率%再呼叫適當人數的民眾前往捐血</p><p></p><h2>推廣方式</h2><ul><li>遊戲化設計？</li></ul>
+<ul class="comment"><li>可以設計 badge system</li>
+<li>血型組隊一起捐</li></ul>
+<ul><li>配合捐血單位推廣</li>
+<li>捐血回饋的鼓勵？</li></ul>
+<ul class="comment"><li>當血液被使用的時候有通知，待驗證</li></ul>
+
+<h2>其他</h2><ul><li>個人隱私問題？</li></ul>
+<ul class="comment"><li>讓使用者自己填的話應該就還好</li></ul>
+
+<h2>相關連結</h2><ul><li>g0v Log: <a href="http://logbot.g0v.tw/channel/g0v.tw/2015-06-29#22"></a><a href='http://logbot.g0v.tw/channel/g0v.tw/2015-06-29#22'/>http://logbot.g0v.tw/channel/g0v.tw/2015-06-29#22</a></li>
+<li>BloodtoGive熱血樂捐: <a href="http://bloodtogive.azurewebsites.net/index.php"></a><a href='http://bloodtogive.azurewebsites.net/index.php'/>http://bloodtogive.azurewebsites.net/index.php</a></li>
+<li>血液相關資訊: <a href="http://www.blood.org.tw/Internet/LifeCare40year/docDetail.aspx?uid=7588&pid=7587&docid=34764"></a><a href='http://www.blood.org.tw/Internet/LifeCare40year/docDetail.aspx?uid=7588&amp;pid=7587&amp;docid=34764'/>http://www.blood.org.tw/Internet/LifeCare40year/docDetail.aspx?uid=7588&amp;pid=7587&amp;docid=34764</a></li></ul>
+
+</body>
+</html>
