@@ -3,10 +3,10 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1047"/>
+<meta name="version" content="1106"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$B1xkj9fUqqH</title>
 </head>
-<body><h1>IoT 空污偵測 DIY</h1><p></p><p>the begin:&nbsp;</p><p><a href="https://www.facebook.com/pulipm2.5/posts/1583904825219960?hc_location=ufi"></a>https://www.facebook.com/pulipm2.5/posts/1583904825219960?hc_location=ufi</p><p><a href="http://logbot.g0v.tw/channel/g0v.tw/2015-04-19/18"></a>http://logbot.g0v.tw/channel/g0v.tw/2015-04-19/18</p><p><a href="http://logbot.g0v.tw/channel/g0v.tw/2015-04-19/61"></a>http://logbot.g0v.tw/channel/g0v.tw/2015-04-19/61</p><p></p><p><b>偵測設備</b></p><ul><li><a href="http://aircasting.org/"></a>http://aircasting.org/ - USD$200<ul><li>(open hardware + open source, 元件列表在 <a href="http://www.habitatmap.org/habitatmap_docs/HowToBuildAnAirCastingAirMonitor.pdf"></a>http://www.habitatmap.org/habitatmap_docs/HowToBuildAnAirCastingAirMonitor.pdf page 8&nbsp; )&nbsp;</li>
+<body><h1>IoT 空污偵測 DIY</h1><p></p><p>the begin:&nbsp;</p><p><a href="https://www.facebook.com/pulipm2.5/posts/1583904825219960?hc_location=ufi"></a>https://www.facebook.com/pulipm2.5/posts/1583904825219960?hc_location=ufi</p><p><a href="http://logbot.g0v.tw/channel/g0v.tw/2015-04-19/18"></a>http://logbot.g0v.tw/channel/g0v.tw/2015-04-19/18</p><p><a href="http://logbot.g0v.tw/channel/g0v.tw/2015-04-19/61"></a>http://logbot.g0v.tw/channel/g0v.tw/2015-04-19/61</p><p></p><p><b>AirCasting</b></p><ul><li><a href="http://aircasting.org/"></a>http://aircasting.org/ - USD$200<ul><li>(open hardware + open source, 元件列表在 <a href="http://www.habitatmap.org/habitatmap_docs/HowToBuildAnAirCastingAirMonitor.pdf"></a>http://www.habitatmap.org/habitatmap_docs/HowToBuildAnAirCastingAirMonitor.pdf page 8&nbsp; )&nbsp;</li>
 <li>ref: <a href="http://www.takingspace.org/"></a>http://www.takingspace.org/</li>
 <li>Aircasting 有測 PM2.5, 溫度, 濕度, CO, NO2, 然後配合其它零件，測噪音、心跳、活動率、活動率、核心溫度</li>
 <li>NO2 Aircasting 用的是&nbsp; MiCS 2710&nbsp;</li>
@@ -14,25 +14,26 @@
 </ul>
 </ul>
 <ul><li><a href="http://airqualityegg.com/"></a>http://airqualityegg.com/<a href='http://airqualityegg.com/USD'/> </a>USD $196 + addon (~ 60 USD)<ul><li><a href="http://shop.wickeddevice.com/product-category/air-quality-egg/"></a>http://shop.wickeddevice.com/product-category/air-quality-egg/</li></ul>
-</li>
-<li>DIY<ul><li>Sharp gp2y1010au 測粉塵 <a href="https://www.sparkfun.com/datasheets/Sensors/gp2y1010au_e.pdf"></a><a href='https://www.sparkfun.com/datasheets/Sensors/gp2y1010au_e.pdf'/>https://www.sparkfun.com/datasheets/Sensors/gp2y1010au_e.pdf</a><ul><li>ICShopping NT$250 無風扇</li>
-<li>程式: &lt;<a href="http://lafudo.blogspot.tw/2013/12/arduino-gp2y1010au0fpm25.html"></a><a href='http://lafudo.blogspot.tw/2013/12/arduino-gp2y1010au0fpm25.html'/>http://lafudo.blogspot.tw/2013/12/arduino-gp2y1010au0fpm25.html</a>&gt;</li></ul>
 </ul>
-<ul class="comment"><li>這顆沒辦法分辨 PM2.5</li>
-<li>新一代的 gp2y1012au 就可以了 ^^; 含風扇的型號 DN7C3CA006 要價 135RMB.</li></ul>
-<ul><li><a href='http://www.digikey.tw/product-detail/zh/DN7C3CA006/425-2896-ND/5114242'/>夏普 PM2.5傳感器 Dust Sensor第三代 DN7C3CA006</a>&nbsp;&nbsp;<ul><li><a href="http://media.digikey.com/pdf/Data%20Sheets/Sharp%20PDFs/DN7C3CA006_Spec.pdf"></a><a href='http://media.digikey.com/pdf/Data%20Sheets/Sharp%20PDFs/DN7C3CA006_Spec.pdf'/>http://media.digikey.com/pdf/Data%20Sheets/Sharp%20PDFs/DN7C3CA006_Spec.pdf</a></li>
+<p><b>DIY</b></p><ul><li>Sharp gp2y1010au 測粉塵 <a href="https://www.sparkfun.com/datasheets/Sensors/gp2y1010au_e.pdf"></a><a href='https://www.sparkfun.com/datasheets/Sensors/gp2y1010au_e.pdf'/>https://www.sparkfun.com/datasheets/Sensors/gp2y1010au_e.pdf</a><ul><li>ICShopping NT$250 無風扇</li>
+<li>程式: &lt;<a href="http://lafudo.blogspot.tw/2013/12/arduino-gp2y1010au0fpm25.html"></a><a href='http://lafudo.blogspot.tw/2013/12/arduino-gp2y1010au0fpm25.html'/>http://lafudo.blogspot.tw/2013/12/arduino-gp2y1010au0fpm25.html</a>&gt;</li></ul>
+</li>
+<li>這顆沒辦法分辨 PM2.5</li></li>
+<li>新一代的 gp2y1012au 就可以了 ^^; 含風扇的型號 DN7C3CA006 要價 135RMB.</li>
+<li><a href='http://www.digikey.tw/product-detail/zh/DN7C3CA006/425-2896-ND/5114242'/>夏普 PM2.5傳感器 Dust Sensor第三代 DN7C3CA006</a>&nbsp;&nbsp;<ul><li><a href="http://media.digikey.com/pdf/Data%20Sheets/Sharp%20PDFs/DN7C3CA006_Spec.pdf"></a><a href='http://media.digikey.com/pdf/Data%20Sheets/Sharp%20PDFs/DN7C3CA006_Spec.pdf'/>http://media.digikey.com/pdf/Data%20Sheets/Sharp%20PDFs/DN7C3CA006_Spec.pdf</a></li>
 <li>淘寶 135RMB</li></ul>
 </li>
 <li>Arduino 一顆</li>
-<li>MQ9 一氧化碳、煤氣、液化瓦斯 / MQ5 液化石油氣、天然瓦斯 / MQ3 酒精蒸氣<ul><li>ICShopping NT$270</li>
-<li>&nbsp;&lt;<a href="http://www.seeedstudio.com/depot/grove-gas-sensormq9-p-1419.html?cPath=25_27"></a><a href='http://www.seeedstudio.com/depot/grove-gas-sensormq9-p-1419.html?cPath=25_27'/>http://www.seeedstudio.com/depot/grove-gas-sensormq9-p-1419.html?cPath=25_27</a>&gt;</li></ul>
-</li>
+<li>MQ9 一氧化碳、煤氣、液化瓦斯 / MQ5 液化石油氣、天然瓦斯 / MQ3 酒精蒸氣</li></ul>
+<ul class="comment"><li>&nbsp;應該改用 MQ7 只要測一氧化碳就好</li><ul><li>ICShopping NT$270 / MQ7 淘寶 6-8RMB</li>
+<li>&nbsp;&lt;<a href="http://www.seeedstudio.com/depot/grove-gas-sensormq9-p-1419.html?cPath=25_27"></a><a href='http://www.seeedstudio.com/depot/grove-gas-sensormq9-p-1419.html?cPath=25_27'/>http://www.seeedstudio.com/depot/grove-gas-sensormq9-p-1419.html?cPath=25_27</a>&gt;</li>
 <li>CO 感測器 <a href="http://goods.ruten.com.tw/item/show?21404014964757"></a>http://goods.ruten.com.tw/item/show?21404014964757&nbsp;&nbsp;</li>
 <li>專業的 NO2 感測器一顆報價 5 千</li>
-<li>WSP1110 NO2 平面傳感器<ul><li><a href="http://goods.ruten.com.tw/item/show?21312239079267"></a>http://goods.ruten.com.tw/item/show?21312239079267</li>
-<li>NT$1230</li></ul>
-</li>
-<li>WiFi 模組 NT$275<ul><li>TI 3300?</li>
+<li>WSP1110 NO2 平面傳感器</li>
+<li><a href="http://goods.ruten.com.tw/item/show?21312239079267"></a>http://goods.ruten.com.tw/item/show?21312239079267</li>
+<li>NT$1230</li>
+<li>WiFi 模組 NT$275</li>
+<li>TI 3300?</li>
 <li>EST8266 (13.3RMB) 還不知道怎麼用<ul><li><a href="https://github.com/sandeepmistry/esp8266-Arduino/tree/master/esp8266com/esp8266/libraries/ESP8266WiFi"></a>https://github.com/sandeepmistry/esp8266-Arduino<a href='https://github.com/sandeepmistry/esp8266-Arduino'/>/tree/master/esp8266com/esp8266/libraries/ESP8266WiFi</a></li>
 <li><a href="http://www.electrodragon.com/w/ESP8266_wiring_with_Arduino"></a>http://www.electrodragon.com/w/ESP8266_wiring_with_Arduino</li>
 <li><a href="http://zeflo.com/2014/esp8266-weather-display/"></a>http://zeflo.com/2014/esp8266-weather-display/</li>
@@ -45,16 +46,15 @@
 <li>AT version:0.21.0.0</li>
 <li>SDK version:0.9.5</li></ul>
 </li></ul>
-</li></ul>
 </li>
-<li>溫濕度用 DHT-11 約 NT$55<ul><li>更準的話改用 DHT-22 約 NT$180<ul><li><a href="https://github.com/adafruit/DHT-sensor-library"></a>https://github.com/adafruit/DHT-sensor-library</li></ul>
+<li>溫濕度用 DHT-11 約 NT$55</li>
+<li>更準的話改用 DHT-22 約 NT$180<ul><li><a href="https://github.com/adafruit/DHT-sensor-library"></a>https://github.com/adafruit/DHT-sensor-library</li></ul>
 </li>
-<li>還想更準的話可以用 <a href='http://sensing.honeywell.com/honeywell-sensing-humidicon-hih6100-series-product-sheet-009059-6-en.pdf'/>HIH6130</a> 或 <a href='http://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/Humidity/Sensirion_Humidity_SHT1x_Datasheet_V5.pdf'/>SHT15</a></li></ul>
-</li>
-<li>3G 找到最便宜的要 47 歐元</li><ul class="comment"><li>應該用 GSM/GPRS 就夠了 <a href="http://seller.pcstore.com.tw/S134700302/C1021133941.htm"></a>http://seller.pcstore.com.tw/S134700302/C1021133941.htm</li>
-<li>好貴上面那個要 NT$1600 耶</li></ul>
-</ul>
-<ul><li><a href="http://www.arduino.cc/en/Main.ArduinoGSMShield"></a>http://www.arduino.cc/en/Main.ArduinoGSMShield</li></ul>
+<li>還想更準的話可以用 <a href='http://sensing.honeywell.com/honeywell-sensing-humidicon-hih6100-series-product-sheet-009059-6-en.pdf'/>HIH6130</a> 或 <a href='http://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/Humidity/Sensirion_Humidity_SHT1x_Datasheet_V5.pdf'/>SHT15</a></li>
+<li>3G 找到最便宜的要 47 歐元</li></li>
+<li>應該用 GSM/GPRS 就夠了 <a href="http://seller.pcstore.com.tw/S134700302/C1021133941.htm"></a>http://seller.pcstore.com.tw/S134700302/C1021133941.htm</li></li>
+<li>好貴上面那個要 NT$1600 耶</li>
+<li><a href="http://www.arduino.cc/en/Main.ArduinoGSMShield"></a>http://www.arduino.cc/en/Main.ArduinoGSMShield</li></ul>
 </ul>
 
 <p><b>眉眉角角</b></p><ul><li>自幹的程式放這邊 <a href="https://github.com/miaoski/pm25"></a>https://github.com/miaoski/pm25</li>
@@ -66,10 +66,13 @@
 <li>測試中的畫面 <a href="http://i.imgur.com/Hl7egG3.jpg"></a>http://i.imgur.com/Hl7egG3.jpg</li></ul>
 
 <p><b>TODO</b></p><ul class="task"><li>找人跳坑寫後端</li>
-<li>要和 AirCraft 連嗎？</li>
+<li>要和 AirCasting 連嗎？</li>
 <li>ESP8266 收到 Arduino 更新時閃燈號 (GPIO0)，收到 server 端 OK 時閃燈號 (GPIO2)</li>
 <li>安全問題：洗掉設定檔那邊應該由 Arduino 來處理，不應該 fallback 到 AP mode</li>
-<li>發 ID 給 client 的方法</li></ul>
+<li>發 ID 給 client 的方法</li>
+<li>需要 calibration</li></ul>
+<ul><li><a href="https://groups.google.com/forum/#"></a>https://groups.google.com/forum/#!topic/airqualityegg/8ZX5_eQOVuI</li>
+<li><a href="http://www.takingspace.org/evaluating-low-cost-gas-sensors/"></a>http://www.takingspace.org/evaluating-low-cost-gas-sensors/</li></ul>
 
 <p></p><p><b>相關專案</b></p><ul><li><a href='/91ZImrFjGvx'/>輻射地圖</a>&nbsp;</li></ul>
 
