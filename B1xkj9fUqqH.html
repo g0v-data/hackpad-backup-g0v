@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1166"/>
+<meta name="version" content="1579"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$B1xkj9fUqqH</title>
 </head>
 <body><h1>IoT 空污偵測 DIY</h1><p></p><p>the begin:&nbsp;</p><p><a href="https://www.facebook.com/pulipm2.5/posts/1583904825219960?hc_location=ufi"></a>https://www.facebook.com/pulipm2.5/posts/1583904825219960?hc_location=ufi</p><p><a href="http://logbot.g0v.tw/channel/g0v.tw/2015-04-19/18"></a>http://logbot.g0v.tw/channel/g0v.tw/2015-04-19/18</p><p><a href="http://logbot.g0v.tw/channel/g0v.tw/2015-04-19/61"></a>http://logbot.g0v.tw/channel/g0v.tw/2015-04-19/61</p><p></p><p><b>AirCasting</b></p><ul><li><a href="http://aircasting.org/"></a>http://aircasting.org/ - USD$200<ul><li>(open hardware + open source, 元件列表在 <a href="http://www.habitatmap.org/habitatmap_docs/HowToBuildAnAirCastingAirMonitor.pdf"></a>http://www.habitatmap.org/habitatmap_docs/HowToBuildAnAirCastingAirMonitor.pdf page 8&nbsp; )&nbsp;</li>
@@ -66,16 +66,31 @@
 <li>測試中的畫面 <a href="http://i.imgur.com/Hl7egG3.jpg"></a><a href='http://i.imgur.com/Hl7egG3.jpg'/>http://i.imgur.com/Hl7egG3.jpg</a></li>
 <li>需要 calibration<ul><li><a href="https://groups.google.com/forum/#"></a><a href='https://groups.google.com/forum/#!topic/airqualityegg/8ZX5_eQOVuI'/>https://groups.google.com/forum/#</a><a href='https://groups.google.com/forum/#!topic/airqualityegg/8ZX5_eQOVuI'/>!topic/airqualityegg/8ZX5_eQOVuI</a></li>
 <li><a href="http://www.takingspace.org/evaluating-low-cost-gas-sensors/"></a><a href='http://www.takingspace.org/evaluating-low-cost-gas-sensors/'/>http://www.takingspace.org/evaluating-low-cost-gas-sensors/</a></li>
-<li><a href="http://www.kandrsmith.org/RJS/Misc/calib_dht22.html"></a><a href='http://www.kandrsmith.org/RJS/Misc/calib_dht22.html'/>http://www.kandrsmith.org/RJS/Misc/calib_dht22.html</a></li>
-<li>可能會因為沒辦法在家中校準，讓數據失去意義</li></li>
+<li><a href="http://www.kandrsmith.org/RJS/Misc/calib_dht22.html"></a><a href='http://www.kandrsmith.org/RJS/Misc/calib_dht22.html'/>http://www.kandrsmith.org/RJS/Misc/calib_dht22.html</a><ul><li>DHT22 使用二週後，濕度從正常的 70%RH 降到 50%RH 了，外面很濕也一樣</li></ul>
+</li>
+<li>可能會因為沒辦法在家中校準，讓數據失去意義</li></ul>
+</li>
+<li>DN7C3CA006 的校準<ul><li>取樣 250 次做平均，第一顆在 210 (1.025V) 左右，第二顆在 230 (1.123V) 左右。</li>
+<li>要加一個電晶體，開機的時候把風扇關掉做 Vs 的校準 :(</li>
+<li>出廠校準是抽測，所以可以預期每一顆都不一樣</li>
+<li>公式: pm25 (µg/m^3) = a * b * (Vo[mV] - Vs[mV])<ul><li>a 建議值 0.6</li>
+<li>b 在 RH50% 以下是 1 ，以上是 (1 - 0.01467 * (h - 50))</li></ul>
+</li>
 <li>應該還是可以校正baseline，不過linearity是有點麻煩…</li></ul>
+</li>
+<li>MQ9 和 MQ7 都會受溫、濕度影響，而且需要在標準氣體校準。不要測這一項？</li>
+<li>耗電量計算<ul><li>WiFi 傳送時約 150mA (3.3V)</li>
+<li>風扇 max 140mA</li>
+<li>DN7C3CA006 除風扇外約 40mA</li>
+<li>DHT-22</li>
+<li>MQ9 預熱 340mW 運作時電流未標註</li></ul>
 </ul>
 
 <p><b>TODO</b></p><ul class="task"><li>找人跳坑寫後端</li>
 <li>要和 AirCasting 連嗎？</li>
-<li>ESP8266 收到 Arduino 更新時閃燈號 (GPIO0)，收到 server 端 OK 時閃燈號 (GPIO2)</li>
-<li>安全問題：洗掉設定檔那邊應該由 Arduino 來處理，不應該 fallback 到 AP mode</li>
-<li>發 ID 給 client 的方法</li>
+<li>ESP8266 收到 Arduino 更新時閃燈號 (GPIO0)，收到 server 端 OK 時閃燈號 (GPIO2)</li></ul>
+<ul class="taskdone"><li>安全問題：洗掉設定檔那邊應該由 Arduino 來處理，不應該 fallback 到 AP mode</li></ul>
+<ul class="task"><li>發 ID 給 client 的方法</li>
 <li><br/></li></ul>
 
 <p></p><p><b>相關專案</b></p><ul><li><a href='/91ZImrFjGvx'/>輻射地圖</a>&nbsp;</li></ul>
