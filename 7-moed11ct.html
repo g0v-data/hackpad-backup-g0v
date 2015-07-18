@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="759"/>
+<meta name="version" content="1302"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$7-moed11ct</title>
 </head>
 <body><h1>7 月萌典松: moed11ct</h1><p></p><p>時間：7/18 11am-8pm（歡迎遲到早退）</p><p>地點：<a href='http://bookshow.tw/traffic/'/>Bookshow.tw</a> 基隆路一段 141 號 6 樓之 7（捷運市政府站步行三分鐘）</p><p>名額：35 人（<a href='http://moe.kktix.cc/events/moedict-7-18'/>報名頁面</a>）</p><p>內容：比照之前<a href='https://g0v.hackpad.com/8-moed5ct#8-moed5ct-'/>萌典松（ex.第五次）</a>，採「併松」模式舉行，歡迎 g0v 各大小專案加<b><u>萌</u></b>參加。</p><p>費用：採量力而捐、自由贊助方式。如有剩餘，捐給下次黑客松。</p><p>活動守則：<a href="https://g0v.io/coc"></a><a href='https://g0v.io/coc'/>https://g0v.io/coc</a></p><p></p><p>流程：</p><ul><li>11:30 專案、想法簡報介紹</li>
@@ -15,7 +15,39 @@
 <li>19:30 第二次成果報告</li>
 <li>20:00 收播、閒聊</li></ul>
 
-<p><b>萌典相關開發項目</b></p><ul><li>iTaigi.tw</li></ul>
+<p><b>萌典相關開發項目</b></p><ul><li>iTaigi.tw&nbsp;&nbsp;<ul><li>hackpad <a href="https://g0v.hackpad.com/moed7ct-taigi-neologism?r=0#"></a>https://g0v.hackpad.com/moed7ct-taigi-neologism?r=0#</li>
+<li>moqups <a href="https://moqups.com/liz462/IMYHBVi5"></a>https://moqups.com/liz462/IMYHBVi5</li>
+<li>目前進度：已有基礎資料庫，後端大致完成、前端即將完成</li>
+<li>未來人力需求：<ul><li>語言創意大隊：幫各台語詞想適合台語翻譯</li>
+<li>影音創意大隊：製作各種吸引人的台語短句、短片（格式設計）</li>
+<li>漢字正規化大隊：幫各種神奇的書寫方式轉寫成符合目前教育部規範的台語漢字及臺羅音標</li></ul>
+</li>
+<li>台語講談會？其他台語需求？</li>
+<li>與萌典的連結？（除了萌典專頁文章之外）</li></ul>
+</li>
+<li>藏文萌典~<ul><li>語料：<ul><li><a href="https://github.com/karmapa/tibetanchinesedict"></a>https://github.com/karmapa/tibetanchinesedict (CC0) 藏漢辭典</li>
+<li><a href="https://github.com/karmapa/monlamdict"></a>https://github.com/karmapa/monlamdict (CC0) 藏英雙向，以及藏藏辭典。</li></ul>
+</li>
+<li>拼音檢索： <a href="https://github.com/ksanaforge/tibetan"></a><a href='https://github.com/ksanaforge/tibetan'/>https://github.com/ksanaforge/tibetan</a>&nbsp; (Wylie(藏文羅馬化方案)/Tibetan Unicode 雙向轉換)</li></ul>
+</ul>
+<ul class="code"><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var wylie=require(&quot;tibetan/wylie&quot;);</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; wylie.toWylie(&quot;<b>ཀརྨཔ</b>&quot;)===wylie.fromWylie(&quot;karmapa&quot;)</li><ul><li>&nbsp;輸入藏文的方法<ul><li>wikipedia 的多國語言線上輸入模組 <a href="http://thottingal.in/projects/js/jquery.ime/examples/"></a>http://thottingal.in/projects/js/jquery.ime/examples/<ul><li>先選藏文(第11個 བོད་ཡིག། )，然後選 Tibetan EWTS，輸入 k 可得 ཀ</li></ul>
+</li>
+<li>Windows 系統內建藏文 language code BO</li></ul>
+</li>
+<li>操作概說：<ul><li>比照 <a href="http://amis.moedict.tw/"></a>http://amis.moedict.tw/<ul><li>（資料結構請見 <a href="https://amis.moedict.tw/dict-amis.json"></a>https://amis.moedict.tw/dict-amis.json ）</li></ul>
+</li>
+<li>檢索框可輸入 Wylie 字母、中文，或藏文字</li>
+<li>左側列表顯示 Wylie 字母 (?)</li>
+<li>右側主詞條顯示藏文字母 (?)</li>
+<li>右側敘述顯示中文、英文釋義</li></ul>
+</li></ul>
+</li>
+<li>漢字源流資料集</li><ul><li><a href="https://drive.google.comf/folderview?id=0B1XMOr6Gyu3YbHBBSkZ1M2lmREE&usp=drive_web"></a>https://drive.google.com<a href='https://drive.google.com/folderview?id=0B1XMOr6Gyu3YbHBBSkZ1M2lmREE&amp;usp=drive_web'/>f</a>/folderview?id=0B1XMOr6Gyu3YbHBBSkZ1M2lmREE&amp;usp=drive_web</li>
+<li>文總新釋出的資料集，歡迎把想到的應用寫在這裡</li></ul>
+</li>
+<li>變調規則</li><ul><li><a href="https://github.com/audreyt/moedict-webkit/blob/master/view.ls#L380"></a>https://github.com/audreyt/moedict-webkit/blob/master/view.ls#L380</li></ul>
+</ul>
 
 <h2>併松</h2><ul class="comment"><li>歡迎把想做的專案/計畫列在這裡！</li></ul>
 
@@ -30,19 +62,26 @@
 <undefined><li><b>小松 TODO</b></li></undefined>
 <ul><li>將 <a href='http://beta.hackfoldr.org/ppt/https%253A%252F%252Fdocs.google.com%252Fspreadsheets%252Fd%252F1EefGM7p3xlSMOcTFo5i8WkWbiZhwoBFv0rezFLIwUDo%252Fedit%2523gid%253D627721169'/>104 年市長施政報告</a>整理成適合放進資料庫的格式</li></ul>
 <ul class="comment"><li>因為項目很多，可以從格式比較整齊的桃園開始<ul class="comment"><li>臺北與高雄各自有上千的施政進度要處理⋯⋯</li></ul>
-<ul class="task"><li>檢查 ppt-promise-parser 輸出的警告訊息</li>
-<li>替施政進度挑選合適的標題</li></ul>
+<ul class="taskdone"><li>檢查 ppt-promise-parser 輸出的警告訊息</li></ul>
+<ul class="task"><li>替施政進度挑選合適的標題</li></ul>
 </ul>
-<ul class="comment"><li>通常拿該項的小標即可。</li><ul class="task"><li>將之前手動整理的承諾跟工作區的資料做匯整&nbsp;</li>
+<ul class="comment"><li>通常拿該項的小標即可。</li><ul class="task"><li>將之前<a href='https://goo.gl/UN0lcj'/>手動整理的承諾跟工作區的資料</a>做匯整&nbsp;</li>
 <li>將「承諾相關內容」（要做什麼）與「最新進展」（做到哪裡、預計怎麼做）分開</li>
 <li>替每個進度填進度（「還沒做」「正在做」「已完成」三選一）</li></ul>
 </ul>
 <ul><li>網站前端</li><ul class="task"><li>commitment page 承諾頁面</li>
 <li>index 首頁</li></ul>
 </ul>
-<ul><li>網站資料後端</li><ul class="task"><li>google spreadsheet --&gt; mock data 的 script</li>
-<li>實作評分 API</li></ul>
+<ul><li>網站資料後端</li><ul class="task"><li>google spreadsheet --&gt; mock data 的 script</li></ul>
+</ul>
+<ul class="comment"><li>working on this</li><ul class="task"><li>實作評分 API</li></ul>
 </ul>
 
-<p><b>Data + Design 資料＋設計 正體中文版翻譯</b></p><p><a href="http://bit.ly/data-design-zh"></a><a href='http://bit.ly/data-design-zh'/>http://bit.ly/data-design-zh</a></p><p>繼續翻譯，預計於下次大松釋出全文供校對。</p><p></p></body>
+<p><b>Data + Design 資料＋設計 正體中文版翻譯</b></p><p><a href="http://bit.ly/data-design-zh"></a><a href='http://bit.ly/data-design-zh'/>http://bit.ly/data-design-zh</a></p><ul><li>繼續翻譯，預計於下次大松釋出全文供校對。</li></ul>
+
+<p></p><p><b>零時字引</b></p><p><a href='https://docs.google.com/presentation/d/16MzEnhGiWYH2e5WMudW6Sc49BTWDf1_aicbFMU9nSrU/edit?usp=sharing'/>簡報</a> 用部件+筆劃搜尋罕用字 (up to Extension E)</p><p></p><p></p><p><b>萌典粉絲團 / 出國比賽（a0kman）</b></p><ul><li>a0kman 專案報告<ul><li>粉絲團突破 500 人, 歡迎投稿&nbsp;</li>
+<li>萌典介紹短片，毛片（？）釋出，怡君 ++&nbsp;</li></ul>
+</ul>
+
+</body>
 </html>
