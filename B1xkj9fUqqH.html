@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1579"/>
+<meta name="version" content="1592"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$B1xkj9fUqqH</title>
 </head>
 <body><h1>IoT 空污偵測 DIY</h1><p></p><p>the begin:&nbsp;</p><p><a href="https://www.facebook.com/pulipm2.5/posts/1583904825219960?hc_location=ufi"></a>https://www.facebook.com/pulipm2.5/posts/1583904825219960?hc_location=ufi</p><p><a href="http://logbot.g0v.tw/channel/g0v.tw/2015-04-19/18"></a>http://logbot.g0v.tw/channel/g0v.tw/2015-04-19/18</p><p><a href="http://logbot.g0v.tw/channel/g0v.tw/2015-04-19/61"></a>http://logbot.g0v.tw/channel/g0v.tw/2015-04-19/61</p><p></p><p><b>AirCasting</b></p><ul><li><a href="http://aircasting.org/"></a>http://aircasting.org/ - USD$200<ul><li>(open hardware + open source, 元件列表在 <a href="http://www.habitatmap.org/habitatmap_docs/HowToBuildAnAirCastingAirMonitor.pdf"></a>http://www.habitatmap.org/habitatmap_docs/HowToBuildAnAirCastingAirMonitor.pdf page 8&nbsp; )&nbsp;</li>
@@ -73,6 +73,8 @@
 <li>DN7C3CA006 的校準<ul><li>取樣 250 次做平均，第一顆在 210 (1.025V) 左右，第二顆在 230 (1.123V) 左右。</li>
 <li>要加一個電晶體，開機的時候把風扇關掉做 Vs 的校準 :(</li>
 <li>出廠校準是抽測，所以可以預期每一顆都不一樣</li>
+<li>原來環保署也是需要校準的...</li>
+<li><a href="http://taqm.epa.gov.tw/pm25/tw/Download/細懸浮微粒(PM2.5)自動監測數據發布校正原則.pdf"></a><a href='http://taqm.epa.gov.tw/pm25/tw/Download/%E7%B4%B0%E6%87%B8%E6%B5%AE%E5%BE%AE%E7%B2%92(PM2.5)%E8%87%AA%E5%8B%95%E7%9B%A3%E6%B8%AC%E6%95%B8%E6%93%9A%E7%99%BC%E5%B8%83%E6%A0%A1%E6%AD%A3%E5%8E%9F%E5%89%87.pdf'/>http://taqm.epa.gov.tw/pm25/tw/Download/細懸浮微粒(PM2.5)自動監測數據發布校正原則.pdf</a></li>
 <li>公式: pm25 (µg/m^3) = a * b * (Vo[mV] - Vs[mV])<ul><li>a 建議值 0.6</li>
 <li>b 在 RH50% 以下是 1 ，以上是 (1 - 0.01467 * (h - 50))</li></ul>
 </li>
