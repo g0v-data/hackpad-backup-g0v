@@ -1,0 +1,10 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="505"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$xRh84200Jl8</title>
+</head>
+<body><h1>零時組字</h1><p></p><p>組字最早的構想，就是輸入 IDS (或其他部件和組合方式的表達式)，得到一個字形。</p><p></p><p>例如：⿱宀⿱珤⿴辶⿰隹⿰財召 ，可得到「招財進寶」合文。</p><p>主要有兩個難點，一是要為每個部件計算適當的框，二是挑選合適的異體部件。例如：「木」有好幾種變形，木字旁必須化捺為點，「李」的木豎筆要縮短，這都是無法用矩形拉長或壓扁來呈現，必須用異體部件，但由於Unicode 本身的設計，除了極少數如「钅釒金」，大多數異體部件並沒有碼。glyphwiki 為了字形美觀，常用部件做了非常多的異體部件，並賦於唯一的代碼，稱為glyphid，但使用者不可能記得住這些glyphid。</p><p></p><p>這裡提出一個機制，稱為Ideograph on demand sequence ，讓使用者可以用簡便的方式，解決合適部件選取以及算框的困難。</p><p></p><p>base glyph: 2912B,&nbsp; (雨-&gt;(寶-貝)) (缶-&gt;(⿲隹財召))&nbsp;&nbsp; // hackpad 無法輸入extension B?</p><p></p><p>先取一個base glyph, <a href='https://codepoints.net/U+2912B'/>U+2912B</a> 將裡頭的「雨」替換為「寶去掉貝」。</p><p>然後將「缶」替換為「隹財召」橫連。</p><p></p><p>這樣組字系統從base glyph 取得了新字的基本布局，將個別部件替換為其他即可。</p><p></p><p>當然IODS 不是唯一，使用者可以自由創造不同的 IODS ，以取得最滿意的視覺效果。例如「機-幾+寳」會比「村-寸+寳」均稱，但使用者也可以刻意放大或縮小某個部份。</p><p></p><p>在伺服器端，只要以IDS為key，可以容納不同的 IODS。</p><p></p><p>討論：</p><p>IODS 用什麼語法？</p><p>組字的UI</p><p>是否允許指定部件的顏色？</p><p></p><p></p></body>
+</html>
