@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="708"/>
+<meta name="version" content="711"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$J84agQVmxG7</title>
 </head>
 <body><h1>情境網頁遊戲框架</h1><p></p><p>這是一個情境式網頁遊戲的框架，只要把圖片放置好、把遊戲架構json寫好，放到網頁裡，就可以成為一個全新的情境式遊戲，或是心理測驗！</p><p></p><p></p><p></p><h2>設定檔格式</h2><p></p><ul><li>steps:<ul><li>過程，其中的&quot;start&quot;項目為第一張</li>
@@ -27,7 +27,8 @@
 <li>[&quot;steps&quot;, &quot;1&quot;]&nbsp;</li></ul>
 </ul>
 </ul>
-<ul class="comment"><li>如果沒有question，就跳next，沒有next，就跳results進行計算</li><ul><li>talks:&nbsp;<ul><li>說的話</li>
+<ul class="comment"><li>如果沒有question，就跳next，沒有next，就跳results進行計算</li>
+<li>如果有多個內容，則亂數選一個。</li><ul><li>talks:&nbsp;<ul><li>說的話</li>
 <li>[&quot;first sentent&quot;, &quot;second&quot;]</li></ul>
 </li>
 <li>question:<ul><li>要問的問題&nbsp;</li>
