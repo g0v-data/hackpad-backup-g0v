@@ -1,0 +1,289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="708"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$J84agQVmxG7</title>
+</head>
+<body><h1>情境網頁遊戲框架</h1><p></p><p>這是一個情境式網頁遊戲的框架，只要把圖片放置好、把遊戲架構json寫好，放到網頁裡，就可以成為一個全新的情境式遊戲，或是心理測驗！</p><p></p><p></p><p></p><h2>設定檔格式</h2><p></p><ul><li>steps:<ul><li>過程，其中的&quot;start&quot;項目為第一張</li>
+<li>bg:&nbsp;<ul><li>背景圖片</li>
+<li>範例：&quot;images/xxx.jpg&quot;</li></ul>
+<ul class="comment"><li>如果settings的bg有指定，這裡可省略，將會使用settings的bg作為背景圖片</li></ul>
+</ul>
+<ul><li>charactors&nbsp;<ul><li>角色圖片</li>
+<li>範例：[&quot;images/xxx.png&quot;, &quot;images/yyy.png&quot;]</li></ul>
+</li>
+<li>place:&nbsp;<ul><li>地點（可省略）</li>
+<li>&quot;高雄市美麗島站&quot;</li></ul>
+</li>
+<li>datetime:&nbsp;<ul><li>時間（可省略）</li>
+<li>2015年8月17日 10:30</li></ul>
+</li>
+<li>animate:&nbsp;<ul><li>轉場動畫&nbsp;</li>
+<li>&quot;fading&quot; or &quot;fliping&quot;....</li></ul>
+</li>
+<li>next:&nbsp;<ul><li>下一張</li>
+<li>[&quot;steps&quot;, &quot;1&quot;]&nbsp;</li></ul>
+</ul>
+</ul>
+<ul class="comment"><li>如果沒有question，就跳next，沒有next，就跳results進行計算</li><ul><li>talks:&nbsp;<ul><li>說的話</li>
+<li>[&quot;first sentent&quot;, &quot;second&quot;]</li></ul>
+</li>
+<li>question:<ul><li>要問的問題&nbsp;</li>
+<li>[&quot;你要去哪裡？&quot;]</li></ul>
+</li>
+<li>answer_type:&nbsp;<ul><li>答案格式</li>
+<li>&quot;radio&quot; or &quot;checkbox&quot;</li></ul>
+</ul>
+</ul>
+<ul class="comment"><li>答案格式是radio的時候，點答案就直接進去了；</li>
+<li>如果答案格式是checkbox，要多一個確認的對話框給玩家點擊</li><ul><li>answers:&nbsp;<ul><li>答案選項，下面還會拆分</li>
+<li>&nbsp; [answer: &quot;&quot;, score: [&quot;a&quot;: [3, &quot;plus&quot;], &quot;b&quot;: [5, &quot;times&quot;]], next: [&quot;steps&quot;, &quot;1&quot;]]<ul><li>answer<ul><li>答案內容</li>
+<li>&quot;我要去黑客松&quot;</li></ul>
+</li>
+<li>score<ul><li>計分方式</li>
+<li>[[&quot;a&quot;, &quot;+&quot;, 3], [&quot;b&quot; &quot;*&quot;, 5]]</li></ul>
+<ul class="comment"><li>以這邊為例，a + 3, b * 5</li>
+<li>這邊分數可以有多個，分開計算，計算模式看後面的plus、times</li></ul>
+</ul>
+<ul><li>next<ul><li>下一個要跳哪個選項</li>
+<li>&nbsp;[&quot;steps&quot;, &quot;1&quot;]</li></ul>
+</ul>
+</ul>
+</ul>
+</ul>
+<ul class="comment"><li>意思是跳到 steps 的第&quot;1&quot;項</li>
+<li>next如果只有[&quot;results&quot;]，則透過計算決定要顯示哪個結果。</li>
+<li>如果有指定，如[&quot;results&quot;, &quot;1&quot;]，不計算直接顯示該結果。</li></ul>
+
+<ul><li>results:<ul><li>結果群組的呈現</li>
+<li>calculate:&nbsp;<ul><li>計算方法，符合的才呈現</li>
+<li>[[ &quot;a&quot;, &quot;&gt;&quot;, 3 , &quot;and&quot; ], [ &quot;b&quot;, &quot;&gt;&quot;, 5 , &quot;or&quot; ]]</li></ul>
+<ul class="comment"><li>必須符合 a &gt; 3 或 b &gt; 5才會呈現此結果</li>
+<li>根據計算結果來呈現答案。如果是在next中直接指定，則不用計算。</li></ul>
+</ul>
+<ul><li>title<ul><li>標題</li>
+<li>&quot;要去黑客松&quot;</li></ul>
+</li>
+<li>contents:&nbsp;<ul><li>呈現內容</li>
+<li>[&quot;result string&quot;, &quot;result string&quot;]</li>
+<li>可以有多個</li></ul>
+</li>
+<li>next:&nbsp;<ul><li>如果結果呈現後還要繼續問，可以放入next</li>
+<li>[&quot;steps&quot;, &quot;1&quot;]</li></ul>
+</ul>
+</ul>
+
+<ul><li>settings<ul><li>遊戲的設定</li>
+<li>cover<ul><li>一開始畫面的封面</li></ul>
+</li>
+<li>bg<ul><li>遊戲預設場景的圖片</li></ul>
+</li>
+<li>website<ul><li>遊戲相關網站</li></ul>
+</li>
+<li>version<ul><li>本遊戲版本</li></ul>
+</li>
+<li>code<ul><li>程式碼放哪裡</li></ul>
+</li>
+<li>license<ul><li>網站授權</li></ul>
+</li>
+<li>score<ul><li>設定預設分數</li></ul>
+</ul>
+</ul>
+
+<h2>網頁格式與設定檔對照</h2><p></p><p><b>遊戲進入的樣式</b></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_J84agQVmxG7_p.56088_1439785153431_螢幕快照 2015-08-17 下午12.17.21.png'/></p><p></p><p><b>對話狀況</b></p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_J84agQVmxG7_p.56088_1439785265318_螢幕快照 2015-08-17 下午12.17.25.png'/></p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_J84agQVmxG7_p.56088_1439785273945_螢幕快照 2015-08-17 下午12.17.34.png'/></p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_J84agQVmxG7_p.56088_1439785284700_螢幕快照 2015-08-17 下午12.17.39.png'/></p><p></p><p><b>提出問題</b></p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_J84agQVmxG7_p.56088_1439785304425_螢幕快照 2015-08-17 下午12.17.44.png'/></p><p></p><p><b>結果</b></p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_J84agQVmxG7_p.56088_1439785517868_螢幕快照 2015-08-17 下午12.24.58.png'/></p><p></p><h2>設定檔範例</h2><p></p><p>這個設定檔，以CC授權小幫手為基底製作</p><p></p><ul class="code"><li>{</li>
+<li>&nbsp; &quot;settings&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;bg&quot;: &quot;images/123.jpg&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;website&quot;: &quot;<a href="http://g0v.tw"></a>http://g0v.tw&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;cover&quot;: &quot;images/123.jpg&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;code&quot;: &quot;<a href="http://github.com/g0v.tw/1234.jpg"></a>http://github.com/g0v.tw/1234.jpg&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;license&quot;: &quot;MIT&quot;</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;score&quot;: [</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;by&quot;, &quot;=&quot;, 0],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;sa&quot;, &quot;=&quot;, 0],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;nc&quot;, &quot;=&quot;, 0],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;nd&quot;, &quot;=&quot;, 0],</li>
+<li>&nbsp;&nbsp;&nbsp; ],</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;version&quot;: &quot;0.01&quot;</li>
+<li>&nbsp; }</li>
+<li>&nbsp; &quot;steps&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;start&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;charactors&quot;: [&quot;images/aaa.png&quot;, &quot;images/bbb.png&quot;],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;talks&quot;: [</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;不知道該如何選擇CC授權嗎？&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;來選擇你的想像，再來看看要用哪個授權吧！&quot;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;next&quot;: [&quot;steps&quot;, &quot;by&quot;]</li>
+<li>&nbsp;&nbsp;&nbsp; },</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;by&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;questions&quot;: [</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;需要標示姓名嗎？&quot;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;answers&quot;: [{</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;answer&quot;: &quot;我要標示姓名&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;score&quot;: [</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;sa&quot;, &quot;=&quot;, 1]</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;next&quot;: [&quot;steps&quot;, &quot;nd&quot;]</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }, {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;answer&quot;: &quot;不用標示姓名&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;score&quot;: [</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;sa&quot;, &quot;=&quot;, 0]</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;next&quot;: [&quot;results&quot;]</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }]</li>
+<li>&nbsp;&nbsp;&nbsp; },</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;nd&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;questions&quot;: [</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;別人可以改作嗎？&quot;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;answers&quot;: [{</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;answer&quot;: &quot;可以改作&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;score&quot;: [</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;nd&quot;, &quot;=&quot;, 1]</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;next&quot;: [&quot;steps&quot;, &quot;sa&quot;]</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }, {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;answer&quot;: &quot;不能改作&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;score&quot;: [</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;nd&quot;, &quot;=&quot;, 0]</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;next&quot;: [&quot;steps&quot;, &quot;sa&quot;]</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }]</li>
+<li>&nbsp;&nbsp;&nbsp; },</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;sa&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;questions&quot;: [</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;分享後要用同樣授權嗎？&quot;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;answers&quot;: [{</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;answer&quot;: &quot;要用同樣授權&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;score&quot;: [</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;sa&quot;, &quot;=&quot;, 1]</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;next&quot;: [&quot;steps&quot;, &quot;nc&quot;]</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }, {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;answer&quot;: &quot;不用使用相同授權&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;score&quot;: [</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;sa&quot;, &quot;=&quot;, 0]</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;next&quot;: [&quot;steps&quot;, &quot;nc&quot;]</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }]</li>
+<li>&nbsp;&nbsp;&nbsp; },</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;nc&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;questions&quot;: [</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;是否可以商業使用？&quot;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;answers&quot;: [{</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;answer&quot;: &quot;可以商業使用&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;score&quot;: [</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;nc&quot;, &quot;=&quot;, 1]</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;next&quot;: [&quot;results&quot;]</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }, {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;answer&quot;: &quot;不能商業使用&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;score&quot;: [</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;nc&quot;, &quot;=&quot;, 0]</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;next&quot;: [&quot;results&quot;]</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }]</li>
+<li>&nbsp;&nbsp;&nbsp; }</li>
+<li>&nbsp; },</li>
+<li>&nbsp; &quot;results&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;no-cc&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;calculate&quot;: [</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;sa&quot;, &quot;!=&quot;, 1, &quot;and&quot;]</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;title&quot;: &quot;你不適用CC授權&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;contents&quot;: [</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;您選擇了不做姓名標示。&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;所以CC授權不適合你喔！&quot;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]</li>
+<li>&nbsp;&nbsp;&nbsp; },</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;cc-by&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;calculate&quot;: [</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;by&quot;, &quot;==&quot;, 1, &quot;and&quot;],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;nc&quot;, &quot;==&quot;, 0, &quot;and&quot;],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;nd&quot;, &quot;==&quot;, 0, &quot;and&quot;],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;sa&quot;, &quot;==&quot;, 0, &quot;and&quot;]</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;title&quot;: &quot;CC-BY適合你！&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;contents&quot;: [</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;因為你沒有做太多限制。&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;CC-BY授權適合你喔！&quot;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]</li>
+<li>&nbsp;&nbsp;&nbsp; },</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;cc-by-nc&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;calculate&quot;: [</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;by&quot;, &quot;==&quot;, 1, &quot;and&quot;],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;nc&quot;, &quot;==&quot;, 1, &quot;and&quot;],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;nd&quot;, &quot;==&quot;, 0, &quot;and&quot;],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;sa&quot;, &quot;==&quot;, 0, &quot;and&quot;]</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;title&quot;: &quot;CC-BY-NC適合你！&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;contents&quot;: [</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;因為你只有加上商業限制。&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;CC-BY-NC授權適合你喔！&quot;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]</li>
+<li>&nbsp;&nbsp;&nbsp; },</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;cc-by-nc-sa&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;calculate&quot;: [</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;by&quot;, &quot;==&quot;, 1, &quot;and&quot;],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;nc&quot;, &quot;==&quot;, 1, &quot;and&quot;],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;nd&quot;, &quot;==&quot;, 0, &quot;and&quot;],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;sa&quot;, &quot;==&quot;, 1, &quot;and&quot;]</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;title&quot;: &quot;CC-BY-NC-SA適合你！&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;contents&quot;: [</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;因為你限制商業使用，又要求修改後要以相同授權釋出。&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;CC-BY-NC-SA授權適合你喔！&quot;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]</li>
+<li>&nbsp;&nbsp;&nbsp; },</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;cc-by-nd&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;calculate&quot;: [</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;by&quot;, &quot;==&quot;, 1, &quot;and&quot;],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;nc&quot;, &quot;==&quot;, 0, &quot;and&quot;],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;nd&quot;, &quot;==&quot;, 1, &quot;and&quot;],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;sa&quot;, &quot;==&quot;, 0, &quot;and&quot;]</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;title&quot;: &quot;CC-BY適合你！&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;contents&quot;: [</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;因為你禁止別人改作。&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;所以CC-BY-ND授權適合你喔！&quot;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]</li>
+<li>&nbsp;&nbsp;&nbsp; },</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;cc-by-nc-nd&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;calculate&quot;: [</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;by&quot;, &quot;==&quot;, 1, &quot;and&quot;],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;nc&quot;, &quot;==&quot;, 1, &quot;and&quot;],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;nd&quot;, &quot;==&quot;, 1, &quot;and&quot;],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;sa&quot;, &quot;==&quot;, 0, &quot;and&quot;]</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;title&quot;: &quot;CC-BY-NC-ND適合你！&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;contents&quot;: [</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;你限制了商業授權，也禁止改作。&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;所以CC-BY-NC-ND授權適合你喔！&quot;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]</li>
+<li>&nbsp;&nbsp;&nbsp; },</li>
+<li>&nbsp;&nbsp;&nbsp; &quot;cc-by-sa&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;calculate&quot;: [</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;by&quot;, &quot;==&quot;, 1, &quot;and&quot;],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;nc&quot;, &quot;==&quot;, 0, &quot;and&quot;],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;nd&quot;, &quot;==&quot;, 0, &quot;and&quot;],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&quot;sa&quot;, &quot;==&quot;, 1, &quot;and&quot;]</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ],</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;title&quot;: &quot;CC-BY-SA適合你！&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;contents&quot;: [</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;因為你只要求要用相同方式分享&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;所以CC-BY-SA授權適合你喔！&quot;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]</li>
+<li>&nbsp;&nbsp;&nbsp; }</li>
+<li>&nbsp; }</li>
+<li>}</li></ul>
+
+<p></p><h2>操作方法</h2><p></p><p>可以用滑鼠點擊，也可以用右、Enter、空白選下一步；</p><p>上下左右可以在選項中跳躍，enter、空白選擇</p><p></p><h2>適用場合</h2><p>憲動盟議題推廣</p><p>CC授權選擇</p><p>各種議題介紹</p><p></p><h2>這個坑需要</h2><p></p><ul class="task"><li>網頁設計師</li>
+<li>UI設計師</li>
+<li>對議題有興趣、有劇本的朋友</li></ul>
+
+</body>
+</html>
