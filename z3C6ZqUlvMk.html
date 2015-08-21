@@ -3,10 +3,10 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1389"/>
+<meta name="version" content="1420"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$z3C6ZqUlvMk</title>
 </head>
-<body><h1>畫土地與建築地圖的方法</h1><p><a href='https://docs.google.com/presentation/d/1dxcrHnTRdkaejmtZb3l7Ws8LJ31d1sL1oHlAOpiuc08/edit#slide=id.gb8a7de0be_0_161'/>3min 簡報</a></p><p></p><h2>畫成地圖的方法</h2><p>a.土地</p><ul><li>基本資料：地號+輪廓</li>
+<body><h1>畫土地與建築地圖的方法</h1><p><a href='https://docs.google.com/presentation/d/1dxcrHnTRdkaejmtZb3l7Ws8LJ31d1sL1oHlAOpiuc08/edit#slide=id.gb8a7de0be_0_161'/>3min 簡報</a>，歡迎提供更多方法</p><p></p><h2>畫成地圖的方法</h2><p>你想畫的是：</p><p></p><p>a.土地</p><ul><li>基本資料：地號</li>
 <li>畫圖策略：各種地號資料文件 → csv → 使用<a href='https://g0v.hackpad.com/-Land-No.-Mapper-uhB6qAwYXe5'/>地號轉地圖</a>得到 GeoJson → 地圖製作(featureStyle, info-box, 事件處理...)</li>
 <li>以公有土地為例：</li><ol><li>資料來源：<a href='http://hackfoldr.org/POPonFire/XpdD57S2RIZ'/>各單位的公有地地號資料</a></li>
 <li>操作案例：<a href='http://data.g0v.tw/dataset/70'/>臺北市轄區內國有可建築空地(註)之歸戶統計(含管理者)</a> → <a href='https://g0v.hackpad.com/-Land-No.-Mapper-uhB6qAwYXe5'/>地號轉地圖</a> →<a href='http://dz1984.info/articles/Taipei_POP/'/>天龍特公地製作過程介紹</a> → <a href='http://taipei-pop.herokuapp.com/'/>天龍特公地網站</a></li></ol>
@@ -16,7 +16,7 @@
 <li>畫圖策略：GeoJson → 運用立體化工具</li>
 <li>以公有建築物為例：</li><ol><li>資料來源：<ol><li>公部門釋出的模型中的公有建築，例如<a href='http://gemvg.com/archives/676'/>3D台北城</a></li>
 <li>公部門的建照資料找出公有建築，例如<a href='http://tpebuilding.g0v.ronny.tw/index/columns'/>台北市市建築執照</a></li>
-<li><a href='http://wuchangkang.blogspot.tw/2014/01/app.html'/>蚊子館踏查文獻資料</a> → 將建築物繪製於 OSM 並且<a href='http://supaplex99.blogspot.tw/2015/08/how-to-use-overpass-turbo-wizard-mode-to-extract-openstreetmap-data.html'/>使用 OverPass Turbo 精靈模式截取開放街圖資料</a>(tag?) → 地圖製作(featureStyle, info-box, 事件處理...)</li></ol>
+<li>將<a href='http://wuchangkang.blogspot.tw/2014/01/app.html'/>蚊子館踏查文獻資料</a>繪製於 OSM → <a href='http://supaplex99.blogspot.tw/2015/08/how-to-use-overpass-turbo-wizard-mode-to-extract-openstreetmap-data.html'/>使用 OverPass Turbo 精靈模式截取開放街圖資料</a>(tag?) → 地圖製作(featureStyle, info-box, 事件處理...)</li></ol>
 </li>
 <li>操作案例：</li></ol>
 </ul>
