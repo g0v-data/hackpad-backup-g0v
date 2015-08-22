@@ -3,53 +3,63 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1375"/>
+<meta name="version" content="1866"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$BpW2Xt7s8AH</title>
 </head>
-<body><h1>開放都市-委員會會議記錄資料庫</h1><p>上層 <a href='http://hackfoldr.org/urbancodeg0vtw/'/>開放都市計畫</a></p><p></p><h2>緣由</h2><p>每個法定都市/區域計畫都需要經過多次的委會員審議，審議就會有審議紀錄，例如<a href='http://www.cpami.gov.tw/chinese/index.php?option=com_filedownload&amp;view=filedownload&amp;Itemid=68&amp;filter_cat=6&amp;filter_gp=8'/>內政部區域計畫委員會紀錄</a>，包含大大小小案件的審議過程、爭議點、人民陳情意見。但現在的會議紀錄公開方式只是放上pdf或doc文件，以會議編號歸檔，無法直接知道每次會議的案件有哪些，也無法檢索，如果能建立開放資料庫，就可以利用關鍵字搜尋，找出爭議案件在委員會被處裡的方式為何</p><p></p><p>e.g.下圖<a href='https://github.com/g0v/urbancodeg0vtw/blob/master/planbook/%E7%AB%B9%E5%8D%97%E9%A0%AD%E4%BB%BD%E4%B8%89%E9%80%9A(%E7%AC%AC%E4%B8%80%E9%9A%8E%E6%AE%B5).pdf'/>竹南頭份計畫</a>就經過鎮級2次、縣級1次、部級2次，共5次都委會審議，由會議記錄與發布文件比對，就可以知道案件的爭議點是什麼，怎麼被處理</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_BpW2Xt7s8AH_p.162425_1433484080378_example.jpg'/></p><p></p><h2>專案目的</h2><p>把各大委員會的會議紀錄材砍回家，作為開放資料，容易查閱檢索，串聯每一次會議過程與最終實施計畫間的關係</p><p></p><h2>協作工具</h2><p>github repo: <a href="https://github.com/g0v/urbancode-commission"></a><a href='https://github.com/g0v/urbancode-commission'/>https://github.com/g0v/urbancode-commission</a></p><p></p><h2>資料</h2><ul class="task"><li><a href='http://www.cpami.gov.tw/chinese/index.php?option=com_filedownload&amp;view=filedownload&amp;Itemid=68&amp;filter_cat=6&amp;filter_gp=8'/>內政部區域計畫委員會會議記錄</a>&nbsp;</li>
-<li><a href='http://www.cpami.gov.tw/chinese/index.php?option=com_filedownload&amp;view=filedownload&amp;Itemid=68&amp;filter_cat=5&amp;filter_gp=5&amp;filter_year='/>內政部都市計畫委員會會議記錄</a>&nbsp;</li><ul class="taskdone"><li>下載原始資料，共851筆</li></ul>
-</ul>
-<ul class="code"><li>原始資料位置：<a href="https://github.com/g0v/urbancode-commission/tree/master/record/moiup/raw"></a>https://github.com/g0v/urbancode<a href='https://github.com/g0v/urbancodeg0vtw/tree/master/commission_record/record/moiup/raw'/>-commission/tree/master</a>/record/moiup/raw</li>
-<li>1-357次是文件掃描 需要OCR</li>
-<li>358-623次是word檔</li>
-<li>624-851次是pdf檔</li><ul class="task"><li>轉成txt</li>
-<li>轉成json</li></ul class="task">
-</li>
-<li><a href='http://cpabm.cpami.gov.tw/docsrc/index.do'/>內政部審議案件書件查詢系統</a></li></ul>
-<ul class="task"><li><a href='http://www.tupc.gov.taipei/lp.asp?CtNode=6308&amp;CtUnit=4388&amp;BaseDSD=7&amp;mp=120021'/>臺北市都市計畫委員會會議紀錄</a></li><ul class="taskdone"><li>下載原始資料，共176筆 (第500次會議以前無資料)</li></ul>
-</ul>
-<ul class="code"><li>原始資料位置：<a href="https://github.com/g0v/urbancode-commission/tree/master/record/tpup/raw"></a><a href='https://github.com/g0v/urbancodeg0vtw/tree/master/commission_record/record/tpup/raw'/>https://github.com/g0v/urbancode-commission/tree/master/record/tpup/raw</a></li>
-<li>500-607、611-631、633-639、641-656次是word檔 (157個)</li>
-<li>608-610、632、640、657-670次是pdf檔 (19個)</li><ul class="taskdone"><li>轉成 txt</li></ul>
-</ul>
-<ul class="code"><li>txt資料位置：<a href="https://github.com/g0v/urbancode-commission/tree/master/record/tpup/txt"></a>https://github.com/g0v/urbancode-commission/tree/master/record/tpup/txt</li><ul class="task"><li>轉成json</li></ul class="task">
-</li>
-<li><a href='http://www.tupc.gov.taipei/lp.asp?CtNode=69657&amp;CtUnit=37693&amp;BaseDSD=7&amp;mp=120021'/>臺北市都市計畫委員會專案小組會議記錄</a></li></ul>
-<ul class="task"><li><a href='https://www.gis.udd.taipei.gov.tw/Meet2.aspx'/>臺北市都市開發審議服務平台</a></li>
-<li><a href='http://www.planning.ntpc.gov.tw/ap/fdownload/fdownload2.jsp?mfkind_id=00038'/>新北市都市計畫委員會紀錄</a></li><ul class="taskdone"><li>下載原始資料，共240筆</li></ul>
-</ul>
-<ul class="code"><li>原始資料位置：<a href="https://github.com/g0v/urbancode-commission/tree/master/record/npup/raw"></a>https://github.com/g0v/urbancode-commission/tree/master/record/npup/raw</li>
-<li>247個pdf</li>
-<li>1個zip、1個rar-exe(手動解壓縮為pdf)</li><ul class="task"><li>轉成txt</li>
-<li>轉成json</li></ul class="task">
-</li>
-<li><a href='http://bud.tainan.gov.tw/doc/CityBoard_new2.aspx'/>臺南市都市計畫委員會紀錄</a></li><ul class="taskdone"><li><i>下載原始資料，</i> 共101筆(92年以前無資料)</li></ul>
-</ul>
-<ul class="code"><li>原始資料位置：<a href="https://github.com/g0v/urbancode-commission/tree/master/record/tnup/raw"></a>https://github.com/g0v/urbancode-commission/tree/master/record/tnup/raw</li>
-<li>全部是pdf檔</li>
-<li>有些是掃瞄檔，有些只有審議案列表，沒有實際會議紀錄內容</li><ul class="task"><li>原臺南縣的未抓下</li>
-<li>轉成txt</li>
-<li>轉成json</li></ul class="task">
-</li>
-<li>(待補)</li></ul>
+<body><h1>開放都市-委員會會議記錄資料庫</h1><p>上層 <a href='http://hackfoldr.org/urbancodeg0vtw/'/>開放都市計畫</a></p><p></p><h2>緣由</h2><p>每個法定都市/區域計畫都需要經過多次的委會員審議，審議就會有審議紀錄，例如<a href='http://www.cpami.gov.tw/chinese/index.php?option=com_filedownload&amp;view=filedownload&amp;Itemid=68&amp;filter_cat=6&amp;filter_gp=8'/>內政部區域計畫委員會紀錄</a>，包含大大小小案件的審議過程、爭議點、人民陳情意見。但現在的會議紀錄公開方式只是放上pdf或doc文件，以會議編號歸檔，無法直接知道每次會議的案件有哪些，也無法檢索，如果能建立開放資料庫，就可以利用關鍵字搜尋，找出爭議案件在委員會被處裡的方式為何</p><p></p><p>e.g.下圖<a href='https://github.com/g0v/urbancodeg0vtw/blob/master/planbook/%E7%AB%B9%E5%8D%97%E9%A0%AD%E4%BB%BD%E4%B8%89%E9%80%9A(%E7%AC%AC%E4%B8%80%E9%9A%8E%E6%AE%B5).pdf'/>竹南頭份計畫</a>就經過鎮級2次、縣級1次、部級2次，共5次都委會審議，由會議記錄與發布文件比對，就可以知道案件的爭議點是什麼，怎麼被處理</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_BpW2Xt7s8AH_p.162425_1433484080378_example.jpg'/></p><p></p><h2>專案目的</h2><p>把各大委員會的會議紀錄材砍回家，作為開放資料，容易查閱檢索，串聯每一次會議過程與最終實施計畫間的關係</p><p></p><h2>協作工具</h2><p>github repo: <a href="https://github.com/g0v/urbancode-commission"></a><a href='https://github.com/g0v/urbancode-commission'/>https://github.com/g0v/urbancode-commission</a></p><p></p><h2>協作步驟</h2><p><b>1.下載委員會紀錄</b></p><ul><li>1-1 找到每個縣市各自的XX委員會網站，例如<a href='http://www.tupc.taipei.gov.tw/MP_120021.html'/>臺北市都市計畫委員會</a></li>
+<li>1-2 找到下載委員會紀錄的介面</li></ul>
+<ul style="list-style: none;"><li><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_BpW2Xt7s8AH_p.162425_1440210294967_ex.PNG'/></li>
+<li><br/></li></ul>
+<ul><li>1-3 把委員會紀錄通通帶回家 (用人工智慧跟工人智慧都可以)</li></ul>
 
-<h2>會議紀錄結構</h2><p>1.標題</p><ul style="list-style: none;"><li>a.委員會名稱</li>
-<li>b.第xxx次委員會議紀錄</li></ul>
-<p>2.時間</p><p>3.地點</p><p>4.主席</p><p>5.紀錄者</p><p>6.簽到表</p><p>7.報告事項(報告案)</p><p>8.審議事項(審議案)</p><ul style="list-style: none;"><li>a.案名</li>
-<li>b.說明</li>
-<li>c.決議</li>
-<li>d.附件</li></ul>
-<p>9.臨時動議案</p><p></p><h2>資料結構規劃</h2><p>試作範例 (台北市都委會672,671,670次紀錄，表格卡關中，先以空的array表示)：</p><ul class="code"><li><a href="https://github.com/g0v/urbancode-commission/blob/master/record/tpup/tpup.json"></a>https://github.com/g0v/urbancode-commission/blob/master/record/tpup/tpup.json</li></ul>
+<p><b>2.上傳紀錄</b></p><ul><li>選項一：將會議記錄commit 到gihub，repo/record/XXXAA/raw/<ul><li>XXX = 地區碼 沿用 ISO3166-2:TW <a href="https://zh.wikipedia.org/wiki/ISO_3166-2:TW"></a><u><a href='https://zh.wikipedia.org/wiki/ISO_3166-2:TW'/>https://zh.wikipedia.org/wiki/ISO_3166-2:TW</a></u></li>
+<li>AA = 委會員類別 UP=都委會 RP=區委會 (其餘類別再增加)</li>
+<li>範例：臺北市存在 <a href='https://github.com/g0v/urbancode-commission/tree/master/record/TPEUP/raw'/>repo/record/TPEUP/raw/</a></li></ul>
+</li>
+<li>選項二：上傳到網路空間 (還不知道放哪)</li></ul>
+
+<p><b>3.轉資料 (doc / pdf -&gt; json)</b></p><ul><li>自由射擊，將原始格式轉成 json</li>
+<li>資料結構規劃如後</li></ul>
+
+<p><b>4.上傳json</b></p><ul><li>commit 到github，repo/record/XXXAA/json/</li></ul>
+
+<h2>各委員會會議紀錄網頁連結</h2><ul class="task"><li><a href='http://www.cpami.gov.tw/chinese/index.php?option=com_filedownload&amp;view=filedownload&amp;Itemid=68&amp;filter_cat=6&amp;filter_gp=8'/>內政部區域計畫委員會會議記錄</a>&nbsp;</li>
+<li><a href='http://www.cpami.gov.tw/chinese/index.php?option=com_filedownload&amp;view=filedownload&amp;Itemid=68&amp;filter_cat=5&amp;filter_gp=5&amp;filter_year='/>內政部都市計畫委員會會議記錄</a>&nbsp;</li></ul>
+<ul class="code"><li>原始資料位置：<a href="https://github.com/g0v/urbancode-commission/tree/master/record/moiup/raw"></a><u><a href='https://github.com/g0v/urbancode-commission/tree/master/record/moiup/raw'/>https://github.com/g0v/urbancode</a></u><a href='https://github.com/g0v/urbancode-commission/tree/master/record/moiup/raw'/>-commission/tree/master</a><u><a href='https://github.com/g0v/urbancode-commission/tree/master/record/moiup/raw'/>/record/moiup/raw</a></u></li>
+<li>1-357次是文件掃描 需要OCR，358-623次是word檔，624-851次是pdf檔</li></ul>
+<ul class="task"><li><a href='http://cpabm.cpami.gov.tw/docsrc/index.do'/>內政部審議案件書件查詢系統</a></li>
+<li><a href='http://www.tupc.gov.taipei/lp.asp?CtNode=6308&amp;CtUnit=4388&amp;BaseDSD=7&amp;mp=120021'/>臺北市都市計畫委員會會議紀錄</a></li></ul>
+<ul class="code"><li>原始資料位置：<a href="https://github.com/g0v/urbancode-commission/tree/master/record/tpup/raw"></a><a href='https://github.com/g0v/urbancode-commission/tree/master/record/tpup/raw'/>https://github.com/g0v/urbancode-commission/tree/master/record/tpup/raw</a></li>
+<li>500-607、611-631、633-639、641-656次是word檔 (157個)</li>
+<li>608-610、632、640、657-670次是pdf檔 (19個)</li></ul>
+<ul class="task"><li><a href='http://www.tupc.gov.taipei/lp.asp?CtNode=69657&amp;CtUnit=37693&amp;BaseDSD=7&amp;mp=120021'/>臺北市都市計畫委員會專案小組會議記錄</a></li>
+<li><a href='https://www.gis.udd.taipei.gov.tw/Meet2.aspx'/>臺北市都市開發審議服務平台</a></li>
+<li><a href='http://www.planning.ntpc.gov.tw/ap/fdownload/fdownload2.jsp?mfkind_id=00038'/>新北市都市計畫委員會紀錄</a></li></ul>
+<ul class="code"><li>原始資料位置：<a href="https://github.com/g0v/urbancode-commission/tree/master/record/npup/raw"></a><u><a href='https://github.com/g0v/urbancode-commission/tree/master/record/npup/raw'/>https://github.com/g0v/urbancode-commission/tree/master/record/npup/raw</a></u></li>
+<li>247個pdf，1個zip、1個rar-exe(手動解壓縮為pdf)</li></ul>
+<ul class="task"><li><a href='http://bud.tainan.gov.tw/doc/CityBoard_new2.aspx'/>臺南市都市計畫委員會紀錄</a></li></ul>
+<ul class="code"><li>原始資料位置：<a href="https://github.com/g0v/urbancode-commission/tree/master/record/tnup/raw"></a><u><a href='https://github.com/g0v/urbancode-commission/tree/master/record/tnup/raw'/>https://github.com/g0v/urbancode-commission/tree/master/record/tnup/raw</a></u></li>
+<li>92年以前無資料，全部是pdf檔，有些是掃瞄檔，有些只有審議案列表，沒有實際會議紀錄內容</li>
+<li>原臺南縣的未抓下</li></ul>
+<ul class="task"><li>(待補)</li></ul>
+
+<h2>會議紀錄文件結構歸納</h2><ul class="code"><li>1.標題</li>
+<li>&nbsp; a.委員會名稱</li>
+<li>&nbsp; b.第xxx次委員會議紀錄</li>
+<li>2.時間</li>
+<li>3.地點</li>
+<li>4.主席</li>
+<li>5.紀錄者</li>
+<li>6.簽到表</li>
+<li>7.報告事項(報告案)</li>
+<li>8.審議事項(審議案)</li>
+<li>&nbsp; a.案名</li>
+<li>&nbsp; b.說明</li>
+<li>&nbsp; c.決議</li>
+<li>&nbsp; d.附件</li>
+<li>9.臨時動議案</li></ul>
+
+<h2>資料結構規劃</h2><p>試作範例 (台北市都委會672,671,670次紀錄，表格卡關中，先以空的array表示)：</p><ul class="code"><li><a href="https://github.com/g0v/urbancode-commission/blob/master/record/tpup/tpup.json"></a><u><a href='https://github.com/g0v/urbancode-commission/blob/master/record/tpup/tpup.json'/>https://github.com/g0v/urbancode-commission/blob/master/record/tpup/tpup.json</a></u></li></ul>
 
 <ul class="code"><li>[</li>
 <li>&nbsp; {</li>
