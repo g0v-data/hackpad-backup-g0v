@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="235"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$BB8UPY6SPCD</title>
+</head>
+<body><h1>BatDrone 婦幼犯罪熱點提醒、無人機巡航</h1><h2>軟體</h2><p><b>App 開發重點：</b></p><ol><li>距離熱點 500 公尺，發布「帶有 Location」的提醒通知。</li>
+<li>Google or Apple Map 熱點圖</li></ol>
+
+<p><b>Web 版可延伸應用：</b></p><ol><li>輸入「地區」和 Email，有熱點（更新）時發信給你。</li>
+<li><br/></li></ol>
+
+<p><b>Github</b></p><p><a href="https://github.com/kevinphys/BatDrone"></a><a href='https://github.com/kevinphys/BatDrone'/>https://github.com/kevinphys/BatDrone</a></p><p></p><p><b>Parse Example</b></p><ol><li><a href="https://parse.com/tutorials"></a><a href='https://parse.com/tutorials'/>https://parse.com/tutorials</a></li>
+<li><a href="https://parse.com/tutorials/anywall"></a><a href='https://parse.com/tutorials/anywall'/>https://parse.com/tutorials/anywall</a></li>
+<li><a href='http://stackoverflow.com/questions/25926293/geocoding-with-google-maps-api-via-parse-cloud-code'/>GeoCoding in Google Maps(Parse Cloud code)</a></li></ol>
+
+<p></p><h2>硬體</h2><p><b>I - 技術文件 - 定位</b></p><ol><li><a href='http://www.hindawi.com/journals/jcnc/2012/790374/'/>&quot;A Fusion Approach of RSSI and LQI for Indoor Localization System Using Adaptive Smoothers&quot;</a></li>
+<li><a href='http://diydrones.com/profiles/blogs/precise-indoor-positioning-with-ultrawideband'/>&quot;DIYdrones : Precise indoor positioning with ultrawideband&quot;</a></li></ol>
+
+<p><b>II - 技術文件 - 飛控</b></p><ol><li><a href='http://copter.ardupilot.com/wiki/common-autopilots/common-pixhawk-overview/'/>&quot;Pixhawk Overview&quot;</a>&nbsp;&nbsp;&nbsp; (成本考量可改用Pixhack，大陸仿製，便宜一半，但接頭和I/O不太一樣)</li>
+<li><a href="http://www.think-tank.co.kr/223"></a><a href='http://www.think-tank.co.kr/223'/>http://www.think-tank.co.kr/223</a></li>
+<li><a href="http://diydrones.com/profiles/blogs/coax-copter"></a><a href='http://diydrones.com/profiles/blogs/coax-copter'/>http://diydrones.com/profiles/blogs/coax-copter</a></li>
+<li><a href="http://multicoptersarefun.com/MulticopterOverview.html#SingleCoaxCopter"></a><a href='http://multicoptersarefun.com/MulticopterOverview.html#SingleCoaxCopter'/>http://multicoptersarefun.com/MulticopterOverview.html#SingleCoaxCopter</a></li>
+<li><br/></li></ol>
+
+<p><b>III - 價格參考</b></p><ol><li>正版Pixhawk(官網價格，不含稅與運費)</li><ul><li>Pixhawk 飛控 : 200USD</li>
+<li>GPS/compass : 90USD</li>
+<li>3DR Radio set : 100USD</li></ul>
+</ol>
+<ol><li>彷製Pixhack</li><ul><li>Pixhack 飛控 : 4600NT</li>
+<li>GPS/compass : 1690NT</li>
+<li>3DR radio set : 1600NT</li></ul>
+</ol>
+<ol><li>訪製APM2.6</li>
+<li>其他可能採購設備</li><ul><li>影像傳輸設備(機載端與地面端)</li>
+<li>接收機</li>
+<li>結構材料與加工</li>
+<li>RPi &amp; Navio+</li></ul>
+</ol>
+
+<p></p><p></p><h2>討論區 X 留言板</h2><p></p><ul class="comment"><li>第一個要先能像他們一樣做出一個不見血的Drone?</li>
+<li><a href="http://gofleye.com"></a><a href='http://gofleye.com/'/>http://gofleye.com</a></li>
+<li>材料基本上是有了，我可以負責先讓一顆球飛起來看看，比較麻煩的是這種類型的開源code比較少。現階段就先採用Pixhawk做飛控，接下來就要看其他功能想要幹嘛了? 才知道敷不敷使用。</li>
+<li>我第一想到的是能自己定位充電站，乖乖回去充電。</li>
+<li>室內定位? 超難，但值得一試。</li>
+<li>如果不怕碰撞，充電站就一直發送訊號源給他讓他去追，不管室內室外？（幹，打完自己覺得很難做到。）</li>
+<li>RSSI/LQI轉換為距離嗎?&nbsp; 先蒐集一下室內定位的技術好了。</li>
+<li>&quot;A Fusion Approach of RSSI and LQI for Indoor Localization System Using Adaptive Smoothers&quot;</li>
+<li><a href="http://www.hindawi.com/journals/jcnc/2012/790374/"></a><a href='http://www.hindawi.com/journals/jcnc/2012/790374/'/>http://www.hindawi.com/journals/jcnc/2012/790374/</a></li>
+<li>DIYdrones : Precise indoor positioning with ultrawideband&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://diydrones.com/profiles/blogs/precise-indoor-positioning-with-ultrawideband"></a><a href='http://diydrones.com/profiles/blogs/precise-indoor-positioning-with-ultrawideband'/>http://diydrones.com/profiles/blogs/precise-indoor-positioning-with-ultrawideband</a></li>
+<li>在WoFOSS 已有做「色狼地圖」正在進行中，詳細情形正在聯繫相關人員。</li>
+<li>櫃檯的女生真的很正。</li>
+<li>今年過年前一兩天，我們有辦跨國的 IGNITE HACKTHON 題目即是 [ 色狼地圖] 。　大家可參考影片， (1:15 始有片段喔!!)&nbsp; <a href="http://ignite.globalfundforwomen.org/hackathonvideo"></a>http://ignite.globalfundforwomen.org/hackathonvideo　希望這個專案成立，延續下去！！</li>
+<li><br/></li></ul>
+
+<p></p><h2>情境假設討論</h2><ol><li>巡弋情境，視該區該時，犯罪等高危險熱點，進行嚇阻式巡弋，搭載警示燈及720p影像即時傳輸設備(鏡頭是否搭載穩定器?)&nbsp; [ Allen：我覺得 prototype 可以不用加穩定器]，巡弋在30米空中(須考量攝像的解析清晰度，影像需可供指揮官及有效證據，也需避免來自於地面的攻擊或障礙物)。目的在於消除城市治安死角，強化警力機動性，</li>
+<li>App 使用者在「易發生犯罪地點」附近一定距離（距離可討論），通知（通知的資訊詳細度可再討論, EX：呼叫 Drone、最近的 Drone 離你幾分鐘、最後一次有人在此呼叫 Drone 的時間點 ...）跳出，讓使用者有警覺性，或避開犯罪地點。</li></ol>
+
+<h2>附錄</h2><p><b>軟體資料來源</b></p><ol><li>易發生婦幼犯罪被害地點：<a href="http://data.taipei/opendata/datalist/datasetMeta/preview?id=985743f7-a33e-4ac1-ad2e-7ef5ffea02e2&rid=efe5c923-fa09-4d55-896e-877c553f04e0"></a><a href='http://data.taipei/opendata/datalist/datasetMeta/preview?id=985743f7-a33e-4ac1-ad2e-7ef5ffea02e2&amp;rid=efe5c923-fa09-4d55-896e-877c553f04e0'/>http://data.taipei/opendata/datalist/datasetMeta/preview?id=985743f7-a33e-4ac1-ad2e-7ef5ffea02e2&amp;rid=efe5c923-fa09-4d55-896e-877c553f04e0</a></li>
+<li>易發生婦幼犯罪... （地圖版）：<a href="http://data.taipei/opendata/datalist/datasetMeta?oid=985743f7-a33e-4ac1-ad2e-7ef5ffea02e2"></a><a href='http://data.taipei/opendata/datalist/datasetMeta?oid=985743f7-a33e-4ac1-ad2e-7ef5ffea02e2'/>http://data.taipei/opendata/datalist/datasetMeta?oid=985743f7-a33e-4ac1-ad2e-7ef5ffea02e2</a></li>
+<li>易發生婦幼犯罪 API：<a href="http://data.taipei/opendata/datalist/datasetMeta/outboundDesc?id=985743f7-a33e-4ac1-ad2e-7ef5ffea02e2&rid=efe5c923-fa09-4d55-896e-877c553f04e0"></a><a href='http://data.taipei/opendata/datalist/datasetMeta/outboundDesc?id=985743f7-a33e-4ac1-ad2e-7ef5ffea02e2&amp;rid=efe5c923-fa09-4d55-896e-877c553f04e0'/>http://data.taipei/opendata/datalist/datasetMeta/outboundDesc?id=985743f7-a33e-4ac1-ad2e-7ef5ffea02e2&amp;rid=efe5c923-fa09-4d55-896e-877c553f04e0</a></li></ol>
+
+<p></p><p></p><p></p><p></p></body>
+</html>
