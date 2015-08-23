@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="303"/>
+<meta name="version" content="629"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$BB8UPY6SPCD</title>
 </head>
 <body><h1>BatDrone 婦幼犯罪熱點提醒、無人機巡航</h1><h2>軟體</h2><p><b>App 開發重點：</b></p><ol><li>距離熱點 500 公尺，發布「帶有 Location」的提醒通知。</li>
@@ -50,11 +50,17 @@
 <li>DIYdrones : Precise indoor positioning with ultrawideband&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://diydrones.com/profiles/blogs/precise-indoor-positioning-with-ultrawideband"></a><a href='http://diydrones.com/profiles/blogs/precise-indoor-positioning-with-ultrawideband'/>http://diydrones.com/profiles/blogs/precise-indoor-positioning-with-ultrawideband</a></li>
 <li>在WoFOSS有聽到專案，有做「色狼地圖」正在進行中，詳細情形正在聯繫相關人員。</li>
 <li>櫃檯的女生真的很正。</li>
-<li>今年過年前一兩天，我們有辦跨國的 IGNITE HACKTHON 題目即是 [ 色狼地圖] 。 大家可參考影片， (1:15 始有片段喔!!)&nbsp; <a href="http://ignite.globalfundforwomen.org/hackathonvideo"></a><a href='http://ignite.globalfundforwomen.org/hackathonvideo'/>http://ignite.globalfundforwomen.org/hackathonvideo</a> 希望這個專案成立，延續下去！！</li>
+<li>（by Hsiao-Mei Lin）今年過年前一兩天，我們有辦跨國的 IGNITE HACKTHON 題目及是 [ 色狼地圖] 。 大家可參考影片， 1:15 始有細節喔!!<a href="http://ignite.globalfundforwomen.org/hackathonvideo"></a><a href='http://ignite.globalfundforwomen.org/hackathonvideo'/>http://ignite.globalfundforwomen.org/hackathonvideo</a> 希望這個專案成立，延續下去！！</li>
 <li>想問 WoFOSS 的 Data Sourse&nbsp;</li>
-<li><br/></li></ul>
+<li>我是色狼地圖的開發者之一，我們主要完成的 feature 有地圖、雷達、事件通知系統(可勾選感興趣的縣市，一旦有新事件發生就會寄email通知)</li>
+<li>比較詳細介紹的影片是這個<a href="https://www.youtube.com/watch?v=c1nkMfl2dwE&feature=youtu.be"></a><a href='https://www.youtube.com/watch?v=c1nkMfl2dwE&amp;feature=youtu.be'/>https://www.youtube.com/watch?v=c1nkMfl2dwE&amp;feature=youtu.be</a></li>
+<li>這邊還有一些其他 feature 是未來有機會想去完成的，或許可以給你們參考看看~~~</li>
+<li>第一個是會根據時間變化去改變地圖上的顯示方式，譬如白天的時候是某些地點比較危險，那些地點就可以特別放最大顯示之類的，同理晚上也是</li>
+<li>第二個是會設計 ranking 機制，能去篩選出危險的十大區域之類的，然後可以跟婦聯會或警察局合作去加強巡邏，另外也會設計 timeout 機制，這樣可以刪除掉舊情報</li>
+<li>第三個是我們想實作成手機app，因為目前只有網頁版，所以雷達的效果其實不好</li>
+<li>第四個是希望不要只 focus 在台灣</li></ul>
 
-<h2>情境假設討論</h2><ol><li>巡弋情境，視該區該時，犯罪等高危險熱點，進行嚇阻式巡弋，搭載警示燈及720p影像即時傳輸設備(鏡頭是否搭載穩定器?)&nbsp; [ Allen：我覺得 prototype 可以不用加穩定器]，巡弋在30米空中(須考量攝像的解析清晰度，影像需可供指揮官及有效證據，也需避免來自於地面的攻擊或障礙物)。目的在於消除城市治安死角，強化警力機動性，</li>
+<p></p><p></p><h2>情境假設討論</h2><ol><li>巡弋情境，視該區該時，犯罪等高危險熱點，進行嚇阻式巡弋，搭載警示燈及720p影像即時傳輸設備(鏡頭是否搭載穩定器?)&nbsp; [ Allen：我覺得 prototype 可以不用加穩定器]，巡弋在30米空中(須考量攝像的解析清晰度，影像需可供指揮官及有效證據，也需避免來自於地面的攻擊或障礙物)。目的在於消除城市治安死角，強化警力機動性，</li>
 <li>App 使用者在「易發生犯罪地點」附近一定距離（距離可討論），通知（通知的資訊詳細度可再討論, EX：呼叫 Drone、最近的 Drone 離你幾分鐘、最後一次有人在此呼叫 Drone 的時間點 ...）跳出，讓使用者有警覺性，或避開犯罪地點。</li></ol>
 
 <h2>附錄</h2><p><b>軟體資料來源</b></p><ol><li>易發生婦幼犯罪被害地點：<a href="http://data.taipei/opendata/datalist/datasetMeta/preview?id=985743f7-a33e-4ac1-ad2e-7ef5ffea02e2&rid=efe5c923-fa09-4d55-896e-877c553f04e0"></a><a href='http://data.taipei/opendata/datalist/datasetMeta/preview?id=985743f7-a33e-4ac1-ad2e-7ef5ffea02e2&amp;rid=efe5c923-fa09-4d55-896e-877c553f04e0'/>http://data.taipei/opendata/datalist/datasetMeta/preview?id=985743f7-a33e-4ac1-ad2e-7ef5ffea02e2&amp;rid=efe5c923-fa09-4d55-896e-877c553f04e0</a></li>
