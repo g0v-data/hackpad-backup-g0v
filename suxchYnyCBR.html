@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="848"/>
+<meta name="version" content="1051"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$suxchYnyCBR</title>
 </head>
 <body><h1>判決書懶人包</h1><p></p><p>覺得判決書又臭又長嗎?&nbsp;</p><p><a href="http://judicial.ronny.tw/TPB/A/103/訴/1627"></a>http://judicial.ronny.tw/TPB/A/103/<a href='http://judicial.ronny.tw/TPB/A/103//1627'/>訴</a>/1627</p><p></p><p>以&nbsp;<u><a href='/1uK4O8K4IwZ'/> 1031627</a> </u>為例，裡面我試著用一句話來取代一整句話</p><p></p><p>這個專案的目標，是想要做出一個網頁，可以將判決書全文自動載入，並且自動分段，然後讓大家可以自行提供這一段內容的摘要，讓大家可以分享較短的判決書</p><p></p><p><b>需要幫忙</b></p><ul><li>文字處理: 將判決書內容能做出分段</li><ul class="comment"><li>這是人工作文字處理嗎?</li>
@@ -13,10 +13,14 @@
 <li>會不會有半形跟全形空白XD</li>
 <li>下面我來收集十個判決書，然後今天的程式看看能不能先對這十個為主</li></ul>
 </ul>
-<ul><li>前端: 將分段後的判決書，可以切換每一段要顯示摘要還是全文，並且可以讓任何人投稿摘要，或者讓大家<s>投稿</s>票選摘要</li></ul>
+<ul><li>前端: 將分段後的判決書，可以切換每一段要顯示摘要還是全文，並且可以讓任何人投稿摘要，或者讓大家<s>投稿</s>票選摘要<ul><li>程式碼:&nbsp;</li></ul>
+</ul>
 <ul class="comment"><li>想幫忙前端XD</li>
-<li>搬椅子來follow</li></ul>
-<ul><li>後端: 處理摘要的投稿以及投票</li><ul class="comment"><li>應該可以幫忙做後端</li></ul>
+<li>搬椅子來follow</li>
+<li>&nbsp;++</li>
+<li>我只做了摘要編輯功能，程式在下面</li></ul>
+<ul><li>後端: 處理摘要的投稿以及投票</li><ul class="comment"><li>應該可以幫忙做後端</li>
+<li>++</li></ul>
 </ul>
 <ul><li>法律人: 將一些指標性的著名判決加上每一段的摘要</li></ul>
 <ul class="comment"><li>這個我可以找人來幫忙，可以先給我判決，我去司改會提案</li>
@@ -53,9 +57,14 @@
 <li><a href="http://banyh.github.io/judical/%E8%87%BA%E7%81%A3%E8%87%BA%E5%8C%97%E5%9C%B0%E6%96%B9%E6%B3%95%E9%99%A2-%E8%A1%8C%E6%94%BF-103%E7%B0%A1107.json"></a>http://banyh.github.io/judical/%E8%87%BA%E7%81%A3%E8%87%BA%E5%8C%97%E5%9C%B0%E6%96%B9%E6%B3%95%E9%99%A2-%E8%A1%8C%E6%94%BF-103%E7%B0%A1107.json</li>
 <li><a href="http://banyh.github.io/judical/%E8%87%BA%E7%81%A3%E8%87%BA%E5%8C%97%E5%9C%B0%E6%96%B9%E6%B3%95%E9%99%A2-%E6%B0%91-101%E9%87%8D%E5%9C%8B30.json"></a>http://banyh.github.io/judical/%E8%87%BA%E7%81%A3%E8%87%BA%E5%8C%97%E5%9C%B0%E6%96%B9%E6%B3%95%E9%99%A2-%E6%B0%91-101%E9%87%8D%E5%9C%8B30.json</li></ol>
 </li>
-<li>(進度5%) 給json格式的判決書，自動找出關鍵字之間的關聯強度<ol><li><b>需要的協助: 法學相關的關鍵字清單</b></li></ol>
+<li>(進度55%) 給json格式的判決書，自動找出關鍵字之間的關聯強度<ol><li><b>需要的協助: 法學相關的關鍵字清單</b></li></ol>
 </li>
-<li>(進度0%) 給關鍵字列表及關聯強度，畫出圖形化的directed graph (<a href='http://blog.abodit.com/wp-content/uploads/2011/09/Keyworddiagram.png'/>預期的樣貌</a> )</li></ol>
+<li>(進度90%) 給關鍵字列表及關聯強度，畫出圖形化的directed graph (<a href='http://blog.abodit.com/wp-content/uploads/2011/09/Keyworddiagram.png'/>預期的樣貌</a> )</li></ol>
+
+<p><b>前端摘要編輯器</b></p><ul><li><a href="http://ctiml.github.io/judicial-summary/text.html"></a>http://ctiml.github.io/judicial-summary/text.html</li>
+<li>把 <a href="http://ronnywang.github.io/tw-court-parser/"></a>http://ronnywang.github.io/tw-court-parser/ 產生出來的 json 文字全選後貼到上面的 textarea，按下 Edit</li>
+<li>可以用滑鼠多選行，然後底部可以輸入 &quot;標題&quot; 及 &quot;摘要&quot;，然後送出產生 json</li>
+<li>可以直接貼 json 或編輯 json，按下匯入</li></ul>
 
 <p></p></body>
 </html>
