@@ -3,10 +3,13 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1420"/>
+<meta name="version" content="1445"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$z3C6ZqUlvMk</title>
 </head>
-<body><h1>畫土地與建築地圖的方法</h1><p><a href='https://docs.google.com/presentation/d/1dxcrHnTRdkaejmtZb3l7Ws8LJ31d1sL1oHlAOpiuc08/edit#slide=id.gb8a7de0be_0_161'/>3min 簡報</a>，歡迎提供更多方法</p><p></p><h2>畫成地圖的方法</h2><p>你想畫的是：</p><p></p><p>a.土地</p><ul><li>基本資料：地號</li>
+<body><h1>公有資產地圖</h1><ol><li><a href='https://docs.google.com/presentation/d/1dxcrHnTRdkaejmtZb3l7Ws8LJ31d1sL1oHlAOpiuc08/edit#slide=id.gb8a7de0be_0_161'/>3min 簡報</a>，歡迎提供更多方法</li>
+<li>以下畫土地與建築地圖的方法，也不限於公有資產哦</li></ol>
+
+<h2>畫成地圖的方法</h2><p>你想畫的是：</p><p></p><p>a.土地</p><ul><li>基本資料：地號</li>
 <li>畫圖策略：各種地號資料文件 → csv → 使用<a href='https://g0v.hackpad.com/-Land-No.-Mapper-uhB6qAwYXe5'/>地號轉地圖</a>得到 GeoJson → 地圖製作(featureStyle, info-box, 事件處理...)</li>
 <li>以公有土地為例：</li><ol><li>資料來源：<a href='http://hackfoldr.org/POPonFire/XpdD57S2RIZ'/>各單位的公有地地號資料</a></li>
 <li>操作案例：<a href='http://data.g0v.tw/dataset/70'/>臺北市轄區內國有可建築空地(註)之歸戶統計(含管理者)</a> → <a href='https://g0v.hackpad.com/-Land-No.-Mapper-uhB6qAwYXe5'/>地號轉地圖</a> →<a href='http://dz1984.info/articles/Taipei_POP/'/>天龍特公地製作過程介紹</a> → <a href='http://taipei-pop.herokuapp.com/'/>天龍特公地網站</a></li></ol>
@@ -31,8 +34,8 @@
 <li>ex 用位置去查土地使用分區或是相關環境法令，參考<a href='/LGQjB0Lozmc'/>環境法令整合查詢</a></li>
 <li>ex 用土地管理機關名稱，去查到電話與信箱，方便使用者寫信詢問公有土地的各種問題，參考<a href='/g6v6MpyacFb'/>政府通訊錄</a></li></ul>
 
-<p>必須處理歷史資料</p><ul><li>基本想法：現況之外，曾是公有資產的資料</li>
-<li>初步歸納類型：<ul><li>ex 已標售，參考「<a href='https://www.facebook.com/media/set/?set=a.698399803576871.1073741828.689216224495229&amp;type=3'/>台北市大安區信義聯勤俱樂部，標售給新光人壽再賣給元利建設，蓋兩棟31、35層豪宅</a>」</li>
+<p>必須處理歷史資料</p><ul><li>基本想法：曾是公有資產的資料</li>
+<li>初步歸納類型：<ul><li>ex 已標售，參考「<a href='https://www.facebook.com/media/set/?set=a.698399803576871.1073741828.689216224495229&amp;type=3'/>台北市大安區信義聯勤俱樂部，由元利建設蓋兩棟31、35層豪宅</a>」</li>
 <li>ex 空間資料已變動，例如地號整併與建築改建...</li></ul>
 </ul>
 
