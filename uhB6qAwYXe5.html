@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1500"/>
+<meta name="version" content="1751"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$uhB6qAwYXe5</title>
 </head>
 <body><h1>地號轉地圖 Land No. Mapper</h1><ul class="comment"><li>構想來自<a href='http://www.aypwip.org/webnote/poponfire'/>土地許願松</a></li></ul>
@@ -40,10 +40,28 @@
 <p><b>介面</b></p><ul><li>「地號轉地圖」目前介面：<a href="http://codepen.io/dz1984/full/NqgVPj/"></a><a href='http://codepen.io/dz1984/full/NqgVPj/'/>http://codepen.io/dz1984/full/NqgVPj/</a><ul><li>以特定格式輸入，即可呈現該地號對應的輪廓。例如以下：<ul><li>臺北市,信義段一小段,120</li>
 <li>臺北市,信義段一小段,121</li>
 <li>臺北市,信義段一小段,430</li></ul>
-</ul>
+</li>
+<li><b>問題回報</b>，輸入以下地號，無法產生輪廓（補充說明：地號來源為天龍特公地頁面，數字共八碼，為光華商場八德路轉角的空地（<a href='http://udn.com/news/story/8145/927820-%E5%8F%B0%E5%8C%97%E5%B8%8C%E6%9C%9B%E5%BB%A3%E5%A0%B4%E5%81%87%E6%97%A5%E8%BE%B2%E5%B8%82-9%E6%9C%88%E8%8F%AF%E5%B1%B1%E8%A6%8B'/>新聞</a>））</li>
+<li>台北市,成功段一小段,00130004&nbsp;</li>
+<li>台北市,成功段一小段,00130000</li>
+<li>台北市,成功段一小段,00130002</li>
+<li>台北市,成功段一小段,00150001</li>
+<li>台北市,成功段一小段,00100002</li>
+<li>台北市,成功段一小段,00100005</li>
+<li>台北市,成功段一小段,00100001</li>
+<li>驚，我摸索出來規則後就可以了耶？<ul><li>台北市,成功段一小段,0013-4</li>
+<li>台北市,成功段一小段,0013-0</li>
+<li>台北市,成功段一小段,0013-2</li>
+<li>台北市,成功段一小段,0015-1</li>
+<li>台北市,成功段一小段,0010-2</li>
+<li>台北市,成功段一小段,0010-5</li>
+<li>台北市,成功段一小段,0010-1</li></ul>
+</li></ul>
+</li>
+<li>上載 csv 可將地號以外的欄位內容，整合於 infobox<ul><li>提問：可將此 GeoJson 檔案下載嗎？方便應用，例如丟到 Umap 當成底圖，接著用點線面來規劃公有空地願景，請見<a href='https://umap.openstreetmap.fr/zh-tw/map/map_50075#18/25.03983/121.54037'/>願景測試地圖</a></li></ul>
 </ul>
 
-<p><b>進一步的編輯器構想</b></p><ul><li>參考文章：<a href='http://dz1984.info/articles/Taipei_POP/'/>天龍特公地製作過程 byDZ1984</a>。這篇談到&nbsp; Google Maps featureStyle、土地資訊與處理事件範例</li>
+<p></p><p></p><p><b>進一步的編輯器構想</b></p><ul><li>參考文章：<a href='http://dz1984.info/articles/Taipei_POP/'/>天龍特公地製作過程 byDZ1984</a>。這篇談到&nbsp; Google Maps featureStyle、土地資訊與處理事件範例</li>
 <li>地號的資料上，除了圖塊之外，同時呈現其他描述</li>
 <li>呈現地號的圖層，可以疊上：<ul><li>政府公開資料，例如土石流潛勢溪流</li>
 <li>自編圖層</li></ul>
