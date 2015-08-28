@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="633"/>
+<meta name="version" content="638"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$0oex8jxn78Z</title>
 </head>
 <body><h1>d|Bootcamp Taipei 共筆 - 資料視覺化：簡介與討論</h1><p></p><p>時間：2015/08/21 15:30 ~ 16:30</p><p>講師：李慕約</p><p><b>解答版：</b><a href="https://docs.google.com/spreadsheets/d/1SVfx5jRxSQkKVpB2Nn1TUnVYzQVFtZQXaLFfmpza4Ho/edit#gid=0"></a>https://docs.google.com/spreadsheets/d/1SVfx5jRxSQkKVpB2Nn1TUnVYzQVFtZQXaLFfmpza4Ho/edit#gid=0</p><p></p><p></p><p></p><ul class="comment"><li>table 是 HTML table 的意思，所以只要是抓表格就是用 table</li>
@@ -17,7 +17,8 @@
 <p>=IMPORTHTML(&quot;<a href="http://db.cec.gov.tw/histQuery.jsp?voteCode=20120101T1A2&qryType=ctks"></a><a href='http://db.cec.gov.tw/histQuery.jsp?voteCode=20120101T1A2&amp;qryType=ctks'/>http://db.cec.gov.tw/histQuery.jsp?voteCode=20120101T1A2&amp;qryType=ctks</a>&quot;, &quot;table&quot;, 1)</p><p></p><ul class="comment"><li>請問要如何知道是&quot;table&quot;, 1 ?</li>
 <li>理論上是因為這是這一個頁面的第幾個表格，但實際操作，我自已都是 try-and-error</li></ul>
 
-<p>=if(ISBLANK(B2),A1,B2)</p><p></p><p>=Sheet1!A1</p><ul class="comment"><li>複製一個待加工的資料表用的參照</li>
+<p>=if(ISBLANK(B2),A1,B2)</p><ul class="comment"><li>請問這一行是什麼意思呢？功能是什麼</li></ul>
+<p>=Sheet1!A1</p><ul class="comment"><li>複製一個待加工的資料表用的參照</li>
 <li>填在 A1 格，然後拉到整張資料表</li></ul>
 
 <ul><li>清理空白欄位<ul><li>手工</li>
