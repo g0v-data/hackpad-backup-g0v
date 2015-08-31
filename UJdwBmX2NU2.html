@@ -3,32 +3,46 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="462"/>
+<meta name="version" content="919"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$UJdwBmX2NU2</title>
 </head>
-<body><h1>公有土地資料擷取注意事項</h1><p></p><h2>一般注意事項</h2><ul><li>資料的<b>基本規格</b>，以下各種項目之間無法相互推敲，是描述土地特性根本的資料項目<ul><li>在哪裡：段小段與地號（最精確，且用於標定位置）</li>
-<li>有多大：面積與持份比例</li>
-<li>誰的地：經管單位</li>
+<body><h1>公有土地資料擷取注意事項</h1><p></p><h2>一般注意事項</h2><ul><li>資料的<b>基本規格</b>，以下各種項目之間無法相互推敲，是描述土地特性根本的資料項目<ul><li>在哪裡：不動產標示，包含 縣市,行政區,段小段,地號</li>
+<li>有多大：面積 與 持份比例</li>
+<li>誰的地：所有權人、經管單位(管理者)</li>
 <li>怎麼了：公用or非公用狀態、開發方式</li>
 <li>圖面與文書：現況圖片、計劃圖、報告書、判決書...等等</li>
-<li>建立資料的時間：土地資料會隨時間變動</li></ul>
-</li>
-<li>從前述基本規格，衍生出可查到的資料<ul><li>地號→土地形狀</li>
+<li>相關租售價資料：公告現值...</li>
+<li>建立資料的時間：因為土地資料會隨時間變動，所以必須知道資料時間</li></ul>
+</ul>
+
+<p><b>舉例</b></p><p>所有權人：中華民國</p><p>管理者：財政部國有財產署</p><p>縣市：台北市</p><p>行政區：中正區</p><p>段小段：永昌段一小段</p><p>地號：00300000</p><p>面積(平方公尺)：9</p><p>分母：1</p><p>分子：1</p><p>持分面積(平方公尺)：9</p><p>使用分區：第三種住宅區</p><p>編定使用種類：</p><p>狀態：標售</p><p>公告現值日期：</p><p>公告現值單價(元/平方公尺)：</p><p>公告現值總價(元)：</p><p>資料時間：2015</p><p>圖片：.....</p><p></p><ul><li>從前述基本規格的資料，衍生可查到的資料<ul><li>地號→土地形狀</li>
 <li>地號→地理位置與行政區</li>
 <li>地號→計畫分區（例如是否位在商業區內）</li>
 <li>地號→建築物登記、建照、使用執照</li>
-<li>地號→該筆土地歷年轉手資料，基本上從有紀錄的時代開始都可以查的到 (不確定是否需繳交費用給中華電信?)</li>
+<li>地號→該筆土地歷年轉手資料，基本上從有紀錄的時代開始都可以查的到 (需繳交費用給中華電信?)</li>
 <li>地號→地方民眾風聲回報</li>
-<li>地號、開發方式→開發進度與相關資料庫、政策決議、新聞</li></ul>
+<li>地號、開發方式→開發進度與相關資料庫、政策決議、新聞</li>
+<li>面積→單位換算(坪..)</li></ul>
 </ul>
 
 <h2>心得列舉</h2><ul><li>「段小段&amp;地號」最重要！</li>
 <li>可以用議題經驗，去蒐集需要關注的公有土地資料。例如，在公有土地的茫茫大海中，以「位在可建築區位，但目前沒有建築物登記的土地」，其實也是一種找到需要關注土地對象的方法，因為這種土地非常有機會被開發與被處分。</li>
 <li>所挖出的資料，可以上傳到，<a href='http://data.g0v.tw/group/%E5%85%AC%E6%9C%89%E5%9C%B0%E5%A4%A7%E8%A1%8C%E5%8B%95'/>零時資料中心</a>。</li>
 <li>土地段名代碼：<a href="http://data.gov.tw/node/7504"></a>http://data.gov.tw/node/7504</li>
-<li>公有地專案，即將以 PostgreSQL 為 DB。</li>
-<li>The dark side of data：<a href="http://radar.oreilly.com/2012/07/the-dark-side-of-data.html"></a>http://radar.oreilly.com/2012/07/the-dark-side-of-data.html<ul><li>摘錄自劉嘉凱：現在大家都很強調API，但機器權跟人權要並重，否則會造成新的數位落差，只推API會造成只有能解讀API的人看得懂這些資料。印度也在做開放資料，開放地籍資料，結果都是大財團去買這些資料來做土地開發，也是一種數位落差，如此大財團賺更多錢，貧富差距就增加了。（來源：政府資料開放加值應用研究分析書面報告 www.ndc.gov.tw/dn.aspx?uid=15534）</li></ul>
-</ul>
+<li>公有地專案，即將以 PostgreSQL 為 DB。</li></ul>
+
+<p>財政部國有財產署北區分署資料如下：</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_UJdwBmX2NU2_p.121673_1441009269582_螢幕快照 2015-08-31 下午4.20.49.png'/></p><p>看起來缺少「地號」與使用狀態，其中土地明細如下：</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_UJdwBmX2NU2_p.121673_1441009573899_螢幕快照 2015-08-31 下午4.25.15.png'/></p><p>這資料不知道該如何處理呢？</p><ul class="comment"><li>表格中「不動產標示」的內容，即是「段小段」與「地號」，例如 新北市林口區小南灣段下福小段 1655-0002&nbsp;</li>
+<li>縣市：新北市</li>
+<li>行政區：林口區</li>
+<li>段小段：小南灣段下福小段</li>
+<li>地號：1655-0002&nbsp;</li>
+<li>以「新北市,小南灣段下福小段,1655-2 」丟到 <a href="http://codepen.io/dz1984/full/NqgVPj/"></a><a href='http://codepen.io/dz1984/full/NqgVPj/'/>http://codepen.io/dz1984/full/NqgVPj/</a>&nbsp; 可看到輪廓位置</li>
+<li><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_UJdwBmX2NU2_p.172171_1441011075441_螢幕快照 2015-08-31 下午4.50.51.png'/></li></ul>
+<p>另外想請教以這張圖為例，所謂的「段小段」是不是「德音段0574」呢？</p><p>此外關於政府的「土地段名代碼」是不是也要合併使用呢？<a href="http://data.gov.tw/node/7504"></a>http://data.gov.tw/node/7504</p><p>好像沒找到已有的資料表關聯？</p><ul class="comment"><li>代碼說明，可參考 友善地號資訊查詢界面：<a href="https://g0v.hackpad.com/ZrNxaKVn8jt"></a><a href='https://g0v.hackpad.com/ZrNxaKVn8jt'/>https://g0v.hackpad.com/ZrNxaKVn8jt</a></li>
+<li>看來我搞錯了，這個的「段小段」是「德音段」，「地號」是「574」？</li>
+<li>我以「新北市,德音段,574」丟到 <a href="http://codepen.io/dz1984/full/NqgVPj/"></a>http://codepen.io/dz1984/full/NqgVPj/&nbsp; 有查到輪廓，所以可能是德音段沒有「小段」(猜)？</li>
+<li><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_UJdwBmX2NU2_p.172171_1441010751020_螢幕快照 2015-08-31 下午4.44.41.png'/></li></ul>
+<p>有些資料好像查不到...</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_UJdwBmX2NU2_p.121673_1441014253460_螢幕快照 2015-08-31 下午5.43.37.png'/></p><p>我查詢「新北市,坪林區,大粗坑段虎寮潭小段,57」沒有顯示資料，另外還有些日文字，不知道是亂碼還是？<img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_UJdwBmX2NU2_p.121673_1441014325528_螢幕快照 2015-08-31 下午5.45.11.png'/></p><ul class="comment"><li>這什麼XD!!</li></ul>
 
 <p></p></body>
 </html>
