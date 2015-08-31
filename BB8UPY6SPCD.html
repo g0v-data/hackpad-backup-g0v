@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1662"/>
+<meta name="version" content="1853"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$BB8UPY6SPCD</title>
 </head>
 <body><h1>BatDrone 婦幼犯罪熱點提醒、無人機巡航</h1><h2>使用情境</h2><ol><li><b>手機上</b>：App 使用者在「易發生犯罪地點」附近範圍內（距離可討論），會有通知跳出，讓使用者有警覺性，或避開犯罪地點。</li>
@@ -12,8 +12,17 @@
 <li>目的在於消除城市治安死角，強化警力機動性。警察的勤務原則上不會變多。</li></ol>
 
 <p></p><ul class="comment"><li>通知的資訊詳細度可再討論, EX：呼叫 Drone、最近的 Drone 離你幾分鐘、最後一次有人在此呼叫 Drone 的時間點 ...</li>
-<li>(鏡頭是否搭載穩定器?)&nbsp;&nbsp; 我覺得 prototype 可以不用加穩定器</li></ul class="comment">
-<h2>軟體</h2><p><b>開發重點</b></p><ul><li><b>App （iOS、Android）</b><ul><li>距離熱點 500 公尺，發布「帶有 Location」的提醒通知。</li>
+<li>(鏡頭是否搭載穩定器?)&nbsp;&nbsp; 我覺得 prototype 可以不用加穩定器</li></ul>
+
+<h2>目前的坑</h2><ul class="task"><li>icon 設計與 App 介面</li></ul>
+<ul class="taskdone"><li>App 在地圖上標出熱點圖（with data.taipei 目前公開的開放資料）</li></ul>
+<ul class="task"><li>爬「婦幼警察隊」的原始資料（<a href='http://tcgwww.taipei.gov.tw/ct.asp?xItem=6505423&amp;ctNode=45898&amp;mp=10800A'/>pdf</a>）</li>
+<li>硬體 drone 的原型機</li>
+<li>Web 熱點更新，寄信通知</li>
+<li>drone 戶外定位 solution（？</li>
+<li>drone 回歸時，充電柱的設計</li></ul>
+
+<p></p><h2>軟體</h2><p><b>開發重點</b></p><ul><li><b>App （iOS、Android）</b><ul><li>距離熱點 500 公尺，發布「帶有 Location」的提醒通知。</li>
 <li>Google or Apple Map 熱點圖</li></ul>
 </ul>
 
@@ -24,7 +33,7 @@
 <li>易發生婦幼犯罪...（地圖版）：<a href="http://data.taipei/opendata/datalist/datasetMeta?oid=985743f7-a33e-4ac1-ad2e-7ef5ffea02e2"></a><a href='http://data.taipei/opendata/datalist/datasetMeta?oid=985743f7-a33e-4ac1-ad2e-7ef5ffea02e2'/>http://data.taipei/opendata/datalist/datasetMeta?oid=985743f7-a33e-4ac1-ad2e-7ef5ffea02e2</a></li>
 <li>易發生婦幼犯罪 API：<a href="http://data.taipei/opendata/datalist/datasetMeta/outboundDesc?id=985743f7-a33e-4ac1-ad2e-7ef5ffea02e2&rid=efe5c923-fa09-4d55-896e-877c553f04e0"></a><a href='http://data.taipei/opendata/datalist/datasetMeta/outboundDesc?id=985743f7-a33e-4ac1-ad2e-7ef5ffea02e2&amp;rid=efe5c923-fa09-4d55-896e-877c553f04e0'/>http://data.taipei/opendata/datalist/datasetMeta/outboundDesc?id=985743f7-a33e-4ac1-ad2e-7ef5ffea02e2&amp;rid=efe5c923-fa09-4d55-896e-877c553f04e0</a></li>
 <li>婦幼警察隊原始資料（PDF，但還滿詳細的）：<a href="http://tcgwww.taipei.gov.tw/ct.asp?xItem=6505423&ctNode=45898&mp=10800A"></a><a href='http://tcgwww.taipei.gov.tw/ct.asp?xItem=6505423&amp;ctNode=45898&amp;mp=10800A'/>http://tcgwww.taipei.gov.tw/ct.asp?xItem=6505423&amp;ctNode=45898&amp;mp=10800A</a></li></ol>
-<p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_BB8UPY6SPCD_p.67103_1440408253172_Screen Shot 2015-08-24 at 5.23.45 PM.png'/></p><p></p><p></p><h2>硬體</h2><p><b>I - 技術文件 - 定位</b></p><ol><li><a href='http://www.hindawi.com/journals/jcnc/2012/790374/'/>&quot;A Fusion Approach of RSSI and LQI for Indoor Localization System Using Adaptive Smoothers&quot;</a></li>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_BB8UPY6SPCD_p.67103_1440408253172_Screen Shot 2015-08-24 at 5.23.45 PM.png'/></p><p></p><h2>硬體</h2><p><b>I - 技術文件 - 定位</b></p><ol><li><a href='http://www.hindawi.com/journals/jcnc/2012/790374/'/>&quot;A Fusion Approach of RSSI and LQI for Indoor Localization System Using Adaptive Smoothers&quot;</a></li>
 <li><a href='http://diydrones.com/profiles/blogs/precise-indoor-positioning-with-ultrawideband'/>&quot;DIYdrones : Precise indoor positioning with ultrawideband&quot;</a></li></ol>
 
 <p><b>II - 技術文件 - 飛控</b></p><ol><li><a href='http://copter.ardupilot.com/wiki/common-autopilots/common-pixhawk-overview/'/>&quot;Pixhawk Overview&quot;</a>&nbsp;&nbsp;&nbsp; (成本考量可改用Pixhack，大陸仿製，便宜一半，但接頭和I/O不太一樣)</li>
