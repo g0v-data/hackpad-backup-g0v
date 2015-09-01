@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2673"/>
+<meta name="version" content="2794"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$B1xkj9fUqqH</title>
 </head>
 <body><h1>IoT 空污偵測 DIY</h1><p></p><h2>參與方式</h2><ul><li>請先加入 <a href="http://join.g0v.today/"></a>http://join.g0v.today/ ，然後找到 pm25 頻道訂閱</li></ul>
@@ -95,7 +95,8 @@
 </li>
 <li><a href="http://ehbtj.com/electronics/esp8266"></a><a href='http://ehbtj.com/electronics/esp8266'/>http://ehbtj.com/electronics/esp8266</a></li></ul>
 </li>
-<li>我們買的 ESP8266 似乎比網路上的教學更新，但它對電源很敏感，直接接 FT232 甚至由外部供電都會沒辦法通訊。Arduino 可以。<ul><li>AT+GMR</li>
+<li>我們買的 ESP8266 似乎比網路上的教學更新，但它對電源很敏感，直接接 FT232 甚至由外部供電都會沒辦法通訊。Arduino 可以。</li></li>
+<li>ESP8266好像是對電壓的穩定性比較要求,我試過UART轉USB的5V接出來之後經過一顆3.3V的LDO就很穩定<ul><li>AT+GMR</li>
 <li>AT version:0.21.0.0</li>
 <li>SDK version:0.9.5</li></ul>
 </li></ul>
@@ -164,7 +165,9 @@
 <ul class="comment"><li>我在台北文山, 可以幫忙焊接組裝測試, layout/程式的話有空也可以幫忙</li></ul>
 
 <ul class="task"><li>找人跳坑寫後端 (目前 realtime 送到 sheethub.com ，但還有些要改)</li><ul class="comment"><li>後端的需求有哪些？我剛到，但是對後端很有興趣0w0</li>
-<li>主要是需要能夠接收串流資料並且即時呈現的系統，像是 <a href="https://thingspeak.com/"></a>https://thingspeak.com/</li></ul>
+<li>主要是需要能夠接收串流資料並且即時呈現的系統，像是 <a href="https://thingspeak.com/"></a>https://thingspeak.com/</li>
+<li>後端用node.js+任何SQL,前端用D3.js那類的東西把資料畫出來,中間用websocket or ajax做資料更新,這樣自幹一套如何?</li>
+<li>(感應器資料就不走http了,開個tcp連線丟資料就好&gt;&lt; 想玩看看MQTT、<i>C</i>OAP也是可以orz</li></ul>
 </ul>
 <ul class="task"><li><s>要和 AirCasting 連嗎？</s></li>
 <li>ESP8266 收到 Arduino 更新時閃燈號 (GPIO0)，收到 server 端 OK 時閃燈號 (GPIO2)</li></ul>
