@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1025"/>
+<meta name="version" content="1146"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$UJdwBmX2NU2</title>
 </head>
 <body><h1>公有土地資料擷取討論</h1><p></p><h2>一般注意事項</h2><ul><li>資料的<b>基本規格</b>，以下各種項目之間無法相互推敲，是描述土地特性根本的資料項目<ul><li>在哪裡：不動產標示，包含 縣市,行政區,段小段,地號</li>
@@ -25,7 +25,7 @@
 <li>面積→單位換算(坪..)</li></ul>
 </ul>
 
-<h2>心得列舉</h2><ul><li>「段小段&amp;地號」最重要！</li>
+<h2>資料清理</h2><p>由於目前主流文字編碼都採用UTF-8，但是台灣政府系統依舊使用BIG5編碼，在文字編碼轉換上有時候會出現問題，例如下方心得列舉中的「<i>も魚堀段</i>」問題。</p><p>從資料面來看，目前最正確完整的應該是<a href='http://www.land.moi.gov.tw/ngis/chhtml/query3.asp?dnformat=2'/>內政部地政司</a>，政府資料開放平台提供的<a href='http://data.gov.tw/node/7504'/>土地段名代碼</a>原始來源也是這裡，但是該檔案除了編碼有問題，也幾乎沒在更新，所以這邊先做了一個爬蟲，先把內政部地政司提供的資料抓下來，並將編碼從「Big5-HKSCS」轉成「UTF-8」，可以正確對應到已經上線的<a href='http://codepen.io/dz1984/full/NqgVPj/'/>地號轉地圖工具</a>。</p><p>之後抓取的資料都會先跟這裡的名稱進行初步比對，至少段、小段名稱要正確才會儲存，如果比對錯誤可能就是程式Bug或者應該找管道回報。</p><p>程式位置：<a href="https://github.com/Shihta/FNP_Crawler"></a>https://github.com/Shihta/FNP_Crawler</p><p>已經轉檔好的土地段名放在：OtherDatas/landnames.json</p><p></p><h2>心得列舉</h2><ul><li>「段小段&amp;地號」最重要！</li>
 <li>可以用議題經驗，去蒐集需要關注的公有土地資料。例如，在公有土地的茫茫大海中，以「位在可建築區位，但目前沒有建築物登記的土地」，其實也是一種找到需要關注土地對象的方法，因為這種土地非常有機會被開發與被處分。</li>
 <li>所挖出的資料，可以上傳到，<a href='http://data.g0v.tw/group/%E5%85%AC%E6%9C%89%E5%9C%B0%E5%A4%A7%E8%A1%8C%E5%8B%95'/>零時資料中心</a>。</li>
 <li>土地段名代碼：<a href="http://data.gov.tw/node/7504"></a>http://data.gov.tw/node/7504</li>
