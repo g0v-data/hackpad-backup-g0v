@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="3442"/>
+<meta name="version" content="3446"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$fcRWv8t7AU1</title>
 </head>
 <body><h1><s>台灣農業資訊揭露</s></h1><h2>台灣農產品交易資訊揭露</h2><p></p><p><b>BRANDSTORM</b></p><ol><li>揭露什麼?<ol><li>市場價格<ol><li>Ted: 爬這些行情資料有感覺到什麼不同的東西</li>
@@ -79,8 +79,7 @@
 <li>農地資訊查詢系統 - <a href='http://211.22.161.201/talis/map_helper/index-4.htm'/>農地重要性等級</a></li>
 <li><a href='http://aldoc.coa.gov.tw/aldoc/'/>農地資料流通中心</a></li>
 <li><a href='http://farm-planning.coa.gov.tw:81/ch/'/>農地空間規畫成果</a></li>
-<li><a href='http://soilsurvey.tari.gov.tw/SOA/index.aspx'/>台灣土壤資源與農地土地覆蓋圖資瀏覽查詢系統</a></li>
-<li><br/></li></ul>
+<li><a href='http://soilsurvey.tari.gov.tw/SOA/index.aspx'/>台灣土壤資源與農地土地覆蓋圖資瀏覽查詢系統</a></li></ul>
 </li>
 <li>價格形成原理 / 成本結構<ul><li>果菜批發市場的24小時: <a href="http://100.coa.gov.tw/view.php?id=23939&issue=23927"></a><a href='http://100.coa.gov.tw/view.php?id=23939&amp;issue=23927'/>http://100.coa.gov.tw/view.php?id=23939&amp;issue=23927</a></li>
 <li>農產品交易的合理化、自動化與電子化: <a href="http://agriauto.bime.ntu.edu.tw/technique/marketing/marketing_03.htm"></a><a href='http://agriauto.bime.ntu.edu.tw/technique/marketing/marketing_03.htm'/>http://agriauto.bime.ntu.edu.tw/technique/marketing/marketing_03.htm</a></li>
@@ -139,13 +138,13 @@
 </ul>
 <ul style="list-style: none;"><li><br/></li></ul>
 
-<p></p><ul><li>Utilities<ul><li>Parser:<ul><li>C#: HtmlAgilityPack</li></ul>
+<ul><li>Utilities<ul><li>Parser:<ul><li>C#: HtmlAgilityPack</li></ul>
 </li>
 <li>csv2json: <a href="https://github.com/darwin/csv2json"></a>https://github.com/darwin/csv2json (會噴error msg)</li>
 <li>csv2json online api: <a href="http://keyangxiang.com/blog/csv2json/"></a>http://keyangxiang.com/blog/csv2json/, 搭配 <a href='/ep/profile/REIKe6GQTU7vedfVXGAgP'/>howardsun</a> 的資料格式，可用<a href='/AgTQYZbNdP0'/>指令</a></li></ul>
 </ul>
 
-<p></p><p></p><p>視覺化</p><p></p><p><b>Example crawler</b></p><p>Agri_data_crawler_at_GitHub.com</p><p><a href="https://github.com/yhunglee/agri_data_crawler"></a>https://github.com/yhunglee/agri_data_crawler</p><p>目前只有用單一日期，接下來會實作開始抓固定時間的資料。</p><p></p><p>2013.06.26更新：</p><ol><li>已上傳2013年2月至5月的蔬菜各市場交易價格資料的CSV檔到argi_data_crawler@github , 可以在目錄 query_result之下找到各月份交易資料。</li>
+<p></p><p>視覺化</p><p></p><p><b>Example crawler</b></p><p>Agri_data_crawler_at_GitHub.com</p><p><a href="https://github.com/yhunglee/agri_data_crawler"></a>https://github.com/yhunglee/agri_data_crawler</p><p>目前只有用單一日期，接下來會實作開始抓固定時間的資料。</p><p></p><p>2013.06.26更新：</p><ol><li>已上傳2013年2月至5月的蔬菜各市場交易價格資料的CSV檔到argi_data_crawler@github , 可以在目錄 query_result之下找到各月份交易資料。</li>
 <li>抱歉，目前仍只能提供CSV檔，感謝Ted和cades提供的Solution, 因我提供的是整月份當季各種蔬菜交易資料，並非只有單種蔬菜，所以從我的程式直接提供json檔似乎是比較方便的。上一階段在找query結果的bug, 已經找到並解決了，接下來我會實作程式輸出json檔的方式。</li>
 <li>目前程式已可執行蔬菜和花卉的查詢, 因水果格式和前兩者不同，程式尚無法查詢水果的市場交易價格。</li></ol>
 
