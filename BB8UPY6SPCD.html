@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1918"/>
+<meta name="version" content="2090"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$BB8UPY6SPCD</title>
 </head>
 <body><h1>BatDrone 婦幼犯罪熱點提醒、無人機巡航</h1><h2>使用情境</h2><ol><li><b>手機上</b>：App 使用者在「易發生犯罪地點」附近範圍內（距離可討論），會有通知跳出，讓使用者有警覺性，或避開犯罪地點。</li>
@@ -15,17 +15,20 @@
 <li>(鏡頭是否搭載穩定器?)&nbsp;&nbsp; 我覺得 prototype 可以不用加穩定器</li>
 <li>有需要可以加裝簡單的Servo型gimbal</li></ul>
 
-<h2>目前的坑</h2><ul class="task"><li>icon 設計與 App 介面</li></ul>
-<ul class="taskdone"><li>App 在地圖上標出熱點圖（with data.taipei 目前公開的開放資料）</li></ul>
+<h2>目前的坑</h2><ul class="taskdone"><li>App 在地圖上標出熱點圖（with data.taipei 目前公開的開放資料）</li></ul>
 <ul class="task"><li>爬「婦幼警察隊」的原始資料（<a href='http://tcgwww.taipei.gov.tw/ct.asp?xItem=6505423&amp;ctNode=45898&amp;mp=10800A'/>pdf</a>）</li>
+<li>drone 戶外定位問題</li>
 <li>硬體 drone 的原型機</li>
-<li>Web 熱點更新，寄信通知</li>
-<li>drone 戶外定位 solution（？</li>
-<li>drone 回歸時，充電柱的設計</li></ul>
+<li>drone 回歸時，充電柱的設計</li>
+<li>web 上熱點更新，寄信通知</li>
+<li>icon 設計與 App 介面</li></ul>
 
 <p></p><h2>軟體</h2><p><b>開發重點</b></p><ul><li><b>App （iOS、Android）</b><ul><li>距離熱點 500 公尺，發布「帶有 Location」的提醒通知。</li>
 <li>Google or Apple Map 熱點圖</li></ul>
-</ul>
+<ul class="comment"><li>在 code for SF 裡面有人提到，曾經有人有類似的 app ，沒有用到 drone 。</li>
+<li>功能是回家時啟動 app ，在特定的回家路徑上手機會追蹤你，但如果發現你在回家的路上，停在同一個位置停留太久了（像是超過十五分鐘），他就會寄信或是發通知給你的朋友，告訴他們你可能遇到危險。</li></ul class="comment">
+</li>
+<li>這滿聰明的。這麼一想 drone 的成本無比高。</li></ul>
 
 <ul><li><b>Web（<a href='http://batdrone.strikingly.com'/>網站在此</a>）</b><ul><li>輸入「地區」和 Email，有熱點（更新）時發信給你。</li>
 <li>設計方向可以參考，世界各地的犯罪地圖（<a href='http://oakland.crimespotting.org/'/>奧克蘭</a>、<a href='http://spotcrime.com/ca/san+francisco'/>舊金山</a>）</li></ul>
