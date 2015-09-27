@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="795"/>
+<meta name="version" content="1060"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$PEor2yrY7tH</title>
 </head>
 <body><h1>數位化ＮＪ關心台灣之議員</h1><p>CongressmanProTaiwan</p><p></p><p></p><h2>專案簡介</h2><p></p><p><b>緣由</b></p><p>海外台灣青年陣線NJ分會，每兩個月在Princeton進行outreach介紹台灣的活動。常常會遇到當地居民與旅客的支持，但他們都會詢問他們可以對台灣做些什麼。因此我們想統整當地議員對台灣關心程度之數位化，提供當地居民作為未來選舉之參考。並且設計一個網站提供支持者填寫姓名，與自動寄發郵件至當地議會，讓議會知道當地居民都對台灣的關心。</p><p></p><p><b>要解決的問題</b></p><ol><li>將對台灣議題關心之議員的資料數位化，並且提供選民上網觀看與查詢。</li>
@@ -54,7 +54,19 @@
 <ul class="task"><li>web back-end</li>
 <li>ui / visual design</li></ul>
 
-<p></p><h2>成果展示（規劃文件、雛形/草稿、原型/初稿、正式發佈/完稿）</h2><p>1. Whiteboard</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_PEor2yrY7tH_p.477746_1443315228413_IMG_20150926_205221.jpg'/></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_PEor2yrY7tH_p.477746_1443315253018_IMG_20150926_190110.jpg'/></p><p></p><p>2. 資料輸入細節</p><ul style="list-style: none;"><li>(a) 先使用excel整理資料</li>
+<p><b>網站功能</b></p><ul><li>輸入<ul><li>import csv</li>
+<li>add edit delete 選區、法案、議員資料</li></ul>
+</li>
+<li>瀏覽<ul><li>enter zip code -&gt; 顯示該zip code對應的議員summary</li>
+<li>議員detail</li>
+<li>(?) issue list/search</li>
+<li>(?) congressman list/search</li></ul>
+</ul>
+
+<p></p><p><b>REST API Design discussion</b></p><p>1. For most GET tables request, service just return list of objects (each object is a row in table),</p><p>2. one to many relation:</p><p>(ex:issue list)</p><p>[</p><p>{</p><p>&nbsp;&nbsp;&nbsp; &quot;id&quot;: 1</p><p>&nbsp;&nbsp;&nbsp; &quot;name&quot;:&quot;Issue 1&quot;,</p><p>&nbsp;&nbsp;&nbsp; &quot;desc&quot;:&quot;Desc&quot;,</p><p>&nbsp;&nbsp;&nbsp; &quot;tags&quot;:[ &quot;tag1&quot;, &quot;tag2&quot;, &quot;tag3&quot;]</p><p>},</p><p>...</p><p>]</p><p>3. For reference table (OBJ_NAME, CODE, NAME), it&rsquo;s better to return JSON in this format:</p><p>[</p><p>{ &quot;objectName&quot;: &quot;ATTITUDE&quot;,</p><p>&nbsp;&nbsp;&nbsp; &quot;values: &quot; [</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {&quot;code&quot;: &quot;P&quot;, &quot;name&quot;: &quot;Pro&quot;},</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {&quot;code&quot;: &quot;N&quot;, &quot;name&quot;: &quot;Neutral&quot;},</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {&quot;code&quot;: &quot;A&quot;, &quot;name&quot;: &quot;Against&quot;},</p><p>&nbsp;&nbsp;&nbsp; ]</p><p>},</p><p>{ &quot;objectName&quot;: &quot;ISSUE_TYPE&quot;,</p><p>&quot;values: &quot; [</p><p>&nbsp;&nbsp;&nbsp; {&quot;code&quot;: &quot;N&quot;, &quot;name&quot;: &quot;News&quot;},</p><p>&nbsp;&nbsp;&nbsp; {&quot;code&quot;: &quot;B&quot;, &quot;name&quot;: &quot;Bill&quot;}</p><p>]</p><p>},</p><p>...</p><p>]</p><p>4. API List</p><p>- GET district list</p><p>- GET issue list</p><p>- GET congressman list</p><p>- GET references</p><p></p><p><b>Open PostgreSQL data</b></p><ul><li>public REST API</li>
+<li>Export data in PostgreSQL and let people download them?</li></ul>
+
+<h2>成果展示（規劃文件、雛形/草稿、原型/初稿、正式發佈/完稿）</h2><p>1. Whiteboard</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_PEor2yrY7tH_p.477746_1443315228413_IMG_20150926_205221.jpg'/></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_PEor2yrY7tH_p.477746_1443315253018_IMG_20150926_190110.jpg'/></p><p></p><p>2. 資料輸入細節</p><ul style="list-style: none;"><li>(a) 先使用excel整理資料</li>
 <li>(b) 第一列留白</li>
 <li>(c) row based</li>
 <li>(d) 同一cell複數資料時，輸入時請用,&nbsp; (comma+space)</li>
