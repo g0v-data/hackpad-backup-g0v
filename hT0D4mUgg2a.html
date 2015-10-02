@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="313"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$hT0D4mUgg2a</title>
+</head>
+<body><h1>部件樣態:分析與測試</h1><p></p><ul><li>源自零時字引(<a href='https://docs.google.com/presentation/d/16MzEnhGiWYH2e5WMudW6Sc49BTWDf1_aicbFMU9nSrU/edit#slide=id.ga3b6a90a6_1_20'/>簡報</a>)與個人心理學研究心得</li>
+<li>從必學的基礎中文字歸納的部件樣態(外形,結構,位置)，能否應付現代中文的組字需求?</li>
+<li>台灣教學學者建立的中文字部件資料庫與分析研究<ul><li>Cool Chinese<a href='http://140.122.109.78/COOL/2011/'/>漢字、部件五項線上查詢平台</a></li>
+<li>部件結構與分析報告: 陳學志*、張瓅勻、邱郁秀、宋曜廷、張國恩（2011）。中文部件組字與形構資料庫之建立及其在識字教學上之應用。<b>教育心理學報，43卷</b>，閱讀專刊，269-290。</li>
+<li>必學的中文字有6,097字(對照簡體字5,793字)，包含在<a href='http://git.chise.org/gitweb/?p=chise/ids.git;a=blob_plain;f=IDS-UCS-Basic.txt;hb=HEAD'/>IDS-Basic</a>之內</li>
+<li>IDS 字形結構(from wiki) vs. Cool Chinese 字形結構(from paper)<table style="font-size:13px;cell-spacing: 0px; border-collapse: collapse;"><tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#30908;&#34399;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#23383;&#31526;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#24847;&#32681;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#20363;&#23383;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#31684;&#20363;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">2FF0</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#12272;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#20841;&#20491;&#37096;&#20214;&#30001;&#24038;&#33267;&#21491;&#32068;&#25104;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#30456;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#12272;&#26408;&#30446;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">2FF1</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#12273;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#20841;&#20491;&#37096;&#20214;&#30001;&#19978;&#33267;&#19979;&#32068;&#25104;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#24535;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#12273;&#22763;&#24515;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">2FF2</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#12274;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#19977;&#20491;&#37096;&#20214;&#30001;&#24038;&#33267;&#21491;&#32068;&#25104;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#28248;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#12274;&#27701;&#26408;&#30446;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">2FF3</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#12275;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#19977;&#20491;&#37096;&#20214;&#30001;&#19978;&#33267;&#19979;&#32068;&#25104;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#31966;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#12275;&#31859;&#30000;&#20849;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">2FF4</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#12276;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#20841;&#20491;&#37096;&#20214;&#30001;&#22806;&#32780;&#20839;&#32068;&#25104;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#22238;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#12276;&#22231;&#21475;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">2FF5</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#12277;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#19977;&#38754;&#21253;&#22285;&#65292;&#19979;&#26041;&#38283;&#21475;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#20875;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#12277;&#20866;&#21475;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">2FF6</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#12278;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#19977;&#38754;&#21253;&#22285;&#65292;&#19978;&#26041;&#38283;&#21475;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#20982;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#12278;&#20981;&#13317;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">2FF7</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#12279;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#19977;&#38754;&#21253;&#22285;&#65292;&#21491;&#26041;&#38283;&#21475;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#21493;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#12279;&#21274;&#21475;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">2FF8</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#12280;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#20841;&#38754;&#21253;&#22285;&#65292;&#20841;&#20491;&#37096;&#20214;&#30001;&#24038;&#19978;&#33267;&#21491;&#19979;&#32068;&#25104;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#30149;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#12280;&#30098;&#19993;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">2FF9</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#12281;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#20841;&#38754;&#21253;&#22285;&#65292;&#20841;&#20491;&#37096;&#20214;&#30001;&#24038;&#19979;&#33267;&#21491;&#19978;&#32068;&#25104;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#25140;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#12281;&#10639;&#30064;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">2FFA</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#12282;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#20841;&#38754;&#21253;&#22285;&#65292;&#20841;&#20491;&#37096;&#20214;&#30001;&#21491;&#19978;&#33267;&#24038;&#19979;&#32068;&#25104;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#36215;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#12282;&#36208;&#24051;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">2FFB</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#12283;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#20841;&#20491;&#37096;&#20214;&#37325;&#30090;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#24043;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#12283;&#24037;&#20174;</td>
+</tr>
+</table>
+<table style="font-size:13px;cell-spacing: 0px; border-collapse: collapse;"><tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#32080;&#27083;&#38364;&#20418;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#20195;&#34920;&#31526;&#34399;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#31034;&#20363;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#21934;&#29544;&#23384;&#22312;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">X</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#26408; &nbsp;= X&#12289;&#38428; &nbsp;= X&#12289;&#20839; &nbsp;= X</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#22402;&#30452;&#32068;&#21512;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">-</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#36002; &nbsp;&#65309; &nbsp;-&#65288;&#24037;&#65292;&#35997;&#65289;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#27700;&#24179;&#32068;&#21512;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">|</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#28900; &nbsp;&#65309; &nbsp;|&#65288;&#28779;&#65292;&#32771;&#65289;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#23553;&#38281;&#21253;&#22285;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">0</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#22256; &nbsp;&#65309; &nbsp;0&#65288;&#22231;&#65292;&#26408;&#65289;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#24038;&#19978;&#21253;&#22285;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">/</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#20164; &nbsp;&#65309; &nbsp;/&#65288;&#21378;&#65292;&#20154;&#65289;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#21491;&#19978;&#21253;&#22285;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">\</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#25110; &nbsp;&#65309; &nbsp;\&#65288;&#25096;&#65292;-&#65288;&#21475;&#65292;&#19968;&#65289;&#65289;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#24038;&#19979;&#21253;&#22285;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">L</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#36229; &nbsp;&#65309; &nbsp;L&#65288;&#36208;&#65292;-&#65288;&#20992;,&#21475;&#65289;&#65289;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#19978;&#26041;&#19977;&#38754;&#21253;&#22285;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">^</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#20976; &nbsp;&#65309; &nbsp;^&#65288;&#20960;&#65292;-&#65288;&#30333;,&#29579;&#65289;&#65289;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#19979;&#26041;&#19977;&#38754;&#21253;&#22285;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">V</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#20982; &nbsp;&#65309; &nbsp;V&#65288;&#20981;&#65292;&#20034;&#65289;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#24038;&#26041;&#19977;&#38754;&#21253;&#22285;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&lt;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#21290; &nbsp;&#65309; &nbsp;&lt;&#65288;&#21274;&#65292;&#38750;&#65289;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#24038;&#21491;&#22846;&#25802;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">T</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#22846; &nbsp;&#65309; &nbsp;T&#65288;&#22823;&#65292;&#20154;&#65292;&#20154;&#65289;</td>
+</tr>
+</table>
+</li></ul>
+</li>
+<li>還需要進行的資料處理</li></ul>
+<ol><li>IDS資料的處理&nbsp;</li></ol>
+<ul style="list-style: none;"><li>* 只有特殊序號的部件中文字(&amp;...;) =&gt; 查找可對應的實際字符 =&gt; 沒有者以簡易編碼代替</li></ul>
+<p>2.結構差異的字條分析&nbsp;</p><ul style="list-style: none;"><li>* 比較結構分類不同的字條之結構分類差異</li>
+<li>* 比較結構分類不同的字條之部件分析差異</li></ul>
+<p>3.結構相同的字條分析</p><ul style="list-style: none;"><li>* 結構分類相同的字條，比較部件分析差異</li></ul>
+
+<p>4.決定部件樣態:</p><ul style="list-style: none;"><li>* 從結構相同的字條，歸納經過前三步驟，透過以下分析程序所得到的部件樣態</li></ul>
+<p>第一層結構 -&gt; 可分析部件位置(?) -&gt; 第二層結構 -&gt; 可分析部件位置 (?) -&gt; ... -&gt; 第n層結構 -&gt; 可分析部件 位置(無) end</p><p></p><p>ex1. 佶: 第一層⿰ -&gt; 可分析部件 (右) -&gt; 第二層⿱ -&gt;&nbsp; 可分析部件(無)</p><p>ex2. 蛇: 第一層⿰ -&gt; 可分析部件 (右) -&gt; 第二層⿱ -&gt;&nbsp; 可分析部件(無)</p><p></p><ul style="list-style: none;"><li>* 範圍內字條經過以上程序，得到構成部件的部件樣態資訊。部件樣態必須包含外形、結構與位置資訊。</li></ul>
+
+<p>5.部件樣態定義與測試</p><ul style="list-style: none;"><li>* 單一部件，統計結構+位置的樣態</li>
+<li>&nbsp;&nbsp; e.g., &quot;心&quot;在&quot;態&quot;,&quot;心&quot; 在 &quot;愛&quot;,&quot;心&quot; 在 &quot;沁&quot;分為三種樣態&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp; e.g., &quot;宀&quot;在&quot;安&quot;,&quot;宀&quot;在&quot;實&quot;,&quot;宀&quot;在&quot;蛇&quot;分為三種樣態</li></ul>
+<p>Validation Test&nbsp;&nbsp;</p><ul style="list-style: none;"><li>* 測試樣本:IDS-Basic 6,097字之外的字條</li><ul class="code"><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 非Basic的字集</li></ul>
+</ul>
+<ul style="list-style: none;"><li>* 測試方法: (1)從測試樣本隨機抽樣一定規模的字條</li><ul class="code"><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2)可用部件樣態成功組字的字條比例</li></ul>
+</ul>
+
+</body>
+</html>
