@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="13424"/>
+<meta name="version" content="15031"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$tQoaOuOYp8U</title>
 </head>
 <body><h1>給新北市研考會為民服務組的開放 1999 提案 (2015/10/12)</h1><p></p><ul class="comment"><li>大家好，我是 Johnson（g0v irc/slack ID: MrOrz），目前在新北市當替代役。</li>
@@ -32,7 +32,11 @@
 <li>Blog post</li>
 <li><a href="http://k.olc.tw/?p=576"></a>http://k.olc.tw/?p=576</li></ul>
 
-<p>家住台南的 kiang（本名江明宗）在經濟部舉辦的臺泰跨國黑客競賽中，修改非洲海地大地震所用的 Usashidi 系統，把它用於呈現台南 1999 通報的待孳清空地空屋資料。這些土地常常缺乏整理、雜草叢生，是滋生病媒蚊的溫床；然而，熱心民眾透過 1999 所回報的地點資訊往往有重複通報的情形，而且筆數眾多（1070 筆）、地方政府防疫人力吃緊，無力對此項資料進行對照匯整，也無法有效率地派工。kiang 的系統以群眾外包（crowd sourcing）的方式來解決資訊提供的問題，希望能協助政府有效準確地控制登革熱疫情。</p><p></p><p></p><undefined><li><b>(一) 政府所釋出的開放資料</b></li></undefined>
+<p>家住台南的 kiang（本名江明宗）在經濟部舉辦的臺泰跨國黑客競賽中，修改非洲海地大地震所用的 Usashidi 系統，把它用於呈現台南 1999 通報的待孳清空地空屋資料。這些土地常常缺乏整理、雜草叢生，是滋生病媒蚊的溫床；然而，熱心民眾透過 1999 所回報的地點資訊往往有重複通報的情形，而且筆數眾多（1070 筆）、地方政府防疫人力吃緊，無力對此項資料進行對照匯整，也無法有效率地派工。kiang 的系統以群眾外包（crowd sourcing）的方式來解決資訊提供的問題，希望能協助政府有效準確地控制登革熱疫情。</p><ul class="comment"><li>事實上現在版本已經跟海地大地震當時有很大差異了，當時比較像是拼裝車，這次黑客松用的是最新版本，所以舒服很多 ;)</li>
+<li>:+1: 不過我提海地大地震，80% 是想要<s>誆騙組長</s>借由知名國際事件來增加說服力這樣 XD</li>
+<li>(Y)</li></ul>
+
+<undefined><li><b>(一) 政府所釋出的開放資料</b></li></undefined>
 
 <p>臺南市政府資料開放平台 <a href='http://data.tainan.gov.tw/dataset/dengue-dist/resource/d0fb0392-1fc2-4866-80a1-cab1062a18ea'/>1999民眾通報待孳清地空屋資料</a>。目前共 1070 筆資料，最近一次更新是 2015/9/11。</p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_tQoaOuOYp8U_p.77325_1444115509599_%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%202015-10-06%20%E4%B8%8B%E5%8D%883.10.40.png'/></p><ul class="code"><li>臺南市政府公佈的 1999 實際空屋資料共 1070 筆，圖中顯示前 10 筆。</li></ul>
 
@@ -48,7 +52,9 @@
 
 <ul class="comment"><li>報告的這個部分一直不斷強調「重複案件」「重複派工」的問題與解法，是希望可以讓行政機關了解，人民是來協助政府的，不只是監督而已；開放資料確實會耗費行政成本，但產生的價值，也可以讓行政單位受益。</li>
 <li><br/></li>
-<li>是說我發現台南的<a href='http://data.tainan.gov.tw/dataset/dengue-dist/resource/d0fb0392-1fc2-4866-80a1-cab1062a18ea'/>資料來源</a>只給「立案案號」，但是<a href='http://1999.tainan.gov.tw/OpenExplain.aspx'/>台南 1999 的 API </a>要查詢案件進度，用的是「案件編號」（「使用說明」裡有 request example，格式跟案號完全不同⋯⋯），這樣我們在幫政府更正 1999 回報的同時，也不知道政府是不是已經處理好這份資料了 orz</li></ul>
+<li>是說我發現台南的<a href='http://data.tainan.gov.tw/dataset/dengue-dist/resource/d0fb0392-1fc2-4866-80a1-cab1062a18ea'/>資料來源</a>只給「立案案號」，但是<a href='http://1999.tainan.gov.tw/OpenExplain.aspx'/>台南 1999 的 API </a>要查詢案件進度，用的是「案件編號」（「使用說明」裡有 request example，格式跟案號完全不同⋯⋯），這樣我們在幫政府更正 1999 回報的同時，也不知道政府是不是已經處理好這份資料了 orz</li>
+<li>其實是有連結的，可以看我做的備份 <a href="https://github.com/kiang/1999.tainan.gov.tw_datasets/"></a>https://github.com/kiang/1999.tainan.gov.tw_datasets/</li>
+<li>但說真的資訊並沒有揭露的很徹底，所以到底有哪些案子被隱藏，或是有哪些案子其實沒有處理完就被關掉，被關掉的也無法 reopen ，甚至案件之間的關聯脈絡也沒有對應的資訊可以瀏覽</li></ul>
 
 <p></p><p><b>二、登革熱疫情視覺化，引發公眾討論</b></p><p></p><p>台南登革熱疫情已經持續數月，地方將人力優先投入救災，因此整理資訊、進行公開的人手嚴重不足。衛福部疾管署（CDC）在八月底開始接手，協助各縣市整理資料，每日釋出統計資料；開放資料的社群也對需要開放的資料提出了實質的建議 [3]。</p><p></p><p>[3] 見疾管局公開資訊的<a href='https://hackpad.com/CDC-RCq1iirBb6N'/>討論文件</a>、<a href='http://beta.hackfoldr.org/1rbs-NLFxGvrT8whiwNIq-u3DB0MFV_zg58so5Ak1zdM'/>資料與應用匯整</a>。</p><p></p><p></p><undefined><li><b>(一) 政府所釋出的開放資料</b></li></undefined>
 
@@ -319,47 +325,57 @@
 
 <p>為促進國內開發者介接新北市 Open331 伺服器來開發加值應用，新北市需要公佈伺服器的應用程式界面（API）技術文件。所幸技術文件所需要記載的所有資訊，在 Open 331 官方資訊站上都已經有了<a href='http://wiki.open311.org/GeoReport_v2/'/>英文版本</a>，市府只需請技術人員粗略翻譯之後，連同<u>原本英文版的連結</u>一併公佈在<a href='http://data.ntpc.gov.tw/'/>新北市政府資料開放平台</a>即可。</p><p></p><p></p><undefined><li><b>(五) 鼓勵與搜集 App 範例</b></li></undefined>
 
-<p>Open331 官方資訊站搜集了採用 Open331 規範來與伺服器進行溝通的<a href='http://wiki.open311.org/GeoReport_v2/Resources/'/>開放原始碼應用程式清單</a>。新北市政府也可以拋磚引玉，直接使用開放原始碼的 <a href='http://fixmystreet.org/'/>FixMyStreet 專案</a>，架設新北市版本的 FixMyStreet 網站；但市府無須擔心，官方示範會成為 1999 應用的絕響。</p><p></p><p>以率先開放 1999 資訊的臺南市為例，2014 年就有<a href='https://www.ptt.cc/bbs/Tainan/M.1432738997.A.793.html'/>熱心的開發者 Cuda</a> 替台南 1999 開發了<a href='https://play.google.com/store/apps/details?id=tn.opendata.tainan311'/>免費的 Android 應用程式</a>，平均評價是 4.3 / 5，不但持續更新維護，而且也<a href='https://github.com/newmanchen/tainan-1999'/>開放專案原始碼</a>供大家檢視、協作。由於作者 Cuda 以富有彈性的 Apache-2.0 授權條款釋出專案的原始碼，任何開發者都可以基於 Cuda 的作品推出新北市版的 app，或協助 Cuda 將新北市的開放 1999 服務直接整合進 Cuda 的 app。</p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_tQoaOuOYp8U_p.77325_1444306567517_螢幕快照 2015-10-08 下午8.13.53.png'/></p><ul class="code"><li>熱心開發者 Cuda 所開發的台南 1999 app。一般民眾下載這個 App 之後，在路上看到違規停車或路面問題需要修補，只要拿起手機就可以輕鬆舉報，拍照、定位、送出陳情案，一氣呵成。</li></ul>
+<p>Open331 官方資訊站搜集了採用 Open331 規範來與伺服器進行溝通的<a href='http://wiki.open311.org/GeoReport_v2/Resources/'/>開放原始碼應用程式清單</a>。新北市政府也可以拋磚引玉，直接使用開放原始碼的 <a href='http://fixmystreet.org/'/>FixMyStreet 專案</a> 或 <a href='http://www.markaspot.de/en'/>Mark-a-spot</a>，架設新北市版本的 1999 視覺化網站；但市府無須擔心，官方示範會成為 1999 應用的絕響。</p><ul class="comment"><li>FixMyStreet 程式有點混亂，建議用 Mark-a-spot</li>
+<li>好的！我還沒實際看過 code，感謝 Kiang 的經驗分享！</li>
+<li>這個做中文翻譯的苦主說的 XD - <a href="https://github.com/misgod/fixmystreet"></a>https://github.com/misgod/fixmystreet</li>
+<li>不知道為什麼 missing 了 QQ 補個剛剛 google 到的 blog post xd</li>
+<li><a href="http://35around.blogspot.tw/2014/06/311.html"></a>http://35around.blogspot.tw/2014/06/311.html</li></ul>
+
+<p>以率先開放 1999 資訊的臺南市為例，2014 年就有<a href='https://www.ptt.cc/bbs/Tainan/M.1432738997.A.793.html'/>熱心的開發者 Cuda</a> 替台南 1999 開發了<a href='https://play.google.com/store/apps/details?id=tn.opendata.tainan311'/>免費的 Android 應用程式</a>，平均評價是 4.3 / 5，不但持續更新維護，而且也<a href='https://github.com/newmanchen/tainan-1999'/>開放專案原始碼</a>供大家檢視、協作。由於作者 Cuda 以富有彈性的 Apache-2.0 授權條款釋出專案的原始碼，任何開發者都可以基於 Cuda 的作品推出新北市版的 app，或協助 Cuda 將新北市的開放 1999 服務直接整合進 Cuda 的 app。</p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_tQoaOuOYp8U_p.77325_1444306567517_螢幕快照 2015-10-08 下午8.13.53.png'/></p><ul class="code"><li>熱心開發者 Cuda 所開發的台南 1999 app。一般民眾下載這個 App 之後，在路上看到違規停車或路面問題需要修補，只要拿起手機就可以輕鬆舉報，拍照、定位、送出陳情案，一氣呵成。</li></ul>
 
 <p>新北市政府可以效仿<a href='http://wiki.open311.org/GeoReport_v2/Resources/'/>台北市八仙塵爆專區</a>，主動搜集這類使用開放 1999 服務的案例，鼓勵民間對公共事務的參與，也向協助市府推動 1999 服務的開發者們致謝。</p><p></p><p></p><p><b>三、開放 1999 的挑戰</b></p><p></p><p>以下列出開放 1999 過程中可能會遇到的阻力，以及可能的解法。</p><p></p><p></p><undefined><li><b>(一) 資料內容方面</b></li></undefined>
 
-<p>一份開放資料的價值，不是在於開發者們做了哪些應用，而是在資料的品質——資料本身有多少值得運用的內容。若資料久久更新一次，或資料太少，民間的開發者也無可奈何，畢竟巧婦難為無米之炊。</p><p></p><p>1、資料內容</p><p></p><p>2、更新頻率</p><p></p><p></p><p>3、第三方新增資料的疑慮</p><p></p><p>在遠程計劃裡，我們預計會提供報案陳情的應用程式界面（API），讓開發者所開發的應用程式也能發送新的陳情案進現有 1999 資料庫。政府方面或許會對開放第三方新增資料有疑慮，認為這會讓 1999 資料庫中的測試用假報告或惡作劇報告的數量提升。</p><p></p><p>Open311 GeoReport v2 規範有考慮到政府方控管第三方新增資料的需求，在發送新陳情案的 API 中，設計了開發金鑰（API Key）機制——開發者需要先跟政府取得開發金鑰（由數個英文與數字的亂數字串），寫進程式裡發送陳情案的機制當中，因此政府可以追蹤第三方新增的陳情案，是由哪個開發者所開發，必要時可以把帶有同一份 API key 的陳情案全部調出，逐條檢驗或刪除，甚至是禁止特定 API key 對 Open311 server 再發送新的陳情案。</p><p></p><p><a href="https://secure.toronto.ca/webwizard/start.jsp?_wiz_id=API_key_request"></a>https://secure.toronto.ca/webwizard/start.jsp?_wiz_id=API_key_request</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_tQoaOuOYp8U_p.77325_1444312707844_螢幕快照 2015-10-08 下午9.57.28.png'/></p><ul class="code"><li>多倫多政府給開發者申請 Open311 API key 的頁面，收集。</li></ul>
+<p>一份開放資料的價值，不是在於開發者們做了哪些應用，而是在資料的品質——資料本身有多少值得運用的內容。若資料久久更新一次，或資料太少，民間的開發者也巧婦難為無米之炊。</p><p></p><p></p><p>1、內容品質</p><p></p><p>從現有的<a href='http://rdm.ntpc.gov.tw/ROAD/SatisfySurvey.aspx?id=591220'/>新北市路平報馬仔系統</a>來看，裡頭的絕大多數都可以對應到 Open311 所規範的 Servie Request 資料欄位中；然而各段資料的填寫方式，不一定方便程式處理。以下面<a href='http://rdm.ntpc.gov.tw/ROAD/SatisfySurvey.aspx?id=591220'/>路平報馬仔的通報案件</a>為例：</p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_tQoaOuOYp8U_p.77325_1444318020756_螢幕快照 2015-10-08 下午11.26.33.png'/></p><ul class="code"><li>個案網址：<a href="http://rdm.ntpc.gov.tw/ROAD/SatisfySurvey.aspx?id=591220"></a><a href='http://rdm.ntpc.gov.tw/ROAD/SatisfySurvey.aspx?id=591220'/>http://rdm.ntpc.gov.tw/ROAD/SatisfySurvey.aspx?id=591220</a></li></ul>
 
-<ul class="comment"><li>欄位準確度、資料清</li>
-<li>就算每一筆回報都是純文字資料也有價值，如滋生空地一案</li>
-<li>（但是準確度會有影響，若資料有分類、分開標地址的話，價值更高。畢竟巧婦難為無米之炊。）</li>
-<li>更新頻率：新北市政府資料開放平台是否支援用程式來更新資料集</li>
-<li>[v]新增資料控管：api key 發放。</li></ul>
+<p>熱心民眾填入的「反應地點」並不是一般常見的地址，一般的地址解析服務不一定有辦法將這樣的服務轉換成精確的經緯度；政府的「回覆說明」欄位，實際的內容只有新莊區公所的回覆部分。</p><p></p><p>政府在開放資料前，可以評估整個現有資料庫需要清理的資料占有多少比例、思考是否應該播用人力來進行資料清理（data cleaning）。不過，以 1999 派工資訊來說，上面通報案件這樣的品質雖然美中不足，但也堪用；畢竟即使臺南市政府的 <a href='http://data.tainan.gov.tw/dataset/dengue-dist/resource/d0fb0392-1fc2-4866-80a1-cab1062a18ea'/>1999民眾通報待孳清地空屋資料</a> 這種地址跟其他文字敘述完全混合在一起的資料集，也有使用的價值。新北市 1999 資料集開放前是否需要資料清理、應該清理到如何的程度、以及要花多少時間來進行清理，<u>需要實際檢視資料集內容才有辦法估算</u>，不過對於已經相當結構化的 1999 資料庫而言，估計不會有「資料亂到毫無價值」的情形發生。</p><ul class="comment"><li>如果能夠，其實把所有住址轉座標的資料變成一份開放資料，並且持續更新，相信會蹦出更多應用。之前<a href='https://www.facebook.com/groups/odtwn/permalink/1314631875217894/'/>主管單位的說法</a> ，這是縣市權責，如果縣市單位能夠直接開放應該是美事一樁（當然，雖然我也知道這是踢皮球遊戲）</li></ul>
+
+<p>2、更新頻率</p><p></p><p>更新頻率也是影響開放資料本身價值的一環，若更新頻率越快，因為提供的資料即時性高，能做的應用可能就更寬廣；每小時或每分鐘更新的 1999 資料集，透過精準且即時的案例自動分類器，甚至還有可能能成即時重大災情佈告欄系統！</p><p></p><p>然而，要達成每天、每小時或甚至每分鐘的更新，整個開放資料的發佈流程，就必須完全以程式自動化。完全自動化的資料處理，會遭遇以下挑戰：</p><p></p><ul><li>現有 1999 資料庫需要以程式界接，才能定時自動截取新案件（近程計劃需要），以及寫入新陳情案件（遠程計劃需要）。</li>
+<li>若評估 1999 的資料需要資料清理，那清理作業也要能以程式自動完成。</li>
+<li>近程計劃中所使用的「<a href='http://data.ntpc.gov.tw/'/>新北市政府資料開放平台</a>」，也需要支援以程式自動發佈更新的功能。</li></ul>
+
+<p></p><p>3、第三方新增資料的疑慮</p><p></p><p>在遠程計劃裡，我們預計會提供報案陳情的應用程式界面（API），讓開發者所開發的應用程式也能發送新的陳情案進現有 1999 資料庫。政府方面或許會對開放第三方新增資料有疑慮，認為這會讓 1999 資料庫中充斥著測試用假報告或惡作劇報告。</p><p></p><p>Open311 GeoReport v2 規範有考慮到政府方控管第三方新增資料的需求，在發送新陳情案的 API 中，設計了開發金鑰（API Key）機制——開發者需要先跟政府取得開發金鑰（由數個英文與數字的亂數字串），寫進程式裡發送陳情案的機制當中，因此政府可以追蹤第三方新增的陳情案，是由哪個開發者所開發，必要時可以把帶有同一份 API key 的陳情案全部調出，逐條檢驗或刪除，甚至是禁止特定 API key 對 Open311 server 再發送新的陳情案。政府也可以透過規定開發者發送測試用假報告的格式，或提供獨立的測試伺服器，來滿足開發時的測試與除錯需求。</p><p></p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_tQoaOuOYp8U_p.77325_1444312707844_螢幕快照 2015-10-08 下午9.57.28.png'/></p><ul class="code"><li>多倫多政府給開發者申請 Open311 API key 的頁面（網址：<a href="https://secure.toronto.ca/webwizard/start.jsp?_wiz_id=API_key_request"></a><a href='https://secure.toronto.ca/webwizard/start.jsp?_wiz_id=API_key_request'/>https://secure.toronto.ca/webwizard/start.jsp?_wiz_id=API_key_request</a>）。除了搜集基本資料、軟體預定用途之外，也附上了額外的服務條款以及技術須知。</li></ul>
+
+<ul class="comment"><li>突然發現 Toronto 管好多，如果要開發一個可以送 service request 的 app，你還要把 app 寄給當局請他們幫你測試，政府確定你的 app 沒問題之後才會給你正式 api key⋯⋯</li>
+<li>這是有好處的，可以確保使用者體驗，但反向就是管太多吧</li></ul>
 
 <p></p><undefined><li><b>(二) 法律方面</b></li></undefined>
 
-<p>1、開放資料運用相關規範</p><ul class="comment"><li>政府開放授權 v1</li>
-<li>CC BY 4.0 國際授權方式</li></ul>
+<p></p><p>1、開放資料運用相關規範</p><p></p><p>政府機關或許會認為資料開放出去，還要另外設計使用規範，相當費時耗力，又不見得有成效。確實，政府的資源開放出去之後，如果沒有使用規範來明定資料使用者與政府之間的權利義務，確實會在未來衍生責任劃分的問題。所幸國發會已經在 104 年 7 月頒訂《<a href='https://政府開放授權'/>政府資料開放授權條款</a>》明定政府授與開發者的權利，以及開發者使用政府資料時所應盡的義務，並且替提供資料的政府訂下免責防火牆。</p><p></p><ul class="comment"><li>註：新北市政府資料開放平台上，目前資料大多以 CC BY 3.0 釋出，沒有政府（資料提供方）的免責條款，對資料使用的規範也只有「<a href='http://data.ntpc.gov.tw/ns/qa/detail?oid=4FFEBB68-257A-476E-BABC-ED017FC1E2FA'/>不得違法、不得違背善良風俗、不得誤導</a>」等概括性的規定。</li></ul>
 
-<p>2、個人資料保護問題</p><p></p><ul class="comment"><li>路評報馬仔資料集絕對沒問題，因為已經開放了。</li>
+<p></p><p>2、個人資料保護問題</p><p></p><p></p><p></p><ul class="comment"><li>路評報馬仔資料集絕對沒問題，因為已經開放了。</li>
 <li>法律界對 ETC 資料開放的反彈</li>
 <li><a href="https://www.facebook.com/liu.jean.94/posts/10153701004245799"></a>https://www.facebook.com/liu.jean.94/posts/10153701004245799</li>
 <li>1999 使用者條款是否有授權？</li>
 <li><br/></li></ul>
 
-<h2>伍、結語</h2><ul class="comment"><li>open format:</li>
+<h2>伍、結語</h2><p></p><p>研考會所頒布的《新北市政府行動應用軟體(App)發展及管理作業原則》發展原則第一款：「各機關發展 App 宜優先評估透過本府公開資料平台(Open Data)所提供之資料，鼓勵民間運用加值開發，以擴大民眾參與並降低本府開發成本。」這條原則的核心並不只是在節省成本而已，而是看到了開放資料的背後，提升公眾參與的外部效益，以及政府用資料empower 一般群眾後，所能激發的無限潛能。</p><p></p><p>當地方政府將資料以合適的、開放的格式釋出給大眾，熱心的公民與渴求群眾關注的新創業者就能夠投入心力替政府找出有價值的資料用法，並且開發應用程式來服務一般大眾。這讓地方政府可以專心投入政府所擅長，而且也只有政府有職權、有能力做的事情——匯整各方資訊、提供官方且正確的資料，放手讓各方的開發好手，用同一份完整的官方資料去相互競爭，做出最讓人喜愛的 App。這是一個政府、新創產業/社會企業/NPO 與大眾使用者三贏的局面。</p><p></p><p></p><p></p><ul class="comment"><li>open format:</li>
 <li><a href="http://wiki.open311.org/Open311Pitch/"></a>http://wiki.open311.org/Open311Pitch/</li>
-<li>By sharing data in appropriate open formats, you open up the possibility that third parties (citizens and entrepreneurs) will develop useful applications for you. This allows cities to “get out of the ap development business”. Cities can inspire app development through inexpensive innovation competitions, and can moderate applications through an “app store” approach.</li>
+<li>By sharing data in appropriate open formats, you open up the possibility that third parties (citizens and entrepreneurs) will develop useful applications for you. This allows cities to “get out of the app development business”. Cities can inspire app development through inexpensive innovation competitions, and can moderate applications through an “app store” approach.</li>
 <li><br/></li>
 <li>社群熱情 每年有資料愛好者年會 每兩個月有 g0v hackathon 活動&nbsp;</li>
 <li>與資訊局開討論會&nbsp;</li>
 <li>第一次：<a href="https://odtw.hackpad.com/x-u1MNznTEgSV"></a><a href='https://odtw.hackpad.com/x-u1MNznTEgSV'/>https://odtw.hackpad.com/x-u1MNznTEgSV</a></li>
 <li>第二次：<a href="https://hackpad.com/20151006--4ogA1YY1QZU"></a><a href='https://hackpad.com/20151006--4ogA1YY1QZU'/>https://hackpad.com/20151006--4ogA1YY1QZU</a></li>
 <li><br/></li>
-<li>open 1999:&nbsp;</li>
-<li><a href="http://wiki.open311.org/Open311Pitch/"></a><a href='http://wiki.open311.org/Open311Pitch/'/>http://wiki.open311.org/Open311Pitch/</a> 的「benefits」那段，三大好處，每個好處都有子項目</li>
+<li><s>open 1999:&nbsp;</s></li>
+<li><a href="http://wiki.open311.org/Open311Pitch/"></a><s><a href='http://wiki.open311.org/Open311Pitch/'/>http://wiki.open311.org/Open311Pitch/</a></s><s> 的「benefits」那段，三大好處，每個好處都有子項目</s></li>
 <li><br/></li>
 <li><br/></li>
 <li><s>平時開放有價值的資訊，不要預設應用</s></li>
 <li><s>在特殊時期，就會有應用產生。</s></li>
 <li><s>如果台南當初認為 xxx 不要開放而隱藏起來，就無法做出 ooo</s></li>
 <li><br/></li>
-<li>新北替代意資訊服務團隊希望進行的方式：</li>
+<li>新北替代役資訊服務團隊希望進行的方式：</li>
 <li>1. 組長認可下，與資料中心工程師一起釐清資料集、決定分工。</li>
 <li>2. 會議筆記公開上網於 hackpad。溝通過程是非常寶貴的，可以讓外界得知政府與民間的價值觀與想要達成的目標，磨合的過程非常值得作為其他縣市推動 1999 的參考。</li>
 <li><br/></li></ul>
