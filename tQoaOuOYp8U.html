@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="9867"/>
+<meta name="version" content="11871"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$tQoaOuOYp8U</title>
 </head>
 <body><h1>給新北市研考會為民服務組的開放 1999 提案 (2015/10/12)</h1><p></p><ul class="comment"><li>大家好，我是 Johnson（g0v irc/slack ID: MrOrz），目前在新北市當替代役。</li>
@@ -106,7 +106,7 @@
 
 <p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_tQoaOuOYp8U_p.77325_1444201969708_螢幕快照 2015-10-07 下午3.12.23.png'/></p><ul class="code"><li>舊金山政府的 open311 伺服器所回傳的 Service Request 資訊。圖中的瀏覽器向舊金山政府 open311 伺服器詢問「2015/10/1 以來的所有 Service Request 有哪些？」，而下面每一對大括號 `{...}` 裡的就是一筆陳情案。圖中第一筆回報的是路燈維修，有詳細的地址與經緯度，而政府還沒處理此陳情案（status: &quot;open&quot;）；第二筆則是有人回報人行道上有用過的用過的針頭（&quot;Used needle on sidewalk&quot;），並且附上<a href='http://mobile311.sfgov.org/media/san_francisco/report/photos/5614784edf86670305aead80/report.jpg'/>照片網址</a>。政府機關的處理情形則是「處理完成。沒有看到針頭。」（&quot;Case Closed. Case Completed. resolved: nothing found.&quot;）</li></ul>
 
-<p>民間的應用程式也可以用<a href='http://wiki.open311.org/GeoReport_v2/'/>Open311 GeoReport v2 所規範</a>的方式來對政府的 open 311 伺服器發送新陳情案。若要開發可以向政府送陳情案的第三方應用程式，開發者要先跟政府登記申請開發金鑰（API Key），因此政府可以透過 API Key 來控管第三方應用程式發送的陳情案。</p><p></p><p></p><p><b>二、Open311 的應用</b></p><p></p><p>Open311 GeoReport v2 建立了國際通用的標準，每個城市都使用相同的格式來呈現 311 的資料；依照 open311 標準建構出來的應用程式，也可以跨程式通用。</p><p></p><p></p><undefined><li><b>(一) fixmystreet by mySociety</b></li></undefined>
+<p>民間的應用程式也可以用<a href='http://wiki.open311.org/GeoReport_v2/'/>Open311 GeoReport v2 所規範</a>的方式來對政府的 open 311 伺服器發送新陳情案。若要開發可以向政府送陳情案的第三方應用程式，開發者要先跟政府登記申請開發金鑰（API Key），因此政府可以透過 API Key 來控管第三方應用程式發送的陳情案。</p><p></p><p></p><p><b>二、Open311 的應用</b></p><p></p><p>Open311 GeoReport v2 建立了國際通用的標準，每個城市都使用相同的格式來呈現 311 的資料；依照 open311 標準建構出來的應用程式，也可以跨程式通用。</p><p></p><p></p><undefined><li><b>(一) </b><a href='http://fixmystreet.org/'/>fixmystreet</a><b> by mySociety</b></li></undefined>
 
 <p>英國的公民計畫 mySociety 開發了 fixmystreet 查詢與舉報系統，這個系統可以透過 open311 規範，與任何政府 open 311 伺服器介接，顯示 311 陳情案件與將 311 案件舉報給政府；由於此系統是基於網站的應用程式，因此不用安裝就能在手機、平板與桌面環境運作。由於 fixmystreet 是開放原始碼的系統，大家都可以免費地架起 fixmystreet 系統，這也吸引了全球<a href='http://fixmystreet.org/sites/'/>地方政府或地方機關</a>團體架設 fixmystreet 做為 311 服務的網路與手機終端介面。德國的非營利組織則開發了另一套使用 open311 的網頁應用程式 <a href='http://www.markaspot.de/en'/>Mark-a-spot</a>，同樣做為開放原始碼專案，與源自英國的 fixmystreet 分庭抗禮。</p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_tQoaOuOYp8U_p.77325_1444207821140_undefined'/></p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_tQoaOuOYp8U_p.77325_1444207969792_undefined'/></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_tQoaOuOYp8U_p.77325_1444208351959_undefined'/></p><ul class="code"><li>&nbsp;英國蘇格蘭大城市愛丁堡(上)、瑞士首都蘇黎世(中)、馬來西亞城市書邦在也 (下) 的 311 案件系統，都是使用 mySociety 所開發的 FixMyStreet 系統。拜 fixmystreet 為開放改作的開放原始碼專案所賜，各城市都各自做了一些介面上的客製化，也將介面的語言修改成該國的母語。</li></ul>
 
@@ -118,21 +118,196 @@
 
 <p></p><undefined><li><b>(三) 新創業者加值應用</b></li></undefined>
 
-<p>311 開放資料，也讓有才華的新創業者可以一展長才，介接政府的 Open311 伺服器，並且提供從個案管理、伺服器架設到行動裝置應用程式的全套 Total solution，如 <a href='http://www.connectedbits.com/'/>Connected Bits</a>、<a href='http://www.publicstuff.com/'/>PublicStuff </a>與 <a href='http://gov.seeclickfix.com/'/>SeeClickFix</a> 等等。開放資料的加值應用是國內資通訊創業者小試牛刀的寶貴機會，不但可以增加政府服務的價值，也可以讓新創團隊獲得群眾關注，民眾也得以享受到創業者用熱情與專業創造的高優質應用程式所帶來的便利生活。開放資料在提升公眾利益的同時，更能促進資通訊產業的創新發展。</p><p></p><p></p><h2>肆、新北市開放 1999 計劃草擬</h2><p></p><p>新北市 1999 自 2008 年開辦以來已超過 8 年，背後已經有穩定的資訊系統在支持 1999 案例的建檔與追蹤。下面提出開放 1999 的計劃，嘗試以<b><u>不更動 1999 現有資訊系統</u></b>為原則，提出開放 1999 資料的解決方案。計劃分近程與遠程兩階段，「先求有、再求好」，第一階段先研究如何釋出資料並實際釋出，第二階段再架設 Open331 伺服器，提供民間社群開發者介接。</p><p></p><p><b>一、近程計劃</b></p><p></p><undefined><li><b>(一) 整理過去 1999 資料，公佈至</b><a href='http://data.ntpc.gov.tw/'/>新北市政府資料開放平台</a></li></undefined>
+<p>311 開放資料，也讓有才華的新創業者可以一展長才，介接政府的 Open311 伺服器，並且提供從個案管理、伺服器架設到行動裝置應用程式的全套 Total solution，如 <a href='http://www.connectedbits.com/'/>Connected Bits</a>、<a href='http://www.publicstuff.com/'/>PublicStuff </a>與 <a href='http://gov.seeclickfix.com/'/>SeeClickFix</a> 等等。開放資料的加值應用是國內資通訊創業者小試牛刀的寶貴機會，不但可以增加政府服務的價值，也可以讓新創團隊獲得群眾關注，民眾也得以享受到創業者用熱情與專業創造的高優質應用程式所帶來的便利生活。開放資料在提升公眾利益的同時，更能促進資通訊產業的創新發展。</p><p></p><p></p><h2>肆、新北市開放 1999 計劃草擬</h2><p></p><p>新北市 1999 自 2008 年開辦以來已超過 8 年，背後已經有穩定的資訊系統在支持 1999 案例的建檔與追蹤。下面提出開放 1999 的計劃，嘗試以<b><u>不更動 1999 現有資訊系統</u></b>為原則，提出開放 1999 資料的解決方案。計劃分近程與遠程兩階段，「先求有、再求好」，第一階段先研究如何釋出資料並實際釋出，第二階段再架設 Open331 伺服器，提供民間社群開發者介接。</p><p></p><p>這份計劃僅會提及，若要開放 1999 資料，大概需要有哪些事項要執行。實際的執行者、執行時程、執行細節，需要在確認<u>現有資料庫的實際內容</u>之後，才有辦法進行規劃。</p><p></p><p></p><p><b>一、近程計劃</b></p><p></p><undefined><li><b>(一) 整理過去 1999 資料，公佈至</b><a href='http://data.ntpc.gov.tw/'/>新北市政府資料開放平台</a></li></undefined>
+<ul class="comment"><li>註：之前在跟為民服務組組長聊的時候，他似乎根本不知道有這個平台的存在⋯⋯</li></ul>
 
-<ul class="comment"><li>Service（服務種類）資料：路面損壞、交通標線不良⋯⋯等等</li>
-<li>Service Request 資料：實際案件，以及處理方式</li>
-<li><br/></li></ul>
+<p><a href='http://data.ntpc.gov.tw/'/>新北市政府資料開放平台</a>上面目前有 261 個開放資料集，包含市內土地公告現值、AED 設置位置、福利補助資訊等等，提供方便程式處理的 XML、JSON 等格式，或讓非程式人員也能著手分析的 Excel 資料檔下載。近程計劃的第一步，就是將現有的 1999 歷史資訊，整理成資料集，放到新北市政府資料開放平台之上。</p><p></p><p>1999 的資料大致分成兩大類：「1999 服務種類」與「陳情案件」。參考 Open311 的資料集與欄位設計後，以下提出新北市 1999 開放資料集的欄位與內容。</p><ul class="comment"><li>Service（服務種類）資料：路面損壞、交通標線不良⋯⋯等等</li>
+<li>Service Request 資料：實際案件，以及處理方式</li></ul>
 
-<undefined><li><b>(二) 程式自動發佈每小時最新資訊</b></li></undefined>
+<p></p><p>1、1999 服務種類（Service）</p><p></p><p>此項資料相當於 <a href='http://wiki.open311.org/GeoReport_v2/#get-service-list'/>Open311 GeoReport v2</a>&nbsp; `GET Service List` 的回傳資訊，希望能整理成類似下面這樣的資料表：</p><p></p><table style="font-size:13px;cell-spacing: 0px; border-collapse: collapse;"><tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">service_code</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">service_name</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">description</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">keywords</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">group</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">1001</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#22952;&#23475;&#23433;&#23527;&#26696;&#20214;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#22914;&#29399;&#21536;&#12289;&#20154;&#30340;&#22122;&#38899;&#31561;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#22122;&#38899;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#31038;&#26371;&#23433;&#23527;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">1002</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#36949;&#35215;&#20572;&#36554;&#34389;&#29702;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#36949;&#35215;&#20572;&#36554;,&#36949;&#20572;,&#20098;&#20572;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#36949;&#35215;&#34389;&#29702;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">1003</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#36335;&#38712;&#25490;&#38500;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#38656;&#35201;&#21450;&#26178;&#25490;&#38500;&#30340;&#21487;&#31227;&#21205;&#24335;&#36335;&#38556;&#12289;&#20986;&#20837;&#21475;&#21463;&#38459;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#36335;&#38712;,&#36335;&#38556;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#36949;&#35215;&#34389;&#29702;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">2001</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#20132;&#36890;&#34399;&#35468;&#25925;&#38556;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#37325;&#22823;&#36335;&#21475;&#20840;&#29060;&#12289;&#21407;&#32005;&#40643;&#32160;&#19977;&#33394;&#36939;&#20316;&#36335;&#21475;&#36339;&#38275;&#20809;&#12289;&#19968;&#30452;&#32005;&#29128;&#19981;&#35722;&#29128;&#12289;&#32005;&#32160;&#29128;&#21516;&#20142;&#12289;&#29128;&#34399;&#20098;&#36339;&#12290;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#32005;&#32160;&#29128;,&#34399;&#35468;&#29128;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#20132;&#36890;&#34399;&#35468;&#21839;&#38988;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">2002</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#20132;&#36890;&#34399;&#35468;&#26751;&#25613;&#22750;&#12289;&#20670;&#26012;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#32005;&#32160;&#29128;,&#34399;&#35468;&#29128;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#20132;&#36890;&#34399;&#35468;&#21839;&#38988;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">3001</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#36335;&#29128;&#26410;&#38364;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#36335;&#29128;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#36335;&#38754;&#33287;&#36335;&#29128;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">3002</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#36335;&#29128;&#19981;&#20142;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#36335;&#29128;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#36335;&#38754;&#33287;&#36335;&#29128;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">3003</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#36335;&#38754;&#25613;&#22750;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#36335;&#38754;&#26377;&#22353;&#27934;&#12289;&#40860;&#35010;&#12289;&#20985;&#38519;&#12289;&#20154;&#25163;&#23380;&#33995;&#36913;&#37002;&#30772;&#25613;&#12289;&#20154;&#25163;&#23380;&#33995;&#27424;&#24179;&#38918;&#31561;&#31561;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#36947;&#36335;,&#36335;&#38754;,&#26575;&#27833;&#36335;,&#20154;&#25163;&#23380;,&#20154;&#23380;&#33995;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#36335;&#38754;&#33287;&#36335;&#29128;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">3004</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#20132;&#36890;&#27161;&#32218;&#21839;&#38988;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#20132;&#36890;&#27161;&#32218;&#30952;&#32362;&#19981;&#28165;&#25110;&#35373;&#32622;&#19981;&#30070;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#36947;&#36335;&#27161;&#32218;,&#27161;&#32218;,&#32005;&#32218;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#36335;&#38754;&#33287;&#36335;&#29128;</td>
+</tr>
+</table>
+<ul class="comment"><li>資料來源：<a href='http://www.rde.ntpc.gov.tw/web66/_file/1397/upload/1999web/a-08-1030609new.html'/>新北市 1999 市政快速服務</a></li></ul>
 
-<p></p><p></p><p><b>二、遠程計劃</b></p><p></p><p>建立 open311 伺服器：</p><p></p><undefined><li><b>(一) 提供查詢的程式界面，供「<a href='http://www.rde.ntpc.gov.tw/web66/_file/1397/upload/1999web/a-02.html'/>1999 陳情案件進度查詢</a>」應用程式使用</b></li></undefined>
+<p>表格欄位說明如下：</p><p></p><ul><li>`service_code`：識別代碼，每個服務不同，用於把「陳情案件」與「服務種類」連接在一起。</li>
+<li>`service_name`：給使用者看的服務名稱。</li>
+<li>`description`：服務簡介。</li>
+<li>`keywords`：幫助使用者辨認、尋找服務的標籤、關鍵字或縮寫。關鍵字間以半行逗號`,` 分隔。</li>
+<li>`group`：服務所屬分類。例如說數個服務都跟衛生有關，那這些服務的 `group` 欄位就寫「衛生」。</li></ul>
 
-<undefined><li><b>(二) 提供報案陳情的程式界面，供「<a href='http://rdm.ntpc.gov.tw/Road/'/>路平報馬仔</a>」應用程式使用</b></li></undefined>
+<p></p><p>2、陳情案件（Service Request）</p><p></p><p>此項資料相當於 <a href='http://wiki.open311.org/GeoReport_v2/#get-service-list'/>Open311 GeoReport v2</a>&nbsp; `GET Service List` 的回傳資訊，希望能整理成類似下面這樣的資料表：</p><p></p><table style="font-size:13px;cell-spacing: 0px; border-collapse: collapse;"><tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">service_request_id</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">status</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">status_notes</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">service_name</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">service_code</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">description</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">agency_responsible</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">service_notice</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">requested_datetime</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">updated_datetime</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">expected_datetime</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">address</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">zipcode</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">lat</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">long</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">media_url</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">591220</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">closed</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#26032;&#33674;&#21312;&#20844;&#25152;&#22238;&#35206;&#22914;&#19979;&#65306;&#12300;&#21270;&#25104;&#36335;531&#24055;&#28858;&#31169;&#20154;&#22303;&#22320;,&#36890;&#22577;&#20301;&#22336;&#25033;&#23660;&#20116;&#24037;&#36335;66&#34399;&#26049;&#36947;&#36335;,&#28858;&#31169;&#20154;&#22303;&#22320;&#12301;&#35613;&#35613;&#20320;&#23565;&#26412;&#24066;&#36947;&#36335;&#20043;&#38364;&#24515;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#36335;&#38754;&#25613;&#22750;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">3003</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#36914;&#20837;&#21270;&#25104;&#36335;531&#24055;&#35041;&#38754;&#65292;&#24478;&#24055;&#21475;&#19968;&#30452;&#36914;&#21435;&#21040;&#36008;&#36939;&#20844;&#21496;&#21069;&#38754;&#65292;&#27839;&#36335;&#37117;&#22353;&#22353;&#30116;&#30116;&#30340;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#26032;&#33674;&#21312;&#20844;&#25152;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#24037;&#21209;&#23616;&#23559;&#22312;4&#23567;&#26178;&#20839;&#20808;&#35373;&#32622;&#23433;&#20840;&#32173;&#35703;&#25514;&#26045;&#65292;&#20006;&#26044; 4 &#26085;&#20839;&#20462;&#24489;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">2015-06-08T10:17:00+08:00</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">2015-06-09T10:03:00+08:00</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">2015-06-12T10:17:00+08:00</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#26032;&#21271;&#24066;&#26032;&#33674;&#21312;&#20116;&#24037;&#36335;&#21270;&#25104;&#36335;531&#24055;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">242</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">25.0632602</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">121.4581256</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">591236</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">closed</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#20677;&#26041;&#27491;&#20462;&#24489;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#36335;&#38754;&#25613;&#22750;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">3003</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#28129;&#37329;&#36335;&#19968;&#27573;&#19978;&#65292;&#27700;&#28304;&#25509;&#21475;&#21040;&#21271;&#26032;&#36335;&#21475;&#65292;&#24448;&#21271;&#26041;&#21521;&#27839;&#36335;&#37117;&#24456;&#29211;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#38515;&#31435;&#33489;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#24037;&#21209;&#23616;&#23559;&#22312;4&#23567;&#26178;&#20839;&#20808;&#35373;&#32622;&#23433;&#20840;&#32173;&#35703;&#25514;&#26045;&#65292;&#20006;&#26044; 4 &#26085;&#20839;&#20462;&#24489;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">2015-06-08T10:28:00+08:00</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">2015-06-15T16:40:00+08:00</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">2015-06-12T10:28:00+08:00</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#26032;&#21271;&#24066;&#28129;&#27700;&#21312;&#28129;&#37329;&#36335;&#19968;&#27573;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">251</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">25.1970513</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">121.445542</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">635827</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">open</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#36335;&#38754;&#25613;&#22750;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">3003</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#29983;&#26481;&#36335;&#19978;(&#26495;&#27211;&#24448;&#20013;&#21644;&#26041;&#21521;)&#25509;&#36817;&#20013;&#23665;&#36335;&#19968;&#27573;&#65292;&#35442;&#34389;&#36681;&#35282;&#30340;&#26575;&#27833;&#36335;&#38754;&#26377;2&#20491;&#32004;&#25163;&#25484;&#22823;&#30340;&#23567;&#22353;&#27934;&#65292;&#24050;&#30059;&#30333;&#32218;&#35352;&#34399; (.)</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#24037;&#21209;&#23616;&#23559;&#22312;4&#23567;&#26178;&#20839;&#20808;&#35373;&#32622;&#23433;&#20840;&#32173;&#35703;&#25514;&#26045;&#65292;&#20006;&#26044; 4 &#26085;&#20839;&#20462;&#24489;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">2015-10-08T12:16:00+08:00</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#26032;&#21271;&#24066;&#26495;&#27211;&#21312;&#28450;&#29983;&#26481;&#36335;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">220</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">25.01271</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">121.4689416</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">635880</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">closed</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#20677;&#20462;&#35036;&#22353;&#27934;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#36335;&#38754;&#25613;&#22750;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">3003</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#40367;&#27468;&#36335;&#40179;&#40180;&#27211;&#19979;&#26377;&#37941;&#26495;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#40367;&#27468;&#21312;&#20844;&#25152;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#24037;&#21209;&#23616;&#23559;&#22312;4&#23567;&#26178;&#20839;&#20808;&#35373;&#32622;&#23433;&#20840;&#32173;&#35703;&#25514;&#26045;&#65292;&#20006;&#26044; 4 &#26085;&#20839;&#20462;&#24489;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">2015-10-07T12:00:00+08:00</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">2015-10-08T13:52:00+08:00</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">2015-10-11T12:00:00+08:00</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#40367;&#27468;&#21312; &#40367;&#27468;&#36335;&#40179;&#40180;&#27211;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">239</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">24.9722425</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">121.332313</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">http://rdm.ntpc.gov.tw/ROAD/Upload/ConstructionPic/201510/130887571466962500.jpg</td>
+</tr>
+</table>
+<ul class="comment"><li><a href="http://rdm.ntpc.gov.tw/ROAD/SatisfySurvey.aspx?id="></a>http://rdm.ntpc.gov.tw/ROAD/SatisfySurvey.aspx?id=&lt;service_request_id&gt;</li></ul>
 
-<undefined><li><b>(三) 伺服器資料接口以 CDN 承受流量，一小時更新一次</b></li></undefined>
+<p>以上欄位有一些是政府回覆的內容，有些是民眾填寫的內容。表格欄位說明如下：</p><p></p><ul><li>`service_request_id`：案件編號。</li>
+<li>`status`：目前案件狀態。`open`：剛被民眾回報；`closed`：已處理完畢。</li>
+<li>`status_notes`：此案件狀態的解釋或說明。</li>
+<li>`service_anme`：這個案件所屬的，給使用者看的服務名稱。</li>
+<li>`service_code`：這個案件所屬的服務的識別代碼。</li>
+<li>`description`：案件陳情內容。</li>
+<li>`agency_responsible`：承辦單位或承辦人。</li>
+<li>`service_notice`：陳情人通報結束後，告知陳情人此陳情應該會如何被處理的資訊。</li>
+<li>`requested_datetime`：陳情人通報時間。w3 日期格式。</li>
+<li>`updated_datetime`：案件的最後更新時間。</li>
+<li>`expected_datetime`：案件原定處理完畢的時間。如<a href='http://www.rde.ntpc.gov.tw/web66/_file/1397/upload/1999web/a-08-1030609new.html'/>快速服務業務</a>都有規定完成時間。</li>
+<li>`address`：地址資料。</li>
+<li>`zipcode`：陳報地點的郵遞區號。</li>
+<li>`lat`、`long`：所陳報地點的緯度、經度（<a href='https://en.wikipedia.org/wiki/World_Geodetic_System'/>WGS84</a> projection）</li>
+<li>`media_url`：陳報案件所附的照片或影片 URL。</li></ul>
 
-<undefined><li><b>(四) 以英文技術文件為基底，提供中文版技術文件</b></li></undefined>
+<p></p><undefined><li><b>(二) 程式自動發佈每小時最新資訊</b></li></undefined>
+
+<p>對於陳情案件（Service Request）資料，從現有資料庫轉換到上述格式，大部分只是欄位名稱的的代換、自動查詢經緯度等作業，應該可以使用程式自動化處理，每隔一小時就從現有 1999 資料庫截取新陳情案件資料，轉換成上面的格式之後，自動發佈到新北市政府資料開放平台。</p><p></p><ul class="comment"><li>TODO：製圖：現有資料庫 --&gt; 24hr 開著的電腦，裡面每小時執行程式轉換資料格式 ---&gt; 新北市政府資料開放平台</li></ul>
+
+<p></p><p><b>二、遠程計劃</b></p><p></p><p>進程計劃提供民眾資料來做分析；但若想要支援新增陳情案件，我們會需要建立起一個符合 Open311 GeoReport v2 的 Open311 伺服器。這樣的伺服器必須符合下面性質：</p><p></p><p></p><undefined><li><b>(一) 提供查詢用的應用程式界面（API）</b></li></undefined>
+
+<p><a href='http://wiki.open311.org/GeoReport_v2/'/>Open311 GeoReport v2</a> 規定了伺服器應該要提供 `GET Service List`、`GET Service Definition`、 `GET Service Requests` 與 `GET Service Request` 四個資源的取用方式、伺服器應該接受與回傳的資料欄位等等。由於這些程式界面背後介街的資料格式與近程計劃中所規劃的一模一樣，因此若近程計劃有執行到位，那麼近程計劃中所產出的資料集以及自動轉換格式程式，都可以直接沿用。</p><p></p><p>當查詢用 API 完成之後，民間開發者就可以用 <a href='http://fixmystreet.org/'/>FixMyStreet</a> 或其他支持 Open311 客戶端應用程式，將過往與現在新北市 1999 的業務製作精美的視覺化圖表，透過展示案例來顯示新北市政府為民服務的歷程軌跡。</p><p></p><p></p><undefined><li><b>(二) 提供報案陳情的應用程式界面（API）</b></li></undefined>
+
+<p><a href='http://wiki.open311.org/GeoReport_v2/'/>Open311 GeoReport v2</a> 規定了伺服器若要接受民眾報案陳情，應該接收的資料欄位與格式。這個部分是整個遠程計劃中，需要最多工夫的一步——Open311 伺服器不只是跟現有 1999 資料庫拿資料而已，它還要知道如何把新的陳情案寫進現有 1999 資料庫，才能將第三方應用程式透過 Open311 伺服器送出的陳情案，整合進現有的 1999 資訊系統中。</p><p></p><p>Open311 GeoReport v2 提到， Open311 伺服器應該提供 <a href='http://wiki.open311.org/GeoReport_v2/#get-service-definition'/>Service Definition 資訊</a>，來規定送出各種不同服務的陳情案時，應該要請使用者填入哪些欄位。搭設 Open311 的單位可以參考現有<a href='http://rdm.ntpc.gov.tw/Road/NewCase.aspx'/>路平報馬仔系統</a>給使用者填寫的欄位，來設計所需要的 Service Definition。</p><p></p><p></p><undefined><li><b>(三) 伺服器資料接口以 CDN 承受流量，一小時更新一次</b></li></undefined>
+
+<p></p><p></p><undefined><li><b>(四) 以英文技術文件為基底，提供中文版技術文件</b></li></undefined>
 <ul class="comment"><li>公佈在<a href='http://data.ntpc.gov.tw/'/>新北市政府資料開放平台</a>。</li></ul>
 
 <undefined><li><b>(五) 現成 App 範例</b></li></undefined>
@@ -140,15 +315,18 @@
 <li>「路見不平，上傳 1999」手持裝置拍照上網</li>
 <li><a href="https://play.google.com/store/apps/details?id=tn.opendata.tainan311"></a>https://play.google.com/store/apps/details?id=tn.opendata.tainan311 民間自製 app</li></ul>
 
-<p><b>三、開放資料的挑戰</b></p><p></p><undefined><li><b>(一) 資料內容方面</b></li></undefined>
+<p></p><p><b>三、開放 1999 的挑戰</b></p><p></p><p>以下列出開放 1999 過程中可能會遇到的阻力以及可能的解法。</p><p></p><p></p><undefined><li><b>(一) 資料內容方面</b></li></undefined>
 
-<ul class="comment"><li>就算每一筆回報都是純文字資料也有價值，如滋生空地一案</li>
+<ul class="comment"><li>欄位準確度、資料清理</li>
+<li>新北市政府資料開放平台是否支援用程式來更新資料集</li>
+<li>就算每一筆回報都是純文字資料也有價值，如滋生空地一案</li>
 <li>（但是準確度會有影響，若資料有分類、分開標地址的話，價值更高。畢竟巧婦難為無米之炊。）</li>
 <li>資料控管：api key 發放。</li></ul>
 
-<undefined><li><b>(二) 法律方面</b></li></undefined>
+<p></p><undefined><li><b>(二) 法律方面</b></li></undefined>
 
-<p>1、開放資料運用相關規範</p><ul class="comment"><li>政府開放授權 v1</li></ul>
+<p>1、開放資料運用相關規範</p><ul class="comment"><li>政府開放授權 v1</li>
+<li>CC BY 4.0 國際授權方式</li></ul>
 
 <p>2、個人資料保護問題</p><ul class="comment"><li>法律界對 ETC 資料開放的反彈</li>
 <li><a href="https://www.facebook.com/liu.jean.94/posts/10153701004245799"></a>https://www.facebook.com/liu.jean.94/posts/10153701004245799</li>
