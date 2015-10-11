@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="17110"/>
+<meta name="version" content="17131"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$tQoaOuOYp8U</title>
 </head>
 <body><h1>給新北市研考會為民服務組的開放 1999 提案 (2015/10/12)</h1><p></p><ul class="comment"><li>大家好，我是 Johnson（g0v irc/slack ID: MrOrz），目前在新北市當替代役。</li>
@@ -106,9 +106,7 @@
 
 <p>Service Request 就是一件一件的陳情案。一筆 Service Request 資料包含所屬 Service 名、處理狀態（未處理、已處理）、處理情形、陳情內容、地址、經緯度等資料。</p><p></p><p></p><undefined><li><b>(三) 如何取用這些資料</b></li></undefined>
 
-<p><a href='http://wiki.open311.org/GeoReport_v2/'/>Open311 GeoReport v2 規範</a>設計了一組應用程式界面（API），讓開發者的程式能查詢或新增陳情案。提供開放 311 資料的政府機關需要架設一檯網頁伺服器，當民間開發的應用程式（網頁或行動裝置 app）造訪這些網頁連結的時候，政府的伺服器要將程式所要求的 Service 或 Service Request 內容傳回去給應用程式。這檯網頁伺服器要與政府內部使用的現有 311 資料庫更新同步所需要的資料，這樣網頁伺服器才能提供民間應用程式最新的數據。</p><p></p><ul class="comment"><li>TODO: 一個圖：使用者 --&gt; app --&gt; 政府的網頁伺服器，符合 open311 GeoReport v2 規範 &lt;--資料-- 政府內部 311 資料庫</li></ul>
-
-<p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_tQoaOuOYp8U_p.77325_1444201969708_螢幕快照 2015-10-07 下午3.12.23.png'/></p><ul class="code"><li>舊金山政府的 open311 伺服器所回傳的 Service Request 資訊。圖中的瀏覽器向舊金山政府 open311 伺服器詢問「2015/10/1 以來的所有 Service Request 有哪些？」，而下面每一對大括號 `{...}` 裡的就是一筆陳情案。圖中第一筆回報的是路燈維修，有詳細的地址與經緯度，而政府還沒處理此陳情案（status: &quot;open&quot;）；第二筆則是有人回報人行道上有用過的用過的針頭（&quot;Used needle on sidewalk&quot;），並且附上<a href='http://mobile311.sfgov.org/media/san_francisco/report/photos/5614784edf86670305aead80/report.jpg'/>照片網址</a>。政府機關的處理情形則是「處理完成。沒有看到針頭。」（&quot;Case Closed. Case Completed. resolved: nothing found.&quot;）</li></ul>
+<p><a href='http://wiki.open311.org/GeoReport_v2/'/>Open311 GeoReport v2 規範</a>設計了一組應用程式界面（API），讓開發者的程式能查詢或新增陳情案。提供開放 311 資料的政府機關需要架設一檯網頁伺服器，當民間開發的應用程式（網頁或行動裝置 app）造訪這些網頁連結的時候，政府的伺服器要將程式所要求的 Service 或 Service Request 內容傳去給應用程式。這檯網頁伺服器要與政府內部使用的現有 311 資料庫更新同步所需要的資料，這樣網頁伺服器才能提供民間應用程式最新的數據。</p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_tQoaOuOYp8U_p.77325_1444546522159_open311.png'/></p><p></p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_tQoaOuOYp8U_p.77325_1444201969708_螢幕快照 2015-10-07 下午3.12.23.png'/></p><ul class="code"><li>舊金山政府的 open311 伺服器所回傳的 Service Request 資訊。圖中的瀏覽器向舊金山政府 open311 伺服器詢問「2015/10/1 以來的所有 Service Request 有哪些？」，而下面每一對大括號 `{...}` 裡的就是一筆陳情案。圖中第一筆回報的是路燈維修，有詳細的地址與經緯度，而政府還沒處理此陳情案（status: &quot;open&quot;）；第二筆則是有人回報人行道上有用過的用過的針頭（&quot;Used needle on sidewalk&quot;），並且附上<a href='http://mobile311.sfgov.org/media/san_francisco/report/photos/5614784edf86670305aead80/report.jpg'/>照片網址</a>。政府機關的處理情形則是「處理完成。沒有看到針頭。」（&quot;Case Closed. Case Completed. resolved: nothing found.&quot;）</li></ul>
 
 <p>民間的應用程式也可以用<a href='http://wiki.open311.org/GeoReport_v2/'/>Open311 GeoReport v2 所規範</a>的方式來對政府的 open 311 伺服器發送新陳情案。若要開發可以向政府送陳情案的第三方應用程式，開發者要先跟政府登記申請開發金鑰（API Key），因此政府可以透過 API Key 來控管第三方應用程式發送的陳情案。</p><p></p><p></p><p><b>二、Open311 的應用</b></p><p></p><p>Open311 GeoReport v2 建立了國際通用的標準，每個城市都使用相同的格式來呈現 311 的資料；依照 open311 標準建構出來的應用程式，也可以跨程式通用。</p><p></p><p></p><undefined><li><b>(一) &quot;</b><a href='http://fixmystreet.org/'/>FixMyStreet</a>&quot;<b> by mySociety</b></li></undefined>
 
@@ -122,7 +120,7 @@
 
 <p></p><undefined><li><b>(三) 新創業者加值應用</b></li></undefined>
 
-<p>311 開放資料，也讓有才華的新創業者可以一展長才，介接政府的 Open311 伺服器，並且提供從個案管理、伺服器架設到行動裝置應用程式的全套 Total solution，如 <a href='http://www.connectedbits.com/'/>Connected Bits</a>、<a href='http://www.publicstuff.com/'/>PublicStuff </a>與 <a href='http://gov.seeclickfix.com/'/>SeeClickFix</a> 等等。開放資料的加值應用是國內資通訊創業者小試牛刀的寶貴機會，不但可以增加政府服務的價值，也可以讓新創團隊獲得群眾關注，民眾也得以享受到創業者用熱情與專業創造的高優質應用程式所帶來的便利生活。開放資料在提升公眾利益的同時，更能促進資通訊產業的創新發展。</p><p></p><p></p><h2>肆、新北市開放 1999 計劃草擬</h2><p></p><p>新北市 1999 自 2008 年開辦以來已超過 8 年，背後已經有穩定的資訊系統在支持 1999 案例的建檔與追蹤。下面提出開放 1999 的計劃，嘗試以<b><u>不更動 1999 現有資訊系統</u></b>為原則，提出開放 1999 資料的解決方案。計劃分近程與遠程兩階段，「先求有、再求好」，第一階段先研究如何釋出資料並實際釋出，第二階段再架設 Open331 伺服器，提供民間社群開發者介接。</p><p></p><p>這份計劃僅會提及，若要開放 1999 資料，大概需要有哪些事項要執行。實際的執行者、執行時程、執行細節，需要在確認<u>現有資料庫的實際內容</u>之後，才有辦法進行規劃。</p><p></p><p></p><p><b>一、近程計劃</b></p><p></p><undefined><li><b>(一) 整理過去 1999 資料，公佈至</b><a href='http://data.ntpc.gov.tw/'/>新北市政府資料開放平台</a></li></undefined>
+<p>311 開放資料，也讓有才華的新創業者可以一展長才，介接政府的 Open311 伺服器，並且提供從個案管理、伺服器架設到行動裝置應用程式的全套 Total solution，如 <a href='http://www.connectedbits.com/'/>Connected Bits</a>、<a href='http://www.publicstuff.com/'/>PublicStuff </a>與 <a href='http://gov.seeclickfix.com/'/>SeeClickFix</a> 等等。開放資料的加值應用是國內資通訊創業者小試牛刀的寶貴機會，不但可以增加政府服務的價值，也可以讓新創團隊獲得群眾關注，民眾也得以享受到創業者用熱情與專業創造的高優質應用程式所帶來的便利生活。開放資料在提升公眾利益的同時，更能促進資通訊產業的創新發展。</p><p></p><p></p><h2>肆、新北市開放 1999 計劃草擬</h2><p></p><p>新北市 1999 自 2008 年開辦以來已超過 8 年，背後已經有穩定的資訊系統在支持 1999 案例的建檔與追蹤。下面提出開放 1999 的計劃，嘗試以<b><u>不更動 1999 現有資訊系統</u></b>為原則，提出開放 1999 資料的解決方案。計劃分近程與遠程兩階段，「先求有、再求好」，第一階段先研究如何釋出資料並實際釋出，第二階段再架設 Open331 伺服器，提供民間社群開發者介接。</p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_tQoaOuOYp8U_p.77325_1444546601948_ntpc open 1999.png'/></p><p></p><p>這份計劃僅會提及，若要開放 1999 資料，大概需要有哪些事項要執行。實際的執行者、執行時程、執行細節，需要在確認<u>現有資料庫的實際內容</u>之後，才有辦法進行規劃。</p><p></p><p></p><p><b>一、近程計劃</b></p><p></p><undefined><li><b>(一) 整理過去 1999 資料，公佈至</b><a href='http://data.ntpc.gov.tw/'/>新北市政府資料開放平台</a></li></undefined>
 <ul class="comment"><li>註：之前在跟為民服務組組長聊的時候，他似乎根本不知道有這個平台的存在⋯⋯</li></ul>
 
 <p><a href='http://data.ntpc.gov.tw/'/>新北市政府資料開放平台</a>上面目前有 261 個開放資料集，包含市內土地公告現值、AED 設置位置、福利補助資訊等等，提供方便程式處理的 XML、JSON 等格式，或讓非程式人員也能著手分析的 Excel 資料檔下載。近程計劃的第一步，就是將現有的 1999 歷史資訊，整理成資料集，放到新北市政府資料開放平台之上。</p><p></p><p>1999 的資料大致分成兩大類：「1999 服務種類」與「陳情案件」。參考 Open311 的資料集與欄位設計後，以下提出新北市 1999 開放資料集的欄位與內容。</p><ul class="comment"><li>Service（服務種類）資料：路面損壞、交通標線不良⋯⋯等等</li>
@@ -307,19 +305,13 @@
 
 <p></p><undefined><li><b>(二) 程式自動發佈每小時最新資訊</b></li></undefined>
 
-<p>對於陳情案件（Service Request）資料，從現有資料庫轉換到上述格式，大部分只是欄位名稱的的代換、自動查詢經緯度等作業，應該可以使用程式腳本自動化處理，每隔一小時就從現有 1999 資料庫截取新陳情案件資料，轉換成上面的格式之後，自動發佈到新北市政府資料開放平台。</p><p></p><ul class="comment"><li>TODO：製圖：現有資料庫 --&gt; 24hr 開著的電腦，裡面每小時執行程式轉換資料格式 ---&gt; 新北市政府資料開放平台</li></ul>
-
-<p></p><p><b>二、遠程計劃</b></p><p></p><p>進程計劃提供民眾資料來做分析；但若想要支援新增陳情案件，我們會需要建立起一個符合 Open311 GeoReport v2 的 Open311 伺服器。這樣的伺服器必須符合下面性質：</p><p></p><p></p><undefined><li><b>(一) 提供查詢用的應用程式界面（API）</b></li></undefined>
+<p>對於陳情案件（Service Request）資料，從現有資料庫轉換到上述格式，大部分只是欄位名稱的的代換、自動查詢經緯度等作業，應該可以使用程式腳本自動化處理，每隔一小時就從現有 1999 資料庫截取新陳情案件資料，轉換成上面的格式之後，自動發佈到新北市政府資料開放平台。</p><p></p><p></p><p><b>二、遠程計劃</b></p><p></p><p>進程計劃提供民眾資料來做分析；但若想要支援新增陳情案件，我們會需要建立起一個符合 Open311 GeoReport v2 的 Open311 伺服器。這樣的伺服器必須符合下面性質：</p><p></p><p></p><undefined><li><b>(一) 提供查詢用的應用程式界面（API）</b></li></undefined>
 
 <p><a href='http://wiki.open311.org/GeoReport_v2/'/>Open311 GeoReport v2</a> 規定了伺服器應該要提供 `GET Service List`、`GET Service Definition`、 `GET Service Requests` 與 `GET Service Request` 四個資源的取用方式、伺服器應該接受與回傳的資料欄位等等。由於這些程式界面背後介街的資料格式與近程計劃中所規劃的一模一樣，因此若近程計劃有執行到位，那麼近程計劃中所產出的資料集以及自動轉換格式程式，都可以直接沿用。</p><p></p><p>當查詢用 API 完成之後，民間開發者就可以用 <a href='http://fixmystreet.org/'/>FixMyStreet</a> 或其他支持 Open311 客戶端應用程式，將過往與現在新北市 1999 的業務製作精美的視覺化圖表，透過展示案例來顯示新北市政府為民服務的歷程軌跡。</p><p></p><p></p><undefined><li><b>(二) 提供報案陳情的應用程式界面（API）</b></li></undefined>
 
 <p><a href='http://wiki.open311.org/GeoReport_v2/'/>Open311 GeoReport v2</a> 規定了伺服器若要接受民眾報案陳情，應該接收的資料欄位與格式。這個部分是整個遠程計劃中，需要最多工夫的一步——Open311 伺服器不只是跟現有 1999 資料庫拿資料而已，它還要知道如何把<u>新的陳情案寫入現有 1999 資料庫</u>，才能將第三方應用程式透過 Open311 伺服器送出的陳情案，整合進現有的 1999 資訊系統中。</p><p></p><p>Open311 GeoReport v2 提到， Open311 伺服器應該提供 <a href='http://wiki.open311.org/GeoReport_v2/#get-service-definition'/>Service Definition 資訊</a>，來規定送出各種不同服務的陳情案時，應該要請使用者填入哪些欄位。搭設 Open311 的單位可以參考現有<a href='http://rdm.ntpc.gov.tw/Road/NewCase.aspx'/>路平報馬仔系統</a>給使用者填寫的欄位，來設計所需要的 Service Definition。</p><p></p><p></p><undefined><li><b>(三) 查詢用的應用程式界面（API）以 CDN 承受流量</b></li></undefined>
 
-<p>由政府架設 Open311 伺服器，在特殊情況（如颱風、地震等特殊期間）下會有龐大流量需求。一般的高流量服務都會租用 CDN（內容網路遞送服務）來承受大部份的流量，CDN 遍佈各地的機房部點與負載平衡機制會確保在極多人同時連線的狀況底下，仍然能將資訊傳遞給使用者。國內中華電信有<a href='http://www.cdn.hinet.net/info-1.html'/>提供 CDN 服務</a>，國外也有 cloudflare 免費 CDN 服務可供選擇。</p><p></p><ul class="comment"><li>TODO：圖</li>
-<li>(a) 沒有 CDN：1999 資料庫更新 --&gt; Open311 server （忙不過來，無法提供服務） --&gt; 一大堆終端使用者（拿不到資料）</li>
-<li>(b) 有 CDN：1999 資料庫更新 --&gt; Open311 server 把常用 query result 推送到 CDN --&gt; CDN 網路 --&gt; 一大堆終端使用者</li></ul>
-
-<p></p><undefined><li><b>(四) 中文版技術文件</b></li></undefined>
+<p>由政府架設 Open311 伺服器，在特殊情況（如颱風、地震等特殊期間）下會有龐大流量需求。一般的高流量服務都會租用 CDN（內容網路遞送服務）來承受大部份的流量，CDN 遍佈各地的機房部點與負載平衡機制會確保在極多人同時連線的狀況底下，仍然能將資訊傳遞給使用者。國內中華電信有<a href='http://www.cdn.hinet.net/info-1.html'/>提供 CDN 服務</a>，國外也有 cloudflare 免費 CDN 服務可供選擇。</p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_tQoaOuOYp8U_p.77325_1444546627020_cdn.png'/></p><p></p><p></p><undefined><li><b>(四) 中文版技術文件</b></li></undefined>
 
 <p>為促進國內開發者介接新北市 Open331 伺服器來開發加值應用，新北市需要公佈伺服器的應用程式界面（API）技術文件。所幸技術文件所需要記載的所有資訊，在 Open 331 官方資訊站上都已經有了<a href='http://wiki.open311.org/GeoReport_v2/'/>英文版本</a>，市府只需請技術人員粗略翻譯之後，連同<u>原本英文版的連結</u>一併公佈在<a href='http://data.ntpc.gov.tw/'/>新北市政府資料開放平台</a>即可。</p><p></p><p></p><undefined><li><b>(五) 鼓勵與搜集 App 範例</b></li></undefined>
 
