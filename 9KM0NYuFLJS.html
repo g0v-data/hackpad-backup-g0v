@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="621"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$9KM0NYuFLJS</title>
+</head>
+<body><h1>登革熱地圖</h1><p></p><p>主要延續自 <a href='/NpPQ1UZc3Up'/>高雄氣爆和登革熱爆發地圖視覺化</a>&nbsp; ，陸續衍生了幾個地圖，如果沒有特別說明就是 MIT 授權</p><p></p><ul><li><a href='http://kiang.github.io/TainanDengueMap/'/>台南登革熱地圖</a> (kiang)<ul><li>資料來源： <a href="http://health.tainan.gov.tw/tnhealth/Medical/Medical.aspx?Medical_Index=4&Medical_Class=0"></a>http://health.tainan.gov.tw/tnhealth/Medical/Medical.aspx?Medical_Index=4&amp;Medical_Class=0</li>
+<li>村里界圖取自 <a href="https://sheethub.com/data.gov.tw/%E6%9D%91%E9%87%8C%E7%95%8C%E5%9C%96%28WGS84%E7%B6%93%E7%B7%AF%E5%BA%A6%29"></a>https://sheethub.com/data.gov.tw/%E6%9D%91%E9%87%8C%E7%95%8C%E5%9C%96%28WGS84%E7%B6%93%E7%B7%AF%E5%BA%A6%29 ，以 <a href='https://github.com/kiang/TainanDengueMap/blob/gh-pages/geojson/filter.php'/>程式</a> 取出台南部份</li>
+<li>原本有想改用 <a href="http://data.tainan.gov.tw/dataset/denguefevercases"></a>http://data.tainan.gov.tw/dataset/denguefevercases ，但是更新頻率不定所以就沒有切換了</li>
+<li>更新步驟<ul><li>下載最新 Excel 檔案，通常在下午會出現前一天最新病例統計</li>
+<li>另存 csv 到 <a href="https://github.com/kiang/TainanDengueMap/blob/gh-pages/scripts/latest.csv"></a>https://github.com/kiang/TainanDengueMap/blob/gh-pages/scripts/latest.csv</li>
+<li>修改程式日期 <a href="https://github.com/kiang/TainanDengueMap/blob/gh-pages/scripts/query.php"></a>https://github.com/kiang/TainanDengueMap/blob/gh-pages/scripts/query.php</li>
+<li>執行上述程式更新</li>
+<li>原始檔案備份 <a href="https://github.com/kiang/TainanDengueMap/tree/gh-pages/raw"></a>https://github.com/kiang/TainanDengueMap/tree/gh-pages/raw</li></ul>
+</li>
+<li>檔案說明<ul><li>台南市村里界 - geojson - <a href="https://github.com/kiang/TainanDengueMap/blob/gh-pages/cunliTN.json"></a>https://github.com/kiang/TainanDengueMap/blob/gh-pages/cunliTN.json</li>
+<li>台南市村里每日登革熱病例 - json - <a href="https://github.com/kiang/TainanDengueMap/blob/gh-pages/DengueTN.json"></a>https://github.com/kiang/TainanDengueMap/blob/gh-pages/DengueTN.json</li></ul>
+</li></ul>
+</li>
+<li><a href='http://weoi.github.io/TainanDengueMap/'/>病媒蚊密度調查</a>&nbsp; (weoi)<ul><li>資料來源： <a href="http://data.tainan.gov.tw/dataset/2015-df-mosquito-density"></a>http://data.tainan.gov.tw/dataset/2015-df-mosquito-density</li></ul>
+</li>
+<li><a href='http://kiang.github.io/TainanDengueMap/taiwan/'/>台灣2015登革熱地圖</a>&nbsp; (kiang)<ul><li>資料來源： <a href="http://nidss.cdc.gov.tw/download/Dengue_Daily.csv"></a>http://nidss.cdc.gov.tw/download/Dengue_Daily.csv (ref: <a href="http://data.gov.tw/node/gov/resource/16702"></a>http://data.gov.tw/node/gov/resource/16702 )</li>
+<li>村里界圖取自 <a href="https://sheethub.com/data.gov.tw/%E6%9D%91%E9%87%8C%E7%95%8C%E5%9C%96%28WGS84%E7%B6%93%E7%B7%AF%E5%BA%A6%29"></a><a href='https://sheethub.com/data.gov.tw/%E6%9D%91%E9%87%8C%E7%95%8C%E5%9C%96%28WGS84%E7%B6%93%E7%B7%AF%E5%BA%A6%29'/>https://sheethub.com/data.gov.tw/%E6%9D%91%E9%87%8C%E7%95%8C%E5%9C%96%28WGS84%E7%B6%93%E7%B7%AF%E5%BA%A6%29</a> ，以 <a href='https://github.com/kiang/TainanDengueMap/blob/gh-pages/geojson/topojson.php'/>程式</a>&nbsp; 轉為 topojson 格式</li>
+<li>村里代碼取自 <a href="http://www.dgbas.gov.tw/ct.asp?xItem=951&ctNode=5485"></a>http://www.dgbas.gov.tw/ct.asp?xItem=951&amp;ctNode=5485</li>
+<li>更新步驟<ul><li>執行 <a href="https://github.com/kiang/TainanDengueMap/blob/gh-pages/cdc/query.php"></a>https://github.com/kiang/TainanDengueMap/blob/gh-pages/cdc/query.php 即可完成更新</li>
+<li>目前放入 <a href="https://github.com/kiang/TainanDengueMap/blob/gh-pages/bin/cdc.php"></a>https://github.com/kiang/TainanDengueMap/blob/gh-pages/bin/cdc.php&nbsp; ，設定下面排程</li></ul>
+<ul style="list-style: none;"><li>0 9 * * * /usr/bin/php -q /home/kiang/github/TainanDengueMap/bin/cdc.php</li></ul>
+</ul>
+<ul><li>檔案說明<ul><li>全國村里界 - topojson - <a href="https://github.com/kiang/TainanDengueMap/blob/gh-pages/taiwan/cunli.json"></a>https://github.com/kiang/TainanDengueMap/blob/gh-pages/taiwan/cunli.json</li>
+<li>2015 全國村里每日登革熱病例 - json - <a href="https://github.com/kiang/TainanDengueMap/blob/gh-pages/taiwan/Dengue.json"></a>https://github.com/kiang/TainanDengueMap/blob/gh-pages/taiwan/Dengue.json</li>
+<li>全國村里代碼 - csv - <a href="https://github.com/kiang/TainanDengueMap/blob/gh-pages/data.tainan/cunli_code.csv"></a>https://github.com/kiang/TainanDengueMap/blob/gh-pages/data.tainan/cunli_code.csv</li></ul>
+</li></ul>
+</li>
+<li><a href='http://kiang.github.io/TainanDengueMap/taiwan/points.html'/>台灣2015登革熱病例分佈地圖</a> (kiang)<ul><li>資料來源： <a href="http://cdcdengue.azurewebsites.net/DengueData.asmx/GetDengueLocation"></a>http://cdcdengue.azurewebsites.net/DengueData.asmx/GetDengueLocation ( 雖然後來 <a href="http://data.gov.tw/node/gov/resource/16702"></a>http://data.gov.tw/node/gov/resource/16702 也有座標，但差異不大，所以就沒有特別改程式了 )</li>
+<li>更新步驟<ul><li>執行 <a href="https://github.com/kiang/TainanDengueMap/blob/gh-pages/cdc/points.php"></a>https://github.com/kiang/TainanDengueMap/blob/gh-pages/cdc/points.php 即可完成更新</li>
+<li>目前放入 <a href="https://github.com/kiang/TainanDengueMap/blob/gh-pages/bin/cdc.php"></a><a href='https://github.com/kiang/TainanDengueMap/blob/gh-pages/bin/cdc.php'/>https://github.com/kiang/TainanDengueMap/blob/gh-pages/bin/cdc.php</a>&nbsp; ，設定下面排程</li></ul>
+<ul style="list-style: none;"><li>0 9 * * * /usr/bin/php -q /home/kiang/github/TainanDengueMap/bin/cdc.php</li></ul>
+</ul>
+<ul><li>檔案說明<ul><li>登革熱病例<a href='http://moisagis.moi.gov.tw/moiap/match/system_common.cfm'/>最小統計區</a>中心點位 - json - <a href="https://github.com/kiang/TainanDengueMap/blob/gh-pages/cdc/points.json"></a>https://github.com/kiang/TainanDengueMap/blob/gh-pages/cdc/points.json</li></ul>
+</li></ul>
+</li>
+<li><a href='http://happychang.github.io/fever2/'/>登革熱密度地圖</a>&nbsp; (happychang)<ul><li>直接使用 台灣2015登革熱病例分佈地圖 的病例資料</li></ul>
+</li>
+<li><a href='http://kiang.github.io/TainanDengueMap/taiwan/2014/'/>台灣2014登革熱地圖</a>&nbsp; (kiang)<ul><li>使用與 台灣2015登革熱地圖 同樣的程式，主要是想要看兩年分佈的差異而製作</li></ul>
+</li>
+<li><a href='http://kiang.github.io/TainanDengueMap/chemical/'/>台南登革熱噴藥地圖</a>&nbsp; (kiang)<ul><li>資料來源： <a href="http://data.tainan.gov.tw/dataset/4c260d97-e268-4b4a-8b15-c0fc92a25120"></a>http://data.tainan.gov.tw/dataset/4c260d97-e268-4b4a-8b15-c0fc92a25120</li>
+<li>更新步驟<ul><li>執行 <a href="https://github.com/kiang/TainanDengueMap/blob/gh-pages/chemical/query.php"></a>https://github.com/kiang/TainanDengueMap/blob/gh-pages/chemical/query.php 即可完成更新</li>
+<li>目前放入 <a href="https://github.com/kiang/TainanDengueMap/blob/gh-pages/bin/cdc.php"></a><a href='https://github.com/kiang/TainanDengueMap/blob/gh-pages/bin/cdc.php'/>https://github.com/kiang/TainanDengueMap/blob/gh-pages/bin/cdc.php</a>&nbsp; ，設定下面排程</li></ul>
+<ul style="list-style: none;"><li>0 9 * * * /usr/bin/php -q /home/kiang/github/TainanDengueMap/bin/cdc.php</li></ul>
+</ul>
+<ul><li>檔案說明<ul><li>噴藥行程村里與集合地點 - json - <a href="https://github.com/kiang/TainanDengueMap/blob/gh-pages/chemical/overlays.json"></a>https://github.com/kiang/TainanDengueMap/blob/gh-pages/chemical/overlays.json</li></ul>
+</li></ul>
+</li>
+<li><a href='http://ushahidi.olc.tw'/>台南待孳清空地空屋</a>&nbsp; (kiang)<ul><li>資料來源： <a href="http://data.tainan.gov.tw/dataset/dengue-dist/resource/d0fb0392-1fc2-4866-80a1-cab1062a18ea"></a>http://data.tainan.gov.tw/dataset/dengue-dist/resource/d0fb0392-1fc2-4866-80a1-cab1062a18ea</li>
+<li>Ushahidi V3 製作 <a href="https://github.com/ushahidi/platform"></a>https://github.com/ushahidi/platform &amp; <a href="https://github.com/ushahidi/platform-client"></a>https://github.com/ushahidi/platform-client<ul><li>中文化已經提供給官方，有興趣可以參與後續翻譯 - <a href="https://www.transifex.com/ushahidi/ushahidi-v3/"></a>https://www.transifex.com/ushahidi/ushahidi-v3/</li></ul>
+</li>
+<li>以 google map api 製作的簡化終端 - <a href="http://kiang.github.io/ushahidi_posts/"></a>http://kiang.github.io/ushahidi_posts/<ul><li>說明 - <a href="http://k.olc.tw/2015/10/%e5%8f%b0%e5%8d%97%e5%be%85%e5%ad%b3%e6%b8%85%e7%a9%ba%e5%9c%b0%e7%a9%ba%e5%b1%8b-%e9%9c%80%e8%a6%81%e6%82%a8%e7%9a%84%e5%8d%94%e5%8a%a9/"></a>http://k.olc.tw/2015/10/%e5%8f%b0%e5%8d%97%e5%be%85%e5%ad%b3%e6%b8%85%e7%a9%ba%e5%9c%b0%e7%a9%ba%e5%b1%8b-%e9%9c%80%e8%a6%81%e6%82%a8%e7%9a%84%e5%8d%94%e5%8a%a9/</li></ul>
+</li></ul>
+</li>
+<li><a href='http://kiang.github.io/tw_population/'/>台灣老人分佈地圖</a>&nbsp; (kiang)<ul><li>想要找尋登革熱病例分佈可能的原因所製作</li>
+<li>資料來源： <a href="http://data.moi.gov.tw/MoiOD/Data/DataDetail.aspx?oid=F4478CE5-7A72-4B14-B91A-F4701758328F"></a>http://data.moi.gov.tw/MoiOD/Data/DataDetail.aspx?oid=F4478CE5-7A72-4B14-B91A-F4701758328F</li></ul>
+</ul>
+
+<p></p><p>其他未製圖統計資料</p><ul><li>歷年登革熱病例年齡分佈統計 - <a href="https://github.com/kiang/TainanDengueMap/blob/gh-pages/cdc/age_sum.csv"></a><a href='https://github.com/kiang/TainanDengueMap/blob/gh-pages/cdc/age_sum.csv'/>https://github.com/kiang/</a>TainanDengueMap/blob/gh-pages/cdc/age_sum.csv</li>
+<li>2015 年以來登革熱病例村里發生率（病例數除以 2015/7 人口數字） - <a href="https://github.com/kiang/TainanDengueMap/blob/gh-pages/cdc/cunli_rate.csv"></a>https://github.com/kiang/TainanDengueMap/blob/gh-pages/cdc/cunli_rate.csv</li>
+<li>2015 登革熱病例數字相對同年齡層人口比率 - <a href="https://github.com/kiang/TainanDengueMap/blob/gh-pages/cdc/city_age_rate_2015.csv"></a>https://github.com/kiang/TainanDengueMap/blob/gh-pages/cdc/city_age_rate_2015.csv</li>
+<li>村里病例數字變化統計 - <a href="https://github.com/kiang/TainanDengueMap/blob/gh-pages/cdc/cunli_sum.csv"></a><a href='https://github.com/kiang/TainanDengueMap/blob/gh-pages/cdc/cunli_sum.csv'/>https://github.com/kiang/</a>TainanDengueMap/blob/gh-pages/cdc/cunli_sum.csv</li></ul>
+
+</body>
+</html>
