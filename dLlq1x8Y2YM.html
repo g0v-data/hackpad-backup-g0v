@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="343"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$dLlq1x8Y2YM</title>
+</head>
+<body><h1>Excel 轉完美 CSV</h1><p></p><p>考慮到政府為了衝三星 Open Data ，造成常常放出直接 Excel 轉 CSV 的檔案，合併儲存格資訊流失造成 CSV 亂七八糟，所以這邊想要做一個系統可以把 Excel 丟進去，可以產生出完美的 CSV</p><p></p><p><b>完美CSV定義</b></p><ul><li>UTF-8</li>
+<li>逗點分格</li>
+<li>阿拉伯數字就是數字，沒有用逗點分隔</li>
+<li>第一行是欄位名稱，第二行就是資料開始，除此以外沒有其他東西</li>
+<li>欄位名稱不會重覆 (不過有兩個「日期」欄位)</li>
+<li>該是數字欄位就全部都是數字、該是日期欄位就都是日期</li></ul>
+
+<p><b>常見需處理情況</b></p><ol><li>一張 sheet 裡面放了 2 ~ 3 個表格</li>
+<li>前幾欄是 title 、使用單位 等資訊</li>
+<li>使用合併儲存格的欄位要合併成一格&nbsp;</li></ol>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_dLlq1x8Y2YM_p.65355_1445670188375_undefined'/></p><ul style="list-style: none;"><li>上面最好改成 台北市/人數&nbsp; 台北市/比例 新北市/人數&nbsp; 新北市/比例</li></ul>
+
+</body>
+</html>
