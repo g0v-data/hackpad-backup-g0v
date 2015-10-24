@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="27"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$ncklnWyH1QY</title>
+</head>
+<body><h1>data.gov.tw 資料整理</h1><ul class="comment"><li>以下資料感謝Ronny大神提供!!!!!!!</li></ul>
+
+<p>這邊列出一些 data.gov.tw 資料整理的情況，列為給國發會的參考</p><p></p><p><b>整理規則</b></p><ol><li>總資料數 13545 筆</li>
+<li>先篩選有包含<ol><li>XML, JSON, RSS</li>
+<li>CSV, ODS, EXCEL, XLS, XLSX</li>
+<li>SHP, KML, KMZ</li>
+<li>ZIP / RAR / 7Z 解開來看</li>
+<li>完全不包含以上檔案之資料組，濾掉 2858 個 (剩下 10687 個)</li>
+<li><a href="https://worker1.sheethub.net/~srwang/data.gov.tw/no-support-format.csv"></a><a href='https://worker1.sheethub.net/~srwang/data.gov.tw/no-support-format.csv'/>https://worker1.sheethub.net/~srwang/data.gov.tw/no-support-format.csv</a></li></ol>
+</li>
+<li>包含預算、決算、結算、會計等資料集<ol><li>這些格式都超不統一又很不 table ，但說他們不 machine readable 也不是，因為它們都是 XML 為主，這些跳過不處理</li>
+<li>包含預算、決算、會計等文字資料有 3274 個(剩下 7413 個)</li>
+<li>感覺就是拿來湊數用的.....</li>
+<li><a href="https://worker1.sheethub.net/~srwang/data.gov.tw/stats.csv"></a><a href='https://worker1.sheethub.net/~srwang/data.gov.tw/stats.csv'/>https://worker1.sheethub.net/~srwang/data.gov.tw/stats.csv</a></li></ol>
+</li>
+<li>針對 CSV 先處理 ，一共有 5031 個<ol><li>CSV 檢查<ol><li>欄位:<ol><li>不能超過 128 欄 (超過的話有可能是解析錯誤)</li>
+<li>不能有亂碼 (亂碼的檢查方式是把資料轉成 Big5 再轉成 UTF-8 要能不變)</li>
+<li>不能有純數字 (不過會有例外，假如欄位是年份，而且寫成 2001, 2002, 2003, 2004 ....)</li>
+<li>不能過長 (檢查方式，超過 64 bytes ，可能就是根本就不是 CSV)</li>
+<li>不能重覆</li>
+<li>不能有空白</li></ol>
+</li>
+<li>值:<ol><li>數量不能比欄位數多</li>
+<li><br/></li></ol>
+</ol>
+</ol>
+</ol>
+
+<p></p><ul><li><a href="http://data.gov.tw/node/11395"></a><a href='http://data.gov.tw/node/11395'/>http://data.gov.tw/node/11395</a><ul><li>上櫃公布注意股票資訊</li>
+<li>Excel 匯出的 CSV，CSV 內還包含其他資訊</li></ul>
+</li>
+<li><a href="http://data.gov.tw/node/11369"></a><a href='http://data.gov.tw/node/11369'/>http://data.gov.tw/node/11369</a><ul><li>上櫃股票市場現況</li>
+<li>不是 sheet 型式，應該要另外客製每天抓</li></ul>
+</li>
+<li><a href="http://data.gov.tw/node/11628"></a><a href='http://data.gov.tw/node/11628'/>http://data.gov.tw/node/11628</a><ul><li>上櫃股票熱門股證券商進出排行</li>
+<li>Excel 轉出來的，欄位名稱有兩排....</li></ul>
+</li>
+<li><a href="http://data.gov.tw/node/11627"></a><a href='http://data.gov.tw/node/11627'/>http://data.gov.tw/node/11627</a><ul><li>上櫃股票現股當沖交易統計資訊</li>
+<li>Excel 轉出來的，裡面混合了兩張 sheet</li></ul>
+</li>
+<li><a href="http://data.gov.tw/node/11857"></a><a href='http://data.gov.tw/node/11857'/>http://data.gov.tw/node/11857</a><ul><li>上櫃股票自營商買賣超彙總表</li>
+<li>欄位名稱跟值對不上</li></ul>
+</li>
+<li><a href="http://data.gov.tw/node/11259"></a><a href='http://data.gov.tw/node/11259'/>http://data.gov.tw/node/11259</a><ul><li>體育署政策宣導相關廣告執行情形</li>
+<li>看起來不是好的程式產生的 CSV ，有的內容被逗點分開造成欄位混淆</li></ul>
+</li>
+<li><a href="http://data.gov.tw/node/9462"></a><a href='http://data.gov.tw/node/9462'/>http://data.gov.tw/node/9462</a></li>
+<li><a href="http://data.gov.tw/node/9463"></a><a href='http://data.gov.tw/node/9463'/>http://data.gov.tw/node/9463</a><ul><li>中華民國一百零三年政府行政機關辦公日曆表</li>
+<li>只是把日曆的 Excel 轉成 CSV... 變超爛的 CSV</li></ul>
+</li>
+<li><a href="http://data.gov.tw/node/11695"></a><a href='http://data.gov.tw/node/11695'/>http://data.gov.tw/node/11695</a></li>
+<li><a href="http://data.gov.tw/node/11696"></a><a href='http://data.gov.tw/node/11696'/>http://data.gov.tw/node/11696</a></li>
+<li><a href="http://data.gov.tw/node/11697"></a><a href='http://data.gov.tw/node/11697'/>http://data.gov.tw/node/11697</a></li>
+<li><a href="http://data.gov.tw/node/11698"></a><a href='http://data.gov.tw/node/11698'/>http://data.gov.tw/node/11698</a><ul><li>信用卡國內清算金額及筆數</li>
+<li>還有備註</li></ul>
+</li>
+<li><a href="http://data.gov.tw/node/11602"></a><a href='http://data.gov.tw/node/11602'/>http://data.gov.tw/node/11602</a><ul><li>個股類全市場部位限制</li>
+<li>還插了一個日期資訊在第二行是怎樣</li></ul>
+</li>
+<li><a href="http://data.gov.tw/node/12079"></a><a href='http://data.gov.tw/node/12079'/>http://data.gov.tw/node/12079</a><ul><li>入境行李運送總數</li>
+<li>也是將 Excel 轉出來成 CSV 的，欄位有兩欄</li></ul>
+</li>
+<li><a href="https://sheethub.com/data.gov.tw/公司登記家數及實收資本額異動"></a><a href='https://sheethub.com/data.gov.tw/%E5%85%AC%E5%8F%B8%E7%99%BB%E8%A8%98%E5%AE%B6%E6%95%B8%E5%8F%8A%E5%AF%A6%E6%94%B6%E8%B3%87%E6%9C%AC%E9%A1%8D%E7%95%B0%E5%8B%95'/>https://sheethub.com/data.gov.tw/公司登記家數及實收資本額異動</a>─按縣市別分<ul><li>公司登記家數及實收資本額異動─按行業別分</li>
+<li>欄位有點髒</li></ul>
+</li>
+<li><a href="http://data.gov.tw/node/11873"></a><a href='http://data.gov.tw/node/11873'/>http://data.gov.tw/node/11873</a><ul><li>欄位名稱標錯，出現兩個「漲停價」</li></ul>
+</li>
+<li><a href="http://data.gov.tw/node/7529"></a><a href='http://data.gov.tw/node/7529'/>http://data.gov.tw/node/7529</a><ul><li>Excel 轉的 CSV</li></ul>
+</li>
+<li><a href="http://data.gov.tw/node/12982"></a><a href='http://data.gov.tw/node/12982'/>http://data.gov.tw/node/12982</a><ul><li>很多公司重覆兩次</li></ul>
+</li>
+<li><a href="http://data.gov.tw/node/11660"></a><a href='http://data.gov.tw/node/11660'/>http://data.gov.tw/node/11660</a></li>
+<li><a href="http://data.gov.tw/node/11590"></a><a href='http://data.gov.tw/node/11590'/>http://data.gov.tw/node/11590</a><ul><li>兩個 csv 交錯出現 orz</li></ul>
+</li>
+<li><a href="http://data.gov.tw/node/13629"></a><a href='http://data.gov.tw/node/13629'/>http://data.gov.tw/node/13629</a><ul><li>很難 parse 的 xls (不過感謝至少沒有轉成 csv XD)</li></ul>
+</li>
+<li><a href="http://data.gov.tw/node/13733"></a><a href='http://data.gov.tw/node/13733'/>http://data.gov.tw/node/13733</a><ul><li>用到合併儲存格</li></ul>
+</li>
+<li><a href="http://data.gov.tw/node/8154"></a><a href='http://data.gov.tw/node/8154'/>http://data.gov.tw/node/8154</a><ul><li>一點都不髒，只是因為 rar 裡面放了很多 csv ，需要另外處理</li></ul>
+</ul>
+
+<p></p><p>TODO</p><ul><li><a href="https://sheethub.com/data.gov.tw/%E4%BD%8F%E5%AE%85%E5%9C%B0%E9%9C%87%E9%9A%AA%E7%B4%AF%E7%A9%8D%E8%B2%AC%E4%BB%BB%E9%A1%8D(%E8%B2%A1%E5%9C%98%E6%B3%95%E4%BA%BA%E4%BD%8F%E5%AE%85%E5%9C%B0%E9%9C%87%E4%BF%9D%E9%9A%AA%E5%9F%BA%E9%87%91)"></a><a href='https://sheethub.com/data.gov.tw/%E4%BD%8F%E5%AE%85%E5%9C%B0%E9%9C%87%E9%9A%AA%E7%B4%AF%E7%A9%8D%E8%B2%AC%E4%BB%BB%E9%A1%8D(%E8%B2%A1%E5%9C%98%E6%B3%95%E4%BA%BA%E4%BD%8F%E5%AE%85%E5%9C%B0%E9%9C%87%E4%BF%9D%E9%9A%AA%E5%9F%BA%E9%87%91'/>https://sheethub.com/data.gov.tw/%E4%BD%8F%E5%AE%85%E5%9C%B0%E9%9C%87%E9%9A%AA%E7%B4%AF%E7%A9%8D%E8%B2%AC%E4%BB%BB%E9%A1%8D(%E8%B2%A1%E5%9C%98%E6%B3%95%E4%BA%BA%E4%BD%8F%E5%AE%85%E5%9C%B0%E9%9C%87%E4%BF%9D%E9%9A%AA%E5%9F%BA%E9%87%91</a>)<ul><li>應該是有機會可以程式解決的 XML</li></ul>
+</li>
+<li><a href="https://sheethub.com/data.gov.tw/%E5%85%A8%E5%9C%8B%E5%A4%A7%E5%AE%A2%E8%BB%8A%E7%A6%81%E8%A1%8C%E8%B7%AF%E6%AE%B5"></a><a href='https://sheethub.com/data.gov.tw/%E5%85%A8%E5%9C%8B%E5%A4%A7%E5%AE%A2%E8%BB%8A%E7%A6%81%E8%A1%8C%E8%B7%AF%E6%AE%B5'/>https://sheethub.com/data.gov.tw/%E5%85%A8%E5%9C%8B%E5%A4%A7%E5%AE%A2%E8%BB%8A%E7%A6%81%E8%A1%8C%E8%B7%AF%E6%AE%B5</a><ul><li>有 KMZ 可以倒</li>
+<li><br/></li></ul>
+</ul>
+
+</body>
+</html>
