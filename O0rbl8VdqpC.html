@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1975"/>
+<meta name="version" content="2019"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$O0rbl8VdqpC</title>
 </head>
 <body><h1>哺乳地圖</h1><p></p><h2>想做什麼</h2><ul><li>有個地圖給帶 baby 出門的人知道哪裡有方便哺餵小朋友的設施</li></ul>
@@ -16,7 +16,7 @@
 <li>level（所在樓層）</li>
 <li>access（有沒有開放使用）</li>
 <li>opening_hours（哪些時間開放）</li>
-<li>另外獨立POI標註服務台位置<a href='http://wiki.openstreetmap.org/wiki/Key:tourism'/>tourism</a> <a href='http://wiki.openstreetmap.org/wiki/Tag:tourism%3Dinformation'/>=&nbsp; information</a></li>
+<li>另外獨立POI標註服務台位置<a href='http://wiki.openstreetmap.org/wiki/Key:tourism'/>tourism</a> <a href='http://wiki.openstreetmap.org/wiki/Tag:tourism%3Dinformation'/>=&nbsp; information</a> 因為常遇到要跟服務台拿哺乳室鑰匙才能使用的狀況。</li>
 <li>獨立標 POI (需要 proposal )<ul><li>amenity = baby_feeding</li>
 <li>baby_feeding = yes/room</li>
 <li>access = yes/permissive/customers/key</li></ul>
@@ -25,14 +25,14 @@
 <ul><li>drinking_water<ul><li>drinking_water:hot_water</li>
 <li>drinking_water:warm_water</li>
 <li>drinking_water:cold_water</li></ul>
-<ul class="comment"><li>drinking_water=yes 其實比較接近單純的「飲水點」 而非特指有冷熱水的飲水機吧？ 要如何標示台灣常見的冷熱水飲水機？ 因為哺乳室裡是否配置飲水機很重要，嬰幼兒照護常常需要使用熱水。 無論是要拿來清潔或泡配方奶或母奶隔水加熱。</li></ul>
+<ul class="comment"><li>drinking_water=yes 其實比較接近單純的「飲水點」 而非特指有冷熱水的飲水機？ 要如何標示台灣常見的冷熱水飲水機？ 因為哺乳室裡是否配置飲水機很重要，嬰幼兒照護常常需要使用熱水。 無論是要拿來清潔或泡配方奶或母奶隔水加熱。</li></ul>
 </ul>
-<ul><li>microwave = yes/no/fee</li>
+<ul><li>microwave = yes/no/fee 是否有微波爐</li>
 <li><a href='http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dwater_tap'/>water_tap</a> = yes 是否有洗手台 (可獨立標POI)</li></ul>
-<ul class="comment"><li>哺餵前都要先洗手，有肥皂可消毒更佳)</li></ul>
+<ul class="comment"><li>哺餵前都要先洗手，有肥皂可消毒更佳</li></ul>
 <ul><li>lock = yes/no</li>
 <li>capacity = 1, 2, 3..</li></ul>
-<ul class="comment"><li>是指使用組數嗎？(單位是一組親子) 容量其實不太好估算，因為除了capacity = 1的空間辨識外，哺乳室空間一大，使用人數就會蠻彈性的。同一哺乳室，可能有媽媽正在哺乳、有其他媽媽在使用尿布台或其他設施。可能要發展成數字區間之類的標示，例如capacity = 2-4</li></ul>
+<ul class="comment"><li>是指使用組數嗎？(單位是一組親子) 容量其實不太好估算，因為除了capacity = 1的空間容易辨識外，哺乳室空間一大，使用人數就會蠻彈性的。同一哺乳室，可能有媽媽正在哺乳、有其他媽媽在使用尿布台或其他設施。可能要發展成數字區間之類的標示，例如capacity = 2-4</li></ul>
 <ul><li>power_supply:nema_5_15 = yes/no&nbsp; (插座)</li>
 <li>supervised = yes/no (管理員)</li>
 <li>fee = yes/no (收費)</li>
@@ -65,12 +65,12 @@
 </ul>
 </ul>
 
-<h2>哺乳室使用者經驗</h2><p></p><p><b>by 彭小五 退役的哺乳媽媽、開放街圖圖客(OSM mapper)</b></p><p>全文分兩部份，前是哺乳室使用經驗，後半是圖客觀點</p><p></p><p>母乳地圖其實我蠻有興趣，因為我曾是經常性使用者。所以每次到室內的公共場合不免會側目注意一下哺乳室的所在位置，以免緊急時需要使用（或幫助其他慌張衝進來的媽媽）。</p><p>有時，立即找到哺乳室的急迫性類似尿急人找廁所的緊急性，因為常常是：</p><ol><li>哺乳媽媽漲奶急需要擠奶（可能是溢乳墊快爆炸，已經開始溼到衣服。或是漲奶漲到疼痛非常，需要擠出奶汁，舒緩乳腺壓迫）</li>
+<h2>哺乳室使用者經驗</h2><p></p><p><b>by 彭小五 退役的哺乳媽媽、開放街圖圖客(OSM mapper)</b></p><p>心得分兩部份，前是哺乳室使用經驗，後半是圖客觀點</p><p></p><p>母乳地圖其實我蠻有興趣，因為我曾是經常性使用者。所以每次到室內的公共場合不免會側目注意一下哺乳室的所在位置，以免緊急時需要使用（或幫助其他慌張衝進來的媽媽）。</p><p>有時，立即找到哺乳室的急迫性類似尿急人找廁所的緊急性，因為常常是：</p><ol><li>哺乳媽媽漲奶急需要擠奶（可能是溢乳墊快爆炸，已經開始溼到衣服。或是漲奶漲到疼痛非常，需要擠出奶汁，舒緩乳腺壓迫）</li>
 <li>寶包正在大哭，急須喝奶（否則全場的人都會因嚎啕大哭的音量側目妳）</li>
 <li>寶包或幼兒尿布外溢或衣服吐溼，等等令人炸毛鳥事。</li></ol>
-<p>這些各種很緊急的事件發生時，我都是衝進確定有哺乳室的場合後，直接找櫃台詢問地點，因為有些哺乳室受管制需拿鑰匙開門，直接找服務台NPC可以一次解兩個任務1.知道地點2.獲得使用許可。</p><p>畢竟分秒必爭，在哺乳室前狂拉門把才發現又要跑去櫃台登記拿鑰匙真的超幹（尤其手上還拎著一個需要緊急處理的小人！）。</p><p>而對於有使用限制的哺乳室，在實際管理上，館方會在哺乳室門上貼告示知會使用者要去櫃台登記方能使用，所以通常是帶人又帶大包小包（重到可以砸死歹徒的育兒包）來到門前才知道被打槍。</p><p>所以mapping服務台也許是母乳地圖可以順帶推廣的？以我個人使用者的經驗來說，有其必要性。不過我的經驗不是現在式，也有可能現今已經慢慢開放，不再有那麼高比例的哺乳室需要得到許可？這點需要請參與者在與台灣母乳協會討論時，更新一下資訊。</p><p></p><p>（以下是mapping討論）</p><p></p><p>我之前思考過，覺得mapping哺乳室的困難點跟飲水機、AED、滅火器會遇到類似的問題：室內定位。從平面位置到垂直位置(樓層)，地圖上顯示的位置都不容易精確，偏偏又是很緊急需要立即知道明確地點並到達使用的設施(哺乳室、AED)。</p><p>如果建物只有單一樓層，地圖顯示就比較不容易照成誤會。但如果整棟好幾層樓，但設施只在某一樓呢？</p><p>還有哺乳室也會遇到AED一樣的問題：因為包含在機構室內，所以會有開放時間的限制。嚴謹的tagging方式是否需要以relation包入建物內呢(iD不好操作relation、學習josm又有進入門檻，會降低推廣效力)？還是個別tagging openinghours？先自首，我現在tagging以上室內設施，都沒實作那麼多啦XD 力求在建物平面內精準標出對應位置而已。</p><p></p><p>之前默默觀察過這些室內設施，在大型室內公共場所的分布位置：</p><ul><li>AED比較偏好設置於一樓，可能是利於支援戶外患者，而且一個建物可能只配一個設施。</li>
+<p>這些各種很緊急的事件發生時，我都是衝進確定有哺乳室的場合後，直接找櫃台詢問地點，因為有些哺乳室受管制需拿鑰匙開門，直接找服務台NPC可以一次解兩個任務1.知道地點2.獲得使用許可。</p><p>畢竟分秒必爭，在哺乳室前狂拉門把才發現又要跑去櫃台登記拿鑰匙真的超幹（尤其手上還拎著一個需要緊急處理的小人！）。</p><p>而對於有使用限制的哺乳室，在實際管理上，館方會在哺乳室門上貼告示知會使用者要去櫃台登記方能使用，所以通常是帶人又帶大包小包（重到可以砸死歹徒的育兒包）來到門前才知道被打槍。</p><p>所以mapping服務台也許是母乳地圖可以順帶推廣的？以我個人使用者的經驗來說，有其必要性。不過我的經驗不是現在式，也有可能現今已經慢慢開放，不再有那麼高比例的哺乳室需要得到許可？這點需要請參與者在與台灣母乳協會討論時，更新一下資訊。</p><p></p><p>（以下是mapping討論）</p><p></p><p>我之前思考過，覺得mapping哺乳室的困難點跟飲水機、AED、滅火器會遇到類似的問題：室內定位。從平面位置到垂直位置(樓層)，地圖上顯示的位置都不容易精確，偏偏又是很緊急需要立即知道明確地點並到達使用的設施(哺乳室、AED)。</p><p>如果建物只有單一樓層，地圖顯示就比較不容易照成誤會。但如果整棟好幾層樓，但設施只在某一樓呢？</p><p>還有哺乳室也會遇到AED一樣的問題：因為包含在某個機構室內，所以會有開放時間的限制。嚴謹的tagging方式是否需要以relation包入建物內呢(iD不好操作relation、學習josm又有進入門檻，會降低推廣效力)？還是個別tagging openinghours？先自首，我現在tagging以上室內設施，都沒實作那麼多啦XD 力求在建物平面內精準標出對應位置而已。</p><p></p><p>之前默默觀察過這些室內設施，在大型室內公共場所的分布位置：</p><ul><li>AED比較偏好設置於一樓，可能是利於支援戶外患者，而且一個建物可能只配一個設施。</li>
 <li>但是飲水機就常遇到每層樓都在相同點配置的情況(分布跟廁所很像)</li>
-<li>而哺乳室常會被塞到偏遠角落，所以遇到要使用時，真的要找、要詢問，有地圖會幫助到使用者，但又常被使用許可卡到(我支持同時tagging服務台)。不過哺乳室我也遇過像廁所一樣，是在戶外獨立一間的。這種的在mapping上就不太用擔憂地圖上資訊呈獻的問題。</li>
+<li>而哺乳室常會被塞到偏遠角落，所以遇到要使用時，真的要找、要詢問，有地圖會幫助到使用者，但又常被使用許可卡到(我支持同時tag服務台)。不過哺乳室我也遇過像廁所一樣，是在戶外獨立一間的。這種的在mapping上就不太用擔憂地圖上資訊呈獻的問題。</li>
 <li>至於滅火器，我只有tag過掛在室外走廊的，還沒標住過室內的。</li></ul>
 
 <p>另外提供一個哺乳室的特殊案例：</p><p>一般都是一個場所配一個服務台，但有時也遇到N個服務台，而哺乳室鑰匙又單獨放在某櫃台。</p><ul><li>實例：台中資訊圖書館的哺乳室設在兒童閱覽室(此非正式官方名稱，正名很難記XD)，但是鑰匙是要向兒童室借閱櫃台登記拿取，而非入門大廳的服務櫃台。</li></ul>
