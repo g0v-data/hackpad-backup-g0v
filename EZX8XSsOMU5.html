@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="231"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$EZX8XSsOMU5</title>
+</head>
+<body><h1>Jenkins 持續整合</h1><p></p><ul><li><b>專案開發各個階段如何搭配 CI</b></li></ul>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_EZX8XSsOMU5_p.504963_1446603495528_gitflow.png'/></p><p></p><ul><li><b>github flow (pull request)</b></li></ul>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_EZX8XSsOMU5_p.504963_1446603507187_githubflow.png'/></p><ul><li><b>gitflow with github flow and jenkins</b></li></ul>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_EZX8XSsOMU5_p.504963_1446603518141_gitflowWithCI.jpeg'/></p><p>這跟我們的git + gerrit組合很像。但只有在develop, Release, Master有類似的機制</p><p></p><p>實作</p><ol><li>Build<ol><li>時機<ol><li>daily 建置</li>
+<li>週期性建置</li>
+<li>進行正式機部署時事先建置</li></ol>
+</li></ol>
+</li>
+<li>Test<ol><li>自行定義</li></ol>
+</li>
+<li>Preview<ol><li>自行定義</li></ol>
+</li>
+<li>Release<ol><li>自行定義</li></ol>
+</ol>
+
+</body>
+</html>
