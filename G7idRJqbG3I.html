@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="215"/>
+<meta name="version" content="248"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$G7idRJqbG3I</title>
 </head>
 <body><h1>Hackfoldr 2.0 教學 - 架設自己的 hackfoldr</h1><p>白牌打包</p><p></p><p>只要</p><ul><li>擁有一個頂層網址</li>
@@ -15,8 +15,9 @@
 <p><b>步驟</b></p><p></p><undefined><li>fork github repo</li></undefined>
 <ul><li>到 <a href="https://github.com/hackfoldr/hackfoldr-2.0"></a>https://github.com/hackfoldr/hackfoldr-2.0 按右上角 Fork 按鈕</li></ul>
 
-<undefined><li>修改 github repo 的 CNAME 檔案</li></undefined>
-<ul><li>內容改成你想使用的網址，範例：<a href="https://github.com/hackfoldr/hackfoldr-2.0/blob/master/CNAME"></a>https://github.com/hackfoldr/hackfoldr-2.0/blob/master/CNAME</li></ul>
+<undefined><li>切換到 gh-pages branch</li></undefined>
+<p>以下都在 gh-pages 內操作才有效</p><p></p><undefined><li>修改 github repo 的 CNAME 檔案</li></undefined>
+<ul><li>內容改成你想使用的網址，範例： <a href="https://github.com/hackfoldr/hackfoldr-2.0/blob/gh-pages/CNAME"></a>https://github.com/hackfoldr/hackfoldr-2.0/blob/gh-pages/CNAME</li></ul>
 
 <undefined><li>使用域名管理服務設定網址，例如 amazon 的 router 53</li></undefined>
 <p>設定範例：</p><ul><li>name: hack.etblue.tw.</li>
@@ -36,6 +37,7 @@
 <p><b>等待期間，可先自訂你的 hackfoldr</b></p><ul><li>打開你的 repo，切換到 gh-pages branch</li>
 <li>打開你的 repo 裡的 index.html 檔案，按鉛筆按鈕編輯，畫面會類似這樣 <a href="https://github.com/hackfoldr/hackfoldr-2.0/blob/gh-pages/index.html"></a>https://github.com/hackfoldr/hackfoldr-2.0/blob/gh-pages/index.html</li>
 <li>依樣畫葫蘆做這幾件事情<ul><li><a href='https://github.com/moztw/hackfoldr-moztw/commit/73f712e028f7dd446750dde4aa9e90cda4a48bda'/>設定你的 defult foldr id</a> 重要！請設定自己的預設 foldr，不要直接把 welcome-to-hackfoldr 這份 ethercalc 的資料做掉，不然大家都沒有教學文件可以看啦 &gt;_&lt;</li>
+<li><br/></li>
 <li><a href='https://github.com/moztw/hackfoldr-moztw/commit/a08f238e2e32b61273827943b1d3b4f5f21c67ab'/>設定你的 github repo issue 回報處</a></li>
 <li><a href='https://github.com/moztw/hackfoldr-moztw/commit/ccb57c3541c2ba370161bae7a3683a99a861dfe4'/>設定預設使用的 hackpad 站台</a></li>
 <li><a href='https://github.com/moztw/hackfoldr-moztw/commit/dba706726b0cb0004e74ad9ff5cf9a816367deb8'/>將剛才在 index.html 的修改全數複製到 404.html（直接整份檔案複製貼上即可）</a></li></ul>
