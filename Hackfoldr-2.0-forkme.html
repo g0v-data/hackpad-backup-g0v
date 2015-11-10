@@ -3,35 +3,30 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1409"/>
+<meta name="version" content="1874"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$Hackfoldr-2.0-forkme</title>
 </head>
-<body><h1>Tutorial: Build Your Own Hackfoldr 2.0 Site</h1><p></p><p><b>What is Hackfoldr 2.0</b></p><p></p><p></p><p></p><p></p><p><b>How Hackfoldr 2.0 Works</b></p><p></p><p></p><p></p><p></p><p><b>Benefits of Building Your Own Hackfoldr 2.0 Site</b></p><ul><li>You will be able to customize the default foldr for your domain and let users see your own welcome page at landing.&nbsp;<ul><li>For example, the default foldr of <a href="http://beta.hackfoldr.org/"></a>http://beta.hackfoldr.org/ is &quot;welcome-to-hackfoldr&quot;, which presents documents and tutorials of Hackfoldr 2.0.&nbsp;</li>
+<body><h1>Tutorial: Hosting your own Hackfoldr 2.0</h1><p></p><p><b>What is Hackfoldr 2.0</b></p><p></p><p></p><p></p><p></p><p><b>How Hackfoldr 2.0 Works</b></p><p></p><p></p><p></p><p></p><p><b>Benefits from Hosting your own Hackfoldr</b></p><ul><li>You will be able to use your own domain and customize the landing page.&nbsp;<ul><li>For example, the default foldr of <a href="http://beta.hackfoldr.org/"></a>http://beta.hackfoldr.org/ is &quot;welcome-to-hackfoldr&quot;, which presents documents and tutorials of Hackfoldr 2.0.&nbsp;</li>
 <li>Meanwhile, the default foldr of <a href="http://folder.moztw.org/"></a>http://folder.moztw.org/ is &quot;moztw&quot;, which presents documents and links from the Mozilla Taiwan Community.</li></ul>
 </li>
-<li>You will be able to turn on the hidden shortcut menu and put some useful links in it.<ul><li>For example, (TBD, will take moztw as example)</li></ul>
-</li>
-<li>You will be able to (???? need to figure out what i was talking about...)</li></ul>
+<li>You will be able to enable the hidden shortcut menu to store links.<ul><li>For example, (TBD, will take moztw as example)</li></ul>
+</ul>
 
-<p></p><ul><li>可打開隱藏的快捷選單，把常用連結內建到 hackfoldr 導覽列</li>
-<li>可自訂關連的 hackpad 站台</li></ul>
+<h2>Steps</h2><p>Fork, Customize and Deploy</p><p></p><p><b>Step 0: Getting Started</b></p><p>You will need the following to proceed:</p><ol><li>A domain name</li>
+<li>A github account</li></ol>
 
-<h2>Fork, Customize and Deploy</h2><p></p><p><b>Step 0: Getting Started</b></p><p>You will need the following to proceed:</p><ol><li>a domain name</li>
-<li>a github account</li></ol>
+<p><b>Step 1: Fork Hackfoldr 2.0 repo on GitHub</b></p><ol><li>Go to <a href="https://github.com/hackfoldr/hackfoldr-2.0-forkme"></a>https://github.com/hackfoldr/hackfoldr-2.0-forkme</li>
+<li>Click the top right “fork” button</li></ol>
 
-<p><b>Step 1: Fork Hackfoldr 2.0 on GitHub</b></p><ol><li>login to <a href="https://github.com/"></a>https://github.com/</li>
-<li>go to <a href="https://github.com/hackfoldr/hackfoldr-2.0-forkme"></a>https://github.com/hackfoldr/hackfoldr-2.0-forkme</li>
-<li>click the fork button at top right corner</li></ol>
-
-<p><b>Step 2: Edit CNAME file in gh-pages branch</b></p><ol><li>go to the shiny new github repo you just created by forking</li>
-<li>click the branch button at left top area and select &quot;gh-pages&quot;</li>
-<li>click the CNAME file at root directory</li>
+<p><b>Step 2: Edit CNAME file in gh-pages branch</b></p><ol><li>Go to your shiny new hackfoldr repo</li>
+<li>Switch to &quot;gh-pages&quot; branch with branch dropdown button at top left&nbsp;</li>
+<li>click “CNAME” file in root directory</li>
 <li>click the pencil button at right top area to edit the CNAME file</li>
-<li>put your domain in the CNAME file</li><ul><li>make sure the CNAME file contains one single line only</li>
+<li>put your domain in the CNAME file</li><ul><li>make sure the CNAME file contains only single line</li>
 <li>example: <a href="https://github.com/moztw/hackfoldr-moztw/blob/gh-pages/CNAME"></a>https://github.com/moztw/hackfoldr-moztw/blob/gh-pages/CNAME</li></ul>
 </ol>
 
-<p><b>Step 3: Set Up Your DNS</b></p><p>Take Amazon Router 53 for example:</p><ul><li>name: _YOUR_DOMAIN_NAME_<ul><li>e.g. folder.moztw.org</li></ul>
+<p><b>Step 3: Set up your DNS</b></p><p>Add a CNAME record to your domain and set the destination to “_YOUR_GITHUB_ACCOUNT_.github.io”</p><p></p><p>Example for Amazon Router 53:</p><ul><li>name: _YOUR_DOMAIN_NAME_<ul><li>e.g. folder.moztw.org</li></ul>
 </li>
 <li>type: CNAME</li>
 <li>value: _YOUR_GITHUB_ACCOUNT_.github.io<ul><li>e.g. moztw.github.io</li></ul>
@@ -40,13 +35,11 @@
 <li>health check id: -</li>
 <li>ttl: 300</li></ul>
 
-<p>Or take Cloudflare for example:</p><ul><li>CNAME: _YOUR_GITHUB_ACCOUNT_.github.io<ul><li>e.g. etblue.github.io</li></ul>
+<p>Example for Cloudflare:</p><ul><li>CNAME: _YOUR_GITHUB_ACCOUNT_.github.io<ul><li>e.g. etblue.github.io</li></ul>
 </li>
-<li>Page Rule: <a href="http://etblue.github.io/+"></a><a href='http://etblue.github.io/+'/>http://etblue.github.io/+</a><a href='http://etblue.github.io/+forward%E5%88%B0'/> </a>forward到 <a href="http://etblue.github.io"></a><a href='http://etblue.github.io/'/>http://etblue.github.io</a></li></ul>
-<p>Reference: Cloudflare Guide <a href="http://blog.cloudflare.com/introducing-pagerules-url-forwarding/"></a><a href='http://blog.cloudflare.com/introducing-pagerules-url-forwarding/'/>http://blog.cloudflare.com/introducing-pagerules-url-forwarding/</a></p><p></p><undefined><li>等待域名生效</li></undefined>
-<ul><li>一般來說不會太久，十分鐘之類的，除非 TTL 設定成超長時間</li></ul>
-
-<p><b>等待期間，可先自訂你的 hackfoldr</b></p><ul><li>打開你的 repo，切換到 gh-pages branch</li>
+<li>Page Rule: <a href="http://etblue.github.io/+"></a><a href='http://etblue.github.io/+'/>http://etblue.github.io/+</a> forward <a href="http://etblue.github.io"></a><a href='http://etblue.github.io/'/>http://etblue.github.io</a></li></ul>
+<p>Reference: Cloudflare Guide <a href="http://blog.cloudflare.com/introducing-pagerules-url-forwarding/"></a><a href='http://blog.cloudflare.com/introducing-pagerules-url-forwarding/'/>http://blog.cloudflare.com/introducing-pagerules-url-forwarding/</a></p><p></p><undefined><li><b>Wait for the domain to be active</b></li></undefined>
+<p>It shouldn&rsquo;t be too long for your domain to be active.</p><p></p><p><b>Step 4: Customize your Hackfoldr</b></p><ul><li>打開你的 repo，切換到 gh-pages branch</li>
 <li>打開你的 repo 裡的 index.html 檔案，按鉛筆按鈕編輯，畫面會類似這樣 <a href="https://github.com/hackfoldr/hackfoldr-2.0/blob/gh-pages/index.html"></a><a href='https://github.com/hackfoldr/hackfoldr-2.0/blob/gh-pages/index.html'/>https://github.com/hackfoldr/hackfoldr-2.0/blob/gh-pages/index.html</a></li>
 <li>依樣畫葫蘆做這幾件事情<ul><li><a href='https://github.com/moztw/hackfoldr-moztw/commit/73f712e028f7dd446750dde4aa9e90cda4a48bda'/>設定你的 defult foldr id</a> 重要！請設定自己的預設 foldr，不要直接把 welcome-to-hackfoldr 這份 ethercalc 的資料做掉，不然大家都沒有教學文件可以看啦 &gt;_&lt;</li>
 <li>（複製 ethercalc template 過來）</li>
