@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1223"/>
+<meta name="version" content="1408"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$Hackfoldr-2.0-forkme</title>
 </head>
 <body><h1>Tutorial: Build Your Own Hackfoldr 2.0 Site</h1><p></p><p><b>What is Hackfoldr 2.0</b></p><p></p><p></p><p></p><p></p><p><b>How Hackfoldr 2.0 Works</b></p><p></p><p></p><p></p><p></p><p><b>Benefits of Building Your Own Hackfoldr 2.0 Site</b></p><ul><li>You will be able to customize the default foldr for your domain and let users see your own welcome page at landing.&nbsp;<ul><li>For example, the default foldr of <a href="http://beta.hackfoldr.org/"></a>http://beta.hackfoldr.org/ is &quot;welcome-to-hackfoldr&quot;, which presents documents and tutorials of Hackfoldr 2.0.&nbsp;</li>
@@ -31,19 +31,19 @@
 <li>example: <a href="https://github.com/moztw/hackfoldr-moztw/blob/gh-pages/CNAME"></a>https://github.com/moztw/hackfoldr-moztw/blob/gh-pages/CNAME</li></ul>
 </ol>
 
-<p></p><undefined><li>使用域名管理服務設定網址，例如 amazon 的 router 53</li></undefined>
-<p>設定範例：</p><ul><li>name: hack.etblue.tw.</li>
+<p><b>Step 3: Set Up Your DNS</b></p><p></p><p>Take Amazon Router 53 for example:</p><ul><li>name: _YOUR_DOMAIN_NAME_<ul><li>e.g. folder.moztw.org</li></ul>
+</li>
 <li>type: CNAME</li>
-<li>value: etblue.github.io</li>
+<li>value: _YOUR_GITHUB_ACCOUNT_.github.io<ul><li>e.g. moztw.github.io</li></ul>
+</li>
 <li>evaluate target: -</li>
 <li>health check id: -</li>
 <li>ttl: 300</li></ul>
-<p>假若是cloudflare：</p><ul><li>設定Cname 到 etblue.github.io</li>
-<li>設定Page Rule，<ul><li><a href="http://etblue.github.io/+"></a><a href='http://etblue.github.io/+'/>http://etblue.github.io/+</a><a href='http://etblue.github.io/+forward%E5%88%B0'/> </a>forward到 <a href="http://etblue.github.io"></a><a href='http://etblue.github.io/'/>http://etblue.github.io</a></li>
-<li>Cloudflare guide: <a href="http://blog.cloudflare.com/introducing-pagerules-url-forwarding/"></a><a href='http://blog.cloudflare.com/introducing-pagerules-url-forwarding/'/>http://blog.cloudflare.com/introducing-pagerules-url-forwarding/</a></li></ul>
-</ul>
 
-<undefined><li>等待域名生效</li></undefined>
+<p>Or take Cloudflare for example:</p><ul><li>CNAME: _YOUR_GITHUB_ACCOUNT_.github.io<ul><li>e.g. etblue.github.io</li></ul>
+</li>
+<li>Page Rule: <a href="http://etblue.github.io/+"></a><a href='http://etblue.github.io/+'/>http://etblue.github.io/+</a><a href='http://etblue.github.io/+forward%E5%88%B0'/> </a>forward到 <a href="http://etblue.github.io"></a><a href='http://etblue.github.io/'/>http://etblue.github.io</a></li></ul>
+<p>Reference: Cloudflare Guide <a href="http://blog.cloudflare.com/introducing-pagerules-url-forwarding/"></a><a href='http://blog.cloudflare.com/introducing-pagerules-url-forwarding/'/>http://blog.cloudflare.com/introducing-pagerules-url-forwarding/</a></p><p></p><undefined><li>等待域名生效</li></undefined>
 <ul><li>一般來說不會太久，十分鐘之類的，除非 TTL 設定成超長時間</li></ul>
 
 <p><b>等待期間，可先自訂你的 hackfoldr</b></p><ul><li>打開你的 repo，切換到 gh-pages branch</li>
