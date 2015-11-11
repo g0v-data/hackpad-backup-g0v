@@ -3,16 +3,18 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1874"/>
+<meta name="version" content="1998"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$Hackfoldr-2.0-forkme</title>
 </head>
-<body><h1>Tutorial: Hosting your own Hackfoldr 2.0</h1><p></p><p><b>What is Hackfoldr 2.0</b></p><p></p><p></p><p></p><p></p><p><b>How Hackfoldr 2.0 Works</b></p><p></p><p></p><p></p><p></p><p><b>Benefits from Hosting your own Hackfoldr</b></p><ul><li>You will be able to use your own domain and customize the landing page.&nbsp;<ul><li>For example, the default foldr of <a href="http://beta.hackfoldr.org/"></a>http://beta.hackfoldr.org/ is &quot;welcome-to-hackfoldr&quot;, which presents documents and tutorials of Hackfoldr 2.0.&nbsp;</li>
-<li>Meanwhile, the default foldr of <a href="http://folder.moztw.org/"></a>http://folder.moztw.org/ is &quot;moztw&quot;, which presents documents and links from the Mozilla Taiwan Community.</li></ul>
+<body><h1>Tutorial: Hosting your own Hackfoldr 2.0</h1><p><i>Other languages:</i></p><ul><li>中文版 (zh) - <a href="http://g0v.hackpad.com/Hackfoldr-2.0-hackfoldr-G7i"></a>http://g0v.hackpad.com/Hackfoldr-2.0-hackfoldr-G7i…</li></ul>
+
+<p><b>What is Hackfoldr 2.0</b></p><p></p><p><b>How Hackfoldr 2.0 Works</b></p><p></p><p><b>Benefits of Hosting your own Hackfoldr</b></p><ul><li>Use your own domain and customize the landing page.&nbsp;<ul><li>For example, the default foldr of <a href="http://beta.hackfoldr.org/"></a>http://beta.hackfoldr.org/ is &quot;welcome-to-hackfoldr&quot;, which presents tutorials document of Hackfoldr 2.0.&nbsp;</li>
+<li>Meanwhile, the default foldr of <a href="http://folder.moztw.org/"></a>http://folder.moztw.org/ is &quot;moztw&quot;, which presents document for Mozilla Taiwan Community.</li></ul>
 </li>
-<li>You will be able to enable the hidden shortcut menu to store links.<ul><li>For example, (TBD, will take moztw as example)</li></ul>
+<li>You will be able to enable the hidden shortcut menu for storing links.<ul><li>For example, (TBD, will take moztw as example)</li></ul>
 </ul>
 
-<h2>Steps</h2><p>Fork, Customize and Deploy</p><p></p><p><b>Step 0: Getting Started</b></p><p>You will need the following to proceed:</p><ol><li>A domain name</li>
+<h2>Steps</h2><p><i>Fork &amp; Customize</i></p><p></p><p><b>Step 0: Getting Started</b></p><p>You will need the following to proceed:</p><ol><li>A domain name</li>
 <li>A github account</li></ol>
 
 <p><b>Step 1: Fork Hackfoldr 2.0 repo on GitHub</b></p><ol><li>Go to <a href="https://github.com/hackfoldr/hackfoldr-2.0-forkme"></a>https://github.com/hackfoldr/hackfoldr-2.0-forkme</li>
@@ -38,8 +40,8 @@
 <p>Example for Cloudflare:</p><ul><li>CNAME: _YOUR_GITHUB_ACCOUNT_.github.io<ul><li>e.g. etblue.github.io</li></ul>
 </li>
 <li>Page Rule: <a href="http://etblue.github.io/+"></a><a href='http://etblue.github.io/+'/>http://etblue.github.io/+</a> forward <a href="http://etblue.github.io"></a><a href='http://etblue.github.io/'/>http://etblue.github.io</a></li></ul>
-<p>Reference: Cloudflare Guide <a href="http://blog.cloudflare.com/introducing-pagerules-url-forwarding/"></a><a href='http://blog.cloudflare.com/introducing-pagerules-url-forwarding/'/>http://blog.cloudflare.com/introducing-pagerules-url-forwarding/</a></p><p></p><undefined><li><b>Wait for the domain to be active</b></li></undefined>
-<p>It shouldn&rsquo;t be too long for your domain to be active.</p><p></p><p><b>Step 4: Customize your Hackfoldr</b></p><ul><li>打開你的 repo，切換到 gh-pages branch</li>
+<p>Reference: Cloudflare Guide <a href="http://blog.cloudflare.com/introducing-pagerules-url-forwarding/"></a><a href='http://blog.cloudflare.com/introducing-pagerules-url-forwarding/'/>http://blog.cloudflare.com/introducing-pagerules-url-forwarding/</a></p><p></p><undefined><li><b>Be patient and wait for the domain to be active</b></li></undefined>
+<p>It shouldn&rsquo;t be too long for your domain to be ready, typically minimun then 10 mins.</p><p></p><p><b>Step 4: Customize your Hackfoldr</b></p><ul><li>打開你的 repo，切換到 gh-pages branch</li>
 <li>打開你的 repo 裡的 index.html 檔案，按鉛筆按鈕編輯，畫面會類似這樣 <a href="https://github.com/hackfoldr/hackfoldr-2.0/blob/gh-pages/index.html"></a><a href='https://github.com/hackfoldr/hackfoldr-2.0/blob/gh-pages/index.html'/>https://github.com/hackfoldr/hackfoldr-2.0/blob/gh-pages/index.html</a></li>
 <li>依樣畫葫蘆做這幾件事情<ul><li><a href='https://github.com/moztw/hackfoldr-moztw/commit/73f712e028f7dd446750dde4aa9e90cda4a48bda'/>設定你的 defult foldr id</a> 重要！請設定自己的預設 foldr，不要直接把 welcome-to-hackfoldr 這份 ethercalc 的資料做掉，不然大家都沒有教學文件可以看啦 &gt;_&lt;</li>
 <li>（複製 ethercalc template 過來）</li>
