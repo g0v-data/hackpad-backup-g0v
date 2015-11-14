@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="3123"/>
+<meta name="version" content="3126"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$bFFqBpPmcz0</title>
 </head>
 <body><h1>注音標音OpenType Font計畫</h1><ul><li>提案人：董福興</li>
@@ -54,6 +54,7 @@
 <li>當然，但無論 &lt;rt&gt; 怎麼標，字型照著顯示即可，標在後方的不要移到前方。</li>
 <li>意思是「˙ㄧㄚ」跟「ㄧㄚ˙」顯示結果會不一樣嗎？</li>
 <li>目前初步的结论应该是这样的，不过如果有充分的理由证明由渲染引擎重排更好的话，也可以再来讨论一下。</li></ul>
+<ol><li><br/></li></ol>
 
 <h2>技術細節</h2><ul><li>ruby-position: inter-character 是一種橫中直的概念，瀏覽器對於 &lt;rt&gt; 的內容必須視為直排處理。<ul><li>e.g. 解釋 vmtx 所規定的直排坐標，套用 vert/vrt2/vkrn 等直排特有的 feature</li></ul>
 </li>
