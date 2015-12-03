@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="3119"/>
+<meta name="version" content="3443"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$Hackfoldr-2.0-forkme</title>
 </head>
 <body><h1>Tutorial: Hosting your own Hackfoldr 2.0</h1><p><i>In other languages:</i></p><ul><li>中文版 (zh) - <a href="http://g0v.hackpad.com/Hackfoldr-2.0-hackfoldr-G7i"></a>http://g0v.hackpad.com/Hackfoldr-2.0-hackfoldr-G7i…</li></ul>
@@ -39,46 +39,14 @@
 <li>Page Rule: <a href="http://etblue.github.io/+"></a><a href='http://etblue.github.io/+'/>http://etblue.github.io/+</a> forward <a href="http://etblue.github.io"></a><a href='http://etblue.github.io/'/>http://etblue.github.io</a><ul><li>Reference - <a href="http://blog.cloudflare.com/introducing-pagerules-url-forwarding/"></a><a href='http://blog.cloudflare.com/introducing-pagerules-url-forwarding/'/>http://blog.cloudflare.com/introducing-pagerules-url-forwarding/</a></li></ul>
 </ul>
 
-<undefined><li><b>Be patient and wait for the domain to be active</b></li></undefined>
-<p>It shouldn&rsquo;t be too long for your domain to be ready, typically no longer then 10 mins.</p><p></p><p><b>Step 4: Customize your Hackfoldr</b></p><ol><li>Clone the <a href='https://ethercalc.org/hackfolder_template'/>template sheet</a> into new ethercalc sheet and named whatever SLUG you want</li>
-<li>Switch to gh-pages branch of your fork repo</li>
-<li>Edit index.html file (click on pencil) and adjust the following settings</li><ul><li>Change the linked ethercalc SLUG on <a href='https://github.com/hackfoldr/hackfoldr-2.0-forkme/blob/gh-pages/index.html#L3'/>line 3</a>&nbsp;</li>
+<p><b>Step 4: Customize your Hackfoldr</b></p><ol><li>Clone the <a href='https://ethercalc.org/hackfolder_template'/>template sheet</a> into new ethercalc sheet and named whatever SLUG you want</li>
+<li>Switch to gh-pages branch of your fork repo</li></ol>
+<ul style="list-style: none;"><li>Thanks Github for their wonderful <a href='https://help.github.com/articles/user-organization-and-project-pages/#project-pages'/>Project Page</a> feature, that we don&rsquo;t need to rent a server for hosting.</li></ul>
+<ol><li>Edit index.html file (click on pencil) and adjust the following settings</li><ul><li>Change the linked ethercalc SLUG on <a href='https://github.com/hackfoldr/hackfoldr-2.0-forkme/blob/gh-pages/index.html#L3'/>line 3</a>&nbsp;</li>
 <li>Adjsut the drop-down menu as you wish in &quot;&lt;div class=&rsquo;menu&rsquo;&gt;&quot;</li>
-<li>If you link,&nbsp;</li>
-<li><a href='https://github.com/moztw/hackfoldr-moztw/commit/ccb57c3541c2ba370161bae7a3683a99a861dfe4'/>設定預設使用的 hackpad 站台</a></li>
-<li><a href='https://github.com/moztw/hackfoldr-moztw/commit/dba706726b0cb0004e74ad9ff5cf9a816367deb8'/>將剛才在 index.html 的修改全數複製到 404.html（直接整份檔案複製貼上即可）</a></li></ul>
-</li>
-<li>注意這裡是用github 的project page 而不是user page 或organization page，所以顯示成page 的是gh-pages而不是master</li></ol>
-
-<h2>Development</h2><p></p><p><b>使用 master branch 開發</b></p><p></p><p>如果你想要用 jade, sass 以比較有效率的方式編輯源碼，可回 master branch，但就需要另外設定開發環境。有兩種環境同時都可以作用：</p><p></p><undefined><li>前製作業</li></undefined>
-<p>不管使用以下哪種開發環境，都要安裝 node.js <u><a href='http://nodejs.org/'/>node</a></u></p><p></p><undefined><li>開發環境一：fire.app</li></undefined>
-<p>可參考&nbsp;<a href='https://g0v.hackpad.com/FK7eBR4BdAj'/> Fire.app Jade Windows&nbsp;</a></p><ol><li>安裝 fire.app</li>
-<li>安裝 jade</li></ol>
-
-<undefined><li>開發環境二：gulp.js</li></undefined>
-<ol><li>安裝 ruby</li><ul><li>mac / linux</li></ul>
+<li>If you would like to use hackpad page generate feature, adjust default hackpad site on <a href='https://github.com/hackfoldr/hackfoldr-2.0-forkme/blob/gh-pages/index.html#L644'/>line 644</a>&nbsp;</li>
+<li>Clone everything from index.html to 404.html</li></ul>
 </ol>
-<ul class="code"><li>rvm install 2.0.0</li><ul><li>windows</li></ul>
-</ul>
-<ul class="code"><li><a href='http://rubyinstaller.org/'/>rubyuinstaller</a></li></ul>
-<ol><li>安裝 compass</li></ol>
-<ul class="code"><li>gem install compass</li></ul>
-<ol><li>安裝其他專案需要的東西</li></ol>
-<ul class="code"><li>npm i</li></ul>
-<ol><li>啟動 local server</li></ol>
-<ul class="code"><li>npm start</li></ul>
-<ol><li>預覽</li></ol>
-<ul class="code"><li><a href="http://localhost:3000/"></a><a href='http://localhost:3000/'/>http://localhost:3000/</a></li></ul>
 
-<p><b>在 master branch 開發時使用自動 deploy</b></p><p></p><p>在 master 開發完後需要 deploy 到 gh-pages 才會生效。</p><p></p><p>deploy 的方法有兩種：</p><ol><li>在 master 產生出 .html .css 後手動下 git 指令 merge 到 gh-pages（it works，但不推薦）</li>
-<li>讓程式自動幫我們跑 deploy 指令（it works smart，推薦）</li></ol>
-
-<p>兩種 deploy 方式中，自動 deploy 又分兩種：</p><ol><li>半自動 deploy script</li>
-<li>全自動 travis ci</li></ol>
-<p>目前 hackfoldr 2.0 是採用 travis ci 做全自動 deploy，但筆者不會用，所以只介紹半自動 script ...</p><p></p><undefined><li>半自動 deploy script</li></undefined>
-<p>windows</p><ul class="code"><li>deploy.bat</li></ul>
-<p>mac</p><ul class="code"><li>deploy.sh</li></ul>
-
-<undefined><li>全自動 travis ci</li></undefined>
-<p>想要使用 travis ci 的話，repo 裡的 travis ci 的 key 要改成你自己的才會生效。替你的 repo 設定 travis ci 需要做以下步驟：</p><p>參考comment 生成key</p><p><a href="https://github.com/hackfoldr/hackfoldr-2.0/blob/master/.travis/after_success.sh"></a><a href='https://github.com/hackfoldr/hackfoldr-2.0/blob/master/.travis/after_success.sh'/>https://github.com/hackfoldr/hackfoldr-2.0/blob/master/.travis/after_success.sh</a></p><p></p><p>( <a href='https://g0v.hackpad.com/ep/profile/v6ozRKwVLwr'/>Lee</a> 待補)</p><p></p></body>
+<p><b>You&rsquo;ve done all the work!&nbsp;</b></p><p>Be patient and wait for everything (especially the domain name record) to be active. It shouldn&rsquo;t be too long for your hackfoldr to be ready, typically no longer then 10 mins.</p><p></p><h2>Development</h2><p>Please refer to <a href='/Developing-Hackfoldr-2.0-nIlIQRMVfyc'/>this docs</a> (in Chinese for now) or <a href='https://github.com/hackfoldr/hackfoldr-2.0-forkme/blob/master/README.md'/>README</a> for contributing.</p><p></p></body>
 </html>
