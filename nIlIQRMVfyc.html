@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="22"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$nIlIQRMVfyc</title>
+</head>
+<body><h1>Developing Hackfoldr 2.0</h1><p><b>使用 master branch 開發</b></p><p></p><p>如果你想要用 jade, sass 以比較有效率的方式編輯源碼，可回 master branch，但就需要另外設定開發環境。有兩種環境同時都可以作用：</p><p></p><undefined><li>前製作業</li></undefined>
+<p>不管使用以下哪種開發環境，都要安裝 node.js <u><a href='http://nodejs.org/'/>node</a></u></p><p></p><undefined><li>開發環境一：fire.app</li></undefined>
+<p>可參考&nbsp;<a href='https://g0v.hackpad.com/FK7eBR4BdAj'/> Fire.app Jade Windows&nbsp;</a></p><ol><li>安裝 fire.app</li>
+<li>安裝 jade</li></ol>
+
+<undefined><li>開發環境二：gulp.js</li></undefined>
+<ol><li>安裝 ruby</li><ul><li>mac / linux</li></ul>
+</ol>
+<ul class="code"><li>rvm install 2.0.0</li><ul><li>windows</li></ul>
+</ul>
+<ul class="code"><li><a href='http://rubyinstaller.org/'/>rubyuinstaller</a></li></ul>
+<ol><li>安裝 compass</li></ol>
+<ul class="code"><li>gem install compass</li></ul>
+<ol><li>安裝其他專案需要的東西</li></ol>
+<ul class="code"><li>npm i</li></ul>
+<ol><li>啟動 local server</li></ol>
+<ul class="code"><li>npm start</li></ul>
+<ol><li>預覽</li></ol>
+<ul class="code"><li><a href="http://localhost:3000/"></a><a href='http://localhost:3000/'/>http://localhost:3000/</a></li></ul>
+
+<p><b>在 master branch 開發時使用自動 deploy</b></p><p></p><p>在 master 開發完後需要 deploy 到 gh-pages 才會生效。</p><p></p><p>deploy 的方法有兩種：</p><ol><li>在 master 產生出 .html .css 後手動下 git 指令 merge 到 gh-pages（it works，但不推薦）</li>
+<li>讓程式自動幫我們跑 deploy 指令（it works smart，推薦）</li></ol>
+
+<p>兩種 deploy 方式中，自動 deploy 又分兩種：</p><ol><li>半自動 deploy script</li>
+<li>全自動 travis ci</li></ol>
+<p>目前 hackfoldr 2.0 是採用 travis ci 做全自動 deploy，但筆者不會用，所以只介紹半自動 script ...</p><p></p><undefined><li>半自動 deploy script</li></undefined>
+<p>windows</p><ul class="code"><li>deploy.bat</li></ul>
+<p>mac</p><ul class="code"><li>deploy.sh</li></ul>
+
+<undefined><li>全自動 travis ci</li></undefined>
+<p>想要使用 travis ci 的話，repo 裡的 travis ci 的 key 要改成你自己的才會生效。替你的 repo 設定 travis ci 需要做以下步驟：</p><p>參考comment 生成key</p><p><a href="https://github.com/hackfoldr/hackfoldr-2.0/blob/master/.travis/after_success.sh"></a><a href='https://github.com/hackfoldr/hackfoldr-2.0/blob/master/.travis/after_success.sh'/>https://github.com/hackfoldr/hackfoldr-2.0/blob/master/.travis/after_success.sh</a></p><p></p><p>( <a href='https://g0v.hackpad.com/ep/profile/v6ozRKwVLwr'/>Lee</a> 待補)</p><p></p></body>
+</html>
