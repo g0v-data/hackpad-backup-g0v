@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="2898"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$kdSkZHKiwT0</title>
+</head>
+<body><h1>視覺化分享會 1 (12/5) - 筆記</h1><h2>The Eyes Have It: A Task by Data Type Taxonomy for Information Visualizations / 欣穎</h2><p>資料類型</p><ul><li>1D / 2D / 3D / Temporal / Multi-dimensional / Tree / Network</li></ul>
+
+<p>互動類型</p><ul><li>Overview / Zoom / Filter / Details-on-demand / Relate / History / Extract</li></ul>
+
+<p>討論</p><ul><li>以 foundi 房地資訊站為例與論文對話</li>
+<li>資訊探索本身就是一個過程，所以保持歷史的行動、允許使用者折回是重要的。然而，大多數圖表未能提估這項要求（用戶、工程師權限問題）</li></ul>
+
+<p>小結</p><ul><li>區分資料圖表的資料類型做分類</li>
+<li>把資訊圖表中的功能，並陳述對這些功能的建議做法</li>
+<li>放在當代檢視<ul><li>功能設計的不同考量：需求導向 or 資料、平台、技術導向的功能設計</li></ul>
+</li>
+<li>研究資訊圖表原型的用意<ul><li>成功的商業產品：共同具備之功能</li>
+<li>產生吸引力：迅速提供資訊，並且允許使用者探勘（降低參與門檻）</li>
+<li>充分發揮效果：使用新型態的資料結構、高解析度螢幕、支援快速資料檢索、使用專門的資料結構和平行運算技術、使用者培訓</li></ul>
+</ul>
+
+<p>問題討論</p><ul><li>作者有說為什麼這樣做比較好嗎？<ul><li>作者引用國外作品做為佐證。透過「找出共通點」的方式給出建議。</li></ul>
+</ul>
+
+<h2>How NOT to lie with Visualization / 妤庭</h2><ul><li><a href='http://www.slideshare.net/HazelYutingWei/how-not-to-lie-with-visualization'/>簡報在這裡</a></li>
+<li>主要討論：顏色在複雜的資訊視覺化中會有什麼影響呢？如何善用「顏色」這個變因，讓資料更容易被理解？</li>
+<li>1996，有點久以前的論文</li>
+<li>慣用的顏色跟生理感官衝突</li></ul>
+
+<ul><li>PRAVDA：以認知為基礎的資料視覺清晰化架構</li>
+<li>可以根據下列四項考量進行圖表與顏色的呈現<ul><li>data type</li>
+<li>data spatial frequency</li>
+<li>visiualization task</li>
+<li>other design choices made by the user</li></ul>
+</ul>
+
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_kdSkZHKiwT0_p.61102_1449282010284_螢幕快照 2015-12-05 10.19.56.png'/></p><ul><li>左上：紅色應該是最重要的，但是大家比較容易注意到綠色</li>
+<li>左下：將區域勾勒出來</li></ul>
+
+<ul><li>右上：呈現具可信度的資料架構</li>
+<li>右下：吸引讀者目光在特定區域</li></ul>
+
+<p>圖表數據形式如何影響你的呈現結果？<a href='http://www.usablestats.com/lessons/noir'/>ref</a></p><ul><li>nominal data：refers to categorically discrete data such as name of your school</li>
+<li>ordinal data</li>
+<li>interval data：</li>
+<li>ratio data</li></ul>
+
+<p>Spatial Frequency <a href='https://www.cs.ubc.ca/~tmm/courses/533-07/readings/pravda/figure2.jpg'/>Figure 2</a></p><ul><li>明度高低（黑 -&nbsp; 白）：適用 high spatial frequency</li>
+<li>飽和度高低：適用 low spatial frequency</li>
+<li>彩度高低：適用 low spatial frequency</li>
+<li>傅立葉轉換：<ul><li>比較尖銳的 - 高頻 high spatial frequency、細節多</li>
+<li>比較模糊的 - 低頻 low spatial frequency、細節少</li></ul>
+</ul>
+
+<p>適當的數值分類設定很重要 <a href='https://www.cs.ubc.ca/~tmm/courses/533-07/readings/pravda/figure3.jpg'/>Figure 3</a></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_kdSkZHKiwT0_p.61102_1449283241846_螢幕快照 2015-12-05 10.40.25.png'/></p><ul><li>low spatial frequency 呈現細緻數據</li>
+<li>high spatial frequency 太多會造成視覺混亂<ul><li>上面那張很像是下面那張的局部放大感</li></ul>
+</ul>
+
+<p>加上標記引導使用者看重要的地方 <a href='https://www.cs.ubc.ca/~tmm/courses/533-07/readings/pravda/figure4.gif'/>Figure 4</a></p><p></p><p>重視圖表的比較性 <a href='https://www.cs.ubc.ca/~tmm/courses/533-07/readings/pravda/truevis.htm'/>Figure 5</a></p><p></p><p>問題討論</p><ul><li>一開始做的實驗作者是如何討論的？<ul><li>他並沒有說什麼顏色是最適合的，討論的重點是太多的顏色會分散使用者的注意力</li></ul>
+</ul>
+
+<p></p><h2>Graphical Perception: Theory, Experimentation, and Application to the Development of Graphical Methods / Kirby</h2><ul><li>&quot;visual encoding&quot;</li>
+<li>就像一般的科學一樣，資料視覺化也需要科學的基礎。本篇探究資料覺化最基本的元素。</li></ul>
+
+<ul><li>elementary perceptual tasks</li></ul>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_kdSkZHKiwT0_p.61102_1449283500250_螢幕快照 2015-12-05 10.44.48.png'/></p><p></p><p>常見的圖表有哪些元素？</p><ul><li>散布圖：共同軸上的位置比較</li>
+<li>圓餅圖：角度、面積</li>
+<li>長條圖：長度、位置、面積</li>
+<li>推積長條圖：最下面是比位置，上面是比長度</li></ul>
+
+<p></p><ul><li>散布圖除了位置之外，還有「方向」，可以看出趨勢（e.g. 完全正相關）</li>
+<li>體積圖的混淆：要用長度？還是面積？還是體積去判斷數據？</li></ul>
+
+<p></p><p>容易比較的順序（最容易 -&gt; 最難）</p><ul><li>有對其的軸 位置</li>
+<li>沒有對齊的軸</li>
+<li>長度 length / direction / angle<ul><li>why 沒有對齊的軸 比 長度更好比較？<ul><li>做一樣長的外框，即使位置不同也容易比較。Weber&rsquo;s Law 短的東西容易比較，外框會出現相對短的東西。</li>
+<li>Stevens 1975：<ul><li>（最精確）長度&nbsp;&nbsp; 面積&nbsp;&nbsp; 體積（最不精確）</li></ul>
+</ul>
+</ul>
+</ul>
+
+<ul><li>在共同軸上，位置越近，越容易看得精確</li>
+<li>圓餅圖的使用時機：只有兩個數值時</li>
+<li>用推積長條圖不如用分組的點圖</li></ul>
+
+<ul><li>curve diff：用面積表示騙人騙很大</li></ul>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_kdSkZHKiwT0_p.61102_1449284702345_螢幕快照 2015-12-05 11.04.30.png'/></p><p></p><ul><li>面積容易有 bias</li></ul>
+
+<ul><li>網格：網格大的時候，會分不出來差異，覺得是同一群的，建議用長條圖或分組。我們對「一半/四分之一」的感受比較明顯</li></ul>
+
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_kdSkZHKiwT0_p.61102_1449285299871_螢幕快照 2015-12-05 11.14.34.png'/></p><p></p><ul><li>建議不要用長條圖的時機：減少圖表密度、不需要使用者看到很精確的數據差異，而是希望看到概觀的時候。例如如果下面這個全部換成長條圖，可能會很擠。</li></ul>
+
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_kdSkZHKiwT0_p.61102_1449285692887_螢幕快照 2015-12-05 11.21.08.png'/></p><p></p><ul><li>總結各種元素：<ul><li>（不精確）顏色 體積 面積 長度 位置（精確）</li>
+<li>有時後不一定是用最精確的，看設計需要跟目的</li></ul>
+</ul>
+
+<p></p><p></p><h2>Animated Transitions in Statistical Data Graphics / Annie</h2><ul><li>圖表的動態過場<ul><li>動態過場會讓使用者比較 engaging，但是也是雙面刃，用得太過，反而讓使用者分心</li>
+<li>大綱<ul><li>探究過場種類</li>
+<li>使用 DynaVis visualization framework</li>
+<li>結果: stage animation &gt; animation ( 強硬的 ) &gt; static ( ! )</li></ul>
+</li></ul>
+</li>
+<li>什麼是 stage animation？<ul><li>一步一步來，例如：先換位置、再換形狀</li>
+<li>比較順的方式</li>
+<li>跟一般animation不同點在於視覺感受較不強烈</li></ul>
+</ul>
+
+<ul><li>過場類型 ( Transition Types )<ul><li>View Transformation / 視點的轉換 - 放大縮小平移</li></ul>
+<ul class="comment"><li>使用同一個 scale，看不同的 domain&nbsp;</li>
+<li><a href="http://bl.ocks.org/mbostock/1667367"></a>http://bl.ocks.org/mbostock/1667367</li></ul>
+<ul><li>Substrate Transformation</li></ul>
+<ul class="comment"><li>直接更改 scale 的方式，例如魚眼</li>
+<li><a href="http://bl.ocks.org/mbostock/3711652"></a>http://bl.ocks.org/mbostock/3711652</li></ul>
+<ul><li>filtering / 過濾 ( 暗亮 / 消失出現 )</li></ul>
+<ul class="comment"><li><a href="http://mbostock.github.io/d3/talk/20111116/iris-splom.html"></a>http://mbostock.github.io/d3/talk/20111116/iris-splom.html</li></ul>
+<ul><li>Ordering/順序</li></ul>
+</ul>
+<ul class="comment"><li><a href="http://bl.ocks.org/mbostock/3885705"></a>http://bl.ocks.org/mbostock/3885705</li><ul><li>timestep - 隨著時間轉變</li>
+<li>Visualization Change - 大變 ( 圓餅變長條 )</li></ul>
+</ul>
+<ul class="comment"><li><a href="http://bl.ocks.org/mbostock/1256572"></a><a href='http://bl.ocks.org/mbostock/1256572'/>http://bl.ocks.org/mbostock/1256572</a></li><ul><li>Data Schema Change - 同樣的視覺呈現，但增加/減少呈現的資料</li></ul>
+</ul>
+<ul class="comment"><li><a href="https://www.jasondavies.com/coffee-wheel/"></a>https://www.jasondavies.com/coffee-wheel/</li></ul>
+<ul><li>設計需要考慮的東西<ul><li>Congruce/ 一致性 and apprenshension (?)<ul><li>(TBF)</li>
+<li>max predictability</li>
+<li>use simple transition</li>
+<li>use staging for complex transitions ( 複雜的動畫要拆解 )</li>
+<li>make transitions as long as need, but no longer ( 寧久也不複雜 )</li></ul>
+</li>
+<li>DynaVis - C# + Direct3D製作的frame work<ul><li>dynavis 針對上述設計了一些不同的實作方式，可以參考他怎麼做的</li></ul>
+</li></ul>
+</li>
+<li>實驗<ul><li>subject - 24 ( 10 F + 14 M ) 26 ~ 62 歲的受試者，會大量使用資料與圖表工作者</li>
+<li>方法<ul><li>看圖表 + Highlight 物體(三秒)，接著 Highlight 消失 &amp; 發生動畫</li>
+<li>看受試者能否正確找到 Highlight 物體動畫過後的位置</li></ul>
+</li>
+<li>結果：<ul><li>動畫整體效果比較好，大多時候，stage animation的錯誤率低於animation</li></ul>
+</ul>
+</ul>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_kdSkZHKiwT0_p.55493_1449286262894_Screen Shot 2015-12-05 at 11.30.40 AM.png'/></p><p></p><ul><li>結論<ul><li>staged animation 較優，一般 animation 其次，直接跳轉最差。</li></ul>
+</ul>
+
+<ul><li>利用這一個論文實作 d3.js transition 的案例：<ul><li>pie chart<ul><li><a href="http://bl.ocks.org/mbostock/4341417"></a>http://bl.ocks.org/mbostock/4341417</li>
+<li><a href="http://bl.ocks.org/mbostock/1346410"></a>http://bl.ocks.org/mbostock/1346410</li></ul>
+</li>
+<li>不同種類<ul><li><a href="http://bl.ocks.org/mbostock/1256572"></a><a href='http://bl.ocks.org/mbostock/1256572'/>http://bl.ocks.org/mbostock/1256572</a></li></ul>
+</ul>
+</ul>
+
+<p></p><p></p><h2>Visualisation Techniques for Facilitating Decision Making in Urban Planning / 哲瑋</h2><ul><li>書</li></ul>
+<ol><li>Data-Driven Cities by a+u <a href="https://www.japlusu.com/shop/product/au-201411"></a><a href='https://www.japlusu.com/shop/product/au-201411'/>https://www.japlusu.com/shop/product/au-201411</a></li>
+<li>東日本震災視覺化 <a href='/6R59i4HSsG8'/>NHK&nbsp;</a></li>
+<li>台北原來如此 <a href="https://g0v.hackpad.com/iAQIXPGNp4u"></a><a href='https://g0v.hackpad.com/iAQIXPGNp4u'/>https://g0v.hackpad.com/iAQIXPGNp4u</a></li></ol>
+
+<ul><li><a href='http://www.ci-journal.net/index.php/ciej/article/view/264/404#sdfootnote1sym'/>文件網址</a>｜<a href='https://abcd.hackpad.com/Visualisation-Techniques-for-Facilitating-Decision-Making-in-Urban-Planning-chswifYK9Gv'/>筆記專頁</a>｜<a href='https://docs.google.com/presentation/d/1VpE_FTw47jt-N4-_jcMKRJC9K4nSk23n9vhcXyZy6-k/edit?usp=sharing'/>摘要簡報</a></li></ul>
+
+<ul><li>怎麼樣的視覺化是比較容易促進討論的？</li></ul>
+
+<ul><li>PPGIS: 對社會的、質性的資料視覺化的探討工作<ul><li>Public participatory geographical information systems</li>
+<li>利用視覺化小技巧在公眾參與的工作坊中 ( 主要在都市規畫 )</li></ul>
+</li>
+<li>Graphy Theory Representation: eg. 將實體街道納入居民使用節點的習性<ul><li>連結度, 交通可及性將道路著色 ( movement potentials )</li>
+<li>羅列街道相關議題做電訪 ( sense of place )<ul><li>將質性問題轉化成量化表，並以 1 ~ 5 (不同意 / 同意 )分級回答，例如:<ul><li>我住在這邊很滿意</li>
+<li>在這裡生活很安全</li></ul>
+</li>
+<li>也有 yes / no 類問題</li>
+<li>結果也拿來將道路著色</li></ul>
+</li>
+<li>比較 movement &amp; sense of place :&nbsp;<ul><li>囊底路雖然移動性差， sense-of-place 並不差</li></ul>
+</li></ul>
+</li>
+<li>社會資料調查整合進地理資訊，轉換成直觀易懂的顏色序列呈現</li>
+<li>由於審議場合中，討論過程中會有其他議題跳出，facilitator能在回到資料庫抓取需要的資料，形成新的視覺資訊。</li>
+<li>災害資訊整合<ul><li>一般資訊 ( 淹水潛勢 etc ) 的呈現已有</li>
+<li>想要再整合居民認知、敏感性 ( 風險知覺、資源取得力 ) 等資訊做「脆弱度」評估</li></ul>
+</ul>
+
+<p>問題討論</p><ul><li>居民會不會害怕使用 PPGIS？<ul><li>要看部落的組成。如果是要跟耆老討論，或許用大地圖或實體模型會比較方便。</li>
+<li>如果是青壯年就沒什麼問題，而且 google earth 是由專門人操作，參與討論的人就看圖。</li></ul>
+</ul>
+
+<h2>Ending</h2><p>Kirby：今天聚會的起源是這一篇文章</p><p>7 Classic Foundational Vis Papers You Might not Want to Publicly Confess you Don’t Know</p><p><a href="http://fellinlovewithdata.com/guides/7-classic-foundational-vis-papers"></a>http://fellinlovewithdata.com/guides/7-classic-foundational-vis-papers</p><p></p><p>如果大家有興趣請到 0media.tw</p><p></p><p></p></body>
+</html>
