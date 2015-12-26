@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="180"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$vDLLZbbikXF</title>
+</head>
+<body><h1>一鍵 Excel 轉 .csv (含自動修復) (尚未參與專案報告)</h1><p></p><h2>專案簡介</h2><p></p><p><b>緣由</b></p><p>看到Peggy的<a href='https://hackpad.com/Lesson-1-ver1.0-XdDvvmJJ6Zf'/>公務員開放資料Lesson 1 </a>，想說有沒有辦法直接開發程式供公務人員使用，減少轉檔後的資料格式問題</p><p></p><p><b>要解決的問題</b></p><ol><li>減少Excel檔案轉成.csv的步驟，以節省時間及降低人為犯錯機率</li>
+<li>自動修正Excel中轉成.csv時造成錯誤的潛在因子，確保轉出的.csv可供後續正確使用</li>
+<li>不要破壞原本「方便人閱讀的格式」，降低使用者抗拒因素</li></ol>
+
+<p><b>預定使用者</b></p><p>不習慣將Excel編輯成符合資料庫格式，但又想將其轉成csv成為開放資料的人</p><p></p><p><b>預定功能</b></p><ol><li>功能<ol><li>修正合併儲存格(跨至欄中)的問題<ol><li>搜尋資料表中的合併儲存格</li>
+<li>解除合併並將資料整合</li></ol>
+<ul style="list-style: none;"><li><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_vDLLZbbikXF_p.534607_1451116449949_undefined'/></li>
+<li>↓↓↓↓↓↓↓變成↓↓↓↓↓↓</li>
+<li><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_vDLLZbbikXF_p.534607_1451116539806_undefined'/></li>
+<li><br/></li></ul>
+</ol>
+<ol><li>去除可能會造成錯誤之符號 (如 數字間的逗號 1,230,000 )<ol><li>方法一：強制消去全部的,&nbsp; (但要考慮會不會有其他文字屬性欄位也含有半形逗號)</li>
+<li>方法二：將全部欄位改成無千位數逗號之數字 (但要小心破壞其他儲存格之內容)</li></ol>
+</li>
+<li>儲存<ol><li>另存成.csv檔案</li>
+<li>檔案名稱為&nbsp; 原本檔案名稱 + 工作表名稱 + &quot;.csv&quot;</li>
+<li>編碼格式自動選為 UTF8</li></ol>
+</li>
+<li>其他功能 (待補充)</li></ol>
+<ul style="list-style: none;"><li><br/></li></ul>
+</ol>
+<ol><li>介面<ol><li>掛在EXCEL介面中之巨集按鈕&nbsp;<ol><li>優點：</li><ul><li>使用方便簡單</li></ul>
+</ol>
+<ol><li>缺點：</li><ul><li>安裝問題（如何讓使用者順利把巨集載到Excel中，並形成按鈕）</li>
+<li>安全性檢查（巨集是否會被系統阻擋）</li></ul>
+</ol>
+</ol>
+<ol><li>額外執行程式<ol><li>優點：</li><ul><li>執行檔容易傳播使用</li>
+<li>可以透過GUI設計讓使用起來方便</li></ul>
+</ol>
+<ol><li>缺點：</li><ul><li>操作步驟可能較麻煩（要先選擇目標檔案，在執行）</li>
+<li>程式碼相容性問題</li></ul>
+<ul style="list-style: none;"><li><br/></li></ul>
+</ol>
+</ol>
+</ol>
+<p><b>現有類似專案</b></p><p>Ronny大大好像之前有做出 潛在錯誤檢查程式</p><p></p><p><b>相關專案</b></p><p>???</p><p></p><p><b>授權方式</b></p><p>???</p><p></p><p><b>使用資料</b></p><p>無</p><p></p><p><b>專案目前狀態</b></p><p>構想中、需要大量建議</p><p></p><p><b>利益揭露</b></p><p>應該是沒有吧</p><p></p><p></p><h2>徵求協作者</h2><p></p><p>發起人/拋磚人：</p><ul class="task"><li>NeedsWriter: 需要文案幫手（撰寫基本資訊、報導專案etc）</li>
+<li>NeedsDesigner: 需要介面設計</li>
+<li>NeedsData: 需要資料（擷取、清理）</li>
+<li>NeedsTech: 需要技術支援（程式、架站 etc)</li>
+<li>NeedsProcess: 需要幫忙設計作業流程</li>
+<li>NeedsTalkingToRealPerson: 需要有人幫忙和其他機關聯絡</li></ul>
+
+<p></p><h2>實作細節（非技術背景可跳填）</h2><p></p><p><b>協作工具</b></p><ul><li>github repo：</li>
+<li>hackfoldr 工作資料夾網址：</li>
+<li>google drive 共用資料夾網址：</li></ul>
+
+<p><b>進度與 to-do</b></p><ul class="comment"><li>僅供參考</li></ul>
+<ul class="task"><li>product planning（recommanded procedure from justin lee / 李易修）<ul class="task"><li>strategy</li>
+<li>scope</li>
+<li>structure</li>
+<li>wireframe</li>
+<li>visual</li></ul class="task">
+</li>
+<li>web front-end</li>
+<li>web back-end</li>
+<li>ui / visual design</li></ul>
+
+<p></p><h2>成果展示（規劃文件、雛形/草稿、原型/初稿、正式發佈/完稿）</h2><p></p><p></p><p></p><p></p><p></p></body>
+</html>
