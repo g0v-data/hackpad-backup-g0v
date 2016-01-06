@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="143"/>
+<meta name="version" content="443"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$b6qi8pie35p</title>
 </head>
 <body><h1>2016 中選會選舉資料意見回饋</h1><p></p><p><b>API意見回饋</b></p><ol><li>沒有候選人唯一識別碼</li>
@@ -15,6 +15,17 @@
 <ol><li>無候選人照片</li>
 <li>出生地是否需要臺灣省</li></ol>
 <ul class="comment"><li>臺灣省彰化縣 vs 彰化縣</li></ul>
+<ol><li>api 介面命名過於草率，目前是用 1~8 作為命名，也許該思考所有資料納入後的介面應該長什麼樣子去設計</li>
+<li>選舉區對應之行政區，如果已經是該鄉鎮市區所有村里應該列舉鄉鎮市區即可，每個都列出村里會有些多餘</li>
+<li>投開票所應該直接附上 WGS84 地理座標，理想上應該還有該投開票所涵蓋行政區或 polygon 座標</li>
+<li>公辦政見會資料應該一律錄影並且提供檔案位置（或 youtube 連結）</li>
+<li>各種代碼應該進一步在文件提供完整代碼表的參考資料</li>
+<li>應該可以直接連結並且提供監察院政治獻金專戶的資料共同呈現</li>
+<li>實際產生選舉公報後希望能夠比照 2014 提供電子檔，並且將連結加入各候選人 api 資料中</li>
+<li>跟第一點一樣希望有唯一識別碼，並且希望依據這個識別碼能夠新增一個介面去查詢該候選人過去參選記錄，因為跨年度的資訊直接用姓名連結的錯誤很多</li>
+<li>回應的 http header 希望能夠加入 Access-Control-Allow-Origin: * 等聲明，讓外部應用可以直接讀取(ref: <a href="https://developer.mozilla.org/zh-TW/docs/HTTP/Access_control_CORS"></a>https://developer.mozilla.org/zh-TW/docs/HTTP/Access_control_CORS&nbsp; )</li>
+<li>個別資料希望加入版本號、建立日期與異動日期</li>
+<li>可以考慮提供申請，讓外部引用各種資料的網站或 app 可以將網址等資訊提供給中選會做交叉連結</li></ol>
 
 <p><b>很棒的部分</b></p><ol><li>候選人名字中如有英文的部分統一以固定符號隔開</li></ol>
 <ul class="comment"><li>馬躍‧比吼^Mayaw‧Biho、嘎礌‧武拜‧哈雅萬^Galahe‧Wubai‧Hayawan</li></ul>
