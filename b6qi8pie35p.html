@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="443"/>
+<meta name="version" content="463"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$b6qi8pie35p</title>
 </head>
 <body><h1>2016 中選會選舉資料意見回饋</h1><p></p><p><b>API意見回饋</b></p><ol><li>沒有候選人唯一識別碼</li>
@@ -15,9 +15,11 @@
 <ol><li>無候選人照片</li>
 <li>出生地是否需要臺灣省</li></ol>
 <ul class="comment"><li>臺灣省彰化縣 vs 彰化縣</li></ul>
-<ol><li>api 介面命名過於草率，目前是用 1~8 作為命名，也許該思考所有資料納入後的介面應該長什麼樣子去設計</li>
-<li>選舉區對應之行政區，如果已經是該鄉鎮市區所有村里應該列舉鄉鎮市區即可，每個都列出村里會有些多餘</li>
-<li>投開票所應該直接附上 WGS84 地理座標，理想上應該還有該投開票所涵蓋行政區或 polygon 座標</li>
+<ol><li>選舉區對應行政區的 sessiontownship 中會有多餘的{&quot;area&quot;:&quot;000&quot;}，<a href='http://2016.cec.gov.tw/opendata/cec2016/getJson?dataType=6'/>API連結</a></li>
+<li>api 介面命名過於草率，目前是用 1~8 作為命名，也許該思考所有資料納入後的介面應該長什麼樣子去設計</li>
+<li>選舉區對應之行政區，如果已經是該鄉鎮市區所有村里應該列舉鄉鎮市區即可，每個都列出村里會有些多餘</li></ol>
+<ul class="comment"><li>個人覺得官方可以完整列出，各應用再視需求過濾，但如果能提供一些條件查詢會更好</li></ul>
+<ol><li>投開票所應該直接附上 WGS84 地理座標，理想上應該還有該投開票所涵蓋行政區或 polygon 座標</li>
 <li>公辦政見會資料應該一律錄影並且提供檔案位置（或 youtube 連結）</li>
 <li>各種代碼應該進一步在文件提供完整代碼表的參考資料</li>
 <li>應該可以直接連結並且提供監察院政治獻金專戶的資料共同呈現</li>
