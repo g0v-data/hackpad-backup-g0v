@@ -3,14 +3,31 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="126"/>
+<meta name="version" content="368"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$8VcgnEfx4Uz</title>
 </head>
-<body><h1>hackpad轉sayit許願池</h1><p></p><ul class="task"><li>import hackpad一段新的談話後，無法整段刪除，例如現在的「<a href='http://g0v.sayit.mysociety.org/speeches'/>untitled</a>」無法被刪除。</li>
-<li>my society帳號下新增的「你的引述 (網域)」，新增後無法刪除。</li>
-<li>import完的對話，按「speaker」會呈現錯誤狀態，<a href='http://g0v.sayit.mysociety.org/speakers'/>像這樣</a>。</li>
-<li><a href='http://g0v.sayit.mysociety.org/20160109-%E9%81%B8%E8%88%89%E6%9D%BE-%E5%8F%B0%E7%81%A3%E7%95%B6%E5%89%8D%E5%9B%B0%E9%9B%A3%E8%AD%B0%E9%A1%8C%E8%A8%8E%E8%AB%96#s652104'/>村長的頭像</a>不知道為什麼出不來，<a href='http://g0v.sayit.mysociety.org/speaker/clkao'/>speaker介紹</a>裡面是有的。</li>
-<li>除了按「<a href='http://g0v.sayit.mysociety.org/'/>邀請朋友來幫忙</a>」之外，有其他方式可以直接讓這個頻道可以讓所有人都可以編輯嗎？(類似google文件，有連結就可以編輯，的功能)</li></ul>
+<body><h1>hackpad轉sayit許願池</h1><p></p><ul class="task"><li>import hackpad一段新的談話後，無法整段刪除，例如現在的「<a href='http://g0v.sayit.mysociety.org/speeches'/>untitled</a>」無法被刪除。</li></ul>
+<ul class="comment"><li>可以刪 section （手動在網址後加 /delete 即可）&nbsp;&nbsp;</li>
+<li>但是裡面的話就會變成 orphan (&quot;<a href='http://sayit.archive.tw/speeches'/>Speeches not in a section</a> &quot;)</li>
+<li>之前是想過寫個 useragent bot 來刪掉這些...</li>
+<li>記得某個地方可以再刪掉的時候把 orphan 指定給別人</li></ul>
+
+<ul class="task"><li>my society帳號下新增的「你的引述 (網域)」，新增後無法刪除。</li></ul>
+
+<ul class="task"><li>import完的對話，按「speaker」會呈現錯誤狀態，<a href='http://g0v.sayit.mysociety.org/speakers'/>像這樣</a>。</li></ul>
+<ul class="comment"><li>這是因為<a href='http://g0v.sayit.mysociety.org/20160109-%E9%81%B8%E8%88%89%E6%9D%BE-%E5%8F%B0%E7%81%A3%E7%95%B6%E5%89%8D%E5%9B%B0%E9%9B%A3%E8%AD%B0%E9%A1%8C%E8%A8%8E%E8%AB%96.an'/>有人的 ID 是「？」</a>&nbsp;</li>
+<li>&lt;TLCPerson href=&quot;/ontology/person/g0v.sayit.mysociety.org/&quot; id=&quot;&quot; showAs=&quot;？&quot;/&gt;</li>
+<li>如果用「匿名」或「不確定」等非標點符號就好了</li>
+<li>或是開個 <a href='https://github.com/audreyt/pad2an/issues'/>issue</a>&nbsp; 讓 id 保持 nonempty (uuid? random?)</li></ul>
+
+<ul class="comment"><li>我把「？」的都改掉了，但還是不行耶....QQ</li></ul>
+
+<ul class="task"><li><a href='http://g0v.sayit.mysociety.org/20160109-%E9%81%B8%E8%88%89%E6%9D%BE-%E5%8F%B0%E7%81%A3%E7%95%B6%E5%89%8D%E5%9B%B0%E9%9B%A3%E8%AD%B0%E9%A1%8C%E8%A8%8E%E8%AB%96#s652104'/>村長的頭像</a>不知道為什麼出不來，<a href='http://g0v.sayit.mysociety.org/speaker/clkao'/>speaker介紹</a>裡面是有的。</li></ul>
+<ul class="comment"><li>試看看用 .png 或換一張? 可能是 .jpg metadata 問題</li></ul>
+
+<ul class="task"><li>除了按「<a href='http://g0v.sayit.mysociety.org/'/>邀請朋友來幫忙</a>」之外，有其他方式可以直接讓這個頻道可以讓所有人都可以編輯嗎？(類似google文件，有連結就可以編輯，的功能)</li></ul>
+<ul class="comment"><li>目前似乎沒有。我通常是邀請 hackpad 編輯，而不是在 sayit 層編輯...</li>
+<li>目前雖然沒有，不過應該可以實作</li></ul>
 
 <p></p></body>
 </html>
