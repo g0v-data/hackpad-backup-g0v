@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="977"/>
+<meta name="version" content="1158"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$BlLdzEsImuv</title>
 </head>
 <body><h1>jrf_data</h1><p>本頁請關掉 Privacy Badger 不然附圖會看不到哦！</p><p>沒聽過 Privacy Badger 的話，推薦參考 <a href="https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp?hl=zh-TW"></a>https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp?hl=zh-TW 這是 EFF 推出的增加瀏覽隱私的套件，歡迎使用！</p><p></p><h2>工作表</h2><p>請先填寫本表，再開始爬資料，謝謝！</p><p></p><table style="font-size:13px;cell-spacing: 0px; border-collapse: collapse;"><tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#24180;&#24230;</td>
@@ -163,7 +163,14 @@
 <li>wget <a href="https://raw.githubusercontent.com/kiang/jrf_data/master/courts.json"></a>https://raw.githubusercontent.com/kiang/jrf_data/master/courts.json</li></ul>
 
 <p>執行:</p><ul class="code"><li>php get_judgements_cache.php 2008&nbsp; ← 這個就是你要抓的年份了</li></ul>
-<p>看到這樣的畫面，就是有開始抓了</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_BlLdzEsImuv_p.67260_1452237217630_undefined'/></p><p></p><p></p><p><b>確認 Tor 的流量</b></p><p>離開前 Ctrl-A 0 確認一下 tor 的流量不要爆 quota ...</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_BlLdzEsImuv_p.67260_1452233868185_undefined'/></p><p>嗯，下載 93.4 Kb/sec 應該不會爆一個月 2TB 的限制吧...</p><p></p><p>要離開，直接關掉視窗就可以了，它會在幕後繼續跑。下次再 ssh / putty 上來，打 screen -d -r 就可以接回關掉的視窗。</p><p></p><p></p><p></p><h2>爬完之後的上傳</h2><p>[雨蒼版] 資料都放在 ~/jrf_data/data/judgemets/</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_BlLdzEsImuv_p.67260_1452234113765_undefined'/></p><p>打包</p><ul class="code"><li>cd ~/jrf_data/data</li>
+<p>看到這樣的畫面，就是有開始抓了</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_BlLdzEsImuv_p.67260_1452237217630_undefined'/></p><p></p><ul><li>這個程式只會抓網頁，不做任何處理，所以產出的檔案需要另外解析</li>
+<li>在 cache 目錄下會產生 2008.log 與 2008 目錄， 2008.log 是即時的記錄、 2008 目錄則是放置所有取得的網頁檔案</li>
+<li>程式每次抓取兩天的資料，然後放在第一天的日期目錄下，例如 2008/01/01~2008/01/02 的資料會放在 cache/2008/01/01 中</li>
+<li>list_* 的檔案是列表檢索產出的網頁、case_* 則是個別判決書檢索產出的網頁</li>
+<li>在 files_map.csv 可以看到檔案的明細，以及取得個別檔案使用的參數（並不是永久網址，所以直接貼到瀏覽器是無法使用的，只是用來方便辨識）</li>
+<li>可以用&nbsp; <a href="https://github.com/kiang/jrf_data/blob/master/cache2archive.php"></a>https://github.com/kiang/jrf_data/blob/master/cache2archive.php 打包產出的檔案</li></ul>
+
+<p><b>確認 Tor 的流量</b></p><p>離開前 Ctrl-A 0 確認一下 tor 的流量不要爆 quota ...</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_BlLdzEsImuv_p.67260_1452233868185_undefined'/></p><p>嗯，下載 93.4 Kb/sec 應該不會爆一個月 2TB 的限制吧...</p><p></p><p>要離開，直接關掉視窗就可以了，它會在幕後繼續跑。下次再 ssh / putty 上來，打 screen -d -r 就可以接回關掉的視窗。</p><p></p><p></p><p></p><h2>爬完之後的上傳</h2><p>[雨蒼版] 資料都放在 ~/jrf_data/data/judgemets/</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_BlLdzEsImuv_p.67260_1452234113765_undefined'/></p><p>打包</p><ul class="code"><li>cd ~/jrf_data/data</li>
 <li>tar zfc data-2010.tar.gz judgemets/</li></ul>
 
 <p>[Kiang版] 資料都放在 ~/jrf/cache/2008/01/01/</p><p>打包</p><ul class="code"><li>cd ~/jrf/cache/</li>
