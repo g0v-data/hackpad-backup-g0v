@@ -3,22 +3,43 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="223"/>
+<meta name="version" content="1062"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$vjeJIZ8onSY</title>
 </head>
-<body><h1>Debater | 辯論家</h1><p></p><p><b>META</b></p><p></p><undefined><li><b>緣起</b></li></undefined>
-<p>科技始終來自於八卦</p><p></p><undefined><li>目的</li></undefined>
-<p>協助小編收集分類彙整來自各地的網路吵架意見</p><p></p><undefined><li><b>授權</b></li></undefined>
-<p>MIT</p><p></p><undefined><li>開發者</li></undefined>
-<p>ETBlue + 孤獨的 GH 啟發 + 抄 Mr Bigmouth 的 code + 問 tka 白癡問題 + 參考 godfat 跟 isabel 跟 ipa 的意見 + 推坑 tkirby 加新功能 + ...</p><p></p><p><b>TODOs</b></p><p></p><ul class="task"><li>直接分享資料檔網址功能</li></ul>
+<body><h1>Debater | 辯論家</h1><p></p><p><img src='http://etblue.github.io/debater/img/debater-og-image-1200x630.png'/></p><p></p><h2>專案資料</h2><p></p><p><b>緣起</b></p><p>科技始終來自於八卦</p><p></p><p><b>目的</b></p><p>協助小編收集分類彙整來自各地的網路吵架意見，形成初步的議題輪廓，以利後續的研究討論</p><p></p><p><b>授權</b></p><p>MIT</p><p></p><p><b>前身</b></p><p>動憲法</p><p></p><p><b>坑主</b></p><p>ETBlue</p><p>玄學</p><p></p><p></p><h2>產品主要特色</h2><p></p><p><b>自由的資料來源</b></p><ul><li>可彙整來自任何網路平台的發言，從每則發言的時間戳記可以追溯到原始發言網址，以便求證</li>
+<li>可使用任何公開的文字編輯器製作資料檔，如 gist、pastebin... 等，將資料檔網址匯入 Debater 即可瀏覽</li>
+<li>也可直接從本機匯入資料檔，此種方式不需將資料檔上傳到任何網路平台，不擔心資料外流</li></ul>
 
-<p></p><h2>目前成果</h2><p></p><undefined><li>程式碼</li></undefined>
-<p><a href="https://github.com/ETBlue/debater"></a>https://github.com/ETBlue/debater</p><p></p><undefined><li>開發日誌</li></undefined>
-<p><a href="https://www.facebook.com/ETBlue/media_set?set=a.10206268572605935.1073741846.1014354995"></a>https://www.facebook.com/ETBlue/media_set?set=a.10206268572605935.1073741846.1014354995</p><p></p><undefined><li>demo 網址</li></undefined>
-<p><a href="http://etblue.github.io/debater/"></a>http://etblue.github.io/debater/</p><p></p><undefined><li>使用方法</li></undefined>
-<ol><li>點入 <a href="http://etblue.github.io/debater/"></a><a href='https://l.facebook.com/l.php?u=http%3A%2F%2Fetblue.github.io%2Fdebater%2F&amp;h=7AQG2ngPb'/>http://etblue.github.io/debater/</a></li>
-<li>將此URL 複製貼上右上角檔案空格內<a href="http://etblue.github.io/debater/file/npp-agricultural.md"></a><a href='https://l.facebook.com/l.php?u=http%3A%2F%2Fetblue.github.io%2Fdebater%2Ffile%2Fnpp-agricultural.md&amp;h=4AQHrGPY9'/>http://etblue.github.io/debater/file/npp-agricultural.md</a></li>
-<li>點左方標籤可看主題分類。</li></ol>
+<p><b>易於散播的議題網址</b></p><ul><li>凡是來自公開網址的資料檔，皆擁有一個獨立的議題網址，可以直接分享給其他人</li>
+<li>凡是同一台電腦同一個瀏覽器開過的議題網址，都會出現在 Recent 選單，方便使用者回來瀏覽新版資料</li></ul>
 
-</body>
+<p><b>通用的編輯格式</b></p><ul><li>資料檔使用 markdown 語法撰寫，不限軟體、不限作業系統，任何文字編輯器皆可直接編輯</li>
+<li>只會抓取符合 markdown 語法的內容，其他會自動略過，因此資料檔中可使用任何不屬 markdown 語法的字元當作編輯註解，方便編輯團隊內部溝通</li></ul>
+
+<p><b>彈性的適用情境</b></p><ul><li>特定對象參與的深入討論，小編可完整輸入發言人的背景資料，讓讀者更能掌握發言脈絡</li>
+<li>不特定對象參與的廣泛討論，小編可省略發言人資料，單純依主題下標籤，發言人選單會自動隱藏</li>
+<li>無法第一時間規劃好議題結構時，小編可省略主題結構樹，先就單則發言下標籤，無結構樹的頁面仍可正常顯示</li></ul>
+
+<p><b>不需連線也可使用</b></p><ul class="task"><li>將 html 頁面下載到電腦後，可直接當成桌面程式，不需連上網路也可使用（開發中）</li><ul class="comment"><li>這是 Debater 不沿用 HackFoldr 的 404 作法而改採 query 的主因</li></ul>
+</ul>
+
+<p></p><h2>開發手札</h2><p></p><p><b>各階段 Screenshots</b></p><p><a href="https://www.facebook.com/ETBlue/media_set?set=a.10206268572605935.1073741846.1014354995"></a><a href='https://www.facebook.com/ETBlue/media_set?set=a.10206268572605935.1073741846.1014354995'/>https://www.facebook.com/ETBlue/media_set?set=a.10206268572605935.1073741846.1014354995</a></p><p></p><p><b>Tasks</b></p><ul class="taskdone"><li>ETBlue 受孤獨的 GH 啟發</li>
+<li>抄 Mr Bigmouth 的 code 建立以 es6 撰寫的 MVC 架構</li>
+<li>卡關在奇怪的地方問 tka 白癡問題，結果發現是 return deferred 物件的時間點弄錯了</li>
+<li>參考 godfat 跟 isabel 跟 ipa 的意見改善 UI</li>
+<li>tka 完成單一議題網址分享</li>
+<li>LY 設定 livereload &amp; 消除頁面閃爍 &amp; 加入爭點黏人功能（且因此錯過 summit 議程組會議 XD）</li></ul>
+<ul class="task"><li>Mr Orz 即將製作主題展開收合與階層標示功能</li></ul>
+
+<p></p><h2>目前成果</h2><p></p><p><b>demo 網址</b></p><p><a href="http://etblue.github.io/debater/?source=http://etblue.github.io/debater/file/npp-agricultural.md"></a><a href='http://etblue.github.io/debater/?source=http://etblue.github.io/debater/file/npp-agricultural.md'/>http://etblue.github.io/debater/?source=http://etblue.github.io/debater/file/npp-agricultural.md</a></p><p></p><p><b>程式碼</b></p><p><a href="https://github.com/ETBlue/debater"></a>https://github.com/ETBlue/debater</p><p></p><p></p><h2>使用說明</h2><p></p><p><b>瀏覽方式</b></p><ol><li>點入 <a href="http://etblue.github.io/debater/"></a><a href='https://l.facebook.com/l.php?u=http%3A%2F%2Fetblue.github.io%2Fdebater%2F&amp;h=7AQG2ngPb'/>http://etblue.github.io/debater/</a></li>
+<li>匯入想呈現的資料，有三種匯入方式：<ol><li>網路檔案：將文字檔 URL 複製貼上右上角檔案空格內，然後按 Enter （例： <a href="http://etblue.github.io/debater/file/npp-agricultural.md"></a><a href='https://l.facebook.com/l.php?u=http%3A%2F%2Fetblue.github.io%2Fdebater%2Ffile%2Fnpp-agricultural.md&amp;h=4AQHrGPY9'/>http://etblue.github.io/debater/file/npp-agricultural.md</a>）</li>
+<li>曾瀏覽過的網路檔案：從 Recent 選單選取最近瀏覽過的網路檔案</li>
+<li>電腦本機檔案：切換到 Local 後按 Choose file 從本機電腦硬碟中選擇檔案</li></ol>
+</li>
+<li>點左方標籤可看依主題分類瀏覽，點上方標籤可依發言人身份瀏覽</li></ol>
+
+<p><b>編輯方式</b></p><p></p><p></p><p></p><p></p><p></p><p><b>工作流程與配套</b></p><p></p><undefined><li>團隊成員</li></undefined>
+<p>對議題專業領域有基本知識的人 x 1</p><p>擅長大量閱讀快速歸納且熟悉電腦操作與文書處理的人 x 1</p><p>瞭解組織經營策略且可規劃會議流程的人 x 1 （optional，組織主導的網路討論才需要）</p><p></p><undefined><li>進行步驟</li></undefined>
+
+<p></p><p></p><p></p><p></p></body>
 </html>
