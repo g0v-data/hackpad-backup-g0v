@@ -3,39 +3,57 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="431"/>
+<meta name="version" content="665"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$J4diKtZxBA8</title>
 </head>
-<body><h1>行道樹的神話/迷思</h1><p></p><p><b>緣起</b></p><p></p><ul><li>之前就在想 Whiski 的這個哽：</li></ul>
+<body><h1>都市樹木與行道樹資料</h1><p></p><h2>緣起</h2><ul><li>之前就在想 Whiski 的這個梗：</li></ul>
 <ul style="list-style: none;"><li>「巴黎就有人把行道樹資料和過敏源資料結合，並推出手機應用程式，造福了廣大有花粉過敏症的市民。」 <a href="http://www.vita.tw/2012/11/open-data.html"></a><a href='http://www.vita.tw/2012/11/open-data.html'/>http://www.vita.tw/2012/11/open-data.html</a></li></ul>
 <ul><li>這兩天出現 Muyueh 說「正在煩惱要怎麼樣校對行道樹資料...」</li></ul>
 <ul style="list-style: none;"><li><a href="https://www.facebook.com/groups/odtwn/permalink/1191664634181286/"></a>https://www.facebook.com/groups/odtwn/permalink/1191664634181286/</li></ul>
-<ul><li>&nbsp;然後最近剛好在協助台北市資訊局籌劃活動...</li></ul>
+<ul><li>&nbsp;然後最近剛好在協助台北市資訊局籌劃活動...</li>
+<li>於是...先來想像一下資料欄位？</li></ul>
+<p>&nbsp;</p><h2>什麼是好的行道樹資料？</h2><p><b>正面表列：</b></p><p>以下由最優先到次優先：</p><ul><li>要有正確的經緯度</li>
+<li>要有樹種、樹名</li><ul class="comment"><li>不曉得是否有國際的名稱或編碼系統，可以援用？</li></ul>
+</ul>
+<ul><li>樹齡（種植年份）？</li>
+<li>胸徑（直徑）？</li>
+<li>樹高</li>
+<li>是否為法定受保護樹木</li>
+<li>樹穴圖層、樹穴狀況、耕種空間的狀況</li></ul>
 
-<ul><li>於是...先來想像一下資料欄位？</li></ul>
-<p>&nbsp;</p><p><b>&nbsp;什麼是好的行道樹資料？</b></p><p></p><p>正面表列：</p><p>以下由最優先到次優先：</p><ul><li>要有正確的經緯度</li>
-<li>要有樹種、樹名</li>
-<li>樹齡（種植年份）？</li>
-<li>腰圍（直徑）？</li>
-<li>是否為受保護樹木</li></ul>
-
-<p>負面表列：</p><p></p><ul><li>不要用DGN？</li></ul>
-<ul class="comment"><li>DGN是特定軟體使用的檔案格式，有點像是xls的感覺。</li></ul>
+<p><b>負面表列：</b></p><ul><li>不要用DGN？</li></ul>
+<ul class="comment"><li>DGN是特定軟體使用的檔案格式，有點像是xls的感覺。</li>
+<li>先提供一下資訊局同仁的回應，後續會再與公園處等單位討論：</li>
+<li>「五顆星的問題：來源DGN檔有point和polyline兩層，取用point圖層即可轉換符合GIS應用需求的圖資，polyline圖層是業務單位為了方便看圖使用的圖例，五顆星應該是從梅花狀(代表某樹種)轉成的」</li></ul>
 <ul><li>不要用TWD67 （據說已經有了TWD97）</li></ul>
 <ul class="comment"><li>已經有TWD97！　不過有可能原始資料就是用TWD67的座標系統紀錄。 坐標系統定義好，顯示上應該都沒有問題，但是轉換套疊後可能都繪有誤差產生。(會產生偏移)</li></ul>
 <ul><li>不要出現梅花五棵...</li></ul>
 <ul class="comment"><li>這應該也是原始資料轉檔的問題，因為原始的圖資，圖面上的樹需要一個符號，就找了一個梅花五棵的符號當樹，所以在圖上看到梅花五棵就知道這是樹。</li>
 <li>這個好像真的很難突破耶，因為這個好像是 cad 技術人員的使用習慣，以及施工圖說的圖學...</li></ul>
-<ul><li><br/></li></ul>
+<ul><li>不要資料錯誤</li></ul>
+<ul class="comment"><li>我覺得處理地理資訊的資料最後可能都會遇到套疊的問題，明明樹就應該長在人行道上，但是因為誤差卻跑到路中間 XDDD&nbsp; 資料來源越多 這種圖面上不合邏輯的情況可能會越多。</li></ul>
 
-<ul class="comment"><li>我覺得處理地理資訊的資料最後可能都會遇到套疊的問題，明明樹就應該長在人行道上，但是因為誤差卻跑到路中間 XDDD&nbsp; 資料來源越多 這種圖面上不合邏輯的情況可能會越多。</li>
-<li>先提供一下資訊局同仁的回應，後續會再與公園處等單位討論：</li>
-<li>「五顆星的問題：來源DGN檔有point和polyline兩層，取用point圖層即可轉換符合GIS應用需求的圖資，polyline圖層是業務單位為了方便看圖使用的圖例，五顆星應該是從梅花狀(代表某樹種)轉成的」</li>
-<li>「受保護樹木資料比較完整，如下 <a href="http://data.taipei/opendata/datalist/datasetMeta/preview?id=d9d1140b-c2c3-405f-8dd1-7b87b00f6f53&rid=2615ee1b-08c7-4cc6-9ade-7cf1a81eb93d"></a>http://data.taipei/opendata/datalist/datasetMeta/preview?id=d9d1140b-c2c3-405f-8dd1-7b87b00f6f53&amp;rid=2615ee1b-08c7-4cc6-9ade-7cf1a81eb93d</li>
-<li>API - <a href="http://data.taipei/opendata/datalist/apiAccess?scope=resourceAquire&rid=ddb80380-f1b3-4f8e-8016-7ed9cba571d5"></a>http://data.taipei/opendata/datalist/apiAccess?scope=resourceAquire&amp;rid=ddb80380-f1b3-4f8e-8016-7ed9cba571d5」</li></ul>
-<p>&nbsp;</p><p>&nbsp;<b>參考</b></p><ul><li>巴黎：<a href="http://opendata.paris.fr/explore/dataset/arbresalignementparis2010/?tab=table"></a>http://opendata.paris.fr/explore/dataset/arbresalignementparis2010/?tab=table （好像還有別的？）</li>
-<li>法文版欄位說明@@：&nbsp; <a href="https://www.dropbox.com/s/gomtk8ltyyxyvr2/VilleParis_DEVE_ARBRES_ALIGNEMENT_description_compl%C3%A9mentaire_201407.doc?dl=0"></a>https://www.dropbox.com/s/gomtk8ltyyxyvr2/VilleParis_DEVE_ARBRES_ALIGNEMENT_description_compl%C3%A9mentaire_201407.doc?dl=0</li>
-<li>據說「<a href='http://data.taipei/opendata/datalist/datasetMeta/preview?id=d9d1140b-c2c3-405f-8dd1-7b87b00f6f53&amp;rid=2615ee1b-08c7-4cc6-9ade-7cf1a81eb93d'/>臺北市保護樹木</a>」的資料較佳，有樹種、經緯度等</li></ul>
+<h2>參考</h2><p>國際城市作法</p><ul><li>巴黎<ul><li><a href="http://opendata.paris.fr/explore/dataset/arbresalignementparis2010/?tab=table"></a>http://opendata.paris.fr/explore/dataset/arbresalignementparis2010/?tab=table （好像還有別的？）</li>
+<li>法文版欄位說明@@：&nbsp; <a href="https://www.dropbox.com/s/gomtk8ltyyxyvr2/VilleParis_DEVE_ARBRES_ALIGNEMENT_description_compl%C3%A9mentaire_201407.doc?dl=0"></a>https://www.dropbox.com/s/gomtk8ltyyxyvr2/VilleParis_DEVE_ARBRES_ALIGNEMENT_description_compl%C3%A9mentaire_201407.doc?dl=0</li></ul>
+</li>
+<li>墨爾本 <a href="http://melbourneurbanforestvisual.com.au/"></a><u><a href='http://l.facebook.com/l.php?u=http%3A%2F%2Fmelbourneurbanforestvisual.com.au%2F&amp;h=EAQEQaC2x'/>http://melbourneurbanforestvisual.com.au/</a></u></li>
+<li>NYC: Check out the new Street Tree Map! The results of the 2015 TreesCount census, an enormous city-wide volunteer effort including many Trees New York volunteers. We think you&rsquo;ll be pleased with the results. Click here: <a href="https://tree-map.nycgovparks.org"></a><a href='https://l.facebook.com/l.php?u=https%3A%2F%2Ftree-map.nycgovparks.org%2F&amp;h=nAQH_Laqo'/>https://tree-map.nycgovparks.org</a></li></ul>
+<p>中央政府</p><ul><li>林務局「樹木普查方法及受保護樹木認定標準」草案<ul><li><a href="http://www.forest.gov.tw/ct.asp?xItem=76840&ctNode=1917&mp=1"></a><a href='http://www.forest.gov.tw/ct.asp?xItem=76840&amp;ctNode=1917&amp;mp=1'/>http://www.forest.gov.tw/ct.asp?xItem=76840&amp;ctNode=1917&amp;mp=1</a></li></ul>
+</ul>
+<p>台北市</p><ul><li>公部門資料來源<ul><li>文化局，據說「<a href='http://data.taipei/opendata/datalist/datasetMeta/preview?id=d9d1140b-c2c3-405f-8dd1-7b87b00f6f53&amp;rid=2615ee1b-08c7-4cc6-9ade-7cf1a81eb93d'/>臺北市保護樹木</a>」的資料較佳，有樹種、經緯度等</li></ul>
+</ul>
+<ul class="comment"><li>「受保護樹木資料比較完整，如下 <a href="http://data.taipei/opendata/datalist/datasetMeta/preview?id=d9d1140b-c2c3-405f-8dd1-7b87b00f6f53&rid=2615ee1b-08c7-4cc6-9ade-7cf1a81eb93d"></a><a href='http://data.taipei/opendata/datalist/datasetMeta/preview?id=d9d1140b-c2c3-405f-8dd1-7b87b00f6f53&amp;rid=2615ee1b-08c7-4cc6-9ade-7cf1a81eb93d'/>http://data.taipei/opendata/datalist/datasetMeta/preview?id=d9d1140b-c2c3-405f-8dd1-7b87b00f6f53&amp;rid=2615ee1b-08c7-4cc6-9ade-7cf1a81eb93d</a></li>
+<li>API - <a href="http://data.taipei/opendata/datalist/apiAccess?scope=resourceAquire&rid=ddb80380-f1b3-4f8e-8016-7ed9cba571d5"></a><a href='http://data.taipei/opendata/datalist/apiAccess?scope=resourceAquire&amp;rid=ddb80380-f1b3-4f8e-8016-7ed9cba571d5'/>http://data.taipei/opendata/datalist/apiAccess?scope=resourceAquire&amp;rid=ddb80380-f1b3-4f8e-8016-7ed9cba571d5</a>」</li><ul><li>工務局公園路燈管理處<ul><li>公園綠地內的樹木資料，尚無？</li>
+<li>105年度臺北市行道樹普查勞務採購案&nbsp; <a href="http://gov.playgroup.com.tw/gov_notice/20151223210842445183#.Vovhcd9danM"></a>http://gov.playgroup.com.tw/gov_notice/20151223210842445183#.Vovhcd9danM<ul><li>北市行道樹資料準備更新惹，與上一次普查相比，這次會因應開放資料應用情境而調整普查方法或程序、資料欄位、呈現方式等內容嗎？摘錄採購案說明：臺北市近9萬株行道樹，本處自94年普查至今已逾10年，當初普查行道樹和現今狀況已有相當差異，為取得行道樹正確資料，於105年度辦理普查，未來樹木管理導入科技化、智慧化的方式，將本市行道樹進行定位及樹籍資料建置，提升維護管理效率。</li>
+<li>分為：1.樹木圖層 2.樹穴圖層</li></ul>
+</li>
+<li><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_J4diKtZxBA8_p.172171_1455770306428_12523152_10153898505979038_5406808420130008683_n.jpg'/></li></ul>
+</li>
+<li>產業發展局，臺北市生物多樣性資料庫&nbsp;&nbsp;<ul><li><a href="http://tpbiodiversity.lifescience.ntu.edu.tw/index1.asp"></a><a href='http://tpbiodiversity.lifescience.ntu.edu.tw/index1.asp'/>http://tpbiodiversity.lifescience.ntu.edu.tw/index1.asp</a></li></ul>
+</li></ul>
+</li>
+<li>其他資料來源</li><ul><li>台大校區的樹木標示地圖 <a href="http://map.ntu.edu.tw/ntutree/index.htm"></a><a href='http://l.facebook.com/l.php?u=http%3A%2F%2Fmap.ntu.edu.tw%2Fntutree%2Findex.htm&amp;h=lAQHVXJT3'/>http://map.ntu.edu.tw/ntutree/index.htm</a></li></ul>
+</ul>
 
-<p></p><p></p><p></p></body>
+<p></p></body>
 </html>
