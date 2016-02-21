@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="16"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$TexkKFNmqZP</title>
+</head>
+<body><h1>g0v零時空汙觀測網</h1><p>整合各方空汙監測站的觀測資料與各種汙染源的排放資料以地圖視覺化呈現</p><p>清楚明瞭的即時空汙動態追蹤，以此達到排汙監督的社會效益</p><p></p><h2>專案簡介</h2><p></p><p><b>緣由與欲解決之問題</b></p><p>最初的專案方向是在開發小型開源的arduino空氣品質監測器並組織一個非官方的共同觀測網</p><p>不過一路開發下來發現其實很多各路高手都在做類似的專案</p><p>但專案之間的資料並不互通且零散</p><p>各平台有各的優缺點，要著手去統一開發平台並不實際</p><p>所以決定把目標提高一個層次去整合各種觀測資源讓各空汙監測開發社群貢獻的效益最大化</p><p></p><p><b>專案最高原則</b></p><p>讓空汙動態容易被社會大眾看懂並可彈性化輸出方便後續應用的資料格式(json, tabular data)</p><p></p><p><b>授權方式</b></p><p>零時空汙觀測網站專案近日將以MIT授權方式於github發佈</p><p></p><p><b>欲整合之目標</b></p><ul><li>即時觀測資料 (包括官方與非官方測站的觀測資訊)</li>
+<li>即時排汙資料 (包括工廠排汙, 火電廠排汙, 交通排汙等資訊)</li>
+<li>即時氣象資料 (包括風力, 風速, 逆溫層效應)</li></ul>
+
+<p><b>資料呈現方式目標</b></p><p>以地圖為主軸的視覺化 (包括站點圖標,&nbsp; heatmap渲染, 風力線條動畫)</p><p></p><h2>專案目前狀態</h2><p></p><p>g0v零時空汙觀測網站實作已上線- <a href="http://www.3203.info/map.html"></a><a href='http://www.3203.info/map.html'/>http://www.3203.info/map.html</a></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/probepot.hackpad.com_tTI3SE8svZL_p.326739_1456031700060_%E6%93%B7%E5%8F%96.JPG'/></p><p><b>目前專案使用觀測站資料來源</b></p><ul><li>組織性維護專案<ul><li>環保署空氣品質即時污染指標 <a href='http://g0v-data-mirror.gugod.org/epa/aqx.json'/>(透過 g0v mirror</a>) (政府資料開放授權) - <a href="http://data.gov.tw/node/6074"></a><a href='http://data.gov.tw/node/6074'/>http://data.gov.tw/node/6074</a></li>
+<li>環保署空氣品質監測站基本資料含地理圖資 (政府資料開放授權) -<a href="http://data.gov.tw/node/6075"></a><a href='http://data.gov.tw/node/6075'/>http://data.gov.tw/node/6075</a></li>
+<li>LASS-開源公益的環境感測器網路 (MIT授權) -<a href="https://github.com/LinkItONEDevGroup/LASS"></a><a href='https://github.com/LinkItONEDevGroup/LASS'/>https://github.com/LinkItONEDevGroup/LASS</a></li>
+<li>ProbeCube-物聯網感測方塊 (MIT授權) -<a href="https://github.com/Lafudoci/ProbeCube"></a><a href='https://github.com/Lafudoci/ProbeCube'/>https://github.com/Lafudoci/ProbeCube</a></li></ul>
+</li>
+<li>獨立開發者專案<ul><li>Miaoski-(CC0, MIT授權)-<a href="https://github.com/miaoski/pm25"></a><a href='https://github.com/miaoski/pm25'/>https://github.com/miaoski/pm25</a></li></ul>
+</li>
+<li>將規劃整合中的專案</li><ul class="task"><li><a href='https://xn--jvrt7ch0jeklv4emodg0v8xg1z8bnuudik/'/>高雄市校園空氣品質監測</a></li></ul>
+</ul>
+
+<p><b>目前專案使用排汙資料來源</b></p><ul><li>官方資料來源<ul><li>尚無整合</li></ul>
+</li>
+<li>非官方資料來源<ul><li>尚未整合</li></ul>
+</li>
+<li>將規劃整合中的資料來源</li><ul class="task"><li><a href='https://g0v.hackpad.com/ndUPo4GAK5N'/>固定污染源管制地圖</a> - 另一項g0v專案，已有整合資料。</li></ul>
+</ul>
+
+<p><b>目前使用氣象輔助資料來源</b></p><ul><li>官方資料來源<ul><li>尚無整合</li></ul>
+</li>
+<li>非官方資料來源<ul><li>尚未整合</li></ul>
+</li>
+<li>將規劃整合中的資料來源</li><ul class="task"><li>中央氣象局</li>
+<li>風力視覺化-(MIT授權) <a href="https://github.com/cambecc/earth"></a><a href='https://github.com/cambecc/earth'/>https://github.com/cambecc/earth</a></li></ul>
+</ul>
+
+<h2>徵求協作者</h2><p></p><p>發起人/拋磚人：</p><ul class="task"><li>NeedsWriter: 需要文案幫手（撰寫基本資訊、報導專案etc）</li>
+<li>NeedsDesigner: 需要介面設計</li>
+<li>NeedsData: 需要資料（擷取、清理）</li>
+<li>NeedsTech: 需要技術支援（程式、架站 etc)</li>
+<li><br/></li></ul>
+
+<p></p><h2>實作細節</h2><p></p><p><b>協作工具</b></p><ul><li>github repo：</li>
+<li>hackfoldr 工作資料夾網址：</li>
+<li>google drive 共用資料夾網址：</li></ul>
+
+<p><b>細節進度與 to-do</b></p><p></p><p></p><p></p><p></p></body>
+</html>
