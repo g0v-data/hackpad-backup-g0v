@@ -3,10 +3,10 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1569"/>
+<meta name="version" content="2106"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$vDLLZbbikXF</title>
 </head>
-<body><h1>一鍵 Excel 轉 .csv (含自動修復)&nbsp;</h1><p></p><h2>專案簡介</h2><p><b>緣由</b></p><p>看到Peggy的<a href='https://hackpad.com/Lesson-1-ver1.0-XdDvvmJJ6Zf'/>公務員開放資料Lesson 1 </a>，想說有沒有辦法直接開發程式供公務人員使用，減少轉檔後的資料格式問題</p><p></p><p><b>要解決的問題</b></p><ol><li>減少Excel檔案轉成.csv的步驟，以節省時間及降低人為犯錯機率</li>
+<body><h1>一鍵 Excel 轉 .csv (含自動修復) (Ver20160301)</h1><p></p><h2>專案簡介</h2><p><b>緣由</b></p><p>看到Peggy的<a href='https://hackpad.com/Lesson-1-ver1.0-XdDvvmJJ6Zf'/>公務員開放資料Lesson 1 </a>，想說有沒有辦法直接開發程式供公務人員使用，減少轉檔後的資料格式問題</p><p></p><p><b>要解決的問題</b></p><ol><li>減少Excel檔案轉成.csv的步驟，以節省時間及降低人為犯錯機率</li>
 <li>自動修正Excel中轉成.csv時造成錯誤的潛在因子，確保轉出的.csv可供後續正確使用</li>
 <li>不要破壞原本「方便人閱讀的格式」，降低使用者抗拒因素</li></ol>
 
@@ -50,15 +50,29 @@
 
 <p>路過補充地方政府情形：</p><p>根據2015年收資料的經驗，若散發office2010格式檔案給各縣市政府(的下屬局處單位)，大約有1/10的回收資料會用office 97-2003的格式回來。</p><ul class="comment"><li>感謝回饋。目前測試結果，似乎檔案本身版本不是很重要，但執行的office版本影響很大。會再持續實驗。</li></ul>
 
-<p><b>專案目前狀態</b></p><ol><li>VBA巨集beta版開發中，暫定工作環境為office2010，目標是處理掉alpha版的「未處理問題」。</li><ul><li>需要更多意見 或 使用建議，做為修正參考</li></ul>
+<p><b>專案目前狀態</b></p><ol><li>VBA巨集<a href='https://www.dropbox.com/s/zcalifiw3w8arde/Excel_to_csv_Beta_20160301.xlsm?dl=0'/>beta版</a>完成，暫定工作環境為office2010。 (2016.03.01)</li><ul><li>請下載後使用，點選第一頁的Run。若要再次測試，請關閉檔案重新開啟。</li>
+<li>將巨集指令加到Excel工具列中便可對其他文件使用，但目前還沒有極簡單且簡便的版本。<ul><li>人工設定可以先參考<a href='https://www.facebook.com/johnsonliang?fref=ufi'/>Johnson Liang</a>之前錄製的<a href='http://i.giphy.com/3o7ZeMOtVaygEDsbu0.gif'/>方法</a>，不過每次使用都會冒出一個額外的excel視窗。</li>
+<li>尚在研究更簡單、自動設定，且不會產生額外視窗的方法。</li></ul>
+</li>
+<li>beta版新增可以處理的部份 (alpha版功能繼承)</li><ol><li>自動判別資料範圍</li>
+<li>儲存時不再留下原始資料的副檔名</li>
+<li>修正儲存路徑為原始檔案的同資料夾內</li>
+<li>自動去除多餘的空白列、註解列</li></ol>
+</ul>
+<ul><li>beta版尚未處理的問題</li><ol><li>尚未完全驗證</li>
+<li>一次處理同一檔案中的所有分頁 (code已完成，尚未實裝)</li>
+<li>當已有同名檔案時，要怎麼處理</li>
+<li>存完後是否自動關閉檔案（執行中的為.csv)&nbsp;</li>
+<li>讓使用者可以很簡單地把巨集置放於工具列</li></ol>
+</ul>
 </ol>
-<ol><li>VBA巨集<a href='https://www.dropbox.com/s/udh6esh63bririi/Excel_to_csv_alpha.xlsm?dl=0'/>alpha版</a>完成，測試中<i>&nbsp;&nbsp;&nbsp;</i></li><ul><li>請<a href='https://www.dropbox.com/s/udh6esh63bririi/Excel_to_csv_alpha.xlsm?dl=0'/>下載</a>後使用，點選第一頁的Run。若要再次測試，請關閉檔案重新開啟。</li>
+
+<p>2. VBA巨集<a href='https://www.dropbox.com/s/udh6esh63bririi/Excel_to_csv_alpha.xlsm?dl=0'/>alpha版</a>完成，測試中<i>&nbsp;&nbsp; </i>(2015)</p><ul><li>請<a href='https://www.dropbox.com/s/udh6esh63bririi/Excel_to_csv_alpha.xlsm?dl=0'/>下載</a>後使用，點選第一頁的Run。若要再次測試，請關閉檔案重新開啟。</li>
 <li>目前可處理部份</li><ol><li>一鍵完成（不過還沒做好巨集指令移轉，所以只能在範例檔中使用）</li>
 <li>解決「簡單的合併儲存格」問題</li>
 <li>消除數字中的半形逗號</li>
 <li>自動以「同樣的檔名」、「 UTF8編碼格式」儲存成.csv</li></ol>
 </ul>
-</ol>
 
 <ul><li>目前尚未處理的問題</li><ol><li>未驗證是否適用於各種合併儲存格之情況</li>
 <li>未能自動判別資料總行列數，所以目前固定只掃到10x10</li>
