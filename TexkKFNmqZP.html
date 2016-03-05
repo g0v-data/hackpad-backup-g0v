@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="669"/>
+<meta name="version" content="1094"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$TexkKFNmqZP</title>
 </head>
 <body><h1>g0v 零時空汙觀測網</h1><p>整合各方空汙監測站的觀測資料與各種汙染源的排放資料以地圖視覺化呈現</p><p>清楚明瞭的即時空汙動態追蹤，以此達到排汙監督的社會效益</p><p></p><h2>專案簡介</h2><p></p><p><b>緣由與欲解決之問題</b></p><p>最初的專案方向是在開發小型開源的arduino空氣品質監測器並組織一個非官方的共同觀測網</p><p>一路開發下來發現其實很多各路高手都在做類似的專案</p><p>但專案之間的資料並不互通且零散</p><p>各平台有各的優缺點，要著手去統一開發平台並不實際</p><p>所以決定把目標提高一個層次去整合各種觀測資源讓各空汙監測開發社群貢獻的效益最大化</p><p></p><p><b>專案最高原則</b></p><p>整合各方空汙監測站的觀測資料與各種汙染源的排放資料以地圖視覺化呈現</p><p>清楚明瞭的即時空汙動態追蹤，以此達到排汙監督的社會效益</p><p>在最後並可彈性化統一輸出方便後續應用的資料格式(json, tabular data)</p><p></p><p><b>授權方式</b></p><p>零時空汙觀測網站實作專案近日將以MIT授權方式於github發佈</p><p></p><p><b>欲整合之目標</b></p><ul><li>即時觀測資料 (包括官方與非官方測站的觀測資訊)</li>
@@ -42,26 +42,42 @@
 <h2>徵求協作者</h2><p></p><ul><li><b>目前已知問題/目標待解決 (這裡有坑)</b></li><ul class="taskdone"><li>環保署的開放資料發佈時間會比觀測發佈延遲一個小時，而觀測站每次發佈又是上一小時的觀測資料，常常呈現的資料都已經是兩個小時之後，無法真正即時呈現，或許還是得想辦法拆原始的環保署測站資料，或是有人能去協調環保署同步測站發佈和開放資料平台發佈的時間。</li><ul><li>環保署空品資料發佈的流程是：</li></ul>
 <ul style="list-style: none;"><li>感測器-----&gt;TQAM(<a href='http://taqm.epa.gov.tw/taqm/tw/default.aspx'/>空品監測網</a>的Server)----<i>每整點發佈</i>----&gt;<a href='http://cdx.epa.gov.tw/CDX/main.aspx'/>CDX</a>平台---<i>過幾分鐘</i>----&gt;OpenData介接並Publish資料(也是每個整點)。因此卡在這每整點發佈及各平台傳輸訂閱時間的問題，所以真的收到資料已經兩小時之後～目前會再詢問環保署能否改善這狀況，真的做到即時傳輸與發佈。</li><ul class="comment"><li>太好了!! 如果能夠從資料源頭解決的話是最好的解法了!!</li></ul>
 </ul>
-<ul style="list-style: none;"><li><br/></li></ul>
+<ul class="task"><li>請大家到<a href='http://forum.epa.gov.tw/EPASPS/SPSA/SPSA01001.aspx'/>環保e言堂</a>，寫信給署長，要求發布即時資料！</li></ul>
 </ul>
-<ul class="task"><li>環保署的測站有觀測<a href='http://taqm.epa.gov.tw/taqm/tw/HourlyData.aspx'/>氣溫濕度</a>，但卻沒包含在開放資料平台的資料中，可能得自己拆或去向環保署要求開放。</li>
+</ul>
+
+<ul class="task"><li>環保署的測站有觀測<a href='http://taqm.epa.gov.tw/taqm/tw/HourlyData.aspx'/>氣溫濕度</a>，但卻沒包含在開放資料平台的資料中，可能得自己拆或去向環保署要求開放。</li><ul class="taskdone"><li>請大家到<a href='http://forum.epa.gov.tw/EPASPS/SPSA/SPSA01001.aspx'/>環保e言堂</a>，寫信給署長，要求開放資料！</li></ul>
+</li>
 <li>非官方測站的資料來源常有在校正中或是僅作短期觀測導致資料不正常的情況，須建立一個機制去讓地圖優先顯示已穩定運作的資料來源。</li>
 <li>風力視覺化有待整合<a href="https://github.com/cambecc/earth"></a><a href='https://github.com/cambecc/earth'/>https://github.com/cambecc/earth</a>，這難度有點高但是值得去做的。</li>
 <li>工廠排汙資料待整合，要想一下如何在地圖上呈現比較好。</li>
 <li>火力電廠基載待整合，要想一下如何在地圖上呈現比較好。</li>
-<li>從google map移植到Openstreetmap作為圖資來源或許比較恰當，但在評估這坑會多大中。</li></ul>
-<ul class="comment"><li>移植是說圖磚改用 OpenStreetMap？</li></ul>
-<ul class="task"><li>號召更多志願者參與開源感測站佈點<ul class="task"><li>重點區域，如交通要道或者工業區周遭，按照網格或者方圓來公布所需的地點的地址徵召<ul class="task"><li>決定重點區域為第一優先</li>
-<li>可先去重點區域周遭搜尋公家機關或各級學校</li>
-<li>決定網格大小或方圓之半徑</li></ul class="task">
+<li>從google map移植到Openstreetmap作為圖資來源或許比較恰當，但在評估這坑會多大中。</li></li>
+<li>移植是說圖磚改用 OpenStreetMap？</li>
+<li>號召更多志願者參與開源感測站佈點<ul class="task"><li>重點區域，如交通要道或者工業區周遭，按照網格或者方圓來公布所需的地點的地址徵召<ul class="task"><li>推測之汙染源之重點區域為第一優先<ul class="task"><li>北部: 桃園, 新竹</li>
+<li>中部: 雲林, 台中</li>
+<li>南部: 嘉義, 高雄</li>
+<li>各區域可尋找之資源&nbsp;<ul class="task"><li>各汙染區自救會們：<a href='https://www.facebook.com/pulipm2.5/?fref=ts'/>埔里pm2.5空污減量自救會</a>、<a href='https://www.facebook.com/fpccgoaway/?fref=ts'/>自從六輕來了</a></li>
+<li>紀錄片導演們</li>
+<li>可先去重點區域周遭搜尋公家機關或各級學校(公家資源的使用正當性?)</li>
+<li>文青咖啡店!!!&nbsp;</li></ul class="task">
+</li></ul class="task">
 </li>
-<li>解決無wifi區域，電信通訊<ul class="task"><li>3G</li>
+<li>決定網格大小或方圓之半徑</li>
+<li>結合污染重點區及氣象分析秀出需要認領的區域（行政區里或最小統計區&gt;或網格地圖），需要分析圖資：<ul class="task"><li>空污感測器點位分布圖</li>
+<li>台灣空氣<a href='http://prtr.epa.gov.tw'/>列管污染源</a>分佈（PRTR進階搜尋空氣污染）。<a href='http://data.gov.tw/node/6362'/>開放資料下載</a></li></ul class="task">
+</li></ul class="task">
+</li>
+<li>解決無wifi區域，靠電信通訊<ul class="task"><li>3G</li>
 <li>用離線方式運作靠硬碟儲存</li></ul class="task">
 </li>
+<li>重新嘗試用頁面登入wifi的可行性, 抑或是使用網路線的版本<ul class="task"><li>客製化!&nbsp;</li></ul class="task">
+</li>
 <li>靠教育的科學活動教案或者環保署的標案增加佈點的機會</li>
-<li>空污打地鼠地圖：結合污染重點區及氣象分析秀出需要認領的區域（行政區里或最小統計區&gt;或網格地圖）</li></ul>
+<li>空污打地鼠地圖：</li><ul><li>規格</li></ul>
 </ul>
-</ul>
+</li>
+<li>手機APP工程師</li></ul>
 
 <p></p><h2>實作細節</h2><p></p><p><b>協作工具</b></p><ul><li>github repo：<a href="https://github.com/immortalmice/Real-time-Air-Quality-Map"></a>https://github.com/immortalmice/Real-time-Air-Quality-Map</li>
 <li>hackfoldr 工作資料夾網址：</li>
@@ -70,6 +86,11 @@
 
 <p><b>參考資訊, 連結</b></p><p></p><p>先前相關g0v專案:</p><ul><li><a href='/B1xkj9fUqqH'/>IoT DIY</a></li>
 <li><a href="http://env.g0v.tw/air/"></a>http://env.g0v.tw/air/</li>
+<li><br/></li></ul>
+<p>交通流量相關：</p><ul><li>Google Map API, Traffic Layer：<a href="https://developers.google.com/maps/documentation/javascript/examples/layer-traffic"></a>https://developers.google.com/maps/documentation/javascript/examples/layer-traffic</li>
+<li>即時交通流量：交通部公路總局<a href="https://www.thb.gov.tw/page?node=5f463394-b2e6-4b07-ba1a-5e5b16749bf1"></a><a href='https://www.thb.gov.tw/page?node=5f463394-b2e6-4b07-ba1a-5e5b16749bf1'/>https://www.thb.gov.tw/page?node=5f463394-b2e6-4b07-ba1a-5e5b16749bf1</a></li>
+<li>台北市交通控制中心：<a href="http://tms.bote.taipei.gov.tw/ttc2/main.jsp"></a>http://tms.bote.taipei.gov.tw/ttc2/main.jsp</li>
+<li>台北市交通工程管制處－即時流量：<a href="http://www.bote.gov.taipei/np.asp?ctNode=20169&mp=117031"></a>http://www.bote.gov.taipei/np.asp?ctNode=20169&amp;mp=117031</li>
 <li><br/></li></ul>
 
 <p></p></body>
