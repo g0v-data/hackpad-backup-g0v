@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="641"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$jzBYLYjZ2J4</title>
+</head>
+<body><h1>法院判決書資料探勘</h1><p></p><h2>目的</h2><ol><li>讓法院的判決可以用&nbsp; Google 做全文搜尋</li>
+<li>透過 data mining 回答以下問題 (請增加):<ol><li>一年之中哪個月處理的案子最多？</li>
+<li>月初還是月底是結案高峰？</li>
+<li>哪個法官勝訴機率最大？</li>
+<li>誰告人最多？</li>
+<li>誰被告最多？</li>
+<li>誰一直告誰？</li>
+<li>哪個銀行發的的支付命令最多，平均多少錢？</li>
+<li>刑法某個法條平均刑期、標準差等</li></ol>
+</li>
+<li>爬出以下結構化資料<ol><li>人名 { 原告、被告、法官、書記官、律師 }</li>
+<li>適用法條</li>
+<li>刑期</li></ol>
+</li>
+<li>等等等請自行增加</li></ol>
+
+<p></p><h2>架構</h2><ul><li>判決本文放在 gh-pages<ul><li>Google 可以依此做全文搜尋 -- 反正我們自己做，也不可能做得比 Google 好</li>
+<li>命名規則和判決字號做 1:1 mapping</li>
+<li><a href="https://github.com/miaoski/jrf"></a>https://github.com/miaoski/jrf</li></ul>
+</li>
+<li>判決案由另開 gh-pages<ul><li>Google 可以依此做全文搜尋</li></ul>
+</li>
+<li>metadata 放在 EC2 上的 ElasticSearch / Kibana<ul><li>為了省錢，只存 metadata 做 visualization 和分析</li>
+<li>找到東西後就連回</li></ul>
+</li>
+<li>Graph 放在 A-tsioh 的 padagraph.io</li></ul>
+
+<p></p><h2>資料來源</h2><p>爬資料的方法放在 <a href='/BlLdzEsImuv'/>jrf_data</a> 。</p><p></p><p></p><h2>待處理</h2><ul><li>每天 get_schedules.rb</li></ul>
+
+<p></p><h2>解釋</h2><p>庭期表：</p><p>庭期表是法院開庭的時程，通常過期就會砍掉了。而公布的時程只有今明兩天比較穩（因為先公布的有可能會改時間）。</p><p></p><p>庭期表內容有開庭的案號、時間、法官股別（搭配股別分配表可找到法官，不過有時候有三個法官，股別分配表只能找到一個法官）。</p><p></p><p>分析庭期表，可了解法院案子審理進度。不過，有些案子如果和解，就會沒有判決，但從此再也不開庭；送鑑定也可能一年以上沒開庭。</p><p></p></body>
+</html>
