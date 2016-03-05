@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2353"/>
+<meta name="version" content="2468"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$vDLLZbbikXF</title>
 </head>
 <body><h1>一鍵 Excel 轉 .csv (含自動修復) (Ver20160301)</h1><p></p><h2>專案簡介</h2><p><b>緣由</b></p><p>看到Peggy的<a href='https://hackpad.com/Lesson-1-ver1.0-XdDvvmJJ6Zf'/>公務員開放資料Lesson 1 </a>，想說有沒有辦法直接開發程式供公務人員使用，減少轉檔後的資料格式問題</p><p></p><ul class="comment"><li>跪謝Q_____________Q</li>
@@ -11,8 +11,8 @@
 <li>1. 用 &quot;VBA&quot; 跟 &quot;Ronny做成網站&quot; 這兩種方式，哪一種比較容易使用？</li>
 <li>2. VBA的功能可以也變成線上化的方式進行嗎？反之把網站功能做成VBA？</li>
 <li>3. 哪一個方法比較容易、還是不同功能必須用不同方法？</li>
-<li>VBA完成後可以直接變成EXCEL中的一個按鈕，EXCEL開了就可以用，沒有網路也可以；但相對的，第一次安裝也需要一些步驟。另外缺點就是更新比較困難，每次CODE更新就要重新設定一次。個人認為VBA方法對公務員比較友善，但對替代役或資訊人員比較麻煩。</li>
-<li>然後兩種方法核心應該依樣吧，不過語法有些不同，但理論上是可以互相轉換的。</li>
+<li>1.&nbsp; VBA完成後可以直接變成EXCEL中的一個按鈕，EXCEL開了就可以用，沒有網路也可以；但相對的，第一次安裝也需要一些步驟。另外缺點就是更新比較困難，每次CODE更新就要重新設定一次。個人認為VBA方法對公務員比較友善，但對替代役或資訊人員比較麻煩。</li>
+<li>2. &amp; 3.&nbsp; 然後兩種方法核心應該依樣吧，不過語法有些不同，但理論上是可以互相轉換的。</li>
 <li>理解.....等下討論！</li>
 <li>不好意思插入一個問題， .ods格式在轉換上問題會比較少嗎? 還是說因為現成資源較少所以反而要重新開發?</li>
 <li>其實我不懂.ods，可以等下介紹 / 討論一下。</li>
@@ -69,17 +69,23 @@
 <li>beta版新增可以處理的部份 (alpha版功能繼承)</li><ol><li>自動判別資料範圍</li>
 <li>儲存時不再留下原始資料的副檔名</li>
 <li>修正儲存路徑為原始檔案的同資料夾內</li>
-<li>自動去除多餘的空白列、註解列</li></ol>
-</ul>
-<ul><li>beta版尚未處理的問題</li><ol><li>尚未完全驗證</li>
-<li>一次處理同一檔案中的所有分頁 (code已完成，尚未實裝)</li>
-<li>當已有同名檔案時，要怎麼處理</li>
-<li>存完後是否自動關閉檔案（執行中的為.csv)&nbsp;</li>
-<li>讓使用者可以很簡單地把巨集置放於工具列</li></ol>
+<li>自動去除多餘的空白列、註解列</li><ul><li>Beta版測試</li>
+<li>Before</li></ul>
+</ol>
 </ul>
 </ol>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_vDLLZbbikXF_p.534607_1457151115321_undefined'/></p><ul><li><br/></li>
+<li>After</li></ul>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_vDLLZbbikXF_p.534607_1457151174553_undefined'/></p><ul style="list-style: none;"><li><br/></li></li>
+<li>beta版尚未處理的問題</li></li>
+<li>尚未完全驗證</li></li>
+<li>一次處理同一檔案中的所有分頁 (code已完成，尚未實裝)</li></li>
+<li>當已有同名檔案時，要怎麼處理</li></li>
+<li>存完後是否自動關閉檔案（執行中的為.csv)&nbsp;</li></li>
+<li>讓使用者可以很簡單地把巨集置放於工具列</li></ul>
 <ul class="comment"><li>發現問題，資料表欄列太多時會卡住</li>
 <li><br/></li></ul>
+
 <p>2. VBA巨集<a href='https://www.dropbox.com/s/udh6esh63bririi/Excel_to_csv_alpha.xlsm?dl=0'/>alpha版</a>完成，測試中<i>&nbsp;&nbsp; </i>(2015)</p><ul><li>請<a href='https://www.dropbox.com/s/udh6esh63bririi/Excel_to_csv_alpha.xlsm?dl=0'/>下載</a>後使用，點選第一頁的Run。若要再次測試，請關閉檔案重新開啟。</li>
 <li>目前可處理部份</li><ol><li>一鍵完成（不過還沒做好巨集指令移轉，所以只能在範例檔中使用）</li>
 <li>解決「簡單的合併儲存格」問題</li>
