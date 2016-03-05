@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2347"/>
+<meta name="version" content="2353"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$vDLLZbbikXF</title>
 </head>
 <body><h1>一鍵 Excel 轉 .csv (含自動修復) (Ver20160301)</h1><p></p><h2>專案簡介</h2><p><b>緣由</b></p><p>看到Peggy的<a href='https://hackpad.com/Lesson-1-ver1.0-XdDvvmJJ6Zf'/>公務員開放資料Lesson 1 </a>，想說有沒有辦法直接開發程式供公務人員使用，減少轉檔後的資料格式問題</p><p></p><ul class="comment"><li>跪謝Q_____________Q</li>
@@ -17,7 +17,8 @@
 <li>不好意思插入一個問題， .ods格式在轉換上問題會比較少嗎? 還是說因為現成資源較少所以反而要重新開發?</li>
 <li>其實我不懂.ods，可以等下介紹 / 討論一下。</li>
 <li>好的，我其實也想蒐集一下大家對於data.gov.tw的想法XD（這次應該先挖坑的...orz）</li></ul>
-<p>=</p><p></p><p></p><p><b>要解決的問題</b></p><ol><li>減少Excel檔案轉成.csv的步驟，以節省時間及降低人為犯錯機率</li>
+
+<p></p><p></p><p><b>要解決的問題</b></p><ol><li>減少Excel檔案轉成.csv的步驟，以節省時間及降低人為犯錯機率</li>
 <li>自動修正Excel中轉成.csv時造成錯誤的潛在因子，確保轉出的.csv可供後續正確使用</li>
 <li>不要破壞原本「方便人閱讀的格式」，降低使用者抗拒因素</li></ol>
 
@@ -77,7 +78,8 @@
 <li>讓使用者可以很簡單地把巨集置放於工具列</li></ol>
 </ul>
 </ol>
-
+<ul class="comment"><li>發現問題，資料表欄列太多時會卡住</li>
+<li><br/></li></ul>
 <p>2. VBA巨集<a href='https://www.dropbox.com/s/udh6esh63bririi/Excel_to_csv_alpha.xlsm?dl=0'/>alpha版</a>完成，測試中<i>&nbsp;&nbsp; </i>(2015)</p><ul><li>請<a href='https://www.dropbox.com/s/udh6esh63bririi/Excel_to_csv_alpha.xlsm?dl=0'/>下載</a>後使用，點選第一頁的Run。若要再次測試，請關閉檔案重新開啟。</li>
 <li>目前可處理部份</li><ol><li>一鍵完成（不過還沒做好巨集指令移轉，所以只能在範例檔中使用）</li>
 <li>解決「簡單的合併儲存格」問題</li>
