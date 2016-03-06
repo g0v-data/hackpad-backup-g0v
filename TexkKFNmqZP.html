@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1311"/>
+<meta name="version" content="1312"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$TexkKFNmqZP</title>
 </head>
 <body><h1>g0v 零時空汙觀測網</h1><p>整合各方空汙監測站的觀測資料與各種汙染源的排放資料以地圖視覺化呈現</p><p>清楚明瞭的即時空汙動態追蹤，以此達到排汙監督的社會效益</p><p></p><h2>專案簡介</h2><p></p><p><b>緣由與欲解決之問題</b></p><p>最初的專案方向是在開發小型開源的arduino空氣品質監測器並組織一個非官方的共同觀測網</p><p>一路開發下來發現其實很多各路高手都在做類似的專案</p><p>但專案之間的資料並不互通且零散</p><p>各平台有各的優缺點，要著手去統一開發平台並不實際</p><p>所以決定把目標提高一個層次去整合各種觀測資源讓各空汙監測開發社群貢獻的效益最大化</p><p></p><p><b>專案最高原則</b></p><p>整合各方空汙監測站的觀測資料與各種汙染源的排放資料以地圖視覺化呈現</p><p>清楚明瞭的即時空汙動態追蹤，以此達到排汙監督的社會效益</p><p>在最後並可彈性化統一輸出方便後續應用的資料格式(json, tabular data)</p><p></p><p><b>授權方式</b></p><p>零時空汙觀測網站實作專案近日將以MIT授權方式於github發佈</p><p></p><p><b>欲整合之目標</b></p><ul><li>即時觀測資料 (包括官方與非官方測站的觀測資訊)</li>
@@ -46,7 +46,7 @@
 </ul>
 </ul>
 
-<ul class="task"><li>環保署的測站有觀測<a href='http://taqm.epa.gov.tw/taqm/tw/HourlyData.aspx'/>氣溫濕度</a>，但卻沒包含在開放資料平台的資料中，可能得自己拆或去向環保署要求開放。</li><ul class="taskdone"><li>請大家到<a href='http://forum.epa.gov.tw/EPASPS/SPSA/SPSA01001.aspx'/>環保e言堂</a>，寫信給署長，要求開放資料！</li></ul>
+<ul class="task"><li>環保署的測站有觀測<a href='http://taqm.epa.gov.tw/taqm/tw/HourlyData.aspx'/>氣溫濕度</a>，但卻沒包含在開放資料平台的資料中，可能得自己拆或去向環保署要求開放。<ul class="task"><li>請大家到<a href='http://forum.epa.gov.tw/EPASPS/SPSA/SPSA01001.aspx'/>環保e言堂</a>，寫信給署長，要求開放資料！</li></ul class="task">
 </li>
 <li>非官方測站的資料來源常有在校正中或是僅作短期觀測導致資料不正常的情況，須建立一個機制去讓地圖優先顯示已穩定運作的資料來源。</li>
 <li>風力視覺化有待整合<a href="https://github.com/cambecc/earth"></a><a href='https://github.com/cambecc/earth'/>https://github.com/cambecc/earth</a>，這難度有點高但是值得去做的。</li>
