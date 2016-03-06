@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="641"/>
+<meta name="version" content="707"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$jzBYLYjZ2J4</title>
 </head>
 <body><h1>法院判決書資料探勘</h1><p></p><h2>目的</h2><ol><li>讓法院的判決可以用&nbsp; Google 做全文搜尋</li>
@@ -23,8 +23,9 @@
 <li>等等等請自行增加</li></ol>
 
 <p></p><h2>架構</h2><ul><li>判決本文放在 gh-pages<ul><li>Google 可以依此做全文搜尋 -- 反正我們自己做，也不可能做得比 Google 好</li>
-<li>命名規則和判決字號做 1:1 mapping</li>
-<li><a href="https://github.com/miaoski/jrf"></a>https://github.com/miaoski/jrf</li></ul>
+<li>命名規則和判決字號做 1:1 mapping 如:<ul><li><a href="http://miaoski.github.io/jrf/86/鑑/8226.html"></a><a href='http://miaoski.github.io/jrf/86/%E9%91%91/8226.html'/>http://miaoski.github.io/jrf/86/鑑/8226.html</a></li>
+<li>為了增加 git push 的效率，分成幾個 repo ，請以 *.html 為準</li></ul>
+</li></ul>
 </li>
 <li>判決案由另開 gh-pages<ul><li>Google 可以依此做全文搜尋</li></ul>
 </li>
