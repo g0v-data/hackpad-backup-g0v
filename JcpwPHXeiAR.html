@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1118"/>
+<meta name="version" content="1190"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$JcpwPHXeiAR</title>
 </head>
 <body><h1>自己的照片自己存</h1><p></p><p><b>緣起</b></p><p>picasaweb 倒閉, flickr 又是前途未卜的 Yahoo 在維護... 有沒有什麼更好的解決方案呢？</p><p></p><p><b>相簿服務自己來</b></p><p>我希望有個相簿服務可以滿足這些條件：</p><ul><li>開源，並統一下列規格的基本介面</li>
@@ -12,7 +12,9 @@
 </li>
 <li>分散式的照片流，讓任何自己架的服務仍可以串流在一起<ul><li>沒有中央主機，但架好自己的服務，馬上可以跟其它人共享標籤、集合等。</li>
 <li>從此 hackathon 的照片，自己拍的就自己host，但仍然所有人都可以看</li></ul>
-<ul class="comment"><li>YES!</li></ul>
+<ul class="comment"><li>YES!</li>
+<li>共同篩選照片：可以用標籤解決</li>
+<li>共同調整、編輯照片：shared parameters</li></ul>
 </ul>
 <ul><li>同布 / 備份 / 搬家機制<ul><li>可以很容易將自己所有照片從 A 服務轉移到 B 服務<ul><li>例如： flickr 到 smugmug, 500px 到 local disk</li></ul>
 </li>
@@ -25,7 +27,8 @@
 <p>Summary: 開源、分散、同步、跨服務</p><p>其它有也很好的功能:</p><ul><li>flickr 的所有功能：版權標示、權限管理、集合、相簿、社交功能、標籤、搜尋、社團</li>
 <li>500px 的評分機制</li>
 <li>stockphoto 的交易機制</li>
-<li>匿名上傳</li></ul>
+<li>匿名上傳</li>
+<li>感覺有 buffer 的 <a href='https://buffer.com/pablo'/>pablo</a> 可以幫坑主或講者做Quote&nbsp;</li></ul>
 
 <p><b>服務調查</b></p><ul><li>GIT 似乎滿足這樣的條件，但照片不需要版本管理<ul><li>有些東西還是要管理版本，像是：<ul><li>Lightroom export 的 edit meta</li>
 <li>photoshop 過的照片也要管理版本</li></ul>
