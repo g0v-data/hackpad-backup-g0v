@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="696"/>
+<meta name="version" content="756"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$UssOWtAVda9</title>
 </head>
 <body><h1>中研院「社會變遷全記錄」半自動化計畫</h1><p></p><h2>專案簡介</h2><p></p><p><b>緣由</b></p><p></p><p>中研院<a href='http://www.ios.sinica.edu.tw/TSCpedia/index.php/%E5%8F%B0%E7%81%A3%E7%A4%BE%E6%9C%83%E8%AE%8A%E9%81%B7%E5%85%A8%E8%A8%98%E9%8C%84'/>台灣社會變遷全紀錄</a>，記載各大主題及面向的社會變遷，主要內容來自<a href='http://survey.sinica.edu.tw/srda/TSCS_topic.htm'/>社會變遷調查</a> （自 1985 年起），以及其他各種政府統計。</p><p></p><p>但是因為全記錄涵蓋的面向廣、更新不易，希望能建立一個簡便的機制，連結各個議題所使用的「調查問卷題號」與「政府統計」，讓每個議題可以自動化更新所連結的相關數字，並且鼓勵關心不同面向的社群，就這些基礎資料來進行研究或書寫。</p><p></p><p>推廣使用方面，希望提供三種層次的資料，讓有興趣的人，可以逐步理解如何使用調查資料：</p><ol><li>第一步是讓有興趣的人，可以先快速瀏覽資料，不用 excel 或太多資料處理，就能˙進行簡單分析，以了解資料特性。例如列出歷年快不快樂指數在性別上的差異。</li>
@@ -40,20 +40,11 @@
 <li>NeedsProcess: 需要幫忙設計作業流程</li>
 <li>NeedsTalkingToRealPerson: 需要有人幫忙和其他機關聯絡</li></ul>
 
-<p></p><h2>實作細節（非技術背景可跳填）</h2><p></p><p><b>協作工具</b></p><ul><li>github repo：</li>
-<li>hackfoldr 工作資料夾網址：</li>
-<li>google drive 共用資料夾網址：</li></ul>
+<p></p><h2>實作細節（非技術背景可跳填）</h2><p></p><p><b>協作工具</b></p><ul><li>github repo：<a href="https://github.com/g0v/automate.tscs"></a>https://github.com/g0v/automate.tscs</li></ul>
 
-<p><b>進度與 to-do</b></p><ul class="comment"><li>僅供參考</li></ul>
-<ul class="task"><li>product planning（recommanded procedure from justin lee / 李易修）<ul class="task"><li>strategy</li>
-<li>scope</li>
-<li>structure</li>
-<li>wireframe</li>
-<li>visual</li></ul class="task">
+<p><b>進度與 to-do</b></p><ul class="task"><li>第一步 - 簡易查詢界面<ul class="task"><li><br/></li></ul class="task">
 </li>
-<li>web front-end</li>
-<li>web back-end</li>
-<li>ui / visual design</li></ul>
+<li>第三步 - 半自動化資料連結</li></ul>
 
-<p></p><h2>成果展示（規劃文件、雛形/草稿、原型/初稿、正式發佈/完稿）</h2><p></p><p>如果有做出成果可以往這邊丟丟看</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_UssOWtAVda9_p.65355_1457151810118_image (5).png'/></p><p>不同年齡對於離婚是否有錯看法(1=非常錯;&nbsp; 2=相當錯;&nbsp; 3=有點錯;&nbsp; 4=沒有錯)</p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_UssOWtAVda9_p.65355_1457152015032_image (6).png'/></p><p>不同調查年份對於離婚是否有錯看法變化(1=非常錯;&nbsp; 2=相當錯;&nbsp; 3=有點錯;&nbsp; 4=沒有錯)</p><p></p></body>
+<p></p><h2>成果展示（規劃文件、雛形/草稿、原型/初稿、正式發佈/完稿）</h2><p></p><p>如果有做出成果可以往這邊丟丟看</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_UssOWtAVda9_p.65355_1457151810118_image (5).png'/></p><p>不同年齡對於離婚是否有錯看法(1=非常錯;&nbsp; 2=相當錯;&nbsp; 3=有點錯;&nbsp; 4=沒有錯)</p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_UssOWtAVda9_p.65355_1457152015032_image (6).png'/></p><p>不同調查年份對於離婚是否有錯看法變化(1=非常錯;&nbsp; 2=相當錯;&nbsp; 3=有點錯;&nbsp; 4=沒有錯)</p><p></p><p><b>用 Grafana + InfluxDB 來作簡易版視覺化工具</b></p><p></p><p>教育程度 vs 性別 （）</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_UssOWtAVda9_p.52241_1457260085637_2016-03-06 18:26:30 的螢幕擷圖.png'/></p><p></p></body>
 </html>
