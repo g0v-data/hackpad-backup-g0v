@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="142"/>
+<meta name="version" content="1118"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$Nfj0ncaNnhq</title>
 </head>
 <body><h1>g0v summit 2016 口譯設備評估</h1><p></p><p></p><p>1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3間會議室同時單獨啟用? 或</p><p></p><p>2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3間會議室同時連線使用（1、2題：單獨啟用，不連線。）</p><p></p><p>3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 耳機租金為每組NT$120.00 依需求數量計價</p><p></p><p>4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 翻譯隔間每組NT$16000.00&nbsp; 3間會議室同時單獨啟用 則須3間</p><p></p><p>5.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 以上價錢為使用一天價格&nbsp;&nbsp;&nbsp; 工資另計</p><p></p><p>紅外線接收器/含耳機數量可調整</p><p></p><table style="font-size:13px;cell-spacing: 0px; border-collapse: collapse;"><tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#38917;&#27425;</td>
@@ -392,8 +392,131 @@
 <li>麥克風（共三顆）</li>
 <li>耳機（共六組，一台筆電接兩組耳機）</li></ol>
 </ul>
+
 <ul class="task"><li>icecast server 硬體募集 / 線路組 pennyken</li>
 <li>由於這次兩天都在人文館，server 硬體會架在人文館，至於人文館哪裡適合放 server，ET 會再請教 pennyken 或&nbsp; mousems</li></ul>
 
-<p></p><p></p><p></p><p></p></body>
+<p>mouse: 線路組會把設備放在口譯室（最左邊那間），口譯主機可以一起放，但要先跟 <a href='https://g0v-tw.slack.com/team/pennyken'/>@pennyken</a> 溝通技術上的需求XD，因為線路組會將人文館各個廳 VLAN 切開，所以線路組要配 public ip 給 server</p><p></p><p><b>2016/03/07 online meeting</b></p><p>自我介紹</p><ul><li>ly</li>
+<li>wilt 口譯組長</li>
+<li>et</li>
+<li>lanf0n</li>
+<li>penny 線路組長</li>
+<li>soidid</li></ul>
+<p>設定登入 trello</p><p></p><p>WILT</p><ul><li>大部分口譯會自己帶耳機，但現場還是最好準備</li>
+<li>3.5 分接線</li>
+<li>麥克風一支比較好</li></ul>
+<p>ly</p><ul><li>專業可以切但實際難做到</li></ul>
+<p>wilt</p><ul><li>上屆口譯位置因為空間關係即使我耳機聽得到換過去麥克風位置還是會有落差，過程要從座位起來</li></ul>
+<p>penny</p><ul><li>r1 r2 口譯是要跟大哥卡房間</li></ul>
+<p>ly</p><ul><li>r1r2租得到機器也不會有口譯是</li></ul>
+<p>wilt</p><ul><li>小會議是要用的話要口譯相，架在會場角落</li></ul>
+<p>penny</p><ul><li>口譯相要拿爾照式耳機不然干擾會很嚴重</li>
+<li>我有用壓克力版做過口譯廂</li></ul>
+<p>wilt</p><ul><li>需要看講者投影片跟現場狀況</li></ul>
+<p>penny</p><ul><li>r0 5F看不到投影片</li></ul>
+<p>wilt</p><ul><li>r1r2也看不到，之前線太短還要站起來看窗外</li></ul>
+<p>penny</p><ul><li>去年請她們看倒播設備小螢幕</li></ul>
+<p>wilt</p><ul><li>那無法看到會場</li>
+<li>15吋小螢幕投影片超小等於沒看到，講者會走來走去</li></ul>
+<p>ly</p><ul><li>目前預計先用icecast但是如果有tutor abc的話r0會有口譯設備</li>
+<li>問題：r1r2跟大哥擠的時候會有問題</li>
+<li><s>貓橘毛在前一天測試時一個人沒辦法，可能要多找幾人，</s></li></ul>
+<p>penny</p><ul><li><s>要幫你們拉實體網路線，不然r1r2裡面是wifi死角</s></li>
+<li>icecast server 我會拿小電腦，會社訂好給你們內往連結跟140.109 server，public 分成channel 123，或找人寫landing page直接link找回去</li>
+<li>我會給貓橘client servername host client 帳號密碼</li>
+<li>server 會放人文館</li></ul>
+<p>wilt</p><ul><li>測試如果只是聽聽聲音還好？</li></ul>
+<p>penny</p><ul><li><s>我可以支援測試，我server on上去後要對設定，本來就要去處理</s></li>
+<li>這次外面沒攤位已經省下百分之八十</li>
+<li>你們找志工可以複製現場會提供簡便耳機，但有習慣東西可以自己帶，不保證可以給最好的</li>
+<li>中研院有口譯設備但要另外花錢</li></ul>
+<p>wilt</p><ul><li>準備現才時，帶著耳機麥克風拿著可以再貼近窗戶看會場</li></ul>
+<p>ly</p><ul><li>上次因為卡一張桌子看不到玻璃</li>
+<li>他的設備很滿，也不願意讓人家動</li></ul>
+<p>wilt</p><ul><li>所以icecast 現才要夠長</li></ul>
+<p>penny</p><ul><li>mic 一分二很麻煩我告訴你</li>
+<li>麻煩點：會有同時兩個人講話，聽的人會瘋掉，你的mic 要有硬體switch但一般麥克風是always on</li>
+<li>usb音效卡一個麥克風一個耳機當備品，任一台筆電，插上去接耳機和麥克風，他就有了耳麥，不用買USB麥克風因為USB麥克風很貴</li></ul>
+
+<p><s>決定：要三支麥克風但是夠長</s></p><p>wilt</p><ul><li>何時確定R0的設備我們是需要的？tutorabc</li></ul>
+<p>ly</p><ul><li>最快下週一可以給你們</li>
+<li>等確定後來重新sync</li>
+<li>前年有發話機干擾的問題</li></ul>
+<p>penny</p><ul><li>去年國際活動要tutorabc報價很恐怖</li>
+<li><s>ta走特殊的頻率慧根中研院wifi衝到</s></li></ul>
+<p>wilt</p><ul><li>兩天早場跟最後的都是r012都同步，到時候應該是在r0講，那r1r2設備？如果用設備商的口譯設備怎麼透過網路傳？</li></ul>
+<p>penny</p><ul><li>r0 keynote時r1r2看同步的人就無法享受口譯硬體</li></ul>
+<p>ly</p><ul><li>那沒辦法，他沒租接收器就沒辦法，到時r1r2就聽icecast</li>
+<li>前年作法是口譯對著口譯機講，旁邊放麥克風同時收音，因為mic一定會有一個近一個遠所以音質不好</li></ul>
+<p>wilt</p><ul><li>音質其實很重要，平常麥克風不用特別，因為口譯廂裡面聲音很安靜很清楚</li>
+<li>但icecast問題李mic問題次要，而是延遲傷害</li></ul>
+<p>penny</p><ul><li>他會壓縮成wav再往後傳，我們在中研院裡相對已經好很多，上次在外面。通通在140 109下可以控制在兩秒內</li></ul>
+<p>ly</p><ul><li>上次delay是因為在外面</li></ul>
+<p>penny</p><ul><li>上上裡面sitcon直播用rp也是2sec內</li></ul>
+<p>wilt</p><ul><li>字幕在電視上停大概兩秒到四秒，icecast等於看到上一個字幕，所以兩秒蠻多的</li>
+<li>之前講者講話速度兩秒可以塞超多</li></ul>
+<p>penny</p><ul><li>兩秒對一般人士可以對話的</li>
+<li>因為會專心聽口譯但投影片不是每秒換一張</li>
+<li>講者肢體表現沒辦法，專業設備也會差0.5-0.8秒</li></ul>
+<p>ly</p><ul><li>專業口譯設備相對不會壓縮音質，因為是高頻打出，音訊直接傳到接收機</li></ul>
+<p>penny</p><ul><li>我的icecast已經壓441是這個版本極限，要送128k不知道稱不稱得住</li></ul>
+<p>ly</p><ul><li>高音質會lag多</li></ul>
+<p>wilt</p><ul><li>跟聲音糊相比我寧可lag一點</li>
+<li>一般不是電容式的話電腦收音非常小講話要很大聲</li></ul>
+<p>penny</p><ul><li>要看你們麥克風怎麼戴</li></ul>
+<p>wilt</p><ul><li>r1 or r2 在設備更裡面加了圓桌，剩下很小的走道，只能站著</li></ul>
+<p>penny</p><ul><li>我們用暴力方式在音控旁接了a4大小放mba</li>
+<li>最難的是QA看不到現場無法轉換</li></ul>
+<p>wilt</p><ul><li>如果站著的話有賣課架勢最好</li>
+<li>之前mic就站著都用手拿</li></ul>
+<p>penny</p><ul><li>沒地方架，那硬體空間基礎限制就是窗前有設備，無法放桌椅</li>
+<li>我們要想怎麼讓他們不出力做到這件事</li></ul>
+<p>wilt</p><ul><li>工作上一定會遭遇到不清楚狀況，還是需要有手打電腦找資料，所以桌子<s>要有桌子放自己的電腦</s>，所以r1r2很擠</li></ul>
+<p>penny</p><ul><li>icecast client筆電拿來查資料還好，動到設定除非按到停止按鍵</li></ul>
+<p>wilt</p><ul><li>我的瀏覽器已經設定好網站，希望使用自己的</li></ul>
+<p>penny</p><ul><li>可以把icecast架在你慣用電腦上</li></ul>
+<p>wilt</p><ul><li>但不是整個track都是同一組人</li></ul>
+<p>penny</p><ul><li>如果知道每個人是誰我可以幫你們設定012讓你們用自己的電腦到處跑</li>
+<li>其實軟體蠻簡單，只有三個按鈕跟一個設定地方</li></ul>
+<p>wilt</p><ul><li>一般口譯沒有這樣的作業，所以等於到現場才又重新習慣，出錯機會會很大</li></ul>
+<p>penny</p><ul><li>很難有行前的訓練，那還是現場每一間我們的電腦比較好</li>
+<li>募集的時候可以多，但不一定要跟他借，<s>可以募，先把resource找到，然後請會的人幫你confirm</s>，</li></ul>
+<p>wilt</p><ul><li>之前被電腦麥克風困擾很久，買很多200原三百的不是電容式的，後來有人推薦電容式</li></ul>
+<p>penny</p><ul><li>要看是USB還是3.5，3.5的組抗歐畝直不一樣會影響電腦接收</li></ul>
+<p>wilt</p><ul><li>希望聲音不要用喊的</li></ul>
+<p>ly</p><ul><li><s>mic 就寫48k錄音等級，48k是錄音最低要求</s></li></ul>
+<p>penny</p><ul><li>如果要USB音效卡我可以幫你借</li>
+<li>三週前幫口譯設備做final confirm</li>
+<li><s>筆電mac 跟win都可但是wifi或ethernet要workable</s></li></ul>
+<p>ly</p><ul><li><s>我私人有兩台mbp可以借一台</s></li></ul>
+<p>penny</p><ul><li>如果借得到耳擴要借一個，因為可以調音量差很多，總共三個</li></ul>
+<p>wilt</p><ul><li><s>耳機都是頭戴的不是勾爾的</s></li>
+<li><s>耳機開放式也可以，聽得到才是重點</s></li></ul>
+<p>penny</p><ul><li>中控是裡面有一組間聽喇叭，之前因為干擾會請大哥把他關掉就蠻安靜的</li>
+<li>對外徵的話，講說可以調整音量的裝置（<s>penny研究一下再Pm ET</s>）就好，不一定要耳括，因為遇過帶來的耳機是6.3的頭</li>
+<li>藍芽會遇到沒電問題，超恐怖，不要</li></ul>
+<p>WIWLT</p><ul><li>現在要開始找口譯人數</li></ul>
+<p>ly</p><ul><li>要整理一個<s>口譯對照表詞彙表</s>，今年會給投影片</li></ul>
+<p>wilt</p><ul><li>之前都沒有欸，去年好像到半夜或隔天有的都沒有給投影片，第一次見到講者是在晚餐講不到話</li></ul>
+<p>ly</p><ul><li>今年是否可以提早處理這些事情</li></ul>
+<p>wilt</p><ul><li>有聯絡方式的話。。不是每個人都會先跟講者聯絡</li>
+<li>我還沒跟阿端對話到，他去日本</li></ul>
+<p>ly</p><ul><li>他昨天回來</li>
+<li>問卷不用</li>
+<li>要約的話什麼時間？</li></ul>
+<p>wilt</p><ul><li>我需要跟講者聯絡，要看哪幾個口譯選哪幾個講者</li>
+<li>創造理想的工作狀態，如果可以事先熟悉，如果有台灣講者也會</li>
+<li>等一下msg給阿端</li></ul>
+<p>ly</p><ul><li>現在講者40+人，每個人都去聯繫會不會弄不來</li></ul>
+<p>wilt</p><ul><li>到時候會各自翻譯的講者去聯絡，聯絡方式給他們看她們要不要用</li>
+<li>給他們理想狀態，不要到最後一刻，上次我做的講者沒有任何投影片</li>
+<li>常常遇到講者上場前三十分鐘才在做投影片</li></ul>
+<p>下週：LY跟wilt確認有沒有跟阿端搭上線</p><p>penny</p><ul><li>審稿後就知道大方向了</li></ul>
+<p>wilt</p><ul><li>slide 我們會猜，詞彙表主要是猜詞彙。專有的term如果用英文中文可能也...</li></ul>
+<p>penny</p><ul><li>要讓翻譯組看到議程表，她們去問誰可能對哪個比較強，有些專有領域個人不同</li></ul>
+<p>wilt</p><ul><li>glossary讓譯者跟講者溝通過程</li></ul>
+<p>ly</p><ul><li>前年開了一個term</li></ul>
+<p>penny</p><ul><li>hitcon有一張傳承的glossary</li></ul>
+<p>wilt</p><ul><li>有傳承的glossary當然比較好</li></ul>
+<p><s>ET找前年的glossary然後貼過來</s></p><p></p><p></p></body>
 </html>
