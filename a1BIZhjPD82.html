@@ -3,39 +3,43 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="4430"/>
+<meta name="version" content="4802"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$a1BIZhjPD82</title>
 </head>
-<body><h1>都市園圃資料庫建置討論</h1><p>1.社區園圃既有案例整理</p><p>2.都市園圃資料庫建置方案討論</p><p></p><h2>資料庫建置方案討論</h2><p><b>基本設定</b></p><p>1.盡可能涵蓋台灣各個縣市的都市園圃經驗</p><p>2.透過群眾協作的方式，累積資料</p><p>3.明確的資料授權，例如&nbsp;</p><ul><li>CC0 1.0 通用 (CC0 1.0) <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.zh_TW"></a>https://creativecommons.org/publicdomain/zero/1.0/deed.zh_TW</li>
+<body><h1>公共園圃地圖資料庫</h1><p>1.社區園圃既有案例整理</p><p>2.都市園圃資料庫建置方案討論</p><p></p><h2>資料庫建置方案討論</h2><p><b>基本設定</b></p><p>1.盡可能涵蓋台灣各個縣市的都市園圃經驗</p><p>2.透過群眾協作的方式，累積資料</p><p>3.明確的資料授權，例如&nbsp;</p><ul><li>CC0 1.0 通用 (CC0 1.0) <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.zh_TW"></a>https://creativecommons.org/publicdomain/zero/1.0/deed.zh_TW</li>
 <li>姓名標示 4.0 國際 (CC BY 4.0) <a href="https://creativecommons.org/licenses/by/4.0/deed.zh_TW"></a>https://creativecommons.org/licenses/by/4.0/deed.zh_TW</li>
 <li>持續蒐集授權無虞的案例圖片：<a href="http://goo.gl/TC8sTl"></a><a href='http://goo.gl/TC8sTl'/>http://goo.gl/TC8sTl</a></li></ul>
 <p>4.容易維護管理資料與內容的系統方案</p><p>5.方便展示</p><ul><li>同時考量地圖化，例如需要有地理資料欄位才能標示</li></ul>
-<p>6.文字欄位，圖片，地理資料（要多細緻？）</p><p>7.可以匯出為 geojson</p><p>8.將內容匯出至 OSMdatabase，需進一步釐清相對應的 tag，以及基本授權</p><p>9.是否整合 OSMdatabase 既有關於社區園圃的圖資？（<a href='http://supaplex99.blogspot.tw/2015/08/using-overpass-turbo-to-extract-data-and-umap-with-dynamic-data-link-visualization.html?m=1'/>方法</a>）</p><p>10.官方資料匯入問題，例如公部門推動的園圃資料，市民農園資料等，部分資料集有資料授權規範</p><ul><li>納入政府開放資料，例如新北市市民農園資料，該資料欄位能否被涵蓋？</li></ul>
-
-<p></p><p><b>各種方案探討</b></p><ol><li>google 試算表 → <a href="https://goo.gl/4J6OD6"></a><a href='https://goo.gl/4J6OD6'/>https://goo.gl/4J6OD6</a></li>
-<li><a href='https://www.google.com/fusiontables/data?docid=1CCWdCOQhKmns70i-FLct6h-etR7oWgr_ZDKqE5ny#map:id=3'/>google fusion tables 地圖介面</a></li><ul><li>可以自訂欄位</li></ul>
-</ol>
-<ol><li>umap，例 <a href='https://umap.openstreetmap.fr/zh-tw/map/map_50075#18/25.04793/121.55796'/>測試地圖</a></li><ul><li>若將每一個園圃都給與一個圖層，可以畫出農園範圍輪廓，園圃內的分區也可以細緻繪製</li></ul>
-</ol>
+<p>6.文字欄位，圖片，地理資料（要多細緻？例如園圃內的分區細節）</p><p>7.可以匯出為 geojson 方便其他應用</p><p>8.將內容匯出至 OSMdatabase，需進一步釐清相對應的 tag，以及基本授權</p><p>9.是否整合 OSMdatabase 既有關於社區園圃的圖資？（<a href='http://supaplex99.blogspot.tw/2015/08/using-overpass-turbo-to-extract-data-and-umap-with-dynamic-data-link-visualization.html?m=1'/>方法</a>）</p><p>10.官方資料匯入問題，例如公部門推動的園圃資料，市民農園資料等，部分資料集有資料授權規範</p><ul><li>納入政府開放資料，例如新北市市民農園資料，該資料欄位能否被涵蓋？</li></ul>
+<p>11.每年都會有新的園圃出現，以及消失</p><p>12.</p><p></p><p><b>各種方案探討與試做</b></p><ul><li>google 試算表，例 <a href="https://goo.gl/4J6OD6"></a><a href='https://goo.gl/4J6OD6'/>https://goo.gl/4J6OD6</a><ul><li>經緯度需要另外轉換，無法支援輪廓資料</li>
+<li>圖片需要另外放，再把連結貼近文件中</li>
+<li>實際寫起來，因為都是在表格內填欄位內容，有點苦海無邊</li></ul>
+</li>
+<li><a href='https://www.google.com/fusiontables/data?docid=1CCWdCOQhKmns70i-FLct6h-etR7oWgr_ZDKqE5ny#map:id=3'/>google fusion tables 地圖介面</a><ul><li>可以自訂欄位</li></ul>
+</li>
+<li>umap，例 <a href='https://umap.openstreetmap.fr/zh-tw/map/map_50075#18/25.04793/121.55796'/>測試地圖</a><ul><li>若將每一個園圃都給與一個圖層，可以畫出農園範圍輪廓，園圃內的分區也可以細緻繪製</li></ul>
+</ul>
 <p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_a1BIZhjPD82_p.172171_1457867048879_螢幕快照 2016-03-13 下午7.02.54.png'/></p><p></p><ul><li>疑問：<ul><li>於osm上編輯農園（空地、屋頂農園、露台）是否有相關的 tag(待查)，社區菜園？ osm 上面已有此 tag 的相關資料了</li>
 <li>各個「文字欄位、照片、文件檔案連結」，能否連同農園範圍一起被放入？</li>
 <li>已消失的農園，建議如何處理？umap另開圖層？</li></ul>
-</ul>
-<ol><li>GoogleMap，例 <a href="https://goo.gl/NwPK9Q"></a><a href='https://goo.gl/NwPK9Q'/>https://goo.gl/NwPK9Q</a></li><ul><li>圖文閱讀不方便</li>
-<li>圖塊，在地圖介面呈現上，不明顯</li></ul>
-</ol>
-<ol><li>Localwiki，例 <a href="https://localwiki.org/taipeicommunity/"></a><a href='https://localwiki.org/taipeicommunity/'/>https://localwiki.org/taipeicommunity/</a></li><ul><li>Localwiki 匯出與匯入需要 coding，參考 <a href='/YghsHsKGadh'/>localwiki export import</a></li>
+</li>
+<li>GoogleMap，例 <a href="https://goo.gl/NwPK9Q"></a><a href='https://goo.gl/NwPK9Q'/>https://goo.gl/NwPK9Q</a></li>
+<li>圖文閱讀不方便，不適合長文說明</li>
+<li>圖塊，在地圖介面呈現上，不明顯，必須要拉到很近，肉眼才能夠辨識出這裡有園圃</li>
+<li>使用者有時候會不小心拖曳到點位資料、更動到位置而不自知</li>
+<li>Localwiki，例 <a href="https://localwiki.org/taipeicommunity/"></a><a href='https://localwiki.org/taipeicommunity/'/>https://localwiki.org/taipeicommunity/</a></li>
+<li>Localwiki 匯出與匯入需要 coding，參考 <a href='/YghsHsKGadh'/>localwiki export import</a></li>
 <li>無法直接用「欄位」來組織內容</li>
 <li>可考慮一個園圃，設立一個頁面，圖文，以及該園圃的地理資料</li></ul>
-</ol>
 
-<p>GoogleMap &lt;==&gt; Localwiki &lt;==&gt; GeoJson &lt;==&gt; OSMtag</p><p>編輯區</p><p>展示區</p><p></p><p></p><p><b>社區園圃案例資料的欄位需求（持續列舉）</b></p><ul><li>文字類型<ul><li>園圃名稱</li>
+<p><b>架構初擬 20160313</b></p><p>文件檔案：<a href="https://docs.google.com/presentation/d/1Ub2esHqs-pySh7PXwSCwH2UTrDAi475xF8JS08tibxc/edit"></a>https://docs.google.com/presentation/d/1Ub2esHqs-pySh7PXwSCwH2UTrDAi475xF8JS08tibxc/edit</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_a1BIZhjPD82_p.172171_1457872375146_螢幕快照 2016-03-13 下午8.30.39.png'/></p><p>1.Localwiki：完整圖文與地理資料編輯，作為群眾協作區，授權僅接受 CC0 或 CC BY</p><p>2.GeoJson：成為「開放資料集」鼓勵其他使用</p><p>3.GoogleMap：或其他圖台，簡易地圖展示，基本資訊可呈現，不允許協作</p><p>4.OSMdatabase：建立授權與相應 tag 資料可相互流通的環境</p><p>5.GovData：官方整理的園圃資料（csv, kml），希望資料授權能符合 ODBL</p><p>6.FBgroup：於此通報園圃資訊，文字說明或拍照等，銜接後續資料處理</p><p></p><p></p><p><b>社區園圃案例資料的欄位需求（持續列舉）</b></p><ul><li>文字類型<ul><li>園圃名稱</li>
 <li>縣市</li>
 <li>區</li>
 <li>地址 / 地點描述</li>
 <li>地號清單</li>
 <li>面積</li>
-<li>經緯度</li>
+<li>經度</li>
+<li>緯度</li>
 <li>參訪資訊</li>
 <li>起始時間</li>
 <li>結束時間</li>
@@ -50,20 +54,21 @@
 <li>地理資料類型<ul><li>農園範圍多邊形輪廓<ul><li>單一基地</li>
 <li>多基地</li></ul>
 </li>
-<li>園圃內部的分區資訊？</li></ul>
+<li>園圃內部的分區資訊<ul><li>走道</li>
+<li>園圃</li></ul>
+</li></ul>
 </li>
 <li>圖片或文件檔案連結<ul><li>現場照片</li>
 <li>相關書圖</li></ul>
 </ul>
 
-<p></p><p><b>呈現方式發想</b></p><ul><li>idea：<ul><li><a href='https://mapsengine.google.com/map/edit?mid=zQstqvxahOng.kt7Q-VW6EXPI'/>「都市園圃電子地圖」google map</a></li>
-<li><a href='http://github.ronny.tw/ronnywang/taipei-open-space/blob/master/geojson.json#25.03558452336418,121.51579455847563,16'/>開放空間資料與地圖化</a></li>
+<p></p><p><b>其他呈現方式發想</b></p><ul><li>參考：<ul><li><a href='http://github.ronny.tw/ronnywang/taipei-open-space/blob/master/geojson.json#25.03558452336418,121.51579455847563,16'/>開放空間資料與地圖化</a></li>
 <li>Timemapper：<a href="http://timemap.kuansim.com/"></a><a href='http://timemap.kuansim.com/'/>http://timemap.kuansim.com/</a></li>
 <li>GeoEvent：<a href="http://0media.tw/t/geoevent/"></a><a href='http://0media.tw/t/geoevent/'/>http://0media.tw/t/geoevent/</a></li>
 <li><a href='http://muyueh.com/30/notebook/'/>筆電快篩</a></li>
 <li>「拉霸機」：[人] x [空間] x [模式]<ul><li>例如 [社區里民] x [國防部土地] x [家戶認養] =&gt; 台北市松山區復建里幸福農場</li></ul>
 </li>
-<li>參考 <a href="http://livinglotsnyc.org/lot/3032450039/"></a><a href='http://livinglotsnyc.org/lot/3032450039/'/>http://livinglotsnyc.org/lot/3032450039/</a><ul><li>每一個園圃都有專屬的頁面，可供園圃推動者與民眾，留言討論</li></ul>
+<li><a href="http://livinglotsnyc.org/lot/3032450039/"></a><a href='http://livinglotsnyc.org/lot/3032450039/'/>http://livinglotsnyc.org/lot/3032450039/</a><ul><li>每一個園圃都有專屬的頁面，可供園圃推動者與民眾，留言討論</li></ul>
 </ul>
 </ul>
 
@@ -77,9 +82,10 @@
 
 <p><b>案例暫記，待整理：</b></p><ul><li>台北市政府政策推動的園圃<ul><li><a href="https://www.google.com/maps/d/viewer?mid=zXbDd4vF6Eh8.kQdykW74O1z0"></a><a href='https://www.google.com/maps/d/viewer?mid=zXbDd4vF6Eh8.kQdykW74O1z0'/>https://www.google.com/maps/d/viewer?mid=zXbDd4vF6Eh8.kQdykW74O1z0</a></li></ul>
 </li>
-<li>新北市政府政策推動的園圃<ul><li>...</li></ul>
+<li>新北市政府政策推動的園圃<ul><li>105年補助計畫 <a href="http://www.landscaping.ntpc.gov.tw/cht/index.php?code=list&flag=detail&ids=3&article_id=320"></a>http://www.landscaping.ntpc.gov.tw/cht/index.php?code=list&amp;flag=detail&amp;ids=3&amp;article_id=320</li>
+<li><a href="http://www.agriculture.ntpc.gov.tw/website/food/cht/index.php"></a>http://www.agriculture.ntpc.gov.tw/website/food/cht/index.php...</li>
+<li><a href="http://news.ltn.com.tw/news/life/breakingnews/1278910"></a>http://news.ltn.com.tw/news/life/breakingnews/1278910</li></ul>
 </li>
-<li><a href="http://news.ltn.com.tw/news/life/breakingnews/1278910"></a>http://news.ltn.com.tw/news/life/breakingnews/1278910</li>
 <li>新北市土城貨饒里<ul><li><a href="http://m.ltn.com.tw/news/local/paper/878532"></a><a href='http://m.ltn.com.tw/news/local/paper/878532'/>http://m.ltn.com.tw/news/local/paper/878532</a></li>
 <li><br/></li></ul>
 </li>
