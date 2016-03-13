@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="4802"/>
+<meta name="version" content="4951"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$a1BIZhjPD82</title>
 </head>
 <body><h1>公共園圃地圖資料庫</h1><p>1.社區園圃既有案例整理</p><p>2.都市園圃資料庫建置方案討論</p><p></p><h2>資料庫建置方案討論</h2><p><b>基本設定</b></p><p>1.盡可能涵蓋台灣各個縣市的都市園圃經驗</p><p>2.透過群眾協作的方式，累積資料</p><p>3.明確的資料授權，例如&nbsp;</p><ul><li>CC0 1.0 通用 (CC0 1.0) <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.zh_TW"></a>https://creativecommons.org/publicdomain/zero/1.0/deed.zh_TW</li>
@@ -11,7 +11,7 @@
 <li>持續蒐集授權無虞的案例圖片：<a href="http://goo.gl/TC8sTl"></a><a href='http://goo.gl/TC8sTl'/>http://goo.gl/TC8sTl</a></li></ul>
 <p>4.容易維護管理資料與內容的系統方案</p><p>5.方便展示</p><ul><li>同時考量地圖化，例如需要有地理資料欄位才能標示</li></ul>
 <p>6.文字欄位，圖片，地理資料（要多細緻？例如園圃內的分區細節）</p><p>7.可以匯出為 geojson 方便其他應用</p><p>8.將內容匯出至 OSMdatabase，需進一步釐清相對應的 tag，以及基本授權</p><p>9.是否整合 OSMdatabase 既有關於社區園圃的圖資？（<a href='http://supaplex99.blogspot.tw/2015/08/using-overpass-turbo-to-extract-data-and-umap-with-dynamic-data-link-visualization.html?m=1'/>方法</a>）</p><p>10.官方資料匯入問題，例如公部門推動的園圃資料，市民農園資料等，部分資料集有資料授權規範</p><ul><li>納入政府開放資料，例如新北市市民農園資料，該資料欄位能否被涵蓋？</li></ul>
-<p>11.每年都會有新的園圃出現，以及消失</p><p>12.</p><p></p><p><b>各種方案探討與試做</b></p><ul><li>google 試算表，例 <a href="https://goo.gl/4J6OD6"></a><a href='https://goo.gl/4J6OD6'/>https://goo.gl/4J6OD6</a><ul><li>經緯度需要另外轉換，無法支援輪廓資料</li>
+<p>11.每年都會有新的園圃出現，以及消失</p><p>12.</p><p></p><p><b>各種方案探討與試做</b></p><ul><li>google excel，例 <a href="https://goo.gl/4J6OD6"></a><a href='https://goo.gl/4J6OD6'/>https://goo.gl/4J6OD6</a><ul><li>經緯度需要另外轉換，無法支援輪廓資料</li>
 <li>圖片需要另外放，再把連結貼近文件中</li>
 <li>實際寫起來，因為都是在表格內填欄位內容，有點苦海無邊</li></ul>
 </li>
@@ -19,20 +19,29 @@
 </li>
 <li>umap，例 <a href='https://umap.openstreetmap.fr/zh-tw/map/map_50075#18/25.04793/121.55796'/>測試地圖</a><ul><li>若將每一個園圃都給與一個圖層，可以畫出農園範圍輪廓，園圃內的分區也可以細緻繪製</li></ul>
 </ul>
-<p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_a1BIZhjPD82_p.172171_1457867048879_螢幕快照 2016-03-13 下午7.02.54.png'/></p><p></p><ul><li>疑問：<ul><li>於osm上編輯農園（空地、屋頂農園、露台）是否有相關的 tag(待查)，社區菜園？ osm 上面已有此 tag 的相關資料了</li>
-<li>各個「文字欄位、照片、文件檔案連結」，能否連同農園範圍一起被放入？</li>
-<li>已消失的農園，建議如何處理？umap另開圖層？</li></ul>
-</li>
-<li>GoogleMap，例 <a href="https://goo.gl/NwPK9Q"></a><a href='https://goo.gl/NwPK9Q'/>https://goo.gl/NwPK9Q</a></li>
-<li>圖文閱讀不方便，不適合長文說明</li>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_a1BIZhjPD82_p.172171_1457867048879_螢幕快照 2016-03-13 下午7.02.54.png'/></p><p></p><ul><li>OSMdatabase：<ul><li>於osm上編輯農園（空地、屋頂農園、露台）相關的 tag：</li></ul>
+</ul>
+<ul class="comment"><li>OSM 的 landuse 應該視為一個獨立的圖層，如果以 landuse 的角度來看：</li>
+<li>菜園 landuse=allotments <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse=allotments?uselang=zh-TW"></a>https://wiki.openstreetmap.org/wiki/Tag:landuse=allotments?uselang=zh-TW</li>
+<li>已拆空地 landuse=brownfield <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dbrownfield"></a>https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dbrownfield</li>
+<li>綠地 landuse=greenfield <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dgreenfield"></a>https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dgreenfield</li>
+<li>公共農場型 <a href='http://wiki.openstreetmap.org/wiki/Food_security#Community_gardens'/>leisure=garden + garden:type=community</a>&nbsp;</li>
+<li>另一類似的提案 <a href='http://wiki.openstreetmap.org/wiki/Proposed_features/Community_food_growing'/>landuse=community_food_growing</a> 中文名稱：？</li><ul><li>各個「文字欄位、照片、文件檔案連結」，能否連同農園範圍一起被放入？</li>
+<li>已消失的農園</li></ul>
+</ul>
+<ul class="comment"><li>不考慮資料保存的情況，umap 另開會比較好，OSM 是直接刪除</li></ul>
+<ul><li>GoogleMap，例 <a href="https://goo.gl/NwPK9Q"></a><a href='https://goo.gl/NwPK9Q'/>https://goo.gl/NwPK9Q</a><ul><li>圖文閱讀不方便，不適合長文說明與圖文搭配</li>
 <li>圖塊，在地圖介面呈現上，不明顯，必須要拉到很近，肉眼才能夠辨識出這裡有園圃</li>
 <li>使用者有時候會不小心拖曳到點位資料、更動到位置而不自知</li>
-<li>Localwiki，例 <a href="https://localwiki.org/taipeicommunity/"></a><a href='https://localwiki.org/taipeicommunity/'/>https://localwiki.org/taipeicommunity/</a></li>
-<li>Localwiki 匯出與匯入需要 coding，參考 <a href='/YghsHsKGadh'/>localwiki export import</a></li>
+<li>一般民眾習慣的地圖</li></ul>
+</li>
+<li>Localwiki，例 <a href="https://localwiki.org/taipeicommunity/"></a><a href='https://localwiki.org/taipeicommunity/'/>https://localwiki.org/taipeicommunity/</a><ul><li>Localwiki 匯出與匯入需要 coding，參考 <a href='/YghsHsKGadh'/>localwiki export import</a></li>
 <li>無法直接用「欄位」來組織內容</li>
-<li>可考慮一個園圃，設立一個頁面，圖文，以及該園圃的地理資料</li></ul>
+<li>可考慮一個園圃，設立一個頁面，圖文，以及該園圃的地理資料</li>
+<li>可以允許已消失的園圃成立圖文介紹頁面</li></ul>
+</ul>
 
-<p><b>架構初擬 20160313</b></p><p>文件檔案：<a href="https://docs.google.com/presentation/d/1Ub2esHqs-pySh7PXwSCwH2UTrDAi475xF8JS08tibxc/edit"></a>https://docs.google.com/presentation/d/1Ub2esHqs-pySh7PXwSCwH2UTrDAi475xF8JS08tibxc/edit</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_a1BIZhjPD82_p.172171_1457872375146_螢幕快照 2016-03-13 下午8.30.39.png'/></p><p>1.Localwiki：完整圖文與地理資料編輯，作為群眾協作區，授權僅接受 CC0 或 CC BY</p><p>2.GeoJson：成為「開放資料集」鼓勵其他使用</p><p>3.GoogleMap：或其他圖台，簡易地圖展示，基本資訊可呈現，不允許協作</p><p>4.OSMdatabase：建立授權與相應 tag 資料可相互流通的環境</p><p>5.GovData：官方整理的園圃資料（csv, kml），希望資料授權能符合 ODBL</p><p>6.FBgroup：於此通報園圃資訊，文字說明或拍照等，銜接後續資料處理</p><p></p><p></p><p><b>社區園圃案例資料的欄位需求（持續列舉）</b></p><ul><li>文字類型<ul><li>園圃名稱</li>
+<p><b>架構初擬 20160313</b></p><p>文件檔案：<a href="https://docs.google.com/presentation/d/1Ub2esHqs-pySh7PXwSCwH2UTrDAi475xF8JS08tibxc/edit"></a>https://docs.google.com/presentation/d/1Ub2esHqs-pySh7PXwSCwH2UTrDAi475xF8JS08tibxc/edit</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_a1BIZhjPD82_p.172171_1457880059129_螢幕快照 2016-03-13 下午10.36.13.png'/></p><p>1.Localwiki：完整圖文與地理資料編輯，作為群眾協作區，授權僅接受 CC0 或 CC BY</p><p>2.GeoJson：成為「開放資料集」鼓勵其他使用</p><p>3.GoogleMap：或其他圖台，簡易地圖展示，基本資訊可呈現，不允許協作</p><p>4.OSMdatabase：建立授權與相應 tag 資料可相互流通的環境</p><p>5.GovData：官方整理的園圃資料（csv, kml），希望資料授權能符合 ODBL</p><p>6.FBgroup：於此通報園圃資訊，文字說明或拍照等，銜接後續資料處理</p><p></p><p></p><p><b>社區園圃案例資料的欄位需求（持續列舉）</b></p><ul><li>文字類型<ul><li>園圃名稱</li>
 <li>縣市</li>
 <li>區</li>
 <li>地址 / 地點描述</li>
