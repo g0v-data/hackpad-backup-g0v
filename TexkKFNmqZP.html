@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1457"/>
+<meta name="version" content="1465"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$TexkKFNmqZP</title>
 </head>
 <body><h1>g0v 零時空汙觀測專案</h1><p>整合各方空汙監測站的觀測資料與各種汙染源的排放資料以地圖視覺化呈現</p><p>清楚明瞭的即時空汙動態追蹤，以此達到排汙監督的社會效益</p><p></p><h2>專案簡介</h2><p></p><p><b>緣由與欲解決之問題</b></p><p>最初的專案方向是在開發小型開源的arduino空氣品質監測器並組織一個非官方的共同觀測網</p><p>一路開發下來發現其實很多各路高手都在做類似的專案</p><p>但專案之間的資料並不互通且零散</p><p>各平台有各的優缺點，要著手去統一開發平台並不實際</p><p>所以決定把目標提高一個層次去整合各種觀測資源讓各空汙監測開發社群貢獻的效益最大化</p><p></p><p><b>專案最高原則</b></p><p>整合各方空汙監測站的觀測資料與各種汙染源的排放資料以地圖視覺化呈現</p><p>清楚明瞭的即時空汙動態追蹤，以此達到排汙監督的社會效益</p><p>在最後並可彈性化統一輸出方便後續應用的資料格式(json, tabular data)</p><p></p><p><b>授權方式</b></p><p>零時空汙觀測網站實作專案近日將以MIT授權方式於github發佈</p><p></p><p><b>欲整合之目標</b></p><ul><li>即時觀測資料 (包括官方與非官方測站的觀測資訊)</li>
@@ -40,56 +40,7 @@
 <li>風力視覺化-(MIT授權) <a href="https://github.com/cambecc/earth"></a><a href='https://github.com/cambecc/earth'/>https://github.com/cambecc/earth</a></li></ul>
 </ul>
 
-<h2>徵求協作者</h2><p></p><ul><li><b>目前網站地圖已知問題/目標待解決 (此部分已</b><a href='/g0v--riRTvbB0E5x'/>開新專門的hackpad</a><b>做共筆)</b></li><ul class="task"><li>環保署的開放資料發佈時間會比觀測發佈延遲一個小時，而觀測站每次發佈又是上一小時的觀測資料，常常呈現的資料都已經是兩個小時之後，無法真正即時呈現，或許還是得想辦法拆原始的環保署測站資料，或是有人能去協調環保署同步測站發佈和開放資料平台發佈的時間。</li><ul><li>環保署空品資料發佈的流程是：</li></ul>
-<ul style="list-style: none;"><li>感測器-----&gt;TQAM(<a href='http://taqm.epa.gov.tw/taqm/tw/default.aspx'/>空品監測網</a>的Server)----<i>每整點發佈</i>----&gt;<a href='http://cdx.epa.gov.tw/CDX/main.aspx'/>CDX</a>平台---<i>過幾分鐘</i>----&gt;OpenData介接並Publish資料(也是每個整點)。因此卡在這每整點發佈及各平台傳輸訂閱時間的問題，所以真的收到資料已經兩小時之後～目前會再詢問環保署能否改善這狀況，真的做到即時傳輸與發佈。</li><ul class="comment"><li>太好了!! 如果能夠從資料源頭解決的話是最好的解法了!!</li>
-<li>不過現在發現問題是開放平台實在太不可靠，每一個禮拜就掛會個一兩次</li>
-<li>哈哈哈，也只好繼續寫e言堂......哀</li></ul>
-</ul>
-<ul class="task"><li>請大家到<a href='http://forum.epa.gov.tw/EPASPS/SPSA/SPSA01001.aspx'/>環保e言堂</a>，寫信給署長，要求發布即時資料！</li></ul>
-<ul><li><b>拆站方案區:</b></li><ul class="task"><li>空氣品質即時值查詢(包括溫溼度各種測值但不含PM2.5) <a href="http://taqm.epa.gov.tw/taqm/tw/HourlyData.aspx"></a>http://taqm.epa.gov.tw/taqm/tw/HourlyData.aspx</li>
-<li>細懸浮微粒即時值查詢(PM2.5) <a href="http://taqm.epa.gov.tw/pm25/tw/HourlyData.aspx"></a>http://taqm.epa.gov.tw/pm25/tw/HourlyData.aspx</li></ul>
-</ul>
-</ul>
-</ul>
-
-<ul class="task"><li>環保署的測站有觀測<a href='http://taqm.epa.gov.tw/taqm/tw/HourlyData.aspx'/>氣溫濕度</a>，但卻沒包含在開放資料平台的資料中，可能得自己拆或去向環保署要求開放。<ul class="task"><li>請大家到<a href='http://forum.epa.gov.tw/EPASPS/SPSA/SPSA01001.aspx'/>環保e言堂</a>，寫信給署長，要求開放資料！</li></ul class="task">
-</li>
-<li>非官方測站的資料來源常有在校正中或是僅作短期觀測導致資料不正常的情況，須建立一個機制去讓地圖優先顯示已穩定運作的資料來源。</li>
-<li>風力視覺化有待整合<a href="https://github.com/cambecc/earth"></a><a href='https://github.com/cambecc/earth'/>https://github.com/cambecc/earth</a>，這難度有點高但是值得去做的。</li>
-<li>工廠排汙資料待整合，要想一下如何在地圖上呈現比較好。</li>
-<li>火力電廠基載待整合，要想一下如何在地圖上呈現比較好。</li>
-<li>從google map移植到Openstreetmap作為圖資來源或許比較恰當，但在評估這坑會多大中。</li></li>
-<li>移植是說圖磚改用 OpenStreetMap？</li></li>
-<li>是的</li>
-<li>號召更多志願者參與開源感測站佈點</li><ol><li>規劃出重點區域來公佈有測站部屬強烈需求的地點來號召宣傳</li><ul><li>汙染源之重點區域為第一優先 (參考環保署<a href='http://prtr.epa.gov.tw/'/>列管污染源</a>分佈)，每縣市找一區域優先處理</li><ul class="task"><li>桃園 (跳坑人) (區域)</li>
-<li>新竹 (跳坑人) (區域)</li>
-<li>雲林 (跳坑人) (區域)</li>
-<li>台中 (Lafudoci) (區域)</li>
-<li>嘉義 (跳坑人) (區域)</li>
-<li>高雄 (跳坑人) (區域)</li></ul>
-</li>
-<li>各區域皆需優先蒐集以下資源做整理 :</li><ol><li>各分區的當地自救會們：<a href='https://www.facebook.com/pulipm2.5/?fref=ts'/>埔里pm2.5空污減量自救會</a>、<a href='https://www.facebook.com/fpccgoaway/?fref=ts'/>自從六輕來了</a></li>
-<li>搜尋公家機關或各級學校(公家資源的使用正當性?)</li>
-<li>文青咖啡店!!!&nbsp;</li></ol>
-</li></ol>
-</li>
-<li>決定網格大小</li><ul><li>客觀的網格大小決定?</li></ul>
-</ol>
-</li>
-<li>紀錄片導演們 (誰?)</li>
-<li>靠教育的科學活動教案或者環保署的標案增加佈點的機會</li>
-<li>空污打地鼠地圖：</li><ul><li>頁面規格設計需要先想好</li></ul>
-</li>
-<li><b>目前已知感測硬體問題/目標待解決 (此部分已</b><a href='/g0v--rp53Cw7woim'/>開新專門的hackpad</a><b>做共筆)</b></li>
-<li>解決無wifi區域，靠電信通訊<ul class="task"><li>3G</li>
-<li>用離線方式運作靠硬碟儲存</li></ul class="task">
-</li>
-<li>嘗試開發機器自動登入wifi驗證頁面的可行性, 抑或是使用網路線的版本</li><ul><li>或許得為每個志願放置的單位做客製化!&nbsp;</li></ul>
-</li>
-<li>手機APP工程師</li>
-<li>如果我們經手出去的感測器零件，組合成品運作時發生意外導致志願者的損失，那關鍵會在於零件製造商的還是誰動手組合的? 還有相對應的法律責任?</li></ul>
-
-<p></p><h2>實作細節</h2><p></p><p><b>協作工具</b></p><ul><li>github repo：<a href="https://github.com/immortalmice/Real-time-Air-Quality-Map"></a>https://github.com/immortalmice/Real-time-Air-Quality-Map</li>
+<h2>實作細節</h2><p></p><p><b>協作工具</b></p><ul><li>github repo：<a href="https://github.com/immortalmice/Real-time-Air-Quality-Map"></a>https://github.com/immortalmice/Real-time-Air-Quality-Map</li>
 <li>hackfoldr 工作資料夾網址：<a href="http://beta.hackfoldr.org/g0vairmap"></a>http://beta.hackfoldr.org/g0vairmap</li>
 <li>google drive 共用資料夾網址：</li>
 <li>g0v slack 頻道: pm25&nbsp; <a href="https://g0v-tw.slack.com/messages/pm25/details/"></a>https://g0v-tw.slack.com/messages/pm25/details/</li></ul>
