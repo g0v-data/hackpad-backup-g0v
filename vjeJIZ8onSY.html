@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1613"/>
+<meta name="version" content="1757"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$vjeJIZ8onSY</title>
 </head>
 <body><h1>Debater | 辯論家</h1><p></p><p><img src='http://etblue.github.io/debater/img/debater-og-image-1200x630.png'/></p><p></p><h2>專案資料</h2><p></p><p><b>緣起</b></p><p>科技始終來自於八卦</p><p></p><p><b>目的</b></p><p>協助議題研究者收集分類彙整來自各地的網路吵架意見，形成初步的議題輪廓，以利後續的研究討論</p><p></p><p><b>授權</b></p><p>MIT</p><p></p><p><b>前身</b></p><p>動憲法</p><p></p><p><b>坑主</b></p><p>ETBlue</p><p>玄學</p><p></p><p></p><h2>產品主要特色</h2><p></p><p><b>自由的資料來源</b></p><ul><li>可彙整來自任何網路平台的發言，使用者可從每則發言的時間戳記可以追溯到原始發言網址，以便求證</li>
@@ -60,10 +60,23 @@
 <li>## articles</li>
 <li>### 2016/01/01 GMT0+8:00 http://...</li>
 <li>- content #tag &lt;- tag 分類標籤，會出現在左方 menu</li>
-<li>___ (divider for tag tree) (optional)</li>
-<li>- level 1 tag (optional)</li>
-<li>&nbsp; - level 2 tag (optional)</li>
-<li>&nbsp;&nbsp;&nbsp; - level 3 tag (optional)</li></ul>
+<li>___ (divider for tag tree) (optional below)</li>
+<li>``` (block start, html supported)</li>
+<li>&lt;p&gt;summary for all topics... blah blah&lt;/p&gt;</li>
+<li>&lt;p&gt;second paragraph&lt;/p&gt;</li>
+<li>``` (block end)</li>
+<li>- level 1 tag</li>
+<li>&nbsp; ``` (block start, html supported)</li>
+<li>&nbsp; summary for the tag above... blah blah</li>
+<li>&nbsp; ``` (block end)</li>
+<li>&nbsp; - level 2 tag</li>
+<li>&nbsp;&nbsp;&nbsp; ``` (block start, html supported)</li>
+<li>&nbsp;&nbsp;&nbsp; summary for the tag above... blah blah</li>
+<li>&nbsp;&nbsp;&nbsp; ``` (block end)</li>
+<li>&nbsp;&nbsp;&nbsp; - level 3 tag</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ``` (block start, html supported)</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; summary for the tag above... blah blah</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ``` (block end)</li></ul>
 
 <p></p><h2>工作流程與配套</h2><p></p><p><b>Step 1. 組織議題研究團隊</b></p><p>理想中，每個議題的 Debater 編輯團隊建議由以下成員組成：</p><ul><li>對議題專業領域有基本知識的人 x 1</li>
 <li>擅長大量閱讀快速歸納且熟悉電腦操作與文書處理的人 x 1</li>
