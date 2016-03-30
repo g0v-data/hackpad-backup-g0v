@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="482"/>
+<meta name="version" content="553"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$riRTvbB0E5x</title>
 </head>
 <body><h1>g0v 零時空汙觀測專案-網站開發共筆</h1><p>此區為<a href='/g0v--TexkKFNmqZP'/>g0v 零時空汙觀測專案</a>的子分區，提供網站方面開發共筆</p><p></p><h2>網站開發方向大綱</h2><p></p><p><b>欲整合之目標</b></p><ul><li>即時觀測資料 (包括官方與非官方測站的觀測資訊)</li>
@@ -16,30 +16,35 @@
 <h2>網站目前開發狀態</h2><p>g0v零時空汙觀測網站實作測試已上線- <a href="http://g0vAirMap.3203.info"></a><a href='http://g0vairmap.3203.info/'/>http://</a><a href='http://g0vairmap.3203.info/'/>g0vAirMap.3203.info</a></p><p>github repo: <a href="https://github.com/immortalmice/Real-time-Air-Quality-Map"></a>https://github.com/immortalmice/Real-time-Air-Quality-Map</p><p></p><p><b>資料處理:</b></p><p>輸入:</p><ul><li>LASS: <a href="http://nrl.iis.sinica.edu.tw/LASS/last-all-lass.json"></a>http://nrl.iis.sinica.edu.tw/LASS/last-all<a href='http://nrl.iis.sinica.edu.tw/LASS/last-all.json'/>-</a>l<a href='http://nrl.iis.sinica.edu.tw/LASS/last-all-l.json'/>a</a>s<a href='http://nrl.iis.sinica.edu.tw/LASS/last-all-las.json'/>s</a>.json</li>
 <li>ProbeCube: <a href="http://3203.info/Data/All_last.json"></a>http://3203.info/Data/All_last.json</li>
 <li>AirBox: <a href="http://nrl.iis.sinica.edu.tw/LASS/last-all-airbox.json"></a>http://nrl.iis.sinica.edu.tw/LASS/last-all-airbox.json</li>
-<li>EPA (g0v mirror): <a href="http://g0v-data-mirror.gugod.org/epa/aqx.json"></a>http://g0v-data-mirror.gugod.org/epa/aqx.json</li>
-<li>Miaoski:&nbsp;<ul><li><a href="https://thingspeak.com/channels/83508"></a>https://thingspeak.com/channels/83508</li>
+<li>EPA:&nbsp;<ul><li>&nbsp;(g0v mirror) <a href="http://g0v-data-mirror.gugod.org/epa/aqx.json"></a>http://g0v-data-mirror.gugod.org/epa/aqx.json</li>
+<li>&nbsp;(asper_hsu) <a href="http://taqm-hourly.appspot.com/today.json"></a>http://taqm-hourly.appspot.com/today.json</li>
+<li>Miaoski:&nbsp;</li>
+<li><a href="https://thingspeak.com/channels/83508"></a>https://thingspeak.com/channels/83508</li>
 <li><a href="https://thingspeak.com/channels/88846"></a>https://thingspeak.com/channels/88846</li></ul>
 </li>
 <li>Webduino: <a href="http://nrl.iis.sinica.edu.tw/LASS/last-all-webduino.json"></a>http://nrl.iis.sinica.edu.tw/LASS/last-all-webduino.json</li></ul>
 <p>輸出:</p><ul><li>全部: <a href="http://g0vairmap.3203.info/Data/all_last.json"></a>http://g0vairmap.3203.info/Data/all_last.json</li></ul>
 
-<p><b>資訊框內各資料來源LOGO介紹連結:</b></p><p>LASS: <a href="https://github.com/LinkItONEDevGroup/LASS"></a>https://github.com/LinkItONEDevGroup/LASS</p><p>ProbeCube: <a href="https://github.com/Lafudoci/ProbeCube"></a>https://github.com/Lafudoci/ProbeCube</p><p>AirBox: <a href="http://pm2.5.taipei/about.jsp"></a>http://<a href='http://data.taipei/opendata/datalist/datasetMeta?oid=4ba06157-3854-4111-9383-3b8a188c962a'/>pm2.5.taipei/about.jsp</a></p><p>EPA: <a href="http://taqm.epa.gov.tw/taqm/tw/Pm25Index.aspx"></a>http://taqm.epa.gov.tw/taqm/tw/Pm25Index.aspx</p><p>Pilot: <a href="https://github.com/miaoski/pm25"></a>https://github.com/miaoski/pm25</p><p></p><p></p><h2>To-Do List (已有工程師規劃填坑區)</h2><ul class="task"><li>改善右下角更新資訊呈現</li></ul>
+<p><b>資訊框內各資料來源LOGO介紹連結:</b></p><p>LASS: <a href="https://github.com/LinkItONEDevGroup/LASS"></a>https://github.com/LinkItONEDevGroup/LASS</p><p>ProbeCube: <a href="https://github.com/Lafudoci/ProbeCube"></a>https://github.com/Lafudoci/ProbeCube</p><p>AirBox: <a href="http://pm2.5.taipei/about.jsp"></a>http://<a href='http://data.taipei/opendata/datalist/datasetMeta?oid=4ba06157-3854-4111-9383-3b8a188c962a'/>pm2.5.taipei/about.jsp</a></p><p>EPA: <a href="http://taqm.epa.gov.tw/taqm/tw/Pm25Index.aspx"></a>http://taqm.epa.gov.tw/taqm/tw/Pm25Index.aspx</p><p>Pilot: <a href="https://github.com/miaoski/pm25"></a>https://github.com/miaoski/pm25</p><p></p><p></p><h2>To-Do List (已有工程師規劃填坑區)</h2><ul><li><b>拆站目標區:</b></li><ul class="taskdone"><li>空品站<ul class="taskdone"><li>ronny已拆: <a href="http://stormy-lake-70176.herokuapp.com/"></a><a href='http://stormy-lake-70176.herokuapp.com/'/>http://stormy-lake-70176.herokuapp.com/</a></li>
+<li>au已拆: <a href="https://gist.github.com/audreyt/4175d05c0e394acc3c5a"></a><a href='https://gist.github.com/audreyt/4175d05c0e394acc3c5a'/>https://gist.github.com/audreyt/4175d05c0e394acc3c5a</a></li></ul class="taskdone">
+</li>
+<li>空氣品質即時值查詢(包括溫溼度各種測值但不含PM2.5) <a href="http://taqm.epa.gov.tw/taqm/tw/HourlyData.aspx"></a><a href='http://taqm.epa.gov.tw/taqm/tw/HourlyData.aspx'/>http://taqm.epa.gov.tw/taqm/tw/HourlyData.aspx</a><ul class="taskdone"><li>asper_hsu已拆 <a href="http://taqm-hourly.appspot.com/"></a>http://taqm-hourly.appspot.com/</li></ul class="taskdone">
+</li>
+<li>細懸浮微粒即時值查詢(PM2.5) <a href="http://taqm.epa.gov.tw/pm25/tw/HourlyData.aspx"></a><a href='http://taqm.epa.gov.tw/pm25/tw/HourlyData.aspx'/>http://taqm.epa.gov.tw/pm25/tw/HourlyData.aspx</a><ul class="taskdone"><li>asper_hsu已拆 <a href="http://taqm-hourly.appspot.com/"></a><a href='http://taqm-hourly.appspot.com/'/>http://taqm-hourly.appspot.com/</a></li></ul>
+</ul>
+</ul>
+<ul class="task"><li>改善右下角更新資訊呈現</li></ul>
 
-<h2>許願區或其他疑問待討論 (等待工程師跳坑區)</h2><ul><li><b>資料相關區</b></li><ul class="task"><li>環保署的開放資料發佈時間會比觀測發佈延遲一個小時，而觀測站每次發佈又是上一小時的觀測資料，常常呈現的資料都已經是兩個小時之後，無法真正即時呈現，或許還是得想辦法拆原始的環保署測站資料，或是有人能去協調環保署同步測站發佈和開放資料平台發佈的時間。</li><ul><li>環保署空品資料發佈的流程是：</li></ul>
+<p></p><h2>許願區或其他疑問待討論 (等待工程師跳坑區)</h2><ul><li><b>資料相關區</b></li><ul class="taskdone"><li>環保署的開放資料發佈時間會比觀測發佈延遲一個小時，而觀測站每次發佈又是上一小時的觀測資料，常常呈現的資料都已經是兩個小時之後，無法真正即時呈現，或許還是得想辦法拆原始的環保署測站資料，或是有人能去協調環保署同步測站發佈和開放資料平台發佈的時間。</li><ul><li>環保署空品資料發佈的流程是：</li></ul>
 <ul style="list-style: none;"><li>感測器-----&gt;TQAM(<a href='http://taqm.epa.gov.tw/taqm/tw/default.aspx'/>空品監測網</a>的Server)----<i>每整點發佈</i>----&gt;<a href='http://cdx.epa.gov.tw/CDX/main.aspx'/>CDX</a>平台---<i>過幾分鐘</i>----&gt;OpenData介接並Publish資料(也是每個整點)。因此卡在這每整點發佈及各平台傳輸訂閱時間的問題，所以真的收到資料已經兩小時之後～目前會再詢問環保署能否改善這狀況，真的做到即時傳輸與發佈。</li><ul class="comment"><li>太好了!! 如果能夠從資料源頭解決的話是最好的解法了!!</li>
 <li>不過現在發現問題是開放平台實在太不可靠，每一個禮拜就掛會個一兩次</li>
 <li>哈哈哈，也只好繼續寫e言堂......哀</li></ul class="comment">
 </li></ul class="comment">
 </li>
 <li>請大家到<a href='http://forum.epa.gov.tw/EPASPS/SPSA/SPSA01001.aspx'/>環保e言堂</a>，寫信給署長，要求發布即時資料！</li>
-<li>環保署的測站有觀測<a href='http://taqm.epa.gov.tw/taqm/tw/HourlyData.aspx'/>氣溫濕度</a>，但卻沒包含在開放資料平台的資料中，可能得自己拆或去向環保署要求開放。</li><ul><li><b>拆站目標區:</b></li><ul class="taskdone"><li>空品站</li></ul>
-<ul style="list-style: none;"><li>ronny拆站: <a href="http://stormy-lake-70176.herokuapp.com/"></a>http://stormy-lake-70176.herokuapp.com/</li>
-<li>au拆站: <a href="https://gist.github.com/audreyt/4175d05c0e394acc3c5a"></a>https://gist.github.com/audreyt/4175d05c0e394acc3c5a</li></ul>
-<ul class="task"><li>空氣品質即時值查詢(包括溫溼度各種測值但不含PM2.5) <a href="http://taqm.epa.gov.tw/taqm/tw/HourlyData.aspx"></a><a href='http://taqm.epa.gov.tw/taqm/tw/HourlyData.aspx'/>http://taqm.epa.gov.tw/taqm/tw/HourlyData.aspx</a></li>
-<li>細懸浮微粒即時值查詢(PM2.5) <a href="http://taqm.epa.gov.tw/pm25/tw/HourlyData.aspx"></a><a href='http://taqm.epa.gov.tw/pm25/tw/HourlyData.aspx'/>http://taqm.epa.gov.tw/pm25/tw/HourlyData.aspx</a></li></ul>
+<li>環保署的測站有觀測<a href='http://taqm.epa.gov.tw/taqm/tw/HourlyData.aspx'/>氣溫濕度</a>，但卻沒包含在開放資料平台的資料中，可能得自己拆或去向環保署要求開放。</li></ul>
 </ul>
-</ul>
-</ul>
+
 <ul><li><b>視覺化區</b></li><ul class="task"><li>風力視覺化有待整合<a href="https://github.com/cambecc/earth"></a><a href='https://github.com/cambecc/earth'/>https://github.com/cambecc/earth</a>，這難度有點高但是非常值得去做。</li>
 <li>工廠排汙資料待整合，要想一下如何在地圖上呈現比較好。</li>
 <li>火力電廠基載待整合，要想一下如何在地圖上呈現比較好。</li>
