@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="565"/>
+<meta name="version" content="623"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$riRTvbB0E5x</title>
 </head>
 <body><h1>g0v 零時空汙觀測專案-網站開發共筆</h1><p>此區為<a href='/g0v--TexkKFNmqZP'/>g0v 零時空汙觀測專案</a>的子分區，提供網站方面開發共筆</p><p></p><h2>網站開發方向大綱</h2><p></p><p><b>欲整合之目標</b></p><ul><li>即時觀測資料 (包括官方與非官方測站的觀測資訊)</li>
@@ -12,6 +12,9 @@
 
 <p><b>資料呈現方式目標</b></p><ul><li>以地圖為主軸的視覺化 (包括站點圖標,&nbsp; heatmap渲染, 風力線條動畫)</li>
 <li>時間軸</li></ul>
+
+<p><b>應用idea（朝向無敵即時資訊網邁進！？）</b></p><ul><li><b>台灣版的<a href='http://hedleyindex.sph.hku.hk/html/tc/index.php'/>達里指數</a></b><ul><li><b><a href='https://www.twreporter.org/a/air-pollution-honkong'/>相關報導</a>：</b>空氣品質變好了　香港做對的幾件事</li></ul>
+</ul>
 
 <h2>網站目前開發狀態</h2><p>g0v零時空汙觀測網站實作測試已上線- <a href="http://g0vAirMap.3203.info"></a><a href='http://g0vairmap.3203.info/'/>http://</a><a href='http://g0vairmap.3203.info/'/>g0vAirMap.3203.info</a></p><p>github repo: <a href="https://github.com/immortalmice/Real-time-Air-Quality-Map"></a>https://github.com/immortalmice/Real-time-Air-Quality-Map</p><p></p><p><b>資料處理:</b></p><p>輸入:</p><ul><li>LASS: <a href="http://nrl.iis.sinica.edu.tw/LASS/last-all-lass.json"></a>http://nrl.iis.sinica.edu.tw/LASS/last-all<a href='http://nrl.iis.sinica.edu.tw/LASS/last-all.json'/>-</a>l<a href='http://nrl.iis.sinica.edu.tw/LASS/last-all-l.json'/>a</a>s<a href='http://nrl.iis.sinica.edu.tw/LASS/last-all-las.json'/>s</a>.json</li>
 <li>ProbeCube: <a href="http://3203.info/Data/All_last.json"></a>http://3203.info/Data/All_last.json</li>
@@ -55,9 +58,22 @@
 </ul>
 <ul><li><b>附加功能區</b></li><ul class="task"><li>可直接於網站介面點選顯示測站資訊的json api</li>
 <li>可於網頁上新增自造站點</li>
-<li>對於螢幕較小的筆電/手機做畫面最佳化</li></ul>
+<li>對於螢幕較小的筆電/手機做畫面最佳化</li>
+<li><b>台灣版的<a href='http://hedleyindex.sph.hku.hk/html/tc/index.php'/>達里指數</a>，<a href='https://www.twreporter.org/a/air-pollution-honkong'/>相關報導</a></b></li><ul><li>建置達理指數，需要哪些材料？石國順說明，所需要的材料可分為下列幾項。</li></ul>
+<ul class="task"><li><b>1. 即時的空氣汙染濃度，以及濃度超出世界衞生組織標準的幅度。</b></li>
+<li><b>2. 死亡人數、住院天數和看診次數。</b></li><ul><li>評估空氣汙染所造成的醫療成本，所以須排除意外死亡（如車禍）等原因。</li></ul>
 </ul>
-<ul><li><b>已知Bug</b></li><ul class="task"><li>IE瀏覽器使用者點選原始資料時無法正確顯示</li>
+<ul class="task"><li><b>3. 該地區因空氣汙染而死亡、住院的風險。</b></li><ul><li>比方說，每一立方米空氣中的PM10增加10微克時，會增加多少百分比的死亡風險。達理指數採用華人地區的研究。</li></ul>
+</ul>
+<ul class="task"><li><b>4. 對於患者來說，看醫生的成本。</b></li></ul>
+<ul><li>如：掛號費、醫藥費、住院費、交通成本等等。</li></ul>
+<ul class="task"><li><b>5. 看診、住院、提早死亡所損失的生產力。</b></li></ul>
+<ul><li>根據當地就業率、薪資中位數計算。</li></ul>
+<ul class="task"><li><b>6. 民眾願意花多少錢避免死亡、住院。</b></li></ul>
+<ul><li>這是衡量人命值多少的研究，香港的研究結論是每人願意花1千萬港幣（4千萬台幣）避免死亡。「但這是以前的研究，現在人命應該升值了，」香港大學公共衞生學院高級研究助理曾希達補充。</li></ul>
+</li></ul>
+</li>
+<li><b>已知Bug</b></li><ul class="task"><li>IE瀏覽器使用者點選原始資料時無法正確顯示</li>
 <li>圖例色票不正確</li>
 <li>地圖載入時會有一段空白畫面，待解決</li>
 <li>後端抓資料偶爾會停掉，待解決</li></ul>
