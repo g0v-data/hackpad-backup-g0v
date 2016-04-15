@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="89"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$iOnq0iCkqcI</title>
+</head>
+<body><h1>Visitor&nbsp;</h1><p></p><ul class="code"><li>import java.util.*;</li>
+<li>public interface Checker {</li>
+<li>&nbsp;&nbsp;&nbsp; //訪問者check不同的對象會做不同的事情</li>
+<li>&nbsp;&nbsp;&nbsp; public void check(State s);</li>
+<li>&nbsp;&nbsp;&nbsp; //</li>
+<li>&nbsp;&nbsp;&nbsp; public void check(Transition t);</li>
+<li>&nbsp;&nbsp;&nbsp; //</li>
+<li>&nbsp;&nbsp;&nbsp; public void check(StateDiagram sd);</li>
+<li>&nbsp;&nbsp;&nbsp; //</li>
+<li>}</li>
+<li>public interface DiagramElement {</li>
+<li>&nbsp;&nbsp;&nbsp; //接受訪客訪問的介面</li>
+<li>&nbsp;&nbsp;&nbsp; public void accept(Checker c);</li>
+<li>}</li>
+<li>public class SyntaxCheck implements Checker{</li>
+<li>&nbsp;&nbsp;&nbsp; //SyntaxCheck實做checker</li>
+<li>&nbsp;&nbsp;&nbsp; public void check(State s) {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //印出SytaxCheck State的結果</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;SyntaxCheck&quot;);</li>
+<li>&nbsp;&nbsp;&nbsp; }</li>
+<li>&nbsp;&nbsp;&nbsp; public void check(Transition t) {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;SyntaxCheck&quot;);</li>
+<li>&nbsp;&nbsp;&nbsp; }</li>
+<li>&nbsp;&nbsp;&nbsp; public void check(StateDiagram sd) {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;SyntaxCheck&quot;);</li>
+<li>&nbsp;&nbsp;&nbsp; }&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>}</li>
+<li>public class RelationCheck implements Checker{</li>
+<li><br/></li>
+<li>&nbsp;&nbsp;&nbsp; public void check(State s) {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;RelationCheck&quot;);</li>
+<li>&nbsp;&nbsp;&nbsp; }</li>
+<li>&nbsp;&nbsp;&nbsp; public void check(Transition t) {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;RelationCheck&quot;);</li>
+<li>&nbsp;&nbsp;&nbsp; }</li>
+<li>&nbsp;&nbsp;&nbsp; public void check(StateDiagram sd) {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;RelationCheck&quot;);</li>
+<li>&nbsp;&nbsp;&nbsp; }&nbsp;&nbsp;&nbsp;</li>
+<li>}</li>
+<li>public class State implements DiagramElement {</li>
+<li><br/></li>
+<li>&nbsp;&nbsp;&nbsp; @Override</li>
+<li>&nbsp;&nbsp;&nbsp; public void accept(Checker c) {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //訪問這透過accept介面去check此物件</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c.check(this);</li>
+<li>&nbsp;&nbsp;&nbsp; }</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>}</li>
+<li>public interface DiagramElement {</li>
+<li>&nbsp;&nbsp;&nbsp; //接受訪客訪問的介面</li>
+<li>&nbsp;&nbsp;&nbsp; public void accept(Checker c);</li>
+<li>}</li>
+<li>public class StateDiagram implements DiagramElement{</li>
+<li>&nbsp;&nbsp;&nbsp; private ArrayList&lt;DiagramElement&gt; element = new ArrayList&lt;DiagramElement&gt;();</li>
+<li>&nbsp;&nbsp;&nbsp; public void add(DiagramElement e){</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; element.add(e);</li>
+<li>&nbsp;&nbsp;&nbsp; }</li>
+<li>&nbsp;&nbsp;&nbsp; @Override</li>
+<li>&nbsp;&nbsp;&nbsp; public void accept(Checker c) {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //訪問這透過accept介面去check此物件</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c.check(this);</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Iterator itr = element.iterator();</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; while(itr.hasNext()){</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //訪問者check StateDiagram底下的element</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ((DiagramElement)itr.next()).accept(c);</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</li>
+<li>&nbsp;&nbsp;&nbsp; }</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>}</li>
+<li><br/></li></ul>
+
+<p></p></body>
+</html>
