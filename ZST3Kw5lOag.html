@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="1"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$ZST3Kw5lOag</title>
+</head>
+<body><h1>OO-2</h1><h2>Composite</h2><p>角色結構 :&nbsp;</p><p>client component composite Leaf</p><p>個別類別 Leaf 和組合類別 Composite 都繼承 Component</p><p></p><undefined><li>Define:</li></undefined>
+<ul style="list-style: none;"><li>數個物件組成樹狀結構表示&quot;部分與整體&quot;，客戶對單個物件和組合物間使用方式一致。</li></ul>
+<undefined><li>違反原則：</li></undefined>
+<ul style="list-style: none;"><li>依賴倒置(Component為abstract)</li></ul>
+
+<h2>Strategy</h2><p>角色結構 :&nbsp;</p><p>client context物件 Stategy行為</p><p>一個物件可以有多個行為</p><p>每個行為都有不同的狀態</p><p>根據物件不同的狀態切換不同的行為</p><p></p><undefined><li>Define:</li></undefined>
+<ul style="list-style: none;"><li>定義一組演算法，個別封裝起來，讓他們之間可以互相替換，此模式讓演算法的變動，</li>
+<li>不會影響到使用演算法的程式。</li>
+<li><br/></li></ul>
+<undefined><li><b><i>Link: </i></b><a href='https://sourcemaking.com/design_patterns/strategy'/>Sourcemaking</a></li></undefined>
+
+<h2>Iterator</h2><p>角色結構 :&nbsp;</p><p>Aggregate集合體 Client Iterator依序掃描元素的介面</p><p></p><undefined><li>Define:</li></undefined>
+<ul style="list-style: none;"><li>取得容器內的每個元素，不需將此容器原本實踐暴露出來。</li></ul>
+
+<h2>Visitor</h2><p>角色結構 :&nbsp;</p><p>Visitor Client&nbsp;</p><p>Visitor Pattern 把 資料結構 和 處理 兩者分開，另外寫一個表示在資料結構內穿梭來去的主體 訪客 的類別，然後把處理交給這個類別來進行。如此一來，如果想追加新的處理動作時，只要再建立一個新的訪客即可。而在資料結構這邊，也只要能接受來敲門的訪客就能完成動作。</p><p></p><undefined><li>Define:</li></undefined>
+<ul style="list-style: none;"><li>在不改變物件結構得前提下，將內部操作提煉成物件使客戶定義的新操作。</li>
+<li><br/></li></ul>
+<undefined><li><b><i>Link: </i></b><a href='https://sourcemaking.com/design_patterns/visitor'/>Sourcemaking</a></li></undefined>
+
+<h2>Memento</h2><p>角色結構 :&nbsp;</p><p>Client 備忘錄 備忘錄管理者</p><p></p><undefined><li>Define:</li></undefined>
+<ul style="list-style: none;"><li>在不破壞封裝的情況下保存及恢復物件的內部狀態。</li></ul>
+
+<h2>Abstract Factory</h2><p>角色結構 :&nbsp;</p><p>client abstractFactory concreteFactory abstractProduct concreteProduct</p><p></p><undefined><li>Define:</li></undefined>
+<ul style="list-style: none;"><li>為創建一組相關或互相依賴的物件提供介面，無需指定具體類別。</li></ul>
+<undefined><li>違反原則：</li></undefined>
+<ul style="list-style: none;"><li>開放封閉，類別會隨著產品而增加方法，也就是說需要修改類別。</li></ul>
+
+<p></p><h2>Builder</h2><p>角色結構 :&nbsp;</p><p>client builder director</p><p>把process 跟 step 分開所以他們就可以有彈性的組合在一起??</p><p>封裝一個產品的建構過程，並允許可依照步驟建構</p><p></p><undefined><li>Define:</li></undefined>
+<ul style="list-style: none;"><li>將複雜的物件的建構與表示分離，使同樣建構過程可創建不同表示。</li></ul>
+<p>Untitled</p><p></p><p>This pad text is synchronized as you type, so that everyone viewing this page sees the same text.&nbsp; This allows you to collaborate seamlessly on documents!</p><p></p><p></p></body>
+</html>
