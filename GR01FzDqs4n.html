@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="26"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$GR01FzDqs4n</title>
+</head>
+<body><h1>Composite</h1><p>&nbsp;</p><ul class="code"><li>&nbsp;import java.awt.Graphics;</li>
+<li>&nbsp;import java.awt.Point;</li>
+<li>&nbsp;import java.util.*;</li>
+<li>&nbsp;</li>
+<li>&nbsp;public abstract class DiagramElement {</li>
+<li>&nbsp;&nbsp;&nbsp; String name;</li>
+<li>&nbsp;&nbsp;&nbsp; Point loc;</li>
+<li>&nbsp;&nbsp;&nbsp; public DiagramElement(){}</li>
+<li>&nbsp;&nbsp;&nbsp; public abstract void draw(Graphics g);</li>
+<li>&nbsp;&nbsp;&nbsp; public abstract boolean intersect(Point p);</li>
+<li>&nbsp;&nbsp;&nbsp; public void add(DiagramElement e){}</li>
+<li>&nbsp;&nbsp;&nbsp; public DiagramElement getElement(int de){</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return null;</li>
+<li>&nbsp;&nbsp;&nbsp; }</li>
+<li>&nbsp;&nbsp;&nbsp; public void remove(DiagramElement e){}</li>
+<li>}</li>
+<li>public class State extends DiagramElement{</li>
+<li>&nbsp;&nbsp;&nbsp; int width;</li>
+<li>&nbsp;&nbsp;&nbsp; int height;</li>
+<li>&nbsp;&nbsp;&nbsp; public State(){}</li>
+<li><br/></li>
+<li>&nbsp;&nbsp;&nbsp; @Override</li>
+<li>&nbsp;&nbsp;&nbsp; public void draw(Graphics g) {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;Draw state&quot;); //To change body of generated methods, choose Tools | Templates.</li>
+<li>&nbsp;&nbsp;&nbsp; }</li>
+<li><br/></li>
+<li>&nbsp;&nbsp;&nbsp; @Override</li>
+<li>&nbsp;&nbsp;&nbsp; public boolean intersect(Point p) {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; throw new UnsupportedOperationException(&quot;Not supported yet.&quot;); //To change body of generated methods, choose Tools | Templates.</li>
+<li>&nbsp;&nbsp;&nbsp; }&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp; }</li>
+<li>public class StateDiagram extends DiagramElement{</li>
+<li>&nbsp;&nbsp;&nbsp; private ArrayList&lt;DiagramElement&gt; des = new ArrayList&lt;DiagramElement&gt;();</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp; public StateDiagram(){}</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp; public void add(DiagramElement e){</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; des.add(e);</li>
+<li>&nbsp;&nbsp;&nbsp; }</li>
+<li>&nbsp;&nbsp;&nbsp; public DiagramElement getElement(int diagramElementIndex){</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;----- get element into StateDiagram1 ----- &quot;);</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return des.get(diagramElementIndex);</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //用index取出任意在State diagram底下的element&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp; }</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>&nbsp;@Override</li>
+<li>&nbsp;&nbsp;&nbsp; public void draw(Graphics g) {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Iterator&lt;DiagramElement&gt; iterator = des.iterator();</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; while(iterator.hasNext()){</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; iterator.next().draw(g);</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</li>
+<li>&nbsp;&nbsp;&nbsp; }</li>
+<li><br/></li>
+<li>&nbsp;&nbsp;&nbsp; @Override</li>
+<li>&nbsp;&nbsp;&nbsp; public boolean intersect(Point p) {</li>
+<li>. return true;</li>
+<li>&nbsp;&nbsp;&nbsp; }</li>
+<li>&nbsp;&nbsp;&nbsp; public ArrayList&lt;DiagramElement&gt; getChild(){</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return this.des;</li>
+<li>&nbsp;&nbsp;&nbsp; }</li>
+<li>&nbsp;&nbsp;&nbsp; public void remove(DiagramElement e){</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; des.remove(e);</li>
+<li>&nbsp;&nbsp;&nbsp; }&nbsp;&nbsp;&nbsp;</li>
+<li>}</li>
+<li>public class Transition extends DiagramElement{</li>
+<li>&nbsp;&nbsp;&nbsp; Point dest;</li>
+<li>&nbsp;&nbsp;&nbsp; public Transition(){}</li>
+<li>&nbsp;&nbsp;&nbsp; @Override</li>
+<li>&nbsp;&nbsp;&nbsp; public void draw(Graphics g) {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;Draw transition&quot;); //To change body of generated methods, choose Tools | Templates.</li>
+<li>&nbsp;&nbsp;&nbsp; }</li>
+<li><br/></li>
+<li>&nbsp;&nbsp;&nbsp; @Override</li>
+<li>&nbsp;&nbsp;&nbsp; public boolean intersect(Point p) {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; throw new UnsupportedOperationException(&quot;Not supported yet.&quot;); //To change body of generated methods, choose Tools | Templates.</li>
+<li>&nbsp;&nbsp;&nbsp; }</li>
+<li>}</li></ul>
+
+</body>
+</html>
