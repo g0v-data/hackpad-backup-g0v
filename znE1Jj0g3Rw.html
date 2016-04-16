@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="160"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$znE1Jj0g3Rw</title>
+</head>
+<body><h1>moedict-amis line bot</h1><p>隨手紀錄一下在新的 DigtalOcean Droplet 上安裝阿美語萌典 line bot 。</p><p></p><p>Line Bot 的 callback URL 需要 https (不確定會不會驗證簽章，假設會好了...)</p><p>所以要安裝 Let&rsquo;s Encrypt</p><p></p><ul class="code"><li>apt-get update</li>
+<li>apt-get dist-upgrade</li>
+<li>cd /opt</li>
+<li>apt-get install git python-pip build-essential python-dev libffi-dev libssl-dev</li>
+<li>pip install pyopenssl ndg-httpsclient pyasn1</li>
+<li>pip install urllib3 --upgrade</li>
+<li>git clone <a href="https://github.com/letsencrypt/letsencrypt"></a><a href='https://github.com/letsencrypt/letsencrypt'/>https://github.com/letsencrypt/letsencrypt</a> /opt/letsencrypt</li>
+<li>./letsencrypt-auto --standalone -d amis.noip.me</li></ul>
+
+<p>改一下 default locale&nbsp;</p><ul class="code"><li>locale-gen zh_TW.UTF-8</li>
+<li>vim /etc<b>/</b>default<b>/</b>locale</li></ul>
+
+<p></p></body>
+</html>
