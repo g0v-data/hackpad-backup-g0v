@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="392"/>
+<meta name="version" content="395"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$XIDdqdefsJZ</title>
 </head>
 <body><h1>縣市開放資料集索引</h1><p></p><p>為了加速縣市政府開放資料的推動，平行單位釋出資料的比對是常見工作，但現在除了 OKFN 評比( <a href="http://tw-city.census.okfn.org/"></a>http://tw-city.census.okfn.org/ )之外並沒有其他相關索引； OKFN 評比是透過指定主題的方式，但實際執行時只希望找出一個簡單的答案，也就是 &quot;xx縣市開放了這個資料集，oo縣市有沒有類似的？&quot; ，因此希望開發一個程式去建立縣市資料集之間的連結（標籤）</p><p></p><p>repository: <a href="https://github.com/tainancity/city_datasets"></a><a href='https://github.com/tainancity/city_datasets'/>https://github.com/tainancity/city_datasets</a></p><p></p><p><b>資料庫規劃</b></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_XIDdqdefsJZ_p.84104_1461749224909_Screenshot from 2016-04-27 17:26:32.png'/></p><p></p><p></p><ul><li>table organizations - 組織/單位<ul><li>id 使用 uuid 去除符號後轉為 binary 格式</li>
@@ -22,7 +22,7 @@
 <li>parent_id, lft, rght 樹狀結構索引欄位(MPTT)</li></ul>
 </li>
 <li>table links_tags - 標籤連結<ul><li>foreign_id Organization/Dataset 的 id</li>
-<li>也許需要加入 model 欄位避免碰撞，但 uuid 的特性是難以重複</li></ul>
+<li>model 設定使用的資料表， Organization or Dataset</li></ul>
 </ul>
 
 <p><b>功能需求</b></p><ul><li>各縣市資料集的爬蟲</li>
