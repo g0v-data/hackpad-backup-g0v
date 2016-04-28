@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2802"/>
+<meta name="version" content="2838"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$yRRVlfb5oJg</title>
 </head>
 <body><h1>水</h1><p>有質、有量、有水文</p><p></p><h2>構想</h2><p>基本目標：台灣地區的水文資料動態彙整與視覺化，形成水現況/即時循環圖，讓一般民眾了解水資源現況、用水、洪旱災、將水文資料實質彙整於在地流域地理空間呈現上，基於 gov open data 的實地水文教材。</p><p></p><h2>TODO</h2><ul><li>確立水循環邏輯與水資源的表達方式<ul><li>依照集水區與流域？<ul><li>翡翠水庫...</li></ul>
@@ -15,6 +15,14 @@
 <li>確認資料集之間的關係<ul><li>例如上下游位置、水系支流系統、設想入滲逕流等水利行為</li>
 <li>學理與運算程式 ?<ul><li>徐昇式法計算方法，請參考<a href='http://tccip.ncdr.nat.gov.tw/NCDR/Shared_Doc/papers/%E5%BE%90%E6%98%87%E5%A4%9A%E9%82%8A%E5%BD%A2%E6%B3%95%E8%AA%AA%E6%98%8E.pdf'/>文獻</a>(PDF)</li>
 <li>颱洪淹水雲端系統：此系統可以協助洪氾保險的擬訂、災情受損評估 ...（<a href='http://www.chinatimes.com/newspapers/20141128000154-260210'/>新聞</a>）</li>
+<li>多維洪水模擬平台 國家研究院台灣颱風洪水研究中心</li>
+<li><br/></li>
+<li>定量降雨預報 國家研究院台灣颱風洪水研究中心<ul><li><a href="http://www.ttfri.narl.org.tw/study02A.html"></a>http://www.ttfri.narl.org.tw/study02A.html</li></ul>
+</li>
+<li>定量降雨預報結果與逕流河道模擬 國家研究院台灣颱風洪水研究中心，本系統結合定量降雨預報結果與逕流河道模擬技術，進行全流域之即時降雨逕流模擬實驗<ul><li><a href="http://www.ttfri.narl.org.tw/study03A.html"></a><a href='http://www.ttfri.narl.org.tw/study03A.html'/>http://www.ttfri.narl.org.tw/study03A.html</a></li></ul>
+</li>
+<li>台灣都會區淹水評估系統 國家研究院台灣颱風洪水研究中心<ul><li><a href="http://www.ttfri.narl.org.tw/study03D.html"></a>http://www.ttfri.narl.org.tw/study03D.html</li></ul>
+</li>
 <li><a href='https://plus.google.com/117804316605140411553'/>FEWS_Taiwan</a>：協助洪水預報、水情資訊供應，所用圖資：土地利用、通用版電子地圖、土壤類型、數值高程模型、水位站圖層、雨量站圖層、村里圖層</li>
 <li>（<a href='http://www.udd.gov.taipei/pages/detail.aspx?Node=443&amp;Page=5484'/>研擬淡水河流域都市發展與流域防災整合案總結報告書</a>）本計畫採用 PC-SWMM 對七堵都市計畫區雨水下水道系統進行分析洪患定量分析， SWMM(Storm Water Management Model) 為美國環保署(EPA U.S.)1969~1971 年 所發展，主要依據變量流理論以一維連續方程式與動力波理論為基礎，依水流流程 之特性，將模式分成地表逕流(RUNOFF)與排水幹管輸水(EXTRAN)兩部份。 RUNOFF 模組可模擬排水系統集水區內每一集水分區之降雨逕流歷線，EXTRAN 模 組為一動態水理演算模式。地表逕流是指雨量降落地面後，流入各排水幹管前之水 流狀況，模擬方式是經由動力波逕流演算，計算匯入排水人孔之水流流量歷線。幹 管輸水部份則是利用疊代法求解動力波方程式，計算各排水幹管系統之流量以及溢 出人孔之水量。PC-SWMM 由加拿大 CHI(Computational Hyhraulics Int.)發展完成， 其以 SWMM 模式為核心，再輔以視窗化界面功能及簡易 GIS 模組功能。因此， PC-SWMM 使模式更能符合實際之情況，以真實表現當地土地利用、地形、地貌、 道路、鐵路、水路及各種結構設施（如閘門、涵洞、抽水站等）對淹水之影響，再 以此建立之模式，輸入集水區之降雨歷線（或入流量歷線）與邊界條件，藉以模擬 現況之淹水情形。</li>
 <li><a href='https://www.dropbox.com/sh/ylrg4vnx6icpfb4/AACvLXplsER47zB05mpRbyeka?dl=0'/>水利工程三維數值模擬分析</a></li>
