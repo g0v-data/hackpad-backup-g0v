@@ -3,14 +3,16 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="591"/>
+<meta name="version" content="871"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$E0G6gZDQ2ZZ</title>
 </head>
-<body><h1>公務出國報告查詢統計網</h1><p></p><h2>簡介</h2><p>公務員的出國考察經常被認為是在消化預算[注1]或是出國旅遊[注2]，在資源分配上也備受質疑[注3]。本計畫希望能夠整合各考察資訊網的資料，使出國考察的狀況能以更直觀方式呈現，也提供更方便的管道查詢報告。</p><p></p><p>[注1]：到2015年底為止的統計，10~12月的考察次數即佔了超過33%，而1~3月僅佔11%多</p><p>[注2]：</p><p>[注3]：</p><p></p><h2>目的</h2><ul><li>統合原本分散於中央以及各縣市考察資訊網的資料</li>
-<li>對考察的主題、前往地區、年份、月份等項目進行統計</li>
-<li>結合考察花費資料</li>
-<li>找出剪貼報告</li>
-<li>提供更加方便、快速的查詢功能</li>
+<body><h1>公務出國報告查詢統計網</h1><p></p><h2>簡介</h2><p>政府的公務出國考察經常被認為是在消化預算[注1]或是出國旅遊[注2]，在資源分配上也備受質疑[注3]。本計畫希望能夠整合各考察資訊網的資料，使出國考察的狀況能以更直觀方式呈現，也提供更方便的管道查詢報告。</p><p></p><p>[注1]：到2015年底為止的統計，10~12月的考察次數即佔了超過33%，而1~3月僅佔11%多。</p><p>[注2]：如各種&quot;優秀人員出國觀摩&quot;。</p><p>[注3]：地方政府的出國考察，第一名台北市的次數及超過第二至五名的加總(高雄、台中、新北、屏東)。</p><p></p><h2>目的</h2><ul class="task"><li>統合原本分散於中央以及各縣市考察資訊網的資料</li></ul>
+<ul class="taskdone"><li>對考察的主題、前往地區、年份、月份等項目進行統計</li></ul>
+<ul class="task"><li>結合考察花費資料</li></ul>
+<ul class="comment"><li>電子採購網找過了，用的名稱跟報告名稱大多不同，結合不了</li></ul>
+<ul class="task"><li>找出剪貼報告</li></ul>
+<ul class="comment"><li>想先從對維基百科的抄襲下手，可是不知道要如何比對......</li></ul>
+<ul class="taskdone"><li>提供更加方便、快速的查詢功能</li>
 <li>提供資料接口</li></ul>
 <ul class="comment"><li>請問跟這個有相關嗎&nbsp;</li>
 <li><a href='/nOWhTpJPKx7'/>公務員出國考察追蹤網</a> / <a href='/--nr1Rzlaxaop'/>公務人員考察網 - 專案目前狀態</a> / <a href='/k0M36hQn4ay'/>出國考察報告：手動閱讀心得整理區</a> 坑主：Bert Wang</li>
@@ -19,21 +21,29 @@
 <li>所以另外挖坑</li>
 <li>加油，我也希望..</li></ul>
 
-<h2>專案目前狀況</h2><p>網址：<a href="http://catding.twbbs.org/report/index.php"></a>http://catding.twbbs.org/report/index.php</p><p></p><p><b>現有頁面</b></p><ul><li>查詢</li>
-<li>統計(總統計與各年、單位、主題......統計)</li>
-<li>圖表生成</li>
-<li>報告資料</li></ul>
+<h2>專案目前狀況</h2><p>網址：<a href="http://catding.twbbs.org/report/index.php"></a>http://catding.twbbs.org/report/index.php</p><p></p><p><b>已完成目標</b></p><ul><li>定時抓取各資訊網的考察資料(更新速度：2日/次)</li>
+<li>查詢、統計(總統計與各年、單位、主題......統計)、圖表生成、報告資料頁面製作完畢</li>
+<li>前後端分離(大部分)</li></ul>
 
-<p><b>現有困難</b></p><ul><li>金門縣的考察資訊網維護中（超過１個月）</li>
-<li>新竹市的考察資訊網格式不同，且僅有部分欄位</li>
+<p><b>待解決</b></p><ul><li>金門縣的考察資訊網維護中（超過１個月）</li>
+<li>新竹市的考察資訊網格式不同，且僅有部分欄位，尚未整合</li>
 <li>出國期間填寫錯亂</li>
 <li>報告頁數填寫錯亂</li>
 <li>主題分類重複（例：教育、教育文化皆為主題分類）</li>
 <li>人員名單未妥善填寫（例：姓名寫&quot;ooo等4人&quot;）</li>
 <li>資料庫查詢效能有待提升</li></ul>
 
-<h2>實作細節</h2><ul><li>後端採用php+mysql</li>
-<li>使用curl抓取資料</li></ul>
+<h2>統計結果</h2><p>以下皆統計至2015年底、皆不含新竹市及金門縣</p><p></p><ul><li>一到四季考察次數的比例分別約為：11%、24%、31%、33%</li>
+<li>最常前往的地區：美國、中國大陸、日本</li>
+<li>考察次數的逐年變化：到2013年基本上皆逐年上漲，但2014、2015接略為降低</li>
+<li>政府分布：中央佔75%、台北市佔8%、高雄市佔3.4%、台中市佔1.8%</li>
+<li>考察主題分布：前三名為教育文化(含教育)、財政經濟、公共工程</li></ul>
+
+<p></p><h2>實作細節</h2><p></p><p><b>前端</b></p><ul><li>使用jQuery</li></ul>
+
+<p><b>後端</b></p><ul><li>採用php+mysql</li>
+<li>使用curl抓取資料</li>
+<li>用PDO連接資料庫</li></ul>
 
 <h2>徵求協作者</h2><p>fb社團：<a href="https://www.facebook.com/groups/1125748634116081/"></a>https://www.facebook.com/groups/1125748634116081/</p><ul><li>介面設計師</li>
 <li>前端工程師</li>
