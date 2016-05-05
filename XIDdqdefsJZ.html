@@ -3,10 +3,16 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="470"/>
+<meta name="version" content="476"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$XIDdqdefsJZ</title>
 </head>
-<body><h1>縣市開放資料集索引</h1><p></p><p>為了加速縣市政府開放資料的推動，平行單位釋出資料的比對是常見工作，但現在除了 OKFN 評比( <a href="http://tw-city.census.okfn.org/"></a>http://tw-city.census.okfn.org/ )之外並沒有其他相關索引； OKFN 評比是透過指定主題的方式，但實際執行時只希望找出一個簡單的答案，也就是 &quot;xx縣市開放了這個資料集，oo縣市有沒有類似的？&quot; ，因此希望開發一個程式去建立縣市資料集之間的連結（標籤）</p><p></p><p>管理介面： <a href="https://github.com/tainancity/city_datasets"></a><a href='https://github.com/tainancity/city_datasets'/>https://github.com/tainancity/city_datasets</a></p><ul><li>目前狀態的操作展示： <a href="https://www.youtube.com/watch?v=QdKQ9t1IFfo"></a>https://www.youtube.com/watch?v=QdKQ9t1IFfo</li></ul>
+<body><h1>縣市開放資料集索引</h1><p></p><p>為了加速縣市政府開放資料的推動，平行單位釋出資料的比對是常見工作，但現在除了 OKFN 評比( <a href="http://tw-city.census.okfn.org/"></a>http://tw-city.census.okfn.org/ )之外並沒有其他相關索引； OKFN 評比是透過指定主題的方式，但實際執行時只希望找出一個簡單的答案，也就是 &quot;xx縣市開放了這個資料集，oo縣市有沒有類似的？&quot; ，因此希望開發一個程式去建立縣市資料集之間的連結（標籤）</p><p></p><p>管理介面： <a href="https://github.com/tainancity/city_datasets"></a><a href='https://github.com/tainancity/city_datasets'/>https://github.com/tainancity/city_datasets</a></p><ul><li>目前狀態的操作展示： <a href="https://www.youtube.com/watch?v=QdKQ9t1IFfo"></a>https://www.youtube.com/watch?v=QdKQ9t1IFfo</li>
+<li>已連結資料展示<ul><li>社會 - <a href="https://i.tainan.gov.tw/city_datasets/tags/view/57284832-4ab8-4b7b-af6d-2d8cacb5b862"></a>https://i.tainan.gov.tw/city_datasets/tags/view/57284832-4ab8-4b7b-af6d-2d8cacb5b862</li>
+<li>都市發展 - <a href="https://i.tainan.gov.tw/city_datasets/tags/view/572849a4-bd8c-46b6-8779-14a2acb5b862"></a>https://i.tainan.gov.tw/city_datasets/tags/view/572849a4-bd8c-46b6-8779-14a2acb5b862</li>
+<li>財政 - <a href="https://i.tainan.gov.tw/city_datasets/tags/view/5728486f-5a98-4dc1-9ce7-1be9acb5b862"></a>https://i.tainan.gov.tw/city_datasets/tags/view/5728486f-5a98-4dc1-9ce7-1be9acb5b862</li>
+<li>主計 - <a href="https://i.tainan.gov.tw/city_datasets/tags/view/57284706-6034-4500-9b54-2d97acb5b862"></a>https://i.tainan.gov.tw/city_datasets/tags/view/57284706-6034-4500-9b54-2d97acb5b862</li>
+<li>工務 - <a href="https://i.tainan.gov.tw/city_datasets/tags/view/57284882-2270-4ddf-83a2-2e21acb5b862"></a>https://i.tainan.gov.tw/city_datasets/tags/view/57284882-2270-4ddf-83a2-2e21acb5b862</li></ul>
+</ul>
 <p>爬蟲： <a href="https://github.com/tainancity/city_datasets_crawlers"></a>https://github.com/tainancity/city_datasets_crawlers</p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_XIDdqdefsJZ_p.84104_1462243390003_Screenshot from 2016-05-03 10:41:40.png'/></p><p></p><p><b>資料庫規劃</b></p><ul><li>table organizations - 組織/單位<ul><li>id 使用 uuid</li>
 <li>foreign_id 在各縣市資料平台的 ID</li>
 <li>foreign_url 在各縣市資料平台的網址</li>
