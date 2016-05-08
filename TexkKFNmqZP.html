@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1523"/>
+<meta name="version" content="1544"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$TexkKFNmqZP</title>
 </head>
 <body><h1>g0v 零時空汙觀測專案</h1><p>整合各方空汙監測站的觀測資料與各種汙染源的排放資料以地圖視覺化呈現</p><p>清楚明瞭的即時空汙動態追蹤，以此達到排汙監督的社會效益</p><p><b><a href='http://beta.hackfoldr.org/g0vairmap'/>專案完整hackfoldr</a></b></p><p></p><h2>專案簡介</h2><p></p><p><b>緣由與欲解決之問題</b></p><p>最初的專案方向是在開發小型開源的arduino空氣品質監測器並組織一個非官方的共同觀測網</p><p>一路開發下來發現其實很多各路高手都在做類似的專案</p><p>但專案之間的資料並不互通且零散</p><p>各平台有各的優缺點，要著手去統一開發平台並不實際</p><p>所以決定把目標提高一個層次去整合各種觀測資源讓各空汙監測開發社群貢獻的效益最大化</p><p></p><p><b>專案最高原則</b></p><p>整合各方空汙監測站的觀測資料與各種汙染源的排放資料以地圖視覺化呈現</p><p>清楚明瞭的即時空汙動態追蹤，以此達到排汙監督的社會效益</p><p>在最後並可彈性化統一輸出方便後續應用的資料格式(json, tabular data)</p><p></p><p><b>授權方式</b></p><p>零時空汙觀測網站實作專案近日將以MIT授權方式於github發佈</p><p></p><p><b>欲整合之目標</b></p><ul><li>即時觀測資料 (包括官方與非官方測站的觀測資訊)</li>
@@ -19,10 +19,11 @@
 
 <h2>專案目前狀態</h2><p>g0v零時空汙觀測網站實作測試已上線- <a href="http://g0vAirMap.3203.info"></a><a href='http://www.3203.info/map.html'/>http://</a><a href='http://l.facebook.com/l.php?u=http%3A%2F%2Fg0vAirMap.3203.info&amp;h=uAQEl8ASA'/>g0vAirMap.3203.info</a></p><p>網站相關開發細節請見子分區: <a href='/g0v--riRTvbB0E5x'/>網站開發共筆</a></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_TexkKFNmqZP_p.462648_1456039623950_擷取.JPG'/></p><p><b>目前專案使用觀測站資料來源</b></p><ul><li>組織性維護專案<ul><li>環保署空氣品質即時污染指標 <a href='http://g0v-data-mirror.gugod.org/epa/aqx.json'/>(透過 g0v mirror</a>) (政府資料開放授權) - <a href="http://data.gov.tw/node/6074"></a><a href='http://data.gov.tw/node/6074'/>http://data.gov.tw/node/6074</a></li>
 <li>環保署空氣品質監測站基本資料含地理圖資 (政府資料開放授權) -<a href="http://data.gov.tw/node/6075"></a><a href='http://data.gov.tw/node/6075'/>http://data.gov.tw/node/6075</a></li>
-<li>LASS-開源公益的環境感測器網路 (MIT授權) -<a href="https://github.com/LinkItONEDevGroup/LASS"></a><a href='https://github.com/LinkItONEDevGroup/LASS'/>https://github.com/LinkItONEDevGroup/LASS</a></li>
-<li>ProbeCube-物聯網感測方塊 (MIT授權) -<a href="https://github.com/Lafudoci/ProbeCube"></a><a href='https://github.com/Lafudoci/ProbeCube'/>https://github.com/Lafudoci/ProbeCube</a></li>
-<li>Realtek空氣盒子(透過lass發佈, MIT授權) -<a href="http://nrl.iis.sinica.edu.tw/LASS/last-all-airbox.php"></a><a href='http://nrl.iis.sinica.edu.tw/LASS/last-all-airbox.php'/>http://nrl.iis.sinica.edu.tw/LASS/last-all-airbox.php</a></li>
-<li><a href='https://xn--jvrt7ch0jeklv4emodg0v8xg1z8bnuudik/'/>高雄市校園空氣品質監測</a> ()</li></ul>
+<li>LASS-開源公益的環境感測器網路 (MIT授權) -<a href="https://github.com/LinkItONEDevGroup/LASS"></a><a href='https://github.com/LinkItONEDevGroup/LASS'/>https://github.com/LinkItONEDevGroup/LASS</a></li></ul>
+<ul style="list-style: none;"><li><a href="http://nrl.iis.sinica.edu.tw/LASS/last-all-lass.json"></a><a href='http://nrl.iis.sinica.edu.tw/LASS/last-all-lass.json'/>http://nrl.iis.sinica.edu.tw/LASS/last-all-lass.json</a></li></ul>
+<ul><li>ProbeCube-物聯網感測方塊 (MIT授權) -<a href="https://github.com/Lafudoci/ProbeCube"></a><a href='https://github.com/Lafudoci/ProbeCube'/>https://github.com/Lafudoci/ProbeCube</a></li>
+<li>Realtek空氣盒子(透過lass發佈, MIT授權) -<a href="http://nrl.iis.sinica.edu.tw/LASS/last-all-airbox.json"></a><a href='http://nrl.iis.sinica.edu.tw/LASS/last-all-airbox.json'/>http://nrl.iis.sinica.edu.tw/LASS/last-all-airbox.json</a></li>
+<li><a href='https://xn--jvrt7ch0jeklv4emodg0v8xg1z8bnuudik/'/>高雄市校園空氣品質監測</a> (<a href="http://nrl.iis.sinica.edu.tw/LASS/last-all-webduino.json)"></a><a href='http://nrl.iis.sinica.edu.tw/LASS/last-all-webduino.json'/>http://nrl.iis.sinica.edu.tw/LASS/last-all-webduino.json</a>)</li></ul>
 </li>
 <li>獨立開發者專案<ul><li>Miaoski-(CC0, MIT授權)-<a href="https://github.com/miaoski/pm25"></a><a href='https://github.com/miaoski/pm25'/>https://github.com/miaoski/pm25</a></li></ul>
 </li>
