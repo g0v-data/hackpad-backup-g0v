@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="96"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$CWkeuAXb1Tb</title>
+</head>
+<body><h1>巴拿馬文件 - Panama Papers</h1><p></p><p>在 <a href="https://offshoreleaks.icij.org/pages/database"></a>https://offshoreleaks.icij.org/pages/database 可以下載原始資料，解壓縮後會得到下面幾個檔案</p><ul><li>Addresses.csv - 股東登記住址<ul><li>address</li>
+<li>icij_id</li>
+<li>valid_until</li>
+<li>country_codes</li>
+<li>countries</li>
+<li>node_id</li>
+<li>sourceID</li></ul>
+</li>
+<li>Entities.csv - 註冊公司<ul><li>name</li>
+<li>original_name</li>
+<li>former_name</li>
+<li>jurisdiction</li>
+<li>jurisdiction_description</li>
+<li>company_type</li>
+<li>address</li>
+<li>internal_id</li>
+<li>incorporation_date</li>
+<li>inactivation_date</li>
+<li>struck_off_date</li>
+<li>dorm_date</li>
+<li>status</li>
+<li>service_provider</li>
+<li>ibcRUC</li>
+<li>country_codes</li>
+<li>countries</li>
+<li>note</li>
+<li>valid_until</li>
+<li>node_id</li>
+<li>sourceID</li></ul>
+</li>
+<li>Intermediaries.csv - 仲介<ul><li>name</li>
+<li>internal_id</li>
+<li>address</li>
+<li>valid_until</li>
+<li>country_codes</li>
+<li>countries</li>
+<li>status</li>
+<li>node_id</li>
+<li>sourceID</li></ul>
+</li>
+<li>Officers.csv - 股東<ul><li>name</li>
+<li>icij_id</li>
+<li>valid_until</li>
+<li>country_codes</li>
+<li>countries</li>
+<li>node_id</li>
+<li>sourceID</li></ul>
+</li>
+<li>all_edges.csv - 關聯<ul><li>node_1</li>
+<li>rel_type</li>
+<li>node_2</li>
+<li>rel_type 有下面幾種<ul><li>intermediary_of</li>
+<li>officer_of</li>
+<li>registered_address</li>
+<li>similar</li>
+<li>underlying</li></ul>
+</ul>
+</ul>
+
+<p>sourceID = Panama Papers 就表示是新上線的巴拿馬文件資料</p><p>country_codes = TWN 就表示是台灣的資料</p><p></p></body>
+</html>
