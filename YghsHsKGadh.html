@@ -3,19 +3,24 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="636"/>
+<meta name="version" content="695"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$YghsHsKGadh</title>
 </head>
 <body><h1>localwiki export / import</h1><p>&quot;Our dream is for LocalWiki to not only be the best way to learn and share knowledge about your local community, but also to be a platform upon which a countless civic and locally-relevant applications will be built. In the same way that OpenStreetMap has become a platform for open, cartographic knowledge, <b>we hope that LocalWiki can become an open, global platform for local knowledge</b> and human experience--places, people, neighborhoods,...everything!&quot;&nbsp; - <a href='https://localwiki.org/main/API_Documentation'/>API Documentation</a>&nbsp;</p><p></p><p>localwiki 算是親切的圖文書寫介面，適合一般大眾共筆編輯，也很方便建立地理資料，希望完備平台匯出以及匯入功能，讓一般書寫者可以批次匯入，也可以讓共筆成果打包，作為其他應用的素材。</p><p></p><p><b>專案目標</b></p><p>匯出 localwiki 的內容（文字、表格、圖片、地理資料...）</p><ul><li>issue: <a href='https://github.com/localwiki/localwiki/issues/752'/>localwiki/localwiki#752</a></li>
 <li><a href="https://localwiki.org/api/v4/maps/"></a><a href='https://localwiki.org/api/v4/maps/'/>https://localwiki.org/api/v4/maps/</a></li></ul>
 
-<p>匯入</p><ul><li>issue: <a href='https://github.com/localwiki/localwiki/issues/754'/>localwiki/localwiki#754</a></li></ul>
+<p>匯入</p><ul><li>issue: <a href='https://github.com/localwiki/localwiki/issues/754'/>localwiki/localwiki#754</a></li>
+<li>欄位型資料，匯入時如何判釋欄位內容組成 localwiki 的標題或內文</li>
+<li>圖片<ul><li>圖片僅有檔案連結</li>
+<li>圖片檔案批次上傳</li></ul>
+</ul>
 
 <p><b>討論</b></p><ul><li>目前需要 coder 才能夠處理</li>
 <li>匯出結果為何<ul><li>格式&nbsp;<ul><li>GeoJson ? 方便其他應用</li>
-<li>kml ? 方便 google earth 使用者瀏覽運用</li></ul>
+<li>kml ? 方便 google earth 使用者瀏覽運用</li>
+<li>圖片怎麼辦？</li></ul>
 </li>
-<li>欄位化？<ul><li>內文匯出時，是否有可能匯出為欄位化，或是說若希望匯出時能匯出成欄位，那麼 localwiki 頁面上該如何編寫。例如內文中有「營業時間：am9:00-pm5:00」，能否於匯出時建立「營業時間」，「am9:00-pm5:00」</li></ul>
+<li>匯出時若需要欄位化<ul><li>內文匯出時，是否有可能匯出為欄位化，或是說若希望匯出時能匯出成欄位，那麼 localwiki 頁面上該如何編寫。例如內文中有「營業時間：am9:00-pm5:00」，能否於匯出時建立「營業時間」，「am9:00-pm5:00」</li></ul>
 </li></ul>
 </li>
 <li>授權面向<ul><li>圖片與文字的授權版本若不一致，該如何表現在匯出的成果中</li></ul>
