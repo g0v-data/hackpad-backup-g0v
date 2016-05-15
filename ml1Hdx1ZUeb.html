@@ -3,10 +3,11 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="779"/>
+<meta name="version" content="834"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$ml1Hdx1ZUeb</title>
 </head>
-<body><h1>簡易疏散避難指南</h1><p></p><p>WHY?</p><p>&nbsp;&nbsp;&nbsp; 昨天(summit 2016第一天)才知道KNY介紹的<a href='http://kny.cc/post/140009881874/kny-app-taiwan-weather-eew-earthquake-early-warning'/>強震即時警報APP</a>。同時，KNY也提到了消防署其實早就有製作好各縣市各鄉里的疏散避難地圖的<a href='http://www.nfa.gov.tw/main/ftplist.aspx'/>疏散指南</a>。 如果能夠將疏散避難地圖做成一個傳送地理資訊並回傳即時的疏散方向及路線，就可以結合其它的警報APP，盡可能的降低傷亡。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;</p><p>HOW?</p><p></p><ul style="list-style: none;"><li>第一階段：<ul style="list-style: none;"><li>傳送參數：<ul style="list-style: none;"><li>地理資訊（參考Google Maps Geocoding API的object format）</li></ul>
+<body><h1>簡易疏散避難指南</h1><p></p><p>WHY?</p><p>&nbsp;&nbsp;&nbsp; 昨天(summit 2016第一天)才知道KNY介紹的<a href='http://kny.cc/post/140009881874/kny-app-taiwan-weather-eew-earthquake-early-warning'/>強震即時警報APP</a>。同時，KNY也提到了消防署其實早就有製作好各縣市各鄉里的疏散避難地圖的<a href='http://www.nfa.gov.tw/main/ftplist.aspx'/>疏散指南</a>。 如果能夠將疏散避難地圖做成一個傳送地理資訊並回傳即時的疏散方向及路線，就可以結合其它的警報APP，盡可能的降低傷亡。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;</p><p>HOW?</p><p></p><p>第一階段：</p><ul style="list-style: none;"><li>資料處理：將消防署的各縣市各鄉里的<a href='http://www.nfa.gov.tw/main/ftplist.aspx'/>避難地圖</a>轉成JSON。<b>（需要大大們幫忙..?）</b></li>
+<li>API：<ul style="list-style: none;"><li>傳送參數：<ul style="list-style: none;"><li>地理資訊（參考Google Maps Geocoding API的object format）</li></ul>
 </ul>
 </ul>
 <ul class="code"><li>&quot;geometry&quot;: {</li>
