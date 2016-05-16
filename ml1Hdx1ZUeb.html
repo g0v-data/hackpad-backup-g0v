@@ -3,10 +3,10 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1242"/>
+<meta name="version" content="1339"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$ml1Hdx1ZUeb</title>
 </head>
-<body><h1>簡易疏散避難指南</h1><p></p><p><b>徵求「沒有人」幫忙做一下</b></p><p></p><p>目前已經藉由clkao的townlist資料，完成部分API：</p><ol><li>Get all data: <a href="https://evacuation.herokuapp.com/sanctuaryList"></a>https://evacuation.herokuapp.com/sanctuaryList [GET Method]</li>
+<body><h1>簡易疏散避難指南</h1><p></p><p><b>最新</b></p><p>初版已經完成囉～</p><p>填寫網頁： <a href="https://evacuation-web.herokuapp.com/"></a>http<a href='http://evacuation-web.herokuapp.com/'/>s</a>://evacuation-web.herokuapp.com/</p><p>原始資料取得處： <a href="http://www.nfa.gov.tw/main/ftplist.aspx"></a>http://www.nfa.gov.tw/main/ftplist.aspx</p><p></p><p>先取得原始資料（如圖一）後，慢慢一個一個填進去（圖一左方對應到圖二），部分資料可留白。</p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_ml1Hdx1ZUeb_p.621706_1463408588156_螢幕快照 2016-05-16 下午10.22.39.png'/></p><p>圖一</p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_ml1Hdx1ZUeb_p.621706_1463408682792_螢幕快照 2016-05-16 下午10.24.24.png'/></p><p></p><p>圖二</p><p></p><p></p><p><b>API List</b></p><p>目前已經藉由clkao的townlist資料，完成部分API：</p><ol><li>Get all data: <a href="https://evacuation.herokuapp.com/sanctuaryList"></a>https://evacuation.herokuapp.com/sanctuaryList [GET Method]</li>
 <li>Get county list: <a href="https://evacuation.herokuapp.com/counties"></a><a href='https://evacuation.herokuapp.com/counties'/>https://evacuation.herokuapp.com/counties</a> [GET Method]</li>
 <li>Get town list by county id: <a href="https://evacuation.herokuapp.com/countyID/towns"></a><a href='https://evacuation.herokuapp.com/countyID/towns'/>https://evacuation.herokuapp.com/countyID/towns</a> [GET Method]</li>
 <li>Get village list by town id: <a href="https://evacuation.herokuapp.com/townID/villages"></a>https://evacuation.herokuapp.com/<a href='https://evacuation.herokuapp.com/10020020/villages'/>t</a>o<a href='https://evacuation.herokuapp.com/to/villages'/>w</a>n<a href='https://evacuation.herokuapp.com/town/villages'/>I</a>D/villages [GET Method]</li>
@@ -52,7 +52,8 @@
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</li>
 <li>&nbsp;&nbsp;&nbsp; }</li></ul>
 
-<p>WHY?</p><p>&nbsp;&nbsp;&nbsp; 昨天(summit 2016第一天)才知道KNY介紹的<a href='http://kny.cc/post/140009881874/kny-app-taiwan-weather-eew-earthquake-early-warning'/>強震即時警報APP</a>。同時，KNY也提到了消防署其實早就有製作好各縣市各鄉里的疏散避難地圖的<a href='http://www.nfa.gov.tw/main/ftplist.aspx'/>疏散指南</a>。 如果能夠將疏散避難地圖做成一個傳送地理資訊並回傳即時的疏散方向及路線，就可以結合其它的警報APP，盡可能的降低傷亡。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;</p><p>HOW?</p><p></p><p>第一階段：</p><ul style="list-style: none;"><li>資料處理：<ul style="list-style: none;"><li>將消防署的各縣市各鄉里的<a href='http://www.nfa.gov.tw/main/ftplist.aspx'/>避難地圖</a>轉成JSON。</li><ul><li>避難所資訊（除地圖內資訊，尚需地理位置「經緯度」） [行政區已完成]</li>
+<p><b>WHY?</b></p><p>&nbsp;&nbsp;&nbsp; 昨天(summit 2016第一天)才知道KNY介紹的<a href='http://kny.cc/post/140009881874/kny-app-taiwan-weather-eew-earthquake-early-warning'/>強震即時警報APP</a>。同時，KNY也提到了消防署其實早就有製作好各縣市各鄉里的疏散避難地圖的<a href='http://www.nfa.gov.tw/main/ftplist.aspx'/>疏散指南</a>。 如果能夠將疏散避難地圖做成一個傳送地理資訊並回傳即時的疏散方向及路線，就可以結合其它的警報APP，盡可能的降低傷亡。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;</p><p><b>HOW?</b></p><p></p><ul style="list-style: none;"><li><b>第一階段</b></li>
+<li>資料處理：<ul style="list-style: none;"><li>將消防署的各縣市各鄉里的<a href='http://www.nfa.gov.tw/main/ftplist.aspx'/>避難地圖</a>轉成JSON。</li><ul><li>避難所資訊（除地圖內資訊，尚需地理位置「經緯度」） [行政區已完成]</li>
 <li>所屬之災害通報單位 [需大家跳坑ＸＤ]</li></ul>
 </ul>
 </ul>
@@ -138,5 +139,6 @@
 <li>&nbsp;&nbsp;&nbsp; }</li>
 <li>]</li></ul>
 
-</body>
+<ul style="list-style: none;"><li><b>第二階段</b></li></ul>
+<p>加上Google KML的API，把避難所的住址轉成經緯度；最後再結合KNY的地震推播，告知使用者疏散路線。</p><p></p></body>
 </html>
