@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1219"/>
+<meta name="version" content="1221"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$ml1Hdx1ZUeb</title>
 </head>
 <body><h1>簡易疏散避難指南</h1><p></p><p><b>徵求「沒有人」幫忙做一下</b></p><p></p><p>目前已經藉由clkao的townlist資料，完成部分API：</p><ol><li>Get all data: <a href="https://evacuation.herokuapp.com/sanctuaryList"></a>https://evacuation.herokuapp.com/sanctuaryList [GET Method]</li>
@@ -13,7 +13,6 @@
 <li>Get sanctuary list by town id and village id: <a href="https://evacuation.herokuapp.com/townID/villageID/sanctuaries"></a>https://evacuation.herokuapp.com/<a href='https://evacuation.herokuapp.com/10020020/066/sanctuaries'/>t</a>o<a href='https://evacuation.herokuapp.com/to/066/sanctuaries'/>w</a>n<a href='https://evacuation.herokuapp.com/town/066/sanctuaries'/>I</a>D/<a href='https://evacuation.herokuapp.com/townID/066/sanctuaries'/>v</a>i<a href='https://evacuation.herokuapp.com/townID/vi/sanctuaries'/>l</a>l<a href='https://evacuation.herokuapp.com/townID/vill/sanctuaries'/>a</a>g<a href='https://evacuation.herokuapp.com/townID/villag/sanctuaries'/>e</a>I<a href='https://evacuation.herokuapp.com/townID/villageI/sanctuaries'/>D</a>/sanctuaries [GET Method]</li>
 <li>Update sanctuary list by town id and village id: <a href="https://evacuation.herokuapp.com/townID/villageID/sanctuaries"></a>http<a href='https://evacuation.herokuapp.com/10020020/066/sanctuaries'/>s://evacuation.herokuapp.com/</a><a href='https://evacuation.herokuapp.com/townID/villageID/sanctuaries'/>townID/villageID</a>/sanctuaries [PUT Method]</li></ol>
 <ul class="code"><li>// Request Body如下</li>
-<li>[</li>
 <li>&nbsp;&nbsp;&nbsp; {</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;location&quot;: {</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;county&quot;: &quot;新北市&quot;,</li>
@@ -51,8 +50,7 @@
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</li>
-<li>&nbsp;&nbsp;&nbsp; }</li>
-<li>]</li></ul>
+<li>&nbsp;&nbsp;&nbsp; }</li></ul>
 
 <p>WHY?</p><p>&nbsp;&nbsp;&nbsp; 昨天(summit 2016第一天)才知道KNY介紹的<a href='http://kny.cc/post/140009881874/kny-app-taiwan-weather-eew-earthquake-early-warning'/>強震即時警報APP</a>。同時，KNY也提到了消防署其實早就有製作好各縣市各鄉里的疏散避難地圖的<a href='http://www.nfa.gov.tw/main/ftplist.aspx'/>疏散指南</a>。 如果能夠將疏散避難地圖做成一個傳送地理資訊並回傳即時的疏散方向及路線，就可以結合其它的警報APP，盡可能的降低傷亡。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;</p><p>HOW?</p><p></p><p>第一階段：</p><ul style="list-style: none;"><li>資料處理：<ul style="list-style: none;"><li>將消防署的各縣市各鄉里的<a href='http://www.nfa.gov.tw/main/ftplist.aspx'/>避難地圖</a>轉成JSON。</li><ul><li>避難所資訊（除地圖內資訊，尚需地理位置「經緯度」） [行政區已完成]</li>
 <li>所屬之災害通報單位 [需大家跳坑ＸＤ]</li></ul>
