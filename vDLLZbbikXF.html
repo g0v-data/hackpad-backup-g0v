@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="4001"/>
+<meta name="version" content="4007"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$vDLLZbbikXF</title>
 </head>
 <body><h1>一鍵 Excel 轉 .csv (含自動修復) (Ver20160305)</h1><p></p><h2>專案簡介</h2><p><b>最新版本下載 (Latest released version)</b></p><ul><li>Excel_to_csv C-Gamma(2016.03.05 g0v結束後)&nbsp;<ul><li><a href='https://drive.google.com/file/d/0B0l5ONZZiOChU3VGQmhLY0Zwd00/view?usp=sharing'/>Google drive連結</a></li></ul>
@@ -152,11 +152,11 @@
 <li>左上角的欄位名稱會維持空白 (正確做法要加上「縣市別」，但應該沒法這麼聰明XD)</li></ul>
 <ul class="comment"><li>這檔案的難度很高，應該說對於本身沒有合併儲存格的，這程式好像反而無法處理。</li></ul>
 
-<p><b>無法處理：<a href='https://www.dropbox.com/s/wqa8p0a8zo87bbj/%E7%B6%9C%E5%90%88%E6%BC%94%E7%B7%B4%E6%A1%88%E4%BE%8B.xls?dl=0'/>資料集連結</a></b></p><ul class="task"><li>不知道為什麼第一行不見了QQ</li></ul>
+<p><b>無法處理：<a href='https://www.dropbox.com/s/wqa8p0a8zo87bbj/%E7%B6%9C%E5%90%88%E6%BC%94%E7%B7%B4%E6%A1%88%E4%BE%8B.xls?dl=0'/>資料集連結</a></b></p><ul class="taskdone"><li>不知道為什麼第一行不見了QQ</li></ul>
 <ul class="comment"><li>程式bug，已找到原因，要想一下怎麼處理</li></ul>
 <ul class="task"><li>最下面的「平均」其實應該要整行刪除，但是因為原本有合併儲存格，所以反而被拆成四個儲存格都寫平均</li></ul>
 <ul class="comment"><li>有想到解決方法，但要測試會不會矯枉過正</li></ul>
-<ul class="task"><li>最下面表尾用文字方塊插入的內容沒有刪除</li></ul>
+<ul class="taskdone"><li>最下面表尾用文字方塊插入的內容沒有刪除</li></ul>
 <ul class="comment"><li>實際上因為csv不支援文字方塊，所以該方塊並不會被儲存，excel關掉重開檔案會發現它已消失</li></ul>
 
 <p><b>無法處理：<a href='https://www.dropbox.com/s/n36wpv6dq7mdyss/104%E5%B9%B412%E6%9C%88%E4%BE%9D%E6%B3%95%E6%87%89%E8%A8%AD%E7%BD%AE%E5%93%BA%E9%9B%86%E4%B9%B3%E5%AE%A4%E5%90%8D%E5%96%AE.xls?dl=0'/>資料集連結</a></b></p><ul class="task"><li>多個sheet，不知道為什麼轉出來的名字會都套用第一個sheet的基隆市</li></ul>
