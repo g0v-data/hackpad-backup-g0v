@@ -3,16 +3,20 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1447"/>
+<meta name="version" content="1521"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$ml1Hdx1ZUeb</title>
 </head>
-<body><h1>簡易疏散避難指南</h1><p></p><p><b>最新</b></p><p>初版已經完成囉～</p><p>填寫網頁： <a href="https://evacuation-web.herokuapp.com/"></a>http<a href='http://evacuation-web.herokuapp.com/'/>s</a>://evacuation-web.herokuapp.com/</p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_ml1Hdx1ZUeb_p.621706_1463408682792_螢幕快照 2016-05-16 下午10.24.24.png'/></p><p></p><p></p><p><b>TODO</b></p><ul><li>匯入人口資料 <a href="http://data.moi.gov.tw/MoiOD/Data/DataDetail.aspx?oid=F4478CE5-7A72-4B14-B91A-F4701758328F"></a>http://data.moi.gov.tw/MoiOD/Data/DataDetail.aspx?oid=F4478CE5-7A72-4B14-B91A-F4701758328F [已將CSV轉JSON]</li>
-<li><s>匯入已有之<a href='http://data.moi.gov.tw/MoiOD/Data/DataDetail.aspx?oid=11006F2F-12AB-443C-8B2C-BB44B1A17EC3'/>KML</a>&nbsp; </s>沒有包含開設情形，不採用</li>
-<li>匯入避難收容所開設情形開放資料 <a href="http://data.gov.tw/node/12849"></a>http://data.gov.tw/node/12849</li>
-<li>匯入村里長資料 <a href="http://data.gov.tw/node/7061"></a>http://data.gov.tw/node/7061 [更新中...]</li>
-<li>匯入各地區消防單位及災害應變中心資料 <a href="http://data.gov.tw/node/5969"></a>http://data.gov.tw/node/5969</li>
-<li>匯入各地區警察單位資料 <a href="http://data.gov.tw/node/5958"></a>http://data.gov.tw/node/5958</li>
-<li>比較上述消防及警察單位與<a href='http://data.gov.tw/node/gov/resource/2853'/>為民服務通訊錄</a>之差異。</li></ul>
+<body><h1>簡易疏散避難指南</h1><p></p><p><b>最新</b></p><p>初版已經完成囉～</p><p>填寫網頁： <a href="https://evacuation-web.herokuapp.com/"></a>http<a href='http://evacuation-web.herokuapp.com/'/>s</a>://evacuation-web.herokuapp.com/</p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_ml1Hdx1ZUeb_p.621706_1463408682792_螢幕快照 2016-05-16 下午10.24.24.png'/></p><p></p><p><b>JSON Data</b></p><ul><li><a href='https://evacuation-web.herokuapp.com/data/villageList.json'/>村里列表</a></li>
+<li><a href='https://evacuation-web.herokuapp.com/data/villageHeadList.json'/>村里長列表&nbsp;</a></li>
+<li><a href='https://evacuation-web.herokuapp.com/data/villagePopulation.json'/>村里人口列表</a></li></ul>
+
+<p><b>TODO</b></p><ul><li>匯入<a href='http://data.moi.gov.tw/MoiOD/Data/DataDetail.aspx?oid=F4478CE5-7A72-4B14-B91A-F4701758328F'/>人口資料</a>&nbsp; [已將CSV轉JSON]</li>
+<li>匯入<a href='https:// http://data.gov.tw/node/12849'/>避難收容所開設情形開放資料</a></li>
+<li>匯入<a href='http://data.gov.tw/node/7061'/>村里長資料</a>&nbsp; [已完成]</li>
+<li>匯入<a href='http://data.gov.tw/node/5969'/>各地區消防單位及災害應變中心資料</a></li>
+<li>匯入<a href='https:// http://data.gov.tw/node/5958'/>各地區警察單位資料</a></li>
+<li>比較上述消防及警察單位與<a href='http://data.gov.tw/node/gov/resource/2853'/>為民服務通訊錄</a>之差異。</li>
+<li><s>匯入已有之<a href='http://data.moi.gov.tw/MoiOD/Data/DataDetail.aspx?oid=11006F2F-12AB-443C-8B2C-BB44B1A17EC3'/>KML</a>&nbsp; </s>沒有包含開設情形，不採用</li></ul>
 
 <p></p><p><b>API List</b></p><p>目前已經藉由clkao的townlist資料，完成部分API：</p><ol><li>Get all data: <a href="https://evacuation.herokuapp.com/sanctuaryList"></a>https://evacuation.herokuapp.com/sanctuaryList [GET Method]</li>
 <li>Get county list: <a href="https://evacuation.herokuapp.com/counties"></a><a href='https://evacuation.herokuapp.com/counties'/>https://evacuation.herokuapp.com/counties</a> [GET Method]</li>
