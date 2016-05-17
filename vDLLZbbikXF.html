@@ -3,10 +3,10 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="4007"/>
+<meta name="version" content="4100"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$vDLLZbbikXF</title>
 </head>
-<body><h1>一鍵 Excel 轉 .csv (含自動修復) (Ver20160305)</h1><p></p><h2>專案簡介</h2><p><b>最新版本下載 (Latest released version)</b></p><ul><li>Excel_to_csv C-Gamma(2016.03.05 g0v結束後)&nbsp;<ul><li><a href='https://drive.google.com/file/d/0B0l5ONZZiOChU3VGQmhLY0Zwd00/view?usp=sharing'/>Google drive連結</a></li></ul>
+<body><h1>一鍵 Excel 轉 .csv (含自動修復) (Ver20160305)</h1><p></p><h2>專案簡介</h2><p><b>最新版本下載 (Latest released version)</b></p><ul><li>Excel_to_csv Delta(2016.05.17)&nbsp;<ul><li><a href='https://drive.google.com/file/d/0B0l5ONZZiOChVThGRG53NktvVWM/view?usp=sharing'/>Google drive連結</a></li></ul>
 </li>
 <li><a href='https://drive.google.com/file/d/0B0l5ONZZiOChZUJsZjF2blNHVlk/view?usp=sharing'/>安裝說明書(Google drive)</a> (目前僅針對windows OS,&nbsp; MS office 2010+)<ul><li>mac OS、其他office 目前還沒摸透，<b><u>跪求白老鼠測試</u></b></li></ul>
 </li>
@@ -87,8 +87,11 @@
 <li><br/></li></ul>
 <p>路過補充地方政府情形：</p><p>根據2015年收資料的經驗，若散發office2010格式檔案給各縣市政府(的下屬局處單位)，大約有1/10的回收資料會用office 97-2003的格式回來。</p><ul class="comment"><li>感謝回饋。目前測試結果，似乎檔案本身版本不是很重要，但執行的office版本影響很大。會再持續實驗。</li></ul>
 
-<p><b>專案目前狀態</b></p><ol><li>VBA巨集C-Gamma版完成，為2016.03.05 g0v黑客松後釋出版本。</li><ul><li>【不重要資訊：之所以Gamma前有個C字，是為了排序】</li>
-<li>周末會把UPDATE LOG寫好更新於此</li></ul>
+<p><b>專案目前狀態</b></p><ol><li>Delta版本完成，釋出日期為2016.05.17。 <a href='https://drive.google.com/file/d/0B0l5ONZZiOChVThGRG53NktvVWM/view?usp=sharing'/>Google drive連結</a></li><ul><li>執行前自動備份</li>
+<li>修正部份bug</li>
+<li>註解增加</li></ul>
+</ol>
+<ol><li>VBA巨集C-Gamma版完成，為2016.03.05 g0v黑客松後釋出版本<a href='https://drive.google.com/file/d/0B0l5ONZZiOChU3VGQmhLY0Zwd00/view?usp=sharing'/>Google drive連結</a></li><ul><li>【不重要資訊：之所以Gamma前有個C字，是為了排序】</li></ul>
 </ol>
 <ol><li>VBA巨集beta版(<a href='https://www.dropbox.com/s/nq8shzk6bu10649/Excel_to_csv_Beta_20160305.xlsm?dl=0'/>dropbox連結</a>)完成，暫定工作環境為office2010。 (2016.03.01)</li><ul><li>新增<a href='https://drive.google.com/file/d/0B0l5ONZZiOChMzV1MEdvcENLXzQ/view?usp=sharing'/>google雲端硬碟下載連結</a>。</li>
 <li>請下載後使用，點選第一頁的Run。若要再次測試，請關閉檔案重新開啟。</li>
@@ -141,9 +144,9 @@
 <p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_vDLLZbbikXF_p.534607_1451229138223_undefined'/></p><ul><li>目前效果(使用<b>後</b> in wordpad)</li></ul>
 <p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_vDLLZbbikXF_p.534607_1451229264796_undefined'/></p><p></p><p><b>利益揭露</b></p><p>應該是沒有吧</p><p></p><p></p><h2>使用者回饋</h2><ul class="comment"><li>這陣子找同事幫測結果↓↓</li></ul>
 
-<p><b>整體建議</b></p><ul class="task"><li>如果沒有全部轉成功，會需要看原本轉之前的資料，但使用VBA轉完不能按復原</li></ul>
+<p><b>整體建議</b></p><ul class="taskdone"><li>如果沒有全部轉成功，會需要看原本轉之前的資料，但使用VBA轉完不能按復原</li></ul>
 <ul class="comment"><li>這好像是vba天生的限制，目前想法是在進行轉換之前先另存新檔備份。</li></ul>
-<ul class="task"><li>轉存的csv必須是UTF8 (Q__Q 目前都被要求必須是UTF8編碼)</li></ul>
+<ul class="taskdone"><li>轉存的csv必須是UTF8 (Q__Q 目前都被要求必須是UTF8編碼)</li></ul>
 <ul class="comment"><li>我看code目前有自動設定成UTF8，如果有發生編碼錯誤，請再和我說。</li></ul>
 <ul class="task"><li>由於會有一些狀況是無法以這個VBA處理的(下面案例會寫)，但是執行VBA後它就會直接轉csv；但通常的流程是：1使用VBA處理合併儲存格 → 2繼續在excel中清資料 → 3才需要存csv，目前會在第1步就先轉成csv，所以第3步的時候儲存時有時會記得存csv但反而忘記把原本excel存起來。又或是，如果是多個工作表，按下VBA之後就會自動存成很多csv檔，或再做修改、再儲存時就會有點怕會出問題，最後就會覺得再按一次VBA好了。</li></ul>
 
