@@ -3,14 +3,15 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2345"/>
+<meta name="version" content="2377"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$ml1Hdx1ZUeb</title>
 </head>
 <body><h1>災害預防資訊平台</h1><p></p><p><b>WHY?</b></p><p>&nbsp;&nbsp;&nbsp; Summit 2016第一天才知道KNY介紹的<a href='http://kny.cc/post/140009881874/kny-app-taiwan-weather-eew-earthquake-early-warning'/>強震即時警報APP</a>。同時，KNY也提到了消防署其實早就有製作好各縣市各鄉里的疏散避難地圖的<a href='http://www.nfa.gov.tw/main/ftplist.aspx'/>疏散指南</a>。 如果能夠將疏散避難地圖做成一個傳送地理資訊並回傳即時的疏散方向及路線，就可以結合其它的警報APP，盡可能的降低傷亡。&nbsp;</p><p>&nbsp;&nbsp;&nbsp; 目前先著重在資訊整合。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p><b>Respositories</b></p><ul><li><a href='https://github.com/jsgao0/Evacuation'/>WEB</a></li>
 <li><a href='https://github.com/jsgao0/EvacuationRESTful'/>RESTful</a></li></ul>
 
 <p><b>TODO [Website] </b><a href="https://evacuation-web.herokuapp.com/"></a><b>https://evacuation-web.herokuapp.com/</b></p><ul class="taskdone"><li>收容所位置改以地圖區域性呈現</li></ul>
-<ul class="task"><li>顯示不合格(收容所容納人數低於該里總人口數)的村里。</li></ul>
+<ul class="task"><li>找出所有收容所marker的中心點</li>
+<li>顯示不合格(收容所容納人數低於該里總人口數)的村里。</li></ul>
 
 <p><b>TODO [API]&nbsp; </b><a href="https://evacuation-restful.herokuapp.com/"></a><b>https://evacuation-restful.herokuapp.com/</b></p><ul class="taskdone"><li>縣市列表 [GET /counties]</li>
 <li>鄉鎮列表 [GET /:county_id/towns]</li>
@@ -32,8 +33,9 @@
 
 <p><b>TODO [資料匯入]</b></p><ul class="taskdone"><li>匯入村里列表 [7855]</li>
 <li>匯入<a href='http://data.moi.gov.tw/MoiOD/Data/DataDetail.aspx?oid=F4478CE5-7A72-4B14-B91A-F4701758328F'/>人口資料</a>&nbsp; [7074]</li>
-<li>匯入<a href='http://data.gov.tw/node/12849'/>避難收容所開設情形開放資料</a> [已補齊]</li>
-<li>匯入<a href='http://data.gov.tw/node/7061'/>村里長資料</a>&nbsp; [7243]</li></ul>
+<li>匯入<a href='http://data.gov.tw/node/12849'/>避難收容所開設情形開放資料</a> [已補齊] [資料更新為上次災害，開放情形非現況]</li></ul>
+<ul class="task"><li>匯入<a href='http://data.gov.tw/node/6943'/>災民收容所資料</a></li></ul>
+<ul class="taskdone"><li>匯入<a href='http://data.gov.tw/node/7061'/>村里長資料</a>&nbsp; [7243]</li></ul>
 <ul class="task"><li>匯入<a href='http://data.gov.tw/node/5969'/>各地區消防單位及災害應變中心資料</a> TBC: 消防分隊管轄、區域災害應變中心確認</li>
 <li>匯入<a href='https:// http://data.gov.tw/node/5958'/>各地區警察單位資料</a> TBC: 警察單位管轄範圍確認</li></ul>
 
