@@ -3,8 +3,41 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="152"/>
+<meta name="version" content="528"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$NHqIMXvEcPh</title>
 </head>
-<body><h1>第三次視覺化分享會 (5/29) - 筆記</h1><h2>The Structure of the Information Visualization Design Space, by Stuart K. Card</h2><p>講者: Summit</p><p>原文: <a href="http://www.cs.ubc.ca/~tmm/courses/old533/readings/card96structure.pdf"></a>http://www.cs.ubc.ca/~tmm/courses/old533/readings/card96structure.pdf</p><p></p><p></p><h2>D3: Data-Driven Documents, by Mike Bostock</h2><p>講者: Muyueh</p><p>原文: <a href="http://vis.stanford.edu/files/2011-D3-InfoVis.pdf"></a>http://vis.stanford.edu/files/2011-D3-InfoVis.pdf</p><p></p><p></p><h2>The Magical Number Seven, Plus or Minus Two: Some Limits on our Capacity / George A. Miller</h2><p>講者: Kimi</p><p>原文: <a href="http://www.psych.utoronto.ca/users/peterson/psy430s2001/Miller%20GA%20Magical%20Seven%20Psych%20Review%201955.pdf"></a>http://www.psych.utoronto.ca/users/peterson/psy430s2001/Miller%20GA%20Magical%20Seven%20Psych%20Review%201955.pdf</p><p></p><p></p><h2>Useful Junk? The Effects of Visual Embellishment on Comprehension and Memorability of Charts / Scott Bateman</h2><p>講者: Kirby</p><p>原文: <a href="http://hci.usask.ca/uploads/173-pap0297-bateman.pdf"></a>http://hci.usask.ca/uploads/173-pap0297-bateman.pdf</p><p></p></body>
+<body><h1>第三次視覺化分享會 (5/29) - 筆記</h1><p><a href='/MyKS5lDFtNu'/>分享會專用 hackpad</a></p><p><a href='https://www.facebook.com/groups/datavis.tw/'/>視覺化學院</a></p><p></p><h2>The Magical Number Seven, Plus or Minus Two: Some Limits on our Capacity / George A. Miller</h2><p>講者: Kimi</p><p>原文: <a href="http://www.psych.utoronto.ca/users/peterson/psy430s2001/Miller%20GA%20Magical%20Seven%20Psych%20Review%201955.pdf"></a><a href='http://www.psych.utoronto.ca/users/peterson/psy430s2001/Miller%20GA%20Magical%20Seven%20Psych%20Review%201955.pdf'/>http://www.psych.utoronto.ca/users/peterson/psy430s2001/Miller%20GA%20Magical%20Seven%20Psych%20Review%201955.pdf</a></p><p>哈佛教授 G.A. MILLER</p><p>信息測量 - 1bit ( 是或否 )</p><p>音符超過七個的時候不容易記，但只有兩三個就相對簡單了 ( 播放 mary has a little lamb 中 )</p><p>圖中的點數不多時，很容易重製，也會去算多少個</p><p>太多時：</p><ul><li>就會從絕對判斷轉向估計判斷了, 也不容易再被重製出來</li>
+<li>若再加上面積與密度，會更容易判讀</li></ul>
+<p>重新編碼</p><ul><li>雖然波可能代表了 2 bit 式的資料，但我們比較會直接注意波形 ( ? )</li>
+<li>一堆 10 很難記, 但重新編碼就會比較好記<ul><li>e.g., 1000100011011001(超過7個) -&gt; 20203121(超過7個) -&gt; 88d9 (好記)</li></ul>
+</li>
+<li>回憶是「建構」記憶而非提取</li></ul>
+
+<p></p><p></p><p></p><p></p><h2>D3: Data-Driven Documents, by Mike Bostock</h2><p>講者: Muyueh</p><p>原文: <a href="http://vis.stanford.edu/files/2011-D3-InfoVis.pdf"></a>http://vis.stanford.edu/files/2011-D3-InfoVis.pdf</p><p></p><p></p><p>Data Driven Document</p><p><i>or what makes d3.js great</i></p><p></p><p></p><p>Level of abstraction</p><ul><li>encapsulation</li>
+<li>intermediate representations</li></ul>
+
+<ul class="code"><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sprite.graphics.drawCircle(0, 0, 10);</li></ul>
+
+<p>vs.&nbsp;</p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_mDw7OxA4Xab_p.35334_1464409914682_undefined'/></p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_mDw7OxA4Xab_p.35334_1464410119150_undefined'/></p><p></p><p><b>trade-off</b></p><ol><li><b>Efficiency</b>: human effort required to specify a vis</li>
+<li><b>Expressiveness</b>: diversity of visualizations</li></ol>
+<ul class="comment"><li>c3.js, NVD3.js and other are limited in expressiveness</li></ul>
+<ol><li><b>Accessibility</b>: difficulty of learning the representation (due to internal structure)</li></ol>
+
+<p></p><p><b>key goals for d3.js</b></p><ol><li><b>Compatibility</b>: works with other system (CSS), evolves with standard, native expressiveness</li>
+<li><b>Debugging</b>: vs. encapsulation of control&nbsp;</li>
+<li><b>Performance</b>: avoid redundant computation by letting dev. controls transition&nbsp;</li></ol>
+
+<p><b>What is d3.js</b></p><ol><li>Data Driven DOM manipulation (Like jQuery)</li>
+<li>add/remove elements&nbsp;</li>
+<li>high-level helper ( helper function (format, d3.csv), and hopefully stats model as in R)</li></ol>
+
+<p></p><p><b>Difference between d3.js and Protovis</b></p><ol><li><b>implicit or explicit transformation</b>&nbsp;</li></ol>
+<ul style="list-style: none;"><li>(Protovis specify scene changes, have to re-evaluate all properties vs. d3.js specify changes)</li></ul>
+<ol><li><b>deferred or immediate evaluation</b>&nbsp;</li></ol>
+<ul style="list-style: none;"><li>(Prototis users need to understand internal control flow)</li></ul>
+<ol><li><b>access to a native representation</b>&nbsp;</li></ol>
+<ul style="list-style: none;"><li>(Protovis Line, Wedge all prototypal inheritance vs. d3 circle cx and rect x)</li>
+<li>-&gt; selection can be retrieved at any time vis console</li></ul>
+
+<p></p><p></p><p></p><p></p><h2>Useful Junk? The Effects of Visual Embellishment on Comprehension and Memorability of Charts / Scott Bateman</h2><p>講者: Kirby</p><p>原文: <a href="http://hci.usask.ca/uploads/173-pap0297-bateman.pdf"></a>http://hci.usask.ca/uploads/173-pap0297-bateman.pdf</p><p></p><h2>The Structure of the Information Visualization Design Space, by Stuart K. Card</h2><p>講者: Summit</p><p>原文: <a href="http://www.cs.ubc.ca/~tmm/courses/old533/readings/card96structure.pdf"></a><a href='http://www.cs.ubc.ca/~tmm/courses/old533/readings/card96structure.pdf'/>http://www.cs.ubc.ca/~tmm/courses/old533/readings/card96structure.pdf</a></p><p></p><p></p></body>
 </html>
