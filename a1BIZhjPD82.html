@@ -3,15 +3,15 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="5341"/>
+<meta name="version" content="5430"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$a1BIZhjPD82</title>
 </head>
 <body><h1>公共園圃地圖資料庫</h1><p>1.社區園圃既有案例整理</p><p>2.都市園圃資料庫建置方案討論</p><p></p><h2>資料庫建置方案討論</h2><p><b>基本設定</b></p><p>1.盡可能涵蓋台灣各個縣市的都市園圃經驗</p><p>2.透過群眾協作的方式，累積資料</p><p>3.明確的資料授權，例如&nbsp;</p><ul><li>CC0 1.0 通用 (CC0 1.0) <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.zh_TW"></a>https://creativecommons.org/publicdomain/zero/1.0/deed.zh_TW</li>
 <li>姓名標示 4.0 國際 (CC BY 4.0) <a href="https://creativecommons.org/licenses/by/4.0/deed.zh_TW"></a>https://creativecommons.org/licenses/by/4.0/deed.zh_TW</li>
 <li>持續蒐集授權無虞的案例圖片：<a href="http://goo.gl/TC8sTl"></a><a href='http://goo.gl/TC8sTl'/>http://goo.gl/TC8sTl</a></li></ul>
-<p>4.容易維護管理資料與內容的系統方案</p><p>5.方便展示</p><ul><li>同時考量地圖化，例如需要有地理資料欄位才能標示</li></ul>
+<p>4.應該選擇容易維護管理資料與內容的方案</p><p>5.方便展示</p><ul><li>除了資料累積之外，同時考量地圖化，例如需要有地理資料欄位才能標示</li></ul>
 <p>6.文字欄位，圖片，地理資料（要多細緻？例如園圃內的分區細節）</p><p>7.可以匯出為 geojson 方便其他應用</p><p>8.將內容匯出至 OSMdatabase，需進一步釐清相對應的 tag，以及基本授權</p><p>9.是否整合 OSMdatabase 既有關於社區園圃的圖資？（<a href='http://supaplex99.blogspot.tw/2015/08/using-overpass-turbo-to-extract-data-and-umap-with-dynamic-data-link-visualization.html?m=1'/>方法</a>）</p><p>10.官方資料匯入問題，例如公部門推動的園圃資料，市民農園資料等，部分資料集有資料授權規範</p><ul><li>納入政府開放資料，例如新北市市民農園資料，該資料欄位能否被涵蓋？</li></ul>
-<p>11.每年都會有新的園圃出現，以及消失</p><p>12.</p><p></p><p><b>各種方案探討與試做</b></p><ul><li>google excel，例 <a href="https://goo.gl/4J6OD6"></a><a href='https://goo.gl/4J6OD6'/>https://goo.gl/4J6OD6</a><ul><li>經緯度需要另外轉換，無法支援輪廓資料</li>
+<p>11.每年都會有新的園圃出現，以及消失</p><p></p><p><b>各種方案探討與試做</b></p><ul><li>google excel，例 <a href="https://goo.gl/4J6OD6"></a><a href='https://goo.gl/4J6OD6'/>https://goo.gl/4J6OD6</a><ul><li>經緯度需要另外轉換，無法支援輪廓資料</li>
 <li>圖片需要另外放，再把連結貼近文件中</li>
 <li>實際寫起來，因為都是在表格內填欄位內容，有點苦海無邊</li></ul>
 </li>
@@ -35,7 +35,7 @@
 <li>使用者有時候會不小心拖曳到點位資料、更動到位置而不自知</li>
 <li>一般民眾習慣的地圖</li></ul>
 </li>
-<li>Localwiki，例 <a href="https://localwiki.org/taipeicommunity/"></a><a href='https://localwiki.org/taipeicommunity/'/>https://localwiki.org/taipeicommunity/</a><ul><li>Localwiki 匯出與匯入需要 coding，參考 <a href='/YghsHsKGadh'/>localwiki export import</a></li>
+<li>Localwiki，例 <a href="https://localwiki.org/taipeicommunity/"></a><a href='https://localwiki.org/taipeicommunity/'/>https://localwiki.org/taipeicommunity/</a><ul><li>Localwiki 匯出與匯入需要 coding，參考 <a href='/YghsHsKGadh'/>localwiki export import</a>，這部分的開發時間未定</li>
 <li>無法直接用「欄位」來組織內容</li>
 <li>可考慮一個園圃，設立一個頁面，圖文，以及該園圃的地理資料</li>
 <li>可以允許已消失的園圃成立圖文介紹頁面</li></ul>
@@ -80,6 +80,11 @@
 <li><a href="http://livinglotsnyc.org/lot/3032450039/"></a><a href='http://livinglotsnyc.org/lot/3032450039/'/>http://livinglotsnyc.org/lot/3032450039/</a><ul><li>每一個園圃都有專屬的頁面，可供園圃推動者與民眾，留言討論</li></ul>
 </ul>
 </ul>
+
+<p><b>應用方向</b></p><ul><li>走訪</li>
+<li>成為探討城市生態議題過程中的一種環境圖資，如同公園、綠地</li>
+<li>輔助園圃規劃或設施需求的探討，例如與台北市已有的雨水回收中水回收地點整合探討</li>
+<li>一些園圃的基本計算，例如耕種面積+農法，或許可以初步推論出保守基本的產量</li></ul>
 
 <p></p><h2>台灣都市園圃案例與內容蒐集</h2><ul><li>「一群人運用生活中的公共空間，共同耕種與維護農作物，就是社區園圃。」</li>
 <li>持續往資料庫的方向來整理相關內容</li>
