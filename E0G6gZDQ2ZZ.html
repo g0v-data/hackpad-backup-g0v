@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="888"/>
+<meta name="version" content="917"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$E0G6gZDQ2ZZ</title>
 </head>
 <body><h1>公務出國報告查詢統計網</h1><p></p><h2>簡介</h2><p>政府的公務出國考察經常被認為是在消化預算[注1]或是出國旅遊[注2]，在資源分配上也備受質疑[注3]。本計畫希望能夠整合各考察資訊網的資料，使出國考察的狀況能以更直觀方式呈現，也提供更方便的管道查詢報告。</p><p></p><p>[注1]：到2015年底為止的統計，10~12月的考察次數即佔了超過33%，而1~3月僅佔11%多。</p><p>[注2]：如各種&quot;優秀人員出國觀摩&quot;。</p><p>[注3]：地方政府的出國考察，第一名台北市的次數及超過第二至五名的加總(高雄、台中、新北、屏東)。</p><p></p><h2>目的</h2><ul class="task"><li>統合原本分散於中央以及各縣市考察資訊網的資料</li></ul>
@@ -45,6 +45,8 @@
 <p><b>後端</b></p><ul><li>採用php+mysql</li>
 <li>使用curl抓取資料</li>
 <li>用PDO連接資料庫</li></ul>
+<ul class="comment"><li>也許可以在匯入資料庫同時產出一份 json 格式放進 github 公開？方便大家混搭使用 ;)</li>
+<li>可以參考 <a href="https://github.com/g0v/foundationtw/blob/master/bin/cron.php"></a>https://github.com/g0v/foundationtw/blob/master/bin/cron.php 作法</li></ul>
 
 <h2>徵求協作者</h2><p>fb社團：<a href="https://www.facebook.com/groups/1125748634116081/"></a>https://www.facebook.com/groups/1125748634116081/</p><ul><li>介面設計師</li>
 <li>前端工程師</li>
