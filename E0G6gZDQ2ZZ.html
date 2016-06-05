@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="917"/>
+<meta name="version" content="1022"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$E0G6gZDQ2ZZ</title>
 </head>
 <body><h1>公務出國報告查詢統計網</h1><p></p><h2>簡介</h2><p>政府的公務出國考察經常被認為是在消化預算[注1]或是出國旅遊[注2]，在資源分配上也備受質疑[注3]。本計畫希望能夠整合各考察資訊網的資料，使出國考察的狀況能以更直觀方式呈現，也提供更方便的管道查詢報告。</p><p></p><p>[注1]：到2015年底為止的統計，10~12月的考察次數即佔了超過33%，而1~3月僅佔11%多。</p><p>[注2]：如各種&quot;優秀人員出國觀摩&quot;。</p><p>[注3]：地方政府的出國考察，第一名台北市的次數及超過第二至五名的加總(高雄、台中、新北、屏東)。</p><p></p><h2>目的</h2><ul class="task"><li>統合原本分散於中央以及各縣市考察資訊網的資料</li></ul>
@@ -22,7 +22,23 @@
 <li>所以另外挖坑</li>
 <li>加油，我也希望..</li></ul>
 
-<h2>專案目前狀況</h2><p>網址：<a href="http://catding.twbbs.org/report/index.php"></a>http://catding.twbbs.org/report/index.php</p><p></p><p><b>已完成目標</b></p><ul><li>定時抓取各資訊網的考察資料(更新速度：2日/次)</li>
+<h2>專案目前狀況</h2><p>網址：<a href="http://catding.twbbs.org/report/index.php"></a>http://catding.twbbs.org/report/index.php</p><p></p><p><b>正在進行</b></p><p></p><undefined><li><b>標案比對</b></li></undefined>
+<p>目的：比對標案名稱與出國計畫名稱，獲取公務出國的標案金額</p><p></p><p>目前進度</p><ul><li>相關標案資料抓取完畢</li>
+<li>用斷詞系統輔助，進行(粗劣的)比對</li></ul>
+
+<p>遇到的困難</p><ul><li>有很多的公務出國計畫名稱和標案名稱相差太多，能比對出來的目前不到1成......</li></ul>
+
+<undefined><li><b>抄襲比對</b></li></undefined>
+<p>目的：比對出考察報告中的抄襲部分(目前以抄襲維基百科的部分為目標)</p><p></p><p>預計比對步驟</p><ol><li>找出報告中地區類的詞</li>
+<li>檢查資料庫內有無該條目內文，已有則直接跳到第4步驟</li>
+<li>抓取維基百科的該條目內文，並放進資料庫</li>
+<li>進行比對</li></ol>
+
+<p>目前進度</p><ul><li>.pdf、.doc、.docs、.odt檔的內文提取準備完成</li></ul>
+
+<p>遇到的困難</p><ul><li>不容易找出相關的條目，因為目前使用的斷詞系統在遇到國外地名時常會分錯</li></ul>
+
+<p><b>已完成目標</b></p><ul><li>定時抓取各資訊網的考察資料(更新速度：2日/次)</li>
 <li>查詢、統計(總統計與各年、單位、主題......統計)、圖表生成、報告資料頁面製作完畢</li>
 <li>前後端分離(大部分)</li></ul>
 
@@ -46,7 +62,8 @@
 <li>使用curl抓取資料</li>
 <li>用PDO連接資料庫</li></ul>
 <ul class="comment"><li>也許可以在匯入資料庫同時產出一份 json 格式放進 github 公開？方便大家混搭使用 ;)</li>
-<li>可以參考 <a href="https://github.com/g0v/foundationtw/blob/master/bin/cron.php"></a>https://github.com/g0v/foundationtw/blob/master/bin/cron.php 作法</li></ul>
+<li>可以參考 <a href="https://github.com/g0v/foundationtw/blob/master/bin/cron.php"></a>https://github.com/g0v/foundationtw/blob/master/bin/cron.php 作法</li>
+<li>感謝建議，目前是打算寫api讓其他使用者拉，預計7月正式推出</li></ul>
 
 <h2>徵求協作者</h2><p>fb社團：<a href="https://www.facebook.com/groups/1125748634116081/"></a>https://www.facebook.com/groups/1125748634116081/</p><ul><li>介面設計師</li>
 <li>前端工程師</li>
