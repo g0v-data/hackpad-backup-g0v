@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="3007"/>
+<meta name="version" content="3329"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$%25E7%25AC%25AC%25E5%25A3%25B9%25E6%25AC%25A1%25E5%259F%25BA%25E7%25A4%258E%25E6%259D%25BE</title>
 </head>
 <body><h1>第壹次基礎建設松 - 2016/6/12</h1><p></p><p><b>第壹次基礎松 KKTIX 報名: </b><a href="http://g0v-jothon.kktix.cc/events/infrath1n"></a>http://g0v-jothon.kktix.cc/events/infrath1n</p><p></p><p><b>什麼是基礎建設松？</b></p><p>g0v 社群由「人、坑、松」組成，如何讓參與者容易串連協作，需要更多好用的工具與平台。兩年前曾經召開過第零次基礎建設松，時光悠悠過去，社群還是人很多，專案也越來越多，揪松團決定來重啟社群基礎建設，揪碼農筆農一起長期耕耘。</p><p></p><ul><li>2014/05/13 第零次基礎松：<a href="https://g0v.hackpad.com/uYTuvXo3atq"></a><a href='https://g0v.hackpad.com/uYTuvXo3atq'/>https://g0v.hackpad.com/uYTuvXo3atq</a></li></ul>
@@ -72,30 +72,45 @@
 <li>瀏覽器外掛，到 gov.tw 網站可以說：這個有爬蟲或資料</li></ul>
 </ul>
 </ol>
-<ol><li><b>大松等實體工作的優化</b></li><ul><li>一鍵開大松 (<a href="https://www.amazon.com/uxcell-Switch-Mushroom-Button-Station/dp/B008ZY9CXE)"></a>https://www.amazon.com/uxcell-Switch-Mushroom-Button-Station/dp/B008ZY9CXE)<ul><li>填表單後自動開 KKTIX, hackpad, hackfoldr, google sheet ... etc</li></ul>
+<ol><li><b>大松等實體工作的優化</b></li><ul><li>一鍵開大松 (<a href="https://www.amazon.com/uxcell-Switch-Mushroom-Button-Station/dp/B008ZY9CXE)"></a>https://www.amazon.com/uxcell-Switch-Mushroom-Button-Station/dp/B008ZY9CXE)</li>
+<li><a href="https://github.com/g0v/OneButton"></a>https://github.com/g0v/OneButton</li>
+<li>想法：先開一個 hackpad，裡面照資料填。填好之後執行某個指令，就 boom 做完了。<ul><li>填表單後自動開 KKTIX, hackpad, hackfoldr, google sheet ... etc</li></ul>
 </ul>
 </ol>
 
-<ul class="task"><li>填日期</li>
+<ul class="taskdone"><li>填日期</li>
 <li>填大松命名</li>
 <li>填第幾次數字</li>
 <li>填短文案</li></ul>
 
-<ul class="task"><li><b>自動開 KKTIX 活動</b></li><ul><li>g0v hackath<b>{NUM}</b>n | 台灣零時政府第<b>{CHI_NUM}</b>次<b>{TITLE}</b>黑客松<ul><li>例如：g0v hackath19n | 台灣零時政府第拾玖次飛彈試射黑客松</li></ul>
+<ul class="task"><li><b>自動開 KKTIX 活動</b></li><ul><li>PoC 在<b> </b><a href="https://github.com/g0v/OneButton/blob/master/js/kktix.js"></a><a href='https://github.com/g0v/OneButton/blob/master/js/kktix.js'/>https://github.com/g0v/OneButton/blob/master/js/kktix.js</a></li>
+<li>Clone <b>g0v-hackath19n</b><ul><li><a href="http://g0v-jothon.kktix.cc/events/g0v-hackath19n"></a>http://g0v-jothon.kktix.cc/events/g0v-hackath19n</li></ul>
+</ul>
+</ul>
+
+<ul><li>修改：</li>
+<li>活動名稱：g0v hackath<b>{NUM}</b>n | 台灣零時政府第<b>{CHI_NUM}</b>次<b>{TITLE}</b>黑客松<ul><li>例如：g0v hackath19n | 台灣零時政府第拾玖次飛彈試射黑客松</li></ul>
 </li>
-<li>KKTIX 活動網址：g0v-hackath<b>{NUM}</b>n</li>
-<li>活動簡介 100 字：短文案</li></ul>
+<li>活動網址：g0v-hackath<b>{NUM}</b>n</li>
+<li>活動簡介 100 字：短文案</li>
+<li>活動日期</li>
+<li>報名時間：<b>活動時間 -12 天中午 12:00</b></li></ul>
+
+<ul><li>活動內容：<a href='https://gist.github.com/ttcat/187164d51c50ff58f8696bb9cf7b6d5c'/>KKTIX TEMPALE</a> html on gist<ul><li>template 要改：<ul><li>開放報名時間固定為<b>活動時間 -12 天（</b>大松前兩週的週一中午 12:00）</li>
+<li>LINE 2: 文案文案文案文案文案 <b>填入短文案</b></li>
+<li>LINE 11: 2016/6/6(Mon) 中午開放報名</li>
+<li>LINE 46-47: hackath19n&nbsp; URL 修改成這次的數字（4 處）</li></ul>
+</ul>
 </ul>
 
-<ul><li>時間固定：9:00 - 18:00</li>
-<li>活動人數固定：110</li>
-<li>活動地點固定：中央研究院資訊科學所</li>
-<li><a href='https://gist.github.com/ttcat/187164d51c50ff58f8696bb9cf7b6d5c'/>KKTIX TEMPALE</a></li>
-<li><br/><ul><li>開放報名時間固定為前兩週，週一 12:00</li>
-<li>大松日期 -12 天</li></ul>
-</ul>
+<ul><li><s>活動時間固定：9:00 - 18:00</s></li>
+<li><s>活動人數固定：110</s></li>
+<li><s>活動地點固定：中央研究院資訊科學所</s></li>
+<li><s>票種？</s></li></li>
+<li>clone 的話上面四個不用動</li></li>
+<li>需要喔，因為票種有時間設定</li></ul>
 
-<ul class="task"><li><b>自動開 hackpad 行前閱讀</b></li><ul><li>hackpad 名稱 hackath19n<ul><li>空白模板：<a href='/2ucl5ftrzot'/>hackathxn</a></li>
+<ul class="task"><li><b>自動開 hackpad 行前閱讀 </b><a href="https://github.com/lkosak/node-hackpad"></a><b>https://github.com/lkosak/node-hackpad</b></li><ul><li>hackpad 名稱 hackath19n<ul><li>空白模板：<a href='/2ucl5ftrzot'/>hackathxn</a></li>
 <li>範例 <a href='/yhTSPTHQ8H7'/>hackath19n</a></li></li></ul>
 </li>
 <li><br/></li></li>
@@ -108,14 +123,16 @@
 </ul>
 </ul>
 
-<ul class="task"><li><b>自動開 google doc 提案表</b></li><ul><li>文件儲存在 location g0v drive <a href="https://drive.google.com/drive/u/0/folders/0B00j8_vTJFGUdmJKT0NsS2lHbHc"></a><a href='https://drive.google.com/drive/u/0/folders/0B00j8_vTJFGUdmJKT0NsS2lHbHc'/>https://drive.google.com/drive/u/0/folders/0B00j8_vTJFGUdmJKT0NsS2lHbHc</a></li>
+<ul class="task"><li><b>自動開 google doc 提案表</b></li><ul><li><a href="https://developers.google.com/sheets/reference/rest/"></a>https://developers.google.com/sheets/reference/rest/</li>
+<li>文件儲存在 location g0v drive <a href="https://drive.google.com/drive/u/0/folders/0B00j8_vTJFGUdmJKT0NsS2lHbHc"></a><a href='https://drive.google.com/drive/u/0/folders/0B00j8_vTJFGUdmJKT0NsS2lHbHc'/>https://drive.google.com/drive/u/0/folders/0B00j8_vTJFGUdmJKT0NsS2lHbHc</a></li>
 <li>標題修改 hackath19n |&nbsp; g0v 第拾玖次飛彈試射黑客松 專案列表<ul><li>貼上此範例：<a href="https://docs.google.com/spreadsheets/d/12P8HzwMW41wXTFApmjeqw5SUg_smjJrzfi3JWQQk6Cc/edit#gid=1"></a>https://docs.google.com/spreadsheets/d/12<a href='https://docs.google.com/spreadsheets/d/12Nf9uG1AADxTvqxZl4c0F4j7octsi_9WgfsLYbv1AQY/edit#gid=1'/>P8HzwMW41wXTFApmjeqw5SUg_smjJrzfi3JWQQk6Cc</a>/edit#gid=1</li>
 <li>修改所有日期 2016/6/18<ul><li>ROW 3</li>
 <li>ROW 23</li>
 <li>ROW 36</li></ul>
+</ul>
 </li></ul>
 </li>
-<li><b>要把 google doc 的長網址丟到 bit.ly 變成短網址</b><ul><li>命名：bit.ly/<b>g0v-hackath19n</b></li></ul>
+<li>改 spreadsheet 的值好困難喔<ul class="task"><li><b>要把 google doc 的長網址丟到 bit.ly 變成短網址</b></li><ul><li>命名：bit.ly/<b>g0v-hackath19n</b></li></ul>
 </ul>
 </ul>
 
