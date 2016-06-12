@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="1244"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$9U6DLtdZc48</title>
+</head>
+<body><h1>projecthub redux</h1><p></p><h2>metadata</h2><ul><li>列表 - <a href="https://github.com/g0v/awesome-g0v"></a><a href='https://github.com/g0v/awesome-g0v'/>https://github.com/g0v/awesome-g0v</a><ul><li>整理舊的列表進入 awesome</li>
+<li>primary key: &quot;:owner/:repo&quot;</li>
+<li>rules:<ul><li>H1: 四大類</li>
+<li>H2: 人工分類</li>
+<li>H3: nested project, 取締一個 li 當 primary, 其他的 part of primary</li></ul>
+</li>
+<li><a href="https://github.com/g0v/awesome-g0v/blob/master/registry.json"></a><a href='https://github.com/g0v/awesome-g0v/blob/master/registry.json'/>https://github.com/g0v/awesome-g0v/blob/master/registry.json</a></li></ul>
+</ul>
+
+<ul><li>列表 + g0v.json or civic.json -&gt; api endpoint (先用一堆 json 檔)<ul><li>additional metadata<ul><li>從 awesome g0v 的結構加註新的 metadata</li>
+<li>gh-pages 下的 CNAME</li></ul>
+</li>
+<li>github.com/g0v/foo (g0v.json) -&gt; (filesystem) g0v/foo.json</li></ul>
+<ul class="task"><li>(先放到 <b>g0v-data/regsitry</b>)</li></ul>
+</ul>
+
+<ul><li>defined required fields</li></ul>
+<ul class="code"><li>name - a string specifying the project&rsquo;s name.</li>
+<li>name_zh -&nbsp;</li>
+<li>status - a string indicating the status of the project. The value MUST be one of:</li>
+<li>&quot;Ideation&quot; - brainstorming phase.</li>
+<li>&quot;Alpha&quot; - initial prototyping phase and internal testing.</li>
+<li>&quot;Beta&quot; - a product is being tested in public.</li>
+<li>&quot;Production&quot; - finished Product, with development and maintenance ongoing.</li>
+<li>&quot;Archival&quot; - finished Product, but no longer actively maintained.</li>
+<li>tags - an array of tag strings to help people search for your project, which SHOULD have at least one item.</li>
+<li>license</li></ul>
+
+<p>pilot:</p><ul><li>env.g0v.tw</li>
+<li>budget.g0v.tw</li>
+<li>公司關係圖 ( no g0v.json )</li>
+<li>立委投票指南</li>
+<li>急診 ( no g0v.json )</li>
+<li><a href="http://g0v.tw/en-US/projects.html"></a>http://g0v.tw/en-US/projects.html</li></ul>
+
+<h2>metadata editor </h2><p></p><p>one client side single page editor, which takes:</p><ul><li>url params for pre-filled content</li>
+<li>desired target repo (optional)</li>
+<li>resulting repo and g0v.json location</li></ul>
+
+<p>shows:</p><ul><li>prefilled form for metadata (like <a href="http://open.dc.gov/civic.json/builder.html)"></a><a href='http://open.dc.gov/civic.json/builder.html'/>http://open.dc.gov/civic.json/builder.html</a>)</li>
+<li>diff from existing g0v.json</li></ul>
+
+<p>produces:</p><ul><li>final g0v.json</li>
+<li>with github account linked, produces:</li></ul>
+<ul style="list-style: none;"><li>PR for existing g0v.json or civic.json at the target repo)</li></ul>
+<ul><li>create repo if not exists</li></ul>
+
+<h2>given hackpad / google sheet search prompt + prefill in editor</h2><p></p><p>find hackpad (via <a href='https://github.com/g0v-data/hackpad-backup-g0v'/>kcwu backup</a>) with keywords:</p><p><b>專案簡介、要解決的問題</b></p><p></p><ul><li>open issue in awesome-g0v if not exists (use hackpad key)<ul><li>link at a <a href='https://github.com/g0v/awesome-g0v/issues/1'/>master awesome-g0v issue</a></li>
+<li>also tag the primary hackpad editor if possible</li>
+<li>provide a link to the editor with pre-fill (TBD)<ul><li>the PR created by editor will link back to this issue</li></ul>
+</li>
+<li>editor should have a callback to add comment to the issue with the resulting repo of this issue, add this to the awesome markdown</li></ul>
+</ul>
+
+<h2>issues aggregator</h2><p></p><p>original hackpad: <a href='/1ngNLPX3mLr'/>g0v tasks queue&nbsp;</a></p><p></p><p>repo: <a href="https://github.com/youchenlee/g0v-issue-tracker"></a>https://github.com/youchenlee/g0v-issue-tracker</p><p></p><p>for people to find tasks, filtered by:</p><ul><li>repo language</li>
+<li>required skill (from issue label)</li></ul>
+
+<p>repo issue label sync:</p><ul><li><a href="https://github.com/repo-utils/org-labels"></a><a href='https://github.com/repo-utils/org-labels'/>https://github.com/repo-utils/org-labels</a></li></ul>
+
+<ul class="task"><li>Decide new list of labels <a href='https://github.com/g0v/dev/issues/15'/>g0v/dev#15</a></li>
+<li>show aggregated issues from repo listed in awesome-g0v</li>
+<li>allow filtering by:<ul class="task"><li>language</li>
+<li>label</li></ul class="task">
+</li>
+<li>triage unlabelled</li></ul>
+
+<h2>project browser</h2><p></p><p>existing:</p><ul><li><a href="https://www.codeforamerica.org/brigade/projects"></a>https://www.codeforamerica.org/brigade/projects</li>
+<li>(待捕)</li></ul>
+
+<p><b>Default, allow search for everything</b></p><p>for participants: show everything and allow filtering ?</p><p></p><ul><li>allow showing sub-project</li>
+<li>一鍵加入列表或更新內容 Link to editor</li></ul>
+
+<p><b>Featured projects</b></p><p></p><p>for public: (show only ones with thumbnails, or projects in beta or production)</p><p></p><p>show subprojects (derived from g0v.json: with partOf: field)</p><p></p><p><b>瀏覽器外掛</b></p><ul><li>爬蟲類圖鑑 (metadata contains: parserFor:zxxx.gov.tw, serviceFor:ooo.gov.tw)<ul><li>eg: 新聞小幫手: 瀏覽勞動部時顯示：講個秘訣</li>
+<li>eg: 教育部辭典: 顯示：講個秘訣，萌典很好用</li></ul>
+</ul>
+
+<p></p><ul><li><br/></li></ul>
+<h2>g0vzilla</h2><h2>status / dashboard</h2><ul><li>beta 版需要的東西<ul><li>g0v domain</li>
+<li>ga</li>
+<li>etc...</li>
+<li><br/></li></ul>
+</ul>
+
+<h2>tools for migrating g0v.json to civic.json</h2><p></p><ul><li>review current spec: <a href='/c07sSfauWSc'/>g0v.json spec</a></li>
+<li>之前的 g0v label issue <a href='https://github.com/g0v/dev/issues/15'/>g0v/dev#15</a></li></ul>
+
+<p>spec by et: (待捕)</p><p></p><p></p></body>
+</html>
