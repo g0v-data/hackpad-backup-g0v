@@ -1,0 +1,51 @@
+<html>
+    <head>
+	<title>g0v hackpad backup</title>
+	<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+
+	<script>
+function load_pads() {
+    $.ajax({
+	url: "pads.json",
+	success: function( result ) {
+	    var tbody = $('#padtable > tbody');
+	    result.sort(function(a, b) {
+		return b.last_backup_time - a.last_backup_time;
+	    });
+	    $.each(result, function(i, pad) {
+		var title = (pad.title || '').slice(0, 200);
+		tbody.append(
+			$('<tr>').append(
+			    $('<td>').text(new Date(pad.last_backup_time * 1000).toJSON()),
+			    $('<td>').append($('<a>').text('link').attr('href', '//g0v.hackpad.com/' + pad.padid)),
+			    $('<td>').append($('<a>').text('link').attr('href', pad.padid + '.html')),
+			    $('<td>').text(pad.version),
+			    $('<td>').text(title)
+			    ));
+	    });
+	}
+    });
+}
+
+function init() {
+    load_pads();
+}
+
+$(init);
+	</script>
+    </head>
+    <body>
+	<table id=padtable border=1>
+	    <thead>
+		<th>backup time</th>
+		<th>link</th>
+		<th>backup</th>
+		<th>version</th>
+		<th>title</th>
+	    </thead>
+	    <tbody>
+
+	    </tbody>
+	</table>
+    </body>
+</html>
