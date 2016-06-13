@@ -3,10 +3,14 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="372"/>
+<meta name="version" content="416"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$AJnmSQO2kKk</title>
 </head>
-<body><h1>立法院開放資料使用問題</h1><p></p><h2>議事類</h2><ul><li><b>&nbsp;法律條文對照表</b><ul><li>是否與法律提案資料集（<a href="http://data.ly.gov.tw/getds.action?id=20"></a>http://data.ly.gov.tw/getds.action?id=20）整合，兩者有共通的billNo</li></ul>
+<body><h1>立法院開放資料使用問題</h1><p><b>&nbsp;</b>&nbsp;</p><h2>委員類</h2><ul><li>缺少唯一識別碼，無法辨認不同屆的同一委員</li>
+<li>離職立委如有遞補立委，是否加開欄位補充說明</li>
+<li>JSON 格式的下載網址中 selectTerm 應為 term，否則無法依屆期查詢，開發指南處也有誤載此欄位狀況</li></ul>
+
+<h2>議事類</h2><ul><li><b>&nbsp;法律條文對照表</b><ul><li>是否與法律提案資料集（<a href="http://data.ly.gov.tw/getds.action?id=20"></a>http://data.ly.gov.tw/getds.action?id=20）整合，兩者有共通的billNo</li></ul>
 <ul class="comment"><li>&lt;平臺回覆&gt;您好; 有關台端建議一事(是否與法律提案資料集整合)，您的建議我們將列入資料集調整之參考，謝謝您的寶貴意見。 立法院開放資料服務平臺 敬復</li>
 <li><br/></li></ul>
 <ul><li>條文對照表中的每一條分別放在不同的dictionary {...}中，是否可將同個billNo的條文整合成一個有順序的 array，例如：</li></ul>
@@ -42,9 +46,6 @@
 <li>第八屆法案在立法院議事及發言整合系統（<a href="http://lis.ly.gov.tw/lylgmeetc/lgmeetkm_lgmem"></a>http://lis.ly.gov.tw/lylgmeetc/lgmeetkm_lgmem）中有，但在開放資料平台此資料集中找不到，如下列：（<a href="https://goo.gl/KqQk8h"></a>https://goo.gl/KqQk8h）</li>
 <li><b>&nbsp;法律提案</b></li>
 <li>提案人、連署人是否應將資料型態轉成 array，目前為全形空白分隔</li></ul>
-<p><b>&nbsp;</b>&nbsp;</p><h2>委員類</h2><ul><li>缺少唯一識別碼</li>
-<li>離職立委如有遞補立委是否加開欄位補充說明</li>
-<li>沒有第八屆立委資料</li></ul>
 
-</body>
+<p></p></body>
 </html>
