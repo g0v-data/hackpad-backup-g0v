@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1984"/>
+<meta name="version" content="2016"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$9U6DLtdZc48</title>
 </head>
 <body><h1>projecthub redux</h1><p></p><h2>metadata</h2><ul><li>列表 - <a href="https://github.com/g0v/awesome-g0v"></a><a href='https://github.com/g0v/awesome-g0v'/>https://github.com/g0v/awesome-g0v</a><ul><li>整理舊的列表進入 awesome</li>
@@ -76,9 +76,13 @@
 </li>
 <li>triage unlabelled</li></ul>
 
-<p><b>Design</b></p><p></p><p>hack.g0v.tw 加一頁 issue list, 提供 label 列表，按下後在 iframe 中開出 github issue search</p><p></p><p><b>Leverage github.com advanced search</b></p><p></p><p>利用 github.com 的 <a href='https://github.com/search/advanced'/>advanced search</a>&nbsp; 找出符合條件的 issues。</p><ul class="comment"><li>這樣就不用養 backend 提供搜尋功能</li></ul>
+<p><b>Design</b></p><p></p><p>hack.g0v.tw 加一頁 issue list, 提供 label 列表，按下後在 iframe 中開出 github issue search</p><p></p><undefined><li><b>Leverage github.com advanced search</b></li></undefined>
 
-<p>Advanced search form 使用 GET method，form parameters 有：</p><p></p><table style="font-size:13px;cell-spacing: 0px; border-collapse: collapse;"><tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">name</td>
+<p>利用 github.com 的 <a href='https://github.com/search/advanced'/>advanced search</a>&nbsp; 找出符合條件的 issues。</p><ul class="comment"><li>這樣就不用養 backend 提供搜尋功能</li></ul>
+
+<p>Advanced search form 使用 GET method，form parameters 有：</p><ul class="comment"><li>這個 form 看起來對應到 github 的 search api:<a href='https://developer.github.com/v3/search/#search-issues'/> </a><a href="https://developer.github.com/v3/search/#search-issues"></a><a href='https://developer.github.com/v3/search/#search-issues'/>https://developer.github.com/v3/search/</a><a href='https://g0v.hackpad.com/ep/search/?q=%23search&amp;via=9U6DLtdZc48'/>#search</a><a href='https://developer.github.com/v3/search/#search-issues'/>-issues</a></li></ul>
+
+<table style="font-size:13px;cell-spacing: 0px; border-collapse: collapse;"><tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">name</td>
 <td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">id</td>
 <td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">data-search-prefix</td>
 <td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">type</td>
