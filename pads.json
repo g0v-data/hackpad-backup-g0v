@@ -1411,8 +1411,8 @@
   "title": "\u9078\u8209\u677e-\u9577\u7167\u653f\u7b56"
  }, 
  {
-  "last_backup_time": 1466617456.27253, 
-  "version": 179, 
+  "last_backup_time": 1466703835.752494, 
+  "version": 222, 
   "padid": "37EmYwnSSVb", 
   "title": "<b>\u7acb\u59d4\u5496\u96fb\u55822016/6/18\u8a0e\u8ad6\u4e8b\u9805</b>"
  }, 
@@ -2175,8 +2175,8 @@
   "title": "\u53f0\u7063\u96fb\u8a2a\u6c11\u610f\u8abf\u67e5\u7d71\u8a08\u6578\u64da"
  }, 
  {
-  "last_backup_time": 1466617455.59132, 
-  "version": 109, 
+  "last_backup_time": 1466703835.796073, 
+  "version": 114, 
   "padid": "5u9QrhicuIy", 
   "title": "<a href='https://zh.wiktionary.org/wiki/%E3%80%A7'/>\u3027</a>\u6708\u7b2c<a href='https://zh.wikipedia.org/zh-tw/%E8%8B%8F%E5%B7%9E%E7%A0%81%E5%AD%90#.E7.AC.A6.E5.8F.B7'/>\u3021\u3026</a>\u6b21\u840c\u5178\u677e"
  }, 
@@ -4835,6 +4835,12 @@
   "title": "\u96f6\u6642\u524d\u7aefx\u8a2d\u8a08\u677e"
  }, 
  {
+  "last_backup_time": 1466703836.526473, 
+  "version": 202, 
+  "padid": "FtFXWeS5Sfr", 
+  "title": "\u6843\u5712\u7a7a\u670d\u54e1\u8077\u696d\u5de5\u6703\u7f77\u5de5\u5927\u4e8b\u7d00"
+ }, 
+ {
   "last_backup_time": 1412271913.7303138, 
   "version": 345, 
   "padid": "FwfvQhVlNrY", 
@@ -5680,6 +5686,12 @@
   "version": 2045, 
   "padid": "JInleB0ScUh", 
   "title": "Day1 Opening &amp; Keynote @g0v Summit 2016"
+ }, 
+ {
+  "last_backup_time": 1466703836.099477, 
+  "version": 363, 
+  "padid": "JL7KzMmcXJl", 
+  "title": "20160623 \u79d1\u6280\u90e8Xg0v\u6703\u8b70"
  }, 
  {
   "last_backup_time": 1431106981.7631319, 
@@ -6953,8 +6965,8 @@
   "title": "\u8b70\u984c\uff0b\u5730\u5716\u2502\u6848\u4f8b"
  }, 
  {
-  "last_backup_time": 1466617455.678953, 
-  "version": 1417, 
+  "last_backup_time": 1466703835.241088, 
+  "version": 1895, 
   "padid": "Nmi7NIdzWbJ", 
   "title": "\u96fb\u529b\u8996\u89ba\u5316"
  }, 
@@ -9476,8 +9488,14 @@
   "title": "\u8cac\u4efb\u6d88\u8cbb\u76f8\u95dc\u6a5f\u5236\u8490\u96c6"
  }, 
  {
-  "last_backup_time": 1466617456.22714, 
-  "version": 344, 
+  "last_backup_time": 1466703836.483587, 
+  "version": 39, 
+  "padid": "WfRUPd2XQv1", 
+  "title": "[\u52de\u52d5\u77e5\u8b58\u5927\u6703\u8003] - \u52de\u52d5\u6b0a\u76ca\u53ca\u6cd5\u4ee4\u77e5\u8b58\u7d0d\u5165\u9ad8\u4e2d\u8077\u6559\u6750\u9023\u7f72"
+ }, 
+ {
+  "last_backup_time": 1466703836.355845, 
+  "version": 1053, 
   "padid": "WgTrNd2dhxo", 
   "title": "cTaiwan \u53f0\u7063\u5b57 \u904b\u52d5"
  }, 
@@ -11638,6 +11656,12 @@
   "version": 376, 
   "padid": "ey6rd0cZs8w", 
   "title": "\u8fd1\u4ee3\u570b\u5bb6\u91d1\u878d\u8cc7\u672c\u4e3b\u7fa9\u653f\u7b56\u7814\u7a76"
+ }, 
+ {
+  "last_backup_time": 1466703836.568956, 
+  "version": 576, 
+  "padid": "ezz1izpjBgo", 
+  "title": "\u7f77\u5de5\uff0d\u81fa\u7063\u7f77\u5de5\u7d00\u9304"
  }, 
  {
   "last_backup_time": 1419184007.8180137, 
@@ -13848,8 +13872,8 @@
   "title": "g0.0v MoE @ Yahoo Hack Taiwan"
  }, 
  {
-  "last_backup_time": 1466617455.28155, 
-  "version": 11684, 
+  "last_backup_time": 1466703835.674876, 
+  "version": 11686, 
   "padid": "moed7ct-taigi-neologism", 
   "title": "iTaigi\u65b0\u53f0\u8a9e\u2027\u904b\u52d5"
  }, 
@@ -15540,8 +15564,8 @@
   "title": "2014-08-02\uff0f\u7b2c\u96f6\u6b21\u65b0\u805e\u677e\uff0f"
  }, 
  {
-  "last_backup_time": 1466531019.158315, 
-  "version": 247, 
+  "last_backup_time": 1466703835.927168, 
+  "version": 258, 
   "padid": "tA21IMtODD8", 
   "title": "\u4f60\u4eca\u5929\u52a0\u73ed\u4e86\u55ce\uff1f"
  }, 
@@ -15770,10 +15794,10 @@
   "title": "\u96f6\u50b3\u5a92\u5c0f\u805a0913"
  }, 
  {
-  "last_backup_time": 1466617455.811676, 
-  "version": 819, 
+  "last_backup_time": 1466703836.013234, 
+  "version": 1711, 
   "padid": "u8CNOxAvvvF", 
-  "title": "\u653f\u7b56\u8a0e\u8ad6"
+  "title": "\u5168\u570b\u79d1\u6280\u6703\u8b70\u8a0e\u8ad6"
  }, 
  {
   "last_backup_time": 1417949855.7095828, 
