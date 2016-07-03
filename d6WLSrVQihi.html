@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="1097"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$d6WLSrVQihi</title>
+</head>
+<body><h1>改善政府網站標案規格</h1><p></p><h2>問題懶人包</h2><ul><li>政府網站很爛的原因是標案規格太差</li>
+<li>標案規格差的原因是公務員不懂亂 fork</li>
+<li>所以我們要做一份適合現代的標案規格樣版或產生器</li>
+<li>勸大家看勤人包，才能完整瞭解問題全貌</li></ul>
+
+<h2>目前需求</h2><p>Github <a href="https://github.com/g0v/g0v-tender-builder"></a>https://github.com/g0v/g0v-tender-builder</p><ul><li>裡面有一份 2009–2010 總統府網站需求，需要有人將裡面的 ref/doc 轉為 md 檔案</li>
+<li>需要更多案例研究</li></ul>
+
+<h2>問題完整勤人包</h2><ul><li>政府的網站很爛（這大家都知道了）</li>
+<li>大部分的政府網站比民間、商業網站設計還要差、功能也不合理。</li>
+<li>故不是民間廠商、承包商的問題。</li>
+<li>原因極可能是「標案規格」本身就太爛，以下舉例：<ul><li>標案規格普遍綁「作法」而不是綁「目的」</li>
+<li>但偏偏「作法」容易過時、作古，所以網站也作古。</li>
+<li>舉例來說：<ul><li>系統架構多半想放中研院之類的點，但 Server 都相當老舊且只有 M$ Solution</li>
+<li>要求使用JAVA或IE Active等指定技術</li>
+<li>原始碼要交光碟（光碟並不是良好、安全的儲存媒體！）</li>
+<li>指定要有PDA版（什麼年代？）</li>
+<li>資安測試方法愚蠢且不符合需求</li></ul>
+</li>
+<li>因作法古老，導致成果僅達到能用，而不是方便的程度。</li>
+<li>使用者故事敘述篇幅過少，導致成果僅達到能用，而不是方便的程度。</li>
+<li>含有相當多不必要的流程，舉例：<ul><li>即使沒有資安疑慮的網站仍照做資安測試，排擠原設計與工程預算，即影響品質本身。</li></ul>
+</li></ul>
+</li>
+<li>政府網站只靠 g0v 砍掉重練真的太累了（？）</li></ul>
+
+<p><b>網站開標常見流程</b></p><ul><li>（誰）決定要做一個網站，這個（誰）也沒上過太多網站。</li>
+<li>倒楣的公務員被委派生出一份標案規格，通常會遇到以下問題：<ul><li>本身不懂網站</li>
+<li>尋找舊有的、不知道規模是否適合的標案規格書</li>
+<li><b>fork</b> 下來改標題</li>
+<li>因為不確定規格是否能順利完成，開始找民間廠商 review</li>
+<li>特定民間廠商可能將標案規格修改為只有自己能做的規格（？）</li></ul>
+</li>
+<li>標案公告<ul><li>規格本身已爛、無目的</li>
+<li>認真的廠商無法認真投標，普遍吸引以謀取利益為主的次級開發公司</li>
+<li>次級開發公司再外包給民間其他公司製作</li></ul>
+</ul>
+
+<p><b>目前狀態</b></p><ul><li>政府也想把網站做好，只是一直不知道找誰做才能做好。</li>
+<li>分析後看來不是沒有廠商可以做好，而是標案規格本身就有問題。</li>
+<li>有問題的標案，吸引有問題的廠商。</li>
+<li>相反來看：好的標案規格，即使吸引到能力不足的廠商，也會逼迫廠商符合規格而提昇水準。</li>
+<li>規格本身應該由「規定作法」改為「規定目的」。</li></ul>
+
+<p><b>可以解決的方法？</b></p><ul><li>因為公務員最喜歡（或只會） <b>fork</b></li>
+<li>所以有一組大至標準的標案 template 給公務員 fork 就可以將全台灣政府網站提升至 60 分...</li></ul>
+
+<p><b>永久解決方法</b></p><ul><li>成立指導單位（並非成立中央單位處理標案）</li></ul>
+<ul class="comment"><li><a href="http://www.giast.org.tw"></a>http://www.giast.org.tw，但只負責採購文件公告前的審查與修正，不參與規劃與需訪流程</li>
+<li>GIAST 的網站本身就有點恐怖，信任感低</li>
+<li>可以說資O會...</li>
+<li>最近幾年來也沒有體會到有 GIAST 單位的優點 XD 才會開坑...</li>
+<li>我贊成開這個坑，實際執行確實不少困境，但很有需求</li></ul>
+<ul><li>定期替接觸網站發包的公務人員上課</li>
+<li>國外類似的單位<ul><li><a href="https://18f.gsa.gov"></a>https://18f.gsa.gov</li>
+<li><a href="https://www.gov.uk/government/organisations/government-digital-service"></a>https://www.gov.uk/government/organisations/government-digital-service</li></ul>
+</ul>
+
+<h2>TO-DO</h2><ul class="task"><li>doc 轉 md</li>
+<li>規格設計標與工程標是否分開？</li>
+<li>標案章節規劃</li>
+<li>使用者故事示範</li>
+<li>驗收流程、方法</li>
+<li>...（求補）</li></ul>
+
+<p></p></body>
+</html>
