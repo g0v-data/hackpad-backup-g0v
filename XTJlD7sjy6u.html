@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="587"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$XTJlD7sjy6u</title>
+</head>
+<body><h1>GitHub Flow 簡記</h1><p></p><p>這邊記錄一下如果採用 GitHub Flow 來整理 issue 的話，需要哪些動作</p><p></p><p><b>初始設定</b></p><ul><li>到&nbsp; GitHub 網頁 fork 出原專案 (以下假設專案為 g0v/foo ，fork 出為 nobody/foo)</li>
+<li>設定 git remote<ul><li>git remote add upstream <a href="https://github.com/g0v/foo"></a>https://github.com/g0v/foo</li></ul>
+</li>
+<li>沒事就跟 upstream 同步一下，確保 fork 出來的不要隔太遠<ul><li>git fetch upstream</li>
+<li>git merge upstream/master</li></ul>
+</ul>
+
+<p><b>提出 issue</b></p><ul><li>直接到母 repo 建立 issue 就好，不需要額外做什麼</li></ul>
+
+<p><b>認領 issue</b></p><ul><li>到母 repo 上面回覆自己認領了 (以下假設 issue number = 123)</li>
+<li>到子 repo 上面建立 branch ，在 branch 內修改<ul><li>git branch issue123-foo-bar # 建立 local branch 名稱為 issue123-foo-bar (後面 foo-bar 是這個 issue 的簡單描述，方便從 branch name 知道做了什麼事)</li>
+<li>git push origin issue123-foo-bar # 到 github 上面產生 remote branch</li>
+<li>git checkout issue123-foo-bar #&nbsp; 切換 local branch</li></ul>
+</li>
+<li>自己的 branch 修改完成之後，到 <a href="https://github.com/nobody/foo"></a>https://github.com/nobody/foo 下面，以這個 branch 選擇 Open a pull request<ul><li>在描述中可以塞&nbsp; &quot;for close #123&quot; 表示這個 PR 是為了解決 issue 123</li></ul>
+</ul>
+
+<p><b>upstream 接受 PR 後</b></p><ul><li>git fetch upstream</li>
+<li>git merge upstream/master</li>
+<li>git branch -d issue123-foo-bar</li>
+<li>git push origin :issue123-foo-bar</li></ul>
+
+</body>
+</html>
