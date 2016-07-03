@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2651"/>
+<meta name="version" content="2758"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$9U6DLtdZc48</title>
 </head>
 <body><h1>projecthub redux</h1><p></p><h2>metadata</h2><ul><li>列表 - <a href="https://github.com/g0v/awesome-g0v"></a><a href='https://github.com/g0v/awesome-g0v'/>https://github.com/g0v/awesome-g0v</a><ul><li>整理舊的列表進入 awesome</li>
@@ -12,7 +12,7 @@
 <li>H2: 人工分類</li>
 <li>H3: nested project, 取締一個 li 當 primary, 其他的 part of primary</li></ul>
 </li>
-<li><a href="https://github.com/g0v/awesome-g0v/blob/master/registry.json"></a><a href='https://github.com/g0v/awesome-g0v/blob/master/registry.json'/>https://github.com/g0v/awesome-g0v/blob/master/registry.json</a></li></ul>
+<li><a href="https://github.com/g0v/awesome-g0v/blob/master/awesome-g0v.json"></a><a href='https://github.com/g0v/awesome-g0v/blob/master/registry.json'/>https://github.com/g0v/awesome-g0v/blob/master/</a><a href='https://github.com/g0v/awesome-g0v/blob/master/registry.json'/>awesome-g0v</a><a href='https://github.com/g0v/awesome-g0v/blob/master/registry.json'/>.json</a></li></ul>
 </ul>
 
 <ul><li>列表 + g0v.json or civic.json -&gt; api endpoint (先用一堆 json 檔)<ul><li>additional metadata<ul><li>從 awesome g0v 的結構加註新的 metadata</li>
@@ -248,7 +248,14 @@
 <li>With the labels: OCR</li></ul>
 <p>會得到這個 link:<a href='https://github.com/search?utf8=%E2%9C%93&amp;q=state%3Aopen+label%3AOCR&amp;type=Repositories&amp;ref=advsearch&amp;l=&amp;l='/> </a><a href="https://github.com/search?utf8=%E2%9C%93&q=state%3Aopen+label%3AOCR&type=Repositories&ref=advsearch&l=&l="></a>https://github.com/search?utf8=%E2%9C%93&amp;q=state%3Aopen+label%3AOCR&amp;type=Repositories&amp;ref=advsearch&amp;l=&amp;l=</p><p>再點 Issues 得到這個 link: <a href="https://github.com/search?l=&q=state%3Aopen+label%3AOCR&ref=advsearch&type=Issues&utf8=%E2%9C%93"></a>https://github.com/search?l=&amp;q=state%3Aopen+label%3AOCR&amp;ref=advsearch&amp;type=Issues&amp;utf8=%E2%9C%93</p><p></p><ul class="comment"><li>上次聊了 cors 的問題，所以可能的解法還是得讓 server 去 call advance search, 然後 parse html dom。</li></ul>
 
-<h2>project browser</h2><p></p><p>existing:</p><ul><li><a href="https://www.codeforamerica.org/brigade/projects"></a>https://www.codeforamerica.org/brigade/projects</li>
+<p></p><p><b>最新進度</b></p><p>根據前面討論使用 github adv search 的話，會遇到兩個問題</p><ol><li>repo 帶在 url params 裡面會遇到 url too long 的 error</li>
+<li>會有 cors 的問題，所以還是會需要一台 server 作為 proxy</li></ol>
+
+<p>所以目前採用自架 server 的方式</p><ol><li>固定一段時間去 call github api 去的 repo, issues 的 json</li>
+<li>把 json 寫進 database</li>
+<li>提供 api 介面可 query by labels / language</li></ol>
+
+<p>github repo: <a href="https://github.com/JmeHsieh/issue_aggregator"></a>https://github.com/JmeHsieh/issue_aggregator</p><p>demo: <a href="http://g0vissues.jmehsieh.com/"></a>http://g0vissues.jmehsieh.com/</p><p></p><p></p><p></p><p></p><h2>project browser</h2><p></p><p>existing:</p><ul><li><a href="https://www.codeforamerica.org/brigade/projects"></a>https://www.codeforamerica.org/brigade/projects</li>
 <li>(待捕)</li></ul>
 
 <p><b>Default, allow search for everything</b></p><p>for participants: show everything and allow filtering ?</p><p></p><ul><li>allow showing sub-project</li>
