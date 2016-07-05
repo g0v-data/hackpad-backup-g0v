@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="3675"/>
+<meta name="version" content="3689"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$NoJ1mbwsqkQ</title>
 </head>
 <body><h1>Data-Centric Government 的二十大類資料</h1><p></p><p>狀態: DRAFT</p><p>授權: CC BY clkao &amp; g0v contributors (並授權與 TCA 以 CC BY-ND 發佈)</p><p><b>編輯前請同意及簽名</b>：clkao, yhsiang, Lucas, chewei, pm5 . a0kman, Summit</p><p></p><p>(這是 local.data 專案的後續報告，見<a href='/eDY68cTC3Hv#:h=前情提要'/>利益揭露</a>)</p><p></p><p><b>這是什麼？</b></p><p></p><p>Open Government 與 Smart City/Nation 的交集與基礎其實還是 Data，如果我們先忘掉現有政府架構，重新想像與打造一個 Data-Centric 的政府，然後讓這些 Data 都是 Open 的，每個環節都有 api 可以 read/write 或送 pull requests，那會是什麼樣貌？</p><p></p><p>先分為六個 Tier，Tier 0~2 較偏政府本身及其運作基礎，Tier 3~5 為偏民生相關。底層越完整，則上層資料的品質越容易提升與相互連結，因為有共通的語意定義。</p><p></p><p>希望每一大類找出<b>三類關鍵資料</b>，每類資料有<b>三種細度</b>，供檢視「是否有資料」及「是否為開放」等。每類資料可有簡單的 use case 供想像。</p><p></p><p>之後也可作為比 open data index 與 open data barometer 更細緻的普查項目。</p><p></p><p><b>討論</b></p><ul class="comment"><li>可直接在此討論，或上 irc: <a href="http://hack.g0v.tw/irc"></a>http://hack.g0v.tw/irc 或用 <a href="http://join.g0v.today"></a>http://join.g0v.today</li>
@@ -46,7 +46,7 @@
 <li>yeah, 這個在每項調查可以註記</li>
 <li>醫療類的包含藥商登記、醫療院所登記、藥物許可證資料這些會需要嗎？如果有需要我可以去更詳細的查一下有哪一些現有資訊</li></ul>
 
-<h2>政府與治理</h2><p></p><p><b>Tier 0: Rule of Law and Organization</b></p><p></p><ol><li><b>立法及法律 / Legislature</b><ol><li>現行法規（含行政規則、行政命令）：全文、結構化全文、引用條文連結註記</li>
+<h2>政府與治理</h2><p></p><p><b>Tier 0: Rule of Law and Organization 法制與政府組織</b></p><p></p><ol><li><b>立法及法律 / Legislature</b><ol><li>現行法規（含行政規則、行政命令）：全文、結構化全文、引用條文連結註記</li>
 <li>修訂紀錄：版本明細、修訂相關文書或會議影音、</li>
 <li>修法提案及進度：提案內容與目前狀態、歷史狀態、相關會議影音</li></ol>
 </li>
@@ -59,7 +59,7 @@
 <li>行政機關法律適用：行政函釋、行政罰相關統計數據、訴願相關統計數據</li></ol>
 </ol>
 
-<p><b>Tier 1: Accountability</b></p><p></p><ol><li><b>選舉及罷免 / Election and Recall</b><ol><li>選舉概況：選區劃分、選舉人統計、投票概況</li>
+<p><b>Tier 1: Accountability 課責</b></p><p></p><ol><li><b>選舉及罷免 / Election and Recall</b><ol><li>選舉概況：選區劃分、選舉人統計、投票概況</li>
 <li>候選人：候選人基本資料及政見、公辦政見會時程與內容、</li>
 <li>得票：當選得票明細、</li></ol>
 </li>
@@ -77,7 +77,7 @@
 <li>政府 KPI 是否能算成一種資料項目呢？或是涵蓋在 Accountability ...</li></ul>
 </ol>
 
-<p><b>Tier 2: Operations</b></p><p></p><ol><li><b>區域劃分與統計 / Zoning and Statistics</b><ol><li>基礎統計：各單位應統計及發布事項、人口統計（結構、遷移、不在籍與外籍人口）、工商統計</li>
+<p><b>Tier 2: Operations 政府運作</b></p><p></p><ol><li><b>區域劃分與統計 / Zoning and Statistics</b><ol><li>基礎統計：各單位應統計及發布事項、人口統計（結構、遷移、不在籍與外籍人口）、工商統計</li>
 <li>警、消、國教責任區域範圍：單位基本資訊與範圍劃分、人力員額及人口統計、人力員額及人口歷史變化</li>
 <li>土地劃分與所有人：區域/都市/都市更新計畫、土地使用分區明細及變更紀錄、所有人紀錄</li></ol>
 <ul class="comment"><li>建築技術規則</li>
@@ -101,7 +101,7 @@
 <li>國防：軍事統計</li></ol>
 </ol>
 
-<p></p><h2>服務與民生</h2><p></p><p><b>Tier 3: Public Safety</b></p><p></p><ol><li><b>公共檢查及違法事項 / Inspections and Violations</b><ol><li>事業單位之各項檢查：應受檢行業及項目、統計、明細、結構化明細</li>
+<p></p><h2>服務與民生</h2><p></p><p><b>Tier 3: Public Safety 公共安全</b></p><p></p><ol><li><b>公共檢查及違法事項 / Inspections and Violations</b><ol><li>事業單位之各項檢查：應受檢行業及項目、統計、明細、結構化明細</li>
 <li>事業單位受行政處分公告：統計、明細、結構化明細</li></ol>
 </ol>
 <ul class="comment"><li>「公共檢查」，就會包含 公害資料（例如 桃園 RCA 廠址地下水污染源、全國工廠污染檢舉資料、）食品衛生安全抽查、勞動檢查資料..囉？「公共檢查」一詞，為了「公共與公眾而啟動的檢查」之意，覺得可以成為一種統籌式的用詞，甚至民間組織發起的檢查、公民科學家針對某污染源的監測..，或許也可以涵蓋進來</li>
@@ -119,7 +119,7 @@
 <ul class="comment"><li>動植物疾病，例如 OIE 與農委會禽流感疫情資料 ...是否也屬於 “Tier 3: Public Safety”？</li>
 <li>國際與國內的疾病管制資料，會放在健康與醫療嗎？例如WHO所蒐集的各國資料與疾管局資料</li></ul>
 
-<p><b>Tier 4: Services</b></p><p></p><ol><li><b>基礎建設 / Infrastructures</b><ol><li>網路 / Internet：carrier coverage, pricing.. .</li>
+<p><b>Tier 4: Services 公營服務</b></p><p></p><ol><li><b>基礎建設 / Infrastructures</b><ol><li>網路 / Internet：carrier coverage, pricing.. .</li>
 <li>交通及大眾運輸 / Transportation：</li>
 <li>水、能源 / Water and Energy：價格、公共設施使用量、地區別使用量</li>
 <li>公共設施(通常會涵蓋前述所有項目資料)/如大巨蛋/轉運站總量體/河濱公園/水利設施<ol><li>管線</li>
@@ -146,7 +146,7 @@
 <li>法規建言、</li></ol>
 </ol>
 
-<p><b>Tier 5: Economic Activities</b></p><p></p><ol><li><b>生產及各類執照 / Producing and Licenses</b><ol><li>需要執照或許可的行業：行業表、合法單位明細、</li>
+<p><b>Tier 5: Economic Activities 經濟活動</b></p><p></p><ol><li><b>生產及各類執照 / Producing and Licenses</b><ol><li>需要執照或許可的行業：行業表、合法單位明細、</li>
 <li>專利、商標及所有者：</li>
 <li>農業：統計、明細、結構化明細<ol><li>產銷統計（包括銷售、拍賣金額、歷年各類作物栽培面積）</li>
 <li>農業資材、藥劑各項資訊</li>
