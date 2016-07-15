@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="326"/>
+<meta name="version" content="334"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$9zQsGYYU1TG</title>
 </head>
 <body><h1>如何製作一本epub3電子書</h1><p></p><p>這則教學使用「電電轉換器」製作電子書。</p><p></p><p>如果您手邊沒有原始檔案，可參考使用「黨產解密」一書。</p><p></p><p><a href="https://github.com/billy3321/decipher_kmt_property"></a>https://github.com/billy3321/decipher_kmt_property</p><p></p><p>首先，先將書籍圖片編輯好，內文放置到完整的markdown檔案中。</p><p></p><p>Markdown檔案的語法可參考此，其中「註釋」和「換頁」與一般markdown比較不一樣，要注意一下。</p><p><a href="http://conv.denshochan.com/tw/markdown"></a>http://conv.denshochan.com/tw/markdown</p><p></p><p>Markdown檔案在此：</p><p></p><p><a href="https://github.com/billy3321/decipher_kmt_property/blob/master/full.md"></a>https://github.com/billy3321/decipher_kmt_property/blob/master/full.md</p><p></p><p>電電轉換器設定檔：</p><p></p><p><a href="https://github.com/billy3321/decipher_kmt_property/blob/master/ddconv.yml"></a>https://github.com/billy3321/decipher_kmt_property/blob/master/ddconv.yml</p><p></p><p>接著打開電電轉換器，網址：</p><p></p><p><a href="http://conv.denshochan.com/tw/"></a>http://conv.denshochan.com/tw/</p><p></p><p>他左上角的「上傳」可以一次選取多個檔案，請一次把所有的檔案都選好：markdown檔案、所有圖片、電電轉換器設定檔、封面（請命名為cover.jpg）。輸入欄位的書本標題隨意，之後會被電電轉換器的設定覆蓋。</p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_9zQsGYYU1TG_p.56088_1457020522600_螢幕快照 2016-03-03 下午11.52.59.png'/></p><p></p><p></p><p>選好後，請點選「轉換」按鈕，下載一個epub。</p><p></p><p>接著，請把epub解壓縮。</p><p></p><p>解壓縮後，進入「OEBPS」資料夾。</p><p></p><p>首先移除「toc.ncx」檔案。接著，修改「content.opf」檔案</p><p></p><p>把這幾行</p><p></p><ul class="code"><li>&lt;item media-type=&quot;application/x-dtbncx+xml&quot; href=&quot;toc.ncx&quot; id=&quot;_toc.ncx&quot; /&gt;</li>
@@ -299,5 +299,281 @@
 <li>&lt;item media-type=&quot;application/otf&quot; href=&quot;shs.otf&quot; id=&quot;font&quot; /&gt;</li>
 <li>&lt;item media-type=&quot;text/css&quot; href=&quot;template.css&quot; id=&quot;_template.css&quot; /&gt;</li>
 <li><br/></li></ul>
-<p>這邊字體名稱設定是「shs.otf」，你可以改成自己喜歡的名稱。</p><p></p><p>而關於書本目錄的設定在「nav.xhtml」檔案，可以把不要的目錄層級設定`display: hidden`</p><p></p><p>修改完成後，把這整個epub重新封裝起來即可。可以用epub檢查程式試試看有沒有問題。</p><p></p><p>之後，這就是一個可用的epub檔案了！</p><p></p></body>
+<p>這邊字體名稱設定是「shs.otf」，你可以改成自己喜歡的名稱。</p><p></p><p>如果是有字體，可把style.css改成這樣：</p><p></p><ul class="code"><li>@charset &quot;UTF-8&quot;;</li>
+<li>/* でんでんコンバーター縦書きデフォルト */</li>
+<li>@namespace &quot;<a href="http://www.w3.org/1999/xhtml"></a>http://www.w3.org/1999/xhtml&quot;;</li>
+<li>@namespace epub &quot;<a href="http://www.idpf.org/2007/ops"></a>http://www.idpf.org/2007/ops&quot;;</li>
+<li>html {</li>
+<li>&nbsp; -epub-writing-mode: horizontal-tb;</li>
+<li>&nbsp; -webkit-writing-mode: horizontal-tb;</li>
+<li>&nbsp; writing-mode: horizontal-tb;</li>
+<li>}</li>
+<li><br/></li>
+<li>body {</li>
+<li>&nbsp; text-align: justify;</li>
+<li>&nbsp; text-justify: inter-ideograph;</li>
+<li>&nbsp; font-family: source, serif, sans-serif;</li>
+<li>&nbsp; vertical-align: baseline;</li>
+<li>&nbsp; word-wrap: break-word;</li>
+<li>}</li>
+<li><br/></li>
+<li>@font-face {</li>
+<li>&nbsp; font-family: source;</li>
+<li>&nbsp; src: url(shs.otf);</li>
+<li>}</li>
+<li><br/></li>
+<li>h1, h2, h3, h4, h5, h6 {</li>
+<li>&nbsp; font-family: serif, sans-serif;</li>
+<li>&nbsp; font-weight: normal;</li>
+<li>&nbsp; color: inherit;</li>
+<li>}</li>
+<li><br/></li>
+<li>h1 {</li>
+<li>&nbsp; font-size: 2em;</li>
+<li>&nbsp; text-align: center;</li>
+<li>&nbsp; margin-right: 0.625em;</li>
+<li>&nbsp; margin-left: 0.625em;</li>
+<li>}</li>
+<li><br/></li>
+<li>h2 {</li>
+<li>&nbsp; font-size: 1.8em;</li>
+<li>&nbsp; text-align: center;</li>
+<li>&nbsp; margin-right: 0.83333em;</li>
+<li>&nbsp; margin-left: 0.83333em;</li>
+<li>}</li>
+<li><br/></li>
+<li>h3 {</li>
+<li>&nbsp; font-size: 1.5em;</li>
+<li>&nbsp; text-align: center;</li>
+<li>&nbsp; margin-right: 1.11111em;</li>
+<li>&nbsp; margin-left: 1.11111em;</li>
+<li>}</li>
+<li><br/></li>
+<li>h4 {</li>
+<li>&nbsp; font-size: 1.25em;</li>
+<li>&nbsp; margin-right: 1.25em;</li>
+<li>&nbsp; margin-left: 1.25em;</li>
+<li>}</li>
+<li><br/></li>
+<li>h5 {</li>
+<li>&nbsp; font-size: 1.125em;</li>
+<li>&nbsp; margin-right: 1.42857em;</li>
+<li>&nbsp; margin-left: 1.42857em;</li>
+<li>}</li>
+<li><br/></li>
+<li>h6 {</li>
+<li>&nbsp; font-size: 1em;</li>
+<li>&nbsp; margin-right: 1.66667em;</li>
+<li>&nbsp; margin-left: 1.66667em;</li>
+<li>}</li>
+<li><br/></li>
+<li>p {</li>
+<li>&nbsp; margin-right: 1.25em;</li>
+<li>&nbsp; margin-left: 1.25em;</li>
+<li>&nbsp; line-height: 1.8;</li>
+<li>&nbsp; text-indent: 2em;</li>
+<li>}</li>
+<li><br/></li>
+<li>li p {</li>
+<li>&nbsp; text-indent: 0;</li>
+<li>}</li>
+<li><br/></li>
+<li>p, li, dt, dd {</li>
+<li>&nbsp; line-height: 1.8;</li>
+<li>}</li>
+<li><br/></li>
+<li>b, strong, dt, caption, figcaption, th {</li>
+<li>&nbsp; font-family: sans-serif, serif;</li>
+<li>}</li>
+<li><br/></li>
+<li>strong, blockquote {</li>
+<li>&nbsp; font-family: &quot;HelveticaNeue-Medium&quot;, &quot;STKaiTi-TC-Regular&quot;;</li>
+<li>}</li>
+<li><br/></li>
+<li>blockquote, ul,</li>
+<li>fieldset, form,</li>
+<li>ol, dl, menu {</li>
+<li>&nbsp; margin-right: 1.25em;</li>
+<li>&nbsp; margin-left: 1.25em;</li>
+<li>&nbsp; padding: 0;</li>
+<li>}</li>
+<li><br/></li>
+<li>blockquote blockquote, blockquote ol, blockquote ul, blockquote dl, ol blockquote, ol ol, ol ul, ol dl, ul blockquote, ul ol, ul ul, ul dl, dl blockquote, dl ol, dl ul, dl dl {</li>
+<li>&nbsp; margin-right: 0em;</li>
+<li>&nbsp; margin-left: 0em;</li>
+<li>}</li>
+<li><br/></li>
+<li>ol, ul, menu, dd {</li>
+<li>&nbsp; margin-top: 2em;</li>
+<li>}</li>
+<li><br/></li>
+<li>ol li ol {</li>
+<li>&nbsp; margin-top: 0em;</li>
+<li>&nbsp; margin-left: 2em;</li>
+<li>}</li>
+<li><br/></li>
+<li>ol li ul {</li>
+<li>&nbsp; margin-top: 0em;</li>
+<li>&nbsp; margin-left: 2em;</li>
+<li>}</li>
+<li><br/></li>
+<li>ul li ol {</li>
+<li>&nbsp; margin-top: 0em;</li>
+<li>&nbsp; margin-left: 2em;</li>
+<li>}</li>
+<li><br/></li>
+<li>ul li ul {</li>
+<li>&nbsp; margin-top: 0em;</li>
+<li>&nbsp; margin-left: 2em;</li>
+<li>}</li>
+<li><br/></li>
+<li>li:last-child {</li>
+<li>&nbsp; margin-bottom: 1em;</li>
+<li>}</li>
+<li><br/></li>
+<li><br/></li>
+<li>a {</li>
+<li>&nbsp; color: #0538b2;</li>
+<li>}</li>
+<li>a:hover {</li>
+<li>&nbsp; color: #b2058e;</li>
+<li>}</li>
+<li>a:active {</li>
+<li>&nbsp; color: #b27f05;</li>
+<li>}</li>
+<li><br/></li>
+<li>pre {</li>
+<li>&nbsp; white-space: pre-wrap;</li>
+<li>}</li>
+<li><br/></li>
+<li>img {</li>
+<li>&nbsp; width: auto;</li>
+<li>&nbsp; height: auto;</li>
+<li>&nbsp; max-width: 100%;</li>
+<li>&nbsp; max-height: 100%;</li>
+<li>}</li>
+<li><br/></li>
+<li>hr {</li>
+<li>&nbsp; margin-right: 1.25em;</li>
+<li>&nbsp; margin-left: 1.25em;</li>
+<li>}</li>
+<li><br/></li>
+<li>table {</li>
+<li>&nbsp; border-collapse: collapse;</li>
+<li>&nbsp; border-spacing: 0;</li>
+<li>}</li>
+<li><br/></li>
+<li>rt {</li>
+<li>&nbsp; font-family: serif, sans-serif;</li>
+<li>}</li>
+<li><br/></li>
+<li>.tcy {</li>
+<li>&nbsp; -epub-text-combine: horizontal;</li>
+<li>&nbsp; -webkit-text-combine: horizontal;</li>
+<li>&nbsp; text-combine-horizontal: all;</li>
+<li>}</li>
+<li><br/></li>
+<li>.sideways {</li>
+<li>&nbsp; -epub-text-orientation: sideways;</li>
+<li>}</li>
+<li><br/></li>
+<li>.upright {</li>
+<li>&nbsp; -epub-text-orientation: rotate-right;</li>
+<li>&nbsp; -epub-text-orientation: upright;</li>
+<li>&nbsp; -webkit-text-orientation: upright;</li>
+<li>&nbsp; -epub-text-combine: horizontal;</li>
+<li>&nbsp; -webkit-text-combine: horizontal;</li>
+<li>&nbsp; text-combine-horizontal: all;</li>
+<li>}</li>
+<li><br/></li>
+<li>.pagenum {</li>
+<li>&nbsp; color: gray;</li>
+<li>&nbsp; font-size: 0.8em;</li>
+<li>}</li>
+<li><br/></li>
+<li>.footnotes hr {</li>
+<li>&nbsp; margin-right: 1.25em;</li>
+<li>&nbsp; margin-left: 1.25em;</li>
+<li>}</li>
+<li>.footnotes ol {</li>
+<li>&nbsp; margin-top: 2em;</li>
+<li>}</li>
+<li>.footnotes li {</li>
+<li>&nbsp; font-size: 0.875em;</li>
+<li>}</li>
+<li><br/></li>
+<li>a.noteref {</li>
+<li>&nbsp; font-size: 0.75em;</li>
+<li>&nbsp; vertical-align: super;</li>
+<li>}</li>
+<li><br/></li>
+<li>nav#toc, nav#landmarks, nav#loi, nav#lot, nav#page-list {</li>
+<li>&nbsp; margin-left: 2.5em;</li>
+<li>}</li>
+<li>nav#toc ol, nav#landmarks ol, nav#loi ol, nav#lot ol, nav#page-list ol {</li>
+<li>&nbsp; margin-top: 1em;</li>
+<li>}</li>
+<li><br/></li>
+<li>table, tr, td, th{</li>
+<li>&nbsp; border: 1px #666 solid;</li>
+<li>}</li>
+<li><br/></li>
+<li>tr:nth-child(even) {</li>
+<li>&nbsp; background-color: #f2f2f2;</li>
+<li>}</li>
+<li><br/></li>
+<li>.-epub-media-overlay-active {</li>
+<li>&nbsp; background-color: yellow;</li>
+<li>}</li>
+<li><br/></li>
+<li>h2 {</li>
+<li>&nbsp; margin-top: 0.66667em;</li>
+<li>}</li>
+<li><br/></li>
+<li>h3 {</li>
+<li>&nbsp; margin-top: 1.77778em;</li>
+<li>}</li>
+<li><br/></li>
+<li>h4 {</li>
+<li>&nbsp; margin-top: 3em;</li>
+<li>&nbsp; font-family: sans-serif, serif;</li>
+<li>}</li>
+<li><br/></li>
+<li>blockquote {</li>
+<li>&nbsp; margin-top: 1em;</li>
+<li>}</li>
+<li><br/></li>
+<li>p {</li>
+<li>&nbsp; margin: 0;</li>
+<li>}</li>
+<li><br/></li>
+<li>a {</li>
+<li>&nbsp; text-decoration: none;</li>
+<li>}</li>
+<li><br/></li>
+<li>u {</li>
+<li>&nbsp; text-decoration: overline;</li>
+<li>}</li>
+<li><br/></li>
+<li>@media print {</li>
+<li>&nbsp; h1 {</li>
+<li>&nbsp; page-break-before: always;</li>
+<li>&nbsp; }</li>
+<li><br/></li>
+<li>&nbsp; h1, h2, h3,</li>
+<li>&nbsp; h4, h5, h6 {</li>
+<li>&nbsp; page-break-after: avoid;</li>
+<li>&nbsp; }</li>
+<li><br/></li>
+<li>&nbsp; ul, ol, dl {</li>
+<li>&nbsp; page-break-before: avoid;</li>
+<li>&nbsp; }</li>
+<li>}</li>
+<li><br/></li>
+<li>.pull-right {</li>
+<li>&nbsp; text-align: right;</li>
+<li>}</li>
+<li><br/></li></ul>
+
+<p>而關於書本目錄的設定在「nav.xhtml」檔案，可以把不要的目錄層級設定`display: hidden`</p><p></p><p>修改完成後，把這整個epub重新封裝起來即可。可以用epub檢查程式試試看有沒有問題。</p><p></p><p>之後，這就是一個可用的epub檔案了！</p><p></p></body>
 </html>
