@@ -3,10 +3,10 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="434"/>
+<meta name="version" content="435"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$lWjdiQNqhuP</title>
 </head>
-<body><h1>零時政府與阿龜的邂垢 G0V x Agrithon@Taiwan</h1><p></p><p><b>為什麼要做這個</b></p><p>G0V 這邊光整理農業相關的就一百多個坑了，常常可以看到大家整理了一些列表以及分類，但說真的... 坑坑相連到天邊，究竟怎麼個連法其實隔坑如隔山(!?)，光列表家分類似乎不是什麼有 sense 的事情... (被毆飛)</p><p></p><p>所以在想的是，是不是再來挖一個坑，打算引用文字分析的技術，然後分析後轉為網路關聯圖，用視覺的方式串聯目前 G0V 與各種農業相關議題，以及農業黑客松的關係。順利的話，這份網路圖除了有視覺的效果外，應該也能夠在這基礎之上順手進行分群 (graph-based clustering) ，應該就可以把概念相近的坑送做堆了 (遠目)。</p><p></p><p><b>想要達成的目標</b></p><p>希望能讓所有想要挖坑填坑跳坑的人，都能很輕鬆地了解相關聯的坑有哪些，促進社群相關坑的串聯及活絡</p><p></p><p><b>預計作法</b></p><p>爬完所有 G0V Hackpad 中有關農業的資料 =&gt; 斷詞及詞性標註 =&gt; 關鍵詞萃取 =&gt; 議題相似度計算 =&gt; 社會網路分析 =&gt; 視覺化</p><p></p><ul class="taskdone"><li>寫網路爬蟲爬進每個農業相關坑把資料 dump 下來</li>
+<body><h1>零時政府與阿龜的邂垢 G0V x Agrithon@Taiwan</h1><p></p><p><b>為什麼要做這個</b></p><p>G0V 這邊光整理農業相關的就一百多個坑了，常常可以看到大家整理了一些列表以及分類，但說真的... 坑坑相連到天邊，究竟怎麼個連法其實隔坑如隔山(!?)，光列表分類似乎不是什麼有 sense 的事情... (被毆飛)</p><p></p><p>所以在想的是，是不是再來挖一個坑，打算引用文字分析的技術，然後分析後轉為網路關聯圖，用視覺的方式串聯目前 G0V 與各種農業相關議題，以及農業黑客松的關係。順利的話，這份網路圖除了有視覺的效果外，應該也能夠在這基礎之上順手進行分群 (graph-based clustering) ，應該就可以把概念相近的坑送做堆了 (遠目)。</p><p></p><p><b>想要達成的目標</b></p><p>希望能讓所有想要挖坑填坑跳坑的人，都能很輕鬆地了解相關聯的坑有哪些，促進社群相關坑的串聯及活絡</p><p></p><p><b>預計作法</b></p><p>爬完所有 G0V Hackpad 中有關農業的資料 =&gt; 斷詞及詞性標註 =&gt; 關鍵詞萃取 =&gt; 議題相似度計算 =&gt; 社會網路分析 =&gt; 視覺化</p><p></p><ul class="taskdone"><li>寫網路爬蟲爬進每個農業相關坑把資料 dump 下來</li>
 <li>斷詞及詞性標註 (CKIP)</li>
 <li>關鍵詞萃取 (Length filtering + POS pattern filtering+ TF-IDF)</li>
 <li>議題相似度計算 (Cosine Similarity)</li>
