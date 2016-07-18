@@ -3,20 +3,24 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="280"/>
+<meta name="version" content="434"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$lWjdiQNqhuP</title>
 </head>
-<body><h1>零時政府與阿龜的邂垢 G0V x Agrithon@Taiwan</h1><p></p><p><b>為什麼要做這個</b></p><p>G0V 這邊光整理農業相關的就一百多個坑了，常常可以看到大家整理了一些列表以及分類，但說真的... 坑坑相連到天邊，究竟怎麼個連法其實隔坑如隔山(!?)，光列表家分類似乎不是什麼有 sense 的事情... (被毆飛)</p><p></p><p>所以在想的是，是不是再來挖一個坑，打算引用文字分析的技術，然後分析後轉為網路關聯圖，用視覺的方式串聯目前 G0V 與各種農業相關議題，以及農業黑客松的關係。順利的話，這份網路圖除了有視覺的效果外，應該也能夠在這基礎之上順手進行分群 (graph-based clustering) ，應該就可以把概念相近的坑送做堆了 (遠目)。</p><p></p><p><b>想要達成的目標</b></p><p>希望能讓所有想要挖坑填坑跳坑的人，都能很輕鬆地了解相關聯的坑有哪些，促進社群相關坑的串聯及活絡</p><p></p><p><b>預計作法</b></p><p>爬完所有 G0V Hackpad 中有關農業的資料 =&gt; 斷詞及詞性標註(CKIP) =&gt; 關鍵詞萃取(POS Pattern + TF-IDF) =&gt; 議題相似度計算(Cosine Similarity) =&gt; 社會網路分析(Weighted-degree Centrality, Modularity clustering) =&gt; 視覺化 (Gephi/D3/Vis/Sigma)</p><p></p><ul class="taskdone"><li>藉由社群更新維護一份與農業相關坑的清單</li>
-<li>網路爬蟲爬進每個坑把資料 dump 下來</li>
-<li>斷詞處理 (tokenization)</li>
-<li>自然語言分析及關鍵詞分析</li>
-<li>字詞共現分析</li>
-<li>坑坑相連到天邊的共現網路視覺化結果 (1-mode, homogeneous network)</li></ul>
+<body><h1>零時政府與阿龜的邂垢 G0V x Agrithon@Taiwan</h1><p></p><p><b>為什麼要做這個</b></p><p>G0V 這邊光整理農業相關的就一百多個坑了，常常可以看到大家整理了一些列表以及分類，但說真的... 坑坑相連到天邊，究竟怎麼個連法其實隔坑如隔山(!?)，光列表家分類似乎不是什麼有 sense 的事情... (被毆飛)</p><p></p><p>所以在想的是，是不是再來挖一個坑，打算引用文字分析的技術，然後分析後轉為網路關聯圖，用視覺的方式串聯目前 G0V 與各種農業相關議題，以及農業黑客松的關係。順利的話，這份網路圖除了有視覺的效果外，應該也能夠在這基礎之上順手進行分群 (graph-based clustering) ，應該就可以把概念相近的坑送做堆了 (遠目)。</p><p></p><p><b>想要達成的目標</b></p><p>希望能讓所有想要挖坑填坑跳坑的人，都能很輕鬆地了解相關聯的坑有哪些，促進社群相關坑的串聯及活絡</p><p></p><p><b>預計作法</b></p><p>爬完所有 G0V Hackpad 中有關農業的資料 =&gt; 斷詞及詞性標註 =&gt; 關鍵詞萃取 =&gt; 議題相似度計算 =&gt; 社會網路分析 =&gt; 視覺化</p><p></p><ul class="taskdone"><li>寫網路爬蟲爬進每個農業相關坑把資料 dump 下來</li>
+<li>斷詞及詞性標註 (CKIP)</li>
+<li>關鍵詞萃取 (Length filtering + POS pattern filtering+ TF-IDF)</li>
+<li>議題相似度計算 (Cosine Similarity)</li>
+<li>社會網路分析 (Weighted-degree Centrality, Modularity clustering)</li>
+<li>坑坑相連到天邊的共現網路視覺化分析 (Gephi : 1-mode, homogeneous network analysis)</li></ul>
 <ul class="task"><li>Web 端連結 (JSON/GEXF to D3/Vis/Sigma)</li></ul>
 <ul class="comment"><li>目前輸出資料直接用 Vis 的 ForceAtlas2 排好像有點難收斂跑不完, 接下來改從 Gephi 輸出排好的 JSON/GEXF 直接用 Sigma 畫畫看</li></ul>
 <ul class="task"><li>自動化上面的流程</li></ul>
 
 <p><b>需要的資料</b></p><ul><li><a href='https://github.com/keithning/g0vxagrithontw'/>G0V 農業相關坑的清單</a> (<a href='https://g0v.hackpad.com/'/>G0V@Hackpad</a>)</li></ul>
+
+<p><b>目前整理好的資料庫結構及資料</b></p><ul><li><a href='https://drive.google.com/open?id=0B5Y4G6hItLzfZ1MyLXFXR3NmbDA'/>撈到並整理好的坑的資料</a> (`坑名`, `hackpad`, `內容`, `斷詞及POS標註結果`, `更新日期時間`, `weighted_degree`, `modularity`)</li>
+<li><a href='https://drive.google.com/open?id=0B5Y4G6hItLzfSVpxV3dmQWViQVU'/>關鍵詞及坑向量候選資料</a> (`關鍵詞`, `詞性`, `字串長度`, `在坑中出現次數`, `TF-IDF`)</li>
+<li><a href='https://drive.google.com/open?id=0B5Y4G6hItLzfVXdqM2t3TjBqbnc'/>網路連結</a> (`坑1`, `坑2`, `坑坑相似度`)</li></ul>
 
 <p><b>需要的人力或資源</b></p><ul class="task"><li>網路爬蟲</li>
 <li>中文斷詞系統 (CKIP)</li>
