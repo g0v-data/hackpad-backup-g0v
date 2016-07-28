@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1859"/>
+<meta name="version" content="2064"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$S5TC0hvy8r3</title>
 </head>
 <body><h1>第零次百姓松 civicth0n</h1><ul class="comment"><li>這個 pad 裡的課程規劃、文字、參考資料均採 CC0 拋棄著作權。</li></ul>
@@ -59,7 +59,42 @@
 
 <p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_S5TC0hvy8r3_p.41199_1465747654665_screenshot.jpg'/></p><p></p><h2>疑難排除</h2><p><b>High Fidelity</b></p><ul><li>在開啟瀏覽器時按下滑鼠右鍵，會讓自己暫停（出現按任意鍵繼續的圈圈），但是因為輸入被瀏覽器（或其他視窗）吃掉，無法繼續。此時勿將顯示模式切回 Desktop ，可能會讓滑鼠在 HMD 模式下無法作用。按 Ctrl 鍵解除暫停才是正解。</li>
 <li>在 Edit 模式下加入 web view 時，如果錯誤地將它放太大，會讓 High Fidelity Interface 無法回應，甚至讓 Windows 無法正確認識你的 HMD ，這時請小心地利用還能操作的空檔，把調壞的東西刪除即可。</li>
-<li>目前 Script Editor 無法在 VR 下使用，就算在 VR 模式開了它，也只能在 Desktop 看到，適合先想好再動手，而不是在 VR 世界中邊做邊改。</li></ul>
+<li>目前 Script Editor 無法在 VR 下使用，就算在 VR 模式開了它，也只能在 Desktop 模式看到，適合先想好再動手，而不是在 VR 世界中邊做邊改。</li>
+<li>雖然沒有右鍵菜單，但一樣可以用 `Ctrl-C` 等 hotkey 。</li>
+<li>如果想將 Marketplace 裡的內容搬到 caa-ins 內，可以用 browser 登入 <a href='https://highfidelity.io/marketplace'/>Marketplace</a> ，找到想要的內容，點擊「Get Item」，會得到一個 JSON 檔，以 TeaHouse 為例：</li></ul>
+<ul class="code"><li>{</li>
+<li>&nbsp; &quot;Entities&quot;: [</li>
+<li>&nbsp;&nbsp;&nbsp; {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;clientOnly&quot;: 0,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;compoundShapeURL&quot;: &quot;<a href="https://hifi-content.s3.amazonaws.com/DomainContent/Home/JJAssets/teahouse/teahouse_Hull4.obj"></a>https://hifi-content.s3.amazonaws.com/DomainContent/Home/JJAssets/teahouse/teahouse_Hull4.obj&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;created&quot;: &quot;2016-06-20T21:42:43Z&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;dimensions&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;x&quot;: 11.2451810836792,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;y&quot;: 6.7597455978393555,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;z&quot;: 10.591434478759766</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;id&quot;: &quot;{6a5ec39d-3c52-4fae-a601-1c2b43cf8786}&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;marketplaceID&quot;: &quot;26b76914-6662-469a-a070-a8a601f212ac&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;modelURL&quot;: &quot;<a href="https://hifi-content.s3.amazonaws.com/DomainContent/Home/JJAssets/teahouse/teahouseHiFi_RoofV2.fbx"></a>https://hifi-content.s3.amazonaws.com/DomainContent/Home/JJAssets/teahouse/teahouseHiFi_RoofV2.fbx&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;owningAvatarID&quot;: &quot;{00000000-0000-0000-0000-000000000000}&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;queryAACube&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;scale&quot;: 33.72397994995117,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;x&quot;: -16.861989974975586,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;y&quot;: -16.861989974975586,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;z&quot;: -16.861989974975586</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;registrationPoint&quot;: {</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;x&quot;: 0,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;y&quot;: 0,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;z&quot;: 0</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;shapeType&quot;: &quot;compound&quot;,</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;type&quot;: &quot;Model&quot;</li>
+<li>&nbsp;&nbsp;&nbsp; }</li>
+<li>&nbsp; ],</li>
+<li>&nbsp; &quot;Version&quot;: 60</li>
+<li>}</li></ul>
+<ul style="list-style: none;"><li>將其中 `compoundShapeURL` 與 `modelURL` 指向的檔案抓下來，接著按 <a href='http://blog.highfidelity.com/blog/2016/5/3/the-sandbox-asset-server'/>The Sandbox Asset Server</a> 的說明，上傳到 Asset Server ，再取得 `atp:/` 開頭的 URL ，就能替換掉 Entity 本來的 model 。</li></ul>
 
 </body>
 </html>
