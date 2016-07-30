@@ -3,11 +3,29 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="207"/>
+<meta name="version" content="401"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$y9IPMAkKfj2</title>
 </head>
-<body><h1>基本的訪談逐字稿</h1><p></p><p><a href='https://www.facebook.com/photo.php?fbid=10152824899882910&amp;set=a.172718147909.122769.532627909&amp;type=1&amp;theater&amp;notif_t=comment_mention'/>Macpaul Lin</a>：「it works! 透過一條音源線，把Speaker out put導到 MIC去，然後就可以一邊放youtube，然後另外一邊用Google語音辨識，讓電腦幫你作逐字稿！（Firefox x Chrome) 但是Google語音辨識速度明顯比人講話慢。猜測應該跟網路頻寬，以及計算能力有關。所以理論上，對於這種背景雜音乾淨的語音檔，可以接Google web 語音辨識的API，就能輕鬆做出基本的訪談逐字稿。」</p><p>*</p><p></p><h2>Window</h2><p></p><p></p><p></p><p></p><h2>Mac</h2><p></p><p></p><p></p><p></p><h2>其他 Q&A</h2><ul><li>關於「音源線」</li>
-<li>若想要直播同時產出文字？收音效果是不是要夠好才能讓較好的逐字稿品質？</li>
+<body><h1>audio loopback 基本的訪談逐字稿</h1><p></p><h2>做法搜集</h2><ul><li>Linux 系統 audio loopback：<ul><li><a href="https://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/Modules/#index63h3"></a><a href='https://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/Modules/#index63h3'/>https://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/Modules/</a><a href='https://g0v.hackpad.com/ep/search/?q=%23index63h3&amp;via=y9IPMAkKfj2'/>#index63h3</a></li></ul>
+</li>
+<li>Macpaul Lin&gt; it works! 透過一條音源線，把Speaker out put導到 MIC去，然後就可以一邊放youtube，然後另外一邊用Google語音辨識，讓電腦幫你作逐字稿！（Firefox x Chrome) 但是Google語音辨識速度明顯比人講話慢。猜測應該跟網路頻寬，以及計算能力有關。所以理論上，對於這種背景雜音乾淨的語音檔，可以接Google web 語音辨識的API，就能輕鬆做出基本的訪談逐字稿 <a href="https://www.facebook.com/photo.php?fbid=10152824899882910&set=a.172718147909.122769.532627909&type=1&theater&notif_t=comment_mention"></a>https://www.facebook.com/photo.php?fbid=10152824899882910&amp;set=a.172718147909.122769.532627909&amp;type=1&amp;theater&amp;notif_t=comment_mention</li>
+<li>Scott Tsai&gt; 自製做法 <a href="https://www.facebook.com/700484037/posts/10153115500289038"></a><a href='https://www.facebook.com/700484037/posts/10153115500289038'/>https://www.facebook.com/700484037/posts/10153115500289038</a></li>
+<li>若只有一個音源孔<ul><li>買：有音效卡的 splitter<ul><li><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_y9IPMAkKfj2_p.172171_1469869728699_1505359_10153115332719038_8240437105901406212_n.jpg'/></li></ul>
+</ul>
+</ul>
+
+<p></p><p></p><h2>辨識軟體</h2><ul><li>Google 語音辨識網頁<ul><li><a href="https://www.google.com/intl/en/chrome/demos/speech.html"></a>https://www.google.com/intl/en/chrome/demos/speech.html</li>
+<li>運用 audio loopback 3-4 分鐘後，網頁會自動停止辨識？</li></ul>
+</li>
+<li>Google Docs 新增中文語音輸入功能<ul><li><a href="http://www.playpcesor.com/2015/09/google-docs.html"></a><a href='http://www.playpcesor.com/2015/09/google-docs.html'/>http://www.playpcesor.com/2015/09/google-docs.html</a></li></ul>
+</li>
+<li><u>Speechnotes</u><ul><li><a href="https://free.com.tw/speechnotes/?utm_content=bufferc9a7a&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer"></a><u><a href='https://free.com.tw/speechnotes/?utm_content=bufferc9a7a&amp;utm_medium=social&amp;utm_source=facebook.com&amp;utm_campaign=buffer'/>https://free.com.tw/speechnotes/?utm_content=bufferc9a7a&amp;utm_medium=social&amp;utm_source=facebook.com&amp;utm_campaign=buffer</a></u></li></ul>
+</ul>
+
+<p></p><h2>其他 Q&A</h2><ul><li>逐字稿品質<ul><li>若想要「直播」同時產出文字？</li>
+<li>收音效果是不是要夠好才能讓較好的逐字稿品質？</li></ul>
+</li>
+<li>關於「音源線」</li>
 <li>youtube 自動字幕功能？</li>
 <li>Mac｜自動會停止？</li>
 <li>Mac｜如果所選音訊裝置回復為另一個音訊裝置｜如果您在「聲音」偏好設定的「輸出」或「輸入」面板中選擇一個音訊裝置，但是音訊輸出或輸入立即回復為另一個音訊裝置，請嘗試下列解決方案：<ul><li>如果您將耳機或外接揚聲器插入連接至顯示器的 Mac，並在「聲音」偏好設定的「輸出」面板中選擇顯示器的內建揚聲器，則您的選擇會回復為耳機或外接揚聲器。若要選擇顯示器的揚聲器，請先拔除耳機或外接揚聲器。</li>
@@ -29,9 +47,5 @@
 </li></ul>
 <ul class="comment"><li>不太懂他的概念，可以多解釋一些嗎？</li></ul>
 
-<p></p><ul><li>支援聽寫！ Google Docs 新增中文語音輸入功能<ul><li><a href="http://www.playpcesor.com/2015/09/google-docs.html"></a>http://www.playpcesor.com/2015/09/google-docs.html</li></ul>
-</li>
-<li><a href="https://free.com.tw/speechnotes/?utm_content=bufferc9a7a&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer"></a><a href='https://free.com.tw/speechnotes/?utm_content=bufferc9a7a&amp;utm_medium=social&amp;utm_source=facebook.com&amp;utm_campaign=buffer'/>https://free.com.tw/speechnotes/?utm_content=bufferc9a7a&amp;utm_medium=social&amp;utm_source=facebook.com&amp;utm_campaign=buffer</a></li></ul>
-
-</body>
+<p></p></body>
 </html>
