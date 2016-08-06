@@ -3,12 +3,31 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="84"/>
+<meta name="version" content="323"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$i0SaVNv0Z5k</title>
 </head>
 <body><h1>勞基法討論</h1><p>2016/08/06 g0v hackath20n&nbsp;</p><p></p><p><img src='http://i.imgur.com/2yzv4io.jpg'/></p><p><a href="http://i.imgur.com/2yzv4io.jpg"></a>http://i.imgur.com/2yzv4io.jpg</p><p></p><ul><li><a href='http://lci.ly.gov.tw/LyLCEW/agenda1/02/pdf/09/01/21/LCEWA01_090121_00019.pdf'/>時代力量勞基法修法提案：院總第 1121 號 委員提案第 19428 號</a></li>
 <li><a href='http://www.mol.gov.tw/media/2688168/2015%E5%B7%A5%E6%99%82%E5%88%B6%E5%BA%A6%E5%8F%8A%E5%B7%A5%E4%BD%9C%E5%BD%88%E6%80%A7%E5%8C%96%E6%8E%AA%E6%96%BD%E6%89%8B%E5%86%8A.pdf'/>2015工時制度及工作彈性化措施手冊</a></li>
-<li><a href='http://bola.gov.taipei/public/Data/6159545171.pdf'/>2016 法規實務彙編</a></li></ul>
+<li><a href='http://bola.gov.taipei/public/Data/6159545171.pdf'/>2016 法規實務彙編</a></li>
+<li><a href='http://www.eventsinfocus.org/news/368'/>高鐵工會抗爭談到的工時水庫問題</a></li></ul>
 
-<p></p><p></p><p>變形工時</p><p>輸入</p><p>類型：雙週，四周，八週</p><p>每天工時：</p><p></p><p>輸出：</p><p>最低薪水</p><p>是否違法</p><p></p></body>
+<p></p><p></p><p>變形工時</p><p>輸入</p><p>類型：雙週，四周，八週</p><p>每天工時：</p><p></p><p>輸出：</p><p>最低薪水</p><p>是否違法</p><p></p><p><b>會造成工時違法的條件</b></p><ol><li>每天最多工作12小時</li>
+<li>每七天最少要休一天</li>
+<li>每個月加班不可超過46小時（一般以月份計，跨月即重新計算加班時數）</li></ol>
+
+<h2>測試案例</h2><ul class="code"><li>8&nbsp; 8 8 8 8 0 0</li>
+<li>12 8 8 8 0 0 0&nbsp;</li></ul>
+
+<ol><li>每天有沒有超過 12 小時</li>
+<li>非 0 不能連續超過 12 天</li>
+<li>兩週內工時有沒有超過 80+ 46</li>
+<li>四週內工時不能超過 160 + 46 （如果加在行事曆才可以做這功能）</li></ol>
+<ul class="comment"><li>不過這條有爭議，因為四週內不見得是一個月，有可能是跨越兩個月</li></ul>
+
+<ul class="code"><li>8&nbsp; 8 8 8 8 0 0</li>
+<li>10 8 8 8 0 0 0&nbsp;</li></ul>
+
+<p></p><h2>實作細節</h2><ul><li>應該把在 Google Calendar 輸入每天的工時，然後在網站上面檢查數值</li></ul>
+
+<p></p></body>
 </html>
