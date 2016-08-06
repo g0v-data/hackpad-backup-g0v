@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="849"/>
+<meta name="version" content="943"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$riRTvbB0E5x</title>
 </head>
 <body><h1>g0v 零時空汙觀測專案-網站開發共筆</h1><p>此區為<a href='/g0v--TexkKFNmqZP'/>g0v 零時空汙觀測專案</a>的子分區，提供網站方面開發共筆</p><p></p><h2>網站開發方向大綱</h2><p></p><p><b>欲整合之目標</b></p><ul><li>即時觀測資料 (包括官方與非官方測站的觀測資訊)</li>
@@ -35,6 +35,10 @@
 <li>建置獨立自造者提交資料即自動上線的提交頁面(提交後會被分類至未審核群組，待管理員審核後才會移入使用者預先命名的群組)<ul><li>preset site gorup</li></ul>
 </li>
 <li>舊站須能接收新站的獨立自造者更新站點</li></ul>
+</li>
+<li>airbox資料串接事項:<ul><li>著力點: edimax官網地圖沒有做資料保護，下游資料串接亦無需要求保護</li>
+<li>可建議edimax建立(&quot;有用的&quot;)api token系統方便做下游資料利用管理</li>
+<li><br/></li></ul>
 </ul>
 </ul>
 
@@ -45,8 +49,11 @@
 </li>
 <li>細懸浮微粒即時值查詢(PM2.5) <a href="http://taqm.epa.gov.tw/pm25/tw/HourlyData.aspx"></a><a href='http://taqm.epa.gov.tw/pm25/tw/HourlyData.aspx'/>http://taqm.epa.gov.tw/pm25/tw/HourlyData.aspx</a><ul class="taskdone"><li>asper_hsu已拆 <a href="http://taqm-hourly.appspot.com/"></a><a href='http://taqm-hourly.appspot.com/'/>http://taqm-hourly.appspot.com/</a></li></ul>
 </ul>
-</ul>
-<ul class="task"><li>改善右下角更新資訊呈現</li></ul>
+<ul class="task"><li>Airbox API（未公開）<ul class="task"><li><a href='https://airbox.edimaxcloud.com/devices?token=EA81A1FA-8EDB-4CA0-B07B-A881C74B0401'/>列表—</a><a href="https://airbox.edimaxcloud.com/devices?token=EA81A1FA-8EDB-4CA0-B07B-A881C74B0401"></a><a href='https://airbox.edimaxcloud.com/devices?token=EA81A1FA-8EDB-4CA0-B07B-A881C74B0401'/>https://airbox.edimaxcloud.com/devices?token=EA81A1FA-8EDB-4CA0-B07B-A881C74B0401</a></li>
+<li><a href='https://airbox.edimaxcloud.com/query_history?id='/>紀錄—</a><a href="https://airbox.edimaxcloud.com/query_history?id="></a>https://airbox.edimaxcloud.com/query_history?id=<a href='https://airbox.edimaxcloud.com/query_history?id=&amp;token=EA81A1FA-8EDB-4CA0-B07B-A881C74B0401'/>{</a>id]&amp;token=EA81A1FA-8EDB-4CA0-B07B-A881C74B0401</li></ul class="task">
+</li></ul class="task">
+</li>
+<li>改善右下角更新資訊呈現</li></ul>
 
 <p></p><h2>許願區或其他疑問待討論 (等待工程師跳坑區)</h2><ul><li><b>資料相關區</b></li><ul class="taskdone"><li>環保署的開放資料發佈時間會比觀測發佈延遲一個小時，而觀測站每次發佈又是上一小時的觀測資料，常常呈現的資料都已經是兩個小時之後，無法真正即時呈現，或許還是得想辦法拆原始的環保署測站資料，或是有人能去協調環保署同步測站發佈和開放資料平台發佈的時間。</li><ul><li>環保署空品資料發佈的流程是：</li></ul>
 <ul style="list-style: none;"><li>感測器-----&gt;TQAM(<a href='http://taqm.epa.gov.tw/taqm/tw/default.aspx'/>空品監測網</a>的Server)----<i>每整點發佈</i>----&gt;<a href='http://cdx.epa.gov.tw/CDX/main.aspx'/>CDX</a>平台---<i>過幾分鐘</i>----&gt;OpenData介接並Publish資料(也是每個整點)。因此卡在這每整點發佈及各平台傳輸訂閱時間的問題，所以真的收到資料已經兩小時之後～目前會再詢問環保署能否改善這狀況，真的做到即時傳輸與發佈。</li><ul class="comment"><li>太好了!! 如果能夠從資料源頭解決的話是最好的解法了!!</li>
