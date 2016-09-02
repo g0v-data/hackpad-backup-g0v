@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="3127"/>
+<meta name="version" content="3199"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$RMxaA4LYwyn</title>
 </head>
 <body><h1>g0v Domain SOP draft</h1><p></p><h2>緣由</h2><p>符合開源、符合 g0v `公民科技、開放政府等相關主題，並願意成為 g0v 專案，可掛 g0v logo、可掛自己 domain 或 g0v.tw domain。 <b><u>本文件處理符合 g0v 專案條件，並想使用 g0v domain 的申請流程</u></b>。「如何成為 g0v 專案」將另開共筆說明。</p><p></p><h2>實際案例</h2><p>案例</p><ul><li>立委投票指南：<a href="http://vote.ly.g0v.tw"></a>http://vote.ly.g0v.tw&nbsp;</li>
@@ -85,7 +85,9 @@
 <ul><li>是否可以接受 wildcard 申請，例如 *.foo.g0v.tw</li></ul>
 <ul class="comment"><li>我是沒想到具體的應用，只是突然想到這問題所以先提出來，在沒具體需求出現前我覺得這問題應該不重要</li></ul>
 
-<ul><li>.tw .asia .world .space .today 為不同人所有，此文件只處理 .tw? 或？</li></ul>
+<ul><li>.tw .asia .world .space .today 為不同人所有，此文件只處理 .tw? 或？<ul><li>此文件僅處理 .tw .asia .world .space 等 clkao 登記之網域</li>
+<li>歡迎其他 g0v 網域 fork SOP&nbsp;</li></ul>
+</ul>
 
 <h2>確定可申請</h2><ul><li>命名規則<ul><li>如果這個服務跟原來政府的服務重疊，盡量用一樣的名字，這樣改一個字元就好。例：ly.g0v.tw&nbsp;</li></ul>
 <ul class="comment"><li>不過我覺得這邊會有個可能的問題，像是我的公司資料查詢用的網址是 gcis.nat.g0v.tw ，跟商業司的 gcis.nat.gov.tw 一樣， 但是像商業司有提供公司、商業登記和工廠查詢，而我的 gcis.nat.g0v.tw 只有公司和商業登記，並沒包含到工廠，假如又有其他專案做了工廠查詢功能，那要如何命名比較好?</li></ul>
@@ -105,7 +107,8 @@
 </ul>
 </ul>
 
-<h2>退場機制</h2><ul><li><br/></li></ul>
+<h2>退場機制</h2><ul><li>ping 2 週 domain 網站沒有活著，呼叫不到主人，公告 2 週後退場</li>
+<li>2 週後還是沒下文，正式退場</li></ul>
 
 <h2>申請流程</h2><p><b>Ronny 提議版本</b></p><ul><li>基本架構<ul><li>開一個 <a href="https://github.com/g0v/domain"></a>https://github.com/g0v/domain 來管理 g0v.{tw|us|...} 的申請</li>
 <li>這個 repo 沒有任何資料夾，最上層會針對每一個已經有 g0v.tw 的 domain 會有 foo.g0v.tw.json 的檔案 (Ex: newshelper.g0v.tw.json, ly.g0v.tw.json)</li>
