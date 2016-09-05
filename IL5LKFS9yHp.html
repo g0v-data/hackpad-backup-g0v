@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="1045"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$IL5LKFS9yHp</title>
+</head>
+<body><h1>g0v Cloud</h1><p></p><h2>前言</h2><p>我是 Ronny ，我在三年前開發了一個 heroku clone ，主因是我覺得 heroku 的 PaaS 界面使用起來很方便，只要在網頁上點一下就可以新增一個專案並得到一個 git url ，然後把程式碼用 git 推上去網頁就建置好了，省去很多 web server 設定的麻煩，但是 Heroku 價錢太貴了，因此我決定自幹一個 Heroku 出來，之後新聞小幫手、求職小幫手、台灣公司資料等我有幾十個專案都跑在上面，現在 open source 在 <a href="https://github.com/ronnywang/hisoku"></a>https://github.com/ronnywang/hisoku (hisoku 這名字是想跟 heroku 相對，heroku 是 her ，hisoku 是 his XD) ，目前有實作若超過一小時無人瀏覽的網站會將資源釋出，等到有人看到再自動跑起來，因此可以用更少的機器資源跑起更多的服務，希望能先提供給 g0v project&nbsp;&nbsp; 試試看來這邊跑跑看，省去自己的機器錢，也希望有機會可以。</p><p></p><h2>功能</h2><ul><li>支援 PHP (5.6.24), NodeJS(0.10.29), Python(2.7.9), ruby(2.1.5)</li>
+<li>支援 npm (package.json), pip(requirements.txt), gem (Gemfile) 自動安裝套件</li>
+<li>可自動建立 MySQL, PostgreSQL, ElasticSearch db 使用</li>
+<li>可以用 env 設定各種 api key 或是設定，以便程式碼內不用放這些資訊</li>
+<li>以 git push 做 deployment</li>
+<li>每一個專案是運作在 docker 內，因此專案間是無法互相碰到別的專案</li>
+<li>可以用 custom domain ，也支援 letsencrpt 可幫專案加上&nbsp; SSL</li>
+<li>可以跑 cron (1min, 1hour, 1day) ，也可以跑 worker</li>
+<li>database 未開放外部可連，但是可以透過 ssh tunnel 連入方便遠端將初始資料倒入或 migration</li></ul>
+
+<h2>目前已運作網站</h2><ul><li><a href="https://company.g0v.ronny.tw/"></a>https://company.g0v.ronny.tw/ 台灣公司資料</li>
+<li><a href="https://newshelper.g0v.ronny.tw/"></a>https://newshelper.g0v.ronny.tw/ 新聞小幫手</li>
+<li><a href="https://jobhelper.g0v.ronny.tw/"></a>https://jobhelper.g0v.ronny.tw/ 求職小幫手</li>
+<li><a href="http://report.nat.g0v.tw/"></a>http://report.nat.g0v.tw/ 公務人員出國指南</li>
+<li><a href="http://portal.g0v.ronny.tw/"></a>http://portal.g0v.ronny.tw/ 關貿進出口資料</li></ul>
+
+<h2>申請方式</h2><p>因為過去都是 Ronny 自己的專案在運作，不確定其他人專案會不會遇到什麼問題，因此目前未開放註冊，如有需要可以透過 slack 或是 ronnywang@gmail.com 信箱與 ronnywang 連絡，只要你的專案是 open data 或是 civic tech project ，並且有 open source code ，這邊都歡迎加入。</p><p></p><h2>討論區</h2><p>歡迎大家自由發問討論!</p><ul class="comment"><li>雖然有 open source ，不過現在文件很不足 XD 會慢慢再補齊的</li></ul>
+
+</body>
+</html>
