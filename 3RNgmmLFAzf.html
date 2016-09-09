@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="971"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$3RNgmmLFAzf</title>
+</head>
+<body><h1>檢視、分析、利用 data.gov.tw 全站資料集</h1><h2>專案簡介</h2><p></p><p><b>緣由</b></p><p>data.gov.tw 有提供全站資料集的資料集</p><p><a href="http://data.gov.tw/node/6564"></a>http://data.gov.tw/node/6564 政府資料開放平臺資料集清單</p><p>有這份資料就可以做些有趣的分析</p><p></p><p><b>要解決的問題</b></p><p>以下是天馬行空的發想</p><ul><li>分析類<ul><li>分析那些 metadata 是否有錯、漏</li>
+<li>定期掃描統計那些外連的 link 是否可用、網路速度如何</li>
+<li>檢查資料是否如宣稱的頻率更新</li>
+<li>統計資料格式類別(big5? pdf/jpg? 網頁而非 structure data?)</li>
+<li>自動偵測或手動 label 哪些是 bad opendata practice?<ul><li>譬如 pdf 內是圖檔</li>
+<li>譬如 csv 內放 html (<a href='http://data.gov.tw/node/6935'/>例</a>)</li></ul>
+</li>
+<li>統計網站上 &quot;我還想要&quot; 的回覆速度及通過比例?<ul><li>不過這要另外 crawl 網站, 可能還要人工判讀</li></ul>
+</li>
+<li>針對特定資料類別, 可能可以作更細部的檢查<ul><li>譬如 <a href="https://g0v.hackpad.com/oI2cydKYnYy"></a>https://g0v.hackpad.com/oI2cydKYnYy 檢查缺乏公司統編欄位</li>
+<li>電話、座標、時間等結構化欄位是否格式正確</li></ul>
+</li></ul>
+</li>
+<li>增加更多功能, 提供其他 service<ul><li>全站 mirror 到 github ?</li>
+<li>提供 advanced search</li>
+<li>讓 user 自行加 label, 評分, star 等功能</li>
+<li>data.gov.tw 有「資料集統計」功能(page view, download count, etc) r及其他基本分類統計, 也許可以玩視覺化</li></ul>
+</ul>
+
+<p></p><p><b>預定使用者</b></p><p>（成品要給誰用、在什麼場合用、怎麼用）</p><ol><li>分析的結果可以讓大家了解現在資料品質, 也可反饋給 data.gov.tw 團隊作為改善目標</li>
+<li>也許可以做 data.gov.tw clone 提供額外的功能, 方便 data 使用者</li></ol>
+
+<p></p><p><b>預定功能</b></p><p>（成品要有哪些功能來滿足上述使用情境）</p><p></p><p><b>現有類似專案</b></p><p>（現成的是否可以直接使用？或者有什麼不足之處？國外專案可參考？）</p><ul><li><a href="https://github.com/g0v-data/"></a>https://github.com/g0v-data/ 有些 data.gov.tw backup</li>
+<li>之前 ronnywang 有做過類似 data.gov.tw clone, 我忘了網址</li>
+<li><a href="http://sheethub.com/"></a>http://sheethub.com/</li>
+<li>其實之前也有看過有人統計 data.gov.tw 的資料品質, 不過只有單次統計</li></ul>
+
+<p><b>相關專案</b></p><p>（衍生自某專案/衍生出某專案/API串接自某專案.）</p><p></p><p><b>授權方式</b></p><p>Apache 2</p><p></p><p><b>使用資料</b></p><p><a href="http://data.gov.tw/node/6564"></a>http://data.gov.tw/node/6564</p><p></p><p><b>專案目前狀態</b></p><p>構想</p><p></p><p></p><h2>徵求協作者</h2><p></p><p>發起人/拋磚人：kcwu</p><p>其實我只是丟丟想法, 大家可以繼續發想/撿去做</p><p></p><p></p><h2>實作細節（非技術背景可跳填）</h2><p></p><p><b>協作工具</b></p><ul><li>github repo：</li></ul>
+
+<p></p><p></p><h2>成果展示（規劃文件、雛形/草稿、原型/初稿、正式發佈/完稿）</h2><p></p></body>
+</html>
