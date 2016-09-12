@@ -3,30 +3,51 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1190"/>
+<meta name="version" content="1677"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$3RNgmmLFAzf</title>
 </head>
 <body><h1>檢視、分析、利用 data.gov.tw 全站資料集</h1><h2>專案簡介</h2><p></p><p><b>緣由</b></p><p>data.gov.tw 有提供全站資料集的資料集</p><p><a href="http://data.gov.tw/node/6564"></a>http://data.gov.tw/node/6564 政府資料開放平臺資料集清單</p><p>有這份資料就可以做些有趣的分析</p><p></p><p><b>要解決的問題</b></p><p>以下是天馬行空的發想</p><ul><li>分析類<ul><li>分析那些 metadata 是否有錯、漏<ul><li>已經有人反應該 dataset 很髒 <a href="https://www.facebook.com/groups/odtwn/permalink/1621411874539891/?comment_id=1624639327550479&comment_tracking=%7B%22tn%22%3A%22R%22%7D"></a>https://www.facebook.com/groups/odtwn/permalink/1621411874539891/?comment_id=1624639327550479&amp;comment_tracking=%7B%22tn%22%3A%22R%22%7D</li></ul>
-</li>
-<li>定期掃描統計那些外連的 link 是否可用、網路速度如何</li>
-<li>檢查資料是否如宣稱的頻率更新</li>
-<li>統計資料格式類別(big5? pdf/jpg? 網頁而非 structure data?)</li>
-<li>自動偵測或手動 label 哪些是 bad opendata practice?<ul><li>譬如 pdf 內是圖檔<ul><li><a href="http://data.gov.tw/node/11040"></a>http://data.gov.tw/node/11040 rar -&gt; pdf -&gt; 掃描圖檔</li></ul>
+<ul class="comment"><li>很髒應該是過去式啦~~~XD</li></ul>
+</ul>
+<ul><li>定期掃描統計那些外連的 link 是否可用、網路速度如何</li></ul>
+<ul class="comment"><li>平台有這功能哦，不過目前只通知資料提供者</li></ul>
+<ul><li>檢查資料是否如宣稱的頻率更新</li></ul>
+<ul class="comment"><li>這項有檢核困難，因資料提供方式不一，若採抽換檔案型態將難以比對；API、SOAP等型態亦難以確認其更新頻率是否吻合</li>
+<li>可以從易於檢核的開始做 :)</li></ul>
+<ul><li>統計資料格式類別(big5? pdf/jpg? 網頁而非 structure data?)</li></ul>
+<ul class="comment"><li>目前會內立場是以UTF-8作為主要推廣格式，雖然我覺得這塊宣導要很久...</li>
+<li>我完全理解且同意不強推 UTF-8, 只是仍透過統計來突顯、製造一點壓力</li></ul>
+<ul><li>自動偵測或手動 label 哪些是 bad opendata practice?<ul><li>譬如 pdf 內是圖檔<ul><li><a href="http://data.gov.tw/node/11040"></a>http://data.gov.tw/node/11040 rar -&gt; pdf -&gt; 掃描圖檔</li></ul>
 </li>
 <li>譬如 csv 內放 html (<a href='http://data.gov.tw/node/6935'/>例</a>)</li>
 <li>&quot;資料公開&quot; 也拿來當 &quot;開放資料&quot;. 這例子太多了.<ul><li>只是若想全站檢視可能要定義怎麼不算開放資料, 我不確定是否有辦法明確界定</li></ul>
-</li></ul>
-</li>
-<li>統計網站上 &quot;我還想要&quot; 的回覆速度及通過比例?<ul><li>不過這要另外 crawl 網站, 可能還要人工判讀</li></ul>
-</li>
-<li>針對特定資料類別, 可能可以作更細部的檢查<ul><li>譬如 <a href="https://g0v.hackpad.com/oI2cydKYnYy"></a>https://g0v.hackpad.com/oI2cydKYnYy 檢查缺乏公司統編欄位</li>
+<ul class="comment"><li>我個人想要用&quot;資料集品質評鑑機制&quot;把這塊殺光光...XD</li>
+<li>但長官不允許orz 已經開好hackpad，再給我點時間整理...orz</li></ul>
+</ul>
+</ul>
+<ul><li>統計網站上 &quot;我還想要&quot; 的回覆速度及通過比例?<ul><li>不過這要另外 crawl 網站, 可能還要人工判讀</li></ul>
+<ul class="comment"><li>回覆速度這已有系統自動勾稽哦，不過回覆完怎麼處理真的就要靠人工了...</li></ul>
+</ul>
+<ul><li>針對特定資料類別, 可能可以作更細部的檢查<ul><li>譬如 <a href="https://g0v.hackpad.com/oI2cydKYnYy"></a>https://g0v.hackpad.com/oI2cydKYnYy 檢查缺乏公司統編欄位</li>
 <li>電話、座標、時間等結構化欄位是否格式正確</li></ul>
 </li></ul>
 </li>
-<li>增加更多功能, 提供其他 service<ul><li>全站 mirror 到 github ?</li>
-<li>提供 advanced search</li>
-<li>讓 user 自行加 label, 評分, star 等功能</li>
-<li>data.gov.tw 有「資料集統計」功能(page view, download count, etc) r及其他基本分類統計, 也許可以玩視覺化</li></ul>
+<li>增加更多功能, 提供其他 service<ul><li>全站 mirror 到 github ?</li></ul>
+<ul class="comment"><li>目前已有提供CSV格式可dump到github</li>
+<li>希望是自動化定期備份, 而不只是單次 dump</li>
+<li>這樣感覺是需要API?</li>
+<li>現在已經有固定 url 就夠, 所以不一定需要新的 API. 不過說到 API, 是否有提供得知資料上次更新時間?</li>
+<li>目前沒有orz 因為資料型態實在太多太雜，有整包更新含歷史資料的、有不斷追加新檔然後砍舊檔的、有只留最新版本其他通通砍掉的... API的話，若要提供前次更新時間.....hmm...&nbsp;</li>
+<li>聽起來要先在 metadata 多一個欄位標記該資料是上述哪一種 XD</li></ul>
+<ul><li>提供 advanced search</li></ul>
+<ul class="comment"><li>現在搜尋結果可搭配左側機關、分類、檔案格式進行多重條件篩選，要怎樣更advanced歡迎提出哦~</li></ul>
+<ul><li>讓 user 自行加 label, 評分, star 等功能</li></ul>
+<ul class="comment"><li>已經有針對最高評價標籤投票的功能哦，不滿意可以自建，採投票權重制。</li>
+<li>不過前提是要先登入帳號才有這個功能...XD</li>
+<li>如果我是重度使用者的話, 我會想要設自己才能看到的 label, 有自己的分類方式(譬如有個 label 叫爛 data XD), 方便過濾. 不過這種功能使用率恐怕很低, 不見得真的值得做.</li>
+<li>相當客製化的功能... 我當初甚至有在想網頁瀏覽習慣要不要也要客製化一下，但被駁回XDrz</li></ul>
+<ul><li>data.gov.tw 有「資料集統計」功能(page view, download count, etc) r及其他基本分類統計, 也許可以玩視覺化</li></ul>
+<ul class="comment"><li>這塊後臺做了不少... 感覺應該全開放才對，怕VM不夠力動不動就塞爆就是XDrz</li></ul>
 </ul>
 
 <p></p><p><b>預定使用者</b></p><p>（成品要給誰用、在什麼場合用、怎麼用）</p><ol><li>分析的結果可以讓大家了解現在資料品質, 也可反饋給 data.gov.tw 團隊作為改善目標</li>
