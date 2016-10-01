@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1379"/>
+<meta name="version" content="1710"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$lSO9U2PIh2X</title>
 </head>
 <body><h1>十月第⑰次萌典松 moed17ct</h1><p>時間：10/1（六） 11am-8:00pm（歡迎遲到早退）</p><p>地點：台北市信義區忠孝東路五段293號3樓（Bookshow 說書會）</p><p>名額：43 人（<a href='http://moe.kktix.cc/events/moedict-10-1'/>報名頁面</a>）</p><p>內容：比照之前萌典松，採「併松」模式舉行，歡迎 g0v 各大小專案加<b>「萌」</b>參加。</p><p>費用：採量力而捐、自由贊助方式。如有剩餘，捐給下次黑客松。</p><p>活動守則：<a href="https://g0v.io/coc"></a><a href='https://g0v.io/coc'/>https://g0v.io/coc</a></p><p>直播連結：<a href="https://www.youtube.com/watch?v=YBurrfE0WOs"></a><a href='https://www.youtube.com/watch?v=YBurrfE0WOs'/>https://www.youtube.com/watch?v=YBurrfE0WOs</a></p><ul class="comment"><li>歡迎追蹤 g0v <a href='https://plus.google.com/+g0vTW'/>Google+</a> 或 <a href='https://www.youtube.com/user/g0vTW'/>Youtube 頻道</a> 接收開播通知</li></ul>
@@ -16,8 +16,19 @@
 <ul><li><b>iTaigi 愛台語 網站</b><a href="http://itaigi.tw/"></a><b>http://itaigi.tw/</b><b>&nbsp; 、</b><a href='/moed7ct-taigi-neologism#iTaigi'/>hackpad</a><b>、</b><a href='https://github.com/g0v/itaigi'/>github</a></li></ul>
 <ul style="list-style: none;"><li>預計分組進行，不會寫程式的人也可以充分參與，<a href='/moed7ct-taigi-neologism#:h=20161001萌典松'/>本次萌典松待執行項目</a>歡迎補充</li></ul>
 
-<p></p><h2>併松</h2><ul class="comment"><li>歡迎把想做的專案 / 計畫寫在這裡，讓更多人看到一起幫忙！</li></ul>
-<p><b>《情境遊戲》南萬華群眾命名</b></p><p>需要前端工程師</p><p>提案介紹：<a href="https://paper.dropbox.com/doc/vs8DUuUZI7YRddWVhyMfS"></a><a href='https://paper.dropbox.com/doc/vs8DUuUZI7YRddWVhyMfS'/>https://paper.dropbox.com/doc/vs8DUuUZI7YRddWVhyMfS</a></p><p>介面mockup</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_lSO9U2PIh2X_p.124951_1475295947739_Screen Shot 2016-10-01 at 12.21.52 PM.png'/></p><p></p><p><b><a href='/q5zhtMJeVQm'/>臺語語音轉文字輸入法</a></b></p><p>我是宜蘭相褒龍~莊文龍，2002年開始佇學校教臺語，推廣臺語七字仔四句聯相褒歌。一大夢想是做<a href='https://g0v.hackpad.com/q5zhtMJeVQm'/>臺語語音轉文字輸入法</a>，但是可能程序設計這方面需要高手大力幫贊。</p><ul class="comment"><li>像電腦、手機輸入&amp;衛星導航，電腦拍文件，像咱對話免拍字用麥克就有字出現，留下會議紀錄等。</li>
+<h2>併松</h2><ul class="comment"><li>歡迎把想做的專案 / 計畫寫在這裡，讓更多人看到一起幫忙！</li></ul>
+<p><b>《情境遊戲》南萬華群眾命名</b></p><p>需要前端工程師</p><p>需要知皓收服大家</p><p>提案介紹：<a href="https://paper.dropbox.com/doc/vs8DUuUZI7YRddWVhyMfS"></a><a href='https://paper.dropbox.com/doc/vs8DUuUZI7YRddWVhyMfS'/>https://paper.dropbox.com/doc/vs8DUuUZI7YRddWVhyMfS</a></p><p>介面mockup</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_lSO9U2PIh2X_p.124951_1475295947739_Screen Shot 2016-10-01 at 12.21.52 PM.png'/></p><p>技術需求</p><ul><li>mobile web (js) 定位、取得座標</li>
+<li>mobile web (js) Google Maps API，根據座標顯示附近的地圖</li>
+<li>mobile web (js) 上傳圖檔</li></ul>
+
+<p>上傳圖檔meta data</p><ul><li>座標（固定不能更改）</li>
+<li>List of comments: {user id, name of place}<ul><li>每個comment都要有兩個分數：正分和負分</li></ul>
+</ul>
+
+<p>hosting</p><ul><li><a href="http://www.digicity.ws/"></a>http://www.digicity.ws/</li></ul>
+<p>上傳圖檔儲存需要server空間</p><ul><li>好像可以用cloudinary</li></ul>
+<p>圖檔metadata需要text-based db</p><ul><li>好像可以用firebase</li></ul>
+<p>My city.</p><p></p><p><b><a href='/q5zhtMJeVQm'/>臺語語音轉文字輸入法</a></b></p><p>我是宜蘭相褒龍~莊文龍，2002年開始佇學校教臺語，推廣臺語七字仔四句聯相褒歌。一大夢想是做<a href='https://g0v.hackpad.com/q5zhtMJeVQm'/>臺語語音轉文字輸入法</a>，但是可能程序設計這方面需要高手大力幫贊。</p><ul class="comment"><li>像電腦、手機輸入&amp;衛星導航，電腦拍文件，像咱對話免拍字用麥克就有字出現，留下會議紀錄等。</li>
 <li>薛丞宏:我做一個簡單的網站，予逐家傳音檔</li>
 <li><a href="https://github.com/sih4sing5hong5/TaiwaneseInputMethod"></a><a href='https://github.com/sih4sing5hong5/TaiwaneseInputMethod'/>https://github.com/sih4sing5hong5/TaiwaneseInputMethod</a></li>
 <li>若有老師先錄音，先加減用。</li>
@@ -77,5 +88,13 @@
 <li>♫ 音量以不干擾大家工作聊天為原則，Youtube playlist, iTunes, soundcloud…...皆可</li>
 <li><br/></li></ul>
 <p>線上投稿（by Shoichi Chou）XD：</p><p>*</p><p><a href="https://soundcloud.com/chou-shoichi/hackathonjpver080215-remixed"></a>https://soundcloud.com/chou-shoichi/hackathonjpver080215-remixed</p><p></p><p>投稿午餐音樂（應該會聽到睡著）&nbsp;</p><ul class="comment"><li>12:53 放送中</li></ul>
-<p><a href="https://open.spotify.com/user/lazurloner/playlist/3v0zH9pkmyYvX6y3jWz2v5"></a>https://open.spotify.com/user/lazurloner/playlist/3v0zH9pkmyYvX6y3jWz2v5</p><p><a href="https://youtu.be/30it4hbfQ7A"></a>https://youtu.be/30it4hbfQ7A</p><p>*</p><p><a href="https://www.youtube.com/watch?v=_dJ2nNQYl5o"></a>https://www.youtube.com/watch?v=_dJ2nNQYl5o</p><p></p><p><a href="https://youtu.be/5BPhkY6xIP8"></a>https://youtu.be/5BPhkY6xIP8</p><p></p><p><a href="https://youtu.be/XZTeavJ9frA"></a>https://youtu.be/XZTeavJ9frA</p><p><a href="https://youtu.be/disqzLW1QJA"></a>https://youtu.be/disqzLW1QJA</p><p><a href="https://youtu.be/KweXColOsgQ"></a>https://youtu.be/KweXColOsgQ</p><p><a href="https://youtu.be/OKNHp-daefk"></a>https://youtu.be/OKNHp-daefk</p><p>因為這次報名額滿後，還有幾位朋友詢問能否參加，&nbsp;</p><p>如果臨時不克前來，請記得上 KKTIX 取消報名&nbsp;</p><p><a href="https://kktix.com/dashboard/overview"></a><a href='https://kktix.com/dashboard/overview'/>https://kktix.com/dashboard/overview</a></p><p></p></body>
+<p><a href="https://open.spotify.com/user/lazurloner/playlist/3v0zH9pkmyYvX6y3jWz2v5"></a>https://open.spotify.com/user/lazurloner/playlist/3v0zH9pkmyYvX6y3jWz2v5</p><p></p><ul><li><a href="https://youtu.be/30it4hbfQ7A"></a>https://youtu.be/30it4hbfQ7A</li>
+<li><a href="https://www.youtube.com/watch?v=_dJ2nNQYl5o"></a>https://www.youtube.com/watch?v=_dJ2nNQYl5o</li>
+<li><a href="https://youtu.be/5BPhkY6xIP8"></a>https://youtu.be/5BPhkY6xIP8</li>
+<li><a href="https://youtu.be/XZTeavJ9frA"></a>https://youtu.be/XZTeavJ9frA</li>
+<li><a href="https://youtu.be/disqzLW1QJA"></a>https://youtu.be/disqzLW1QJA</li>
+<li><a href="https://youtu.be/KweXColOsgQ"></a>https://youtu.be/KweXColOsgQ</li>
+<li><a href="https://youtu.be/OKNHp-daefk"></a>https://youtu.be/OKNHp-daefk</li></ul>
+
+<p>因為這次報名額滿後，還有幾位朋友詢問能否參加，&nbsp;</p><p>如果臨時不克前來，請記得上 KKTIX 取消報名&nbsp;</p><p><a href="https://kktix.com/dashboard/overview"></a><a href='https://kktix.com/dashboard/overview'/>https://kktix.com/dashboard/overview</a></p><p></p></body>
 </html>
