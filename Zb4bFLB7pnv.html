@@ -3,10 +3,10 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1272"/>
+<meta name="version" content="1888"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$Zb4bFLB7pnv</title>
 </head>
-<body><h1>真的假的 LINE bot</h1><p></p><h2>專案簡介</h2><p></p><p><b>緣由＆要解決的問題</b></p><p></p><p>Line 上面常常有人轉傳這樣的訊息：</p><p></p><ul class="code"><li>「條形碼以＂ 8 ＂開頭的是基因改造食品！」</li>
+<body><h1>真的假的 LINE bot</h1><p></p><p><b>＊＊＊上層 Hackfoldr：</b><a href="http://beta.hackfoldr.org/rumors"></a><b>http://beta.hackfoldr.org/rumors</b><b> ＊＊＊</b></p><p></p><h2>專案簡介</h2><p></p><p><b>緣由＆要解決的問題</b></p><p></p><p>Line 上面常常有人轉傳這樣的訊息：</p><p></p><ul class="code"><li>「條形碼以＂ 8 ＂開頭的是基因改造食品！」</li>
 <li>「醫大已經死17人，友情提醒:最近醫院急診的患者比較多，大都是蘑菇中毒， 今年蘑菇豐收，蘑菇可以和小白菜一起炒,但不能和茄子一起吃，會中毒」</li></ul>
 
 <p>雖然用關鍵字 google 一下就可以知道這並非事實，但對於甫接觸網路、鮮少使用搜尋的使用者，「擷取關鍵字、打開 google、放進搜尋框」並不是這麼的容易。</p><p></p><p><b>Proposed Solution</b></p><p>雖然這些使用者不會 google，但既然能轉傳不實訊息給他人，那就一定會操作轉傳。</p><p></p><p>於是我們可以做一個 LINE bot 讓使用者加朋友，當他們對 LINE 上的訊息有疑問時，只要轉傳給這個 LINE bot，就可以得到答案，方便他們將結果轉傳回訊息的來源群組。</p><p></p><p><b>預定使用者</b></p><p></p><p>不熟黯用手機進行 google 搜尋，但會操作 LINE 轉傳的使用者（例如說家中長輩）。</p><p>謠言止於智者，這樣的 LINE bot 可以讓長輩輕鬆成為群組內最有智慧的人 (?)</p><p></p><p><b>預定功能</b></p><p></p><undefined><li>基礎功能</li></undefined>
@@ -19,25 +19,49 @@
 
 <p><b>現有類似專案／相關專案</b></p><p></p><p><a href='https://newshelper.g0v.tw/'/>新聞小幫手</a></p><ul class="comment"><li>主要是這個專案可以從新聞小幫手撈 data，但是這個專案的資料倒回去新聞小幫手資料庫好像起不了太大作用——畢竟新聞小幫手 extension 以 match shared URL 為主，但 LINE message 沒有 URL（流言訊息怎麼可能會付「來源網址」呢） Orz</li></ul>
 
+<p>Google news fact check</p><p><a href="http://www.theverge.com/2016/10/14/13283200/google-news-fact-check-election"></a>http://www.theverge.com/2016/10/14/13283200/google-news-fact-check-election</p><ul class="comment"><li>&nbsp;不確定是人工標記的還是 AI。如果是 AI 的話，說不定 political fact check 跟 rumors check 其實是可以通用的？</li></ul>
+
 <p><b>授權方式</b></p><p>程式碼：MIT</p><p>文案：CC-BY&nbsp;</p><p>轉傳訊息資料庫 (尚未實作)：取自網路，並不擁有著作權。</p><p></p><p><b>使用資料</b></p><ul><li>Google custom search engine API (一天限 100 則 query)</li></ul>
 
-<undefined><li>尚未介接</li></undefined>
-
+<undefined><li>新聞小幫手</li></undefined>
 <ul><li>希望可以與新聞小幫手介接 API，需要跟 Ronny wang 討論。</li></ul>
 
-<ul><li><a href='http://www.fda.gov.tw/TC/news.aspx?cid=5049&amp;cchk=55abc933-3e57-48db-afff-a8a4cc1e4ae0'/>衛福部食藥署食藥闢謠專區</a></li>
-<li><a href='http://www.hpa.gov.tw/Bhpnet/Web/HealthCare/HealthCareList.aspx'/>衛福部國健署保健闢謠專區</a></li>
-<li><a href='http://165.gov.tw/list_announcement.aspx'/>內政部警政署詐騙闢謠專區</a></li>
-<li><a href='http://pansci.asia/?s=%E8%AC%A0%E8%A8%80'/>Pansci 謠言tag</a></li></ul>
+<undefined><li>科學相關</li></undefined>
+<ul><li><a href='http://www.fda.gov.tw/TC/news.aspx?cid=5049&amp;cchk=55abc933-3e57-48db-afff-a8a4cc1e4ae0'/>衛福部食藥署食藥闢謠專區</a> (<a href="https://drive.google.com/file/d/0B3SdyPWxiw4DNFVlTkJLZ1pzRnc/view?usp=sharing)"></a><a href='https://l.facebook.com/l.php?u=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F0B3SdyPWxiw4DNFVlTkJLZ1pzRnc%2Fview%3Fusp%3Dsharing&amp;h=mAQEvWDb0'/>https://drive.google.com/file/d/0B3SdyPWxiw4DNFVlTkJLZ1pzRnc/view?usp=sharing</a>)</li>
+<li><a href='http://www.hpa.gov.tw/Bhpnet/Web/HealthCare/HealthCareList.aspx'/>衛福部國健署保健闢謠專區</a> (<a href="https://drive.google.com/file/d/0B6DgB9B7xvRhRy1rR3l0OEF5cFE/view?usp=sharing)"></a>https://drive.google.com/file/d/0B6DgB9B7xvRhRy1rR3l0OEF5cFE/view?usp=sharing)</li>
+<li><a href='http://www.coa.gov.tw/faq/faq_list.php'/>農委會農產品食安專區</a> (<a href="https://drive.google.com/file/d/0B3SdyPWxiw4DLVFfY0V5MUFPZ00/view?usp=sharing)"></a>https://drive.google.com/file/d/0B3SdyPWxiw4DLVFfY0V5MUFPZ00/view?usp=sharing)</li>
+<li><a href='http://www.aec.gov.tw/%E7%84%A6%E9%BB%9E%E5%B0%88%E5%8D%80/%E8%BC%BF%E6%83%85%E5%9B%9E%E6%87%89--218_2033.html'/>原能會輿情回應</a> (Crawl in progress 俊凱)</li></ul>
+<ul class="comment"><li>有部分是PDF，需要列表網址，透過政府資料開放小組請原能會改。</li></ul>
+<ul><li><a href='https://scitechvista.nat.gov.tw/zh-tw/Home.htm'/>科技大觀園</a></li>
+<li><a href='http://www.guokr.com/group/40/'/>謠言粉碎機</a> (中國果殼網)</li>
+<li><a href='http://pansci.asia/?s=%E8%AC%A0%E8%A8%80'/>Pansci 謠言tag</a></li>
+<li><a href='https://www.facebook.com/groups/pansci.ask/?fref=ts'/>Pansci 天天問社團</a></li></ul>
+<ul class="comment"><li>&nbsp;如果把科學相關流言能整理過來，這裡可以幫忙回應</li></ul>
+<ul><li><a href='http://www.pts.org.tw/program/Template1B_Customize_Menu.aspx?PNum=734&amp;CMNum=1452'/>公視流言追追追</a></li><ul class="comment"><li>&nbsp;有很多資料，但不確定要怎麼用</li></ul>
+</ul>
 
-<p><b>專案目前狀態</b></p><p>有了 Prototype 但不堪用。</p><p></p><p>現在的做法是把「謠言 傳言 假的」與使用者轉傳的訊息原文前100字丟給 google，然後從第一頁搜尋結果搜尋含有「謠言」 or 「傳言」之類字詞的結果，取 4 則傳回給使用者。</p><p></p><p>然而，由於前 100 字常常不含重點，所以搜尋到的東西的關聯性非常低。(實際有用的資訊低於 10% 吧……</p><p></p><p><b>利益揭露</b></p><p>（牽涉到哪些組織團體、有哪些已知的或潛在的金錢或物質或無形利益報酬）</p><p></p><p></p><h2>徵求協作者</h2><p></p><p>發起人/拋磚人：</p><ul class="task"><li>NeedsWriter: 需要文案幫手（撰寫基本資訊、報導專案etc）</li>
+<undefined><li>非科學</li></undefined>
+<ul><li><a href='http://165.gov.tw/list_announcement.aspx'/>內政部警政署詐騙闢謠專區</a></li>
+<li>網路追追追（已關站，需要爬 web archive，如： <a href="https://web.archive.org/web/20150907025402/http://www.nownews.com/n/2014/10/03/1441001"></a>https://web.archive.org/web/20150907025402/http://www.nownews.com/n/2014/10/03/1441001 ） -- 這個可以用寄信的先請求看看</li>
+<li><a href='http://mygopen.blogspot.tw/'/>MYGOPEN｜這是假消息</a>&nbsp; -- 這個可以用寄信的先請求看看</li><ul class="comment"><li>&nbsp;會有用錯誤的資訊澄清謠言的狀況，要留意。</li></ul>
+</ul>
+<ul><li><a href='/-LINE-bot-Zb4bFLB7pnv'/>蘭姆酒吐司</a>&nbsp;</li></ul>
+<ul class="comment"><li>這個是這兩年新成立的闢謠網站</li></ul>
+<ul><li><a href='https://taipeicity.github.io/tpe_dome/mythbusters_01.html'/>臺北大巨蛋流言終結者*</a></li></ul>
+<ul class="comment"><li>有關政府闢謠的網站~~~</li></ul>
+<ul><li><a href='http://data.taipei/opendata/datalist/datasetMeta?oid=203f1657-bb4a-45a7-b25f-279b63136645'/>臺北市民常見問答*</a></li></ul>
+<ul class="comment"><li>有關政府網站FAQ的開放資料</li>
+<li>如果跟台北市政府有關的，我這邊都可以幫忙協調取得資料~~~</li></ul>
+<p>DB Schema 請見<a href='http://beta.hackfoldr.org/rumors/https%253A%252F%252Fhackmd.io%252FEwTgrAhgzAphAsBaAbAEwMZUfAHPAZohAOz7CLEQzqr7Fggj4AMQA%253D%253D%253D%253Fview'/>開發工作區</a></p><p></p><p><b>專案目前狀態</b></p><p>有了 Prototype 但不堪用。</p><p></p><p>現在的做法是把「謠言 傳言 假的」與使用者轉傳的訊息原文前100字丟給 google，然後從第一頁搜尋結果搜尋含有「謠言」 or 「傳言」之類字詞的結果，取 4 則傳回給使用者。</p><p></p><p>然而，由於前 100 字常常不含重點，所以搜尋到的東西的關聯性非常低。(實際有用的資訊低於 10% 吧……</p><p></p><p><b>利益揭露</b></p><p>（牽涉到哪些組織團體、有哪些已知的或潛在的金錢或物質或無形利益報酬）</p><p></p><p></p><h2>徵求協作者</h2><p></p><p>發起人/拋磚人：</p><ul class="task"><li>NeedsWriter: 需要文案幫手（撰寫基本資訊、報導專案etc）</li>
 <li>NeedsDesigner: 需要介面設計</li></ul>
 <ul class="taskdone"><li>NeedsData: 需要資料（擷取、清理）</li></ul>
 <ul class="task"><li>NeedsTech: 需要技術支援（程式、架站 etc)</li>
 <li>NeedsProcess: 需要幫忙設計作業流程</li>
 <li>NeedsTalkingToRealPerson: 需要有人幫忙和其他機關聯絡</li></ul>
+<ul class="comment"><li>HiHi，我這邊是台北市政府資訊局的小鈺，有任何協助我這邊可以提供聯繫喔~~~</li>
+<li>希望可以跟我們合作，可以協調看看其他機關的資料，因為政府機關也頗多外界謠言需要闢謠orz</li></ul>
 
-<p></p><h2>實作細節（非技術背景可跳填）</h2><p></p><p><b>協作工具</b></p><ul><li>github repo：<a href="https://github.com/MrOrz/rumors-line-bot"></a>https://github.com/MrOrz/rumors-line-bot</li>
+<h2>實作細節（非技術背景可跳填）</h2><p></p><p><b>協作工具</b></p><ul><li>github repo：<a href="https://github.com/MrOrz/rumors-line-bot"></a>https://github.com/MrOrz/rumors-line-bot</li>
 <li>hackfoldr 工作資料夾網址：</li>
 <li>google drive 共用資料夾網址：</li></ul>
 
@@ -64,7 +88,7 @@
 <li>感謝雨蒼</li>
 <li>已經更新囉 :D</li></ul>
 
-<p></p><undefined><li>2nd iteration：完成所有基礎功能、回傳「建議您搜尋 OOO」之類的卡片 coversation、⋯⋯</li></undefined>
+<p></p><undefined><li>2nd iteration：完成所有基礎功能、回傳「建議您搜尋 OOO」之類的卡片 conversation、⋯⋯</li></undefined>
 <ul class="comment"><li>先做 1st iteration 再說吧，我也不知道自己會不會棄坑⋯⋯</li></ul>
 
 <p></p><h2>成果展示（規劃文件、雛形/草稿、原型/初稿、正式發佈/完稿）</h2><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_Zb4bFLB7pnv_p.77325_1476492919019_Screenshot_20161015-084729.png'/></p><p></p><p></p><p><b>把「真的假的」加進 LINE 好友</b></p><p><img src='https://qr-official.line.me/sid/L/dnd9457r.png'/></p><p><a href="https://qr-official.line.me/sid/L/dnd9457r.png"></a>https://qr-official.line.me/sid/L/dnd9457r.png</p><p></p><p></p><p></p><p></p><p></p></body>
