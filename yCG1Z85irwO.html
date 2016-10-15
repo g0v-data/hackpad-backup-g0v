@@ -3,12 +3,12 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1709"/>
+<meta name="version" content="1710"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$yCG1Z85irwO</title>
 </head>
 <body><h1>budget.g0v.tw - 中央政府總預算</h1><ul class="comment"><li>CC-BY g0v-contributors</li></ul>
 
-<h2>2016 Reboot</h2><p></p><p><a href='http://www.dgbas.gov.tw/ct.asp?xItem=26269&amp;CtNode=5389&amp;mp=1'/>總預算</a> / <a href='http://ebas1.ebas.gov.tw/address/gbaagenooutput.asp'/>中央政府各單位預算機關</a></p><p></p><p>各預算機關釋出中的「歲出計畫提要及分支計畫概況表」(BCME3440)是最細的資訊，各機關應該會提供 xls or xml (通常是 zip)</p><p>TODO: 整理所有的「分支計畫概況表」</p><p></p><p>TODO: xml 檔案格式說明（目前找不到）</p><p></p><p>xml 與 xls 的差異:</p><ul><li>xml objectno 需參照 <a href='https://www.dgbas.gov.tw/public/Data/552984733GEYI9Z14.pdf'/>中央政府第一級至第三級用途別科目分類定義</a></li>
+<h2>2016 Reboot</h2><p></p><p><a href='http://www.dgbas.gov.tw/ct.asp?xItem=26269&amp;CtNode=5389&amp;mp=1'/>總預算</a> / <a href='http://ebas1.ebas.gov.tw/address/gbaagenooutput.asp'/>中央政府各單位預算機關</a></p><p></p><p>各預算機關釋出中的「歲出計畫提要及分支計畫概況表」(BCME3440)是最細的資訊，各機關應該會提供 xls or xml (通常是 zip)</p><p>TODO: 整理所有的「<a href='https://ethercalc.org/twebas'/>分支計畫概況表</a>」</p><p></p><p>TODO: xml 檔案格式說明（目前找不到）</p><p></p><p>xml 與 xls 的差異:</p><ul><li>xml objectno 需參照 <a href='https://www.dgbas.gov.tw/public/Data/552984733GEYI9Z14.pdf'/>中央政府第一級至第三級用途別科目分類定義</a></li>
 <li>單筆預算「承辦單位」須從代號查詢 (對照表待補)</li>
 <li>「計畫內容」與「預期成果」分拆在兩個特殊的 BCDTMEMO bc_key 中</li>
 <li>xml 無小計，全部是 raw data</li></ul>
