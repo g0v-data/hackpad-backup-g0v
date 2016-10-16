@@ -3,19 +3,80 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1710"/>
+<meta name="version" content="2100"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$yCG1Z85irwO</title>
 </head>
 <body><h1>budget.g0v.tw - 中央政府總預算</h1><ul class="comment"><li>CC-BY g0v-contributors</li></ul>
 
-<h2>2016 Reboot</h2><p></p><p><a href='http://www.dgbas.gov.tw/ct.asp?xItem=26269&amp;CtNode=5389&amp;mp=1'/>總預算</a> / <a href='http://ebas1.ebas.gov.tw/address/gbaagenooutput.asp'/>中央政府各單位預算機關</a></p><p></p><p>各預算機關釋出中的「歲出計畫提要及分支計畫概況表」(BCME3440)是最細的資訊，各機關應該會提供 xls or xml (通常是 zip)</p><p>TODO: 整理所有的「<a href='https://ethercalc.org/twebas'/>分支計畫概況表</a>」</p><p></p><p>TODO: xml 檔案格式說明（目前找不到）</p><p></p><p>xml 與 xls 的差異:</p><ul><li>xml objectno 需參照 <a href='https://www.dgbas.gov.tw/public/Data/552984733GEYI9Z14.pdf'/>中央政府第一級至第三級用途別科目分類定義</a></li>
-<li>單筆預算「承辦單位」須從代號查詢 (對照表待補)</li>
+<h2>2016 Reboot</h2><p></p><p><a href='http://www.dgbas.gov.tw/ct.asp?xItem=26269&amp;CtNode=5389&amp;mp=1'/>總預算</a> / <a href='http://ebas1.ebas.gov.tw/address/gbaagenooutput.asp'/>中央政府各單位預算機關</a></p><p></p><p>各預算機關釋出中的「歲出計畫提要及分支計畫概況表」(BCME3440)是最細的資訊，各機關應該會提供 xls or xml (通常是 zip)</p><p>TODO: 整理所有的「<a href='https://ethercalc.org/twebas'/>分支計畫概況表</a>」</p><p></p><p>TODO: xml 檔案格式說明（目前找不到）</p><p></p><p>xml 與 xls 的差異 (bcme3440 表):</p><ul><li>xml objectno 需參照 <a href='https://www.dgbas.gov.tw/public/Data/552984733GEYI9Z14.pdf'/>中央政府第一級至第三級用途別科目分類定義</a></li><ul class="comment"><li>這定義竟然沒有數位化 T____T</li></ul>
+</ul>
+<ul><li>單筆預算「承辦單位」須從代號查詢 (對照表待補)</li>
 <li>「計畫內容」與「預期成果」分拆在兩個特殊的 BCDTMEMO bc_key 中</li>
 <li>xml 無小計，全部是 raw data</li></ul>
+<ul class="comment"><li>&nbsp;從這資料集 <a href="http://data.gov.tw/node/35302"></a>http://data.gov.tw/node/35302 中的 106-0000-歲出機關別預算表-20160829110420.xml 來看，恐怕答案是未必喔...還是要留意原始資料.QQ</li>
+<li><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_yCG1Z85irwO_p.179086_1476630906398_螢幕快照 2016-10-16 下午11.14.29.png'/></li>
+<li>right 這是機關別 (5480 表)，沒有小計的是 3440</li></ul>
 
-<p><b>BCTDBUDGETDETAIL</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;BCTDBUDGETDETAIL_row&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ba_fiscalyear&gt;106&lt;/ba_fiscalyear&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ba_fundkind&gt;1&lt;/ba_fundkind&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ba_budgetkind&gt;1&lt;/ba_budgetkind&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ba_specialbudgetno/&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ba_agenno&gt;02001&lt;/ba_agenno&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ba_agentype&gt;C&lt;/ba_agentype&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ba_budgetstate&gt;1&lt;/ba_budgetstate&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ba_versiondate/&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ba_budgetyear&gt;106&lt;/ba_budgetyear&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ba_budgetno&gt;32020010100&lt;/ba_budgetno&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ba_subprojectno&gt;01&lt;/ba_subprojectno&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ba_departno&gt;09&lt;/ba_departno&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ba_objectno&gt;0111&lt;/ba_objectno&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ba_budgettype&gt;E&lt;/ba_budgettype&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ba_budgetsource&gt;1&lt;/ba_budgetsource&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ba_mergetype&gt;1&lt;/ba_mergetype&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ba_budgetamt&gt;110416000.00&lt;/ba_budgetamt&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ba_flowflag/&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ba_signflag/&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ba_signno/&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ba_key&gt;11&nbsp; &lt;/ba_key&gt;</p><p><b>BCTDMEMO</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;BCTDMEMO_row&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;bc_fiscalyear&gt;106&lt;/bc_fiscalyear&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;bc_fundkind&gt;1&lt;/bc_fundkind&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;bc_budgetkind&gt;1&lt;/bc_budgetkind&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;bc_specialbudgetno/&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;bc_agenno&gt;02001&lt;/bc_agenno&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;bc_agentype&gt;C&lt;/bc_agentype&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;bc_budgetstate&gt;1&lt;/bc_budgetstate&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;bc_reportno&gt;BCME3440&lt;/bc_reportno&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;bc_key&gt;3202001901101xxxxxx04xxxxxxxE1x0&lt;/bc_key&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;bc_versiondate/&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;bc_content&gt;汰換副禮車2輛，每輛4,100千元，合共8,200千元。&lt;/bc_content&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/BCTDMEMO_row&gt;</p><p></p><p>每個「工作計畫名稱及編號」都有一個國庫署的代號：<a href='http://data.gov.tw/node/12010'/>各年度國庫收支應用科目及其代號表</a></p><p></p><p></p><p></p><p>其他</p><p>Fiscal Data Package: <a href="http://specs.frictionlessdata.io/fiscal-data-package/#which-dimension-type"></a>http://specs.frictionlessdata.io/fiscal-data-package/#which-dimension-type</p><p>TonyQ: <a href="https://github.com/tony1223/tpe-2016-budget"></a>https://github.com/tony1223/tpe-2016-budget</p><p></p><h2>Archive</h2><h2>About</h2><p></p><p><b>資料來源</b></p><p></p><p>目前使用的資料是主計處公布之：</p><ul><li>2007-2013 年經立法院審議通過之法定預算</li>
+<p><b>BCTDBUDGETDETAIL</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;BCTDBUDGETDETAIL_row&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ba_fiscalyear&gt;106&lt;/ba_fiscalyear&gt;</p><ul class="comment"><li>&nbsp;年份</li></ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ba_fundkind&gt;1&lt;/ba_fundkind&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ba_budgetkind&gt;1&lt;/ba_budgetkind&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ba_specialbudgetno/&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ba_agenno&gt;02001&lt;/ba_agenno&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ba_agentype&gt;C&lt;/ba_agentype&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ba_budgetstate&gt;1&lt;/ba_budgetstate&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ba_versiondate/&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ba_budgetyear&gt;106&lt;/ba_budgetyear&gt;</p><ul class="comment"><li>&nbsp;預算年份</li></ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ba_budgetno&gt;32020010100&lt;/ba_budgetno&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ba_subprojectno&gt;01&lt;/ba_subprojectno&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ba_departno&gt;09&lt;/ba_departno&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ba_objectno&gt;0111&lt;/ba_objectno&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ba_budgettype&gt;E&lt;/ba_budgettype&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ba_budgetsource&gt;1&lt;/ba_budgetsource&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ba_mergetype&gt;1&lt;/ba_mergetype&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ba_budgetamt&gt;110416000.00&lt;/ba_budgetamt&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ba_flowflag/&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ba_signflag/&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ba_signno/&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ba_key&gt;11&nbsp; &lt;/ba_key&gt;</p><p><b>BCTDMEMO</b></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;BCTDMEMO_row&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;bc_fiscalyear&gt;106&lt;/bc_fiscalyear&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;bc_fundkind&gt;1&lt;/bc_fundkind&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;bc_budgetkind&gt;1&lt;/bc_budgetkind&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;bc_specialbudgetno/&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;bc_agenno&gt;02001&lt;/bc_agenno&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;bc_agentype&gt;C&lt;/bc_agentype&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;bc_budgetstate&gt;1&lt;/bc_budgetstate&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;bc_reportno&gt;BCME3440&lt;/bc_reportno&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;bc_key&gt;3202001901101xxxxxx04xxxxxxxE1x0&lt;/bc_key&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;bc_versiondate/&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;bc_content&gt;汰換副禮車2輛，每輛4,100千元，合共8,200千元。&lt;/bc_content&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/BCTDMEMO_row&gt;</p><p></p><p>每個「工作計畫名稱及編號」都有一個國庫署的代號：<a href='http://data.gov.tw/node/12010'/>各年度國庫收支應用科目及其代號表</a></p><p></p><undefined><li>機關別 xml/xls 預算對照</li></undefined>
+
+<ul class="comment"><li>&nbsp;我試著比照了一下同一筆資料，總預算 xls 跟 xml 的資料。</li></ul>
+<ul class="code"><li>&lt;BAME5480_row&gt;</li>
+<li>&nbsp;&nbsp; &lt;BAME5480_row&gt;</li>
+<li>&nbsp;&nbsp;&nbsp; &lt;budgetno&gt;32020010401&lt;/budgetno&gt;</li>
+<li>&nbsp;&nbsp;&nbsp; &lt;agenno&gt;02001&lt;/agenno&gt;</li>
+<li>&nbsp;&nbsp;&nbsp; &lt;agentype&gt;C&lt;/agentype&gt;</li>
+<li>&nbsp;&nbsp;&nbsp; &lt;mh_budgetname&gt;國家發展研究及諮詢&lt;/mh_budgetname&gt;</li>
+<li>&nbsp;&nbsp;&nbsp; &lt;displayname&gt;國家發展研究及諮詢&lt;/displayname&gt;</li>
+<li>&nbsp;&nbsp;&nbsp; &lt;budgetno_conver&gt;3202010401&lt;/budgetno_conver&gt;</li>
+<li>&nbsp;&nbsp;&nbsp; &lt;tyear_amt&gt;12626000&lt;/tyear_amt&gt;</li>
+<li>&nbsp;&nbsp;&nbsp; &lt;lyear_amt&gt;8569000&lt;/lyear_amt&gt;</li>
+<li>&nbsp;&nbsp;&nbsp; &lt;byear_amt&gt;7676401&lt;/byear_amt&gt;</li>
+<li>&nbsp;&nbsp;&nbsp; &lt;b_amt&gt;4057000&lt;/b_amt&gt;</li>
+<li>&nbsp;&nbsp;&nbsp; &lt;bc_content&gt;本年度預算數之內容與上年度之比較如下：&amp;lt;#H1&amp;gt;國政規劃與諮詢經費8,078千元，較上年度增列專案議題會議幕僚作業等經費2,000千元。&amp;lt;#H1&amp;gt;國政建言經費1,793千元，與上年度同。&amp;lt;#H1&amp;gt;兩岸關係與區域發展經費2,755千元，較上年度增列出國考察及參與研討會等經費2,057千元。&lt;/bc_content&gt;</li>
+<li>&lt;/BAME5480_row&gt;</li></ul>
+
+<p>xls</p><table style="font-size:13px;cell-spacing: 0px; border-collapse: collapse;"><tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#27454;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#38917;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#30446;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#31680;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#35498; &nbsp; &#26126;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#26412;&#24180;&#24230;&#38928;&#31639;&#25976;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#19978;&#24180;&#24230;&#38928;&#31639;&#25976;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#26412;&#24180;&#24230;&#31680;&#33287;&#19978;&#24180;&#24230;<br/>
+&#27604; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#36611;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#35498; &nbsp; &#26126;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">1</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">1</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">4</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">1</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">3202010401<br/>
+&#22283;&#23478;&#30332;&#23637;&#30740;&#31350;&#21450;&#35566;&#35426;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">12,626 </td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">8,569 </td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">4,057 </td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">(&#20013;&#30053;)</td>
+</tr>
+</table>
+<ul class="comment"><li>tyear_amt = 本年度預算數</li>
+<li>lyear_amt = 上年度預算數</li>
+<li>b_amt = 本年度節與上年度比較</li>
+<li>bc_content = 說明</li>
+<li>沒有款項目節，這樣變得很難判斷預算歸屬....只能從 budget number 推了。（-_-）</li>
+<li>agenno 好像有意義，總統府中 1-1 都是 02001 , 1-2 開始是 02010 ，1-3 換成 02030</li>
+<li><br/></li>
+<li>看起來拼圖應該是 budgetno</li>
+<li><br/></li>
+<li>00-02000-000 總統府主管 (1)</li>
+<li>00-02010-000 總統府 (1-1)</li>
+<li>32-02010-000 國務支出 (無款項目節)</li>
+<li>32-02010-100 一般行政(1-1-1)</li></ul>
+
+<p>其他</p><p>Fiscal Data Package: <a href="http://specs.frictionlessdata.io/fiscal-data-package/#which-dimension-type"></a>http://specs.frictionlessdata.io/fiscal-data-package/#which-dimension-type</p><p>TonyQ: <a href="https://github.com/tony1223/tpe-2016-budget"></a>https://github.com/tony1223/tpe-2016-budget</p><p></p><h2>Archive</h2><h2>About</h2><p></p><p><b>資料來源</b></p><p></p><p>目前使用的資料是主計處公布之：</p><ul><li>2007-2013 年經立法院審議通過之法定預算</li>
 <li>2014 - 中央政府總預算案</li></ul>
-<p>目前僅處理歲出部分。</p><ul><li><a href='http://www.dgbas.gov.tw/ct.asp?xItem=26269&amp;CtNode=5389&amp;mp=1'/>原始資料</a></li>
+<p>目前僅處理歲出部分。<a href='http://www.dgbas.gov.tw/ct.asp?xItem=26269&amp;CtNode=5389&amp;mp=1'/>原始資料</a></p><ul><li><a href='http://www.dgbas.gov.tw/ct.asp?xItem=26269&amp;CtNode=5389&amp;mp=1'/>原始資料</a></li>
 <li><a href='https://github.com/clkao/twbudget'/>處理程式</a></li>
 <li><a href='https://github.com/g0v/twbudget/tree/master/app/assets/data'/>處理過的純細項資料</a></li></ul>
 
