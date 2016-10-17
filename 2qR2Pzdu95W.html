@@ -3,14 +3,18 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="316"/>
+<meta name="version" content="601"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$2qR2Pzdu95W</title>
 </head>
 <body><h1>都市計畫書資料三星化｜方法討論</h1><p></p><h2>探討</h2><p></p><p><b>討論</b></p><p>Richard Hsieh&gt; 進行到現在對於書籍的資料結構化大概就是幾點需要克服</p><p>1. 每一本書的章節編排不同，是要統一，還是保持獨特性?</p><p>2. 表格的結構每個都不同，不能用單一個parser去處理</p><p></p><p>摘自王祖修：我個人認為都市計畫書和圖應該分開處理。一來都市計畫書應該開始思考怎樣結構化，畢竟裡面充滿著跟全民有關的資訊，而卻用很不資訊結構的方式撰寫，二來都市計畫圖則是看其來源母圖資訊，有的是透過都市計畫樁和都市計畫區地形圖展繪，有的是與地籍圖套繪，而地籍圖卻又不全部都是數值重測區，這部分是可以好好討論一番。最後才是怎樣把都市計畫書中特殊的資訊和土管要點、限制連結到都市計畫圖，過去研究過並不是不能結構化，而結構化的好處更可以讓這部分資訊透明公開。</p><p></p><p>chewei&gt;&nbsp;</p><ul><li>正面表列一些必定會出現的內容，例如：<ul><li>每一本「都市計畫通盤檢討案計畫書」，都會整理「歷年都市計畫案發布實施情形」，通常都是用表格的方式呈現，或許可以成為一個表格開放資料項目。</li>
 <li>「人民陳情意見綜理表」</li></ul>
 </li>
 <li>主辦單位應該同時提供「ＯＯＯＯ現況示意地圖」的原始資料集。</li>
-<li>換個角度來說，書圖資料開放，也是「都市計畫知識體系」的知識管理課題。</li></ul>
+<li>換個角度來說，書圖資料開放，也是「都市計畫知識體系」的知識管理課題。</li>
+<li>摘：在心態上，只要還是「先有資料 → 再來開放」，發佈變成產出的下游，中間的描述資料（metadata）就會流失，或是參差不齊。 <a href="https://www.facebook.com/photo.php?fbid=10153780069039928&set=a.124614179927.102488.728309927&type=3"></a>https://www.facebook.com/photo.php?fbid=10153780069039928&amp;set=a.124614179927.102488.728309927&amp;type=3</li>
+<li>所以什麼是三顆星等級的都市計畫書圖？<ul><li>一本都市計畫書=內文文字資料+地理範圍資料+人口推估資料+特定議題的表格+cc授權圖片...</li>
+<li>等號右邊各項資料皆符合開放資料三顆星等級，並且容易獨自抽出；各項資料或圖文的排版順序或之間的前後文位置也可以被機器所察覺；如此一來，民間可以較方便地重製都市計畫書圖，並且容易製成展示性、互動性高的書圖呈現方式，也可以依照民間觀點混搭更多資料來討論都市計畫內容，或是更多應用。</li></ul>
+</ul>
 
 <p><b>開放資料實作參考</b></p><ul><li>二星等級的「<a href='https://g0v.hackpad.com/--pJUQ0AGRCO1'/>內湖區都市計畫書</a>」</li>
 <li><a href='https://g0v.hackpad.com/imlFqCxzU1f'/>五星等開放資料標準</a></li>
@@ -19,7 +23,9 @@
 <li>不要小計</li>
 <li>不要合併儲存格、不要標頭拆欄</li></ul>
 </li>
+<li><a href='/jkpco57DjJH'/>Excel 資料轉換工具 (將 Excel 同格式的各分頁合成一個 CSV 的工具)</a></li>
 <li><a href='https://hackpad.com/Lesson-1-ver1.0-XdDvvmJJ6Zf'/>公務員開放資料Lesson 1</a></li>
+<li>地號轉地圖：<a href='https://g0v.hackpad.com/uhB6qAwYXe5'/>Land No. Mapper</a></li>
 <li><a href='/--SBFSdruovNE'/>開源出版 / 開源取向的知識內容構成方法</a></li>
 <li>PDF 內容開放化的方法蒐集</li><ol><li>PDF 內的文字：PDF 將報告書變成 markdown&nbsp;</li>
 <li>PDF 內的表格：PDF tables extractor：<a href="https://ronnywang.github.io/pdf-table-extractor/"></a><a href='https://ronnywang.github.io/pdf-table-extractor/'/>https://ronnywang.github.io/pdf-table-extractor/</a></li>
@@ -28,5 +34,54 @@
 </ul>
 <ul><li>地號轉地圖：<a href='https://g0v.hackpad.com/uhB6qAwYXe5'/>Land No. Mapper</a></li></ul>
 
-<p></p><p></p></body>
+<p><b>其他書圖開源化展示構想參考案例</b></p><ul><li>字體應用與文字視覺化<ul><li><a href="http://www.managertoday.com.tw/articles/view/51842"></a><a href='http://www.managertoday.com.tw/articles/view/51842'/>http://www.managertoday.com.tw/articles/view/51842</a></li>
+<li>如何選擇簡報的字體？17張圖片說給你聽 <a href="http://tesa.today/article/734?utm_source=pnn&utm_medium=pnn_post&utm_campaign=pnn"></a><a href='http://tesa.today/article/734?utm_source=pnn&amp;utm_medium=pnn_post&amp;utm_campaign=pnn'/>http://tesa.today/article/734?utm_source=pnn&amp;utm_medium=pnn_post&amp;utm_campaign=pnn</a></li>
+<li>曾將文字視覺化過嗎？這個網頁搜集分類了 254 種不同的文字視覺化作品，讓我們能快速篩選出有興趣的主題，裡面也不乏許多特別的視覺化方式，有時間要多找幾篇來學習！網址：<a href="http://textvis.lnu.se/"></a><a href='http://textvis.lnu.se/'/>http://textvis.lnu.se/</a></li></ul>
+</li>
+<li>AR&nbsp;<ul><li><a href="http://geoawesomeness.com/here-reality-lens/"></a>http://geoawesomeness.com/here-reality-lens/</li>
+<li><a href="https://www.facebook.com/tavar.tw/videos/1321743067850240/?hc_ref=NEWSFEED"></a>https://www.facebook.com/tavar.tw/videos/1321743067850240/?hc_ref=NEWSFEED</li>
+<li>計畫內容採用擴增實境方式呈現，參考 <a href='https://www.youtube.com/watch?v=M2OGvkT-OM4&amp;feature=youtu.be'/>環境地質災害教育開放平台APP 擴增實境(AR)操作</a></li></ul>
+</li>
+<li>gif<ul><li><a href="http://makeagif.com/i/Dan2qr"></a><a href='http://makeagif.com/i/Dan2qr'/>http://makeagif.com/i/Dan2qr</a></li>
+<li><a href="http://www.spaceandmatter.nl/de-ceuvel"></a><a href='http://l.facebook.com/l.php?u=http%3A%2F%2Fwww.spaceandmatter.nl%2Fde-ceuvel&amp;h=EAQHut6ms'/>http://www.spaceandmatter.nl/de-ceuvel</a></li>
+<li><a href="http://yle.fi/uutiset/3-8607731"></a>http://yle.fi/uutiset/3-8607731</li></ul>
+</li>
+<li>滑鼠與圖片切換效果。例如以下網頁中有 Mouse-over 的圖片<ul><li><a href="http://fairbanksfodar.com/understanding-fodar"></a>http://fairbanksfodar.com/understanding-fodar</li></ul>
+</li>
+<li>線上資料展示與網站<ul><li>報告書內容同時摘要成網頁簡要版 <a href="https://www.facebook.com/pg/FarmingUrbanismNetwork/photos/?tab=album&album_id=671589712992720"></a>https://www.facebook.com/pg/FarmingUrbanismNetwork/photos/?tab=album&amp;album_id=671589712992720</li>
+<li>衛生福利統計 - 互動式指標查詢系統 <a href="https://www.facebook.com/mohw.gov.tw/posts/622153297951092?qsefr=1"></a>https://www.facebook.com/mohw.gov.tw/posts/622153297951092?qsefr=1</li>
+<li>英國《金融時報》與氣候變遷知識創新體（Climate-KIC）共同製作了有趣的氣候變遷互動圖表，清楚顯示各國的減碳承諾對於全球氣溫的影響 <a href="https://www.facebook.com/twreporter/videos/1660398940874638/"></a><a href='https://www.facebook.com/twreporter/videos/1660398940874638/'/>https://www.facebook.com/twreporter/videos/1660398940874638/</a></li>
+<li>Interactive Maps <a href="http://www.dvrpc.org/Mapping/Webmaps/#googtrans/en/zh"></a><a href='http://www.dvrpc.org/Mapping/Webmaps/#googtrans/en/zh'/>http://www.dvrpc.org/Mapping/Webmaps/#googtrans/en/zh</a> DVRPC has developed several interactive mapping applications as part of our continuing effort to support planning and improve decision-making in our region. Within each application, you can view geographic features, query selective data sets, create your own custom map and access detailed reports about certain features. These web mapping applications allow DVRPC to present geospatial information to the public without the need of special GIS software. DVRPC will continue to add mapping applications in the future so check back frequently. For more information regarding DVRPC&rsquo;s full GIS services or to order custom maps, contact the Office of GIS.</li>
+<li><a href="http://my2030.twenergy.org.tw/"></a><a href='http://my2030.twenergy.org.tw/'/>http://my2030.twenergy.org.tw/</a> 可以讓操作者知道自己選擇的這些事情方案的後果想像</li>
+<li>Planetizen 推薦的空間規劃網站<ul><li><a href='http://www.planetizen.com/websites/2014'/>Top 10 Websites - 2014</a></li>
+<li><a href='http://www.planetizen.com/websites2013'/>Top 10 Websites - 2013</a></li>
+<li><a href='http://www.planetizen.com/websites/2012'/>Top 10 Websites - 2012</a></li></ul>
+</li></ul>
+</li>
+<li>線上地圖與地圖<ul><li>納入歷史地圖 <a href="http://tpstation.com.tw/"></a><a href='http://tpstation.com.tw/'/>http://tpstation.com.tw/</a></li></ul>
+</li>
+<li>都市計畫內容中的援引資料，能否以「即時動態資料」、「依據開放資料來做計算」等方式呈現？例如人口資料、環境資料。</li>
+<li>3D 地形建物地圖<ul><li><a href="https://www.facebook.com/data.visualize/posts/551072538396526"></a>https://www.facebook.com/data.visualize/posts/551072538396526</li>
+<li><a href="http://bit.ly/1BFElBL"></a><u><a href='http://bit.ly/1BFElBL'/>http://bit.ly/1BFElBL</a></u></li>
+<li><a href="https://www.facebook.com/SaveNangangBottleCapFactory/posts/543191265861342"></a>https://www.facebook.com/SaveNangangBottleCapFactory/posts/543191265861342</li></ul>
+</li>
+<li><a href='https://www.facebook.com/US.NSF/videos/10153417392322900/'/>MentalCanvas (Drawing in the third dimension)</a>，手繪線稿立體化</li>
+<li>多元描述空間的方法<ul><li><a href="https://twstreetcorner.org/2016/08/16/min-jay-kang/"></a>https://twstreetcorner.org/2016/08/16/min-jay-kang/</li>
+<li>魚眼圖 <a href="https://www.facebook.com/mao.isle/posts/1088780487806261"></a>https://www.facebook.com/mao.isle/posts/1088780487806261</li></ul>
+</li>
+<li>VR<ul><li><a href="https://www.facebook.com/notes/%E5%94%90%E9%B3%B3/%E5%BE%9E%E5%A5%87%E9%BB%9E%E5%88%B0%E7%9C%BE%E9%BB%9E/1360357927326757"></a>https://www.facebook.com/notes/%E5%94%90%E9%B3%B3/%E5%BE%9E%E5%A5%87%E9%BB%9E%E5%88%B0%E7%9C%BE%E9%BB%9E/1360357927326757</li>
+<li>VR 促進空間規劃協作審議的可能性說明 <a href="https://www.facebook.com/audreyt.org/posts/10154371791049928"></a>https://www.facebook.com/audreyt.org/posts/10154371791049928</li></ul>
+</li>
+<li>預測落空的都市計畫內容檢視<ul><li><a href="https://g0v.hackpad.com/rKIJb9vys5k"></a>https://g0v.hackpad.com/rKIJb9vys5k</li></ul>
+</li>
+<li>提及「歷年都市計畫」<ul><li>附上當年的計畫圖 <a href="https://www.facebook.com/asgis/posts/1101994936477500"></a>https://www.facebook.com/asgis/posts/1101994936477500</li></ul>
+</li>
+<li>爭點思路<ul><li>sli.do <a href="https://www.sli.do/home"></a><a href='https://www.sli.do/home'/>https://www.sli.do/home</a> 活動提問線上蒐集與投票功能&nbsp;</li>
+<li>pol.is <a href="https://pol.is/home"></a><a href='https://pol.is/home'/>https://pol.is/home</a> 立場趨向&nbsp;</li>
+<li>Argument <a href="http://ch.arguman.org/"></a><a href='http://ch.arguman.org/'/>http://ch.arguman.org/</a> 「反向推論」思路開展與瀏覽者支持意見&nbsp;</li>
+<li>Debater 辯論家 <a href='/vjeJIZ8onSY'/>Debater&nbsp;</a> 內容彙整平台&nbsp;</li>
+<li>各種時間軸呈現平台 <a href="http://www.bnext.com.tw/article/view/id/21387"></a><a href='http://www.bnext.com.tw/article/view/id/21387'/>http://www.bnext.com.tw/article/view/id/21387</a></li></ul>
+</ul>
+
+<p></p></body>
 </html>
