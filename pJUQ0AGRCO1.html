@@ -3,14 +3,20 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="609"/>
+<meta name="version" content="661"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$pJUQ0AGRCO1</title>
 </head>
-<body><h1>開放都市計畫- 都市計畫書資料庫化</h1><p></p><h2>源起</h2><p>屬於 開放都市計畫專案的一部分 <a href="http://hackfoldr.org/urbancodeg0vtw/"></a><a href='http://hackfoldr.org/urbancodeg0vtw/'/>http://hackfoldr.org/urbancodeg0vtw/</a></p><p></p><p>目前台灣有大約450個都市計畫區，每個計畫區都有都市計畫書記載區域內每一塊土地的土地使用分區及管制內容，控制都市土地的發展，但這些都市計畫書都藏在各縣市政府的網站深處，不容易找到</p><p></p><h2>專案目標</h2><p>專案目的在於讓這些都市計畫書專換成的資料庫形式(如markdown)，可以快速地取得跟閱讀，或是不同計畫書之間比較，或進行文字的轉譯(如轉譯為白話文或是更好閱讀的圖表)，等等應用</p><p></p><h2>資料來源</h2><p><a href='http://www.cpami.gov.tw/chinese/index.php?option=com_content&amp;view=article&amp;id=10129&amp;Itemid=53'/>營建署網站：都市計畫查詢</a></p><ul class="comment"><li>好像掛掉了</li></ul>
+<body><h1>開放都市計畫- 都市計畫書資料庫化</h1><p></p><h2>源起</h2><ol><li>屬於 開放都市計畫專案的一部分 <a href="http://hackfoldr.org/urbancodeg0vtw/"></a><a href='http://hackfoldr.org/urbancodeg0vtw/'/>http://hackfoldr.org/urbancodeg0vtw/</a></li>
+<li>目前台灣有大約 450 個都市計畫區，每個計畫區都有「都市計畫書」記載區域內每一塊土地的土地使用分區及管制內容，控制都市土地的發展，但這些都市計畫書都藏在各縣市政府的網站深處，不容易找到，且檔案格式多半為 pdf</li></ol>
+
+<h2>專案目標</h2><ol><li>專案目的在於讓這些都市計畫書專換成的資料庫形式(如markdown)</li>
+<li>資料庫形式，可以快速地取得跟閱讀，或是不同計畫書之間比較，或進行文字的轉譯(如轉譯為白話文或是更好閱讀的圖表)，等等應用</li></ol>
+
+<h2>資料來源</h2><p><a href='http://www.cpami.gov.tw/chinese/index.php?option=com_content&amp;view=article&amp;id=10129&amp;Itemid=53'/>營建署網站：都市計畫查詢</a></p><ul class="comment"><li>好像掛掉了</li></ul>
 
 <h2>流程</h2><p><b>1.搜集都市計畫書</b></p><ul><li>先以通盤檢討為主?</li></ul>
 
-<p></p><p><b>2.將每一本都市計畫書內容進一步轉成資料庫格式</b></p><ul><li>csv格式?</li>
+<p><b>2.將每一本都市計畫書內容進一步轉成資料庫格式</b></p><ul><li>csv格式?</li>
 <li>json格式?</li></ul>
 <ul class="comment"><li>初步想法欄位安排是這樣：</li></ul>
 <ul class="code"><li><br/><table style="font-size:13px;cell-spacing: 0px; border-collapse: collapse;"><tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#31456;</td>
@@ -39,7 +45,10 @@
 <li>資料結構</li>
 <li>資料轉換</li></ul>
 
-<h2>困難點</h2><ul><li>圖跟表要如何整合進這些欄位中?&nbsp;</li>
+<h2>困難點</h2><ul><li>關於報告書內的段落階層<ul><li>ch [6:39 PM]&nbsp; 因為寫劃規報告書的話，markdown的階層分類太少了。公家習慣看「壹、一、(一)、1、(1)、a、i⋯」或「1.1.1.1.1」這種階層表示法」</li>
+<li>clkao [7:11 PM]&nbsp; ch 這個可以用 gitbook, 我寫過一個 gitbook-toc-styles 的 plugin</li></ul>
+</li>
+<li>圖跟表要如何整合進這些欄位中?&nbsp;</li>
 <li><a href='/2qR2Pzdu95W'/>都市計畫書資料三星化｜方法討論</a></li>
 <li>每一本都市計畫書的書寫方式都不同，要怎麼有效率的建立database?</li></ul>
 <ul class="comment"><li>雖然沒有直接解法，但這篇也有開始討論政府文件資料如何符合開放資料五顆星定義：<a href='/529BJcUTTmS'/>政府開放資料品質檢驗機制</a></li></ul>
@@ -53,10 +62,10 @@
 <ul><li>南港區都市計畫通盤檢討</li></ul>
 <ul style="list-style: none;"><li><a href='/--hzxdTtdG3QU'/>討論頁面</a></li></ul>
 
-<ul><li><a href='https://g0v.hackpad.com/ep/profile/oGf5HRRuJSf'/>Pomin Wu</a>p 加了小字典功能，求code!<ul><li><a href='https://docs.google.com/spreadsheets/d/11T9f4IswQ2eru-8HBGUbnVcM0cskTExoNOOG-xtGq4M/edit#gid=0'/>開放都巿計畫小字典</a>&nbsp;</li></ul>
+<ul><li><a href='https://g0v.hackpad.com/ep/profile/oGf5HRRuJSf'/>Pomin Wu</a> 加了小字典功能，求code!<ul><li><a href='https://docs.google.com/spreadsheets/d/11T9f4IswQ2eru-8HBGUbnVcM0cskTExoNOOG-xtGq4M/edit#gid=0'/>開放都巿計畫小字典</a>&nbsp;</li></ul>
 </ul>
 
 <h2>其他資料</h2><ul><li><a href='http://data.tainan.gov.tw/dataset/project-plan'/>台南飛雁新村開放資料</a></li></ul>
 
-</body>
+<p></p></body>
 </html>
