@@ -3,19 +3,21 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1762"/>
+<meta name="version" content="1996"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$uhB6qAwYXe5</title>
 </head>
 <body><h1>地號轉地圖 Land No. Mapper</h1><ul class="comment"><li>構想來自<a href='http://www.aypwip.org/webnote/poponfire'/>土地許願松</a></li></ul>
 
-<h2>目標</h2><p>一個【輸入代碼段小段地號，產出地圖與圖形】的工具</p><ul><li>一個 非程式專長的使用者 也可以用的介面/編輯器</li>
+<h2>目標</h2><ol><li>主要目標：一個【輸入代碼段小段地號，產出地圖與圖形】的工具</li>
+<li>其他功能構想：</li><ul><li>一個 非程式專長的使用者 也可以用的介面/編輯器</li>
 <li>結合地圖（ex OSM、GoogleMap）</li>
 <li>地圖成果能有網址連結</li>
 <li>並且有圖層管理的功能</li>
 <li>在地圖上標註意見，參考【揪地霸 (<a href="http://9d8.tw/)"></a>http://9d8.tw/)】</li>
 <li>類似 <a href='http://timemapper.okfnlabs.org/'/>TimeMapper</a>：免安裝軟體...</li></ul>
+</ol>
 
-<h2>技術環節說明與討論</h2><undefined><li><b>地籍與地號探討</b></li></undefined>
+<h2>整理現有類似的服務功能</h2><p></p><undefined><li><b>地籍與地號探討</b></li></undefined>
 <ul><li>友善地號資訊查詢界面 by ronny：<a href="https://g0v.hackpad.com/ZrNxaKVn8jt"></a>https://g0v.hackpad.com/ZrNxaKVn8jt</li></ul>
 
 <undefined><li><b>關於地籍資料的取得</b></li></undefined>
@@ -28,22 +30,24 @@
 <ul><li>段小段地號資料 → 地號畫圖需要參考地籍/段籍圖（全國的似乎還沒有正式公開，台北市也只有<a href='http://data.taipei.gov.tw/opendata/apply/NewDataContent?oid=0D9364CD-1677-4EAB-827B-7DA8E37785EB'/>段籍圖的開放資料</a>）→ 得到界線資料 → 配合電子地圖來呈現</li></ul>
 <ul class="comment"><li>地號畫圖需要地籍圖，台北市公布的也只有段籍圖而已。</li>
 <li>如果只是要看的話，國土測繪中心有提供全國的段籍圖WMTS (<a href='http://maps.nlsc.gov.tw/'/>國土測繪圖資網路地圖服務系統</a>)</li>
-<li>ronny 正在研究，從 WMS 轉出 GeoJSON 資料，<a href='http://youtu.be/1dga12J26Tw?t=19m33s'/>參考演講</a>&nbsp;</li>
-<li>ronny 表示，成功率不太高</li></ul>
+<li>ronny 正在研究，從 WMS 轉出 GeoJSON 資料，<a href='http://youtu.be/1dga12J26Tw?t=19m33s'/>參考演講</a>；ronny 表示，成功率不太高</li></ul>
 <ul><li><a href='http://gis.rchss.sinica.edu.tw/index.php?option=com_content&amp;view=article&amp;id=413:plugin-for-qgis&amp;catid=89:2009-07-22-06-28-27&amp;Itemid=132'/>地籍圖查詢套繪系統Plugin For QGIS</a>&nbsp; 中研院之前就有開發過類似的模組，可以用地號查位地籍圖的位置等資訊，現在政府很多圖台也有類似的功能，不過重點在於這些權限目前都還是限縮在政府手上，如果能開放API等使用應該就能解決問題。</li></ul>
-<ul class="comment"><li><i>開放地籍資料的 [API 的技術] 與 [法律疑慮檢討]&nbsp;</i></li></ul>
-<ul><li><a href='https://docs.google.com/document/d/1BgTJjLV4glQzbn-NQcWbjOd3KtSbgy5EDTG-Nna8bAc/edit?pli=1'/>地籍圖KML資料取得步驟</a><ul><li>地籍圖資網路便民服務系統提供KML的功能已經被取消了 囧</li></ul>
+<ul class="comment"><li><i>開放地籍資料的 [API 的技術] 與 [法律疑慮檢討]&nbsp;</i></li>
+<li>摘自 Dongpo <a href='https://www.dropbox.com/s/vpwi7vtotlyv7sp/20140819_OpenGeoMeeting.pdf'/>簡報</a>：</li></ul>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_sGw1sEwbfHP_p.172171_1416254856274_%E5%9C%96%E7%89%87%203.png'/></p><p></p><ul><li><a href='https://docs.google.com/document/d/1BgTJjLV4glQzbn-NQcWbjOd3KtSbgy5EDTG-Nna8bAc/edit?pli=1'/>地籍圖KML資料取得步驟</a><ul><li>地籍圖資網路便民服務系統提供KML的功能已經被取消了 囧</li></ul>
 <ul style="list-style: none;"><li><i>系統說明:「地籍圖資網路便民服務系統」介接使用Google圖資，因授權與收費(使用者付費)問題，彈出式Google地圖與衛星影像及街景無法繼續提供服務，必須改為背景套疊網路地圖方式提供服務。本系統更版後除了提供TGOS與NLSC及OSM網路地圖背景套疊服務外，也新增了點選查詢同地段之宗地，並提供點選宗地顯示地號及經緯度坐標等功能，您可運用該坐標於任何網路地圖進行定位服務，歡迎多加利用。</i></li>
 <li>&lt;囧&gt;</li></ul>
 </ul>
 <ul><li>可以透過 地政電子資料流通服務網 ( <a href="https://ccs.land.moi.gov.tw/"></a>https://ccs.land.moi.gov.tw/ ) 提出申請，政府機關申請使用應該是不用額外付費，但民間單位就會收取每筆1元的費用（台南市為例）</li></ul>
 
-<p><b>介面</b></p><ul><li>「地號轉地圖」目前介面：<a href="http://codepen.io/dz1984/full/NqgVPj/"></a><a href='http://codepen.io/dz1984/full/NqgVPj/'/>http://codepen.io/dz1984/full/NqgVPj/</a><ul><li>以特定格式輸入，即可呈現該地號對應的輪廓。例如以下：<ul><li>臺北市,信義段一小段,120</li>
+<h2>實作</h2><ul><li>雨蒼&gt; 我之前寫的黨產地圖可以給大家參考。<ul><li><a href="https://github.com/billy3321/billy3321.github.io/tree/master/kmt"></a><a href='https://github.com/billy3321/billy3321.github.io/tree/master/kmt'/>https://github.com/billy3321/billy3321.github.io/tree/master/kmt</a></li></ul>
+</ul>
+
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_uhB6qAwYXe5_p.172171_1476761711770_螢幕快照 2016-10-18 上午11.34.48.png'/></p><p></p><ul><li>「地號轉地圖 by DZ1984」目前介面：<a href="http://codepen.io/dz1984/full/NqgVPj/"></a><a href='http://codepen.io/dz1984/full/NqgVPj/'/>http://codepen.io/dz1984/full/NqgVPj/</a><ul><li>以特定格式輸入，即可呈現該地號對應的輪廓。例如以下：<ul><li>臺北市,信義段一小段,120</li>
 <li>臺北市,信義段一小段,121</li>
 <li>臺北市,信義段一小段,430</li></ul>
 </li>
-<li><b>問題回報</b>，輸入以下地號，無法產生輪廓（補充說明：地號來源為天龍特公地頁面，數字共八碼，為光華商場八德路轉角的空地（<a href='http://udn.com/news/story/8145/927820-%E5%8F%B0%E5%8C%97%E5%B8%8C%E6%9C%9B%E5%BB%A3%E5%A0%B4%E5%81%87%E6%97%A5%E8%BE%B2%E5%B8%82-9%E6%9C%88%E8%8F%AF%E5%B1%B1%E8%A6%8B'/>新聞</a>））</li>
-<li>台北市,成功段一小段,00130004&nbsp;</li>
+<li><b>問題回報</b>，輸入以下地號，無法產生輪廓（補充說明：地號來源為天龍特公地頁面，數字共八碼，為光華商場八德路轉角的空地；<a href='http://udn.com/news/story/8145/927820-%E5%8F%B0%E5%8C%97%E5%B8%8C%E6%9C%9B%E5%BB%A3%E5%A0%B4%E5%81%87%E6%97%A5%E8%BE%B2%E5%B8%82-9%E6%9C%88%E8%8F%AF%E5%B1%B1%E8%A6%8B'/>新聞</a>）<ul><li>台北市,成功段一小段,00130004&nbsp;</li>
 <li>台北市,成功段一小段,00130000</li>
 <li>台北市,成功段一小段,00130002</li>
 <li>台北市,成功段一小段,00150001</li>
@@ -57,13 +61,12 @@
 <li>台北市,成功段一小段,0010-2</li>
 <li>台北市,成功段一小段,0010-5</li>
 <li>台北市,成功段一小段,0010-1</li></ul>
-</li></ul>
-</li>
-<li>上載 csv 可將地號以外的欄位內容，整合於 infobox<ul><li>提問：可將此 GeoJson 檔案下載嗎？方便應用，例如丟到 Umap 當成底圖，接著用點線面來規劃公有空地願景，請見<a href='https://umap.openstreetmap.fr/zh-tw/map/map_50075#18/25.03983/121.54037'/>願景測試地圖</a></li></ul>
+</ul>
+</ul>
 </ul>
 
-<p></p><p></p><p><b>進一步的編輯器構想</b></p><ul><li>參考文章：<a href='http://dz1984.info/articles/Taipei_POP/'/>天龍特公地製作過程 byDZ1984</a>。這篇談到&nbsp; Google Maps featureStyle、土地資訊與處理事件範例</li>
-<li>地號的資料上，除了圖塊之外，同時呈現其他描述</li>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_uhB6qAwYXe5_p.172171_1476761568407_螢幕快照 2016-10-18 上午11.32.18.png'/></p><p></p><h2>相關構想</h2><ul><li>參考文章：<a href='http://dz1984.info/articles/Taipei_POP/'/>天龍特公地製作過程 byDZ1984</a>。這篇談到&nbsp; Google Maps featureStyle、土地資訊與處理事件範例</li>
+<li>地號的資料上，除了圖塊之外，同時呈現其他描述欄位</li>
 <li>呈現地號的圖層，可以疊上：<ul><li>政府公開資料，例如土石流潛勢溪流</li>
 <li>自編圖層</li></ul>
 </li>
@@ -71,9 +74,12 @@
 <li>每一種介面狀態，擁有一個連結</li>
 <li>相鄰兩塊地，呈現上能否提供：<ul><li>每一塊都同時呈現其邊界線條</li>
 <li>相鄰兩塊地，只呈現最外緣的邊界線條，視覺上只看得到一大塊</li></ul>
-</ul>
+</li>
+<li>上載 csv 可將地號以外的欄位內容，整合於 infobox<ul><li>提問：可將此 GeoJson 檔案下載嗎？方便應用，例如丟到 Umap 當成底圖，接著用點線面來規劃公有空地願景，請見<a href='https://umap.openstreetmap.fr/zh-tw/map/map_50075#18/25.03983/121.54037'/>願景測試地圖</a></li></ul>
+</li>
+<li>chewei&gt; 突然很好奇世界各國的土地管理系統 (台灣是段小段&amp;地號) ，甚至是否有國際通用的可能。</li></ul>
 
-<p></p><undefined><li><b>20150613 第拾肆次野百合黑客松</b></li></undefined>
+<undefined><li><b>20150613 第拾肆次野百合黑客松</b></li></undefined>
 <ul><li>雛形：<a href="http://codepen.io/dz1984/full/NqgVPj"></a>http://codepen.io/dz1984/full/NqgVPj</li>
 <li>三種方向<ul><li>『地號圖片』：給地號，得到地號範圍的靜態圖片，方便用於配合議題文章的插圖、都市計畫書圖內文等等。</li>
 <li>『大批資料圖層』：類似天龍特公地的地號範圍與相關資料，同時呈現，編輯者用線上可協作表格方式，輸入「縣市/段小段/子母號」得到地號圖形，以及自己定義更多欄位內容，同時與地號圖形一起呈現出來。具體可參考天龍特公地與黨產地圖呈現方式。其他參考：<ul><li><a href='http://excel2earth.blogspot.tw/'/>Excel2Earth</a> （Excel---&gt;MAP）</li></ul>
@@ -81,17 +87,20 @@
 <li>『疊圖』：把地號變成地圖，通常還會希望有一些議題圖層來搭配，其「地理格式+內容」可能性蠻多種的。希望這個疊圖也是用線上可協作表格，甚至是與地號表格一起建置於同一個檔案中。</li></ul>
 </ul>
 
-<p></p><h2>Mockup</h2><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_uhB6qAwYXe5_p.172171_1415223740534_DSC05955.JPG'/></p><p></p><p></p><h2>程式碼：</h2><p>我之前寫的黨產地圖可以給大家參考。</p><p><a href="https://github.com/billy3321/billy3321.github.io/tree/master/kmt"></a><a href='https://github.com/billy3321/billy3321.github.io/tree/master/kmt'/>https://github.com/billy3321/billy3321.github.io/tree/master/kmt</a></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><h2>應用設想與案例蒐集</h2><p>這樣的工具，可以讓關注土地議題的人去使用，例如：</p><ul><li>例如碧潭吊橋都更案的地號，與古蹟指定範圍的地號，兩者畫成地圖來對照（完整請見：<a href='https://github.com/ronnywang/sandbox/tree/master/20130805'/>碧潭吊橋都更範圍和劃定古蹟範圍 by ronny</a>）。以下擷取 <a href='https://github.com/ronnywang'/>ronnywang</a> 繪製的地號範圍作並置，上方為古蹟地號範圍，下方為都市更新案地號範圍：</li></ul>
-<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_uhB6qAwYXe5_p.172171_1414860067164_12345.png'/></p><p></p><p>Zen Zentree&gt; 程式跑出來的圖超厲害, 不過有一丁點誤差.(ex.146地號沒含進去. 141,563,149,150地界超出國校路)</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_uhB6qAwYXe5_p.172171_1414860372186_123456.png'/></p><p></p><ul><li>都市更新範圍地圖：<a href="https://g0v.hackpad.com/OdKcA5fjbuB"></a>https://g0v.hackpad.com/OdKcA5fjbuB</li>
+<undefined><li><b>Mockup 構想</b></li></undefined>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_uhB6qAwYXe5_p.172171_1415223740534_DSC05955.JPG'/></p><p></p><p></p><h2>蒐集應用情境案例</h2><ul><li>例如碧潭吊橋都更案的地號，與古蹟指定範圍的地號，兩者畫成地圖來對照<ul><li>完整請見：<a href='https://github.com/ronnywang/sandbox/tree/master/20130805'/>碧潭吊橋都更範圍和劃定古蹟範圍 by ronny</a>）。以下擷取 <a href='https://github.com/ronnywang'/>ronnywang</a> 繪製的地號範圍作並置，上方為古蹟地號範圍，下方為都市更新案地號範圍：</li></ul>
+</ul>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_uhB6qAwYXe5_p.172171_1414860067164_12345.png'/></p><p></p><ul><li>Zen Zentree&gt; 程式跑出來的圖超厲害, 不過有一丁點誤差.(ex.146地號沒含進去. 141,563,149,150地界超出國校路)</li></ul>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_uhB6qAwYXe5_p.172171_1414860372186_123456.png'/></p><p></p><ul><li>都市更新範圍地圖：<a href="https://g0v.hackpad.com/OdKcA5fjbuB"></a>https://g0v.hackpad.com/OdKcA5fjbuB</li>
 <li>國民黨黨產地號清冊地圖化（完整請見：<a href='https://g0v.hackpad.com/87CNswL2g7U'/>KMT Property</a>）</li>
 <li>協助友善小農，進行歷年田區範圍的記錄地圖 by tingyu</li>
 <li>土地開發案，相關新聞應用</li>
-<li>例如 Taipei 近期釋出的公有地資料集 ! 『市民』就可以用「地號轉地圖」的功能呈現出來<ul><li><a href='http://data.taipei/opendata/datalist/datasetMeta;jsessionid=1E5C9230F443B2587867B140378388FF?oid=eb5f3c5c-f0c1-4938-a0f1-886bf5a2fa27'/>本府經管公有土地清冊(市有、國有)</a></li>
+<li>例如 Taipei 近期釋出的公有地資料集 ! 一般市民就可以用「地號轉地圖」的功能呈現出來<ul><li><a href='http://data.taipei/opendata/datalist/datasetMeta;jsessionid=1E5C9230F443B2587867B140378388FF?oid=eb5f3c5c-f0c1-4938-a0f1-886bf5a2fa27'/>本府經管公有土地清冊(市有、國有)</a></li>
 <li><a href='http://data.taipei/opendata/datalist/datasetMeta;jsessionid=1E5C9230F443B2587867B140378388FF?oid=631f0590-6f79-46a7-a689-0551fa496485'/>本府經管未開闢及待處分公有土地清冊</a></li>
 <li><a href='http://data.taipei/opendata/datalist/datasetMeta;jsessionid=1E5C9230F443B2587867B140378388FF?oid=3058983f-199d-4af0-98a7-41a82accc2fa'/>臺北市市有財產委託經營案件明細表</a></li>
 <li><a href='http://data.taipei/opendata/datalist/datasetMeta?oid=e5e450ea-a283-470a-8659-18381671d7b8'/>臺北市政府財政局經管市有非公用閒置土地清冊</a></li>
 <li><a href='http://data.taipei/opendata/datalist/datasetMeta?oid=1cebd2e1-df54-4508-97f7-3217753c6d32'/>臺北市政府財政局經管市有非公用閒置建物清冊</a></li></ul>
 </ul>
 
-<p></p><h2>其他</h2><p>chewei&gt; 突然很好奇世界各國的土地管理系統 (台灣是段小段&amp;地號) ，甚至是否有國際通用的可能。</p><p></p><p>(from Dongpo <a href='https://www.dropbox.com/s/vpwi7vtotlyv7sp/20140819_OpenGeoMeeting.pdf'/>簡報</a>)</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_sGw1sEwbfHP_p.172171_1416254856274_%E5%9C%96%E7%89%87%203.png'/></p><p></p><p></p></body>
+<p></p><p></p></body>
 </html>
