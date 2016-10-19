@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="856"/>
+<meta name="version" content="931"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$2qR2Pzdu95W</title>
 </head>
 <body><h1>都市計畫書資料三星化｜方法討論</h1><p></p><h2>探討</h2><p>摘自 Dongpo：TimBL 的開放資料五顆星所著重的點在於資料的開放性，因此第一顆星的開放資料就要是以開放授權釋出，若這資料還是結構化資料(非圖片，機器難以處理的)，那滿足二顆星，如果進一步是非專屬格式，如 CSV，則滿足三顆星，若資料可以開放到，資料集中每一筆資料本身在網路中都有一個 URI 來指涉，就滿足了第四顆星的開放資料，一般做法就是以 RDF 的格式，因為有了URI，所以資料集中的資料可以透過語意相互連結，這就是五顆星等級開放資料，也就是常說的Linked Open Data。</p><p></p><p>摘自 <a href='https://www.facebook.com/photo.php?fbid=10153780069039928&amp;set=a.124614179927.102488.728309927&amp;type=3'/>au</a>：在心態上，只要還是「先有資料 → 再來開放」，發佈變成產出的下游，中間的描述資料（metadata）就會流失，或是參差不齊。</p><p></p><p>摘自王祖修：我個人認為都市計畫書和圖應該分開處理。一來都市計畫書應該開始思考怎樣結構化，畢竟裡面充滿著跟全民有關的資訊，而卻用很不資訊結構的方式撰寫，二來都市計畫圖則是看其來源母圖資訊，有的是透過都市計畫樁和都市計畫區地形圖展繪，有的是與地籍圖套繪，而地籍圖卻又不全部都是數值重測區，這部分是可以好好討論一番。最後才是怎樣把都市計畫書中特殊的資訊和土管要點、限制連結到都市計畫圖，過去研究過並不是不能結構化，而結構化的好處更可以讓這部分資訊透明公開。</p><p></p><p>Richard Hsieh&gt; 進行到現在對於書籍的資料結構化大概就是幾點需要克服</p><p>1. 每一本書的章節編排不同，是要統一，還是保持獨特性?</p><p>2. 表格的結構每個都不同，不能用單一個parser去處理</p><p></p><p>chewei&gt;&nbsp;</p><ul><li>正面表列一些必定會出現的內容，例如：<ul><li>每一本「都市計畫通盤檢討案計畫書」，都會整理「歷年都市計畫案發布實施情形」，通常都是用表格的方式呈現，或許可以成為一個表格開放資料項目。</li>
@@ -71,9 +71,13 @@
 <li>地圖<ul><li>納入歷史地圖 <a href="http://tpstation.com.tw/"></a><a href='http://tpstation.com.tw/'/>http://tpstation.com.tw/</a></li>
 <li>地號轉地圖：<a href='https://g0v.hackpad.com/uhB6qAwYXe5'/>Land No. Mapper</a></li></ul>
 </li>
-<li>3D 地形建物地圖<ul><li><a href="https://www.facebook.com/data.visualize/posts/551072538396526"></a>https://www.facebook.com/data.visualize/posts/551072538396526</li>
+<li>3D 地形建物地圖<ul><li>QGIS + Threejs 立體地圖 <a href="https://www.facebook.com/data.visualize/posts/551072538396526"></a>https://www.facebook.com/data.visualize/posts/551072538396526</li>
 <li><a href="http://bit.ly/1BFElBL"></a><u><a href='http://bit.ly/1BFElBL'/>http://bit.ly/1BFElBL</a></u></li>
-<li><a href="https://www.facebook.com/SaveNangangBottleCapFactory/posts/543191265861342"></a>https://www.facebook.com/SaveNangangBottleCapFactory/posts/543191265861342</li></ul>
+<li>sketchup<ul><li>單機版 <a href="https://www.facebook.com/SaveNangangBottleCapFactory/posts/543191265861342"></a>https://www.facebook.com/SaveNangangBottleCapFactory/posts/543191265861342</li>
+<li>3D warehouse（分享檔案）</li>
+<li>online sketchup app<ul><li>似乎還不能多人協作？</li></ul>
+</li></ul>
+</li></ul>
 </li>
 <li><a href='https://www.facebook.com/US.NSF/videos/10153417392322900/'/>MentalCanvas (Drawing in the third dimension)</a>，手繪線稿立體化</li>
 <li>多元描述空間的方法<ul><li><a href="https://twstreetcorner.org/2016/08/16/min-jay-kang/"></a>https://twstreetcorner.org/2016/08/16/min-jay-kang/</li>
@@ -87,7 +91,7 @@
 </li>
 <li>內容中若提及「歷年都市計畫」<ul><li>附上當年的計畫圖 <a href="https://www.facebook.com/asgis/posts/1101994936477500"></a>https://www.facebook.com/asgis/posts/1101994936477500</li></ul>
 </li>
-<li>爭點思路<ul><li>sli.do <a href="https://www.sli.do/home"></a><a href='https://www.sli.do/home'/>https://www.sli.do/home</a> 活動提問線上蒐集與投票功能&nbsp;</li>
+<li>爭點思路、意見蒐集<ul><li>sli.do <a href="https://www.sli.do/home"></a><a href='https://www.sli.do/home'/>https://www.sli.do/home</a> 活動提問線上蒐集與投票功能&nbsp;</li>
 <li>pol.is <a href="https://pol.is/home"></a><a href='https://pol.is/home'/>https://pol.is/home</a> 立場趨向&nbsp;</li>
 <li>Argument <a href="http://ch.arguman.org/"></a><a href='http://ch.arguman.org/'/>http://ch.arguman.org/</a> 「反向推論」思路開展與瀏覽者支持意見&nbsp;</li>
 <li>Debater 辯論家 <a href='/vjeJIZ8onSY'/>Debater&nbsp;</a> 內容彙整平台&nbsp;</li>
