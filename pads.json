@@ -1470,8 +1470,8 @@
   "title": "\u90fd\u5dff\u8a08\u756b\u6982\u5ff5"
  }, 
  {
-  "last_backup_time": 1477417348.09541, 
-  "version": 1010, 
+  "last_backup_time": 1477503743.260573, 
+  "version": 1026, 
   "padid": "2qR2Pzdu95W", 
   "title": "\u90fd\u5e02\u8a08\u756b\u66f8\u8cc7\u6599\u4e09\u661f\u5316\uff5c\u65b9\u6cd5\u8a0e\u8ad6"
  }, 
@@ -2641,8 +2641,8 @@
   "title": "2014\u653f\u6cbb\u5bb6\u65cf\u5019\u9078\u4eba\u540d\u55ae"
  }, 
  {
-  "last_backup_time": 1477071804.27809, 
-  "version": 1484, 
+  "last_backup_time": 1477503743.581158, 
+  "version": 1698, 
   "padid": "6tkXwHyEaro", 
   "title": "10/15 \u7acb\u59d4\u5496\u96fb\u5582\u9032\u5ea6"
  }, 
@@ -4055,8 +4055,8 @@
   "title": "\u81ea\u5df1\u7684\u571f\u5730\u4f7f\u7528\u81ea\u5df1\u756b\uff08\u66ab\uff09"
  }, 
  {
-  "last_backup_time": 1477417348.138953, 
-  "version": 1643, 
+  "last_backup_time": 1477503743.624251, 
+  "version": 1704, 
   "padid": "CCTD1E5e3xz", 
   "title": "(g0v@Stanford Talk) Fork and Merge an Open Government: Experiments of g0v in Taiwan"
  }, 
@@ -4960,8 +4960,8 @@
   "title": "Visual"
  }, 
  {
-  "last_backup_time": 1477158200.622081, 
-  "version": 623, 
+  "last_backup_time": 1477503743.449863, 
+  "version": 625, 
   "padid": "FM4rSNL725L", 
   "title": "Gamification \u8b70\u984c\u904a\u6232\u5316\u6848\u4f8b\u8490\u96c6"
  }, 
@@ -8647,6 +8647,12 @@
   "version": 1477, 
   "padid": "S98doMyXUUR", 
   "title": "g0v summit 2014 \u4e3b\u8996\u89ba\u63d0\u6848\u7968\u9078"
+ }, 
+ {
+  "last_backup_time": 1477503743.493978, 
+  "version": 1728, 
+  "padid": "SA806TyuPOb", 
+  "title": "Open Data \u4e0a\u67b6\u6aa2\u6838\u6d41\u7a0b"
  }, 
  {
   "last_backup_time": 1420566322.4152634, 
