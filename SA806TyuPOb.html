@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1743"/>
+<meta name="version" content="1775"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$SA806TyuPOb</title>
 </head>
 <body><h1>Open Data 上架檢核流程</h1><ul class="comment"><li>官方名稱叫做「政府資料品質提升機制」</li>
@@ -23,9 +23,10 @@
 </li>
 <li>[B] 遇到壓縮檔 (zip, rar, 7z...)<ul><li>解壓縮開來，如果裡面只有一個檔案，以這個檔案回到 [A]</li>
 <li>如果解壓縮有多個檔案，進到 [Z]<ul><li>PS: 這邊可以列入一些檔名忽略清單，例如 README.txt schema.csv ... 之類的，去掉這些檔案後還有多個檔案才需要進入 [Z]</li></ul>
-</li></ul>
-</li>
-<li>[C] 遇到 JSON<ul><li>進行 JSON syntax 檢查，如果檢查失敗直接進到 [Z]</li></ul>
+<ul class="comment"><li>若是像 <a href="http://data.gov.tw/node/6380"></a>http://data.gov.tw/node/6380 這種的，也是直接歸類為[Z]嗎?</li></ul>
+</ul>
+</ul>
+<ul><li>[C] 遇到 JSON<ul><li>進行 JSON syntax 檢查，如果檢查失敗直接進到 [Z]</li></ul>
 </ul>
 <ul class="comment"><li>JSON跟XML是不是也會遇到編碼問題?</li>
 <li>不會有編碼問題，因為 JSON 和 XML 的標準就是 UTF-8 ，如果沒照標準改用其他編碼，就直接視為不合法JSON 或是 XML</li>
@@ -39,7 +40,8 @@
 <li>如果 syntax 檢查沒問題，進到 [D1]</li></ul>
 </li>
 <li>[D1] 乾淨 XML</li><ul><li>內容檢查，如果是 table 格式的 XML ，將之轉成 csv ，並且把欄位取出進到 [Y]</li>
-<li>不認得的 XML 格式，就進到 [X]</li><ul class="comment"><li>這邊或許可以檢查是否是特定格式的 XML ，就我所知預決算好像有標準 XML 格式，他不會是 table 格式，但是也可以額外標記出來，供預決算研究人員用</li></ul>
+<li>不認得的 XML 格式，就進到 [X]</li><ul class="comment"><li>這邊或許可以檢查是否是特定格式的 XML ，就我所知預決算好像有標準 XML 格式，他不會是 table 格式，但是也可以額外標記出來，供預決算研究人員用</li>
+<li>這的確是個問題，如果是非table格式的XML到底算不算標準? 又主要欄位應如何判別?</li></ul>
 </ul>
 </ul>
 <ul><li>[E] 遇到 CSV<ul><li>強制作一遍 utf-8 轉 big5 再轉回來，如果內容不變表示確定是 utf-8 CSV ，進到 [E1]</li>
