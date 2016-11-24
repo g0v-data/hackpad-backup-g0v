@@ -3,50 +3,10 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="3449"/>
+<meta name="version" content="3520"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$Hackfoldr-2.0-forkme</title>
 </head>
-<body><h1>Tutorial: 接待你的 自己的Hackfoldr 2.0</h1><p><i>在阿其他语言:</i></p><ul><li>中文版(zh型)<a href="http://g0v.hackpad.com/hackfoldr"></a><a href='http://g0v.hackpad.com/Hackfoldr-2.0-hackfoldr-G7i'/>http://g0v.hackpad.com/hackfoldr</a><a href='http://g0v.hackpad.com/Hackfoldr-2.0-hackfoldr-G7i'/> - 2.0 - hackfoldr g</a>7i…</li></ul>
+<body><h1>Tutorial: Hosting your own Hackfoldr 2.0</h1><p><i>In other languages:</i></p><ul><li>中文版 <a href="https://github.com/hackfoldr/hackfoldr-2.0-forkme/blob/master/docs/Hosting%20your%20own%20Hackfoldr%202.0%20zh-tw.md"></a><a href='http://g0v.hackpad.com/Hackfoldr-2.0-hackfoldr-G7i'/>http</a><a href='http://g0v.hackpad.com/hackfoldr'/>s://github.com/hackfoldr/hackfoldr-2.0-forkme/blob/master/docs/Hosting%20your%20own%20Hackfoldr%202.0%20zh-tw.md</a></li></ul>
 
-<h2>什么是Hackfoldr 2.0</h2><p>Hackfoldr是一种方便的web文件夹来存储链接OSS项目合作。</p><p></p><p>一个示例文件夹- - - - - -<a href="http://folder.moztw.org/hackfolder_template"></a>http://folder.moztw.org/hackfolder_template</p><p></p><p><b>如何它w工作</b></p><p>hackfoldr使用ethercalc.org表为生活configating文件。 表的每一行代表一个链接。 您还可以设置链接在新窗口打开,添加子文件夹,或者添加彩色标签。</p><p></p><h2>主机荷兰国际集团(ing)y我们的own Hackfoldr</h2><p><i>很容易为f工作 &amp; customize</i></p><p></p><p><b>好处</b></p><ul><li>使用你的自己的域的名字 和customize的 着陆页面。<ul><li>例如,<a href="http://beta.hackfoldr.org/"></a><a href='http://beta.hackfoldr.org/'/>http://beta.hackfoldr.org/</a> 与ethercalc.org/welcome-to-hackfoldr</li>
-<li>和 <a href="http://folder.moztw.org/"></a><a href='http://folder.moztw.org/'/>http://folder.moztw.org/</a> 与<a href='https://ethercalc.org/moztw'/>ethercalc.org/moztw</a>, 哪一个存储与MozTW相关的所有文档,Mozilla台湾社区。</li></ul>
-</li>
-<li>你将能够启用 <a href='https://github.com/moztw/hackfoldr-moztw/blob/gh-pages/help-menu.html'/>隐藏的快捷菜单</a>在自己的实例。</li></ul>
-
-<p><b>步骤0:起步</b></p><p>你需要以下进行:</p><ol><li>一个域名</li>
-<li>一个github帐户</li></ol>
-
-<p><b>步骤1:叉Hackfoldr 2.0回购</b></p><ol><li>Go<a href="https://github.com/hackfoldr/hackfoldr"></a><a href='https://github.com/hackfoldr/hackfoldr-2.0-forkme'/>https://github.com/hackfoldr/hackfoldr</a><a href='https://github.com/hackfoldr/hackfoldr-2.0-forkme'/> - 2.0 forkme</a></li>
-<li>C舔右上角“叉”按钮</li></ol>
-
-<p><b>第二步:编辑CNAME文件在gh-pages分支</b></p><ol><li>Go你的崭新的hackfoldr回购</li>
-<li>切换到“gh-pages”分支 前左 部门下拉按钮&nbsp;</li>
-<li>点击打开 ”CNAME”文件在根目录</li>
-<li>点击铅笔按钮前正确的一边编辑CNAME文件</li>
-<li>把你的域CNAME文件中</li><ul><li>确保CNAME文件包含只有一个一行</li>
-<li>例子:<a href="https://github.com/moztw/hackfoldr-moztw/blob/gh-pages/CNAME"></a>https://github.com/moztw/hackfoldr-moztw/blob/gh-pages/CNAME</li></ul>
-</ol>
-
-<p><b>步骤3:设置了 y我们的域名</b></p><p>添加一个CNAME记录f你的领域,并设置目的地 ”_YOUR_GITHUB_ACCOUNT_.github.io”</p><p></p><p>的例子亚马逊路由器53:</p><ul><li>名称:_YOUR_DOMAIN_NAME_<ul><li>例如,folder.moztw.org</li></ul>
-</li>
-<li>类型:CNAME</li>
-<li>价值:_YOUR_GITHUB_ACCOUNT_.github.io<ul><li>例如moztw.github.io</li></ul>
-</li>
-<li>ttl:300</li></ul>
-
-<p>的例子 Cloudflare:</p><ul><li>CNAME:_YOUR_GITHUB_ACCOUNT_.github.io<ul><li>例如etblue.github.io</li></ul>
-</li>
-<li>页面的规则: <a href="http://etblue.github.io/"></a><a href='http://etblue.github.io/+'/>http://etblue.github.io/</a><a href='http://etblue.github.io/+'/> +</a> 向前<a href="http://etblue.github.io"></a><a href='http://etblue.github.io'/>http://etblue.github.io</a><ul><li>参考- - - - - - <a href="http://blog.cloudflare.com/introducing-pagerules-url-forwarding/"></a><a href='http://blog.cloudflare.com/introducing-pagerules-url-forwarding/'/>http://blog.cloudflare.com/introducing-pagerules-url-forwarding/</a></li></ul>
-</ul>
-
-<p><b>步骤4:定制 Hackfoldr</b></p><ol><li>克隆的<a href='https://ethercalc.org/hackfolder_template'/>模板表</a>到新的ethercalc表和命名任何你想要的鼻涕虫</li>
-<li>切换到gh-pages叉回购的分支</li></ol>
-<ul style="list-style: none;"><li>Github感谢他们的精彩<a href='https://help.github.com/articles/user-organization-and-project-pages/#project-pages'/>项目页面</a>功能,我们不需要租一个服务器托管。</li></ul>
-<ol><li>编辑index . html文件(点击铅笔),调整以下设置</li><ul><li>改变有关ethercalc蛞蝓<a href='https://github.com/hackfoldr/hackfoldr-2.0-forkme/blob/gh-pages/index.html#L3'/>3号线</a>&nbsp;</li></ul>
-<ul class="code"><li>Adjsut下拉菜单如你所愿&lt; div class = &quot;菜单&quot; &gt;</li></ul>
-<ul><li>如果你想使用hackpad页面生成功能,调整默认hackpad网站<a href='https://github.com/hackfoldr/hackfoldr-2.0-forkme/blob/gh-pages/index.html#L644'/>第644行</a>&nbsp;</li>
-<li>克隆从指数。 html 404. html</li></ul>
-</ol>
-
-<p><b>你所做的所有的工作!</b></p><p>要有耐心和等待所有(特别是域名称记录)是活跃的。你不应该太长hackfoldr做好准备,通常不再然后十分钟。</p><p></p><h2>发展</h2><p>请参考<a href='/Developing-Hackfoldr-2.0-nIlIQRMVfyc'/>这个文档</a>(在中国)或<a href='https://github.com/hackfoldr/hackfoldr-2.0-forkme/blob/master/README.md'/>自述</a>的贡献。</p><p></p></body>
+<p>The docs had been migrate into github repo due to too easy to get mess on hackpad,</p><p><a href="https://github.com/hackfoldr/hackfoldr-2.0-forkme/blob/master/docs/Hosting%20your%20own%20Hackfoldr%202.0.md"></a>https://github.com/hackfoldr/hackfoldr-2.0-forkme/blob/master/docs/Hosting%20your%20own%20Hackfoldr%202.0.md</p><p></p></body>
 </html>
