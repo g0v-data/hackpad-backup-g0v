@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2728"/>
+<meta name="version" content="2733"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$Zb4bFLB7pnv</title>
 </head>
 <body><h1>真的假的 LINE bot</h1><p></p><p><b>＊＊＊上層 Hackfoldr：</b><a href="http://beta.hackfoldr.org/rumors"></a><b>http://beta.hackfoldr.org/rumors</b><b> ＊＊＊</b></p><p></p><p></p><h2>專案簡介</h2><p></p><p>2016/10/15 提案影片： <a href="https://www.youtube.com/watch?v=uFQuyCvm5ng&t=20s"></a><a href='https://www.youtube.com/watch?v=uFQuyCvm5ng&amp;t=20s'/>https://www.youtube.com/watch?v=uFQuyCvm5ng&amp;t=20s</a></p><p></p><p><b>緣由＆要解決的問題</b></p><p></p><p>Line 上面常常有人轉傳這樣的訊息：</p><p></p><ul class="code"><li>「條形碼以＂ 8 ＂開頭的是基因改造食品！」</li>
@@ -62,7 +62,9 @@
 <li>如果跟台北市政府有關的，我這邊都可以幫忙協調取得資料~~~</li></ul>
 <ul><li><a href='http://twbsss.blogspot.tw/'/>不實消息部落格</a>(不確定資料品質) (<a href="https://drive.google.com/file/d/0B3SdyPWxiw4DbW5WVnMwVmd6M0U/view?usp=sharing)"></a>https://drive.google.com/file/d/0B3SdyPWxiw4DbW5WVnMwVmd6M0U/view?usp=sharing)</li></ul>
 
-<p>DB Schema 請見<a href='http://beta.hackfoldr.org/rumors/https%253A%252F%252Fhackmd.io%252FEwTgrAhgzAphAsBaAbAEwMZUfAHPAZohAOz7CLEQzqr7Fggj4AMQA%253D%253D%253D%253Fview'/>開發工作區</a></p><p></p><p><b>專案目前狀態</b></p><p>有了 Prototype 但不堪用。</p><p></p><p>現在的做法是：</p><p></p><ol><li>先將整筆資料丟進 <a href='/ep/profile/tC7Bqff8Vp0'/>Ronny Wang</a> 的 API，此 API 會用 elastic search 比對 LINE 貼文與上面的「使用資料」。elastic search 的 relevance score 也會被顯示出來。</li>
+<p>DB Schema 請見<a href='http://beta.hackfoldr.org/rumors/https%253A%252F%252Fhackmd.io%252FEwTgrAhgzAphAsBaAbAEwMZUfAHPAZohAOz7CLEQzqr7Fggj4AMQA%253D%253D%253D%253Fview'/>開發工作區</a></p><p></p><undefined><li><b>謠言來源</b></li></undefined>
+
+<p><b>專案目前狀態</b></p><p>有了 Prototype 但不堪用。</p><p></p><p>現在的做法是：</p><p></p><ol><li>先將整筆資料丟進 <a href='/ep/profile/tC7Bqff8Vp0'/>Ronny Wang</a> 的 API，此 API 會用 elastic search 比對 LINE 貼文與上面的「使用資料」。elastic search 的 relevance score 也會被顯示出來。</li>
 <li>如果 1. 沒有回傳結果，就會把「謠言 傳言 假的」與使用者轉傳的訊息原文前100字丟給 google，然後從第一頁搜尋結果搜尋含有「謠言」 or 「傳言」之類字詞的結果，然而，由於前 100 字常常不含重點，所以搜尋到的東西的關聯性非常低。</li></ol>
 
 <p>但目前回傳的東西相關性都有點低。</p><p></p><p><b>利益揭露</b></p><p>（牽涉到哪些組織團體、有哪些已知的或潛在的金錢或物質或無形利益報酬）</p><p></p><h2>徵求協作者</h2><p></p><p>發起人/拋磚人：</p><ul class="task"><li>NeedsWriter: 需要文案幫手（撰寫基本資訊、報導專案etc）</li>
