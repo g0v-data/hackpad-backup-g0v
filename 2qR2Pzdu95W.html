@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1111"/>
+<meta name="version" content="1135"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$2qR2Pzdu95W</title>
 </head>
 <body><h1>都市計畫書資料三星化｜方法討論</h1><p></p><h2>探討</h2><p>摘自 Dongpo：TimBL 的開放資料五顆星所著重的點在於資料的開放性，因此第一顆星的開放資料就要是以開放授權釋出，若這資料還是結構化資料(非圖片，機器難以處理的)，那滿足二顆星，如果進一步是非專屬格式，如 CSV，則滿足三顆星，若資料可以開放到，資料集中每一筆資料本身在網路中都有一個 URI 來指涉，就滿足了第四顆星的開放資料，一般做法就是以 RDF 的格式，因為有了URI，所以資料集中的資料可以透過語意相互連結，這就是五顆星等級開放資料，也就是常說的Linked Open Data。</p><p></p><p>摘自 <a href='https://www.facebook.com/photo.php?fbid=10153780069039928&amp;set=a.124614179927.102488.728309927&amp;type=3'/>au</a>：在心態上，只要還是「先有資料 → 再來開放」，發佈變成產出的下游，中間的描述資料（metadata）就會流失，或是參差不齊。</p><p></p><p>摘自王祖修：我個人認為都市計畫書和圖應該分開處理。一來都市計畫書應該開始思考怎樣結構化，畢竟裡面充滿著跟全民有關的資訊，而卻用很不資訊結構的方式撰寫，二來都市計畫圖則是看其來源母圖資訊，有的是透過都市計畫樁和都市計畫區地形圖展繪，有的是與地籍圖套繪，而地籍圖卻又不全部都是數值重測區，這部分是可以好好討論一番。最後才是怎樣把都市計畫書中特殊的資訊和土管要點、限制連結到都市計畫圖，過去研究過並不是不能結構化，而結構化的好處更可以讓這部分資訊透明公開。</p><p></p><p>Richard Hsieh&gt; 進行到現在對於書籍的資料結構化大概就是幾點需要克服</p><p>1. 每一本書的章節編排不同，是要統一，還是保持獨特性?</p><p>2. 表格的結構每個都不同，不能用單一個parser去處理</p><p></p><p>chewei&gt;&nbsp;</p><ul><li>正面表列一些必定會出現的內容，例如：<ul><li>每一本「都市計畫通盤檢討案計畫書」，都會整理「歷年都市計畫案發布實施情形」，通常都是用表格的方式呈現，或許可以成為一個表格開放資料項目。</li>
@@ -77,7 +77,9 @@
 <li><a href="https://www.facebook.com/cmalapitan/videos/10156140950725453/?hc_ref=PAGES_TIMELINE"></a>https://www.facebook.com/cmalapitan/videos/10156140950725453/?hc_ref=PAGES_TIMELINE</li>
 <li><a href="https://www.facebook.com/niemanlab/posts/10154548506393654"></a>https://www.facebook.com/niemanlab/posts/10154548506393654</li></ul>
 </li>
-<li>線上資料展示與網站<ul><li>報告書內容同時摘要成網頁簡要版 <a href="https://www.facebook.com/pg/FarmingUrbanismNetwork/photos/?tab=album&album_id=671589712992720"></a>https://www.facebook.com/pg/FarmingUrbanismNetwork/photos/?tab=album&amp;album_id=671589712992720</li>
+<li>線上資料展示與網站<ul><li>報告書內容同時摘要成網頁版或簡要版&nbsp;<ul><li><a href="https://www.facebook.com/pg/FarmingUrbanismNetwork/photos/?tab=album&album_id=671589712992720"></a><a href='https://www.facebook.com/pg/FarmingUrbanismNetwork/photos/?tab=album&amp;album_id=671589712992720'/>https://www.facebook.com/pg/FarmingUrbanismNetwork/photos/?tab=album&amp;album_id=671589712992720</a></li>
+<li><a href="https://deltaprogramma2017.deltacommissaris.nl/viewer/publication/1/1-deltaprogramma-"></a>https://deltaprogramma2017.deltacommissaris.nl/viewer/publication/1/1-deltaprogramma-</li></ul>
+</li>
 <li>衛生福利統計 - 互動式指標查詢系統 <a href="https://www.facebook.com/mohw.gov.tw/posts/622153297951092?qsefr=1"></a>https://www.facebook.com/mohw.gov.tw/posts/622153297951092?qsefr=1</li>
 <li>英國《金融時報》與氣候變遷知識創新體（Climate-KIC）共同製作了有趣的氣候變遷互動圖表，清楚顯示各國的減碳承諾對於全球氣溫的影響 <a href="https://www.facebook.com/twreporter/videos/1660398940874638/"></a><a href='https://www.facebook.com/twreporter/videos/1660398940874638/'/>https://www.facebook.com/twreporter/videos/1660398940874638/</a></li>
 <li>Interactive Maps <a href="http://www.dvrpc.org/Mapping/Webmaps/#googtrans/en/zh"></a><a href='http://www.dvrpc.org/Mapping/Webmaps/#googtrans/en/zh'/>http://www.dvrpc.org/Mapping/Webmaps/#googtrans/en/zh</a> DVRPC has developed several interactive mapping applications as part of our continuing effort to support planning and improve decision-making in our region. Within each application, you can view geographic features, query selective data sets, create your own custom map and access detailed reports about certain features. These web mapping applications allow DVRPC to present geospatial information to the public without the need of special GIS software. DVRPC will continue to add mapping applications in the future so check back frequently. For more information regarding DVRPC&rsquo;s full GIS services or to order custom maps, contact the Office of GIS.</li>
@@ -88,7 +90,8 @@
 <li><a href='http://www.planetizen.com/websites/2012'/>Top 10 Websites - 2012</a></li></ul>
 </li></ul>
 </li>
-<li>人口 <a href="https://www.facebook.com/data.visualize/posts/556397781197335"></a>https://www.facebook.com/data.visualize/posts/556397781197335</li>
+<li>人口<ul><li><a href="https://www.facebook.com/data.visualize/posts/556397781197335"></a>https://www.facebook.com/data.visualize/posts/556397781197335</li></ul>
+</li>
 <li>地圖<ul><li>納入歷史地圖 <a href="http://tpstation.com.tw/"></a><a href='http://tpstation.com.tw/'/>http://tpstation.com.tw/</a></li>
 <li>地號轉地圖：<a href='https://g0v.hackpad.com/uhB6qAwYXe5'/>Land No. Mapper</a></li>
 <li><a href="https://mapstory.org/"></a>https://mapstory.org/<a href='https://mapstory.org/the'/> </a>the atlas of change that everyone can edit</li>
