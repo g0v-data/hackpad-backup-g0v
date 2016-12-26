@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="78"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$NWaFu7PitYD</title>
+</head>
+<body><h1>《民法》972條，修正案，用程式碼表述</h1><p>－－－－</p><p>蘋果即時：立委郭正亮提出修正動議，將《民法》972條原先的「婚約，應由男女當事人自行訂定」條文保留，新增「同性婚約，由雙方當事人自行訂定」條文，最後按照郭正亮版本通過。</p><p>－－－－</p><p></p><h2>案例01（by YuTin）</h2><ul class="code"><li>// 為了化解反同團體壓力</li>
+<li>&nbsp;if (sexA !== sexB || sexA === sexB ) {}</li></ul>
+
+<p></p><h2>案例02（by Ronny）</h2><ul class="code"><li>if (gender_of_a != gender_of_b) {</li>
+<li>　　relation = &rsquo;婚姻&rsquo;; // 972 婚約，應由男女當事人自行訂定&nbsp;&nbsp;&nbsp;</li>
+<li>+ } elseif&nbsp; (gender_of a == gender_of_b) {</li>
+<li>+ 　　relation = &rsquo;同性婚姻&rsquo;; // 972 同性婚約，由雙方當事人自行訂定&nbsp;&nbsp;&nbsp;</li>
+<li>}</li>
+<li>+ if (relation == &rsquo;同性婚姻&rsquo;) {</li>
+<li>+ 　relation = &rsquo;婚姻&rsquo;; // 971-1 異性或同性之婚姻當事人，平等適用本法及其他法規所定關於夫妻配偶之規定&nbsp;&nbsp;&nbsp;</li>
+<li>+ }</li></ul>
+
+<p></p><h2>案例03（by Michael）</h2><ul class="code"><li>// 《民法》972條，修正案，郭正亮版本</li>
+<li>行</li>
+<li>號</li>
+<li>─</li>
+<li>10 異性 = 1</li>
+<li>15 同性 = 0</li>
+<li>20 IF X = 異性 GOTO 30</li>
+<li>25 IF X = 同性 GOTO 35</li>
+<li>30 PRINT &quot;婚約，應由男女當事人自行訂定&quot;</li>
+<li>35 PRINT &quot;同性婚約，由雙方當事人自行訂定&quot;</li>
+<li>40 END</li></ul>
+
+<p></p><p></p><p></p><p></p></body>
+</html>
