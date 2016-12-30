@@ -3,13 +3,13 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2934"/>
+<meta name="version" content="2936"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$Zb4bFLB7pnv</title>
 </head>
 <body><h1>真的假的 LINE bot</h1><p></p><p><b>＊＊＊上層 Hackfoldr：</b><a href="http://beta.hackfoldr.org/rumors"></a><b>http://beta.hackfoldr.org/rumors</b><b> ＊＊＊</b></p><p></p><p></p><h2>專案簡介</h2><p>2016/12/17 提案影片：<a href="https://www.youtube.com/watch?v=IX7Vp3DYOFk&index=11&list=PLdwQWxpS513CcFIWolRQQg-THPjiCnLgV"></a>https://www.youtube.com/watch?v=IX7Vp3DYOFk&amp;index=11&amp;list=PLdwQWxpS513CcFIWolRQQg-THPjiCnLgV</p><p></p><p><a href='https://docs.google.com/presentation/d/1QTdEZFuaDaR-OA5BRL8svQLGTuAexyuzFtA2SsvuyaM/edit?usp=sharing'/>2016/12/17 提案投影片</a></p><p></p><p>2016/10/15 提案影片： <a href="https://www.youtube.com/watch?v=uFQuyCvm5ng&t=20s"></a><a href='https://www.youtube.com/watch?v=uFQuyCvm5ng&amp;t=20s'/>https://www.youtube.com/watch?v=uFQuyCvm5ng&amp;t=20s</a></p><p></p><p><b>緣由＆要解決的問題</b></p><p></p><p>Line 上面常常有人轉傳這樣的訊息：</p><p></p><ul class="code"><li>「條形碼以＂ 8 ＂開頭的是基因改造食品！」</li>
 <li>「醫大已經死17人，友情提醒:最近醫院急診的患者比較多，大都是蘑菇中毒， 今年蘑菇豐收，蘑菇可以和小白菜一起炒,但不能和茄子一起吃，會中毒」</li></ul>
 
-<p>雖然用關鍵字 google 一下就可以知道這並非事實，但對於甫接觸網路、鮮少使用搜尋的使用者，「擷取關鍵字、打開 google、放進搜尋框」並不是這麼的容易。</p><p></p><p><b>Proposed Solution</b></p><p></p><p>雖然這些使用者不會 google，但既然能轉傳不實訊息給他人，那就一定會操作轉傳。</p><p></p><p>於是我們可以做一個 LINE bot 讓使用者加朋友，當他們對 LINE 上的訊息有疑問時，只要轉傳給這個 LINE bot，就可以得到答案，方便他們將結果轉傳回訊息的來源群組。</p><p></p><p>把「真的假的」加進 LINE 好友：</p><p></p><p><img src='http://qr-official.line.me/L/YqaICuIWP8.png'/></p><p><a href="http://qr-official.line.me/L/YqaICuIWP8.png"></a>http://qr-official.line.me/L/YqaICuIWP8.png</p><p></p><p></p><p><b>預定使用者</b></p><p></p><p>不熟黯用手機進行 google 搜尋，但會操作 LINE 轉傳的使用者（例如說家中長輩）。</p><p>謠言止於智者，這樣的 LINE bot 可以讓長輩輕鬆成為群組內最有智慧的人 (?)</p><p></p><p><b>預定功能</b></p><p></p><undefined><li>基礎功能</li></undefined>
+<p>雖然用關鍵字 google 一下就可以知道這並非事實，但對於甫接觸網路、鮮少使用搜尋的使用者，「擷取關鍵字、打開 google、放進搜尋框」並不是這麼的容易。</p><p></p><p><b>Proposed Solution</b></p><p></p><p>雖然這些使用者<b>不會 google</b>，但既然能轉傳不實訊息給他人，那就一定會操作<b>轉傳</b>。</p><p></p><p>於是我們可以做一個 LINE bot 讓使用者加朋友，當他們對 LINE 上的訊息有疑問時，只要轉傳給這個 LINE bot，就可以得到答案，方便他們將結果轉傳回訊息的來源群組。</p><p></p><p>把「真的假的」加進 LINE 好友：</p><p></p><p><img src='http://qr-official.line.me/L/YqaICuIWP8.png'/></p><p><a href="http://qr-official.line.me/L/YqaICuIWP8.png"></a>http://qr-official.line.me/L/YqaICuIWP8.png</p><p></p><p></p><p><b>預定使用者</b></p><p></p><p>不熟黯用手機進行 google 搜尋，但會操作 LINE 轉傳的使用者（例如說家中長輩）。</p><p>謠言止於智者，這樣的 LINE bot 可以讓長輩輕鬆成為群組內最有智慧的人 (?)</p><p></p><p><b>預定功能</b></p><p></p><undefined><li>基礎功能</li></undefined>
 <ul class="taskdone"><li>&nbsp;使用者轉傳訊息進來之後，回傳 google 或其他資料庫的相關闢謠文章摘錄與連結</li></ul>
 <ul class="task"><li>&nbsp;找出「關鍵字」回傳，提供 <a href='https://devdocs.line.me/en/#template-messages'/>template 按鈕</a>讓使用者一鍵 google。</li></ul>
 
