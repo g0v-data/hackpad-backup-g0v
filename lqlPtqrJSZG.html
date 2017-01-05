@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2704"/>
+<meta name="version" content="2710"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$lqlPtqrJSZG</title>
 </head>
 <body><h1>JSON, XML 匯出入範例</h1><p></p><p>本文是因應 data.gov.tw 政府資料開放平台今年目標是能納入各機關上架資料時的資料檢核，以及可以將表格式資料匯出成&nbsp; JSON or XML 方便程式使用，因此先列出初步的標準。</p><p></p><p>這邊的匯入資料無法通過，不代表資料不乾淨，只是代表沒有被規則納入而已。&nbsp;</p><p></p><h2>匯入</h2><p>XML</p><ul><li>[A] 檢查 XML 是否為合法 XML<ul><li>不合法，到 [Z]</li>
@@ -77,7 +77,9 @@
 <ul class="comment"><li><a href="http://data.gov.tw/node/6624"></a>http://data.gov.tw/node/6624 的第二個 JSON 就是這種(剛發現第一個 JSON 實際上是 XML)</li>
 <li>像那種內容是 A format 但附檔是 B format 的，應該直接不處理？</li>
 <li>標 JSON 結果出來是 XML ，直接就變成 invalid JSON ，應該要警告? 已經不是機器讀不懂的問題，而是標示錯誤了</li>
-<li>[S]跟[T]的差異是在?</li>
+<li>這邊補充一下，未來的上架模是我其實是希望檔案格式能由系統自動判讀，若真的不吻合使用者可以再自行調整，這樣應該可以大幅降低錯誤率。</li></ul>
+
+<ul class="comment"><li>[S]跟[T]的差異是在?</li>
 <li>S會像是&nbsp; [[&quot;姓名&quot;,&quot;性別&quot;],[&quot;小明&quot;,&quot;男&quot;],[&quot;小美&quot;, &quot;女&quot;]] ， T 會是 [{&quot;姓名&quot;:&quot;小明&quot;,&quot;性別&quot;:&quot;男&quot;},{&quot;姓名&quot;:&quot;小美&quot;,&quot;性別&quot;:&quot;女&quot;}] ，只是我沒印象有看過 S 的案例過，也許 [S] 可以先不處理改成跳到 [X] ，等到真的有遇到再實作</li></ul>
 <ul><li>[V] 確定是 GeoJSON ，也可以支援匯出 CSV</li></ul>
 
