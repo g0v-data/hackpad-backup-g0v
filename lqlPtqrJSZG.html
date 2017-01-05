@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="1498"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$lqlPtqrJSZG</title>
+</head>
+<body><h1>JSON, XML 匯出入範例</h1><p></p><p>本文是因應 data.gov.tw 政府資料開放平台今年目標是能納入各機關上架資料時的資料檢核，以及可以將表格式資料匯出成&nbsp; JSON or XML 方便程式使用，因此先列出初步的標準。</p><p></p><p>這邊的匯入資料無法通過，不代表資料不乾淨，只是代表沒有被規則納入而已。&nbsp;</p><p></p><h2>匯入</h2><p>XML</p><ul><li>[A] 檢查 XML 是否為合法 XML<ul><li>不合法，到 [Z]</li>
+<li>合法，到 [B]</li></ul>
+</li>
+<li>[B] 檢查開頭是否有「&lt;?mso-application progid=&quot;Excel.Sheet&quot;」<ul><li>有，當作 Excel 處理，到 [X]</li>
+<li>沒有，到 [C]</li></ul>
+<ul class="comment"><li>這邊可能要再多加入一些判斷，Excel 應該不只這一種</li></ul>
+</ul>
+<ul><li>[C] 檢查 root tag 是否為 KML<ul><li>是的話，進到 [W]</li>
+<li>不是的話，到 [D]</li></ul>
+</li>
+<li>[D] 從 root tag 出發往 children 掃，掃到 childNodes 數量不等於一後停止<ul><li>如果 childNodes 全部的 nodeName 都一樣，就進到 [E]</li>
+<li>如果 nodeName 有不同，就進到 [V]</li></ul>
+</li>
+<li>[E] 再檢查下一層的 childNodes ，如果數量都相同並且都是只有一層，並且 nodeName 也相同，就視為表格型資料的 XML<ul><li>符合，到 [S]</li>
+<li>不符合，到 [V]</li></ul>
+</ul>
+
+<ul><li>[S]&nbsp; 符合表格型資料，標記起來， nodeName 可以是欄位名</li><ul class="comment"><li><a href="http://data.gov.tw/node/6213"></a>http://data.gov.tw/node/6213</li>
+<li><a href="http://data.gov.tw/node/6624"></a>http://data.gov.tw/node/6624</li>
+<li><a href="http://data.gov.tw/node/6074"></a>http://data.gov.tw/node/6074</li>
+<li>這幾個都可以合法進到這一步</li></ul>
+</ul>
+
+<ul><li>[V] 無法判斷的 XML ，結束處理</li>
+<li>[W] 進到 KML 處理流程</li>
+<li>[X] 進到 excel 處理流程，不當作 XML 處理</li>
+<li>[Z] 標示為不合法 XML，需要警告</li></ul>
+<p><b>json</b></p><ul><li>[A] 檢查是否為合法 JSON<ul><li>不是合法 JSON ，到 [Z]</li>
+<li>是合法 JSON ，到 [B]</li></ul>
+</li>
+<li>[B] 看最外層的格式<ul><li>是 array ，到 [C]</li>
+<li>是 object ，到 [D]</li>
+<li>其他，到 [Y]</li></ul>
+</li>
+<li>[C] 檢查 array 內的每一個 element&nbsp;<ul><li>全部都是 array ，到 [E]</li>
+<li>全部都是 object ，到&nbsp; [F]</li>
+<li>其他，到 [X]</li></ul>
+</li>
+<li>[D] 檢查是否有 type 這個 properties<ul><li>沒有，進到 [X]</li>
+<li>有，是 FeatureCollection ，進到 [V]</li>
+<li>其他，進到 [X]</li></ul>
+</li>
+<li>[E] 檢查 array 內是否每個元素都是非 array, object 的值<ul><li>是，進到 [S]</li>
+<li>不是，進到 [X]</li></ul>
+</li>
+<li>[F] 檢查是否每個 object 的 properties 的集合都相同，並且&nbsp; value 都是非 array, object<ul><li>是，進到 [T]</li>
+<li>不是，進到 [V]</li></ul>
+</ul>
+
+<p></p><ul><li>[S] 是二維陣列並且矩形的 array JSON ，可以匯出成 CSV</li></ul>
+<ul class="comment"><li>這個範例現在好像沒有遇到過...</li></ul>
+<ul><li>[T] 是 properties 都相同的 array JSON ，可以匯出成 CSV</li></ul>
+<ul class="comment"><li><a href="http://data.gov.tw/node/6624"></a>http://data.gov.tw/node/6624 的第二個 JSON 就是這種(剛發現第一個 JSON 實際上是 XML)</li></ul>
+<ul><li>[V] 確定是 GeoJSON ，也可以支援匯出 CSV</li></ul>
+
+<ul><li>[X] 標示為不認得的 JSON 格式</li>
+<li>[Y] 標示為不認得的最外層 JSON 格式，可能需要警告</li>
+<li>[Z] 標示為不合法 JSON ，需要警告</li></ul>
+<h2>匯出</h2><p>這邊匯出只針對已經確定「可匯出成CSV」的資料，這個範圍只有在原始資料的格式已經是表格性質的格式</p><p></p><p><b>XML</b></p><ul><li>&lt;dataset&gt;<ul><li>&lt;row&gt;</li></ul>
+<ul style="list-style: none;"><li>&lt;col1&gt;value1-1&lt;/col1&gt;&lt;col2&gt;value1-2&lt;/col2&gt;</li>
+<li>&lt;/row&gt;</li></ul>
+<ul><li>&lt;row&gt;</li></ul>
+<ul style="list-style: none;"><li>&lt;col1&gt;value2-1&lt;/col1&gt;&lt;col2&gt;value2-2&lt;/col2&gt;</li>
+<li>&lt;/row&gt;</li></ul style="list-style: none;">
+</li>
+<li>&lt;/dataset&gt;</li><ul style="list-style: none;"><li><br/></li></ul>
+</ul>
+<p><b>JSON</b></p><ul><li>[{&quot;col1&quot;:&quot;value1-1&quot;, &quot;col2&quot;:&quot;value1-2&quot;}, {&quot;col1&quot;:&quot;value1-2&quot;,&quot;col2&quot;:&quot;value2-2&quot;}]</li></ul>
+<ul class="comment"><li>不太確定以上兩者有沒有更標準的作法</li>
+<li>好像有 <a href="http://specs.frictionlessdata.io/json-table-schema/"></a>http://specs.frictionlessdata.io/json-table-schema/ JSON Table Schema 這種東西，</li></ul>
+
+</body>
+</html>
