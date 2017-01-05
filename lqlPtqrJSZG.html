@@ -3,15 +3,22 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1498"/>
+<meta name="version" content="1875"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$lqlPtqrJSZG</title>
 </head>
 <body><h1>JSON, XML 匯出入範例</h1><p></p><p>本文是因應 data.gov.tw 政府資料開放平台今年目標是能納入各機關上架資料時的資料檢核，以及可以將表格式資料匯出成&nbsp; JSON or XML 方便程式使用，因此先列出初步的標準。</p><p></p><p>這邊的匯入資料無法通過，不代表資料不乾淨，只是代表沒有被規則納入而已。&nbsp;</p><p></p><h2>匯入</h2><p>XML</p><ul><li>[A] 檢查 XML 是否為合法 XML<ul><li>不合法，到 [Z]</li>
 <li>合法，到 [B]</li></ul>
-</li>
-<li>[B] 檢查開頭是否有「&lt;?mso-application progid=&quot;Excel.Sheet&quot;」<ul><li>有，當作 Excel 處理，到 [X]</li>
+<ul class="comment"><li>合法與否的定義是指之前的syntax檢查嗎?</li>
+<li>純粹檢查是不是合法 XML ，這是可以抓出他到底放的是 xml 的網址，還是 zip 檔或者是網頁網址還要另外再點下載的情況</li>
+<li>那這裡的&quot;合法&quot;該如何檢查?</li>
+<li><a href="http://www.w3schools.com/xml/xml_validator.asp"></a>http://www.w3schools.com/xml/xml_validator.asp&nbsp; 或者 google 找 xml validator ，應該很多方法，XML 跟 HTML 不太一樣，HTML 可以很寬鬆很多容錯，XML 的語法是很嚴格的</li>
+<li>(Y)</li></ul>
+</ul>
+<ul><li>[B] 檢查開頭是否有「&lt;?mso-application progid=&quot;Excel.Sheet&quot;」<ul><li>有，當作 Excel 處理，到 [X]</li>
 <li>沒有，到 [C]</li></ul>
-<ul class="comment"><li>這邊可能要再多加入一些判斷，Excel 應該不只這一種</li></ul>
+<ul class="comment"><li>這邊可能要再多加入一些判斷，Excel 應該不只這一種</li>
+<li>XML還有Word轉的哦~</li>
+<li>也許可以先用這些條件都掃過一次現有的 XML ，然後把 [V] 步驟的 XML 找找看能不能找到有哪些常見的可處理情況再拉出來處理</li></ul>
 </ul>
 <ul><li>[C] 檢查 root tag 是否為 KML<ul><li>是的話，進到 [W]</li>
 <li>不是的話，到 [D]</li></ul>
@@ -58,7 +65,9 @@
 <p></p><ul><li>[S] 是二維陣列並且矩形的 array JSON ，可以匯出成 CSV</li></ul>
 <ul class="comment"><li>這個範例現在好像沒有遇到過...</li></ul>
 <ul><li>[T] 是 properties 都相同的 array JSON ，可以匯出成 CSV</li></ul>
-<ul class="comment"><li><a href="http://data.gov.tw/node/6624"></a>http://data.gov.tw/node/6624 的第二個 JSON 就是這種(剛發現第一個 JSON 實際上是 XML)</li></ul>
+<ul class="comment"><li><a href="http://data.gov.tw/node/6624"></a>http://data.gov.tw/node/6624 的第二個 JSON 就是這種(剛發現第一個 JSON 實際上是 XML)</li>
+<li>[S]跟[T]的差異是在?</li>
+<li>S會像是&nbsp; [[&quot;姓名&quot;,&quot;性別&quot;],[&quot;小明&quot;,&quot;男&quot;],[&quot;小美&quot;, &quot;女&quot;]] ， T 會是 [{&quot;姓名&quot;:&quot;小明&quot;,&quot;性別&quot;:&quot;男&quot;},{&quot;姓名&quot;:&quot;小美&quot;,&quot;性別&quot;:&quot;女&quot;}] ，只是我沒印象有看過 S 的案例過，也許 [S] 可以先不處理改成跳到 [X] ，等到真的有遇到再實作</li></ul>
 <ul><li>[V] 確定是 GeoJSON ，也可以支援匯出 CSV</li></ul>
 
 <ul><li>[X] 標示為不認得的 JSON 格式</li>
@@ -75,7 +84,7 @@
 </ul>
 <p><b>JSON</b></p><ul><li>[{&quot;col1&quot;:&quot;value1-1&quot;, &quot;col2&quot;:&quot;value1-2&quot;}, {&quot;col1&quot;:&quot;value1-2&quot;,&quot;col2&quot;:&quot;value2-2&quot;}]</li></ul>
 <ul class="comment"><li>不太確定以上兩者有沒有更標準的作法</li>
-<li>好像有 <a href="http://specs.frictionlessdata.io/json-table-schema/"></a>http://specs.frictionlessdata.io/json-table-schema/ JSON Table Schema 這種東西，</li></ul>
+<li>好像有 <a href="http://specs.frictionlessdata.io/json-table-schema/"></a>http://specs.frictionlessdata.io/json-table-schema/ JSON Table Schema 這種東西，不過對大部分程式設計師來說上面兩個最單純的格式應該就很好用了</li></ul>
 
 </body>
 </html>
