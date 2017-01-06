@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2710"/>
+<meta name="version" content="2982"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$lqlPtqrJSZG</title>
 </head>
 <body><h1>JSON, XML 匯出入範例</h1><p></p><p>本文是因應 data.gov.tw 政府資料開放平台今年目標是能納入各機關上架資料時的資料檢核，以及可以將表格式資料匯出成&nbsp; JSON or XML 方便程式使用，因此先列出初步的標準。</p><p></p><p>這邊的匯入資料無法通過，不代表資料不乾淨，只是代表沒有被規則納入而已。&nbsp;</p><p></p><h2>匯入</h2><p>XML</p><ul><li>[A] 檢查 XML 是否為合法 XML<ul><li>不合法，到 [Z]</li>
@@ -28,7 +28,8 @@
 <li>[D] 從 root tag 出發往 children 掃，掃到 childNodes 數量不等於一後停止<ul><li>如果 childNodes 全部的 tag name 都一樣，就進到 [E]</li>
 <li>如果 tag name 有不同，就進到 [V]</li></ul>
 <ul class="comment"><li>嚴格來說是 Tag Name</li>
-<li>我把他改成 tag name 了，我寫 node name&nbsp; 是直接沿用 libxml&nbsp; 的名稱 XD</li></ul>
+<li>我把他改成 tag name 了，我寫 node name&nbsp; 是直接沿用 libxml&nbsp; 的名稱 XD</li>
+<li>node name 在 XML 內包含了 text node 等非 tag 的資料 ，所以用 tag name 才是符合描述中的狀況。</li></ul>
 </ul>
 <ul><li>[E] 再檢查下一層的 childNodes ，如果數量都相同並且都是只有一層，並且 tag name 也相同，就視為表格型資料的 XML<ul><li>符合，到 [S]</li>
 <li>不符合，到 [V]</li></ul>
@@ -77,7 +78,8 @@
 <ul class="comment"><li><a href="http://data.gov.tw/node/6624"></a>http://data.gov.tw/node/6624 的第二個 JSON 就是這種(剛發現第一個 JSON 實際上是 XML)</li>
 <li>像那種內容是 A format 但附檔是 B format 的，應該直接不處理？</li>
 <li>標 JSON 結果出來是 XML ，直接就變成 invalid JSON ，應該要警告? 已經不是機器讀不懂的問題，而是標示錯誤了</li>
-<li>這邊補充一下，未來的上架模是我其實是希望檔案格式能由系統自動判讀，若真的不吻合使用者可以再自行調整，這樣應該可以大幅降低錯誤率。</li></ul>
+<li>這邊補充一下，未來的上架模是我其實是希望檔案格式能由系統自動判讀，若真的不吻合使用者可以再自行調整，這樣應該可以大幅降低錯誤率。</li>
+<li>自動判讀 ？是指需要對每個檔案都去測試所有的格式？這不僅效率慢, 可靠性也不高。個人認為應標示格式錯誤即可。</li></ul>
 
 <ul class="comment"><li>[S]跟[T]的差異是在?</li>
 <li>S會像是&nbsp; [[&quot;姓名&quot;,&quot;性別&quot;],[&quot;小明&quot;,&quot;男&quot;],[&quot;小美&quot;, &quot;女&quot;]] ， T 會是 [{&quot;姓名&quot;:&quot;小明&quot;,&quot;性別&quot;:&quot;男&quot;},{&quot;姓名&quot;:&quot;小美&quot;,&quot;性別&quot;:&quot;女&quot;}] ，只是我沒印象有看過 S 的案例過，也許 [S] 可以先不處理改成跳到 [X] ，等到真的有遇到再實作</li></ul>
@@ -88,9 +90,12 @@
 <li>[Z] 標示為不合法 JSON ，需要警告</li></ul>
 <h2>匯出</h2><p>這邊匯出只針對已經確定「可匯出成CSV」的資料，這個範圍只有在原始資料的格式已經是表格性質的格式</p><ul class="comment"><li>匯出的 CSV 與匯入的 CSV 應制定一個規範</li>
 <li>匯入CSV的部分就不在這份文件的範圍了，不過我認為匯入CSV最少可以做一個檢查，就是第二行以後的欄位數有沒有大於第一行，有的話就應該噴錯誤，因為理論上第一行的欄位應該要最多。這個檢查可以抓到很多直接用逗點分隔卻沒 escape 掉逗點的 CSV</li>
+<li>我個人還是覺得，國發會應該規範一個標準的 CSV，凡不符合就當作不能處理的資料，回應給使用者變更。上次討論結論也是如此不是？</li>
+<li><br/></li>
 <li><br/></li>
 <li>匯出 CSV 的部分，由於 CSV 本身沒有標準規範，這邊可能要研究一下 python, r, php, d3, github 這些常用在資料分析的工具中的 csv lib 預期的 escape 法是什麼，怎麼處理 跳行, 逗點, 雙引號, 斜線等出現在值中的情況</li>
-<li>PHP 跟 github preview (不太確定是不是用 Ruby 的 哪個 csv RubyGem 處理的) ，看起來都可以正常處理當跳行或是逗點存在時，用雙引號括起來的情況，遇到雙引號時會變兩個雙引號 ，像是 <a href="https://gist.github.com/ronnywang/86a4883261f89e7a42883a11b5726a9e"></a>https://gist.github.com/ronnywang/86a4883261f89e7a42883a11b5726a9e 這邊就有遇到 csv 內需要有逗點、雙引號、跳行的情況</li></ul>
+<li>PHP 跟 github preview (不太確定是不是用 Ruby 的 哪個 csv RubyGem 處理的) ，看起來都可以正常處理當跳行或是逗點存在時，用雙引號括起來的情況，遇到雙引號時會變兩個雙引號 ，像是 <a href="https://gist.github.com/ronnywang/86a4883261f89e7a42883a11b5726a9e"></a>https://gist.github.com/ronnywang/86a4883261f89e7a42883a11b5726a9e 這邊就有遇到 csv 內需要有逗點、雙引號、跳行的情況</li>
+<li>因為 CSV 沒有標準，所以才需要統一一個規範，這樣輸出才有所依據，輸入輸出都應該採取這個規範。</li></ul>
 
 <p><b>XML</b></p><ul><li>&lt;dataset&gt;<ul><li>&lt;row&gt;</li></ul>
 <ul style="list-style: none;"><li>&lt;col1&gt;value1-1&lt;/col1&gt;&lt;col2&gt;value1-2&lt;/col2&gt;</li>
