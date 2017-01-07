@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2891"/>
+<meta name="version" content="2937"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$yRRVlfb5oJg</title>
 </head>
 <body><h1>水</h1><p>有質、有量、有水文</p><p></p><h2>構想</h2><p>基本目標：台灣地區的水文資料動態彙整與視覺化，形成水現況/即時循環圖，讓一般民眾了解水資源現況、用水、洪旱災、將水文資料實質彙整於在地流域地理空間呈現上，基於 gov open data 的實地水文教材。</p><p></p><h2>TODO</h2><ul><li>確立水循環邏輯與水資源的表達方式<ul><li>依照集水區與流域？<ul><li>翡翠水庫...</li></ul>
@@ -99,24 +99,27 @@
 <li>既有的「農業用水」計算中不曉得是否有此項目，或是概念相近的項目？</li>
 <li><br/></li></ul>
 
-<h2>Tools</h2><ul><li>荷蘭 Deltares 研究中心提供的 水利相關 opensource 與 Freesoftware軟體&nbsp;&nbsp;<ul><li><a href="http://oss.deltares.nl/"></a>http://oss.deltares.nl/</li>
+<h2>Tools</h2><ul><li>荷蘭 Deltares 研究中心提供的 水利相關 opensource 與 Freesoftware 軟體&nbsp;&nbsp;<ul><li><a href="http://oss.deltares.nl/"></a>http://oss.deltares.nl/</li>
 <li>地下水（imod）、3維水理（delft3D）、洪水預警(FEWS) 、模式成果展示（openearth ）等</li></ul>
 </li>
-<li>OpenStreams provides the building blocks that make up integrated hydrological models. These blocks can be complete models but also parts of models that can be used to build other models. It does not aim to be a complete framework for building and connecting models, that task is left to layers (such as OpenMI) that can be build on top of the component or collections of components.<ul><li><a href="https://publicwiki.deltares.nl/display/OpenS/Home"></a><a href='https://publicwiki.deltares.nl/display/OpenS/Home'/>https://publicwiki.deltares.nl/display/OpenS/Home</a></li></ul>
+<li>OpenStreams<ul><li><a href="https://publicwiki.deltares.nl/display/OpenS/Home"></a><a href='https://publicwiki.deltares.nl/display/OpenS/Home'/>https://publicwiki.deltares.nl/display/OpenS/Home</a></li>
+<li>OpenStreams provides the building blocks that make up integrated hydrological models. These blocks can be complete models but also parts of models that can be used to build other models. It does not aim to be a complete framework for building and connecting models, that task is left to layers (such as OpenMI) that can be build on top of the component or collections of components.</li></ul>
 </li>
 <li>SeaSketch Supports Collaborative Planning for our Oceans<ul><li><a href="http://www.seasketch.org/home.html"></a><a href='http://www.seasketch.org/home.html'/>http://www.seasketch.org/home.html</a></li></ul>
 </li>
 <li>WaterWorld<ul><li><a href="http://www.policysupport.org/waterworld"></a><a href='http://www.policysupport.org/waterworld'/>http://www.policysupport.org/waterworld</a></li></ul>
 </li>
-<li>洪水解析系統 (Integrated Flood Analysis System, IFAS)是一個免費的淹水模擬軟體，內建有全球衛星定位與地形資料，使用者可以藉由輸入降雨資料，透過系統分析而模擬出洪水危險地區，一般民眾皆可透過此軟體模擬洪水危險地區。軟體網站：<a href="http://www.icharm.pwri.go.jp/research/ifas/"></a><a href='http://www.icharm.pwri.go.jp/research/ifas/'/>http://www.icharm.pwri.go.jp/research/ifas/</a></li>
+<li>Integrated Flood Analysis System, IFAS<ul><li><a href="http://www.icharm.pwri.go.jp/research/ifas/"></a><a href='http://www.icharm.pwri.go.jp/research/ifas/'/>http://www.icharm.pwri.go.jp/research/ifas/</a></li>
+<li>洪水解析系統 (Integrated Flood Analysis System, IFAS)是一個免費的淹水模擬軟體，內建有全球衛星定位與地形資料，使用者可以藉由輸入降雨資料，透過系統分析而模擬出洪水危險地區，一般民眾皆可透過此軟體模擬洪水危險地區。</li></ul>
+</li>
+<li>Rainfall-Runoff-Inundation Model, RRI<ul><li><a href="http://www.icharm.pwri.go.jp/research/rri/rri_top.html"></a>http://www.icharm.pwri.go.jp/research/rri/rri_top.html</li>
 <li>降雨逕流淹水模式 (Rainfall-Runoff-Inundation Model, RRI)是免費的降雨逕流模擬軟體，內建有二維地形模擬功能，使用者將降雨量資料與數值地形模型輸入後，透過軟體可以模擬出雨水逕流狀況雨水量高度。</li></ul>
+</ul>
 
 <p></p><h2>idea pool</h2><p><b>綜整現況水情事實，類似教科書的循環圖</b></p><ul><li>想法說明：依照集水區區域來呈現，並且將各個集水區中的重要環境特徵、用水型態、特殊水資源地景地點...標示出來。並非抽象地呈現為「農業用水」，而是「嘉南大圳所涵蓋的農業用水」(似乎可以再更細緻?） <a href="http://e-info.org.tw/node/107458"></a><a href='http://e-info.org.tw/node/107458'/>http://e-info.org.tw/node/107458</a></li>
 <li>參考：水循環示意圖，可以再加入人類使用的環節</li></ul>
-<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_yRRVlfb5oJg_p.172171_1410541700761_Water_cycle_zh.png'/></p><ul><li><a href="http://mewarnai.us/images/446516-water-cycle-diagram.jpg"></a><a href='http://mewarnai.us/images/446516-water-cycle-diagram.jpg'/>http://mewarnai.us/images/446516-water-cycle-diagram.jpg</a></li></ul>
-<p><img src='http://mewarnai.us/images/446516-water-cycle-diagram.jpg'/></p><ul class="comment"><li>可惜這張圖片連結失效了！該圖中也同時呈現人類居住與工業農業使用，更為完整</li></ul>
-
-<ul><li>地球公民基金會製作高雄河川與水庫關係圖 <a href="https://m.facebook.com/events/upcoming?ref=bookmark&app_id=2344061033#"></a><a href='https://m.facebook.com/events/upcoming?ref=bookmark&amp;app_id=2344061033#!/CitizenoftheEarth/photos/a.152858528108735.31770.148513668543221/860275864033661/?type=1&amp;source=48'/>https://m.facebook.com/events/upcoming?ref=bookmark&amp;app_id=2344061033#</a><a href='https://m.facebook.com/events/upcoming?ref=bookmark&amp;app_id=2344061033#!/CitizenoftheEarth/photos/a.152858528108735.31770.148513668543221/860275864033661/?type=1&amp;source=48'/>!/CitizenoftheEarth/photos/a.152858528108735.31770.148513668543221/860275864033661/?type=1&amp;source=48</a></li>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_yRRVlfb5oJg_p.172171_1410541700761_Water_cycle_zh.png'/></p><ul><li><a href="http://mewarnai.us/images/446516-water-cycle-diagram.jpg"></a><a href='http://mewarnai.us/images/446516-water-cycle-diagram.jpg'/>http://mewarnai.us/images/446516-water-cycle-diagram.jpg</a></li>
+<li>地球公民基金會製作高雄河川與水庫關係圖 <a href="https://m.facebook.com/events/upcoming?ref=bookmark&app_id=2344061033#"></a><a href='https://m.facebook.com/events/upcoming?ref=bookmark&amp;app_id=2344061033#!/CitizenoftheEarth/photos/a.152858528108735.31770.148513668543221/860275864033661/?type=1&amp;source=48'/>https://m.facebook.com/events/upcoming?ref=bookmark&amp;app_id=2344061033#</a><a href='https://m.facebook.com/events/upcoming?ref=bookmark&amp;app_id=2344061033#!/CitizenoftheEarth/photos/a.152858528108735.31770.148513668543221/860275864033661/?type=1&amp;source=48'/>!/CitizenoftheEarth/photos/a.152858528108735.31770.148513668543221/860275864033661/?type=1&amp;source=48</a></li>
 <li><a href="https://www.facebook.com/1964flood/posts/855796741146541"></a><a href='https://www.facebook.com/1964flood/posts/855796741146541'/>https://www.facebook.com/1964flood/posts/855796741146541</a></li>
 <li><a href="https://www.facebook.com/ajplusenglish/videos/599235236884654/"></a><a href='https://www.facebook.com/ajplusenglish/videos/599235236884654/'/>https://www.facebook.com/ajplusenglish/videos/599235236884654/</a></li>
 <li><a href="http://www.nytimes.com/interactive/2016/03/24/nyregion/how-nyc-gets-its-water-new-york-101.html?smid=fb-nytimes&smtyp=cur&_r=0"></a><a href='http://www.nytimes.com/interactive/2016/03/24/nyregion/how-nyc-gets-its-water-new-york-101.html?smid=fb-nytimes&amp;smtyp=cur&amp;_r=0'/>http://www.nytimes.com/interactive/2016/03/24/nyregion/how-nyc-gets-its-water-new-york-101.html?smid=fb-nytimes&amp;smtyp=cur&amp;_r=0</a></li>
