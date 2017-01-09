@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="3132"/>
+<meta name="version" content="3257"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$lqlPtqrJSZG</title>
 </head>
 <body><h1>JSON, XML 匯出入範例</h1><p></p><p>本文是因應 data.gov.tw 政府資料開放平台今年目標是能納入各機關上架資料時的資料檢核，以及可以將表格式資料匯出成&nbsp; JSON or XML 方便程式使用，因此先列出初步的標準。</p><p></p><p>這邊的匯入資料無法通過，不代表資料不乾淨，只是代表沒有被規則納入而已。&nbsp;</p><p></p><h2>匯入</h2><p>XML</p><ul><li>[A] 檢查 XML 是否為合法 XML<ul><li>不合法，到 [Z]</li>
@@ -20,7 +20,8 @@
 <li>XML還有Word轉的哦~</li>
 <li>也許可以先用這些條件都掃過一次現有的 XML ，然後把 [V] 步驟的 XML 找找看能不能找到有哪些常見的可處理情況再拉出來處理</li>
 <li>這是 XLSX (<a href="https://en.wikipedia.org/wiki/Microsoft_Office_XML_formats)"></a>https://en.wikipedia.org/wiki/Microsoft_Office_XML_formats)</li>
-<li>這邊主要是要解決很多資料集傳 xlsx ，自稱自己是 xml ，這對使用者來說會覺得超詐騙的，應該要能抓出來警告</li></ul>
+<li>這邊主要是要解決很多資料集傳 xlsx ，自稱自己是 xml ，這對使用者來說會覺得超詐騙的，應該要能抓出來警告</li>
+<li>這個一定要抓，太GY又浪費人力</li></ul>
 </ul>
 <ul><li>[C] 檢查 root tag 是否為 KML<ul><li>是的話，進到 [W]</li>
 <li>不是的話，到 [D]</li></ul>
@@ -79,7 +80,8 @@
 <li>像那種內容是 A format 但附檔是 B format 的，應該直接不處理？</li>
 <li>標 JSON 結果出來是 XML ，直接就變成 invalid JSON ，應該要警告? 已經不是機器讀不懂的問題，而是標示錯誤了</li>
 <li>這邊補充一下，未來的上架模是我其實是希望檔案格式能由系統自動判讀，若真的不吻合使用者可以再自行調整，這樣應該可以大幅降低錯誤率。</li>
-<li>自動判讀 ？是指需要對每個檔案都去測試所有的格式？這不僅效率慢, 可靠性也不高。個人認為應標示格式錯誤即可。</li></ul>
+<li>自動判讀 ？是指需要對每個檔案都去測試所有的格式？這不僅效率慢, 可靠性也不高。個人認為應標示格式錯誤即可。</li>
+<li>如果是需要先標示格是錯誤的話，表示使用者還是要填這項囉?</li></ul>
 
 <ul class="comment"><li>[S]跟[T]的差異是在?</li>
 <li>S會像是&nbsp; [[&quot;姓名&quot;,&quot;性別&quot;],[&quot;小明&quot;,&quot;男&quot;],[&quot;小美&quot;, &quot;女&quot;]] ， T 會是 [{&quot;姓名&quot;:&quot;小明&quot;,&quot;性別&quot;:&quot;男&quot;},{&quot;姓名&quot;:&quot;小美&quot;,&quot;性別&quot;:&quot;女&quot;}] ，只是我沒印象有看過 S 的案例過，也許 [S] 可以先不處理改成跳到 [X] ，等到真的有遇到再實作</li></ul>
@@ -95,7 +97,11 @@
 <li><br/></li>
 <li>匯出 CSV 的部分，由於 CSV 本身沒有標準規範，這邊可能要研究一下 python, r, php, d3, github 這些常用在資料分析的工具中的 csv lib 預期的 escape 法是什麼，怎麼處理 跳行, 逗點, 雙引號, 斜線等出現在值中的情況</li>
 <li>PHP 跟 github preview (不太確定是不是用 Ruby 的 哪個 csv RubyGem 處理的) ，看起來都可以正常處理當跳行或是逗點存在時，用雙引號括起來的情況，遇到雙引號時會變兩個雙引號 ，像是 <a href="https://gist.github.com/ronnywang/86a4883261f89e7a42883a11b5726a9e"></a>https://gist.github.com/ronnywang/86a4883261f89e7a42883a11b5726a9e 這邊就有遇到 csv 內需要有逗點、雙引號、跳行的情況</li>
-<li>因為 CSV 沒有標準，所以才需要統一一個規範，這樣輸出才有所依據，輸入輸出都應該採取這個規範。</li></ul>
+<li>因為 CSV 沒有標準，所以才需要統一一個規範，這樣輸出才有所依據，輸入輸出都應該採取這個規範。</li>
+<li>其實目前在跟Ronny討論的就是一個盡可能完整的檢核邏輯，至於說是規範... 不知道耶，覺得會被吐槽XD （例如最近常被問Open Data四星五星的認定與否，這似乎不是我們能做的事）</li>
+<li>例如前面說的[逗點分隔]，[資料內含逗點須用雙引號夾住]，[結構化資料需有明確欄標題（以1列為原則）]，這些判斷規則我覺得是OK的，但不能說是規範XD 不合的資料依據目前的判斷邏輯，的確就是丟到不處理的項目，所以大家說的作法其實是一致的。</li>
+<li>至於像是要不要[強制UTF-8編碼]等，這就可以討論。</li>
+<li><br/></li></ul>
 
 <p><b>XML</b></p><ul><li>&lt;dataset&gt;<ul><li>&lt;row&gt;</li></ul>
 <ul style="list-style: none;"><li>&lt;col1&gt;value1-1&lt;/col1&gt;&lt;col2&gt;value1-2&lt;/col2&gt;</li>
