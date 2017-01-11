@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2035"/>
+<meta name="version" content="2064"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$uhB6qAwYXe5</title>
 </head>
 <body><h1>地號轉地圖 Land No. Mapper</h1><ul class="comment"><li>構想來自<a href='http://www.aypwip.org/webnote/poponfire'/>土地許願松</a></li></ul>
@@ -17,7 +17,7 @@
 <li>類似 <a href='http://timemapper.okfnlabs.org/'/>TimeMapper</a>：免安裝軟體...</li></ul>
 </ol>
 
-<h2>整理現有類似的服務功能</h2><p></p><undefined><li><b>地籍與地號探討</b></li></undefined>
+<h2>整理現有類似的服務</h2><p></p><undefined><li><b>地籍與地號探討文件</b></li></undefined>
 <ul><li>友善地號資訊查詢界面 by ronny：<a href="https://g0v.hackpad.com/ZrNxaKVn8jt"></a>https://g0v.hackpad.com/ZrNxaKVn8jt</li></ul>
 
 <undefined><li><b>關於地籍資料的取得</b></li></undefined>
@@ -31,13 +31,14 @@
 <ul class="comment"><li>地號畫圖需要地籍圖，台北市公布的也只有段籍圖而已。</li>
 <li>如果只是要看的話，國土測繪中心有提供全國的段籍圖WMTS (<a href='http://maps.nlsc.gov.tw/'/>國土測繪圖資網路地圖服務系統</a>)</li>
 <li>ronny 正在研究，從 WMS 轉出 GeoJSON 資料，<a href='http://youtu.be/1dga12J26Tw?t=19m33s'/>參考演講</a>；ronny 表示，成功率不太高</li></ul>
+
 <ul><li><a href='http://gis.rchss.sinica.edu.tw/index.php?option=com_content&amp;view=article&amp;id=413:plugin-for-qgis&amp;catid=89:2009-07-22-06-28-27&amp;Itemid=132'/>地籍圖查詢套繪系統Plugin For QGIS</a>&nbsp; 中研院之前就有開發過類似的模組，可以用地號查位地籍圖的位置等資訊，現在政府很多圖台也有類似的功能，不過重點在於這些權限目前都還是限縮在政府手上，如果能開放API等使用應該就能解決問題。</li></ul>
-<ul class="comment"><li><i>開放地籍資料的 [API 的技術] 與 [法律疑慮檢討]&nbsp;</i></li>
-<li>摘自 Dongpo <a href='https://www.dropbox.com/s/vpwi7vtotlyv7sp/20140819_OpenGeoMeeting.pdf'/>簡報</a>：</li></ul>
-<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_sGw1sEwbfHP_p.172171_1416254856274_%E5%9C%96%E7%89%87%203.png'/></p><p></p><ul><li><a href='https://docs.google.com/document/d/1BgTJjLV4glQzbn-NQcWbjOd3KtSbgy5EDTG-Nna8bAc/edit?pli=1'/>地籍圖KML資料取得步驟</a><ul><li>地籍圖資網路便民服務系統提供KML的功能已經被取消了 囧</li></ul>
+
+<ul><li><a href='https://docs.google.com/document/d/1BgTJjLV4glQzbn-NQcWbjOd3KtSbgy5EDTG-Nna8bAc/edit?pli=1'/>地籍圖KML資料取得步驟</a><ul><li>地籍圖資網路便民服務系統提供KML的功能已經被取消了 囧</li></ul>
 <ul style="list-style: none;"><li><i>系統說明:「地籍圖資網路便民服務系統」介接使用Google圖資，因授權與收費(使用者付費)問題，彈出式Google地圖與衛星影像及街景無法繼續提供服務，必須改為背景套疊網路地圖方式提供服務。本系統更版後除了提供TGOS與NLSC及OSM網路地圖背景套疊服務外，也新增了點選查詢同地段之宗地，並提供點選宗地顯示地號及經緯度坐標等功能，您可運用該坐標於任何網路地圖進行定位服務，歡迎多加利用。</i></li>
 <li>&lt;囧&gt;</li></ul>
 </ul>
+
 <ul><li>可以透過 地政電子資料流通服務網 ( <a href="https://ccs.land.moi.gov.tw/"></a>https://ccs.land.moi.gov.tw/ ) 提出申請，政府機關申請使用應該是不用額外付費，但民間單位就會收取每筆1元的費用（台南市為例）</li></ul>
 
 <h2>實作</h2><ul><li>雨蒼&gt; 我之前寫的黨產地圖可以給大家參考。<ul><li><a href="https://github.com/billy3321/billy3321.github.io/tree/master/kmt"></a><a href='https://github.com/billy3321/billy3321.github.io/tree/master/kmt'/>https://github.com/billy3321/billy3321.github.io/tree/master/kmt</a></li></ul>
@@ -79,9 +80,10 @@
 </li>
 <li>上載 csv 可將地號以外的欄位內容，整合於 infobox<ul><li>提問：可將此 GeoJson 檔案下載嗎？方便應用，例如丟到 Umap 當成底圖，接著用點線面來規劃公有空地願景，請見<a href='https://umap.openstreetmap.fr/zh-tw/map/map_50075#18/25.03983/121.54037'/>願景測試地圖</a></li></ul>
 </li>
-<li>chewei&gt; 突然很好奇世界各國的土地管理系統 (台灣是段小段&amp;地號) ，甚至是否有國際通用的可能。</li></ul>
-
-<undefined><li><b>20150613 第拾肆次野百合黑客松</b></li></undefined>
+<li>chewei&gt; 突然很好奇世界各國的土地管理系統 (台灣是段小段&amp;地號) ，甚至是否有國際通用的可能。</li>
+<li>開放地籍資料的 [API 的技術] 與 [法律疑慮檢討]&nbsp;</li>
+<li>摘自 Dongpo <a href='https://www.dropbox.com/s/vpwi7vtotlyv7sp/20140819_OpenGeoMeeting.pdf'/>簡報</a>：</li></ul>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_sGw1sEwbfHP_p.172171_1416254856274_%E5%9C%96%E7%89%87%203.png'/></p><p></p><p></p><undefined><li><b>20150613 第拾肆次野百合黑客松</b></li></undefined>
 <ul><li>雛形：<a href="http://codepen.io/dz1984/full/NqgVPj"></a>http://codepen.io/dz1984/full/NqgVPj</li>
 <li>三種方向<ul><li>『地號圖片』：給地號，得到地號範圍的靜態圖片，方便用於配合議題文章的插圖、都市計畫書圖內文等等。</li>
 <li>『大批資料圖層』：類似天龍特公地的地號範圍與相關資料，同時呈現，編輯者用線上可協作表格方式，輸入「縣市/段小段/子母號」得到地號圖形，以及自己定義更多欄位內容，同時與地號圖形一起呈現出來。具體可參考天龍特公地與黨產地圖呈現方式。其他參考：<ul><li><a href='http://excel2earth.blogspot.tw/'/>Excel2Earth</a> （Excel---&gt;MAP）</li></ul>
