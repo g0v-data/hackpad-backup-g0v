@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="761"/>
+<meta name="version" content="902"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$5Ofw64qSz7P</title>
 </head>
 <body><h1><b>使用 Google Spreadsheet 建立協作資料集</b></h1><p>預想資料主題舉例</p><ul><li><a href='https://docs.google.com/spreadsheets/d/14PtHrilV7-yCyav1rJpHLFYc2-esav9c1VplJp0Aa0c/edit'/>社區報清單</a></li>
@@ -14,43 +14,66 @@
 <li><a href='https://www.facebook.com/elephant158/'/>尋找大象朋友</a></li>
 <li><a href='http://beefsouptn.blogspot.tw/2012/07/blog-post_24.html'/>臺南牛肉湯比較表格</a></li></ul>
 
-<h2>資料的各個階段</h2><p></p><p><b>爬取資料</b></p><ul><li>無痛爬梳自己來，用 Google Spreadsheet 爬取網頁資料 <a href="http://blog.infographics.tw/2016/11/google-spreadsheet-data-scraping/"></a><a href='http://blog.infographics.tw/2016/11/google-spreadsheet-data-scraping/'/>http://blog.infographics.tw/2016/11/google-spreadsheet-data-scraping/</a></li></ul>
-
-<p><b>內容協作</b></p><ul><li>於 spreadsheet 頁面協作</li>
-<li>透過「表單」讓使用者填報單筆資料</li></ul>
-
-<p><b>API</b></p><ul><li>Google 資料庫方案–Spreadsheet–(1)資料呈現 <a href="http://bp.51donate.com/2011/04/google-spreadsheet1.html"></a><a href='http://bp.51donate.com/2011/04/google-spreadsheet1.html'/>http://bp.51donate.com/2011/04/google-spreadsheet1.html</a></li>
-<li>Turn a Google Spreadsheet into a REST API <a href="https://sheetsu.com/"></a><a href='https://sheetsu.com/'/>https://sheetsu.com/</a></li></ul>
-
-<p><b>展示</b></p><p></p><p>時間地圖 / 地圖化</p><ul><li>TimeMapper <a href="http://timemapper.okfnlabs.org/"></a>http://timemapper.okfnlabs.org/<ul><li>Spreadsheet 必備的欄位是<b>Title</b>還有<b>Start</b>。</li>
-<li>如果只是建立地圖，<b>Start</b>可以不需要。 記得在TimeMmapper使用的欄位之外，你可以加任意數量的其他欄位</li></ul>
+<h2>資料的各個階段</h2><p></p><p><b>匯入資料</b></p><ul><li>無痛爬梳自己來，用 Google Spreadsheet 爬取網頁資料&nbsp;<ul><li><a href="http://blog.infographics.tw/2016/11/google-spreadsheet-data-scraping/"></a><a href='http://blog.infographics.tw/2016/11/google-spreadsheet-data-scraping/'/>http://blog.infographics.tw/2016/11/google-spreadsheet-data-scraping/</a></li></ul>
 </li>
-<li>Geoevent <a href="http://0media.tw/t/geoevent/"></a>http://0media.tw/t/geoevent/</li>
-<li>How to: create maps with interactive tables from Google spreadsheets <a href="https://dinfografia.wordpress.com/2016/08/03/maps-with-interactive-tables-from-google-spreadsheets/"></a>https://dinfografia.wordpress.com/2016/08/03/maps-with-interactive-tables-from-google-spreadsheets/</li>
-<li>Making Interactive Maps From Spreadsheets Using Geosheets <a href="http://gisgeography.com/interactive-maps-spreadsheets-geosheets/"></a>http://gisgeography.com/interactive-maps-spreadsheets-geosheets/</li>
-<li><a href="http://blog.geosheets.com/2016/09/23/making-map-open-data-using-spreadsheet/"></a>http://blog.geosheets.com/2016/09/23/making-map-open-data-using-spreadsheet/</li>
-<li>&quot;Spreadsheet2KML&quot; ?</li></ul>
-
-<p>Crossfilter</p><ul><li>IsotopeFilter &amp; sort magical layouts <a href="http://isotope.metafizzy.co/"></a><a href='http://isotope.metafizzy.co/'/>http://isotope.metafizzy.co/</a></li>
-<li>Crossfilter is a JavaScript library for exploring large multivariate datasets in the browser. <a href="http://square.github.io/crossfilter/"></a><a href='http://square.github.io/crossfilter/'/>http://square.github.io/crossfilter/</a></li></ul>
-
-<p><b>發布流通</b></p><ul><li>政府資料開放平臺民間回饋專區<ul><li><a href="http://data.gov.tw/wise_search?nodetype=civic"></a>http://data.gov.tw/wise_search?nodetype=civic</li></ul>
+<li>Google 文件試算表跨檔案取資料<ul><li><a href="http://fireball-catcher.blogspot.tw/2012/08/google.html"></a>http://fireball-catcher.blogspot.tw/2012/08/google.html</li></ul>
+</li>
+<li>在 Google 文件插入同步更新的資料庫圖表！步驟教學<ul><li><a href="http://www.playpcesor.com/2016/05/google-docs-insert-google-sheet.html"></a>http://www.playpcesor.com/2016/05/google-docs-insert-google-sheet.html</li></ul>
 </ul>
 
-<p></p><h2>注意事項與討論</h2><ul><li>Spreadsheet 的內容協作規則要明確</li>
+<p><b>內容協作</b></p><ul><li>貢獻者於 spreadsheet 頁面協作，輸入內容</li>
+<li>也可以透過「表單」讓使用者填報單筆資料</li></ul>
+
+<p><b>提供 API / 內嵌入網頁</b></p><ul><li>Google 資料庫方案–Spreadsheet–(1)資料呈現&nbsp;<ul><li><a href="http://bp.51donate.com/2011/04/google-spreadsheet1.html"></a><a href='http://bp.51donate.com/2011/04/google-spreadsheet1.html'/>http://bp.51donate.com/2011/04/google-spreadsheet1.html</a></li></ul>
+</li>
+<li>Turn a Google Spreadsheet into a REST API&nbsp;<ul><li><a href="https://sheetsu.com/"></a><a href='https://sheetsu.com/'/>https://sheetsu.com/</a></li></ul>
+</li>
+<li>超簡單網頁表格製作！免語法用 Google 試算表教學<ul><li><a href="http://www.playpcesor.com/2016/02/html-web-table-google-sheet.html"></a>http://www.playpcesor.com/2016/02/html-web-table-google-sheet.html</li></ul>
+</ul>
+
+<p><b>發布流通</b></p><ul><li>政府資料開放平臺民間回饋專區<ul><li><a href="http://data.gov.tw/wise_search?nodetype=civic"></a><a href='http://data.gov.tw/wise_search?nodetype=civic'/>http://data.gov.tw/wise_search?nodetype=civic</a></li></ul>
+</ul>
+
+<p><b>展示</b></p><p>時間地圖 / 地圖化</p><ul><li>TimeMapper&nbsp;<ul><li><a href="http://timemapper.okfnlabs.org/"></a><a href='http://timemapper.okfnlabs.org/'/>http://timemapper.okfnlabs.org/</a></li>
+<li>Spreadsheet 必備的欄位是<b>Title</b>還有<b>Start</b>。</li>
+<li>如果只是建立地圖，<b>Start</b>可以不需要。 記得在TimeMmapper使用的欄位之外，你可以加任意數量的其他欄位</li></ul>
+</li>
+<li>Geoevent&nbsp;<ul><li><a href="http://0media.tw/t/geoevent/"></a>http://0media.tw/t/geoevent/</li></ul>
+</li>
+<li>How to: create maps with interactive tables from Google spreadsheets&nbsp;<ul><li><a href="https://dinfografia.wordpress.com/2016/08/03/maps-with-interactive-tables-from-google-spreadsheets/"></a>https://dinfografia.wordpress.com/2016/08/03/maps-with-interactive-tables-from-google-spreadsheets/</li></ul>
+</li>
+<li>Making Interactive Maps From Spreadsheets Using Geosheets&nbsp;<ul><li><a href="http://gisgeography.com/interactive-maps-spreadsheets-geosheets/"></a>http://gisgeography.com/interactive-maps-spreadsheets-geosheets/</li></ul>
+</li>
+<li>Making a Map From Open Data Using a Spreadsheet<ul><li><a href="http://blog.geosheets.com/2016/09/23/making-map-open-data-using-spreadsheet/"></a>http://blog.geosheets.com/2016/09/23/making-map-open-data-using-spreadsheet/</li></ul>
+</li>
+<li>&quot;Spreadsheet2KML&quot; ?</li></ul>
+
+<p>Crossfilter</p><ul><li>IsotopeFilter &amp; sort magical layouts&nbsp;<ul><li><a href="http://isotope.metafizzy.co/"></a><a href='http://isotope.metafizzy.co/'/>http://isotope.metafizzy.co/</a></li></ul>
+</li>
+<li>Crossfilter is a JavaScript library for exploring large multivariate datasets in the browser.&nbsp;<ul><li><a href="http://square.github.io/crossfilter/"></a><a href='http://square.github.io/crossfilter/'/>http://square.github.io/crossfilter/</a></li></ul>
+</ul>
+
+<p></p><p></p><h2>注意事項與討論</h2><p><b>促進良好的協作</b></p><ul><li>Spreadsheet 的內容協作規則要明確</li>
 <li>資料授權<ul><li>要如何讓想要協作的人，了解本資料的授權狀況？</li>
 <li>要如何在 spreadsheet 註明資料的授權狀況？</li>
 <li>在協作歷程中，如果希望變更資料授權狀況，例如從 cc0 變成 cc-by，這要如何決定？</li>
 <li>是否選擇 Odbl 或是其他資料集應用的授權條款會更適合 spreadsheet 協作所需要的授權選擇？</li></ul>
 </li>
-<li>若使用套裝展示方案，需要配合調整資料集的欄位項目，例如若要使用TimeMapper，則Spreadsheet 必備的欄位是 <b>Title </b>還有 <b>Start</b></li>
+<li>可以考慮設立網路社團，提供參與資料協作的貢獻者進行交流溝通。</li></ul>
+
+<p><b>關於資料集內容</b></p><ul><li>若使用套裝展示方案，需要配合調整資料集的欄位項目，例如若要使用 TimeMapper，則 Spreadsheet 必備的欄位是 <b>Title </b>還有 <b>Start</b></li>
 <li>資料內容如果需要呈現 polygon，在 spreadsheet 的架構下有可能實現嗎？如果不行，有可能在展示環節、或是其他方式呈現嗎？</li>
-<li>針對誤刪、防呆、歷史版本是否能記錄？</li>
+<li>針對誤刪、防呆、歷史版本是否能記錄？<ul><li>如何 Google 試算表多人共用不出錯？保護儲存格工作表範圍技巧 <a href="http://www.playpcesor.com/2016/10/google-sheet-protect.html"></a>http://www.playpcesor.com/2016/10/google-sheet-protect.html</li></ul>
+</li>
 <li>Spreadsheet 能否將更新動作都寄通知到信箱？<ul><li><a href="https://support.google.com/docs/answer/91588?co=GENIE.Platform%3DDesktop&hl=zh-Hant"></a><a href='https://support.google.com/docs/answer/91588?co=GENIE.Platform%3DDesktop&amp;hl=zh-Hant'/>https://support.google.com/docs/answer/91588?co=GENIE.Platform%3DDesktop&amp;hl=zh-Hant</a><ul><li>&nbsp;[工具] &gt; [通知規則]</li>
 <li>Google 文件或簡報不支援這項功能</li></ul>
 </li>
 <li><a href="http://webok.tw/2011/05/google-docs-online-form.html"></a>http://webok.tw/2011/05/google-docs-online-form.html<ul><li>線上表單設定通知</li></ul>
 </ul>
+</ul>
+
+<p><b>其他</b></p><ul><li>Airtable<ul><li>Airtable 最強大線上表格製作，免費資料庫重整任何事 <a href="http://www.playpcesor.com/2016/06/airtable.html"></a>http://www.playpcesor.com/2016/06/airtable.html</li>
+<li>【真的假的】資料庫小編園地 <a href="https://hackmd.io/s/SyMRyrfEl"></a>https://hackmd.io/s/SyMRyrfEl</li></ul>
 </ul>
 
 <p></p></body>
