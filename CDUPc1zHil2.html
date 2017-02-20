@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="190"/>
+<meta name="version" content="205"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$CDUPc1zHil2</title>
 </head>
 <body><h1>開放都市-委員會會議記錄資料庫 資料結構</h1><p>專案母體：<a href='/--BpW2Xt7s8AH'/>委員會會議記錄資料庫</a></p><p></p><h2>資料結構討論</h2><ul><li>現在以 json 的方式將會議記錄結構化 (NoSQL?) <a href='http://urbancode.tw/json_example.json'/>example</a>&nbsp;</li>
@@ -38,9 +38,10 @@
 <li>10.研議事項(討論事項)</li>
 <li>11.臨時動議案</li></ul>
 
-<h2>跨會議記錄文件之間的資料關係</h2><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_CDUPc1zHil2_p.162425_1487410787558_%E5%A7%94%E5%93%A1%E6%9C%83%E7%B4%80%E9%8C%84%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B%20(1).png'/></p><ul class="comment"><li>提問：是否會有案名變更的情況？例如案名文字修改</li></ul>
+<h2>跨會議記錄文件之間的資料關係</h2><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_CDUPc1zHil2_p.162425_1487410787558_%E5%A7%94%E5%93%A1%E6%9C%83%E7%B4%80%E9%8C%84%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B%20(1).png'/></p><ul class="comment"><li>提問：是否會有案名變更的情況？例如案名文字修改</li>
+<li>有時候會有，或是合併審理之類的，所以資料庫結構可能要對案件index</li></ul>
 
-<p></p><h2>JSON 資料結構規劃</h2><p>試作範例：<a href="http://urbancode.tw/json_example.json"></a>http://urbancode.tw/json_example.json</p><ul class="code"><li>[</li>
+<h2>JSON 資料結構規劃</h2><p>試作範例：<a href="http://urbancode.tw/json_example.json"></a>http://urbancode.tw/json_example.json</p><ul class="code"><li>[</li>
 <li>&nbsp; {</li>
 <li>&nbsp; &quot;title&quot;: &quot;臺北市都市計畫委員會第 670 次委員會議紀錄&quot;,</li>
 <li>&nbsp; &quot;session&quot;: 670,</li>
