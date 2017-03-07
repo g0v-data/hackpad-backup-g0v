@@ -3,10 +3,10 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="3729"/>
+<meta name="version" content="3787"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$NoJ1mbwsqkQ</title>
 </head>
-<body><h1>Data-Centric Government 的二十大類資料</h1><p></p><p>狀態: DRAFT</p><p>授權: CC BY clkao &amp; g0v contributors (並授權與 TCA 以 CC BY-ND 發佈)</p><p><b>編輯前請同意及簽名</b>：clkao, yhsiang, Lucas, chewei, pm5 . a0kman, Summit</p><p></p><p>(這是 local.data 專案的後續報告，見<a href='/eDY68cTC3Hv#:h=前情提要'/>利益揭露</a>)</p><p></p><p><b>這是什麼？</b></p><p></p><p>Open Government 與 Smart City/Nation 的交集與基礎其實還是 Data，如果我們先忘掉現有政府架構，重新想像與打造一個 Data-Centric 的政府，然後讓這些 Data 都是 Open 的，每個環節都有 api 可以 read/write 或送 pull requests，那會是什麼樣貌？</p><p></p><p>先分為六個 Tier，Tier 0~2 較偏政府本身及其運作基礎，Tier 3~5 為偏民生相關。底層越完整，則上層資料的品質越容易提升與相互連結，因為有共通的語意定義。</p><p></p><p>希望每一大類找出<b>三類關鍵資料</b>，每類資料有<b>三種細度</b>，供檢視「是否有資料」及「是否為開放」等。每類資料可有簡單的 use case 供想像。</p><p></p><p>之後也可作為比 open data index 與 open data barometer 更細緻的普查項目。</p><p></p><p><b>討論</b></p><ul class="comment"><li>可直接在此討論，或上 irc: <a href="http://hack.g0v.tw/irc"></a>http://hack.g0v.tw/irc 或用 <a href="http://join.g0v.today"></a>http://join.g0v.today</li>
+<body><h1>Data-Centric Government 的二十大類資料</h1><p></p><p>狀態: DRAFT</p><p>授權: CC BY clkao &amp; g0v contributors (並授權與 TCA 以 CC BY-ND 發佈)</p><p><b>編輯前請同意及簽名</b>：clkao, yhsiang, Lucas, chewei, pm5 . a0kman, Summit, Richard Hsieh, kiang</p><p></p><p>(這是 local.data 專案的後續報告，見<a href='/eDY68cTC3Hv#:h=前情提要'/>利益揭露</a>)</p><p></p><p><b>這是什麼？</b></p><p></p><p>Open Government 與 Smart City/Nation 的交集與基礎其實還是 Data，如果我們先忘掉現有政府架構，重新想像與打造一個 Data-Centric 的政府，然後讓這些 Data 都是 Open 的，每個環節都有 api 可以 read/write 或送 pull requests，那會是什麼樣貌？</p><p></p><p>先分為六個 Tier，Tier 0~2 較偏政府本身及其運作基礎，Tier 3~5 為偏民生相關。底層越完整，則上層資料的品質越容易提升與相互連結，因為有共通的語意定義。</p><p></p><p>希望每一大類找出<b>三類關鍵資料</b>，每類資料有<b>三種細度</b>，供檢視「是否有資料」及「是否為開放」等。每類資料可有簡單的 use case 供想像。</p><p></p><p>之後也可作為比 open data index 與 open data barometer 更細緻的普查項目。</p><p></p><p><b>討論</b></p><ul class="comment"><li>可直接在此討論，或上 irc: <a href="http://hack.g0v.tw/irc"></a>http://hack.g0v.tw/irc 或用 <a href="http://join.g0v.today"></a>http://join.g0v.today</li>
 <li>想問個問題，二十大類是隨便抓的嗎？還是怎麼算的</li>
 <li>就列一列差不多二十個，若變成質數可能更好 :P</li>
 <li>what&rsquo;s not covered?</li>
@@ -31,7 +31,8 @@
 <li>這兩塊開始吧（也還在摸索中XD，來問問一些體制內的意見）</li></ul>
 
 <ul class="comment"><li>一些環境相關的：生態、（人為活動的）環境影響、永續發展、區域計劃，放在 Tier 2~3 如何？晚點來寫</li>
-<li>區域在 2.1 有 環境先放在 3.3</li></ul>
+<li>區域在 2.1 有 環境先放在 3.3</li>
+<li>國土規劃算是一個大類嗎?</li></ul>
 
 <ul class="comment"><li>國防軍事資料需要納入嗎？（這會有什麼內容？）</li>
 <li>外交事務的資料？國際輿情資料？</li>
@@ -72,7 +73,7 @@
 <li>收入統計：各類罰金及規費統計（依地區、項目、金額）、各類稅收二十等分級距統計、各類稅收 1 % 及 0.1% 級距統計</li></ol>
 </ol>
 <ul class="comment"><li>以上是否有包含「國家公債資料」？</li></ul>
-<ol><li><b>政風與課責 / Ethics and Accountability</b><ol><li>政治獻金 /&nbsp; Political Contributions: 單戶依類別統計、違法公告、單戶收支明細</li>
+<ol><li><b>政風與課責 / Ethics and Accountability</b><ol><li>政治獻金 /&nbsp; Political Contributions: 單戶依類別統計、違法公告、單戶收支明細、與候選人連結資料</li>
 <li>財產申報 / Asset Disclosures: 應申報人明細、申報統計、申報明細</li>
 <li>公務資料調閱紀錄與政府資訊公開要求 / FOI Requests: 機關收受公開資訊要求：統計、明細</li></ol>
 <ul class="comment"><li>請問有範例嗎？這是哪種東西？</li>
@@ -82,7 +83,7 @@
 
 <p><b>Tier 2: Operations 政府運作</b></p><p></p><ol><li><b>區域劃分與統計 / Zoning and Statistics</b><ol><li>基礎統計：各單位應統計及發布事項、人口統計（結構、遷移、不在籍與外籍人口）、工商統計</li>
 <li>警、消、國教責任區域範圍：單位基本資訊與範圍劃分、人力員額及人口統計、人力員額及人口歷史變化</li>
-<li>土地劃分與所有人：區域/都市/都市更新計畫、土地使用分區明細及變更紀錄、所有人紀錄</li></ol>
+<li>土地劃分與所有人：區域/都市/都市更新計畫、土地使用分區明細及變更紀錄、所有人紀錄、土地 shap file 、各部會註記（例如環保署公告為污染控制場域等）</li></ol>
 <ul class="comment"><li>建築技術規則</li>
 <li>這應該在法規已經有了</li>
 <li>森林資料</li>
@@ -90,11 +91,12 @@
 <li>直覺想到的是從日治時期開始的全台森林資源調查，以及農委會目前內部規劃的「林地分級」制度。比較像是「自然資源調查資料」，這樣看起來應該屬於「環境資料」分類，其他如溼地分佈、動植物分佈、再生能源調查資料（地熱）、地調所地質敏感區分佈資料...等</li>
 <li>原住民自治區與相應的土地運用制度 (例如蘭嶼的土地繼承制度與國民政府的地籍制度有所不同)</li>
 <li>搬到上面行政區那邊？其實加上法律 reference 到特定行政區 applicable 的就可以表達特有制度了？</li>
-<li>嗯嗯</li></ul>
+<li>嗯嗯</li>
+<li>其實&quot;土地劃分與所有人&quot;跟&quot;區域/都市計畫、土地使用分區&quot;是兩個層次，前者是描述土地的所有權跟使用權，後者是描述土地被使用的限制、義務和權益</li></ul>
 </ol>
-<ol><li><b>法人基本資訊 / Legal Entities</b><ol><li>工商登記 / Business and Factories：基本資料、董監事資料、基本資料及董監事歷史變動</li>
+<ol><li><b>法人基本資訊 / Legal Entities</b><ol><li>工商登記 / Business and Factories：基本資料、董監事資料、基本資料及董監事歷史變動、工廠登記、污染申報</li>
 <li>非營利事業與人民團體、工會 / NPO and Associations：（除上外）財務報告、</li>
-<li>政府捐助法人或投資 / Government-sponsored entities or investments：（除上外）獨立董事歷史變動、</li></ol>
+<li>政府捐助法人或投資 / Government-sponsored entities or investments：（除上外）獨立董事歷史變動</li></ol>
 </li>
 <li><b>採購資訊與委外營運服務明細 / Procurement&nbsp;</b><ol><li>政府採購：招標及開標結果資訊、</li>
 <li>委外營運服務（含 BOT）：機關及營運單位、服務內容、合約</li>
@@ -109,8 +111,8 @@
 </ol>
 <ul class="comment"><li>「公共檢查」，就會包含 公害資料（例如 桃園 RCA 廠址地下水污染源、全國工廠污染檢舉資料、）食品衛生安全抽查、勞動檢查資料..囉？「公共檢查」一詞，為了「公共與公眾而啟動的檢查」之意，覺得可以成為一種統籌式的用詞，甚至民間組織發起的檢查、公民科學家針對某污染源的監測..，或許也可以涵蓋進來</li>
 <li>這邊先針對政府依法應該主動檢查的事項，有共通格式就可以和民間的用同樣方式接取</li></ul>
-<ol><li><b>犯罪與事故 / Crimes and Accidents</b><ol><li>犯罪統計：縣市、轄區、路段</li>
-<li>事故統計：縣市、轄區、路段</li></ol>
+<ol><li><b>犯罪與事故 / Crimes and Accidents</b><ol><li>犯罪統計：縣市、轄區、路段，或一級發布區</li>
+<li>事故統計：縣市、轄區、路段，或一級發布區</li></ol>
 </li>
 <li><b>環境與災害 / Environment and Disasters</b><ol><li>監測 / Sensing：大氣監測、水資源監測、衛星空照圖</li>
 <li>自然資源</li><ul class="comment"><li>例如「水資源管理資料」這種自然資源調查資料，是否也是屬於此分類項目？</li></ul>
@@ -130,7 +132,7 @@
 </li></ol>
 </li>
 <li><b>健康與醫療 / Health and Medical Care</b><ol><li>食品條碼：公司 (統編)、產地、內容物、熱量、添加物</li>
-<li>藥品成分：交互作用</li>
+<li>藥品成分：交互作用、藥物、含藥化妝品、醫材</li>
 <li>醫療照護資源：醫院門/急診/病床資訊、健保各類給付統計、醫院評鑑指標</li></ol>
 <ul class="comment"><li>安養護機構清單</li>
 <li>（參考「5.1 需要執照或許可的行業及明細」）</li></ul>
