@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1154"/>
+<meta name="version" content="1224"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$CDUPc1zHil2</title>
 </head>
 <body><h1>開放都市-委員會會議記錄資料庫 資料結構</h1><p>專案母體：<a href='/--BpW2Xt7s8AH'/>委員會會議記錄資料庫</a></p><p></p><h2>資料結構討論</h2><ul><li>現在以 json 的方式將會議記錄結構化 (NoSQL?) <a href='http://urbancode.tw/json_example.json'/>example</a>&nbsp;</li>
@@ -16,11 +16,12 @@
 <h2>跨會議記錄文件之間的資料關係</h2><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_CDUPc1zHil2_p.162425_1487410787558_%E5%A7%94%E5%93%A1%E6%9C%83%E7%B4%80%E9%8C%84%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B%20(1).png'/></p><ul class="comment"><li>提問：是否會有案名變更的情況？例如案名文字修改</li>
 <li>有時候會有，或是合併審理之類的，所以資料庫結構可能要對案件index</li></ul>
 
-<h2>MySQL資料結構規劃</h2><p>note: //會議紀錄meta</p><ul style="list-style: none;"><li>id: integer</li>
-<li>origin: string (url) //原始文件</li>
-<li>admin: string //行政區+改制前後(O/N) e.g. TPEO(台北市), KHHN(高雄市改制後)</li>
-<li>session: integer //第n次會議</li>
-<li>note_code: string (unique) //admin+session e.g TPEO673</li>
+<h2>MySQL資料結構規劃</h2><p>note_table: //會議紀錄meta</p><ul style="list-style: none;"><li>id: INT</li>
+<li>origin: VARCHAR (url) //原始文件</li>
+<li>admin: CHAR(4) //行政區+改制前後(O/N) e.g. TPEO(台北市), KHHN(高雄市改制後)</li>
+<li>session: INT(4) //第n次會議</li>
+<li>round: integer //紀錄是否續會 e.g. 1=首次召開, 2=續會, 3=續會第二次</li>
+<li>note_code: string (unique) //admin+session+round e.g TPEO6731</li>
 <li>title: string //會議記錄title</li>
 <li>date: date</li>
 <li>start_time: time</li>
@@ -36,11 +37,11 @@
 <li>discuss_item: string (case_code, comma separated)</li>
 <li>extempore_item: string (case_code, comma separated)</li></ul>
 
-<p>case: //案件列表</p><ul style="list-style: none;"><li>id: integer</li>
+<p>case_table: //案件列表</p><ul style="list-style: none;"><li>id: integer</li>
 <li>note_code: string (non-unique index)</li>
 <li>type: integer (1=report/2=confirm/3=deliberate/4=discuss/5=extempore)</li>
 <li>title: string //案名</li>
-<li>case_code: string (non-unique index)</li>
+<li>case_code: string (non-unique index) //亂碼編號?</li>
 <li>description: string (json format)</li>
 <li>committee_speak: string (json format)</li>
 <li>response: string (json format)</li>
@@ -49,7 +50,7 @@
 <li>attached: string (url)</li>
 <li>petition: string (petition_code, comma separate)</li></ul>
 
-<p>petition: //陳情案列表</p><ul style="list-style: none;"><li>id: integer</li>
+<p>petition_table: //陳情案列表</p><ul style="list-style: none;"><li>id: integer</li>
 <li>note_code: string (non-unique index)</li>
 <li>case_code: string (non-unique index)</li>
 <li>petition_num: string //陳情案編號</li>
