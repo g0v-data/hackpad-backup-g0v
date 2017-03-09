@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1328"/>
+<meta name="version" content="1335"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$CDUPc1zHil2</title>
 </head>
 <body><h1>開放都市-委員會會議記錄資料庫 資料結構</h1><p>專案母體：<a href='/--BpW2Xt7s8AH'/>委員會會議記錄資料庫</a></p><p></p><h2>資料結構討論</h2><ul><li>現在以 json 的方式將會議記錄結構化 (NoSQL?) <a href='http://urbancode.tw/json_example.json'/>example</a>&nbsp;</li>
@@ -31,30 +31,30 @@
 <li>note_taker: VARCHAR(12)</li>
 <li>attend_committee: TEXT (json format)</li>
 <li>attend_unit: TEXT (json format)</li>
-<li>report_item: TINYTEXT (case_code, comma separated)</li>
-<li>confirm_item: TINYTEXT (case_code, comma separated)</li>
-<li>deliberate_item: TINYTEXT (case_code, comma separated)</li>
-<li>discuss_item: TINYTEXT (case_code, comma separated)</li>
-<li>extempore_item: TINYTEXT (case_code, comma separated)</li></ul>
+<li><s>report_item: TINYTEXT (case_code, comma separated)</s></li>
+<li><s>confirm_item: TINYTEXT (case_code, comma separated)</s></li>
+<li><s>deliberate_item: TINYTEXT (case_code, comma separated)</s></li>
+<li><s>discuss_item: TINYTEXT (case_code, comma separated)</s></li>
+<li><s>extempore_item: TINYTEXT (case_code, comma separated)</s></li></ul>
 
 <p>case_table: //案件列表</p><ul style="list-style: none;"><li>id: INT</li>
 <li>note_code: CHAR(9) (non-unique index)</li>
 <li>type: TINYINT(1) (1=report/2=confirm/3=deliberate/4=discuss/5=extempore)</li>
 <li>title: TINYTEXT //案名</li>
-<li>case_code: VARCHAR(12) (non-unique index) //亂碼編號?</li>
+<li>case_code: VARCHAR(6) (non-unique index) //亂碼編號?</li>
 <li>description: TEXT (json format)</li>
 <li>committee_speak: TEXT (json format)</li>
 <li>response: TEXT (json format)</li>
 <li>resolution: TEXT (json format)</li>
 <li>add_resolution: TEXT (json format)</li>
 <li>attached: TEXT (url)</li>
-<li>petition: TINYTEXT (petition_code, comma separate)</li></ul>
+<li><s>petition: TINYTEXT (petition_code, comma separate)</s></li></ul>
 
 <p>petition_table: //陳情案列表</p><ul style="list-style: none;"><li>id: INT</li>
 <li>note_code: CHAR(9) (non-unique index)</li>
 <li>case_code: VARCHAR(12) (non-unique index)</li>
 <li>petition_num: VARCHAR(10) //陳情案編號</li>
-<li>petition_code: VARCHAR(32) (unique) //note_code+case_code+&rsquo;P&rsquo;+petition_num</li>
+<li><s>petition_code: VARCHAR(26) (unique) //note_code+case_code+&rsquo;P&rsquo;+petition_num</s></li>
 <li>name: VARCHAR(100)</li>
 <li>location: VARCHAR(100)</li>
 <li>reason: TEXT (json format)</li>
