@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="3134"/>
+<meta name="version" content="3433"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$E0G6gZDQ2ZZ</title>
 </head>
 <body><h1>公務出國報告查詢統計網</h1><p></p><h2>簡介</h2><p>政府的公務出國考察經常被認為是在消化預算[注1]或是出國旅遊[注2]，在資源分配上也備受質疑[注3]。本計畫希望能夠整合各公務出國資訊網的資料，使公務出國的狀況能以更直觀方式呈現，也提供更方便的管道查詢報告。</p><p></p><p>[注1]：到2015年底為止的統計，10~12月的出國次數即佔了超過33%，而1~3月僅佔11%多。</p><p>[注2]：如各種&quot;傑出人員出國觀摩&quot;。</p><p>[注3]：地方政府的公務出國，第一名台北市的次數及超過第二至五名的加總(高雄、台中、新北、屏東)。</p><p></p><h2>目的</h2><ul class="taskdone"><li>統合原本分散於中央以及各縣市公務出國資訊網的資料</li>
@@ -22,7 +22,41 @@
 <li>所以另外挖坑</li>
 <li>加油，我也希望..</li></ul>
 
-<h2>專案目前狀況</h2><p>網址：<a href="http://catding.twbbs.org/report/index.php"></a>http://catding.twbbs.org/report/index.php</p><p>github：<a href="https://github.com/catdingding/report"></a><a href='https://github.com/catdingding/report'/>https://github.com/catdingding/report</a></p><p></p><p><b>待完成計畫</b></p><p></p><undefined><li><b>後續影響</b></li></undefined>
+<h2>專案目前狀況</h2><p>網址：<a href="http://catding.twbbs.org/report/index.php"></a>http://catding.twbbs.org/report/index.php</p><p>github：<a href="https://github.com/catdingding/report"></a><a href='https://github.com/catdingding/report'/>https://github.com/catdingding/report</a></p><p></p><p><b>待完成計畫</b></p><p></p><undefined><li><b>自動分出遊記類</b></li></undefined>
+<p>目的：找出遊記類的報告</p><p>定義(有待完善)：</p><ul><li>內容(大多)為觀光，而非公務的報告</li>
+<li>內容大多數篇幅為單純描述所見、前往地點</li>
+<li>行程時間大多為觀光</li></ul>
+
+<p>目前狀況</p><ul><li>將向量化的報告內文餵給機器學習框架學習判斷</li>
+<li>於<a href="http://catding.twbbs.org/report/check/check.html"></a>http://catding.twbbs.org/report/check/check.html 可檢視判定為遊記類的報告，並回報判定結果是否正確</li></ul>
+
+<p>實作細節</p><ul><li>將報告轉換為純文字</li>
+<li>使用gemsim的doc2vec將文本轉換為向量</li>
+<li>人工標記小部分遊記、非遊記分類</li>
+<li>將遊記類以文本向量為依據，找出各篇距離最近的，加入該分類，重複施行直到幾乎不再成長(群體內互為最接近)。非遊記類因較雜，施行次數較少</li>
+<li>將資料餵給keras(後端使用theano)訓練模型</li>
+<li>使用模型預測其他偽標記報告</li></ul>
+
+<p>實作相關數據</p><ul><li>doc2vec參數<ul><li>window=5</li>
+<li>維度=64</li></ul>
+</li>
+<li>檔案總數：52339</li>
+<li>標記數量<ul><li>遊記：約30</li>
+<li>非遊記：約200</li></ul>
+</li>
+<li>訓練數量<ul><li>遊記：175</li>
+<li>非遊記：430</li></ul>
+</li>
+<li>keras訓練參數(之後會放到github)</li></ul>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_E0G6gZDQ2ZZ_p.535877_1489423530625_undefined'/></p><ul><li>keras訓練結果<ul><li>tra_acc=1.0000</li>
+<li>val_acc: 0.9508</li></ul>
+</ul>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_E0G6gZDQ2ZZ_p.535877_1489423609370_00_firstModel.png'/></p><p></p><p>實作改進</p><ul><li>從最近一筆改為最近n筆，在不會混進不合格的檔案的情況下，增加訓練資料</li>
+<li>改變向量化時設定的維度、window、學習度</li>
+<li>於學習時納入文章向量外的資料，例如：計畫名稱、報告名稱、主題分類、施政分類、主辦機關等等</li>
+<li>標記易混淆的報告，增加其權重</li></ul>
+
+<undefined><li><b>後續影響</b></li></undefined>
 <p>目的：整理出國報告後續對政策、法規的影響(基本上需全人工進行)</p><p></p><undefined><li><b>報告tag</b></li></undefined>
 <p>目的：分類報告、讓使用者更明確的知道報告的屬性</p><p>方案：</p><p></p><undefined><li><b>標記優質報告</b></li></undefined>
 <p>目的：</p><p></p><undefined><li><b>抄襲比對</b></li></undefined>
