@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2039"/>
+<meta name="version" content="2121"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$AHSDmIcE01y</title>
 </head>
 <body><h1>臺北市政府空間資源平臺構想</h1><p>說明：本頁面紀錄「公有地大行動」專案關注者，參與臺北市政府所主揪的會議，分享「天龍特公地」網站建置經驗，以及空間資料處理課題等過程。</p><p></p><p><b>20161229 晚餐聚會</b></p><ul><li>緣起：臺北市政府代表表示，曾將「<a href='http://taipei-pop.herokuapp.com/'/>天龍特公地</a>」網站於青年事務委員會公開展示給市長查看，會議上遂開始討論市府這邊也應該建置類似的平台，故約了一個聚會邀請天龍特公地專案參與者與市府代表交流（見<a href='https://www.facebook.com/groups/1417173811903954/permalink/1818320148455983/?pnref=story'/>社團中的邀請貼文</a>）。</li>
@@ -76,7 +76,7 @@
 </ul>
 
 <p><b>20170123 市府資訊局、地政局、建管處會議簡記</b></p><ul><li>說明：以下內容為轉告知，並非實際參與會議者的紀錄。</li>
-<li>要點：<ul><li>地籍輪廓資料<ul><li>地政局代表表示，地籍輪廓部分，受限於收費規定，無法放到資訊局的資料平台。</li>
+<li>會議要點：<ul><li>地籍輪廓資料<ul><li>地政局代表表示，地籍輪廓部分，受限於收費規定，無法放到資訊局的資料平台。</li>
 <li>但應該可以協助市府業務用途。<ul><li>由此衍伸課題：國發會與各地方政府目前推動的開放資料與平台，處理符合國際 open data 定義的資料；地籍輪廓資料的部分，現況無法成為符合國際 open data 定義的資料，但市府局處業務上也有使用需求，這類授權屬於公部門業務用途的資料需求，可以持續盤點、確認技術方案上是否可以滿足使用需求。</li></ul>
 </li></ul>
 </li>
@@ -116,5 +116,23 @@
 </li>
 <li>市府代表前往 g0v 黑客松提案，籌備頁面：<a href="https://hackpad.com/YFjuO1wK9np"></a>https://hackpad.com/YFjuO1wK9np</li></ul>
 
-<p><b>黑客松</b></p><p>20170304 黑客松成果：<a href="https://goo.gl/rwGF59"></a><a href='https://goo.gl/rwGF59'/>https://goo.gl/rwGF59</a></p><p></p><p></p><p><b>20170316</b>&nbsp;</p><p>事由：規劃市有閒置空間整合查詢平台第2次會議</p><p>開會時間：20170316 (四) 上午 11:30</p><p>開會地點：臺北市政府市政大樓 5 樓 503 會議室 (位於台北探索館樓上，可詢問一樓櫃台)</p><p>主持人：臺北市政府財政局局長</p><p>與會單位者：臺北市政府資訊局、臺北市青年事務委員會委員、臺北市政府財政局資訊室、臺北市政府財政局非公用財產管理科、劉哲瑋君</p><p>主要討論事項：整理本案執行進度</p><p></p><p></p><p></p></body>
+<p><b>20170304 黑客松</b></p><ul><li>20170304 黑客松成果：<a href="https://goo.gl/rwGF59"></a><a href='https://goo.gl/rwGF59'/>https://goo.gl/rwGF59</a><ul><li>1) 公有土地，欄位資料含輪廓&nbsp;<ul><li><a href="https://gist.github.com/tpe-doit/c71bed6484004b2c52271457a26e6773"></a>https://gist.github.com/tpe-doit/c71bed6484004b2c52271457a26e6773</li></ul>
+</li>
+<li>2) 公有建築物，欄位資料含輪廓 (感謝 Ronny Wang)<ul><li><a href="https://gist.github.com/ronnywang/3292e8668594106781bc8db66361fe9f"></a>https://gist.github.com/ronnywang/3292e8668594106781bc8db66361fe9f</li>
+<li>方法概述：建築物門牌 -&gt; 得到經緯度 -&gt; 比對台北市數值地形圖 shapefile(市府尚未開放的資料) -&gt; 判斷鄰近關係 -&gt; 得到特定門牌及其建物輪廓</li></ul>
+</li>
+<li>3) 當天青委會委員們則整理使用者需求&nbsp;<ul><li>共筆頁面：<a href="https://goo.gl/0kvVJ1"></a>https://goo.gl/0kvVJ1</li></ul>
+</li>
+<li>4) fork 天龍特公地網站 (感謝 Ronny Wang 大大協助建置)&nbsp;<ul><li><a href="http://taitung-fan-182028.middle2.me/"></a>http://taitung-fan-182028.middle2.me/</li></ul>
+</ul>
+</ul>
+
+<p><b>20170316 市府會議</b></p><p>會議訊息</p><ul><li>事由：規劃市有閒置空間整合查詢平台第2次會議</li>
+<li>開會時間：20170316 (四) 上午 11:30</li>
+<li>開會地點：臺北市政府市政大樓 5 樓 503 會議室 (位於台北探索館樓上，可詢問一樓櫃台)</li>
+<li>主持人：臺北市政府財政局局長</li>
+<li>與會單位者：臺北市政府資訊局、臺北市青年事務委員會委員、臺北市政府財政局資訊室、臺北市政府財政局非公用財產管理科、劉哲瑋君</li></ul>
+<p>會議要點</p><ul><li>市有閒置空間整合查詢平台之建置涉及本府地政局、都市發展局權管地籍圖及地形圖(建物圖層)等數值圖檔之資料開放，請本市青年事務委員會(以下簡稱青委會)委員於青委會第 9 次大會提案就屬市有資產部分之土地及建物可開放上開資料供外界查詢使用。</li></ul>
+
+<p></p><p></p><p></p><p></p></body>
 </html>
