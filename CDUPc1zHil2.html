@@ -3,10 +3,10 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1348"/>
+<meta name="version" content="1375"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$CDUPc1zHil2</title>
 </head>
-<body><h1>開放都市-委員會會議記錄資料庫 資料結構</h1><p>專案母體：<a href='/--BpW2Xt7s8AH'/>委員會會議記錄資料庫</a></p><p></p><h2>MySQL資料結構</h2><p>note_table: //會議紀錄meta</p><ul style="list-style: none;"><li>id: INT</li>
+<body><h1>開放都市-委員會會議記錄資料庫 資料結構</h1><p>專案母體：<a href='/--BpW2Xt7s8AH'/>委員會會議記錄資料庫</a></p><p></p><h2>MySQL資料結構</h2><p>note_table: //會議紀錄meta</p><ul style="list-style: none;"><li>id: INT(10) (AI)</li>
 <li>origin: VARCHAR(100) (url) //原始文件</li>
 <li>admin: CHAR(4) //行政區+改制前後(O/N) e.g. TPEO(台北市), KHHN(高雄市改制後)</li>
 <li>session: INT(4) //第n次會議</li>
@@ -22,11 +22,11 @@
 <li>attend_committee: TEXT (json format)</li>
 <li>attend_unit: TEXT (json format)</li>
 <li><br/></li></ul>
-<p>case_table: //案件列表</p><ul style="list-style: none;"><li>id: INT</li>
+<p>case_table: //案件列表</p><ul style="list-style: none;"><li>id: INT(10) (AI)</li>
 <li>note_code: CHAR(9) (non-unique index)</li>
 <li>type: TINYINT(1) (1=report/2=confirm/3=deliberate/4=discuss/5=extempore)</li>
-<li>title: TINYTEXT //案名</li>
-<li>case_code: VARCHAR(6) (non-unique index) //亂碼編號?</li>
+<li>case_title: TINYTEXT //案名</li>
+<li>case_code: VARCHAR(6) (non-unique index) //亂碼編號</li>
 <li>description: TEXT (json format)</li>
 <li>committee_speak: TEXT (json format)</li>
 <li>response: TEXT (json format)</li>
@@ -34,7 +34,7 @@
 <li>add_resolution: TEXT (json format)</li>
 <li>attached: TEXT (url)</li>
 <li><br/></li></ul>
-<p>petition_table: //陳情案列表</p><ul style="list-style: none;"><li>id: INT</li>
+<p>petition_table: //陳情案列表</p><ul style="list-style: none;"><li>id: INT(10) (AI)</li>
 <li>note_code: CHAR(9) (non-unique index)</li>
 <li>case_code: VARCHAR(12) (non-unique index)</li>
 <li>petition_num: VARCHAR(10) //陳情案編號</li>
