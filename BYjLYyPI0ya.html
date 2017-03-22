@@ -1,0 +1,18 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="125"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$BYjLYyPI0ya</title>
+</head>
+<body><h1>內政部及財政部國有財產署經管公有土地資料</h1><p></p><p>資料網址： <a href="http://data.moi.gov.tw/MoiOD/Data/DataDetail.aspx?oid=7EFCAF0A-F102-4E85-9B79-6B4F4A70B0A7"></a>http://data.moi.gov.tw/MoiOD/Data/DataDetail.aspx?oid=7EFCAF0A-F102-4E85-9B79-6B4F4A70B0A7</p><p>專案： <a href="https://kiang.github.io/pub_lands/"></a>https://kiang.github.io/pub_lands/</p><p></p><p>問題蒐集：</p><ul><li>XML 資料使用 big5 編碼，鄉鎮市區沒有代號可以配對，轉換編碼後使用文字比對會有部份錯誤<ul><li>嘉義市的鄉鎮市區欄位一樣填嘉義市，新竹市一樣情況</li>
+<li>屏東縣鹽埔鄉的鹽使用了罕見字無法順利轉換</li>
+<li>台與臺的混用</li></ul>
+</li>
+<li>如果 XML 的資料無法併入 KML 顯示，也許可以考慮在 KML 的 ExtendedData 加入段號對應的段名等資訊，方便在資料配對時進行驗證</li>
+<li>2515 筆 KML 資料找不到對應的 XML meta data ，清單： <a href="https://gist.github.com/kiang/97a0a7eec14402a8d5ae842e7cb73d50"></a>https://gist.github.com/kiang/97a0a7eec14402a8d5ae842e7cb73d50</li>
+<li><br/></li></ul>
+
+</body>
+</html>
