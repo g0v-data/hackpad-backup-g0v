@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="324"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$lJMlFXtAcBt</title>
+</head>
+<body><h1>NVDA 無障礙數學報讀</h1><p></p><p>坑主：曾奕勳（<a href='http://www.edocumentservice.org/'/>雲端千眼平台</a> 開發者，本身為視障朋友）</p><p>協力：au</p><p></p><p><a href='https://www.nvaccess.org/'/>NVDA</a>（NonVisual Desktop Access）是一套開源的螢幕閱讀器。目前中文數學網頁報讀，是採取非開源的 MathPlayer 軟體，但它有不少問題，例如：</p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_lJMlFXtAcBt_p.41199_1490409852755_Screen Shot 2017-03-25 at 10.43.09 AM.png'/></p><p>會報讀成：</p><ul style="list-style: none;"><li>「x 等於 分數 2 a 分子 減 b 加減 的平方根 b 平方 減 4&nbsp; a c 結束根號 結束分數 」</li></ul>
+
+<p>其中「的平方根」的讀法難以理解，甚至有些符號（微分、積分）沒中文直接會唸英文。</p><p></p><p>理想狀況下，應報讀成：</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 「x 等號 開始分數</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 a</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 分之</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 負數 b 加減號 開始平方根</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b 的平方 減號 4 a c</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 結束平方根</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 結束分數」</p><p></p><p>但目前沒有開源的 MathML 轉中文引擎，僅英文有 <a href='https://github.com/cynthia/chromevox/blob/master/speech_rules/mathml_store_rules.js'/>ChromeVox</a> 。</p><p></p><p>徵求跳坑（意者請<a href='http://www.edocumentservice.org/genericUser/contact_us/'/>連絡坑主</a>）：</p><ul class="task"><li>將 ChromeVox 規則（JavaScript）中文化，或</li>
+<li>寫一套 MathML 轉 NVDA speech command 的 plugin（Python）</li></ul>
+
+<p>補充說明：</p><ul><li>NVDA有定義MathML處理的物件介面規格，可自行寫轉換程式進行處理，且NVDA有附加元件擴充供能，即使PR官方無納入，也可透過附加元件發佈。</li>
+<li>坑主之前幫wiris翻譯時看到不錯的做法概念，讓順序也可以自訂。主要做法是去研究MathML的規範並整理成一條一條的rule與文字化內容，當看到式子內有對應的rule就找對應的文字化內容。</li>
+<li>像分數的例子中，就會類似「開始分數-&gt;(分母)-&gt;分之-&gt;(分子)-&gt;結束分數」除了括號內的部份是用遞迴往下一層外，其他三項是可自訂的且五項的順序也可調整，會較有彈性。</li></ul>
+
+<p>參考文件：</p><ul><li><a href="https://www.nvaccess.org/files/nvda/documentation/developerGuide.html"></a>https://www.nvaccess.org/files/nvda/documentation/developerGuide.html</li>
+<li><a href="https://addons.nvda-project.org/devDocs/devDocs.en.html"></a>https://addons.nvda-project.org/devDocs/devDocs.en.html</li></ul>
+
+</body>
+</html>
