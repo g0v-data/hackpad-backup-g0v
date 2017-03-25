@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="467"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$BiGOZBfzPNS</title>
+</head>
+<body><h1>新竹市事故血漬典</h1><h2>專案構想說明</h2><p></p><p>新竹上下班的時間，機車族其實每次都滿膽戰心驚。這個專案想知道哪些路口是危險的，透過過往發生事故的地址做參考，並以熱度圖的形式視覺化這些資料。</p><p></p><p>另外補充先前其他已有&nbsp;</p><p><a href="http://muyueh.com/30/xinzhu_traffic/"></a>http://muyueh.com/30/xinzhu_traffic/&nbsp; (新竹)</p><p><a href="http://54.169.144.72/TaipeiAccident/"></a>http://54.169.144.72/TaipeiAccident/ (台北)</p><p></p><h2>現有資料</h2><p></p><ol><li>警政署：歷史交通事故資訊（僅有A1 &amp; A2事故，且缺乏gps經緯度資訊）</li></ol>
+<ul style="list-style: none;"><li><a href="https://www.npa.gov.tw/NPAGip/wSite/lp?ctNode=12854&CtUnit=2633&BaseDSD=7&mp=1"></a>https://www.npa.gov.tw/NPAGip/wSite/lp?ctNode=12854&amp;CtUnit=2633&amp;BaseDSD=7&amp;mp=1</li></ul>
+<ol><li>善心朋友提供已經處理過的資訊 (但有些GPS info與縣市地區位置不一致)</li></ol>
+<ul style="list-style: none;"><li><a href="https://drive.google.com/drive/folders/0B2XpHtmLOlpmZTg1aDFydVZ1b3c?usp=sharing"></a>https://drive.google.com/drive/folders/0B2XpHtmLOlpmZTg1aDFydVZ1b3c?usp=sharing</li></ul>
+<ol><li>政府開放資料平台 / <a href="http://data.gov.tw/node/12197"></a>http://data.gov.tw/node/12197</li>
+<li>線上 batch geocoder&nbsp; <a href="https://geocoder.ccjeng.com"></a>https://geocoder.ccjeng.com&nbsp;</li>
+<li>Google Maps Geocoding 使用限制 (2,500 free requests per day and 50 requests per second)&nbsp; <a href="https://developers.google.com/maps/documentation/geocoding/usage-limits?hl=zh-tw"></a>https://developers.google.com/maps/documentation/geocoding/usage-limits?hl=zh-tw</li></ol>
+
+<h2>現有進度</h2><p></p><p>將現有資料[2] 的資訊透過簡單的python parser <a href="https://github.com/ChingSheng/traffic_accident_heatmap_parser"></a>https://github.com/ChingSheng/traffic_accident_heatmap_parser&nbsp;</p><p>簡化csv檔，再透過google 的fusion table 工具製作熱點圖</p><p><a href="https://fusiontables.google.com/data?docid=1sQMxQosoft1Ll0zhN8nGWSqGsrFVapReWwJuxtfr#map:id=3"></a>https://fusiontables.google.com/data?docid=1sQMxQosoft1Ll0zhN8nGWSqGsrFVapReWwJuxtfr#map:id=3</p><p></p><h2>[坑] 後續計劃</h2><p></p><ol><li>Google fusion table對地理資料的資訊點僅能支援1000點，未來想透過前後端的語言實際製作網頁。</li>
+<li>此外，針對政府開放的資料[1], [3]由於未提供經度與緯度的資訊，僅提供未正規化的地址資訊，想強化parser將這些地址資訊轉化為經緯度的資料</li></ol>
+
+<p></p></body>
+</html>
