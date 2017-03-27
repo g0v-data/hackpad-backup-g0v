@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1375"/>
+<meta name="version" content="1382"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$CDUPc1zHil2</title>
 </head>
 <body><h1>開放都市-委員會會議記錄資料庫 資料結構</h1><p>專案母體：<a href='/--BpW2Xt7s8AH'/>委員會會議記錄資料庫</a></p><p></p><h2>MySQL資料結構</h2><p>note_table: //會議紀錄meta</p><ul style="list-style: none;"><li>id: INT(10) (AI)</li>
@@ -52,6 +52,7 @@
 <li>MySQL 5.7 新增對於 json資料的支援 <a href="http://voicefromoldsoul.blogspot.tw/2017/01/mysql-json.html"></a>http://voicefromoldsoul.blogspot.tw/2017/01/mysql-json.html</li>
 <li>ronny建議要有搜尋功能的話，就利用google drive存放資料</li></ul>
 <ul class="comment"><li>&nbsp;裝上google drive api的example，租用的主機不給跑@@ 回傳error500</li></ul>
+<ul><li>貌似需要UUID跟時間戳記</li></ul>
 
 <h2>跨會議記錄文件之間的資料關係</h2><p><img src='https://hackpad-attachments.s3.amazonaws.com/g0v.hackpad.com_CDUPc1zHil2_p.162425_1487410787558_%E5%A7%94%E5%93%A1%E6%9C%83%E7%B4%80%E9%8C%84%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B%20(1).png'/></p><ul class="comment"><li>提問：是否會有案名變更的情況？例如案名文字修改</li>
 <li>有時候會有，或是合併審理之類的，所以資料庫結構可能要對案件index</li></ul>
