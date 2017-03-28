@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1382"/>
+<meta name="version" content="1399"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$CDUPc1zHil2</title>
 </head>
 <body><h1>開放都市-委員會會議記錄資料庫 資料結構</h1><p>專案母體：<a href='/--BpW2Xt7s8AH'/>委員會會議記錄資料庫</a></p><p></p><h2>MySQL資料結構</h2><p>note_table: //會議紀錄meta</p><ul style="list-style: none;"><li>id: INT(10) (AI)</li>
@@ -37,6 +37,7 @@
 <p>petition_table: //陳情案列表</p><ul style="list-style: none;"><li>id: INT(10) (AI)</li>
 <li>note_code: CHAR(9) (non-unique index)</li>
 <li>case_code: VARCHAR(12) (non-unique index)</li>
+<li>petition_case: TEXT</li>
 <li>petition_num: VARCHAR(10) //陳情案編號</li>
 <li>name: VARCHAR(100)</li>
 <li>location: VARCHAR(100)</li>
