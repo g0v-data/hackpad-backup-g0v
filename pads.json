@@ -739,8 +739,8 @@
   "title": "\u8ddf\u300c\u65b0\u805e\u5c0f\u5e6b\u624b\u300d\u6709\u95dc\u7684\u65b0\u805e\u5831\u5c0e"
  }, 
  {
-  "last_backup_time": 1490895801.863387, 
-  "version": 900, 
+  "last_backup_time": 1491068661.100143, 
+  "version": 960, 
   "padid": "0P6EGtVvPxc", 
   "title": "\u53f0\u5317\u5e02\u5fc3\u7406\u8cc7\u6e90\u5730\u5716"
  }, 
@@ -1548,8 +1548,8 @@
   "title": "\u90fd\u5dff\u8a08\u756b\u6982\u5ff5"
  }, 
  {
-  "last_backup_time": 1490723044.381582, 
-  "version": 1505, 
+  "last_backup_time": 1491068661.054901, 
+  "version": 1518, 
   "padid": "2qR2Pzdu95W", 
   "title": "\u90fd\u5e02\u8a08\u756b\u66f8\u8cc7\u6599\u4e09\u661f\u5316\uff5c\u65b9\u6cd5\u8a0e\u8ad6"
  }, 
@@ -2152,8 +2152,8 @@
   "title": "\u81fa\u8a9e\u65b7\u8a5e\u8a0e\u8ad6"
  }, 
  {
-  "last_backup_time": 1490723045.488987, 
-  "version": 1192, 
+  "last_backup_time": 1491068660.799663, 
+  "version": 1198, 
   "padid": "4nashhbYi72", 
   "title": "Issue-Mapping \u8490\u96c6\u6848\u4f8b"
  }, 
@@ -2606,8 +2606,8 @@
   "title": "\u793e\u904b\u8a18\u9304\u5730\u5716&nbsp;"
  }, 
  {
-  "last_backup_time": 1490809466.17722, 
-  "version": 100, 
+  "last_backup_time": 1491068661.188418, 
+  "version": 111, 
   "padid": "6EHRGkMNxmK", 
   "title": "\u81fa\u5357\u5e02\u8b70\u6703\u554f\u984c\u8490\u96c6"
  }, 
@@ -5522,8 +5522,8 @@
   "title": "g0v@US\u83ef\u5e9c\u9ed1\u5ba2\u677e\u975e\u8cc7\u8a0a\u4eba\u63a8\u5751\u5f71\u7247\u69cb\u60f3"
  }, 
  {
-  "last_backup_time": 1490895802.526226, 
-  "version": 252, 
+  "last_backup_time": 1491068660.754734, 
+  "version": 341, 
   "padid": "GGi8L2uSX0B", 
   "title": "\u570b\u969b\u5b78\u8853\u502b\u7406\u76f8\u95dc\u8cc7\u8a0a"
  }, 
@@ -6727,6 +6727,12 @@
   "title": "M-Project \u5c0f\u6ce1\u6ce1 (Workshop Talks)"
  }, 
  {
+  "last_backup_time": 1491068661.144359, 
+  "version": 376, 
+  "padid": "KBxKaRtKQvq", 
+  "title": "Final Decision of MOST and MOE"
+ }, 
+ {
   "last_backup_time": 1406310335.01395, 
   "version": 647, 
   "padid": "KDWHrz00qlQ", 
@@ -7146,8 +7152,8 @@
   "title": "Localwiki \u5408\u4f5c\u8a62\u554f\u4fe1\u4ef6"
  }, 
  {
-  "last_backup_time": 1490982401.480753, 
-  "version": 2824, 
+  "last_backup_time": 1491068660.285203, 
+  "version": 2825, 
   "padid": "LON0V7eEAc2", 
   "title": "2016-17 \u5a5a\u59fb\u5e73\u6b0a\u8cc7\u6599\u8490\u96c6\uff08\u6b63\u65b9\uff09"
  }, 
@@ -7272,8 +7278,8 @@
   "title": "\u516b\u5927\u96fb\u8996\u53f0\u5168\u570b\u6025\u8a3a\u770b\u677f\u63a1\u8a2a\u5171\u7b46"
  }, 
  {
-  "last_backup_time": 1490982401.539272, 
-  "version": 1057, 
+  "last_backup_time": 1491068660.411021, 
+  "version": 1059, 
   "padid": "LsT8UhPLmoC", 
   "title": "\u5404\u6a5f\u69cb\u53d7\u8cea\u7591\u8ad6\u6587\u9032\u5ea6\u8ffd\u8e64"
  }, 
@@ -15482,8 +15488,8 @@
   "title": "\u5168\u6c11\u8e39\u5171 - \u516c\u6c11\u793e\u4ea4\u7db2 | Social Democracy \uff08\u904e\u671f\u6587\u4ef6\u4e0d\u7528\u770b XD\uff09"
  }, 
  {
-  "last_backup_time": 1489599956.760285, 
-  "version": 5153, 
+  "last_backup_time": 1491068660.984656, 
+  "version": 5161, 
   "padid": "lx28QH0z38S", 
   "title": "\u98df\u7269\u7cfb\u7d71\u898f\u5283\u8207\u98df\u7269\u516c\u5171\u653f\u7b56"
  }, 
@@ -15659,8 +15665,8 @@
   "title": "\u5e02\u6c11\u8fb2\u5712"
  }, 
  {
-  "last_backup_time": 1469727817.565785, 
-  "version": 324, 
+  "last_backup_time": 1491068660.595227, 
+  "version": 327, 
   "padid": "mWlPrCBDoyw", 
   "title": "\u4e00\u3001\u707d\u5bb3\u7ba1\u7406\u77e5\u8b58"
  }, 
@@ -16634,8 +16640,8 @@
   "title": "\u5171\u8b58\u9810\u716e precooksensus"
  }, 
  {
-  "last_backup_time": 1490982401.584562, 
-  "version": 4725, 
+  "last_backup_time": 1491068660.891937, 
+  "version": 4827, 
   "padid": "psYiCfSI3Yy", 
   "title": "\u751f\u91ab\u5b78\u502b\u4e8b\u4ef6\u7c3f"
  }, 
@@ -17576,8 +17582,8 @@
   "title": "\u4f60\u4eca\u5929\u52a0\u73ed\u4e86\u55ce\uff1f"
  }, 
  {
-  "last_backup_time": 1490982400.394985, 
-  "version": 3319, 
+  "last_backup_time": 1491068660.548433, 
+  "version": 3332, 
   "padid": "tARKZCCP8MR", 
   "title": "<b>\u65b0\u805e\u5c0f\u5e6b\u624b\u56de\u5831\u898f\u7bc4\u66f8\uff08\u8349\u6848\uff09</b>"
  }, 
