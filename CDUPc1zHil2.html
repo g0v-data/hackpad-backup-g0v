@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1399"/>
+<meta name="version" content="1400"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$CDUPc1zHil2</title>
 </head>
 <body><h1>開放都市-委員會會議記錄資料庫 資料結構</h1><p>專案母體：<a href='/--BpW2Xt7s8AH'/>委員會會議記錄資料庫</a></p><p></p><h2>MySQL資料結構</h2><p>note_table: //會議紀錄meta</p><ul style="list-style: none;"><li>id: INT(10) (AI)</li>
@@ -11,7 +11,7 @@
 <li>admin: CHAR(4) //行政區+改制前後(O/N) e.g. TPEO(台北市), KHHN(高雄市改制後)</li>
 <li>session: INT(4) //第n次會議</li>
 <li>round: TINYINT(1)//紀錄是否續會 e.g. 1=首次召開, 2=續會, 3=續會第二次</li>
-<li>note_code: CHAR(9) (unique) //admin+session+round e.g TPEO6731</li>
+<li>note_code: CHAR(9) (unique) //admin+session+round e.g TPEO06731</li>
 <li>title: VARCHAR(100) //會議記錄title</li>
 <li>date: DATE</li>
 <li>start_time: TIME</li>
