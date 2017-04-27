@@ -3,10 +3,12 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="864"/>
+<meta name="version" content="1170"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$QHArc116FJR</title>
 </head>
-<body><h1>開放都市-委員會會議記錄資料庫 API策劃</h1><p></p><p>上層 <a href='http://hackfoldr.urbancode.tw/'/>開放都市計畫</a></p><p></p><h2>討論</h2><p><b>使用者是誰?</b></p><ul class="comment"><li>&nbsp;民眾、空間規劃設計專業者、都市計畫專業者</li></ul>
+<body><h1>開放都市-委員會會議記錄資料庫 API策劃</h1><p></p><p>上層 <a href='http://hackfoldr.urbancode.tw/'/>開放都市計畫</a></p><p></p><h2>討論</h2><p><b>使用者是誰?</b></p><ul class="comment"><li>&nbsp;民眾、</li>
+<li>空間規劃設計專業者、</li>
+<li>都市計畫專業者</li></ul>
 
 <p><b>使用者的需求是什麼?</b></p><ul class="comment"><li>&nbsp;找出特定的會議紀錄</li>
 <li>找出特定的人相關的會議紀錄</li>
@@ -22,6 +24,7 @@
 
 <h2>建置</h2><ul><li>language: php</li>
 <li>framework: laravel</li>
+<li>GET only</li>
 <li><a href='https://tw.twincl.com/programming/*641y'/>RESTful principle</a><ul><li><a href="https://kcyeu.gitbooks.io/http-api-design-guide-tc/"></a>https://kcyeu.gitbooks.io/http-api-design-guide-tc/</li>
 <li><a href="http://rettamkrad.blogspot.tw/2013/04/web-api.html"></a>http://rettamkrad.blogspot.tw/2013/04/web-api.html</li>
 <li><a href="https://github.com/WhiteHouse/api-standards"></a>https://github.com/WhiteHouse/api-standards</li></ul>
@@ -39,17 +42,21 @@
 <li>HTTP response code</li>
 <li>response message</li>
 <li>Headers</li></ul>
+<ul class="code"><li>content type: application/json</li></ul>
 
 <h2>API</h2><ul><li><b>/api</b></li></ul>
 <ul class="code"><li>api文件</li></ul>
-<ul><li>/api<b>/{admin}/{period}/{session}</b></li></ul>
-<ul class="code"><li>get full minute</li></ul>
-<ul><li>/api/{admin}/{period}/{session}<b>/cases</b></li></ul>
-<ul class="code"><li>get cases</li></ul>
-<ul><li>/api/{admin}/{period}/{session}<b>/{case_code}</b></li></ul>
-<ul class="code"><li>get case</li></ul>
-<ul><li>/api/{admin}/{period}/{session}/{case_code}<b>/{petitions_code}</b></li></ul>
-<ul class="code"><li>get petitions</li></ul>
+<ul><li>/api<b>/minutes</b><ul><li>/api/minutes/<b>{admin}/{period}/{session}/{round?}</b></li></ul>
+</ul>
+<ul class="code"><li>&nbsp;&nbsp;&nbsp; get full minute</li>
+<li>&nbsp;&nbsp;&nbsp; default round = 1</li>
+<li>&nbsp;&nbsp;&nbsp; 少部分會議有&quot;續會&quot;，round = 1+</li>
+<li>&nbsp;&nbsp;&nbsp; 沒輸入時redirect，round = 1</li><ul><li>/api/minutes/{admin}/{period}/{session}/{round}<b>/{case_code}</b></li></ul>
+</ul>
+<ul class="code"><li>&nbsp;&nbsp;&nbsp; get certain case in certain minute</li></ul>
+<ul><li>/api<b>/cases</b><ul><li>/api/cases<b>/{case_code}</b></li></ul>
+</ul>
+<ul class="code"><li>&nbsp;&nbsp;&nbsp; get full progress for certain case</li></ul>
 
 </body>
 </html>
