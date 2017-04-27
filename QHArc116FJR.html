@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1170"/>
+<meta name="version" content="1600"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$QHArc116FJR</title>
 </head>
 <body><h1>開放都市-委員會會議記錄資料庫 API策劃</h1><p></p><p>上層 <a href='http://hackfoldr.urbancode.tw/'/>開放都市計畫</a></p><p></p><h2>討論</h2><p><b>使用者是誰?</b></p><ul class="comment"><li>&nbsp;民眾、</li>
@@ -27,7 +27,9 @@
 <li>GET only</li>
 <li><a href='https://tw.twincl.com/programming/*641y'/>RESTful principle</a><ul><li><a href="https://kcyeu.gitbooks.io/http-api-design-guide-tc/"></a>https://kcyeu.gitbooks.io/http-api-design-guide-tc/</li>
 <li><a href="http://rettamkrad.blogspot.tw/2013/04/web-api.html"></a>http://rettamkrad.blogspot.tw/2013/04/web-api.html</li>
-<li><a href="https://github.com/WhiteHouse/api-standards"></a>https://github.com/WhiteHouse/api-standards</li></ul>
+<li><a href="https://github.com/WhiteHouse/api-standards"></a>https://github.com/WhiteHouse/api-standards</li>
+<li><a href='http://blog.cloud-elements.com/post-effyouthisistherighturl-restful-api-design'/>POST /EFF/YOU/THIS/IS/THE/RIGHT/URL - RESTFUL API DESIGN</a></li>
+<li><a href='http://blog.cloud-elements.com/418-im-a-teapot-and-other-bad-api-responses-restful-api-design?__hstc=233546881.04b94356d08473ccd3ade1a31294bb33.1467054686266.1467835574463.1467989984747.6&amp;__hssc=233546881.7.1467989984747&amp;__hsfp=2578504226'/>418: I&rsquo;M A TEAPOT, AND OTHER BAD API RESPONSES - RESTFUL API DESIGN</a></li></ul>
 </li>
 <li>database-end: <a href='https://g0v.hackpad.com/--CDUPc1zHil2'/>資料結構討論</a></li>
 <li>front-end: <a href='/--OukMJzcIYdy'/>前端策劃</a></li>
@@ -45,13 +47,18 @@
 <ul class="code"><li>content type: application/json</li></ul>
 
 <h2>API</h2><ul><li><b>/api</b></li></ul>
-<ul class="code"><li>api文件</li></ul>
-<ul><li>/api<b>/minutes</b><ul><li>/api/minutes/<b>{admin}/{period}/{session}/{round?}</b></li></ul>
+<ul class="code"><li>msg url to api文件</li></ul>
+<ul><li>/api<b>/minutes</b></li></ul>
+<ul class="code"><li>list minutes code &amp; url (limited by 100?)</li><ul><li>/api/minutes/<b>{admin}-{period}-{session}-{round}</b></li></ul>
 </ul>
-<ul class="code"><li>&nbsp;&nbsp;&nbsp; get full minute</li>
-<li>&nbsp;&nbsp;&nbsp; default round = 1</li>
-<li>&nbsp;&nbsp;&nbsp; 少部分會議有&quot;續會&quot;，round = 1+</li>
-<li>&nbsp;&nbsp;&nbsp; 沒輸入時redirect，round = 1</li><ul><li>/api/minutes/{admin}/{period}/{session}/{round}<b>/{case_code}</b></li></ul>
+<ul class="code"><li>&nbsp;&nbsp;&nbsp; get minute information + cases code &amp; url</li>
+<li>&nbsp;&nbsp;&nbsp; e.g. KHH-N-10-2</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; where {admin} = KHH //高雄市</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {period} = N //改制後</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {session} = 10 //第10次</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {round} = 2 //續會&nbsp;&nbsp;&nbsp;</li><ul><li>/api/minutes/{admin}-{period}-{session}-{round}<b>/cases</b></li></ul>
+</ul>
+<ul class="code"><li>&nbsp;&nbsp;&nbsp; list cases code &amp; url</li><ul><li>/api/minutes/{admin}-{period}-{session}-{round}/cases<b>/{case_code}</b></li></ul>
 </ul>
 <ul class="code"><li>&nbsp;&nbsp;&nbsp; get certain case in certain minute</li></ul>
 <ul><li>/api<b>/cases</b><ul><li>/api/cases<b>/{case_code}</b></li></ul>
