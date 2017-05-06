@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1600"/>
+<meta name="version" content="1601"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$QHArc116FJR</title>
 </head>
 <body><h1>開放都市-委員會會議記錄資料庫 API策劃</h1><p></p><p>上層 <a href='http://hackfoldr.urbancode.tw/'/>開放都市計畫</a></p><p></p><h2>討論</h2><p><b>使用者是誰?</b></p><ul class="comment"><li>&nbsp;民眾、</li>
@@ -56,9 +56,9 @@
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; where {admin} = KHH //高雄市</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {period} = N //改制後</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {session} = 10 //第10次</li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {round} = 2 //續會&nbsp;&nbsp;&nbsp;</li><ul><li>/api/minutes/{admin}-{period}-{session}-{round}<b>/cases</b></li></ul>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {round} = 2 //續會&nbsp;&nbsp;&nbsp;</li><ul><li><s>/api/minutes/{admin}-{period}-{session}-{round}<b>/cases</s></b></li></ul>
 </ul>
-<ul class="code"><li>&nbsp;&nbsp;&nbsp; list cases code &amp; url</li><ul><li>/api/minutes/{admin}-{period}-{session}-{round}/cases<b>/{case_code}</b></li></ul>
+<ul class="code"><li><s>&nbsp;&nbsp;&nbsp; list cases code &amp; url</s></li><ul><li>/api/minutes/{admin}-{period}-{session}-{round}/cases<b>/{case_code}</b></li></ul>
 </ul>
 <ul class="code"><li>&nbsp;&nbsp;&nbsp; get certain case in certain minute</li></ul>
 <ul><li>/api<b>/cases</b><ul><li>/api/cases<b>/{case_code}</b></li></ul>
