@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="3433"/>
+<meta name="version" content="3435"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$E0G6gZDQ2ZZ</title>
 </head>
 <body><h1>公務出國報告查詢統計網</h1><p></p><h2>簡介</h2><p>政府的公務出國考察經常被認為是在消化預算[注1]或是出國旅遊[注2]，在資源分配上也備受質疑[注3]。本計畫希望能夠整合各公務出國資訊網的資料，使公務出國的狀況能以更直觀方式呈現，也提供更方便的管道查詢報告。</p><p></p><p>[注1]：到2015年底為止的統計，10~12月的出國次數即佔了超過33%，而1~3月僅佔11%多。</p><p>[注2]：如各種&quot;傑出人員出國觀摩&quot;。</p><p>[注3]：地方政府的公務出國，第一名台北市的次數及超過第二至五名的加總(高雄、台中、新北、屏東)。</p><p></p><h2>目的</h2><ul class="taskdone"><li>統合原本分散於中央以及各縣市公務出國資訊網的資料</li>
@@ -31,7 +31,7 @@
 <li>於<a href="http://catding.twbbs.org/report/check/check.html"></a>http://catding.twbbs.org/report/check/check.html 可檢視判定為遊記類的報告，並回報判定結果是否正確</li></ul>
 
 <p>實作細節</p><ul><li>將報告轉換為純文字</li>
-<li>使用gemsim的doc2vec將文本轉換為向量</li>
+<li>使用gensim的doc2vec將文本轉換為向量</li>
 <li>人工標記小部分遊記、非遊記分類</li>
 <li>將遊記類以文本向量為依據，找出各篇距離最近的，加入該分類，重複施行直到幾乎不再成長(群體內互為最接近)。非遊記類因較雜，施行次數較少</li>
 <li>將資料餵給keras(後端使用theano)訓練模型</li>
