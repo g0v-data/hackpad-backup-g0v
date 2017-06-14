@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1415"/>
+<meta name="version" content="1458"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$INPcsSiqF8w</title>
 </head>
 <body><h1>Hackpad 搬家方案</h1><ul><li>===================</li>
@@ -20,30 +20,30 @@
 <p><b>搶救松共筆</b></p><p><a href="https://hackmd.io/EwU2GYDMDZoRgLTEpcCAsAOSBDBmBjOTBHEATgM3OAHYAjMSIA==?both"></a><a href='https://hackmd.io/EwU2GYDMDZoRgLTEpcCAsAOSBDBmBjOTBHEATgM3OAHYAjMSIA==?both'/>https://hackmd.io/EwU2GYDMDZoRgLTEpcCAsAOSBDBmBjOTBHEATgM3OAHYAjMSIA==?both</a></p><p></p><p><b>起因</b></p><ul class="code"><li>On July 19, 2017, Hackpad will be shut down.</li>
 <li><a href="https://g0v-tw.slack.com/files/acechen/F51H5CTFB/important_information_regarding_your_hackpad_account.txt"></a>https://g0v-tw.slack.com/files/acechen/F51H5CTFB/important_information_regarding_your_hackpad_account.txt</li></ul>
 
-<p><b>目標</b></p><p>盡可能讓多數使用者無痛轉移，並能兼容其他 NGO/NPO 需求。x</p><ul class="comment"><li>預計要照顧到的 workspace：g0v, g0vus, ocf-tw, ... (待補)</li></ul>
+<p><b>目標</b></p><p>盡可能讓多數使用者無痛轉移，並能兼容其他 NGO/NPO 需求。</p><ul class="comment"><li>預計要照顧到的 workspace：g0v, g0vus, ocf-tw, ... (待補)</li></ul>
 
 <p><b>需求</b></p><ol><li>多人同時編輯，任何人都可檢視</li>
 <li>嵌入表格、圖片，及基本排版功能</li>
 <li>作者標示(authorship)</li>
 <li>編輯紀錄(history)</li></ol>
 
-<p></p><h2>近程</h2><ul><li>方案一：<a href='https://github.com/whackpad/whackpad'/>whackpad</a> - community fork of the Hackpad</li></ul>
+<p></p><h2>近程</h2><ul><li>方案一：<a href='https://github.com/whackpad/whackpad'/>whackpad</a> - community fork of the Hackpad → <a href="https://hackpad.tw"></a>https://hackpad.tw</li></ul>
 
-<ul class="task"><li>匯出/匯入 Hackpad SQL：https://[workspace].hackpad.com/ep/admin/import-export</li></li>
-<li>要怎麼處理 <a href="https://hackpad.com"></a>https://hackpad.com 下面的 pad？下載的HTML會遺失 authorship</li>
-<li>下載過去上傳到 Hackpad 的圖片</li>
-<li>引導 g0ver 轉移到 <a href="https://pad.g0v.link/"></a><a href='https://pad.g0v.link/'/>https://pad.g0v.link/</a></li>
+<ul class="taskdone"><li>匯出/匯入 Hackpad SQL：https://[workspace].hackpad.com/ep/admin/import-export</li></li>
+<li>要怎麼處理 <a href="https://hackpad.com"></a>https://hackpad.com 下面的 pad？下載的HTML會遺失 authorship</li></li>
+<li>下載過去上傳到 Hackpad 的圖片</li></li>
+<li>引導 g0ver 轉移到 <a href="https://pad.g0v.link/"></a><s><a href='https://pad.g0v.link/'/>https://pad.g0v.link/</a></s>&nbsp; <a href="https://g0v.hackpad.tw"></a>https://<a href='https://hackpad.tw'/>g</a>0<a href='https://g0hackpad.tw'/>v</a>.hackpad.tw</li>
 <li>提供 Google/Facebook sign-in</li>
-<li>依照註冊 Email 建立 authorship 對應</li>
-<li>URL redirection: hackpad.com → pad.g0v.link (Chrome extension?)</li></li>
+<li>依照註冊 Email 建立 authorship 對應</li></li>
+<li>URL redirection: hackpad.com → hackpad.tw (Chrome extension?)</li></li>
 <li>之後 hackpad.com 應該會被指向 paper.dropbox.com</li></ul>
 <ul class="comment"><li>也把 EtherCalc 和所有 pad 裡面全部的 g0v.hackpad.com 改到新網址？</li><ul class="task"><li>修復中文輸入bug</li></ul>
 <ul class="comment"><li>不知道這個容不容易？</li></ul>
-<ul class="task"><li>註冊 hackpad.tw/ .io/ .club/ .space/ .site/ .link/ .gg/ ... 供其他社群使用？</li></ul>
+<ul class="taskdone"><li>註冊 hackpad.tw/ .io/ .club/ .space/ .site/ .link/ .gg/ ... 供其他社群使用？</li></ul>
 <ul class="comment"><li>可能會有trademark問題</li>
 <li>uspto <a href='https://search.uspto.gov/search?query=hackpad&amp;op=Search&amp;affiliate=web-sdmg-uspto.gov'/>沒有找到 hackpad 的 trademark</a>&nbsp;</li>
 <li>whackpad.tw/.io/... 也蠻幽默的 XD</li></ul>
-<ul class="task"><li>(community) 每個 workspace 跑一個 whackpad docker，subdomain 指向獨立 workspace</li>
+<ul class="taskdone"><li>(community) 每個 workspace 跑一個 whackpad docker，subdomain 指向獨立 workspace</li>
 <li>(community) 提供使用者建立 workspace 並匯入 Hackpad SQL</li></ul>
 </ul>
 
@@ -83,7 +83,7 @@
 </ul>
 <ul class="comment"><li>:heart:</li></ul>
 
-<p></p><p></p><p><b>其他相關</b></p><p><a href="https://g0v.hackpad.com/Mh1LjzkizQf"></a>https://g0v.hackpad.com/Mh1LjzkizQf</p><p><a href="https://www.facebook.com/hackmdio"></a>https://www.facebook.com/hackmdio</p><p><a href="https://logbot.g0v.tw/channel/g0v.tw/2017-05-05/137"></a>https://logbot.g0v.tw/channel/g0v.tw/2017-05-05/137</p><p><a href="https://logbot.g0v.tw/channel/g0v.tw/2017-05-05/138"></a>https://logbot.g0v.tw/channel/g0v.tw/2017-05-05/138</p><p><a href="https://logbot.g0v.tw/channel/g0v.tw/2017-05-05/139"></a>https://logbot.g0v.tw/channel/g0v.tw/2017-05-05/139</p><p></p><p><b>Hackpad 的幾個覺得重要的好處</b></p><p></p><ul><li>有 workspace 功能</li>
+<p></p><p></p><p></p><p><b>其他相關</b></p><p><a href="https://g0v.hackpad.com/Mh1LjzkizQf"></a>https://g0v.hackpad.com/Mh1LjzkizQf</p><p><a href="https://www.facebook.com/hackmdio"></a>https://www.facebook.com/hackmdio</p><p><a href="https://logbot.g0v.tw/channel/g0v.tw/2017-05-05/137"></a>https://logbot.g0v.tw/channel/g0v.tw/2017-05-05/137</p><p><a href="https://logbot.g0v.tw/channel/g0v.tw/2017-05-05/138"></a>https://logbot.g0v.tw/channel/g0v.tw/2017-05-05/138</p><p><a href="https://logbot.g0v.tw/channel/g0v.tw/2017-05-05/139"></a>https://logbot.g0v.tw/channel/g0v.tw/2017-05-05/139</p><p></p><p><b>Hackpad 的幾個覺得重要的好處</b></p><p></p><ul><li>有 workspace 功能</li>
 <li>在 workspace 下任何 pad 修改，不管是多久以前的，都會自動：<ul><li>email 通知訂閱的人（engage）</li>
 <li>移到 workspace 最上方（讓其他人知道最新的修改、哪些 pad 正在討論、哪些 pad 新增了）</li></ul>
 </li>
