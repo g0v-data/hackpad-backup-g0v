@@ -3,12 +3,14 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="478"/>
+<meta name="version" content="545"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$WI4KnMaK2pg</title>
 </head>
-<body><h1>演算法歧視案例</h1><p></p><ul><li>只有当训练数据足够优质的时候，这些预测程序才足够有效；而训练数据则有着很复杂的历史背景。</li></ul>
+<body><h1>演算法歧視案例</h1><p></p><p><b>壹些評論蒐集</b></p><p></p><ul><li>也許演算法沒問題但技術坐實而且合理化了原本就存在的歧視</li>
+<li>data input/output&nbsp; encoding / decoding issue.<ul><li>只有当训练数据足够优质的时候，这些预测程序才足够有效；而训练数据则有着很复杂的历史背景。</li></ul>
+</ul>
 
-<p><b>面向歧視</b></p><p></p><ul><li><a href="http://www.chinatimes.com/newspapers/20170510000758-260309"></a>http://www.chinatimes.com/newspapers/20170510000758-260309</li>
+<p></p><p><b>面像歧視</b></p><p></p><ul><li><a href="http://www.chinatimes.com/newspapers/20170510000758-260309"></a>http://www.chinatimes.com/newspapers/20170510000758-260309</li>
 <li>中國上海交通大學研究人員吳曉琳（音譯，以下簡稱吳）和張希（音譯，以下簡稱張）使用了一個有 1856 張面部照片的資料庫訓練機器學習算法，其中 730 人是罪犯，另外 1126 人不是。 在分析了 90％ 的圖片後，AI 能夠正確地識別剩餘 10％ 照片中的罪犯。</li>
 <li>該算法將具體的面部特徵與罪犯相關聯。例如罪犯的眼角、嘴唇曲率和鼻尖更有可能存在特定的空間關係。吳說，他也認同如果一個人有這些特徵，不能說這個人更可能是罪犯。 吳同時發現罪犯的面孔差異較大，而非罪犯往往具有相似的面部特徵。</li>
 <li>吳繼續使用以前沒有看過的不同的照片來測試算法，發現它多半情況下可以正確識別罪犯。研究人員試圖通過只使用沒有面部毛髮和疤痕的中國青年或中年男子的面部圖片進行訓練和測試其算法來避免偏差。</li>
@@ -51,12 +53,13 @@
 <li>苛責性<ul><li>誰該負責<ul><li>資料蒐集者?</li>
 <li>資料倉儲?</li>
 <li>Data Scientist?</li>
-<li>產品整合者?</li></ul>
+<li>產品整合者?</li>
+<li>使用者?&nbsp;<ul><li>將產品用在ML演算法者沒考慮到的應用造成 side effect</li></ul>
+</li></ul>
 </li></ul>
 </li>
 <li>透明性<ul><li>domain expert&nbsp; 檢驗</li>
-<li>問題: 商業公司不願意公佈演算法<ul><li>黑箱測試? how?</li></ul>
-</ul>
+<li>問題: 商業公司不願意公佈演算法</li></ul>
 </ul>
 
 <p><b>相關書籍</b></p><ul><li><a href='https://victranslates.blogspot.tw/2017/06/blog-post.html'/>大數據的傲慢與偏見</a></li>
