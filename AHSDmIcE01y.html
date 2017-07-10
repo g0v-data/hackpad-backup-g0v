@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2959"/>
+<meta name="version" content="3124"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/683$AHSDmIcE01y</title>
 </head>
 <body><h1>臺北市政府空間資源平臺構想</h1><p>說明：本頁面紀錄「公有地大行動」專案關注者，參與臺北市政府所主揪的會議，分享「天龍特公地」網站建置經驗，以及空間資料處理課題等過程。</p><p></p><p><b>20161229 晚餐聚會</b></p><ul><li>緣起：臺北市政府代表表示，曾將「<a href='http://taipei-pop.herokuapp.com/'/>天龍特公地</a>」網站於青年事務委員會公開展示給市長查看，會議上遂開始討論市府這邊也應該建置類似的平台，故約了一個聚會邀請天龍特公地專案參與者與市府代表交流（見<a href='https://www.facebook.com/groups/1417173811903954/permalink/1818320148455983/?pnref=story'/>社團中的邀請貼文</a>）。</li>
@@ -195,6 +195,7 @@
 <li>2.工作會議運作模式（工作項目、工作進度、參與局處、業務分工、與會人員等）。</li></ul>
 </ul>
 </ul>
+<p>會議結論</p><ul><li>社群邀約，並確認會議的時間</li></ul>
 
 <p><b>20170710 實作會議</b></p><p>會議前的邀請訊息</p><ul><li>台北市政府財政局邀請有意願協助完成資料整理與網頁建置的社群朋友，完成此台北市公有資產活用網站：<a href="http://taitung-fan-182028.middle2.me/"></a><a href='http://taitung-fan-182028.middle2.me/'/>http://taitung-fan-182028.middle2.me/</a></li>
 <li>初步看起來工作事項有：<ul><li>1.整理公有土地與建物的資料集，整理成網站可以吃的格式。</li>
@@ -204,11 +205,29 @@
 <li>社群朋友若您有意願協助台北市政府進行前述兩個面向的實作，且可接受此工作的酬勞必須採用工作會議形式，給予出席費 2000 元，再請聯繫我，並提供給我您的姓名與 email 我將再轉達給台北市財政局。（利益揭露：chewei 僅代為轉達與彙整名單，無涉任何利益）</li>
 <li>時間：7/10(一)下午3點</li>
 <li>地點：台北市政府市政大樓8樓中央區財政局討論室</li></ul>
-<p>會議舉行</p><ul><li>網頁與資料<ul><li><br/></li></ul>
+<p>會議概況</p><ul><li>20170710 網頁開發日誌 7/10 開發日誌<ul><li>參與者：資訊局同仁, Finjon, Ronny, Richard</li>
+<li>middle2更新postsql版本後可以連到DB</li>
+<li>geojson欄位要用multipolygon的格式</li>
+<li>點擊資料後，跳出預設照片需要更換</li>
+<li>現有篩選器，其中「面積」更換成「等待活用、市府已短期活用、尚不開放提議」三種選擇</li>
+<li>後續：暫由資訊局同仁協助彙整，視狀況，若必要則再約會議</li></ul>
 </li>
-<li>其他探討<ul><li>針對「公民科技與公務行政之間的協作方案」先開一個頁面進行素材蒐集<ul><li><a href="https://docs.google.com/document/d/1dEV9CFLt8BbMMBhOJG3NoVvKED5s66gLLV-6mYwqEsE/edit"></a>https://docs.google.com/document/d/1dEV9CFLt8BbMMBhOJG3NoVvKED5s66gLLV-6mYwqEsE/edit</li></ul>
+<li>20170710 其他行政機制推動上的討論內容<ul><li>參與者：青委會委員, 財政局同仁, 地政局同仁, 資訊局同仁, chewei, Mg</li>
+<li>資產資料，流程優化<ul><li>針對市府內部供需資訊交流進行優化，例如運用線上可即時修改的協作網頁彙整空間清單，避免公文時差。</li>
+<li>教育局目前正在盤點餘裕空間資料，預計會開放，資訊局目前有接觸與協助中。</li>
+<li>民間社群可以整理一下空間資料流程<ul><li>例如從一個門牌開始，到哪邊拿到經緯度，到哪邊拿到建物輪廓，如何將清單資料與輪廓資料勾稽起來，整合好的資料會放到哪邊，如何更新資料</li>
+<li>例如從一個地號開始，到哪邊拿到該地號的形狀，如何將清單資料與輪廓資料勾稽起來，整合好的資料會放到哪邊，如何更新資料</li>
+<li>例如從一個建築物號碼開始...?</li>
+<li>其中有一些資料服務環節，在確認沒有侵犯隱私個資，例如某一個地號的輪廓形狀、某一個門牌的建物輪廓形狀，應可以考慮作為資料服務釋出。</li></ul>
+</li></ul>
+</li>
+<li>盤點公民科技與公務行政之間的協作方案<ul><li>各種協作方案與經驗，記錄頁面：<a href="https://docs.google.com/document/d/1dEV9CFLt8BbMMBhOJG3NoVvKED5s66gLLV-6mYwqEsE/edit"></a><a href='https://docs.google.com/document/d/1dEV9CFLt8BbMMBhOJG3NoVvKED5s66gLLV-6mYwqEsE/edit'/>https://docs.google.com/document/d/1dEV9CFLt8BbMMBhOJG3NoVvKED5s66gLLV-6mYwqEsE/edit</a></li></ul>
+</li>
+<li>後續推動方向<ul><li>網頁建置告一階段後，可分為「公務員使用情境」與「民眾使用情境」，兩類對象建議可先分流籌辦聚會工作坊、或是詢問頁面使用經驗與感受。</li>
+<li>公部門供需者的部分：邀請各局處，從供給端或需求端的角度來看看測試上線的網頁，目前使用上的感覺，甚至一些必要的功能，例如是否有資料混搭的需求，像是有了空間的位置，能否更即時地掌握其土地使用分區與容許使用的內容為何。</li>
+<li>民間使用者的部分：例如透過工作坊，正面表列民眾端的各種使用需求，像是社區認養空地作為公共開放空間、租用或申請進駐室內空間...等等，來收斂實際上資料可以輔助的環節。</li></ul>
 </ul>
 </ul>
 
-<p></p><p></p></body>
+<p></p><p></p><p></p></body>
 </html>
